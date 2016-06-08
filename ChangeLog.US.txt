@@ -1,0 +1,116 @@
+2.4-6
+* Changed ScoreItemsResponse/Receipt char to Conditional
+* Changed StudentSpecialEducationSummary/SchoolYear to an attribute and made it part of the primary key.
+
+2.4-5
+* Refactor Identifier services with two overview sections for student and staff
+* Corrected XML examples
+* Updated to infrastructure 2.4-5
+
+2.4-4
+* Updated infrastructure to 2.4-3
+* StudentLocator has language it might be depricated in a future release.
+
+2.4-3
+* Corrected description EmployeeContract/BaseSalary
+* Added SIF Zone Services Infrastructures
+* Added new SIF Zone Service StateStudentIdentifierRequest
+* Added new SIF Zone Service StateStudentIdentifierManagement
+* Added new SIF Zone Service StateStaffIdentifierRequest
+* Added new SIF Zone Service StateStaffIdentifierManagement
+* Added new SIF Zone Service AssessmentScoring
+* Added new SIF Zone Service SREBokerage
+* Added new SIF Zone Service SREPublisher
+* Added new SIF Zone Service SREConsumer
+* Added new SIF Zone Service SRERecordTypeConsumer
+
+
+2.4-2
+* Added new element StudentSpecialEducationRecord/StudentSpecialEducationFTE
+* Added new element StudentSpecialEducationRecord/StudentParticipationList
+* Added new element StudentSpecialEducationRecord/StudentPlacementList
+* Updated element type StudentContactPerson/EducationalLevel
+* Updated infrastructure to 2.4-1
+
+2.4-1
+* Refactor the specification to support the Infrastructure refactor.
+* Added new element StudentResponseSet/Items/Item/ItemScore
+* Added new element StudentResponseSet/Items/Item/ItemAidSetUsed
+* Added element AssessmentItem/ItemScoreMaximum
+* Added element AssessmentItem/ItemScoreMinimum
+* Added element AssessmentItem/PerformanceLevels
+* Added common element OtherIdList
+* Added common element PersonInfo
+* Added element Demographics/FirstUSEnrollment
+* Added new code set value(s) to ProgramStatus/Code
+* Added new object ContentCatalog
+* Added common element ExtendedTechnicalRequirements
+* Added new element Activity/ExtendedTechnicalRequirements
+* Added new element Assignment/ExtendedTechnicalRequirements
+* Added new code set value(s) to LearningStandardDocument/Source
+* Added new element StudentSchoolEnrollment/PromotionInfo/Promotion
+* Added new element StudentSchoolEnrollment/PromotionInfo/Nonpromotion
+* Added new element LearningStandardItem/Level4
+* Added new element LearningStandardItem/Level5
+* Added new element AssessmentSubTest/Abbreviation
+* Added new element AssessmentSubTest/Description
+* Added new element AssessmentSubTest/NumberOfItems
+* Added new element AssessmentSubTest/ContainerOnly
+* Added new element StudentScoreSet/Scores/Score/Description
+* Added new element StudentScoreSet/Scores/Score/NumberOfResponses
+* Added new code set value(s) to 1048 Secondary Incident Behavior
+* Added new element DiciplineIncident/IncidentDescription
+* Added new element DiciplineIncident/IncidentActionList
+* Added new element DiciplineIncident/OffenderList/Offender/ManifestationDetermination/MeetingOutcome
+* Added new element DiciplineIncident/OffenderList/Offender/WeaponTypeList
+* Added new element DiciplineIncident/OffenderList/Offender/RelatedToList
+* Added new object BellSCheduleInfo
+* Added new element CalendarDate/BellScheduleDayList
+* Added new element SectionInfo/CourseSection
+* Added new element SectionInfo/SectionCode
+* Added new element SectionInfo/CountForAttendance
+* Added new element SectionInfo/BellScheduleInfoRefId
+* Updated element description StudentAttendanceSummary
+* Updated element description StudentAttendanceSummary/StartDate
+* Updated element description StudentAttendanceSummary/StartDay
+* Updated element description StudentAttendanceSummary/EndDate
+* Updated element description StudentAttendanceSummary/EndDay
+* Updated element description StudentAttendanceSummary/Resident
+* Updated element description StudentAttendanceSummary/FTE
+* Updated element description StudentAttendanceSummary/DaysAttended
+* Updated element description StudentAttendanceSummary/ExcusedAbsences
+* Updated element description StudentAttendanceSummary/UnexcusedAbsences
+* Updated element description StudentAttendanceSummary/DaysInMembership
+* Added new element StudentParticipation/AdditionalProgramAvailabilityList
+* Added new element StudentParticipation/CaseManager
+* Added new code set value(s) to StudentPlacement/FrequencyTime/Code
+* Added new element StudentAcademicRecord/EnrollmentHistory/SchoolEnrollmentData/EntryType
+* Added new element StudentAcademicRecord/EnrollmentHistory/SchoolEnrollmentData/GradeLevel
+* Added new element StudentAcademicRecord/EnrollmentHistory/SchoolEnrollmentData/ExitStatus
+* Added new element StudentAcademicRecord/EnrollmentHistory/SchoolEnrollmentData/ExitType
+* Added new element StudentAcademicRecord/EnrollmentHistory/SchoolEnrollmentData/StudentLEARelationship
+* Added new element StudentAcademicRecord/EnrollmentHistory/SchoolEnrollmentData/StudentSchoolRelationship
+* Added new element StudentAcademicRecord/CourseHistory/Term/Courses/Course/MarkingPeriods/MarkingPeriod/CourseCreditsEarned
+* Added new element StudentAcademicRecord/CourseHistory/Term/Courses/Course/SectionInfoData
+* Added new element StudentDemographicRecord/StudentPersonalData/Demographics/HispanicLatino
+* Added new element StudentDemographicRecord/StudentPersonalData/Demographics/CountryOfBirth
+* Added new element StudentDemographicRecord/StudentPersonalData/Demographics/DwellingArrangement
+* Added new object StudentContactPersonal
+* Added new object StudentContactRelationship
+* Added new element EducationFilter/Title
+* Added new element EducationFilter/Summary
+* Added new element EducationFilter/LearningObjectives
+* Added new element EducationFilter/ResourceTypes
+* Added new object StudentSpecialEducationSummary
+* Added new object BellScheduleInfo
+* Added new element CalendarDate/BellScheduleDayList
+* Added new element MeetingTime/TimetableDay
+* Added new element MeetingTime/TimetablePeriod
+* Added new element SectionInfo/CourseSection
+* Added new element SectionInfo/SectionCode
+* Added new element SectionInfo/CountForAttendance
+* Added new element SectionInfo/BellScheduleInfoRefId
+
+
+
+

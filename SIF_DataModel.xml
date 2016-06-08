@@ -1,0 +1,170 @@
+<SIFSpecification xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.w3.org/1999/xhtml" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<BuildComment>
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="90_Properties_DataModel/SIF-Specification-Title-DataModel.txt"/> (<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="90_Properties/SIF-Specification-ReleaseDate.txt"/>) Infrastructure Version: <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="90_Properties/SIF-Infrastructure-Version.txt"/>
+	</BuildComment>
+	
+	<!--Title Page-->
+	<TitlePage>
+		<h1>
+			<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="90_Properties/SIF Association Trademark Name.txt"/>&#x2122;<br/>
+			<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="90_Properties_DataModel/SIF-Specification-Title-DataModel.txt"/>
+		</h1>
+		<h2>
+			<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="90_Properties/SIF-Specification-ReleaseDate.txt"/>
+		</h2>
+		<br/>
+		<br/>
+		<br/>
+		<p>
+			<img src="images/zone.jpg" alt=""/>
+		</p>
+		<br/>
+		<br/>
+		<dl>
+			<dt>This version:</dt>
+			<dd>
+				<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="90_Properties_DataModel/SIF-Specification-Navigation-This Version.xml"/>
+			</dd>
+			<dt>Previous version:</dt>
+			<dd>
+				<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="90_Properties_DataModel/SIF-Specification-Navigation-Previous Version.xml"/>
+			</dd>
+			<dt>Latest version:</dt>
+			<dd>
+				<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="90_Properties_DataModel/SIF-Specification-Navigation-Latest Version.xml"/>
+			</dd>
+			<dt>Schemas</dt>
+			<dd>
+				<a href="XSD/SIF_MessageNoIncludes/SIF_Message.xsd">SIF_Message (single file, non-annotated)</a>
+				<a href="XSD/SIF_MessageNoIncludes.zip">(ZIP archive)</a>
+			</dd>
+			<dd>
+				<a href="XSD/SIF_MessageNoIncludesAnnotated/SIF_Message.xsd">SIF_Message (single file, annotated)</a>
+				<a href="XSD/SIF_MessageNoIncludesAnnotated.zip">(ZIP archive)</a>
+			</dd>
+			<dd>
+				<a href="XSD/SIF_Message/SIF_Message.xsd">SIF_Message (includes, non-annotated)</a>
+				<a href="XSD/SIF_Message.zip">(ZIP archive)</a>
+			</dd>
+			<dd>
+				<a href="XSD/SIF_MessageAnnotated/SIF_Message.xsd">SIF_Message (includes, annotated)</a>
+				<a href="XSD/SIF_MessageAnnotated.zip">(ZIP archive)</a>
+			</dd>
+			<dd>
+				<a href="XSD/DataModelNoIncludes/SIF_Message.xsd">DataModel (single file, non-annotated)</a>
+				<a href="XSD/DataModelNoIncludes.zip">(ZIP archive)</a>
+			</dd>
+			<dd>
+				<a href="XSD/DataModelNoIncludesAnnotated/SIF_Message.xsd">DataModel (single file, annotated)</a>
+				<a href="XSD/DataModelNoIncludesAnnotated.zip">(ZIP archive)</a>
+			</dd>
+			<dd>
+				<a href="XSD/DataModel/SIF_Message.xsd">DataModel (includes, non-annotated)</a>
+				<a href="XSD/DataModel.zip">(ZIP archive)</a>
+			</dd>
+			<dd>
+				<a href="XSD/DataModelAnnotated/SIF_Message.xsd">DataModel (includes, annotated)</a>
+				<a href="XSD/DataModelAnnotated.zip">(ZIP archive)</a>
+			</dd>
+			 <dd>
+				  <a href="XSD/ServiceBodyDefinitions/SIF_Message.xsd">ServiceBodyDefinitions (includes, annotated)</a>
+				  <a href="XSD/ServiceBodyDefinitions.zip">(ZIP archive)</a>
+			</dd>
+			<dd style="font-size: smaller">
+				<br/>
+				<em>Note:</em>
+				<em>SIF_Message</em> schemas define every data object element as optional per SIF's Publish/Subscribe and SIF Request/Response Models; 
+				<em>DataModel</em> schemas maintain the cardinality of all data object elements.
+			</dd>
+		</dl>
+		<p>Please refer to the <a href="errata/">errata</a> for this document, which may include some normative corrections.</p>
+		<p>This document is also available in these non-normative formats: <a href="ImplementationSpecification.zip">ZIP archive</a>, <a href="ImplementationSpecification.pdf">PDF (for printing as a single file)</a>,
+		<a href="ImplementationSpecification.xls">Excel spreadsheet</a>.</p>
+		<br/>
+		<br/>
+		<p>Copyright &#xA9;<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="90_Properties/SIF-Specification-ReleaseYear.txt"/> <a href="http://www.sifassociation.org">
+				<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="90_Properties/SIF Association Trademark Name.txt"/> (SIF&#x2122;) Association</a>.  All Rights Reserved.
+		</p>
+	</TitlePage>
+	
+	<!--Preamble-->
+	<xi:include parse="xml" xmlns:xi="http://www.w3.org/2001/XInclude" href="01_Preamble/Infrastructure-Preamble.xml"/>
+	
+	<!--Introduction-->
+	<xi:include parse="xml" xmlns:xi="http://www.w3.org/2001/XInclude" href="02_Introduction/Introduction-Datamodel.xml"/>
+		
+	<!--Architecture-->
+	
+	<!--Messaging-->
+	
+	<!--Infrastructure-->
+	<xi:include parse="xml" xmlns:xi="http://www.w3.org/2001/XInclude" href="05_Infrastructure/Infrastructure.xml"/>
+
+
+
+	
+	<!--Data Model-->
+	<Section name="Data Model">
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="06_DataModel/DataModel-Introduction.xml"/>
+		<xi:include parse="xml" xmlns:xi="http://www.w3.org/2001/XInclude" href="06_DataModel/DataModel-CommonElements.xml"/>
+		<xi:include parse="xml" xmlns:xi="http://www.w3.org/2001/XInclude" href="06_DataModel/DataModel.xml"/>
+	</Section>
+	
+	
+	<!--Zone Services-->
+
+	
+	<!--Back Matter-->
+	<Appendix name="Common Types">
+		<Intro>
+			<p>Common and supporting types referenced in this specification are included here as a reference.</p>
+		</Intro>
+			<!--Section A-->
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="80_BackMatter/Custom/DataModel-CommonTypes-Custom.xml"/>
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="85_InfraBackMatter/Infrastructure-CommonTypes.xml"/>
+				
+	</Appendix>
+	
+		<!--Section B-->
+	<Appendix name="Code Sets" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.w3.org/1999/xhtml" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+		  <Intro>
+			<p>Select shared and named code sets defined in SIF are included here for reference.</p>
+		  </Intro>
+		  <CodeSets>
+			<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="85_InfraBackMatter/Infrastructure-CodeSets.xml"/>
+
+			<!-- include data model code sets here -->
+			<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="80_BackMatter/Custom/DataModel-CodeSets-Custom.xml"/>
+    
+		  </CodeSets>
+		</Appendix>
+	
+		<!--Section C-->
+	<xi:include parse="xml" xmlns:xi="http://www.w3.org/2001/XInclude" href="80_BackMatter/DataModel-ExternalCodeSets.xml"/>
+	
+	
+		<!--Section D-->
+	<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="80_BackMatter/BackgroundSupplementaryDocumentation.xml"/>
+	
+		<!--Section -->
+	<Appendix name="Index of Tables"/>
+		<!--Section -->
+	<Appendix name="Index of Examples"/>
+		<!--Section -->
+	<Appendix name="Index of Figures"/>
+		<!--Section -->
+	<Appendix name="Index of Objects"/>
+		<!--Section -->
+	<Appendix name="Index of Common Elements"/>
+		<!--Section -->
+	<Appendix name="Index of Common Types"/>
+		<!--Section -->
+	<Appendix name="Index of Elements"/>
+		<!--Section -->
+	<Appendix name="Index of Attributes"/>
+		<!--Section -->
+	<Appendix name="References">
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="80_BackMatter/DataModel-References.xml"/>
+	</Appendix>
+	
+</SIFSpecification>

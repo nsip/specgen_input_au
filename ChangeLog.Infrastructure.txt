@@ -1,0 +1,73 @@
+2.4-5
+* Corrected SIF XML Filter language in regards to the XML document element.
+* Fixed the go to step X
+
+2.4-4
+* Fixed bug with service includes
+
+2.4-3
+* Support for SIF Zone Service definitions
+* Updated documentation SIF_Version values to 2.4
+* Added SIF Zone Service message flow logic.
+* Added SIF Zone Service descriptions and types
+* Added new section Quality of Serivce Implementation
+* Modified SIF Zone Service definitions to be their own sections thus files in the documentation.
+
+2.4-2
+* Added SIF Zone Services section
+
+2.4-1
+* Updated Infrastructure with SIF XML Filter changes
+	- Updated Access Control paragraph
+	- Added section SIF XML Filter
+	- Updated ZIS handle SIF_Event messaging logic
+	- Updated ZIS handle SIF_Request messaging logic
+	- Updated ZIS handle SIF_Response messaging logic
+* Added SIF_ServiceInput
+* Added SIF_ServiceOutput
+* Added SIF_ServiceNotify
+* Updated SIF_AgentACL with SIF Zone Service support
+* Added SIF_SystemControl/SIF_CancelServiceInputs
+* Updated SIF_Provision with SIF Zone Service support
+* Updated SIF_ZoneStatus with SIF Zone Service support.
+
+2.3-17
+* Refactor references section to allow it to be customized.
+
+2.3-16
+* Updated the URL to be sifassociation in the navigation parts
+* Updated the structure to allow the SIF Association trademark name to be changed per localization.
+
+2.3-15
+* There was an issue with the external code sets having a code set declared more than once.  this has been corrected.
+* The preamble was broken out to allow localization releases to customize their parts of the preamble.
+
+2.3-14
+* Refactored SIF_Metadata for improved localization customization.  Some of the elements have been omitted from the infrastructure as they might be more localization specific than infrastructure.  These elements should be inserted in each localization release.
+* Added SIF_Metadata-Elements-Custom.xml and SIF_Metadata-Example-Custom.xml to the Custom folder
+* DataModel-CommonElements-Custom.xml updated with the SIF_Metadata common elements used.
+* Removed common types and elements from Data Model for SIF_Metadata.
+* Refactored the ReportData package common elements and types.
+* Removed common types used by SIF_Metadata from Data Model folder.
+
+
+2.3-13
+* Added support for Common Types custom
+
+2.3-12
+* Added SIF_ExtendedElements and SIF_Metadata as they were missing.
+* Added support for custom External code sets
+
+2.3-11
+* Refactored the input to contain a custom folder and area.  This area is where the specification's data model, common elements, and code sets are added.  This allows the infrastructure and documentation to be quickly updated with little merging in the data model folder.
+
+2.3-10
+* Refactored the SIF.xml to include Title, Release Date, and Infrastructure version text documents
+
+2.3-9
+* Refactored code set to be an include
+
+2.3-8
+* Refactored the input files for specification provisioning for other countries
+* Reduced the Infrastructure input files to be documentation and infrastructure only.  Removed US data model
+* SIF_LogEntry has been moved into the Infrastructure object section.  The same section as the SIF_AgentACL and SIF_ZoneStatus
