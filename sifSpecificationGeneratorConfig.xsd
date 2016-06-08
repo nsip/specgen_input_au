@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 sp1 (x64) (http://www.altova.com) by Vince Paredes (SIF Association) -->
+<xs:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://www.sifassociation.org/sifSpecificationGenerator/1.0" targetNamespace="http://www.sifassociation.org/sifSpecificationGenerator/1.0" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="sifSpecificationGeneratorConfig">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="globalSettings">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="inputDocument" type="xs:normalizedString"/>
+							<xs:element name="sifNamespace" type="xs:normalizedString"/>
+							<xs:element name="localizationCode" type="xs:normalizedString"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="htmlDocuments">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="htmlDocument" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="singleDocument" type="xs:boolean"/>
+										<xs:element name="rootDocumentFileName" type="xs:normalizedString"/>
+										<xs:element name="rootTitle" type="xs:normalizedString"/>
+										<xs:element name="documentType">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:enumeration value="DataModel"/>
+													<xs:enumeration value="Infrastructure"/>
+													<xs:enumeration value="Combined"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="webServiceDocuments">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="webServiceDocument" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="singleDocument" type="xs:boolean"/>
+										<xs:element name="rootDocumentFileName" type="xs:normalizedString"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="xsdDocuments">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="xsdDocument" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="xsdTitle" type="xs:normalizedString"/>
+										<xs:element name="diagram" type="xs:boolean"/>
+										<xs:element name="isDataModelXsd" type="xs:boolean"/>
+										<xs:element name="isServiceBodyXsd" type="xs:boolean"/>
+										<xs:element name="singleSchema" type="xs:boolean"/>
+										<xs:element name="annotate" type="xs:boolean"/>
+										<xs:element name="listWithKeyConstraints" type="xs:boolean"/>
+										<xs:element name="isSifMessage2Xsd" type="xs:boolean"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

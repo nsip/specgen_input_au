@@ -1,0 +1,133 @@
+body { background-color: white }
+
+h1 { text-indent:  0%; color: #005696; border-width: 3px; border-style: solid; padding: 5px; border-color: #005696; margin-bottom: 18px }
+h2 { text-indent:  0%; color: #005696; margin-top: 27px; margin-bottom: 18px }
+h3 { text-indent:  0%; color: #005696; margin-top: 24px; margin-bottom: 15px }
+h4 { text-indent:  0%; color: #005696; margin-top: 21px; margin-bottom: 12px }
+h5 { text-indent:  0%; color: #005696; margin-top: 18px; margin-bottom:  9px }
+h6 { text-indent:  0%; color: #005696; margin-top: 15px; margin-bottom:  6px }
+
+.element_section { margin-bottom: 40px }
+.element_name { background-color: #005696; color: white; border-color: #FFC425; border-style: double; border-width: 3px; padding: 10px; font-size: larger }
+
+a img { border: 0 }
+
+a:link { color: #005696; text-decoration: none }
+a:visited { color: #005696; text-decoration: none }
+a:active { color: #005696; text-decoration: none }
+a:link:hover { color: #005696; text-decoration: underline }
+
+hr { color: #FFC425 }
+
+table { border-collapse: collapse; margin-bottom: 12px }
+tr { border-collapse: collapse }
+td { border-width: 1px; border-color: #005696/*#FFC425*/; border-style: solid; border-collapse: collapse; padding: 3px }
+th { border-width: 1px; border-color: #005696/*#FFC425*/; border-style: solid; border-collapse: collapse; padding: 3px }
+
+em { color: #005696 }
+strong { color: #005696 }
+
+td dl { margin-bottom: 0px }
+
+table > tr:first-child td { background-color: #005696; color: white; font-weight: bold; vertical-align: bottom }
+th { background-color: #005696; color: white; font-weight: bold; vertical-align: bottom }
+table td { vertical-align: top }
+thead td { background-color: #005696; color: white; font-weight: bold; vertical-align: bottom }
+
+ul li { list-style-position: outside; list-style-image: url(../images/bullet_logo.jpg); background-attachment: fixed; padding: 2px }
+
+/*div.example { margin-top: 20px; background-color: #FAFAFA; border-width: 2; border-style: double; border-color: #005696; padding: 10px; white-space: pre; font-family: monospace; font-size: smaller }*/
+div.example { text-align: left; margin-top: 20px; background-color: #FAFAFA; border-width: 2; border-style: double; border-color: #005696; padding: 10px; white-space: pre; font-family: monospace; font-size: smaller; overflow: scroll; width: 96%; height: 100%; margin-left: auto; margin-right: auto }
+div.example_parent { text-align: center; margin-bottom: 2px }
+
+span.caption { font-size: smaller; font-style: italic; margin-bottom: 10px; display: block }
+span.example { font-family: monospace; font-size: smaller }
+span.title { color: #005696; font-weight: bolder }
+
+dt { font-weight: bold; color: #005696 }
+
+table.codeset dt { font-weight: normal }
+
+table.definition { margin-bottom: 2px }
+
+table.definition td.indicators { color: #005696; font-size: 14px; font-weight: bold; text-align: center; padding: 1px }
+table.definition img.key { padding-top: 4px }
+table.definition td.element { font-size: smaller }
+table.definition td.attribute { font-size: smaller }
+table.definition td.emptycell { background-color: #FAFAFA }
+table.definition td.characteristics { text-align: center }
+
+table.definition .type a:link { color: #005696; font-family: monospace; text-decoration: none; font-size: smaller }
+table.definition .type a:visited { color: #005696; font-family: monospace; text-decoration: none; font-size: smaller }
+table.definition .type a:active { color: #005696; font-family: monospace; text-decoration: none; font-size: smaller }
+table.definition .type a:link:hover { color: #005696; font-family: monospace; text-decoration: none; font-size: smaller; text-decoration: underline }
+table.definition .type dt { font-family: monospace; font-weight: normal; font-size: smaller }
+table.definition .type dd { font-size: smaller }
+table.definition .type table { margin-top: 10px; margin-left: 10px }
+table.definition .type td { font-size: smaller; font-family: monospace }
+table.definition .type div.type { font-size: smaller; font-family: monospace; white-space: pre }
+
+table.definition li { list-style-image: none }
+
+ol.comment { background-color: lime; border-color: gray; border-width: 1; border-style: solid; padding: 5px; margin: 10px  }
+ol.comment li { list-style-position: inside }
+
+p.emphasized_note { color: #005696; font-weight: bold }
+
+div.contents { margin-top: 50px }
+
+div.contents h1 { text-indent:  0%; padding: 5px; margin-top: 18px; margin-bottom: 15px }
+div.contents h2 { text-indent:  3%; padding: 0px; margin-top: 15px; margin-bottom: 12px }
+div.contents h3 { text-indent:  6%; padding: 0px; margin-top: 12px; margin-bottom:  9px }
+div.contents h4 { text-indent:  9%; padding: 0px; margin-top:  9px; margin-bottom:  6px }
+div.contents h5 { text-indent: 12%; padding: 0px; margin-top:  6px; margin-bottom:  3px }
+div.contents h6 { text-indent: 15%; padding: 0px; margin-top:  3px; margin-bottom:  0px }
+
+.titlePage h1 { border: 0px }
+
+.titlePage dt { font-size: larger }
+.titlePage dd { font-size: larger }
+
+div#topnavigation { margin-bottom: 25px }
+div#bottomnavigation { margin-top: 75px }
+
+div.navigation { text-align: center }
+div.navigation a { margin-right: 25px; font-size: larger; font-weight: bold }
+
+.diagram_parent { width: 100%; height: 100%; overflow: scroll; text-align: center; border-width: 1px; border-style: inset; margin-top: 10px; margin-bottom: 0px }
+.diagram { margin-top: 10px; margin-bottom: 10px }
+
+.rfc2119 { font-family: monospace; color: #005696 }
+
+.rootElement { font-weight: bold; color: #005696; font-size: 110% }
+
+div.type_indent { margin-left: 5%; margin-top: 0px; margin-bottom: 0px }
+
+li.folder { list-style-position: outside; list-style-image: url(../images/folder.png); background-attachment: fixed; font-family: Tahoma, sans-serif; font-size: 8pt; padding-left: 5px; margin-top: 0px; margin-bottom: 0px; padding-top: 0px; padding-bottom: 0px  }
+li.file { font-family: Tahoma, sans-serif; font-size: 8pt; margin-top: 2px; margin-bottom: 2px; padding-left: 5px }
+li.folder ul { margin-left: 16px; margin-top: 2px; margin-bottom: 0px; padding-top: 0px; padding-bottom: 0px }
+
+.citation { padding-left: 3.3%; text-indent: -3% }
+
+.index-name { font-size: smaller }
+.index-number { font-size: smaller }
+
+@media print
+{
+	body { font-size: smaller }
+	
+	.contents { page-break-before: always }
+	.titlePage { page-break-after: always }
+	p { page-break-inside: avoid }
+	table { page-break-inside: avoid }
+	tr { page-break-inside: avoid }
+	h1 { page-break-before: always }
+	hr { color: #005696 }
+	td { border-color: #005696 }
+	th { border-color: #005696 }
+	
+	div.example { page-break-inside: avoid; overflow: hidden; width: auto; height: auto }
+	.diagram_parent { page-break-inside: avoid; overflow: hidden; width: auto; height: auto; border-width: 0px }
+	
+	.titlePage h1 { page-break-before: auto }
+}
