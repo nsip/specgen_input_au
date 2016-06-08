@@ -1,0 +1,143 @@
+<DataObject name="RoomInfo">
+  <Key>@RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>RoomInfo</Element>
+    <Description>
+      <p>
+        This object contains all of the information about a school's room. This object may contain a reference to a room type so that it may represent anything from a gym, cafeteria, to a standard classroom. The StaffList element usually contains the homeroom teacher.
+      </p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>GUID that identifies this room.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+  <Item>
+    <Element>SchoolInfoRefId</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>GUID that identifies the school that this room belongs to.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Element>LocalId</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The locally assigned identifier for the room.</p>
+    </Description>
+     <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>
+  <Item>
+    <Element>RoomNumber</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Room number as presented to the user/application. It is intended to be human readable and user-friendly corresponding to the physical label of the Room.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  <Item>
+    <Element>StaffList</Element>
+    <Characteristics>O</Characteristics>
+    <List mode="List">
+    </List>
+  </Item>
+  <Item>
+    <Element>/StaffPersonalRefId</Element>
+    <Characteristics>MR</Characteristics>
+    <Description>
+      <p>GUID that identifies the staff person assigned to this room (e.g. the homeroom teacher).</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Element>Description</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>
+        Friendly name that can be assigned to the room (e.g. <code>Staff Cafeteria</code>).
+      </p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  <Item>
+    <Element>Building</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Extra building information. In the future Building could become its own object in which case this element will need to be changed to a RefId. Currently it is only required as a free text field.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  <Item>
+    <Element>HomeroomNumber</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>When a room is designated as a homeroom it may have a different number. Usually blank when room is not a homeroom.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  <Item>
+    <Element>Size</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Size in square meters.</p>
+    </Description>
+    <Type name="xs:decimal"></Type>
+  </Item>
+  <Item>
+    <Element>Capacity</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Number of persons (usually students) that this room can hold.</p>
+    </Description>
+    <Type name="xs:unsignedInt"></Type>
+  </Item>
+  <Item>
+    <Element>PhoneNumber</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Phone number for the room</p>
+    </Description>
+    <Type ref="DataModel" name="PhoneNumber"></Type>
+  </Item>
+  <Item>
+    <Element>RoomType</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Type of room, for use in timetabling.</p>
+    </Description>
+    <Type name="xs:token"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="DataModel" name="SIF_Metadata"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="DataModel" name="SIF_ExtendedElements"></Type>
+  </Item>
+  <xhtml:Example name="RoomInfo Example" xmlns="">
+    <RoomInfo RefId="D3E34B359D75101A8C3D00AA001A1652" >
+      <SchoolInfoRefId>A2E35B359D75101A8C3D00AA001A0000</SchoolInfoRefId>
+      <RoomNumber>101</RoomNumber>
+      <StaffList>
+        <StaffPersonalRefId>A8C3A2E35B359D75101D00AA001A0000</StaffPersonalRefId>
+      </StaffList>
+      <Description>Room 101</Description>
+      <Building>Main A</Building>
+      <HomeroomNumber>10-HR-A</HomeroomNumber>
+      <Size>400</Size>
+      <Capacity>35</Capacity>
+      <PhoneNumber Type="0096">
+        <Number>(02) 9555-1234</Number>
+      </PhoneNumber>
+    </RoomInfo>
+  </xhtml:Example>
+</DataObject>

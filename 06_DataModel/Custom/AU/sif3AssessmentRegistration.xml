@@ -1,0 +1,661 @@
+<DataObject name="Sif3AssessmentRegistration">
+  <Key>@RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>Sif3AssessmentRegistration</Element>
+    <Description>
+      <p>This object represents the assignment of a specific assessment to be taken by a student. A student will have multiple registrations if a given assessment is attempted more than once. This object will also track testing status information after the student has tested.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Description>
+      <p>The GUID that uniquely identifies an instance of the object.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>StudentPersonalRefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Description>
+      <p>The student associated with the registration.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>AssessmentRefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Description>
+      <p>The assessment that is to be taken by the student.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>AssessmentAdministrationRefId</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Description>
+      <p>The assessment administration associated with the registration.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>AssessmentSessionRefId</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Description>
+      <p>Identifies the AssessmentSession that contains the location and scheduled time the assessment will/has been delivered. The session is likely identified at some time after the registration is initially created.</p>
+    </Description>
+  </Item>  
+  <Item>
+    <Element>AssessmentFormRefId</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Description>
+      <p>Identifies the AssessmentForm used in the administration.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>CreationDateTime</Element>
+    <Characteristics>M</Characteristics>
+    <Type name="xs:dateTime"></Type>
+    <Description>
+      <p>Date/time assignment is made.</p>
+    </Description>
+  </Item>  
+  <Item>
+    <Element>StartDateTime</Element>
+    <Characteristics>O</Characteristics>
+    <Type name="xs:dateTime"></Type>
+	<Description>
+      <p>Date/time the assignment actually started. Typically considered the login time. For paper-based tests, this would typically be the date of testing for this student. Note: if the student 'pauses' or otherwise logs in/out of a test after starting, this only records the first event. If further detailed analysis is required, refer to the item level details.</p>
+    </Description>
+  </Item>  
+  <Item>
+    <Element>EndDateTime</Element>
+    <Characteristics>O</Characteristics>
+    <Type name="xs:dateTime"></Type>
+	<Description>
+      <p>Date/time the assignment actually ended. Typically considered the time the test has been submitted for scoring by the test taker. Likely used for online tests only.</p>
+    </Description>
+  </Item>  
+<Item>
+    <Element>AssessmentPlatform</Element>
+    <Characteristics>O</Characteristics>
+    <Type name="xs:token">
+	  <Values>
+	    <Value>
+		  <Code>paper</Code>
+		</Value>
+		<Value>
+		  <Code>computer</Code>
+		</Value>
+		<Value>
+		  <Code>mobile</Code>
+		</Value>
+		<Value>
+		  <Code>clicker</Code>
+		</Value>
+		<Value>
+		  <Code>mixed mode</Code>
+		</Value>
+		<Value>
+		  <Code>other</Code>
+		</Value>
+	  </Values>
+	</Type>
+    <Description>
+      <p>Indicates if the registration is for a specific assessment delivery platform. Should be updated post-test with the actual platform used. </p>
+    </Description>
+  </Item>  
+  <Item>
+    <Element>DaysOfInstruction</Element>
+    <Characteristics>O</Characteristics>
+    <Type name="xs:int"></Type>
+	<Description>
+      <p>This indicates the number of days of instruction the student has taken prior to testing.</p>
+    </Description>
+  </Item>  
+  <Item>
+    <Element>RetestIndicator</Element>
+    <Characteristics>O</Characteristics>
+    <Type name="xs:token">
+	  <Values>
+	    <Value>
+		  <Code>y</Code>
+		  <Text>yes</Text>
+		</Value>
+		<Value>
+		  <Code>n</Code>
+		  <Text>no</Text>
+		</Value>
+	  </Values>
+	</Type>
+	<Description>
+      <p>Indicates if this registration is for a retest (retake). Retest can occur if a student failed a prior attempt and is eligible to retake. Other retest scenarios also can occur.</p>
+    </Description>
+  </Item>  
+  <Item>
+    <Element>TestAttemptIdentifier</Element>
+    <Characteristics>O</Characteristics>
+    <Type name="xs:token"></Type>
+	<Description>
+      <p>If the assessment delivery system assigns a unique identifier for the test attempt, then the identifier can be provided. Examples of unique identifiers for paper-based tests are batch/stack/serial and for online tests is likely a unique internal identifier. Used to locate the original attempt.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>StudentSpecialEvents</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Records student-specific special events before, during, or after the test. </p>
+    </Description>
+    <List mode="List"></List>
+  </Item>
+  <Item>
+    <Element>/StudentSpecialEvent</Element>
+    <Characteristics>MR</Characteristics>
+    <Type name="xs:normalizedString"></Type>
+    <Description>
+      <p>A description of the special event. Student special event are different from special events of the test session. An example of a student special event may be 'student became ill' or 'student was detected attempting to cheat'. </p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>Code</Attribute>
+    <Characteristics>M</Characteristics>
+    <Type name="xs:token"></Type>
+    <Description>
+      <p>A code indicating the type of special event. Code values are determined by the assessment program..</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>TestingStatuses</Element>
+    <Characteristics>O</Characteristics>
+    <List mode="List"></List>
+	<Description>
+      <p>Records student-specific special conditions before, during or after the test. </p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>/TestingStatus</Element>
+    <Characteristics>MR</Characteristics>
+	<Description>
+      <p>Records a single student-specific special condition before, during or after the test. </p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>//TestingStatusCode</Element>
+    <Characteristics>M</Characteristics>
+    <Type name="xs:token"></Type>
+	<Description>
+      <p>A code that identifies the specific testing status. Code values are determined by the testing program.</p>
+    </Description>
+  </Item>  
+  <Item>
+    <Element>//TestingStatusDescription</Element>
+    <Characteristics>O</Characteristics>
+    <Type name="xs:normalizedString"></Type>
+	<Description>
+      <p>A description of the testing status. Values might include: <br/>Did not attempt <br/>Do not score <br/> Do not report <br/> Duplicate test</p>
+    </Description>
+  </Item>  
+  <Item>
+    <Element>ScorePublishDate</Element>
+    <Characteristics>O</Characteristics>
+    <Type name="xs:dateTime"></Type>
+	<Description>
+      <p>This is the date set by the testing program when the test scores are published. For formative or classroom assessments, this will likely be the date when the scoring system scored the individual test. For summative assessments, this date is likely set for a group of assessments when the processing system releases the scores.</p>
+    </Description>
+  </Item>  
+  <Item>
+    <Element>StudentGradeLevel</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="DataModel" name="YearLevel"></Type>
+    <Description>
+      <p>Grade level of the student at the time of testing.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>AssessmentGradeLevel</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="DataModel" name="YearLevel"></Type>
+    <Description>
+      <p>The grade or level at which the student is to be tested. This element should be omitted unless the student is being tested out-of-level.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>AssessmentStudentSnapshot</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The status of the student at the time of testing.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>/Name</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The name of the student.</p>
+    </Description>
+    <Type ref="DataModel" name="Name"></Type>
+  </Item>
+  <Item>
+    <Element>/LocalId</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The locally-defined identifier for this student.</p>
+    </Description>
+    <Type ref="DataModel" name="LocalId"></Type>
+  </Item>
+  <Item>
+    <Element>/StateProvinceId</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The state-assigned identifier for this student.</p>
+    </Description>
+    <Type ref="DataModel" name="StateProvinceId"></Type>
+  </Item>
+  <Item>
+    <Element>/Address</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The address of the student.</p>
+    </Description>
+    <Type ref="DataModel" name="Address"></Type>
+  </Item> 
+  <!-- <Item>
+    <Element>/RaceList</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Person's race</p>
+    </Description>
+    <Type ref="DataModel" name="RaceList"></Type>
+  </Item>
+  <Item>
+    <Element>/HispanicLatino</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="DataModel" name="HispanicLatino"></Type>
+  </Item>
+  -->
+  <Item>
+    <Element>/Sex</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A person's Sex.</p>
+    </Description>
+    <Type ref="CodeSets"
+      name="AUCodeSetsSexCodeType" />
+  </Item>
+  <Item>
+    <Element>/BirthDate</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The person's date of birth.</p>
+    </Description>
+    <Type ref="DataModel" name="BirthDate"></Type>
+  </Item>
+  <Item>
+    <Element>/Age</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The age (in years) of the student on the date in SnapDate.</p>
+    </Description>
+    <Type name="xs:unsignedInt"></Type>
+  </Item>
+  <Item>
+    <Element>/ProjectedGraduationYear</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Currently projected graduation year.</p>
+    </Description>
+    <Type ref="DataModel" name="ProjectedGraduationYear"></Type>
+  </Item>
+  <Item>
+    <Element>/OnTimeGraduationYear</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>First projected graduation year, usually determined when student is accepted into ninth grade.</p>
+    </Description>
+    <Type ref="DataModel" name="OnTimeGraduationYear"></Type>
+  </Item>
+  <Item>
+    <Element>/GraduationDate</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="DataModel" name="GraduationDate"></Type>
+    <Description>
+      <p>Date student officially graduated from secondary education.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>/GraduationAward</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The award received upon graduation.</p>
+    </Description>
+    <Values>
+      <Value>
+        <Code>Diploma</Code>
+      </Value>
+      <Value>
+        <Code>Certificate</Code>
+      </Value>
+      <Value>
+        <Code>GED</Code>
+      </Value>
+    </Values>
+  </Item>
+  <Item>
+    <Element>/GraduationOnTime</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Did the student graduate in the expected number of years?</p>
+    </Description>
+    <Values>
+      <Value>
+        <Code>Yes</Code>
+      </Value>
+      <Value>
+        <Code>No</Code>
+      </Value>
+      <Value>
+        <Code>Unavailable</Code>
+      </Value>
+      <Value>
+        <Code>NA</Code>
+      </Value>
+    </Values>
+  </Item>
+  <Item>
+    <Element>/HomeEnrollment</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>
+        Enrollment-related information for the school that is responsible for reporting the student's
+        membership/child accounting information. This is most likely the primary enrollment site for the student.
+      </p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>//StudentSchoolEnrollmentRefId</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The Id (GUID) of the StudentSchoolEnrollment object from which the enrollment information is derived.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"/>
+  </Item>
+  <Item>
+    <Element>//SchoolName</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Name of the school.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  <Item>
+    <Element>//SchoolInfoRefId</Element>
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>
+        The Id (GUID) of the school.  Provide both the HomeEnrollment/SchoolInfoRefId and HomeEnrollment/LocalId elements if possible.
+        If not, one or the other must be provided.
+      </p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"/>
+  </Item>
+  <Item>
+    <Element>//LocalId</Element>
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>
+        The locally-defined identifier for this school.
+        Provide both the HomeEnrollment/LocalId and HomeEnrollment/SchoolId elements if possible.
+        If not, one or the other must be provided.
+      </p>
+    </Description>
+    <Type ref="DataModel" name="LocalId"></Type>
+  </Item>
+  <Item>
+    <Element>//StateProvinceId</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The state or province defined identifier for this school.</p>
+    </Description>
+    <Type ref="DataModel" name="StateProvinceId"></Type>
+  </Item>
+  <Item>
+    <Element>//Status</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Enrollment status as of the SnapDate.</p>
+    </Description>
+    <Values>
+      <Value>
+        <Code>Active</Code>
+      </Value>
+      <Value>
+        <Code>Inactive</Code>
+      </Value>
+      <Value>
+        <Code>Unreported</Code>
+      </Value>
+    </Values>
+  </Item>
+  <Item>
+    <Element>//GradeLevel</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Grade or academic level of student.</p>
+    </Description>
+    <Type ref="DataModel" name="YearLevel"></Type>
+  </Item>
+  <Item>
+    <Element>//Homeroom</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="IdRefType"/>
+  </Item>
+  <Item>
+    <Attribute>SIF_RefObject</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The name of the SIF object referenced.</p>
+    </Description>
+    <Values>
+      <Value>
+        <Code>RoomInfo</Code>
+      </Value>
+    </Values>
+  </Item>
+  <Item>
+    <Element>//HomeroomNumber</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The locally-defined identifier for this room.</p>
+    </Description>
+    <!--<Type ref="DataModel" name="HomeroomNumber"></Type>-->
+	<Type name="xs:normalizedString"></Type>
+  </Item>
+  <Item>
+    <Element>//FullYearEnrollment</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>An indication as to whether or not the student was enrolled for the whole school year. If the SchoolYear is in progress as of the SnapDate, use the value "Unknown".</p>
+    </Description>
+    <Values>
+      <Value>
+        <Code>Yes</Code>
+      </Value>
+      <Value>
+        <Code>No</Code>
+      </Value>
+      <Value>
+        <Code>Unknown</Code>
+      </Value>
+    </Values>
+  </Item>
+  <!--<Item>
+    <Element>/IDEA</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="DataModel" name="IDEA"></Type>
+  </Item>
+  <Item>
+    <Element>/Migrant</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="DataModel" name="Migrant"></Type>
+  </Item>  
+  <Item>
+    <Element>/Title1</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="DataModel" name="Title1"></Type>
+  </Item>
+  -->
+  <Item>
+    <Element>/GiftedTalented</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType" />
+  </Item>
+  <Item>
+    <Element>/EconomicDisadvantage</Element>
+    <Characteristics>O</Characteristics>
+     <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType" />
+  </Item>  
+  <!--<Item>
+    <Element>/ELL</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="DataModel" name="ELL"></Type>
+  </Item>
+  <Item>
+    <Element>/Homeless</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="DataModel" name="Homeless"></Type>
+  </Item>
+  <Item>
+    <Element>/Section504</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="DataModel" name="Section504"></Type>
+  </Item>
+  <Item>
+    <Element>/VocationalConcentrator</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="DataModel" name="VocationalConcentrator"></Type>
+  </Item>
+  <Item>
+    <Element>/Immigrant</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="DataModel" name="Immigrant"></Type>
+  </Item>
+  <Item>
+    <Element>/FreeAndReducedStatus</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Student's eligibility for free and reduced meals.</p>
+    </Description>
+    <Values>
+      <Value>
+        <Code>Free</Code>
+      </Value>
+      <Value>
+        <Code>Reduced</Code>
+      </Value>
+      <Value>
+        <Code>None</Code>
+      </Value>
+      <Value>
+        <Code>NA</Code>
+      </Value>
+    </Values>
+  </Item>
+  -->
+  <Item>
+    <Element>/NeglectedDelinquent</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType" />
+  </Item>  
+  <Item>
+    <Element>LEAInfoRefId</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Description>
+      <p>Optional reference to a district associated with the registration.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>SchoolInfoRefId</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Description>
+      <p>Optional reference to a school associated with the registration.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>StaffPersonalRefId</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Description>
+      <p>Optional reference to a staff person associated with the registration.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>SectionInfoRefId</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Description>
+      <p>Optional reference to a section (or class) associated with the registration.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="DataModel" name="SIF_Metadata"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="DataModel" name="SIF_ExtendedElements"></Type>
+  </Item>
+
+  <xhtml:Example name="sif3 AssessmentRegistration - Example"  xmlns="">
+    <Sif3AssessmentRegistration RefId="84243B2716EA4A68889B57A07E3707C9" StudentPersonalRefId="0D015F74DAB645FD92EFA8F43F2D79C3" AssessmentRefId="80E298F70E094EE2B8B52DFD88006AF2">
+      <AssessmentAdministrationRefId>90E298F70E094EE2B8B52DFD88006AF3</AssessmentAdministrationRefId>
+	  <AssessmentSessionRefId>20E298F70E094EE2B8B52DFD88006AD4</AssessmentSessionRefId >
+      <AssessmentFormRefId>80E298F70E094EE2B8B52DFD88006AF4</AssessmentFormRefId>
+      <CreationDateTime>2011-12-31T15:23:01</CreationDateTime>
+	  <StartDateTime>2011-12-31T09:35:01</StartDateTime>
+	  <EndDateTime>2011-12-31T10:23:01</EndDateTime>
+	  <AssessmentPlatform>computer</AssessmentPlatform>
+	  <DaysOfInstruction>80</DaysOfInstruction>
+	  <RetestIndicator>n</RetestIndicator>
+	  <TestAttemptIdentifier>594800385</TestAttemptIdentifier> 
+	  <StudentSpecialEvents>
+		<StudentSpecialEvent Code="45C">Student became ill during test.</StudentSpecialEvent>
+	  </StudentSpecialEvents>
+	  <TestingStatuses>
+		  <TestingStatus>
+			<TestingStatusCode>15</TestingStatusCode>
+			<TestingStatusDescription>Do not report</TestingStatusDescription>
+		  </TestingStatus>
+	  </TestingStatuses>
+
+      <StudentGradeLevel>
+        <Code>4</Code>
+      </StudentGradeLevel>
+      <AssessmentGradeLevel>
+        <Code>3</Code>
+      </AssessmentGradeLevel>
+	  
+      <AssessmentStudentSnapshot>
+        <!--<RaceList>
+          <Race>
+            <Code>1002</Code>
+          </Race>
+        </RaceList>-->
+        <Sex>2</Sex>
+        <BirthDate>1996-09-12</BirthDate>
+        <!--<Title1>Yes</Title1>
+        <ELL>No</ELL>-->
+      </AssessmentStudentSnapshot>
+      <LEAInfoRefId>325335F330A24BCD85E263E5C1EAAF89</LEAInfoRefId>
+      <SchoolInfoRefId>0578B825250649DE930BF8916175BBAB</SchoolInfoRefId>
+      <StaffPersonalRefId>3CD4A20CE2D64C27AE977F02D2CE24B3</StaffPersonalRefId>
+      <SectionInfoRefId>CE38829615A74E0E9D37CDBFB9F93295</SectionInfoRefId>
+	  
+    </Sif3AssessmentRegistration>
+  </xhtml:Example>
+</DataObject>

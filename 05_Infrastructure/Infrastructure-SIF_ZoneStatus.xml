@@ -1,0 +1,1319 @@
+<DataObject name="SIF_ZoneStatus">
+	<EventsReported>
+    Change events are supported on <code>SIF_ZoneStatus</code>.
+  </EventsReported>
+	<Key>@ZoneId</Key>
+	<Item>
+		<Element>SIF_ZoneStatus</Element>
+		<Description>
+			<p>
+        The <code>SIF_ZoneStatus</code> object is an object that is implicitly provided by all Zone Integration Servers to provide
+        information about the ZIS. Zone Integration Servers <span class="rfc2119">MUST</span> provide this object.
+      </p>
+		</Description>
+	</Item>
+	<Item>
+		<Attribute>ZoneId</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>
+        The identifier for this Zone.
+        It is the same as the <code>SIF_SourceId</code> that the ZIS would place in any <code>SIF_Header</code> that it creates.
+      </p>
+		</Description>
+		<Type name="xs:token"/>
+	</Item>
+	<Item>
+		<Element>SIF_Name</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The descriptive name for the zone.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>SIF_Icon</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>
+        HTTP URL referencing an icon for graphical representation of the ZIS/Zone.
+        Should range from 16x16 pixels to 128x128 pixels and be of an <code>image</code> MIME type commonly supported by Web browsers (e.g. PNG, JPEG, GIF).
+        Agents may optionally follow the more restrictive guidelines at <a href="References.html#FAVICON">[FAVICON]</a>.
+      </p>
+		</Description>
+		<Type name="xs:anyURI"/>
+	</Item>
+	<Item>
+		<Element>SIF_Vendor</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Contains information about the vendor that wrote this ZIS.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>/SIF_Name</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The name of the company that wrote the ZIS.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>/SIF_Product</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The product name assigned by the vendor to identify this ZIS.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>/SIF_Version</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The version of the vendor's product&#x2014;not necessarily the SIF version.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+	    <Element>EventBundleSupport</Element>
+		<Characteristics>O</Characteristics>
+		<Type name="xs:token">
+		  <Values>
+			<Value>
+			  <Code>Yes</Code>
+			</Value>
+			<Value>
+			  <Code>No</Code>
+			</Value>
+		  </Values>
+		</Type>
+		<Description>
+			<p>Specifies whether the ZIS supports reception and unbundling of an incoming Events message, and will support bundling multiple Event messages into a single Events message for transmission to agents which indicated (during the Registration process) that they support it. </p> 
+			<p>The default value is No.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>SIF_Providers</Element>
+		<Characteristics>C</Characteristics>
+		<Description>
+			<p>Encompasses all the providers registered with this ZIS. This element is mandatory if there are providers registered with the ZIS.</p>
+		</Description>
+		<List mode="List">
+    </List>
+	</Item>
+	<Item>
+		<Element>/SIF_Provider</Element>
+		<Characteristics>MR</Characteristics>
+		<Description/>
+	</Item>
+	<Item>
+		<Attribute>SourceId</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>
+        The identifier of the SIF node that is providing objects. This is the agent or ZIS identifier that would appear in the <code>SIF_SourceId</code> field of any <code>SIF_Header</code> created by the SIF node.
+      </p>
+		</Description>
+		<Type name="xs:token"/>
+		<Facets>
+			<xs:maxLength value="64"/>
+		</Facets>
+	</Item>
+	<Item>
+		<Element>//SIF_ObjectList</Element>
+		<Characteristics>M</Characteristics>
+		<List mode="List">
+    </List>
+	</Item>
+	<Item>
+		<Element>///SIF_Object</Element>
+		<Characteristics>MR</Characteristics>
+	</Item>
+	<Item>
+		<Attribute>ObjectName</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The name of the object being provided by this SIF node.</p>
+		</Description>
+		<Type ref="CommonTypes" name="ObjectNameType"/>
+	</Item>
+	<Item>
+		<Element>////SIF_ExtendedQuerySupport</Element>
+		<Characteristics>M</Characteristics>
+		<Type name="xs:boolean"/>
+	</Item>
+	<Item>
+		<Element>////SIF_Contexts</Element>
+		<Characteristics>M</Characteristics>
+		<Type ref="Infrastructure" name="SIF_Contexts"/>
+	</Item>
+	<Item>
+		<Element>SIF_Subscribers</Element>
+		<Characteristics>C</Characteristics>
+		<Description>
+			<p>Encompasses all the subscribers registered with this ZIS. This element is mandatory if there are subscribers registered with the ZIS.</p>
+		</Description>
+		<List mode="List">
+
+    </List>
+	</Item>
+	<Item>
+		<Element>/SIF_Subscriber</Element>
+		<Characteristics>MR</Characteristics>
+		<Description/>
+	</Item>
+	<Item>
+		<Attribute>SourceId</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>
+        The identifier of the SIF node that is subscribing to the object events. This is the agent or ZIS identifier that would appear in the <code>SIF_SourceId</code> field of any <code>SIF_Header</code> created by the SIF node.
+      </p>
+		</Description>
+		<Type name="xs:token"/>
+		<Facets>
+			<xs:maxLength value="64"/>
+		</Facets>
+	</Item>
+	<Item>
+		<Element>//SIF_ObjectList</Element>
+		<Characteristics>M</Characteristics>
+		<List mode="List">
+
+    </List>
+	</Item>
+	<Item>
+		<Element>///SIF_Object</Element>
+		<Characteristics>MR</Characteristics>
+		<Description/>
+	</Item>
+	<Item>
+		<Attribute>ObjectName</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The name of the object being subscribed to by this SIF node.</p>
+		</Description>
+		<Type ref="CommonTypes" name="ObjectNameType"/>
+	</Item>
+	<Item>
+		<Element>////SIF_Contexts</Element>
+		<Characteristics>M</Characteristics>
+		<Type ref="Infrastructure" name="SIF_Contexts"/>
+	</Item>
+	<Item>
+		<Element>SIF_AddPublishers</Element>
+		<Characteristics>C</Characteristics>
+		<Description>
+			<p>
+        Encompasses all the <code>Add</code>&#160;<code>SIF_Event</code> publishers registered with this zone.
+      </p>
+		</Description>
+		<List mode="List">
+
+    </List>
+	</Item>
+	<Item>
+		<Element>/SIF_Publisher</Element>
+		<Characteristics>MR</Characteristics>
+		<Description/>
+	</Item>
+	<Item>
+		<Attribute>SourceId</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>
+        The identifier of the SIF node that can publish the <code>SIF_Event</code>. This is the agent identifier that would appear in the <code>SIF_SourceId</code> field of any <code>SIF_Header</code> created by the agent.
+      </p>
+		</Description>
+		<Type name="xs:token"/>
+		<Facets>
+			<xs:maxLength value="64"/>
+		</Facets>
+	</Item>
+	<Item>
+		<Element>//SIF_ObjectList</Element>
+		<Characteristics>M</Characteristics>
+		<List mode="List">
+
+    </List>
+	</Item>
+	<Item>
+		<Element>///SIF_Object</Element>
+		<Characteristics>MR</Characteristics>
+		<Description/>
+	</Item>
+	<Item>
+		<Attribute>ObjectName</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The name of the object being published by this agent.</p>
+		</Description>
+		<Type ref="CommonTypes" name="ObjectNameType"/>
+	</Item>
+	<Item>
+		<Element>////SIF_Contexts</Element>
+		<Characteristics>M</Characteristics>
+		<Type ref="Infrastructure" name="SIF_Contexts"/>
+	</Item>
+	<Item>
+		<Element>SIF_ChangePublishers</Element>
+		<Characteristics>C</Characteristics>
+		<Description>
+			<p>
+        Encompasses all the <code>Change</code>&#160;<code>SIF_Event</code> publishers registered with this zone.
+      </p>
+		</Description>
+		<List mode="List">
+
+    </List>
+	</Item>
+	<Item>
+		<Element>/SIF_Publisher</Element>
+		<Characteristics>MR</Characteristics>
+		<Description/>
+	</Item>
+	<Item>
+		<Attribute>SourceId</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>
+        The identifier of the SIF node that can publish the <code>SIF_Event</code>. This is the agent identifier that would appear in the <code>SIF_SourceId</code> field of any <code>SIF_Header</code> created by the agent.
+      </p>
+		</Description>
+		<Type name="xs:token"/>
+		<Facets>
+			<xs:maxLength value="64"/>
+		</Facets>
+	</Item>
+	<Item>
+		<Element>//SIF_ObjectList</Element>
+		<Characteristics>M</Characteristics>
+		<List mode="List">
+
+    </List>
+	</Item>
+	<Item>
+		<Element>///SIF_Object</Element>
+		<Characteristics>MR</Characteristics>
+		<Description/>
+	</Item>
+	<Item>
+		<Attribute>ObjectName</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The name of the object being published by this agent.</p>
+		</Description>
+		<Type ref="CommonTypes" name="ObjectNameType"/>
+	</Item>
+	<Item>
+		<Element>////SIF_Contexts</Element>
+		<Characteristics>M</Characteristics>
+		<Type ref="Infrastructure" name="SIF_Contexts"/>
+	</Item>
+	<Item>
+		<Element>SIF_DeletePublishers</Element>
+		<Characteristics>C</Characteristics>
+		<Description>
+			<p>
+        Encompasses all the <code>Delete</code>&#160;<code>SIF_Event</code> publishers registered with this zone.
+      </p>
+		</Description>
+		<List mode="List">
+
+    </List>
+	</Item>
+	<Item>
+		<Element>/SIF_Publisher</Element>
+		<Characteristics>MR</Characteristics>
+		<Description/>
+	</Item>
+	<Item>
+		<Attribute>SourceId</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>
+        The identifier of the SIF node that can publish the <code>SIF_Event</code>. This is the agent identifier that would appear in the <code>SIF_SourceId</code> field of any <code>SIF_Header</code> created by the agent.
+      </p>
+		</Description>
+		<Type name="xs:token"/>
+		<Facets>
+			<xs:maxLength value="64"/>
+		</Facets>
+	</Item>
+	<Item>
+		<Element>//SIF_ObjectList</Element>
+		<Characteristics>M</Characteristics>
+		<List mode="List">
+
+    </List>
+	</Item>
+	<Item>
+		<Element>///SIF_Object</Element>
+		<Characteristics>MR</Characteristics>
+		<Description/>
+	</Item>
+	<Item>
+		<Attribute>ObjectName</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The name of the object being published by this agent.</p>
+		</Description>
+		<Type ref="CommonTypes" name="ObjectNameType"/>
+	</Item>
+	<Item>
+		<Element>////SIF_Contexts</Element>
+		<Characteristics>M</Characteristics>
+		<Type ref="Infrastructure" name="SIF_Contexts"/>
+	</Item>
+	<Item>
+		<Element>SIF_Responders</Element>
+		<Characteristics>C</Characteristics>
+		<Description>
+			<p>Encompasses all the responders registered with this zone.</p>
+		</Description>
+		<List mode="List">
+
+    </List>
+	</Item>
+	<Item>
+		<Element>/SIF_Responder</Element>
+		<Characteristics>MR</Characteristics>
+		<Description/>
+	</Item>
+	<Item>
+		<Attribute>SourceId</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>
+        The identifier of the SIF node that can respond. This is the agent identifier that would appear in the <code>SIF_SourceId</code> field of any <code>SIF_Header</code> created by the agent.
+      </p>
+		</Description>
+		<Type name="xs:token"/>
+		<Facets>
+			<xs:maxLength value="64"/>
+		</Facets>
+	</Item>
+	<Item>
+		<Element>//SIF_ObjectList</Element>
+		<Characteristics>M</Characteristics>
+		<List mode="List">
+
+    </List>
+	</Item>
+	<Item>
+		<Element>///SIF_Object</Element>
+		<Characteristics>MR</Characteristics>
+		<Description/>
+	</Item>
+	<Item>
+		<Attribute>ObjectName</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The name of the object for which the agent can respond to requests.</p>
+		</Description>
+		<Type ref="CommonTypes" name="ObjectNameType"/>
+	</Item>
+	<Item>
+		<Element>////SIF_ExtendedQuerySupport</Element>
+		<Characteristics>M</Characteristics>
+		<Type name="xs:boolean"/>
+	</Item>
+	<Item>
+		<Element>////SIF_Contexts</Element>
+		<Characteristics>M</Characteristics>
+		<Type ref="Infrastructure" name="SIF_Contexts"/>
+	</Item>
+	<Item>
+		<Element>SIF_Requesters</Element>
+		<Characteristics>C</Characteristics>
+		<Description>
+			<p>Encompasses all the requesters registered with this zone.</p>
+		</Description>
+		<List mode="List">
+
+    </List>
+	</Item>
+	<Item>
+		<Element>/SIF_Requester</Element>
+		<Characteristics>MR</Characteristics>
+		<Description/>
+	</Item>
+	<Item>
+		<Attribute>SourceId</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>
+        The identifier of the SIF node that can request an object. This is the agent identifier that would appear in the <code>SIF_SourceId</code> field of any <code>SIF_Header</code> created by the agent.
+      </p>
+		</Description>
+		<Type name="xs:token"/>
+		<Facets>
+			<xs:maxLength value="64"/>
+		</Facets>
+	</Item>
+	<Item>
+		<Element>//SIF_ObjectList</Element>
+		<Characteristics>M</Characteristics>
+		<List mode="List">
+
+    </List>
+	</Item>
+	<Item>
+		<Element>///SIF_Object</Element>
+		<Characteristics>MR</Characteristics>
+		<Description/>
+	</Item>
+	<Item>
+		<Attribute>ObjectName</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The name of the object being requested by this agent.</p>
+		</Description>
+		<Type ref="CommonTypes" name="ObjectNameType"/>
+	</Item>
+	<Item>
+		<Element>////SIF_ExtendedQuerySupport</Element>
+		<Characteristics>M</Characteristics>
+		<Type name="xs:boolean"/>
+	</Item>
+	<Item>
+		<Element>////SIF_Contexts</Element>
+		<Characteristics>M</Characteristics>
+		<Type ref="Infrastructure" name="SIF_Contexts"/>
+	</Item>
+	<Item>
+		<Element>SIF_SIFNodes</Element>
+		<Characteristics>C</Characteristics>
+		<Description>
+			<p>Encompasses all of the nodes registered with the ZIS. This element is mandatory if there are SIF nodes registered.</p>
+		</Description>
+		<List mode="List">
+
+    </List>
+	</Item>
+	<Item>
+		<Element>/SIF_SIFNode</Element>
+		<Characteristics>MR</Characteristics>
+		<Description/>
+	</Item>
+	<Item>
+		<Attribute>Type</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>
+        The type of the node registered with the ZIS.  Note that <code>ZIS</code> is forward-looking and not used currently; all information about this
+        Zone/ZIS is contained outside <code>SIF_SIFNodes</code>.
+      </p>
+		</Description>
+		<Values>
+			<Value>
+				<Code>Agent</Code>
+			</Value>
+			<Value>
+				<Code>ZIS</Code>
+			</Value>
+		</Values>
+	</Item>
+	<Item>
+		<Element>//SIF_Name</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The descriptive name of the SIF node (i.e. Ramsey Food Services).</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>//SIF_Icon</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>
+        HTTP URL referencing an icon for graphical representation of the application/agent.
+        Should range from 16x16 pixels to 128x128 pixels and be of an <code>image</code> MIME type commonly supported by Web browsers (e.g. PNG, JPEG, GIF).
+        Agents may optionally follow the more restrictive guidelines at <a href="References.html#FAVICON">[FAVICON]</a>.
+      </p>
+		</Description>
+		<Type name="xs:anyURI"/>
+	</Item>
+	<Item>
+		<Element>//SIF_NodeVendor</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The vendor of the SIF agent.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+		<Facets>
+			<xs:maxLength value="256"/>
+		</Facets>
+	</Item>
+	<Item>
+		<Element>//SIF_NodeVersion</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>
+        The agent version number.  The format of this field is undefined, but it should
+        match the format used in the agent's conformance statement, if the agent is SIF Certified.
+      </p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+		<ItemExample>2.0.1.11</ItemExample>
+		<Facets>
+			<xs:maxLength value="32"/>
+		</Facets>
+	</Item>
+	<Item>
+		<Element>//SIF_Application</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Contains information about the vendor of the product that the agent represents.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>///SIF_Vendor</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The name of the company of the product that this agent supports.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+		<Facets>
+			<xs:maxLength value="256"/>
+		</Facets>
+	</Item>
+	<Item>
+		<Element>///SIF_Product</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The name of the product that this agent supports.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+		<Facets>
+			<xs:maxLength value="256"/>
+		</Facets>
+	</Item>
+	<Item>
+		<Element>///SIF_Version</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The version of the product. This field is informative only.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+		<Facets>
+			<xs:maxLength value="32"/>
+		</Facets>
+	</Item>
+	<Item>
+		<Element>//SIF_SourceId</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>
+        The agent or ZIS identifier. This is the same value that the SIF node would place in any <code>SIF_Header</code> that it would create.
+      </p>
+		</Description>
+		<Type name="xs:token"/>
+		<Facets>
+			<xs:maxLength value="64"/>
+		</Facets>
+	</Item>
+	<Item>
+		<Element>//SIF_Mode</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Specifies the communication mode (Pull or Push) as chosen by the message sender.</p>
+		</Description>
+		<Values>
+			<Value>
+				<Code>Push</Code>
+			</Value>
+			<Value>
+				<Code>Pull</Code>
+			</Value>
+		</Values>
+	</Item>
+	<Item>
+		<Element>//SIF_Protocol</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Describes the currently active protocol that the SIF node is using to communicate with the ZIS.</p>
+		</Description>
+		<Type ref="Infrastructure" name="SIF_Protocol"/>
+	</Item>
+	<Item>
+		<Element>//SIF_VersionList</Element>
+		<Characteristics>M</Characteristics>
+		<List mode="List">
+
+    </List>
+	</Item>
+	<Item>
+		<Element>///SIF_Version</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>
+        This is the version or versions of the SIF Implementation Specification that define(s) the messages the SIF node can receive.
+        For agents, this information was communicated when the SIF node registered with the ZIS.
+      </p>
+		</Description>
+		<Type ref="CommonTypes" name="VersionWithWildcardsType"/>
+	</Item>
+	<Item>
+		<Element>//SIF_AuthenticationLevel</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>This is the level of authentication that the SIF node supports when it wants to communicate via a secure channel.</p>
+		</Description>
+		<Type ref="Infrastructure" name="SIF_AuthenticationLevel"/>
+	</Item>
+	<Item>
+		<Element>//SIF_EncryptionLevel</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>This is the level of encryption that the SIF node supports when it wants to communicate via a secure channel.</p>
+		</Description>
+		<Type ref="Infrastructure" name="SIF_EncryptionLevel"/>
+	</Item>
+	<Item>
+		<Element>//SIF_MaxBufferSize</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>
+        Specifies that the ZIS should never send packets larger than this value. Query responses from other providers are controlled by the <code>SIF_MaxBufferSize</code> attribute in the <code>SIF_Request</code> message.
+      </p>
+		</Description>
+		<Type name="xs:unsignedInt"/>
+	</Item>
+	<Item>
+		<Element>//SIF_Sleeping</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>This element shows whether the SIF node is ready to process messages.</p>
+		</Description>
+		<Values>
+			<Value>
+				<Code>No</Code>
+				<Text>The SIF node is ready to process messages</Text>
+			</Value>
+			<Value>
+				<Code>Yes</Code>
+				<Text>The SIF node is sleeping and cannot process messages</Text>
+			</Value>
+		</Values>
+	</Item>
+	<Item>
+		<Element>SIF_SupportedAuthentication</Element>
+		<Characteristics>C</Characteristics>
+		<Description>
+			<p>Enumerates the various authentication protocols that the ZIS supports. If the ZIS supports an authentication protocol this element is mandatory.</p>
+		</Description>
+		<List mode="List">
+
+    </List>
+	</Item>
+	<Item>
+		<Element>/SIF_ProtocolName</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>Describes a particular authentication protocol supported.</p>
+		</Description>
+		<Values>
+			<Value>
+				<Code>X.509</Code>
+			</Value>
+		</Values>
+	</Item>
+	<Item>
+		<Element>SIF_SupportedProtocols</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Enumerates the various communication transport protocols that are supported by the ZIS.</p>
+		</Description>
+		<List mode="List">
+
+    </List>
+	</Item>
+	<Item>
+		<Element>/SIF_Protocol</Element>
+		<Characteristics>MR</Characteristics>
+		<Type ref="Infrastructure" name="SIF_Protocol"/>
+	</Item>
+	<Item>
+		<Element>SIF_SupportedVersions</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Enumerates the versions of the SIF Implementation Specification that this ZIS can use when communicating with the agent.</p>
+		</Description>
+		<List mode="List">
+
+    </List>
+	</Item>
+	<Item>
+		<Element>/SIF_Version</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>Lists a specific SIF Implementation Specification version.</p>
+		</Description>
+		<Type ref="CommonTypes" name="VersionType"/>
+	</Item>
+	<Item>
+		<Element>SIF_AdministrationURL</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>
+        Should a ZIS vendor provide an administration interface for the zone via a URL, the ZIS can make the URL available in <code>SIF_ZoneStatus</code>. Agent administrators can use the URL to access zone administration features, should they have permission to do so.
+      </p>
+		</Description>
+		<Type name="xs:anyURI"/>
+	</Item>
+	<Item>
+		<Element>SIF_Contexts</Element>
+		<Characteristics>M</Characteristics>
+		<Type ref="Infrastructure" name="SIF_Contexts"/>
+	</Item>
+	<Item>
+		<Element>SIF_ServiceProviders</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p/>
+		</Description>
+		<List mode='List'/>
+	</Item>
+	<Item>
+		<Element>/SIF_ServiceProvider</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>A list of nodes within a SIF Zone that provide one or more SIF Zone Services. The provider of a SIF Zone Service can be a SIF Agent or the Zone Integration Server (ZIS) itself.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Attribute>SourceId</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The identifier of the SIF node that is providing SIF Services. This is the agent or ZIS identifier that would appear in the SIF_SourceId field of any SIF_Header created by the SIF node.</p>
+		</Description>
+		<Type name='xs:token'/>
+	</Item>
+	<Item>
+		<Element>//SIF_ServiceList</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The list of services provided by this node</p>
+		</Description>
+		<List mode='List'/>
+	</Item>
+	<Item>
+		<Element>///SIF_Service</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p/>
+		</Description>
+	</Item>
+	<Item>
+		<Attribute>ServiceName</Attribute>
+		<Characteristics/>
+		<Description>
+			<p>The name of the SIF Zone Service as defined by a SIF Zone Service specification</p>
+		</Description>
+		<Type name='xs:token'/>
+	</Item>
+	<Item>
+		<Element>////SIF_Contexts</Element>
+		<Characteristics>O</Characteristics>
+		<Type ref="Infrastructure" name="SIF_Contexts"/>
+		<Description>
+			<p>
+		  Applicable contexts for stated SIF Zone Service support. If omitted, the context defaults to SIF_Default.
+	  </p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>SIF_ServiceResponders</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>A list of nodes within a SIF Zone that will respond to SIF_ServiceInput messages for one or more SIF Zone Services. The responder can be a SIF Agent or the Zone Integration Server (ZIS) itself.</p>
+		</Description>
+		<List mode='List'/>
+	</Item>
+	<Item>
+		<Element>/SIF_ServiceResponder</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p/>
+		</Description>
+	</Item>
+	<Item>
+		<Attribute>SourceId</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>
+		  The identifier of the SIF node that is providing SIF Services. This is the agent or ZIS identifier that would appear in the SIF_SourceId field of any SIF_Header created by the SIF node.
+
+	  </p>
+		</Description>
+		<Type name='xs:token'/>
+	</Item>
+	<Item>
+		<Element>//SIF_ServiceList</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The list of services that will be responded to by this node.</p>
+		</Description>
+		<List mode='List'/>
+	</Item>
+	<Item>
+		<Element>///SIF_Service</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p/>
+		</Description>
+	</Item>
+	<Item>
+		<Attribute>ServiceName</Attribute>
+		<Characteristics/>
+		<Description>
+			<p>The name of the SIF Zone Service as defined by a SIF Zone Service specification</p>
+		</Description>
+		<Type name='xs:token'/>
+	</Item>
+	<Item>
+		<Element>////SIF_Contexts</Element>
+		<Characteristics>O</Characteristics>
+		<Type ref="Infrastructure" name="SIF_Contexts"/>
+		<Description>
+			<p>
+		  Applicable contexts for stated SIF Zone Service support. If omitted, the context defaults to SIF_Default.
+	  </p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>SIF_ServiceRequesters</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>A list of nodes within a SIF Zone that will respond to SIF_ServiceInput messages for one or more SIF Zone Services. The responder can be a SIF Agent or the Zone Integration Server (ZIS) itself.</p>
+		</Description>
+		<List mode='List'/>
+	</Item>
+	<Item>
+		<Element>/SIF_ServiceRequester</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p/>
+		</Description>
+	</Item>
+	<Item>
+		<Attribute>SourceId</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>
+		  The identifier of the SIF node that will respond to SIF_ServiceInput messages. This is the agent or ZIS identifier that would appear in the SIF_SourceId field of any SIF_Header created by the SIF node.
+
+	  </p>
+		</Description>
+		<Type name='xs:token'/>
+	</Item>
+	<Item>
+		<Element>//SIF_ServiceList</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The list of services that will be invoked by this node</p>
+		</Description>
+		<List mode='List'/>
+	</Item>
+	<Item>
+		<Element>///SIF_Service</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p/>
+		</Description>
+	</Item>
+	<Item>
+		<Attribute>ServiceName</Attribute>
+		<Characteristics/>
+		<Description>
+			<p>The name of the SIF Zone Service as defined by a SIF Zone Service specification</p>
+		</Description>
+		<Type name='xs:token'/>
+	</Item>
+	<Item>
+		<Element>////SIF_Operations</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>
+		  The list of operations an agent may invoke on a SIF Zone Service. This information may or may not be known by the ZIS as it is optionally provided by an agent during SIF_Provision.The list of operations an agent may invoke on a SIF Zone Service. This information may or may not be known by the ZIS as it is optionally provided by an agent during SIF_Provision.
+	  </p>
+		</Description>
+		<List mode='List'/>
+	</Item>
+	<Item>
+		<Element>/////SIF_Operation</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>
+		  A specific operation with a SIF Zone Service that the agent will invoke.
+	  </p>
+		</Description>
+		<Type name='xs:token'/>
+	</Item>
+	<Item>
+		<Element>////SIF_Contexts</Element>
+		<Characteristics>O</Characteristics>
+		<Type ref="Infrastructure" name="SIF_Contexts"/>
+		<Description>
+			<p>
+      </p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>SIF_ServiceSubscribers</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p/>
+		</Description>
+		<List mode='List'/>
+	</Item>
+	<Item>
+		<Element>/SIF_ServiceSubscriber</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p/>
+		</Description>
+	</Item>
+	<Item>
+		<Attribute>SourceId</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The identifier of the SIF node that is providing SIF Services. This is the agent or ZIS identifier that would appear in the SIF_SourceId field of any SIF_Header created by the SIF node.</p>
+		</Description>
+		<Type name='xs:token'/>
+	</Item>
+	<Item>
+		<Element>//SIF_ServiceList</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The list of services that are subscribed to by this node.</p>
+		</Description>
+		<List mode='List'/>
+	</Item>
+	<Item>
+		<Element>///SIF_Service</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p/>
+		</Description>
+	</Item>
+	<Item>
+		<Attribute>ServiceName</Attribute>
+		<Characteristics/>
+		<Description>
+			<p>The name of the SIF Zone Service as defined by a SIF Zone Service specification</p>
+		</Description>
+		<Type name='xs:token'/>
+	</Item>
+	<Item>
+		<Element>////SIF_Operations</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>
+		  If SIF_Operations is not present, then the agent is subscribed to all events emitted by the service
+	  </p>
+		</Description>
+		<List mode='List'/>
+	</Item>
+	<Item>
+		<Element>/////SIF_Operation</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>
+		  A specific notification message that the agent is subscribed to
+	  </p>
+		</Description>
+		<Type name='xs:token'/>
+	</Item>
+	<Item>
+		<Element>////SIF_Contexts</Element>
+		<Characteristics>O</Characteristics>
+		<Type ref="Infrastructure" name="SIF_Contexts"/>
+		<Description>
+			<p>
+      </p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>SIF_Metadata</Element>
+		<Characteristics>O</Characteristics>
+		<Type>
+			<xs:complexType>
+				<xs:sequence>
+					<xs:any minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>		
+		</Type>
+	</Item>
+	<Item>
+		<Element>SIF_ExtendedElements</Element>
+		<Characteristics>O</Characteristics>
+		<Type ref="Infrastructure" name="SIF_ExtendedElements"/>
+	</Item>
+	<xhtml:Example xmlns="" intl="us">
+		<SIF_ZoneStatus ZoneId="RamseyZIS">
+			<SIF_Name>Ramsey Elementary</SIF_Name>
+			<SIF_Vendor>
+				<SIF_Name>ZoneMaster, Inc.</SIF_Name>
+				<SIF_Product>ZonePlus Zone Integration Server</SIF_Product>
+				<SIF_Version>3.01</SIF_Version>
+			</SIF_Vendor>
+			<EventBundleSupport>Yes</EventBundleSupport>
+			<SIF_Providers>
+				<SIF_Provider SourceId="RamseyFOOD">
+					<SIF_ObjectList>
+						<SIF_Object ObjectName="StudentMeal">
+							<SIF_ExtendedQuerySupport>false</SIF_ExtendedQuerySupport>
+							<SIF_Contexts>
+								<SIF_Context>SIF_Default</SIF_Context>
+							</SIF_Contexts>
+						</SIF_Object>
+					</SIF_ObjectList>
+				</SIF_Provider>
+				<SIF_Provider SourceId="RamseyLIB">
+					<SIF_ObjectList>
+						<SIF_Object ObjectName="LibraryPatronStatus">
+							<SIF_ExtendedQuerySupport>false</SIF_ExtendedQuerySupport>
+							<SIF_Contexts>
+								<SIF_Context>SIF_Default</SIF_Context>
+							</SIF_Contexts>
+						</SIF_Object>
+					</SIF_ObjectList>
+				</SIF_Provider>
+				<SIF_Provider SourceId="RamseySIS">
+					<SIF_ObjectList>
+						<SIF_Object ObjectName="StudentPersonal">
+							<SIF_ExtendedQuerySupport>false</SIF_ExtendedQuerySupport>
+							<SIF_Contexts>
+								<SIF_Context>SIF_Default</SIF_Context>
+							</SIF_Contexts>
+						</SIF_Object>
+						<SIF_Object ObjectName="StudentSchoolEnrollment">
+							<SIF_ExtendedQuerySupport>false</SIF_ExtendedQuerySupport>
+							<SIF_Contexts>
+								<SIF_Context>SIF_Default</SIF_Context>
+							</SIF_Contexts>
+						</SIF_Object>
+					</SIF_ObjectList>
+				</SIF_Provider>
+			</SIF_Providers>
+			<SIF_Subscribers>
+				<SIF_Subscriber SourceId="RamseyFOOD">
+					<SIF_ObjectList>
+						<SIF_Object ObjectName="StudentPersonal">
+							<SIF_Contexts>
+								<SIF_Context>SIF_Default</SIF_Context>
+							</SIF_Contexts>
+						</SIF_Object>
+						<SIF_Object ObjectName="StudentSchoolEnrollment">
+							<SIF_Contexts>
+								<SIF_Context>SIF_Default</SIF_Context>
+							</SIF_Contexts>
+						</SIF_Object>
+					</SIF_ObjectList>
+				</SIF_Subscriber>
+				<SIF_Subscriber SourceId="RamseyLIB">
+					<SIF_ObjectList>
+						<SIF_Object ObjectName="StudentPersonal">
+							<SIF_Contexts>
+								<SIF_Context>SIF_Default</SIF_Context>
+							</SIF_Contexts>
+						</SIF_Object>
+						<SIF_Object ObjectName="StudentSchoolEnrollment">
+							<SIF_Contexts>
+								<SIF_Context>SIF_Default</SIF_Context>
+							</SIF_Contexts>
+						</SIF_Object>
+					</SIF_ObjectList>
+				</SIF_Subscriber>
+				<SIF_Subscriber SourceId="RamseySIS">
+					<SIF_ObjectList>
+						<SIF_Object ObjectName="StudentContact">
+							<SIF_Contexts>
+								<SIF_Context>SIF_Default</SIF_Context>
+							</SIF_Contexts>
+						</SIF_Object>
+					</SIF_ObjectList>
+				</SIF_Subscriber>
+			</SIF_Subscribers>
+			<SIF_SIFNodes>
+				<SIF_SIFNode Type="Agent">
+					<SIF_Name>Ramsey Food Services</SIF_Name>
+					<SIF_SourceId>RamseyFOOD</SIF_SourceId>
+					<SIF_Mode>Push</SIF_Mode>
+					<SIF_Protocol Type="HTTPS" Secure="Yes">
+						<SIF_URL>https://RamseyNT:8010/FoodService</SIF_URL>
+					</SIF_Protocol>
+					<SIF_VersionList>
+						<SIF_Version>2.3</SIF_Version>
+					</SIF_VersionList>
+					<SIF_MaxBufferSize>16384</SIF_MaxBufferSize>
+					<SIF_Sleeping>No</SIF_Sleeping>
+				</SIF_SIFNode>
+				<SIF_SIFNode Type="Agent">
+					<SIF_Name>Ramsey Media Resource Center</SIF_Name>
+					<SIF_SourceId>RamseyLIB</SIF_SourceId>
+					<SIF_Mode>Pull</SIF_Mode>
+					<SIF_Protocol Type="HTTPS" Secure="Yes">
+						<SIF_URL>https://RamseyNT:8020/Library</SIF_URL>
+					</SIF_Protocol>
+					<SIF_VersionList>
+						<SIF_Version>2.3</SIF_Version>
+					</SIF_VersionList>
+					<SIF_MaxBufferSize>16384</SIF_MaxBufferSize>
+					<SIF_Sleeping>No</SIF_Sleeping>
+				</SIF_SIFNode>
+				<SIF_SIFNode Type="Agent">
+					<SIF_Name>Ramsey Administration</SIF_Name>
+					<SIF_SourceId>RamseySIS</SIF_SourceId>
+					<SIF_Mode>Push</SIF_Mode>
+					<SIF_Protocol Type="HTTPS" Secure="Yes">
+						<SIF_URL>https://RamseyNT:8030/StudentAdmin</SIF_URL>
+					</SIF_Protocol>
+					<SIF_VersionList>
+						<SIF_Version>2.3</SIF_Version>
+					</SIF_VersionList>
+					<SIF_MaxBufferSize>16384</SIF_MaxBufferSize>
+					<SIF_Sleeping>No</SIF_Sleeping>
+				</SIF_SIFNode>
+			</SIF_SIFNodes>
+			<SIF_SupportedAuthentication>
+				<SIF_ProtocolName>X.509</SIF_ProtocolName>
+			</SIF_SupportedAuthentication>
+			<SIF_SupportedProtocols>
+				<SIF_Protocol Type="HTTPS" Secure="Yes">
+					<SIF_URL>https://RamseyNT:8000/ZIS</SIF_URL>
+				</SIF_Protocol>
+				<SIF_Protocol Type="HTTP" Secure="No">
+					<SIF_URL>http://RamseyNT:8000/ZIS</SIF_URL>
+				</SIF_Protocol>
+			</SIF_SupportedProtocols>
+			<SIF_SupportedVersions>
+				<SIF_Version>2.3</SIF_Version>
+			</SIF_SupportedVersions>
+			<SIF_AdministrationURL>http://RamseyNT:8000/Administer</SIF_AdministrationURL>
+			<SIF_Contexts>
+				<SIF_Context>SIF_Default</SIF_Context>
+			</SIF_Contexts>
+		</SIF_ZoneStatus>
+	</xhtml:Example>
+	<xhtml:Example xmlns="" intl="uk">
+		<SIF_ZoneStatus ZoneId="RamseyZIS">
+			<SIF_Name>Ramsey Elementary</SIF_Name>
+			<SIF_Vendor>
+				<SIF_Name>ZoneMaster, Inc.</SIF_Name>
+				<SIF_Product>ZonePlus Zone Integration Server</SIF_Product>
+				<SIF_Version>3.01</SIF_Version>
+			</SIF_Vendor>
+			<EventBundleSupport>Yes</EventBundleSupport>
+			<SIF_Providers>
+				<SIF_Provider SourceId="RamseySIS">
+					<SIF_ObjectList>
+						<SIF_Object ObjectName="LearnerPersonal">
+							<SIF_ExtendedQuerySupport>false</SIF_ExtendedQuerySupport>
+							<SIF_Contexts>
+								<SIF_Context>SIF_Default</SIF_Context>
+							</SIF_Contexts>
+						</SIF_Object>
+						<SIF_Object ObjectName="LearnerSchoolEnrolment">
+							<SIF_ExtendedQuerySupport>false</SIF_ExtendedQuerySupport>
+							<SIF_Contexts>
+								<SIF_Context>SIF_Default</SIF_Context>
+							</SIF_Contexts>
+						</SIF_Object>
+					</SIF_ObjectList>
+				</SIF_Provider>
+			</SIF_Providers>
+			<SIF_Subscribers>
+				<SIF_Subscriber SourceId="RamseyFOOD">
+					<SIF_ObjectList>
+						<SIF_Object ObjectName="LearnerPersonal">
+							<SIF_Contexts>
+								<SIF_Context>SIF_Default</SIF_Context>
+							</SIF_Contexts>
+						</SIF_Object>
+						<SIF_Object ObjectName="LearnerPersonalEnrolment">
+							<SIF_Contexts>
+								<SIF_Context>SIF_Default</SIF_Context>
+							</SIF_Contexts>
+						</SIF_Object>
+					</SIF_ObjectList>
+				</SIF_Subscriber>
+				<SIF_Subscriber SourceId="RamseyLIB">
+					<SIF_ObjectList>
+						<SIF_Object ObjectName="LearnerPersonal">
+							<SIF_Contexts>
+								<SIF_Context>SIF_Default</SIF_Context>
+							</SIF_Contexts>
+						</SIF_Object>
+						<SIF_Object ObjectName="LearnerSchoolEnrolment">
+							<SIF_Contexts>
+								<SIF_Context>SIF_Default</SIF_Context>
+							</SIF_Contexts>
+						</SIF_Object>
+					</SIF_ObjectList>
+				</SIF_Subscriber>
+			</SIF_Subscribers>
+			<SIF_SIFNodes>
+				<SIF_SIFNode Type="Agent">
+					<SIF_Name>Ramsey Food Services</SIF_Name>
+					<SIF_SourceId>RamseyFOOD</SIF_SourceId>
+					<SIF_Mode>Push</SIF_Mode>
+					<SIF_Protocol Type="HTTPS" Secure="Yes">
+						<SIF_URL>https://RamseyNT:8010/FoodService</SIF_URL>
+					</SIF_Protocol>
+					<SIF_VersionList>
+						<SIF_Version>2.3</SIF_Version>
+					</SIF_VersionList>
+					<SIF_MaxBufferSize>16384</SIF_MaxBufferSize>
+					<SIF_Sleeping>No</SIF_Sleeping>
+				</SIF_SIFNode>
+				<SIF_SIFNode Type="Agent">
+					<SIF_Name>Ramsey Media Resource Center</SIF_Name>
+					<SIF_SourceId>RamseyLIB</SIF_SourceId>
+					<SIF_Mode>Pull</SIF_Mode>
+					<SIF_Protocol Type="HTTPS" Secure="Yes">
+						<SIF_URL>https://RamseyNT:8020/Library</SIF_URL>
+					</SIF_Protocol>
+					<SIF_VersionList>
+						<SIF_Version>2.3</SIF_Version>
+					</SIF_VersionList>
+					<SIF_MaxBufferSize>16384</SIF_MaxBufferSize>
+					<SIF_Sleeping>No</SIF_Sleeping>
+				</SIF_SIFNode>
+				<SIF_SIFNode Type="Agent">
+					<SIF_Name>Ramsey Administration</SIF_Name>
+					<SIF_SourceId>RamseySIS</SIF_SourceId>
+					<SIF_Mode>Push</SIF_Mode>
+					<SIF_Protocol Type="HTTPS" Secure="Yes">
+						<SIF_URL>https://RamseyNT:8030/StudentAdmin</SIF_URL>
+					</SIF_Protocol>
+					<SIF_VersionList>
+						<SIF_Version>2.3</SIF_Version>
+					</SIF_VersionList>
+					<SIF_MaxBufferSize>16384</SIF_MaxBufferSize>
+					<SIF_Sleeping>No</SIF_Sleeping>
+				</SIF_SIFNode>
+			</SIF_SIFNodes>
+			<SIF_SupportedAuthentication>
+				<SIF_ProtocolName>X.509</SIF_ProtocolName>
+			</SIF_SupportedAuthentication>
+			<SIF_SupportedProtocols>
+				<SIF_Protocol Type="HTTPS" Secure="Yes">
+					<SIF_URL>https://RamseyNT:8000/ZIS</SIF_URL>
+				</SIF_Protocol>
+				<SIF_Protocol Type="HTTP" Secure="No">
+					<SIF_URL>http://RamseyNT:8000/ZIS</SIF_URL>
+				</SIF_Protocol>
+			</SIF_SupportedProtocols>
+			<SIF_SupportedVersions>
+				<SIF_Version>2.3</SIF_Version>
+			</SIF_SupportedVersions>
+			<SIF_AdministrationURL>http://RamseyNT:8000/Administer</SIF_AdministrationURL>
+			<SIF_Contexts>
+				<SIF_Context>SIF_Default</SIF_Context>
+			</SIF_Contexts>
+		</SIF_ZoneStatus>
+	</xhtml:Example>
+</DataObject>

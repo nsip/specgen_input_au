@@ -1,0 +1,321 @@
+<Appendix name="Notes on Related Technologies">
+
+		<Intro>
+			<p>
+				This partially normative appendix highlights technologies
+				leveraged within SIF or related to SIF, either in their entirety or as a subset.  It points out specifics casual readers
+				of referenced documents on these technologies must not ignore when implementing SIF Zone Integration Servers and Agents.
+			</p>
+		</Intro>
+		
+		<Section name="SIF and HTTP(S)">
+			<p>
+				SIF uses a small subset of HTTP 1.1 (SIF HTTP), as defined in <a href="Architecture.html#InfrastructureTransportLayer">
+					Infrastructure
+					Transport Layer
+				</a>, to promote interoperability.  This section also defines a secure transport for SIF HTTP, SIF HTTPS, the required
+				and default transport layer for use in SIF.
+			</p>
+		</Section>
+		<Section name="SIF and URLs">
+			<p>
+				Zone Integration Servers and Push-mode Agents, when using SIF HTTPS or SIF HTTP, are addressable by an <code>http</code> or <code>https</code>
+				Uniform Resource Locator (URL).  As far as HTTP is concerned, these are simply formatted strings; no assumptions should be made about their format
+				(e.g. that all ZIS URLs consist of a host, port and Zone Id, or that all agent URLs consist of a host, port and Agent Id )
+				beyond the <code>http</code> and <code>https</code> schemes and the consituent parts from the generic URI (Uniform Resource Identifier) syntax
+				<a href="References.html#RFC2396">[RFC 2396]</a>.
+			</p>
+			<p>
+				<code>http://</code><i>host</i>[<code>:</code><i>port</i>][<i>abs_path</i>[<code>?</code><i>query</i>]]<br/>
+				<code>http://</code><i>host</i>[<code>:</code><i>port</i>][<i>abs_path</i>[<code>?</code><i>query</i>]]
+			</p>
+			<p>Just because one Zone Integration Server seems to follow a certain convention with regard to its URLs, e.g.:</p>
+			<p>
+				<code>http://www.YourZIS.com/YourZone</code>
+			</p>
+			<p>does not imply another Zone Integration Server will not have a completely different format for a URL, for instance:</p>
+			<p>
+				<code>http://www.ZISesAreUs.com:8080/applications/ZIS;version=2.3.1?zone=ZoneA&amp;cust=2A9823B2</code>
+			</p>
+			<p>or that a vendor's product might not change its URL conventions.</p>
+			<p>
+				The same applies to URLs that address Push-mode Agents; conventions for URLs, within the general formatting that applies to
+				URLs, can and do vary widely.
+			</p>
+			<p>
+				Zone Integration Servers and Agents <span class="rfc2119">MUST</span> treat SIF HTTPS and SIF HTTP URLs as whole strings, whose
+				only format rules stem from associated standards.  This promotes interoperability as Zone administrators deploy Zone Integration
+				Servers and Agents with different Zone configurations and products from different vendors.
+			</p>
+		</Section>
+		<Section name="SIF and XML">
+			<p>
+				With its use in both Infrastructure and the SIF Data Model, SIF is greatly dependent on the structure
+				and syntax of XML 1.0 <a href="References.html#XML">[XML]</a>.
+				SIF excludes the use of the <code>doctypedecl</code> syntax from the optional <code>prolog</code> with which every XML document may begin.
+				This implies that Zone Integration Servers and Agents <span class="rfc2119">MUST NOT</span> reference an external DTD or internal DTD
+				subset using the <code>doctypedecl</code> production (e.g. <code>&lt;!DOCTYPE SIF_Message ... !&gt;</code>).
+			</p>
+			<p>
+				This should not be construed to imply that the rest of the XML <code>prolog</code> may not preface a SIF message, even though it
+				never occurs in examples within this specification, being superfluous within SIF.  As SIF mandates the use of XML 1.0, the
+				character encoding of <code>UTF-8</code> (contained in the HTTP <code>Content-Type</code> header), and all SIF messages are <code>standalone</code> due to the exclusion of <code>doctypedecl</code>
+				above, the values that can be communicated in the XML <code>prolog</code> are fixed within SIF.  This implies that if a Zone Integration Server or
+				Agent includes an XML <code>prolog</code> before a SIF message, it <span class="rfc2119">MUST</span> take one of the following or equivalent forms
+				(equivalent including case-insensitive character encoding names, XML's choice with regard to single or double quotes and optional spacing):
+			</p>
+			<p>
+				<code>&lt;?xml version="1.0"?&gt;</code>
+				<br/>
+				<code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;</code>
+				<br/>
+				<code>&lt;?xml version="1.0" standalone="yes"?&gt;</code>
+				<br/>
+				<code>&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;</code>
+				<br/>
+			</p>
+		</Section>
+		<Section name="SIF and Unicode">
+			<p>
+				The character set supported in XML 1.0 is Unicode/ISO 10646, a character set designed to be universal in nature with regard to its
+				support for previously used character sets in the computer industry, ability to represent most human languages, numbers,
+				commonly used symbols, etc.  Thus the character set supported in SIF is Unicode/ISO 10646.
+				If a Zone Integration Server or SIF-enabled application does not support Unicode/ISO 10646 internally, it <span class="rfc2119">MUST</span>
+				map Unicode/ISO 10646 to its local character set upon receipt of a SIF message and <span class="rfc2119">MUST</span> map its
+				local character set to Unicode/ISO 10646 when sending or responding to a SIF message.  To promote interoperability and prevent loss of data in
+				these conversions, it is <span class="rfc2119">RECOMMENDED</span> that all Zone
+				Integration Servers and SIF-enabled applications support Unicode/ISO 10646.
+			</p>
+			<p>
+				SIF HTTP further requires that the Unicode/ISO 10646 character set be encoded using the UTF-8 character encoding; Zone Integration
+				Servers and Agents <span class="rfc2119">MUST</span> encode SIF XML messages using UTF-8.  To further promote interoperability, when the SIF
+				Infrastructure or Data Model specifies that an octet/byte-based transformation of a text/string value be stored in a given element or attribute
+				(e.g. Base64 encoding, hash value, encrypted form), Zone Integration Servers and Agents <span class="rfc2119">MUST</span> convert
+				the local character set of the value to Unicode/ISO 10646 if necessary, encode the resulting value using UTF-8, then apply the specified
+				transformation.
+			</p>
+		</Section>
+		<Section name="SIF and XPath">
+			<p>
+				SIF uses a small subset of XPath 1.0 <a href="References.html">[XPATH]</a> in its own path syntax for referencing elements/attributes.
+				This is defined in <a href="Infrastructure.html#SIF_ElementSyntax">SIF_Element Syntax</a>.  This document may often use the same notation
+				in referring to nested elements and/or attributes (e.g. <code>Name/FirstName</code>, <code>Name/@Type</code>), though it may include an
+				object as the root element whereas the SIF_Element syntax does not (e.g. <code>StudentPersonal/Name/FirstName</code>,
+				<code>StudentPersonal/@RefId</code>).
+			</p>
+		</Section>
+		<Section name="SIF and XML Schema">
+			<p>
+				The SIF Association hosts and provides XML Schemas <a href="References.html#SCHEMA">[SCHEMA]</a> for validating SIF messages, should Zone Integration Servers
+				or Agents choose to perform message validation.  These schemas leverage basic data types and structures as defined in that document.  When
+				these types and structures are referenced in this document they are prefixed with <code>xs:</code>.
+			</p>
+			<p>
+				Note that due to the ability of Zone Integration Servers and Agents to omit elements from data objects in the SIF Request/Response and
+				SIF Event models,
+				all elements defined as mandatory for SIF data objects in <a href="Infrastructure.html#DataObjects">Infrastructure</a> or
+				<a href="DataModel.html#DataObjects">Data Model</a> and referenced common elements
+				are defined as optional in the schema for validating any SIF_Message.  The SIF Association hosts and provides alternate schemas that allow for validation of these
+				data objects where mandatory elements cannot be omitted (e.g. in a <code>Add</code> event or in a <code>SIF_Response</code>
+				where the <code>SIF_Request</code> did not specify a specific subset of elements to be returned from matching objects).
+			</p>
+			<p>Notes on specific XML Schema types follow:</p>
+			<Section name="xs:boolean">
+				<p>
+					Agents and Zone Integration servers <span class="rfc2119">SHOULD</span> send values of <code>true</code> or <code>false</code>, but
+					must understand equivalent <code>1</code> and <code>0</code> values.
+				</p>
+			</Section>
+			<Section name="xs:time">
+				<p>
+					Agents and Zone Integration Servers <span class="rfc2119">MUST</span> specify a time zone offset from UTC or indicate that the time is UTC unless
+					the time zone is apparent locally from other elements/attributes per supplied documentation.
+				</p>
+			</Section>
+				<Section name="xs:date">
+					<p>
+						Agents and Zone Integration Servers <span class="rfc2119">MAY</span> specify a time zone offset or indicate UTC for dates, but in most cases
+						do not need to do so unless zone activity spans great international distances.
+					</p>
+				</Section>
+				<Section name="xs:dateTime">
+					<p>
+						Agents and Zone Integration Servers <span class="rfc2119">MUST</span> specify a time zone offset from UTC or indicate that the time is UTC unless
+						the time zone is apparent locally from other elements/attributes per supplied documentation.
+					</p>
+					<p>Though use of a combined <code>xs:dateTime</code> may seem a natural fit for specifying a point in time, 
+					some SIF Association working groups and task forces prefer to separate <code>xs:dateTime</code> into element/attribute pairs of <code>xs:date</code> and 
+						<code>xs:time</code> per their object design/usage goals and/or for simplified quering.  Applications wishing to query the date or time
+						portion of <code>xs:dateTime</code>	values may use comparison and boolean operators to do so.
+				</p>
+				</Section>
+			</Section>
+		<Section name="SIF and XML Namespaces">
+			<p>
+				Namespaces allow XML elements and attributes to be organized into units that allow for the separation of a set of names from others,
+				effectively allowing the integration of XML defined from various sources to be included in the same XML document without risk of name/definition
+				collisions.  SIF has since its initial release used the default namespace attribute <code>xmlns</code>&#160;<a href="References.html#XMLNS">[XMLNS]</a> in
+				the <code>SIF_Message</code> element.  To a namespace-aware parser, the effective names of the elements in:
+			</p>
+			<xhtml:Example xmlns=""  name="SIF_Message Namespace" validate="false">
+				<SIF_Message xmlns="http://www.sifinfo.org/infrastructure/1.x" Version="1.5r1">
+					<SIF_Event>...</SIF_Event>
+				</SIF_Message>
+			</xhtml:Example>
+			<p>are conceptually:</p>
+			<ul>
+				<li>
+					<code>http://www.sifinfo.org/infrastructure/1.x:SIF_Message</code>
+				</li>
+				<li>
+					<code>http://www.sifinfo.org/infrastructure/1.x:SIF_Event</code>
+				</li>
+			</ul>
+			<p>with the local names:</p>
+			<ul>
+				<li>
+					<code>SIF_Message</code>
+				</li>
+				<li>
+					<code>SIF_Event</code>
+				</li>
+			</ul>
+			<p>
+				To a namespace-aware parser, the effective names of these same elements in the SIF <code>2.x</code> namespace:
+			</p>
+			<xhtml:Example xmlns="" name="SIF_Message Namespace" validate="false">
+				<SIF_Message xmlns="http://www.sifinfo.org/infrastructure/2.x" Version="2.3">
+					<SIF_Event>...</SIF_Event>
+				</SIF_Message>
+			</xhtml:Example>
+			<p>are conceptually:</p>
+			<ul>
+				<li>
+					<code>http://www.sifinfo.org/infrastructure/2.x:SIF_Message</code>
+				</li>
+				<li>
+					<code>http://www.sifinfo.org/infrastructure/2.x:SIF_Event</code>
+				</li>
+			</ul>
+			<p>with the local names:</p>
+			<ul>
+				<li>
+					<code>SIF_Message</code>
+				</li>
+				<li>
+					<code>SIF_Event</code>
+				</li>
+			</ul>
+			<p>
+				A namespace-unaware parser simply interprets elements by their local names, and SIF 1.x and SIF 2.x elements are considered equivalent.
+				If the local name is prefixed, a namespace-unaware
+				parser considers the prefix and colon part of the name.  To a namespace-unaware parser, <code>xml:lang</code> is named just that.
+				To a namespace-aware parser, this is effectively <code>http://www.w3.org/XML/1998/namespace:lang</code> (the <code>xml</code> prefix
+				is reserved in XML 1.0 and is always bound to this namespace in <a href="References.html#XMLNS">[XMLNS]</a>) with a local name of
+				<code>lang</code>.
+			</p>
+			<p>
+				Given the timing of the first release of SIF and the release of <a href="References.html#XMLNS">Namespaces in XML [XMLNS]</a>
+				it was never mandated in SIF that Zone Integration Servers and Agents be namespace-aware.  Given the number of Zone Integration Servers
+				and Agents that may at this point be namespace-unaware, it is not yet mandated that these components be namespace-aware,
+				but this requirement may arise in a future major release of this specification.  To allow for namespace-unaware parsers to
+				reliably process SIF-defined XML by local names only, SIF messages <span class="rfc2119">MUST</span> define the namespace
+				for the corresponding SIF version as the default namespace of <code>SIF_Message</code> as documented in <a href="Infrastructure.html#SIF_Message">
+					<code>SIF_Message</code>
+				</a>.
+			</p>
+			<p>
+				Furthermore, given the gradual proliferation of XML defined in other namespaces appearing in SIF XML, the following prefix-to-namespace
+				mappings <span class="rfc2119">MUST</span> be used should elements from these namespaces occur in SIF messages,
+				to allow namespace-unaware parsers to reliably interpret names in these namespaces by local name:
+			</p>
+			<table>
+				<thead>
+					<tr>
+						<th>Prefix</th>
+						<th>Namespace</th>
+						<th>Declaration</th>
+					</tr>
+				</thead>
+				<tr>
+					<td>
+						<code>xml</code>
+					</td>
+					<td>
+						<code>http://www.w3.org/XML/1998/namespace</code>
+					</td>
+					<td>This is bound and fixed by default without declaration.</td>
+				</tr>
+				<tr>
+					<td>
+						<code>xsi</code>
+					</td>
+					<td>
+						<code>http://www.w3.org/2001/XMLSchema-instance</code>
+					</td>
+					<td>
+						<code>xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"</code>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<code>xs</code>
+					</td>
+					<td>
+						<code>http://www.w3.org/2001/XMLSchema</code>
+					</td>
+					<td>
+						<code>xmlns:xs="http://www.w3.org/2001/XMLSchema"</code>
+					</td>
+				</tr>
+			</table>
+			<p>
+				It is <span class="rfc2119">RECOMMENDED</span> that other namespaces occuring in SIF messages (e.g. XML from outside SIF
+				included in assessments, exchange of student records, etc.) have fixed prefix mappings, but it is not required.  Affected elements
+				<span class="rfc2119">MAY</span> locally change the default namespace as desired, given that the default namespace for the <code>
+					SIF_Message
+				</code> as a whole remains the namespace for the corresponding SIF version.
+			</p>
+			<p>
+				When a fixed
+				prefix is not defined for a given namespace, a namespace-unaware agent will be unable to reliably process these elements by
+				name when prefixes vary, and must become namespace-aware to do so.  XML not defined by SIF that in turn contains
+				SIF-defined XML <span class="rfc2119">MAY</span> reference SIF XML by its own prefix mapping rather than specifying
+				the namespace of the corresponding SIF version as the default namespace using <code>xmlns</code>.
+			</p>
+			<p>
+				It is <span class="rfc2119">RECOMMENDED</span> that as Zone Integration Servers and Agents are updated in their release schedules,
+				they use namespace-aware parsers or parser options if they are not doing so already.
+			</p>
+		</Section>
+		<Section name="SIF and UUIDs/GUIDs">
+			<p>
+				SIF leverages Universally Unique Identifiers (UUIDs), or Globally Unique Identifiers (GUIDs), as message and object identifiers, or primary keys,
+				and occasionally for element identifiers internal to objects, per <a href="References.html#RFC4122">[RFC 4122]</a>.
+				Note that SIF defines its own textual representation for GUIDs, uppercase and un-hyphenated (e.g. <code>F81D4FAE7DEC11D0A76500A0C91E6BF6</code> vs.
+				<code>f81d4fae-7dec-11d0-a765-00a0c91e6bf6</code>).  It should also be noted with SIF being a distributed system, to avoid the possibility
+				of GUID collisions, especially in the SIF data model, systems generating GUIDs <span class="rfc2119">SHOULD</span> use version 1 GUIDs which are
+				unique in space as well as time when an IEEE 802 MAC address is available.  Systems <span class="rfc2119">MAY</span> use version 4 GUIDs which use
+				a (pseudo-)random number-based algorithm if an IEEE 802 MAC address is unavailable or if the inclusion of that address in a GUID poses a compromising
+				security risk.
+			</p>
+		</Section>
+		<Section name="SIF and Web Services">
+			<p>
+				SIF is a web service, "a software system designed to support interoperable machine-to-machine interaction over a network <a href="References.html#WSARCH">[WSARCH]</a>."
+				It is not a Web Service, as it lacks "an interface described in a machine-processable format
+				(specifically WSDL) <a href="References.html#WSARCH">[WSARCH]</a>."  To meet this requirement and produce the Web Services Definition
+				Language (WSDL) definition for
+				SIF is a trivial exercise, creating a WSDL HTTP POST binding for the <code>SIF_Message</code>-in/<code>SIF_Message</code>-out exchange that describes
+				the SIF HTTP(S) transport layer between Agents and ZIS, and between ZIS and Push-mode Agents.  But the binding would be just that,
+				a simple <code>SIF_Message</code>-in/<code>SIF_Message</code>-out exchange
+				that doesn't capture the richness of the SIF infrastructure or necessarily provide the interoperability resulting from the precise
+				definition of SIF HTTP(S).  To do so and to meet the final requirement of a Web Service per <a href="References.html#WSARCH">[WSARCH]</a>,
+				the use of SOAP messages, would require redefinition of much of SIF using SOAP messages.  The SIF Association's Web Services Task Force has determined that this exercise has little
+				value currently, given SIF's precisely defined transport layer and installed base.  The task force has left it as a future task how to best leverage
+				Web Services in the future of SIF's infrastructure, if at all.  In the meantime, the task force has, however, decided to provide a Web Services interface that provides external systems
+				access to the rich amount of data available in SIF Zones via its own specification <a href="References.html#SIFReportingWS">[SIF Reporting WS]</a>.  Future opportunities to provide additional services
+				may be identified.
+			</p>
+		</Section>
+	</Appendix>

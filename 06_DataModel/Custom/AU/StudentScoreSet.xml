@@ -1,0 +1,151 @@
+<DataObject name="StudentScoreSet">
+  <Key>@RefId</Key>
+  <EventsReported>true</EventsReported>
+
+  <Item>
+    <Element>StudentScoreSet</Element>
+    <Description>
+      <p>The scored results from an assessment.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Description>
+      <p>The GUID that uniquely identifies an instance of the object.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>ScoreMetric</Element>
+    <Characteristics>M</Characteristics>
+    <Type ref="CodeSets" name="AUCodeSetsAssessmentReportingMethodType"></Type>
+    <Description>
+      <p>The metric or scale used to report the score.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>AssessmentAdministrationRefId</Element>
+    <Characteristics>M</Characteristics>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Description>
+      <p>The administration associated with this score set.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>StudentPersonalRefId</Element>
+    <Characteristics>M</Characteristics>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Description>
+      <p>The student associated with this score set.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>AssessmentRegistrationRefId</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Description>
+      <p>The registration associated with this score set.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>Scores</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Container for score elements. </p>
+    </Description>
+    <List mode="List">
+    </List>
+  </Item>
+  <Item>
+    <Element>/Score</Element>
+    <Characteristics>OR</Characteristics>
+    <Description>
+      <p>The score with other information related to the score.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>AssessmentSubTestRefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Description>
+      <p>References the AssessmentSubTest that defines the score.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>//ScoreValue</Element>
+    <Type name="xs:normalizedString"></Type>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The value of the score.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>//DiagnosticStatement</Element>
+    <Characteristics>O</Characteristics>
+    <Type name="xs:string"></Type>
+    <Description>
+      <p>Comment created by any logical analysis of this score.</p>
+    </Description>
+  </Item>
+
+  <Item>
+    <Element>//Description</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>This is further qualification of a Student Score.</p>
+    </Description>
+    <Type name='xs:string'/>
+  </Item>
+
+  <Item>
+    <Element>//NumberOfResponses</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>This is the number of responses that are included with the StudentScoreSet.</p>
+    </Description>
+    <Type name='xs:unsignedInt'/>
+  </Item>
+  
+  <Item>
+    <Element>StartDateTime</Element>
+    <Characteristics>O</Characteristics>
+    <Type name="xs:dateTime"></Type>
+    <Description>
+      <p>Date and time scoring began.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>FinishDateTime</Element>
+    <Characteristics>O</Characteristics>
+    <Type name="xs:dateTime"></Type>
+    <Description>
+      <p>Date and time scoring ended.</p>
+    </Description>
+  </Item>
+  
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="DataModel" name="SIF_Metadata"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="DataModel" name="SIF_ExtendedElements"></Type>
+  </Item>
+
+  <xhtml:Example xmlns="">
+    <StudentScoreSet RefId="5810E283E928459CBBA76EFE1963F784">
+      <ScoreMetric>0512</ScoreMetric>
+      <AssessmentAdministrationRefId>1F971F3D414E4146932566638290E6C1</AssessmentAdministrationRefId>
+      <StudentPersonalRefId>8F0934CC2F0448F8BBD788AA1ADE691B</StudentPersonalRefId>
+      <Scores>
+        <Score AssessmentSubTestRefId="E5EDAE63A04D47E49D0224A32956B074">
+          <ScoreValue>25</ScoreValue>
+          <DiagnosticStatement>Shows ability to identify symmetry.</DiagnosticStatement>
+        </Score>
+      </Scores>
+    </StudentScoreSet>
+  </xhtml:Example>
+</DataObject>

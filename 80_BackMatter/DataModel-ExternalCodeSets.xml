@@ -1,0 +1,20 @@
+<Appendix name="External Code Sets" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.w3.org/1999/xhtml" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Intro>
+    <p>
+      All code sets defined by external bodies and referenced within SIF are included here for reference.  The left column in each table contains the individual code values that are used
+      in SIF elements and attributes that reference these code sets.  These sets of code values are closed and normative for a given version of this specification.  Including
+      codes not provided here in corresponding SIF elements and attributes can lead to XML validation errors in installations where the zone integration server or any agent
+      is validating XML messages; the SIF data model allows for locally-defined codes, where deemed appropriate, in the <a href="DataModel.html#OtherCodeList">
+        <code>OtherCodeList</code>
+      </a>
+      element.  The right column of each table may provide a textual equivalent or description of the corresponding code, and is provided for informational purposes only.
+      The referenced sources for these code sets serve as the authorities for all descriptions and semantics, and for the definition and maintenance of the code set values themselves.
+      In each release of this specification the SIF Association endeavors to synchronize referenced code sets with updates from external sources.
+    </p>
+  </Intro>
+  <CodeSets>
+
+    <!-- include external code set xml here -->
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="Custom/DataModel-ExternalCodeSets-Custom.xml"/>
+  </CodeSets>
+</Appendix>

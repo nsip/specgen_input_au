@@ -1,0 +1,529 @@
+<DataObject name="SIF_AgentACL">
+	<EventsReported>
+    Typically only <code>Change</code> events are reported.
+  </EventsReported>
+	<Intro>
+		<p>
+      This object provides an Agent its access control list (ACL) settings in the Zone.
+      It does not communicate which objects the Agent is currently registered as providing, subscribing, publishing, requesting, or responding;
+      it simply lists the ACL rights granted to the Agent in the Zone.
+      When objects are absent from any of the access lists, the Agent does not have the necessary rights to perform the given action on the object.
+      While an Agent may asynchronously request this object from the ZIS via <code>SIF_Request</code>, it is typically returned synchronously in response
+      to the <code>SIF_SystemControl</code> message <code>SIF_GetAgentACL</code>; it is also returned synchronously in response to <code>SIF_Register</code>.
+    </p>
+	</Intro>
+	<Item>
+		<Element>SIF_AgentACL</Element>
+		<Description>
+			<p>This object provides an Agent its access control list (ACL) settings in the Zone.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>SIF_ProvideAccess</Element>
+		<Characteristics>M</Characteristics>
+		<List mode="List">
+
+    </List>
+		<Description>
+			<p>
+        Access control list by object for <code>SIF_Provide</code> and corresponding section in <code>SIF_Provision</code>.
+      </p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>/SIF_Object</Element>
+		<Characteristics>OR</Characteristics>
+	</Item>
+	<Item>
+		<Attribute>ObjectName</Attribute>
+		<Characteristics>M</Characteristics>
+		<Type ref="CommonTypes" name="ObjectNameType"/>
+		<Description>
+			<p>The name of each object.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>//SIF_Contexts</Element>
+		<Characteristics>M</Characteristics>
+		<Type ref="Infrastructure" name="SIF_Contexts"/>
+		<Description>
+			<p>List of contexts in which rights for the given action/object apply.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>SIF_SubscribeAccess</Element>
+		<Characteristics>M</Characteristics>
+		<List mode="List">
+
+    </List>
+		<Description>
+			<p>
+        Access control list by object for <code>SIF_Subscribe</code> and corresponding section in <code>SIF_Provision</code>.
+      </p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>/SIF_Object</Element>
+		<Characteristics>OR</Characteristics>
+	</Item>
+	<Item>
+		<Attribute>ObjectName</Attribute>
+		<Characteristics>M</Characteristics>
+		<Type ref="CommonTypes" name="ObjectNameType"/>
+		<Description>
+			<p>The name of each object.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>//SIF_Contexts</Element>
+		<Characteristics>M</Characteristics>
+		<Type ref="Infrastructure" name="SIF_Contexts"/>
+		<Description>
+			<p>List of contexts in which rights for the given action/object apply.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>SIF_PublishAddAccess</Element>
+		<Characteristics>M</Characteristics>
+		<List mode="List">
+
+    </List>
+		<Description>
+			<p>
+        Access control list by object for corresponding section in <code>SIF_Provision</code>, whether the Agent has the right to publish <code>Add</code> events.
+      </p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>/SIF_Object</Element>
+		<Characteristics>OR</Characteristics>
+	</Item>
+	<Item>
+		<Attribute>ObjectName</Attribute>
+		<Characteristics>M</Characteristics>
+		<Type ref="CommonTypes" name="ObjectNameType"/>
+		<Description>
+			<p>The name of each object.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>//SIF_Contexts</Element>
+		<Characteristics>M</Characteristics>
+		<Type ref="Infrastructure" name="SIF_Contexts"/>
+		<Description>
+			<p>List of contexts in which rights for the given action/object apply.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>SIF_PublishChangeAccess</Element>
+		<Characteristics>M</Characteristics>
+		<List mode="List">
+
+    </List>
+		<Description>
+			<p>
+        Access control list by object for corresponding section in <code>SIF_Provision</code>, whether the Agent has the right to publish <code>Change</code> events.
+      </p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>/SIF_Object</Element>
+		<Characteristics>OR</Characteristics>
+	</Item>
+	<Item>
+		<Attribute>ObjectName</Attribute>
+		<Characteristics>M</Characteristics>
+		<Type ref="CommonTypes" name="ObjectNameType"/>
+		<Description>
+			<p>The name of each object.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>//SIF_Contexts</Element>
+		<Characteristics>M</Characteristics>
+		<Type ref="Infrastructure" name="SIF_Contexts"/>
+		<Description>
+			<p>List of contexts in which rights for the given action/object apply.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>SIF_PublishDeleteAccess</Element>
+		<Characteristics>M</Characteristics>
+		<List mode="List">
+
+    </List>
+		<Description>
+			<p>
+        Access control list by object for corresponding section in <code>SIF_Provision</code>, whether the Agent has the right to publish Delete events.
+      </p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>/SIF_Object</Element>
+		<Characteristics>OR</Characteristics>
+	</Item>
+	<Item>
+		<Attribute>ObjectName</Attribute>
+		<Characteristics>M</Characteristics>
+		<Type ref="CommonTypes" name="ObjectNameType"/>
+		<Description>
+			<p>The name of each object.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>//SIF_Contexts</Element>
+		<Characteristics>M</Characteristics>
+		<Type ref="Infrastructure" name="SIF_Contexts"/>
+		<Description>
+			<p>List of contexts in which rights for the given action/object apply.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>SIF_RequestAccess</Element>
+		<Characteristics>M</Characteristics>
+		<List mode="List">
+
+    </List>
+		<Description>
+			<p>
+        Access control list by object for <code>SIF_Request</code> and corresponding section in <code>SIF_Provision</code>.
+      </p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>/SIF_Object</Element>
+		<Characteristics>OR</Characteristics>
+	</Item>
+	<Item>
+		<Attribute>ObjectName</Attribute>
+		<Characteristics>M</Characteristics>
+		<Type ref="CommonTypes" name="ObjectNameType"/>
+		<Description>
+			<p>The name of each object.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>//SIF_Contexts</Element>
+		<Characteristics>M</Characteristics>
+		<Type ref="Infrastructure" name="SIF_Contexts"/>
+		<Description>
+			<p>List of contexts in which rights for the given action/object apply.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>SIF_RespondAccess</Element>
+		<Characteristics>M</Characteristics>
+		<List mode="List">
+
+    </List>
+		<Description>
+			<p>
+        Access control list by object for corresponding section in <code>SIF_Provision</code>, whether the Agent has the right to
+        respond to requests for an object regardless of being the Provider of that object.
+      </p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>/SIF_Object</Element>
+		<Characteristics>OR</Characteristics>
+	</Item>
+	<Item>
+		<Attribute>ObjectName</Attribute>
+		<Characteristics>M</Characteristics>
+		<Type ref="CommonTypes" name="ObjectNameType"/>
+		<Description>
+			<p>The name of each object.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>//SIF_Contexts</Element>
+		<Characteristics>M</Characteristics>
+		<Type ref="Infrastructure" name="SIF_Contexts"/>
+		<Description>
+			<p>List of contexts in which rights for the given action/object apply.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>SIF_ProvideService</Element>
+		<Characteristics>M</Characteristics>
+		<List mode="List">
+
+    </List>
+		<Description>
+			<p>
+		  Indicates that the recipient agent has permission to provide one or more services to the SIF Zone
+	  </p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>/SIF_Service</Element>
+		<Characteristics>OR</Characteristics>
+	</Item>
+	<Item>
+		<Attribute>ServiceName</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The name of the SIF Zone Service as defined by a SIF Zone Service specification</p>
+		</Description>
+		<Type name='xs:token'/>
+	</Item>
+	<Item>
+		<Element>//SIF_Contexts</Element>
+		<Characteristics>M</Characteristics>
+		<Type ref="Infrastructure" name="SIF_Contexts"/>
+		<Description>
+			<p>List of contexts in which rights for the given action/service apply.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>SIF_RespondService</Element>
+		<Characteristics>M</Characteristics>
+		<List mode="List">
+
+    </List>
+		<Description>
+			<p>
+		  Indicates that the recipient agent has permission to respond to directed requests for one or more services in the SIF Zone
+	  </p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>/SIF_Service</Element>
+		<Characteristics>OR</Characteristics>
+	</Item>
+	<Item>
+		<Attribute>ServiceName</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The name of the SIF Zone Service as defined by a SIF Zone Service specification</p>
+		</Description>
+		<Type name='xs:token'/>
+	</Item>
+	<Item>
+		<Element>//SIF_Contexts</Element>
+		<Characteristics>M</Characteristics>
+		<Type ref="Infrastructure" name="SIF_Contexts"/>
+		<Description>
+			<p>List of contexts in which rights for the given action/service apply.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>SIF_RequestService</Element>
+		<Characteristics>M</Characteristics>
+		<List mode="List">
+
+    </List>
+		<Description>
+			<p>
+		  Indicates that the recipient agent has permission to make service calls to a SIF Zone Service
+	  </p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>/SIF_Service</Element>
+		<Characteristics>OR</Characteristics>
+	</Item>
+	<Item>
+		<Attribute>ServiceName</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The name of the SIF Zone Service as defined by a SIF Zone Service specification</p>
+		</Description>
+		<Type name='xs:token'/>
+	</Item>
+	<Item>
+		<Element>//SIF_Contexts</Element>
+		<Characteristics>M</Characteristics>
+		<Type ref="Infrastructure" name="SIF_Contexts"/>
+		<Description>
+			<p>List of contexts in which rights for the given action/service apply.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>//SIF_Operations</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>If SIF_Operations is not present, then the agent has permission to invoke all operations in the specified service.</p>
+		</Description>
+		<List mode='List'/>
+	</Item>
+	<Item>
+		<Element>///SIF_Operation</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>A specific operation that the agent has permission to invoke or subscribe to</p>
+		</Description>
+		<Type name='xs:token'/>
+	</Item>
+	<Item>
+		<Element>SIF_SubscribeService</Element>
+		<Characteristics>M</Characteristics>
+		<List mode="List">
+
+    </List>
+		<Description>
+			<p>
+		  Indicates that the recipient agent has permission to subscribe to notification messages that are emitted from a SIF Service
+	  </p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>/SIF_Service</Element>
+		<Characteristics>OR</Characteristics>
+	</Item>
+	<Item>
+		<Attribute>ServiceName</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The name of the SIF Zone Service as defined by a SIF Zone Service specification</p>
+		</Description>
+		<Type name='xs:token'/>
+	</Item>
+	<Item>
+		<Element>//SIF_Contexts</Element>
+		<Characteristics>M</Characteristics>
+		<Type ref="Infrastructure" name="SIF_Contexts"/>
+		<Description>
+			<p>List of contexts in which rights for the given action/service apply.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>//SIF_Operations</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>If SIF_Operations is not present, then the agent has permission to subcribe to all notifications in the specified service .</p>
+		</Description>
+		<List mode='List'/>
+	</Item>
+	<Item>
+		<Element>///SIF_Operation</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>A specific operation that the agent has permission to invoke or subscribe to</p>
+		</Description>
+		<Type name='xs:token'/>
+	</Item>
+	
+	<Item>
+		<Element>SIF_Metadata</Element>
+		<Characteristics>O</Characteristics>
+		<Type>
+			<xs:complexType>
+				<xs:sequence>
+					<xs:any minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</Type>
+	</Item>
+	<Item>
+		<Element>SIF_ExtendedElements</Element>
+		<Characteristics>O</Characteristics>
+		<Type ref="Infrastructure" name="SIF_ExtendedElements"/>
+	</Item>
+	<xhtml:Example xmlns="" intl="us">
+		<SIF_AgentACL>
+			<SIF_ProvideAccess>
+				<SIF_Object ObjectName="StudentPersonal">
+					<SIF_Contexts>
+						<SIF_Context>SIF_Default</SIF_Context>
+					</SIF_Contexts>
+				</SIF_Object>
+			</SIF_ProvideAccess>
+			<SIF_SubscribeAccess>
+				<SIF_Object ObjectName="Authentication">
+					<SIF_Contexts>
+						<SIF_Context>SIF_Default</SIF_Context>
+					</SIF_Contexts>
+				</SIF_Object>
+			</SIF_SubscribeAccess>
+			<SIF_PublishAddAccess>
+				<SIF_Object ObjectName="StudentPersonal">
+					<SIF_Contexts>
+						<SIF_Context>SIF_Default</SIF_Context>
+					</SIF_Contexts>
+				</SIF_Object>
+			</SIF_PublishAddAccess>
+			<SIF_PublishChangeAccess>
+				<SIF_Object ObjectName="StudentPersonal">
+					<SIF_Contexts>
+						<SIF_Context>SIF_Default</SIF_Context>
+					</SIF_Contexts>
+				</SIF_Object>
+			</SIF_PublishChangeAccess>
+			<SIF_PublishDeleteAccess>
+				<SIF_Object ObjectName="StudentPersonal">
+					<SIF_Contexts>
+						<SIF_Context>SIF_Default</SIF_Context>
+					</SIF_Contexts>
+				</SIF_Object>
+			</SIF_PublishDeleteAccess>
+			<SIF_RequestAccess>
+				<SIF_Object ObjectName="Authentication">
+					<SIF_Contexts>
+						<SIF_Context>SIF_Default</SIF_Context>
+					</SIF_Contexts>
+				</SIF_Object>
+			</SIF_RequestAccess>
+			<SIF_RespondAccess>
+				<SIF_Object ObjectName="StudentPersonal">
+					<SIF_Contexts>
+						<SIF_Context>SIF_Default</SIF_Context>
+					</SIF_Contexts>
+				</SIF_Object>
+			</SIF_RespondAccess>
+		</SIF_AgentACL>
+	</xhtml:Example>
+	<xhtml:Example xmlns="" intl="uk">
+		<SIF_AgentACL>
+			<SIF_ProvideAccess>
+				<SIF_Object ObjectName="LearnerPersonal">
+					<SIF_Contexts>
+						<SIF_Context>SIF_Default</SIF_Context>
+					</SIF_Contexts>
+				</SIF_Object>
+			</SIF_ProvideAccess>
+			<SIF_SubscribeAccess>
+				<SIF_Object ObjectName="WorkforcePersonal">
+					<SIF_Contexts>
+						<SIF_Context>SIF_Default</SIF_Context>
+					</SIF_Contexts>
+				</SIF_Object>
+			</SIF_SubscribeAccess>
+			<SIF_PublishAddAccess>
+				<SIF_Object ObjectName="LearnerPersonal">
+					<SIF_Contexts>
+						<SIF_Context>SIF_Default</SIF_Context>
+					</SIF_Contexts>
+				</SIF_Object>
+			</SIF_PublishAddAccess>
+			<SIF_PublishChangeAccess>
+				<SIF_Object ObjectName="LearnerPersonal">
+					<SIF_Contexts>
+						<SIF_Context>SIF_Default</SIF_Context>
+					</SIF_Contexts>
+				</SIF_Object>
+			</SIF_PublishChangeAccess>
+			<SIF_PublishDeleteAccess>
+				<SIF_Object ObjectName="LearnerPersonal">
+					<SIF_Contexts>
+						<SIF_Context>SIF_Default</SIF_Context>
+					</SIF_Contexts>
+				</SIF_Object>
+			</SIF_PublishDeleteAccess>
+			<SIF_RequestAccess>
+				<SIF_Object ObjectName="WorkforcePersonal">
+					<SIF_Contexts>
+						<SIF_Context>SIF_Default</SIF_Context>
+					</SIF_Contexts>
+				</SIF_Object>
+			</SIF_RequestAccess>
+			<SIF_RespondAccess>
+				<SIF_Object ObjectName="LearnerPersonal">
+					<SIF_Contexts>
+						<SIF_Context>SIF_Default</SIF_Context>
+					</SIF_Contexts>
+				</SIF_Object>
+			</SIF_RespondAccess>
+		</SIF_AgentACL>
+	</xhtml:Example>
+</DataObject>

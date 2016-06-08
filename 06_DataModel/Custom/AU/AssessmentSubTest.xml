@@ -1,0 +1,254 @@
+<DataObject name="AssessmentSubTest">
+  <Key>@RefId</Key>
+  <EventsReported>false</EventsReported>
+  <Item>
+    <Element>AssessmentSubTest</Element>
+    <Description>
+      <p>
+        A psychological construct measured by the assessment. Operationally, a subtest is a class of scores on an
+        assessment. Some assessments may have only one subtest or type of score but most assessments measure more than
+        one psychological construct. The subtest can be based upon items in a section or items that are empirically related.
+        Subtests can also be composites of other subtests that are combined using a particular algorithm. Examples of
+        subtests of an assessment are math total, reading composite, total test, and English composition.
+      </p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Description>
+      <p>The GUID that uniquely identifies an instance of the object.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>Name</Element>
+    <Description>
+      <p>Text name of the subtest. </p>
+    </Description>
+    <Characteristics>M</Characteristics>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  <Item>
+    <Element>ScoreRange</Element>
+    <Characteristics>O</Characteristics>
+    <Description>The possible range of scores.</Description>
+  </Item>
+  <Item>
+    <Attribute>ScoreMetric</Attribute>
+    <Characteristics>M</Characteristics>
+    <Type ref="CodeSets" name="AUCodeSetsAssessmentReportingMethodType"></Type>
+    <Description>
+      <p>The metric or scale used to report the scores.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>/Minimum</Element>
+    <Description>
+      <p>Lowest possible score value.</p>
+    </Description>
+    <Type name="xs:token"></Type>
+    <Characteristics>O</Characteristics>
+  </Item>
+  <Item>
+    <Element>/Maximum</Element>
+    <Description>
+      <p>Highest possible score value.</p>
+    </Description>
+    <Type name="xs:token"></Type>
+    <Characteristics>O</Characteristics>
+  </Item>
+  <Item>
+    <Element>PerformanceLevels</Element>
+    <Description>
+      <p>Container for performance level elements. </p>
+    </Description>
+    <Characteristics>O</Characteristics>
+    <List mode="List">
+    </List>
+  </Item>
+  <Item>
+    <Element>/PerformanceLevel</Element>
+    <Description>
+      <p>Defines cut scores for placing students in appropriate performance levels.</p>
+    </Description>
+    <Characteristics>OR</Characteristics>
+  </Item>
+  <Item>
+    <Attribute>LevelName</Attribute>
+    <Characteristics>M</Characteristics>
+    <Type name="xs:token"></Type>
+    <Description>
+      <p>The name of the performance level.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>//CutScores</Element>
+    <Description>
+      <p>Score bounds for the performance level.</p>
+    </Description>
+    <Characteristics>O</Characteristics>
+  </Item>
+  <Item>
+    <Attribute>ScoreMetric</Attribute>
+    <Characteristics>M</Characteristics>
+    <Type ref="CodeSets" name="AUCodeSetsAssessmentReportingMethodType"></Type>
+    <Description>
+      <p>The metric or scale used to report the scores.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>///LowerCut</Element>
+    <Type name="xs:token"></Type>
+    <Description>
+      <p>Lower bound for the performance level.</p>
+    </Description>
+    <Characteristics>O</Characteristics>
+  </Item>
+  <Item>
+    <Element>///UpperCut</Element>
+    <Description>
+      <p>Upper bound for the performance level.</p>
+    </Description>
+    <Characteristics>O</Characteristics>
+    <Type name="xs:token"></Type>
+  </Item>
+  <Item>
+    <Element>SubjectArea</Element>
+    <Description>
+      <p>Content area covered by the score.</p>
+    </Description>
+    <Characteristics>O</Characteristics>
+    <Type name="xs:token"></Type>
+  </Item>
+  <Item>
+    <Element>YearLevels</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="DataModel" name="YearLevels"></Type>
+    <Description>
+      <p>Year levels for which the score is valid.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>AssessmentSubTestRefIds</Element>
+    <Description>
+      <p>References (possibly recursive) to other SIF AssessmentSubTests. This enables subtests or scores to be composites of other scores. If any references are given here, the score is a composite score. The list must be unique.</p>
+    </Description>
+    <Characteristics>O</Characteristics>
+    <List mode="List">
+    </List>
+  </Item>
+  <Item>
+    <Element>/AssessmentSubTestRefId</Element>
+    <Type ref="CommonTypes" relationship="child sub-tests defined by" count="*:1" name="IdRefType"></Type>
+    <Characteristics>MR</Characteristics>
+    <Description>
+      <p>A reference to an AssessmentSubTest by RefId.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>SubTestTier</Element>
+    <Description>
+      <p>An integer that defines the level or tier of the score in a multi-level arrangement of composite scores. Zero indicates the highest or root level.</p>
+    </Description>
+    <Characteristics>O</Characteristics>
+    <Type name="xs:unsignedInt"></Type>
+  </Item>
+  <Item>
+    <Element>LearningStandardItemRefIds</Element>
+    <Description>
+      <p>References to LearningStandardItems. The list must be unique.</p>
+    </Description>
+    <Characteristics>O</Characteristics>
+    <List mode="List">
+    </List>
+  </Item>
+
+  <Item>
+    <Element>/LearningStandardItemRefId</Element>
+    <Type ref="CommonTypes" relationship="associated learning standards defined by" count="*:1" name="IdRefType"></Type>
+    <Characteristics>MR</Characteristics>
+    <Description>
+      <p>A reference to a LearningStandardItem by RefId.</p>
+    </Description>
+  </Item>
+
+  <Item>
+    <Element>Abbreviation</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>This is the short version of the name of the assessment that is often used for quick reference and used in reports.</p>
+    </Description>
+    <Type name='xs:token'/>
+  </Item>
+
+  <Item>
+    <Element>Description</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The description element provides an opportunity to pass additional information about the assessment and also be used for describing elements in a test hierarchy.</p>
+    </Description>
+    <Type name='xs:string'/>
+  </Item>
+
+  <Item>
+    <Element>NumberOfItems</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>This element records the number of items included on the assessment.  This number may be different than the possible score.</p>
+    </Description>
+    <Type name='xs:unsignedInt'/>
+  </Item>
+
+  <Item>
+    <Element>ContainerOnly</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Indicator describing the purpose of an AssessmentSubTest as being that of a container for the child AssessmentSubTests. There will be no scores within this subtest.</p>
+    </Description>
+    <Type name='xs:boolean'/>
+  </Item>
+  
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="DataModel" name="SIF_Metadata"></Type>
+  </Item>
+
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="DataModel" name="SIF_ExtendedElements"></Type>
+  </Item>
+
+  <xhtml:Example xmlns="">
+    <AssessmentSubTest RefId="90E298F70E094EE2B8B52DFD88006AF2">
+      <Name>Reading Comprehension Subtest</Name>
+      <ScoreRange ScoreMetric="0499">
+        <Minimum>0</Minimum>
+        <Maximum>110</Maximum>
+      </ScoreRange>
+      <PerformanceLevels>
+        <PerformanceLevel LevelName="Basic">
+          <CutScores ScoreMetric="0499">
+            <LowerCut>25</LowerCut>
+            <UpperCut>50</UpperCut>
+          </CutScores>
+        </PerformanceLevel>
+      </PerformanceLevels>
+      <SubjectArea>Reading Comprehension</SubjectArea>
+      <YearLevels>
+        <YearLevel>
+          <Code>3</Code>
+        </YearLevel>
+      </YearLevels>
+      <AssessmentSubTestRefIds>
+        <AssessmentSubTestRefId>4710A15C428C48EBBC17CF320B6DCF25</AssessmentSubTestRefId>
+      </AssessmentSubTestRefIds>
+      <SubTestTier>0</SubTestTier>
+      <LearningStandardItemRefIds>
+        <LearningStandardItemRefId>3E4BEBCA14E54A118051DFA239A65990</LearningStandardItemRefId>
+      </LearningStandardItemRefIds>
+    </AssessmentSubTest>
+  </xhtml:Example>
+</DataObject>

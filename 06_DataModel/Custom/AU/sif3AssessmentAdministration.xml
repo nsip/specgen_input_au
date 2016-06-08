@@ -1,0 +1,132 @@
+<DataObject name="Sif3AssessmentAdministration">
+  <Key>@RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>Sif3AssessmentAdministration</Element>
+    <Description>
+      <p>This object represents an assessment event. It includes information related to the time of administration, place of administration, and unusual events related to the administration.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Description>
+      <p>The GUID that uniquely identifies an instance of the object.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>AdministrationName</Element>
+    <Characteristics>O</Characteristics>
+	<Description>Name of the administration.</Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  <Item>
+    <Element>AdministrationCode</Element>
+    <Characteristics>O</Characteristics>
+	<Description>A code associated with the administration. Typically assigned by the assessment program.</Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>  
+  <Item>
+    <Element>StartDateTime</Element>
+    <Characteristics>O</Characteristics>
+    <Type name="xs:dateTime"></Type>
+    <Description>
+      <p>Date and time testing begins.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>FinishDateTime</Element>
+    <Characteristics>O</Characteristics>
+    <Type name="xs:dateTime"></Type>
+    <Description>
+      <p>Date and time testing ends.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>AdministrationAssessments</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A list of all assessements to be administered in this administration.</p>
+    </Description>
+    <List mode="List">
+    </List>
+  </Item>
+  <Item>
+    <Element>/AdministrationAssessment</Element>
+    <Characteristics>MR</Characteristics>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+	<Description>
+      <p>The RefId of the assessment related to this administration.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>Organizations</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>LEAs and/or schools that are participating in this administration. If there are restrictions on which LEAs or Schools are participating in the administration, then this list will identify those that can participate. If no list provided, all LEAs and schools can participate.</p>
+    </Description>
+    <List mode="List">
+    </List>
+  </Item>
+  <Item>
+    <Element>/Organization</Element>
+    <Characteristics>MR</Characteristics>
+	<Description>
+      <p> </p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>//LEAInfoRefId</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Description>
+      <p>Optional reference to a school district associated with the administration.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>//SchoolInfoRefId</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Description>
+      <p>Optional reference to a school associated with the administration.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="DataModel" name="SIF_Metadata"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="DataModel" name="SIF_ExtendedElements"></Type>
+  </Item>
+
+ 
+	<xhtml:Example name="sif3 AssessmentAdministration - Example" xmlns="">
+		<Sif3AssessmentAdministration RefId="90E298F70E094EE2B8B52DFD88006AF2">
+		  <AdministrationName>Texas Fall 2011 Main Administration</AdministrationName> 
+		  <AdministrationCode>TX2011FM</AdministrationCode> 
+		  <StartDateTime>2011-01-01T16:30:00</StartDateTime>
+		  <FinishDateTime>2011-01-01T17:30:00</FinishDateTime>
+		  <AdministrationAssessments>
+			<AdministrationAssessment>80F298F70E094EE2B8B52DFD88006AF2</AdministrationAssessment>
+			<AdministrationAssessment>094EE290E298F70E2DFD88006AF2B8B5</AdministrationAssessment>
+			<AdministrationAssessment>90E298F70E094EE2B8B52DFD88006AF2</AdministrationAssessment>
+		  </AdministrationAssessments>
+		  <Organizations>
+			<Organization>
+			  <LEAInfoRefId>06AF290E298F70E094EE2B8B52DFD880</LEAInfoRefId>
+			  <SchoolInfoRefId>2B8B52D90E298F70E094EEFD88006AF2</SchoolInfoRefId>
+			</Organization>
+			<Organization>
+			  <LEAInfoRefId>DFD8800690E298F70E094EE2B8B52AF2</LEAInfoRefId>
+			  <SchoolInfoRefId>80E298F70E094EE2B8B52DFD88006AF2</SchoolInfoRefId>
+			</Organization>
+		  </Organizations>
+		
+		</Sif3AssessmentAdministration>
+	</xhtml:Example>
+	
+</DataObject>

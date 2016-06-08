@@ -1,0 +1,135 @@
+<DataObject name="AssessmentForm">
+  <Key>@RefId</Key>
+  <EventsReported>false</EventsReported>
+  <Item>
+    <Element>AssessmentForm</Element>
+    <Description>
+      <p>Represents the unique set of questions or stimuli given to a set of test takers. A physical correlate of the assessment form is the test booklet given to students during an assessment.  However, this object does not contain the questions, it only contains elements that describe the form for use in scoring the questions.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The GUID that uniquely identifies an instance of the object.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>AssessmentRefId</Element>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The RefId of the assessment related to this form.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>AssessmentType</Element>
+    <Description>
+      <p>Indicates whether this assessment (form) is a standard administration or alternate.</p>
+    </Description>
+    <Characteristics>O</Characteristics>
+    <Values>
+      <Value>
+        <Code>standard</Code>
+      </Value>
+      <Value>
+        <Code>alternate</Code>
+      </Value>
+    </Values>
+  </Item>
+  <Item>
+    <Element>FormName</Element>
+    <Description>
+      <p>Text description for this particular arrangement of questions, etc.</p>
+    </Description>
+    <Characteristics>M</Characteristics>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  <Item>
+    <Element>FormNumbers</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Reference numbers for the form.</p>
+    </Description>
+    <List mode="List">
+    </List>
+  </Item>
+  <Item>
+    <Element>/FormNumber</Element>
+    <Characteristics>MR</Characteristics>
+    <Description>
+      <p>Reference number for the form.</p>
+    </Description>
+    <Type name="xs:token"></Type>
+  </Item>
+  <Item>
+    <Element>Level</Element>
+    <Description>
+      <p>Indicates the level of the form.</p>
+    </Description>
+    <Characteristics>O</Characteristics>
+    <Type name="xs:token"></Type>
+    <ItemExample>Year 3</ItemExample>
+    <ItemExample>Leveling System</ItemExample>
+  </Item>
+  <Item>
+    <Element>Period</Element>
+    <Description>
+      <p>The time period in which the form is intended to be administered.</p>
+    </Description>
+    <Characteristics>O</Characteristics>
+    <Type name="xs:token"></Type>
+  </Item>
+  <Item>
+    <Element>YearLevels</Element>
+    <Type ref="DataModel" name="YearLevels"></Type>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Year levels this assessment is designed to evaluate.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>AssessmentSubTestRefIds</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Associated subtests (score types).  Each form can provide scores in one or more subtest areas.</p>
+    </Description>
+    <List mode="List">
+    </List>
+  </Item>
+  <Item>
+    <Element>/AssessmentSubTestRefId</Element>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Characteristics>OR</Characteristics>
+    <Description>
+      <p>A subtest identified by RefId.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="DataModel" name="SIF_Metadata"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="DataModel" name="SIF_ExtendedElements"></Type>
+  </Item>
+
+  <xhtml:Example xmlns="">
+    <AssessmentForm RefId="13F3C7AFF8464EE1862B0622A010883E">
+      <AssessmentRefId>77C5D8A7345B4BE883053228C9708512</AssessmentRefId>
+      <AssessmentType>standard</AssessmentType>
+      <FormName>Form A</FormName>
+      <FormNumbers>
+        <FormNumber>34</FormNumber>
+      </FormNumbers>
+      <Level>Year 3</Level>
+      <Period>Spring</Period>
+      <AssessmentSubTestRefIds>
+        <AssessmentSubTestRefId>C356A7559EB144DE8B09097078A94F86</AssessmentSubTestRefId>
+      </AssessmentSubTestRefIds>
+    </AssessmentForm>
+  </xhtml:Example>
+</DataObject>

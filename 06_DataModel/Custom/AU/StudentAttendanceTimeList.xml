@@ -1,0 +1,181 @@
+<DataObject name="StudentAttendanceTimeList">
+
+	<Key>@RefId</Key>
+
+
+	<EventsReported>true</EventsReported>
+
+	<Item>
+		<Element>StudentAttendanceTimeList</Element>
+		<Description>
+			<p>This object provides more detail about the attendance spans for a single student during the
+				day: it provides more detailed information than the single TimeIn and TimeOut elements in
+				StudentDailyAttendance.</p>
+		</Description>
+	</Item>
+
+	<Item>
+		<Attribute>RefId</Attribute>
+		<Description>The ID (GUID) that uniquely identifies the instance of the object.</Description>
+		<Characteristics>M</Characteristics>
+		<Type ref="CommonTypes" name="RefIdType"/>
+	</Item>
+	<Item>
+		<Element>StudentPersonalRefId</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The ID (GUID) of the student for whom this attendance information is being reported.</p>
+		</Description>
+		<Type ref="CommonTypes" name="IdRefType"/>
+	</Item>
+	<Item>
+		<Element>SchoolInfoRefId</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The ID (GUID) of the school for which this attendance information is being reported.</p>
+		</Description>
+		<Type ref="CommonTypes" name="IdRefType"/>
+	</Item>
+	<Item>
+		<Element>Date</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The calendar date to which this attendance reporting period relates.</p>
+		</Description>
+		<Type name="xs:date"/>
+	</Item>
+	<Item>
+		<Element>SchoolYear</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>School year for which this enrollment is applicable, expressed as the four-digit year in
+				which the school year ends (e.g. 2007).</p>
+		</Description>
+		<Type ref="DataModel" name="SchoolYear"/>
+	</Item>
+	<Item>
+		<Element>AttendanceTimes</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Breakdown of times that the student entered or returned to school.</p>
+		</Description>
+		<List mode="List"> </List>
+	</Item>
+	<Item>
+		<Element>/AttendanceTime</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p></p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>//AttendanceCode</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Locally defined code for attendance.</p>
+		</Description>
+		<Type ref="DataModel" name="AttendanceCode"/>
+	</Item>
+	<Item>
+		<Element>//AttendanceStatus</Element>
+
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Approved or Unapproved status of this attendance code.</p>
+		</Description>
+
+		<Type ref="CodeSets" name="AUCodeSetsAttendanceStatusType"/>
+	</Item>
+	<Item>
+		<Element>//StartTime</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The start of this particular time span.</p>
+		</Description>
+		<Type name="xs:time"/>
+	</Item>
+	<Item>
+		<Element>//EndTime</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The end of this particular time span.</p>
+		</Description>
+		<Type name="xs:time"/>
+	</Item>
+	<Item>
+		<Element>//DurationValue</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The amount of absence represented by AttendanceCode, up to three decimal places. May be
+				greater than 1.0.</p>
+		</Description>
+		<Type name="xs:decimal"/>
+		<Facets>
+			<xs:minInclusive value="0"/>
+		</Facets>
+	</Item>
+	<Item>
+		<Element>//AttendanceNote</Element>
+
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Note related to this particular time span.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+
+	<Item>
+		<Element>SIF_Metadata</Element>
+		<Characteristics>O</Characteristics>
+		<Type ref="DataModel" name="SIF_Metadata"/>
+	</Item>
+	<Item>
+		<Element>SIF_ExtendedElements</Element>
+		<Characteristics>O</Characteristics>
+		<Type ref="DataModel" name="SIF_ExtendedElements"/>
+	</Item>
+
+	<xhtml:Example xmlns="">
+		<StudentAttendanceTimeList RefId="2FFB63B4CFEF48208501E7D1E54555CB">
+			<StudentPersonalRefId>D3E34B359D75101A8C3D00AA001A1652</StudentPersonalRefId>
+			<SchoolInfoRefId>CA285746359D75101A8C36432A901A16</SchoolInfoRefId>
+			<Date>2002-11-01</Date>
+			<SchoolYear>2003</SchoolYear>
+			<AttendanceTimes>
+				<AttendanceTime>
+					<AttendanceCode>
+						<Code>200</Code>
+						<OtherCodeList>
+							<OtherCode Codeset="Local">S</OtherCode>
+							<OtherCode Codeset="Text">C</OtherCode>
+						</OtherCodeList>
+					</AttendanceCode>
+					<AttendanceStatus>01</AttendanceStatus>
+					<StartTime>11:00:00</StartTime>
+					<EndTime>12:05:00</EndTime>
+					<DurationValue>0.167</DurationValue>
+					<AttendanceNote>Left for Orthodontist appt. and returned to school
+						afterward</AttendanceNote>
+				</AttendanceTime>
+				<AttendanceTime>
+					<AttendanceCode>
+						<Code>100</Code>
+					</AttendanceCode>
+					<AttendanceStatus>01</AttendanceStatus>
+					<StartTime>09:00:00</StartTime>
+					<EndTime>11:00:00</EndTime>
+					<AttendanceNote/>
+				</AttendanceTime>
+				<AttendanceTime>
+					<AttendanceCode>
+						<Code>100</Code>
+					</AttendanceCode>
+					<AttendanceStatus>01</AttendanceStatus>
+					<StartTime>12:05:00</StartTime>
+					<EndTime>15:30:00</EndTime>
+					<AttendanceNote/>
+				</AttendanceTime>
+			</AttendanceTimes>
+		</StudentAttendanceTimeList>
+	</xhtml:Example>
+</DataObject>

@@ -1,0 +1,321 @@
+<DataObject name="LearningStandardDocument">
+  <Key>@RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>LearningStandardDocument</Element>
+    <Description>
+      <p>
+        A curriculum standards document or the like published by a national, state, district, school site, professional association or other interested party. The LearningStandardDocument reflects an expectation of student work.
+      </p>
+    </Description>
+  </Item>
+  <Item>
+
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Id for the standards document</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+  <Item>
+
+    <Attribute>xml:lang</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The default language of the text used for the content in the learning standard document.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>Title</Element>
+
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Name of curriculum document, i.e., "NSW History Curriculum K-10."</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  <Item>
+    <Element>Description</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Description of the standards document.</p>
+    </Description>
+   <Type name="xs:string"></Type>
+  </Item>
+  <Item>
+    <Element>RichDescription</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Description of the curriculum document that allows pictures as well as text..</p>
+    </Description>
+   <Type ref="CommonTypes" name="AbstractContentElementType"></Type>
+  </Item>
+  <Item>
+    <Element>Source</Element>
+
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>
+        Defines source of standard document.  This is the descriptive type of the organization listed in <code>Organization</code>. It serves to describe the type of the standards contained within the document.
+      </p>
+    </Description>
+    <Values>
+      <Value>
+        <Code>National</Code>
+      </Value>
+      <Value>
+        <Code>State</Code>
+      </Value>
+      <Value>
+        <Code>Regional</Code>
+      </Value>
+      <Value>
+        <Code>District</Code>
+      </Value>
+      <Value>
+        <Code>Site</Code>
+      </Value>
+      <Value>
+        <Code>Classroom</Code>
+      </Value>
+      <Value>
+        <Code>Publisher</Code>
+      </Value>
+    </Values>
+  </Item>
+  <Item>
+    <Element>Organizations</Element>
+    <Characteristics>M</Characteristics>
+    <List mode="List"/>
+  </Item>
+  <Item>
+    <Element>/Organization</Element>
+
+    <Characteristics>MR</Characteristics>
+    <Description>
+      <p>Name of organization represented by the document, i.e., "National Council of Teachers of Mathematics (NCTM)," "ACARA"," NSW DET". </p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  <Item>
+    <Element>Authors</Element>
+    <Characteristics>O</Characteristics>
+    <List mode="List"/>
+  </Item>
+  <Item>
+    <Element>/Author</Element>
+
+    <Characteristics>OR</Characteristics>
+    <Description>
+      <p>Name of the organization that authored the curriculum document, i.e. "ACARA". May be the same as "Organization" above.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  <Item>
+    <Element>OrganizationContactPoint</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A brief description of how to contact the organization maintaining the standards. It could be a phone number, email address, or URL.</p>
+    </Description>
+    <Type name="xs:string"></Type>
+  </Item>
+  <Item>
+    <Element>SubjectAreas</Element>
+    <Characteristics>M</Characteristics>
+    <List mode="List"/>
+  </Item>
+  <Item>
+    <Element>/ACStrandSubjectArea</Element>
+
+    <Characteristics>MR</Characteristics>
+    <Type ref="DataModel" name="ACStrandSubjectArea"></Type>
+  </Item>
+  <Item>
+    <Element>DocumentStatus</Element>
+
+    <Characteristics>M</Characteristics>
+    <Description></Description>
+    <Values>
+      <Value>
+        <Code>Draft</Code>
+      </Value>
+      <Value>
+        <Code>Adopted</Code>
+      </Value>
+      <Value>
+        <Code>Archived</Code>
+      </Value>
+      <Value>
+        <Code>Unknown</Code>
+      </Value>
+    </Values>
+  </Item>
+  <Item>
+    <Element>DocumentDate</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The date the current status was achieved.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+  <Item>
+    <Element>LocalAdoptionDate</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The date the local organization adopted this standard document</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+  <Item>
+    <Element>LocalArchiveDate</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The date the local organization stopped using this standard document and superseded by a new document.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+  <Item>
+    <Element>EndOfLifeDate</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>This is the date that the governing organization retired this document.&#160;</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+  <Item>
+    <Element>Copyright</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Copyright for document.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>/Date</Element>
+
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>Copyright date</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+  <Item>
+    <Element>/Holder</Element>
+
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>Name of the copyright holder</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  <Item>
+    <Element>YearLevels</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>SIF common YearLevels element</p>
+    </Description>
+    <Type ref="DataModel" name="YearLevels"></Type>
+  </Item>
+  <Item>
+    <Element>RepositoryDate</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Date document data was added to the repository</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+  <Item>
+    <Element>LearningStandardItemRefId</Element>
+
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Link to the first/top LearningStandardItem in the standard hierarchy</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+
+  </Item>
+  <Item>
+    <Element>RelatedLearningStandards</Element>
+    <Characteristics>O</Characteristics>
+    <List mode="List"/>
+  </Item>
+  <Item>
+    <Element>/LearningStandardDocumentRefId</Element>
+    <Characteristics>OR</Characteristics>
+    <Description>
+      <p>Links to related LearningStandardDocument</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="DataModel" name="SIF_Metadata"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+
+    <Characteristics>O</Characteristics>
+    <Type ref="DataModel" name="SIF_ExtendedElements"></Type>
+  </Item>
+  <xhtml:Example xmlns="">
+    <LearningStandardDocument RefId="A5A575C789175101B8E7F08ED123A823" xml:lang="en">
+    <Title>Australian National Curriculum: History</Title>
+    <Description>
+            AIMS: The aim of the History curriculum is to instill in students an appreciation in the diversity of the past and how they inform current developments etc etc.
+RATIONALE: History is essential for an informed citizenry and has always been a cornerstone of education.
+    </Description>
+  <Source>National</Source>
+  <Organizations>
+    <Organization>ACARA</Organization>
+  </Organizations>
+  <Authors>
+    <Author>Joe Bloggs</Author>
+  </Authors>
+  <OrganizationContactPoint>http://www.acara.edu.au</OrganizationContactPoint>
+  <SubjectAreas>
+    <ACStrandSubjectArea>
+       <ACStrand>H</ACStrand>
+      <SubjectArea>
+      	<Code>Hist</Code>
+      	  <OtherCodeList>
+        	<OtherCode Codeset="Text">History</OtherCode>
+      	</OtherCodeList>
+      </SubjectArea>
+    </ACStrandSubjectArea>
+  </SubjectAreas>
+  <DocumentStatus>Adopted</DocumentStatus>
+  <DocumentDate>2010-04-15</DocumentDate>
+  <LocalAdoptionDate>2011-01-06</LocalAdoptionDate>
+  <EndOfLifeDate>2011-04-15</EndOfLifeDate>
+  <Copyright>
+    <Date>2010-06-05</Date>
+    <Holder>ACARA</Holder>
+  </Copyright>
+  <YearLevels>
+    <YearLevel>
+      <Code>11</Code>
+    </YearLevel>
+    <YearLevel>
+      <Code>12</Code>
+    </YearLevel>
+</YearLevels>
+  <RepositoryDate>2011-04-15</RepositoryDate>
+  <LearningStandardItemRefId>B7D26D789139214A8C7F08EA123A8234</LearningStandardItemRefId>
+  <RelatedLearningStandards>
+    <LearningStandardDocumentRefId>B216162FC98D202E62A64D53C991A25A</LearningStandardDocumentRefId>
+  </RelatedLearningStandards>
+</LearningStandardDocument>
+
+  </xhtml:Example>
+</DataObject>

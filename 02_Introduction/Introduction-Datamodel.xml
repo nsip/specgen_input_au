@@ -1,0 +1,124 @@
+<Section name="Introduction" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.w3.org/1999/xhtml" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Section name="Specification Organization">
+    <p>
+      With respect to the SIF Specification, educators and non-technical readers are typically interested in the pK-12 data objects
+      that can be shared and reported on by SIF-enabled applications in SIF implementations.  This document, the <em>SIF Data Model Implementation Specification</em>, contains a <a href="DataModel.html">Data Model</a>
+      section in a format that should not be a barrier to readers with a some knowledge of <a href="http://www.w3.org/XML/1999/XML-in-10-points.html">[XML]</a>.
+      More technical readers, including software architects,
+      developers and integrators, will also be interested in the separate <em>SIF Infrastructure Implementation Specification</em> document.   
+    </p>
+    <ul>
+      <li>
+        The <a href="index.html#Preamble">Preamble</a> provides an abstract of SIF along with the SIF Association disclaimer and details regarding certification and compliance claims.
+      </li>
+      <li>
+        This Introduction outlines the organization of this specification document, provides conventions used in this document, and summarizes versioning of the specification.
+        Highlights of additions/changes since the previous version of the specification are also provided.
+      </li>
+      <li>
+        The <a href="DataModel.html">Data Model</a> section provides definitions of the XML structure for common elements in the data model and all objects
+        related to entities in the pK-12 environment.  This section is organized by the working groups and task forces within the SIF Association that have defined
+        common elements or objects.
+      </li>
+      <li>
+		  <a href="ZoneServices.html">Zone Services</a> details the data formats and operation choreographies of the interfaces which Zone Services provide in support of their clients.
+      </li>
+      <li>
+        The document concludes with various appendices including lists of code set values defined within SIF and in external documents,
+        and ends with a list of <a href="References.html">references</a> to other documents.
+      </li>
+    </ul>
+  </Section>
+  <Section name="Document Conventions">
+    <Section name="Definitions">
+      <p>
+        The first time a term or concept is defined, it may be <em>emphasized</em>.
+      </p>
+    </Section>
+    <Section name="Structure and Values">
+      <p>
+        <code>SIF message and object names, XML element tags, attribute names and values, and other codes or values are typically presented as in this sentence.</code>
+      </p>
+    </Section>
+    <Section name="Examples">
+      <Example name="Examples Convention">Longer examples of XML or HTTP messages are typically numbered and presented as given here.</Example>
+    </Section>
+    <Section name="References">
+      <p>
+        References to other works occurring in this text are given in brackets, e.g. [REFERENCE].  The text in brackets corresponds to a key in the <a href="References.html#References">References</a> appendix.
+        Often when the text in the brackets duplicates surrounding text, the reference alone is used (e.g. [XML] instead of XML [XML]).
+      </p>
+    </Section>
+    <Section name="Terminology">
+      <p>
+        The key words <span class="rfc2119">MUST</span>, <span class="rfc2119">MUST NOT</span>, <span class="rfc2119">REQUIRED</span>, <span class="rfc2119">SHALL</span>,
+        <span class="rfc2119">SHALL NOT</span>, <span class="rfc2119">SHOULD</span>, <span class="rfc2119">SHOULD NOT</span>, <span class="rfc2119">RECOMMENDED</span>,
+        <span class="rfc2119">MAY</span>, <span class="rfc2119">OPTIONAL</span>, when <span class="rfc2119">EMPHASIZED</span>, are to be interpreted as described in <a href="References.html#RFC2119">[RFC 2119]</a>.
+      </p>
+    </Section>
+    <Section name="XML Diagrams">
+      <p>
+        Quick overviews of XML structures, including messages, objects, common elements and types, are provided in XML diagrams.  The following diagram illustrates
+        the conventions typically encountered in SIF.
+      </p>
+      <p>
+        <img src="images/SequenceElement.png" title="XML Diagram Conventions"/>
+      </p>
+      <p>
+        XML elements are represented by rectangles with the name of the element in the upper portion and the type, if any, in the lower portion.  Attributes
+        are represented in the same fashion, but have an <code>@</code> icon rather than a SIF icon.  Elements and attributes that are optional have a circled <code>?</code>
+        (0 or 1 occurrence) to the left of the rectangle.  Optional and mandatory repeatable elements are indicated by a circled <code>*</code> (0 or more occurrences)
+        and <code>+</code> (1 or more occurrences), respectively.
+        Element attributes are grouped together in a rectangular block and connected to the element with a line that turns at right angles.
+        Ordered sequences of XML elements are bracketed by lines that turn at right angles.  When a choice of XML elements is indicated, the elements are bracketed by angled
+        lines.  A choice of elements can occur within an element, or may be an unnamed choice of elements.
+      </p>
+      <p>XML types are represented using the same conventions as for XML elements, though the type portion of the rectangle typically indicates a base type, if any.</p>
+      <p>
+        The type name of any element, attribute or type may be prefixed with a <code>&#x2193;</code>, indicating the type is restricted in some fashion by one or more
+        XML Schema facets (e.g. enumeration).  When the type is a union of types, a list of types is presented, each type separated by <code>|</code>; if the list of union types
+        is long, the list may be marked with ellipses, e.g., <code>| ...</code>
+      </p>
+      <p>In an actual XML diagram, element, type and attribute rectangles are usually linked to their corresponding definitions/descriptions in accompanying tables.</p>
+    </Section>
+  </Section>
+  <Section name="Version Numbers">
+    <p>The SIF Implementation Specification uses the following version numbering scheme:</p>
+
+    <p>
+      <em>major version</em>
+      <code>.</code>
+      <em>minor version</em>
+      <code>r</code>
+      <em>revision number</em>
+    </p>
+
+    <p>
+      Major versions typically introduce additions/changes to the SIF infrastructure and/or data model changes that impact a significant
+      percentage of SIF-enabled applications (e.g. making previously optional elements mandatory, removal of deprecated objects, elements or values).
+      The first release of a major version has a minor version of <code>0</code> (<code>2.0</code>);
+      major version numbers start at <code>1</code> and are incremented as major versions are released (<code>1.0</code>, <code>2.0</code>, <code>3.0</code>, ...).
+    </p>
+
+    <p>
+      Minor releases typically introduce new data objects, or optional additions to data objects, to the marketplace, and may include minor
+      infrastructure additions/changes that do not impact existing SIF-enabled applications and that ZIS vendors have agreed to implement.
+      The first minor version released subsequent
+      to and within a major release has a minor version of <code>1</code> and is incremented as new minor versions are released
+      (<code>2.1</code>, <code>2.2</code>, ...).  If a significant number of minor release features is introduced in a specification,
+      the SIF Association may decide to increment the minor version number by more than <code>1</code> (e.g. <code>1.1</code> to <code>1.5</code>),
+      though a number like <code>1.5</code> is not an indication of being halfway to a major release, as minor version numbers may be incremented
+      significantly past <code>10</code> (<code>2.10</code>, <code>2.11</code>, ...) as data objects and other minor version features are released.
+    </p>
+
+    <p>
+      Corrections resulting from identified errata, as well as textual changes, may be incorporated into a revision release.
+      These typically include minor corrections to messages or data objects, corrections of typographical errors, or corrected/expanded documentation.
+      If major errors in any release are identified, a revision release may incorporate changes more typical of a major or minor release.
+      First major and minor releases have a revision number of <code>0</code>, which is omitted from the version number (<code>2.0</code>, not <code>2.0r0</code>);
+      subsequent revision numbers start at <code>1</code> and are incremented as new revisions are released (<code>2.0r1</code>, <code>2.0r2</code>,
+      ...).
+    </p>
+  </Section>
+  <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="custom/ChangeLog-Datamodel.xml"/>
+</Section>

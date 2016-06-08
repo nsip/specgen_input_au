@@ -1,0 +1,634 @@
+<DataObject name="StudentPersonal">
+	<Key>@RefId</Key>
+	<EventsReported>true</EventsReported>
+	<Item>
+		<Element>StudentPersonal</Element>
+		<Description>
+			<p>This object contains all the personal information related to the student.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Attribute>RefId</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The GUID of the student.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RefIdType"/>
+	</Item>
+	<Item>
+		<Element>AlertMessages</Element>
+		<Characteristics>O</Characteristics>
+		<List mode="List">
+    </List>
+	</Item>
+	<Item>
+		<Element>/AlertMessage</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>This is an alert message that is associated with the student.</p>
+		</Description>
+		<Type name="xs:string"/>
+	</Item>
+	<Item>
+		<Attribute>Type</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>This attribute specifies what type of alert message this is.</p>
+		</Description>
+		<Values>
+			<Value>
+				<Code>Legal</Code>
+				<Description>Custody, guardian, court orders (e.g. must attend school), lawsuits, etc.</Description>
+			</Value>
+			<Value>
+				<Code>Discipline</Code>
+				<Description>Student is suspended, expelled, on probation, etc.</Description>
+			</Value>
+			<Value>
+				<Code>Educational</Code>
+				<Description>academic probation, etc.</Description>
+			</Value>
+			<Value>
+				<Code>Other</Code>
+			</Value>
+		</Values>
+	</Item>
+	<Item>
+		<Element>MedicalAlertMessages</Element>
+		<Characteristics>O</Characteristics>
+		<List mode="List">
+    </List>
+	</Item>
+	<Item>
+		<Element>/MedicalAlertMessage</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>Medical alert associated with the student.</p>
+		</Description>
+		<Type name="xs:string"/>
+	</Item>
+	<Item>
+		<Attribute>Severity</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The level of severity of this medical alert.</p>
+		</Description>
+		<Values>
+			<Value>
+				<Code>Low</Code>
+			</Value>
+			<Value>
+				<Code>Moderate</Code>
+			</Value>
+			<Value>
+				<Code>High</Code>
+			</Value>
+			<Value>
+				<Code>Severe</Code>
+			</Value>
+			<Value>
+				<Code>Unknown</Code>
+			</Value>
+		</Values>
+	</Item>
+	<Item>
+		<Element>LocalId</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The locally-assigned identifier for this student.</p>
+		</Description>
+		<Type ref="DataModel" name="LocalId"/>
+	</Item>
+	<Item>
+		<Element>StateProvinceId</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The state-assigned identifier for this student.</p>
+		</Description>
+		<Type ref="DataModel" name="StateProvinceId"/>
+	</Item>
+	<Item>
+		<Element>ElectronicIdList</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Electronic identifier(s) associated with this entity.</p>
+		</Description>
+		<Type ref="DataModel" name="ElectronicIdList"/>
+	</Item>
+	<Item>
+		<Element>OtherIdList</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Lists all "other" identifiers associated with the student.</p>
+		</Description>
+		<List mode="List">
+    </List>
+	</Item>
+	<Item>
+		<Element>/OtherId</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>Lists an "other" identifier associated with the student.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Attribute>Type</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Code that defines the type of this other ID.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>PersonInfo</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Personal Information </p>
+		</Description>
+		<Type ref="DataModel" name="PersonInfo"/>
+	</Item>
+	<Item>
+		<Element>ProjectedGraduationYear</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Currently projected graduation year.</p>
+		</Description>
+		<Type ref="DataModel" name="ProjectedGraduationYear"/>
+	</Item>
+	<Item>
+		<Element>OnTimeGraduationYear</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>First projected graduation year, usually determined when student is accepted into 9th grade.</p>
+		</Description>
+		<Type ref="DataModel" name="OnTimeGraduationYear"/>
+	</Item>
+	<Item>
+		<Element>GraduationDate</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+      Date student officially graduated from secondary education.
+    </Description>
+		<Type ref="DataModel" name="GraduationDate"/>
+	</Item>
+	<Item>
+		<Element>MostRecent</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>
+        Container for elements reflecting the most recent enrollment of a student.  If the student is
+        currently enrolled in the district, the elements contain current information.
+      </p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>/SchoolLocalId</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Local identifier representing the school in which the student is or was most recently enrolled in the district.</p>
+		</Description>
+		<Type ref="DataModel" name="LocalId"/>
+	</Item>
+	<Item>
+		<Element>/HomeroomLocalId</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>
+        Local identifier representing the current or most recent homeroom in which the student is or was most recently assigned in the district.  Use the value from <code>RoomInfo/HomeroomNumber</code> if supported.  If not supported, use the value from <code>RoomInfo/RoomNumber</code>.  If neither is supported, use the most appropriate value from the agent's application.
+      </p>
+		</Description>
+		<Type ref="DataModel" name="LocalId"/>
+	</Item>
+	<Item>
+		<Element>/YearLevel</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The current or most recent year level of the student.</p>
+		</Description>
+		<Type ref="DataModel" name="YearLevel"/>
+	</Item>
+	<Item>
+		<Element>/FTE</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Full-time equivalent numeric value of the student's course load during this enrollment, expressed in decimal form, where 1.00 represents a full-time enrollment.</p>
+		</Description>
+		<Type name="xs:decimal"/>
+		<Facets>
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="1"/>
+			<xs:fractionDigits value="2"/>
+		</Facets>
+	</Item>
+	<Item>
+		<Element>/Parent1Language</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Main language spoken by parent 1 at home, other than English.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsAustralianStandardClassificationOfLanguagesASCLType"/>
+	</Item>
+	<Item>
+		<Element>/Parent2Language</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Main language spoken by parent 2 at home, other than English.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsAustralianStandardClassificationOfLanguagesASCLType"/>
+	</Item>
+	<Item>
+		<Element>/Parent1EmploymentType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Code that defines employment type of Parent1. This is compulsory if being used for MCEECDYA reporting.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsEmploymentTypeType"/>
+	</Item>
+	<Item>
+		<Element>/Parent2EmploymentType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Code that defines employment type of Parent2. This is compulsory if being used for MCEECDYA reporting.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsEmploymentTypeType"/>
+	</Item>
+	<Item>
+		<Element>/Parent1SchoolEducationLevel</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The highest level of education completed by Parent1.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsSchoolEducationLevelTypeType"/>
+	</Item>
+	<Item>
+		<Element>/Parent2SchoolEducationLevel</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The highest level of education completed by Parent2.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsSchoolEducationLevelTypeType"/>
+	</Item>
+	<Item>
+		<Element>/Parent1NonSchoolEducation</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>This reflects the level of Parent1's Non-School Education.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsNonSchoolEducationType"/>
+	</Item>
+	<Item>
+		<Element>/Parent2NonSchoolEducation</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>This reflects the level of Parent2's Non-School Education.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsNonSchoolEducationType"/>
+	</Item>
+   	<Item>
+		<Element>/LocalCampusId</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Local identifier for a specific campus Id. This may be the same as the school local Id, but is expected to be supplied only if the school does in fact have distinct campuses.</p>
+		</Description>
+		<Type ref="DataModel" name="LocalId"/>
+	</Item>
+	<Item>
+		<Element>/SchoolACARAId</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Identifier of the school in which the student is or was most recently enrolled in the district, as assigned in the Australian  School List.</p>
+		</Description>
+		<Type ref="DataModel" name="LocalId"/>
+	</Item>
+    <Item>
+		<Element>/TestLevel</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+		  <p>Values: 3,5,7,9. The test level that the student is registering for.</p>
+		</Description>
+		<Type ref="DataModel" name="YearLevel"></Type>
+  </Item>	
+   <Item>
+    <Element>/Homegroup</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The name of the homegroup the student enrollment belongs to.</p>
+    </Description>
+    <Type name='xs:normalizedString'/>
+  </Item>
+   
+  <Item>
+    <Element>/ClassCode</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The name of the class code the student belongs to, for the purposes of NAPLAN registration.</p>
+    </Description>
+    <Type name='xs:normalizedString'/>
+  </Item>	
+  
+    <Item>
+    <Element>/MembershipType</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The type of this enrollment as it relates to the school identified in SchoolInfoRefId.</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsSchoolEnrollmentTypeType"></Type>
+  </Item>
+ 
+    <Item>
+    <Element>/FFPOS</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Enrolled Full-fee Paying Overseas Student (FFPOS) Status.  Enrolment Frame Element 10 NSCC Collection.</p>  
+	  <p>The status of an enrolment in a CRICOS course and whether the person is liable for a fee which reflects the imputed full average cost of the person's education at the school (including both recurrent and capital costs) irrespective of the actual arrangements to meet the fee.</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsFFPOSStatusCodeType"></Type>
+  </Item>
+
+   <Item>
+		<Element>/ReportingSchoolId</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>This is the school ACARAId to which student's report is to be made available.</p>
+		</Description>
+		<Type ref="DataModel" name="LocalId"/>
+	</Item>
+	
+
+ 	<Item>
+		<Element>/OtherEnrollmentSchoolACARAId</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>ACARAId of other school that student is enrolled in, if known, as assigned in the Australian School List.</p>
+		</Description>
+		<Type ref="DataModel" name="LocalId"/>
+	</Item>
+	
+	<Item>
+		<Element>AcceptableUsePolicy</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Does the student have a current signed Acceptable Use Policy document for system access?</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"/>
+	</Item>
+	<Item>
+		<Element>GiftedTalented</Element>
+		<Characteristics>O</Characteristics>
+		<p>Is the student in Gifted/Talented programs?</p>
+		<Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"/>
+	</Item>
+	<Item>
+		<Element>EconomicDisadvantage</Element>
+		<Description>
+			<p>Does the student meet the State criteria for classification as having an economic disadvantage?</p>
+		</Description>
+		<Characteristics>O</Characteristics>
+		<Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"/>
+	</Item>
+	<Item>
+		<Element>ESL</Element>
+		<Characteristics>O</Characteristics>
+		<Description>Does the student meet 'English as a Second Language Criteria'?</Description>
+		<Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"/>
+	</Item>
+	<Item>
+		<Element>YoungCarersRole</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Is the student a carer of other family members?</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"/>
+	</Item>
+	<Item>
+		<Element>Disability</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Does the student have funding for disability?</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"/>
+	</Item>
+	<Item>
+		<Element>IntegrationAide</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Does the Student require an Integration Aide?</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"/>
+	</Item>
+	
+	<Item>
+		<Element>EducationSupport</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Is the student in receipt of education support?</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"/>
+	</Item>
+	<Item>
+		<Element>HomeSchooledStudent</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Student is not attending any school registered in the Australian School List. Mandatory if true.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"/>
+	</Item>
+	<Item>
+		<Element>Sensitive</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>For local use by jurisdictions where a court order, custody order or other restriction or risk exists and the student's record needs to be treated sensitively as restrictions on use apply.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"/>
+	</Item>
+	<Item>
+		<Element>OfflineDelivery</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Note that the student is unable to sit an assessment via an online delivery mode.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"/>
+	</Item>
+	<Item>
+		<Element>PrePrimaryEducation</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Care prior to kinder enrolment (eg. Family day care/home/extended care etc).</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>FirstAUSchoolEnrollment</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Date of the first enrolment in an Australian School</p>
+		</Description>
+		<Type name="xs:date"/>
+	</Item>
+	
+	
+	<Item>
+		<Element>SIF_Metadata</Element>
+		<Characteristics>O</Characteristics>
+		<Type ref="DataModel" name="SIF_Metadata"/>
+	</Item>
+	<Item>
+		<Element>SIF_ExtendedElements</Element>
+		<Characteristics>O</Characteristics>
+		<Type ref="DataModel" name="SIF_ExtendedElements"/>
+	</Item>
+	<xhtml:Example xmlns="" name ="StudentPersonal">
+		<StudentPersonal RefId="7C834EA9EDA12090347F83297E1C290C">
+			<AlertMessages>
+				<AlertMessage Type="Legal">Mother is legal guardian</AlertMessage>
+			</AlertMessages>
+			<MedicalAlertMessages>
+				<MedicalAlertMessage Severity="Severe">Student has Peanut Allergy</MedicalAlertMessage>
+				<MedicalAlertMessage Severity="Moderate">Student has Diabetes</MedicalAlertMessage>
+			</MedicalAlertMessages>
+			<LocalId>S1234567</LocalId>
+			<StateProvinceId>ABC1234</StateProvinceId>
+			<ElectronicIdList>
+				<ElectronicId Type="03">ZZZZZZ21</ElectronicId>
+				<ElectronicId Type="03">ZZZZZZ22</ElectronicId>
+			</ElectronicIdList>
+			<OtherIdList>
+					 <OtherId Type="PreviousNAPPlatformStudentId">888rdgf</OtherId>
+					 <OtherId Type="DiocesanStudentId">1234</OtherId>
+    		</OtherIdList>
+			<PersonInfo>
+				<Name Type="LGL">
+					<FamilyName>Smith</FamilyName>
+					<GivenName>Fred</GivenName>
+					<FullName>Fred Smith</FullName>
+				</Name>
+				<OtherNames>
+					<Name Type="AKA">
+						<FamilyName>Anderson</FamilyName>
+						<GivenName>Samuel</GivenName>
+						<FullName>Samuel Anderson</FullName>
+					</Name>
+					<Name Type="PRF">
+						<FamilyName>Rowinski</FamilyName>
+						<GivenName>Sam</GivenName>
+						<FullName>Sam Rowinski </FullName>
+					</Name>
+				</OtherNames>
+				<Demographics>
+					<IndigenousStatus>3</IndigenousStatus>
+					<Sex>1</Sex>
+					<BirthDate>1990-09-26</BirthDate>
+					<BirthDateVerification>1004</BirthDateVerification>
+					<PlaceOfBirth>Clayton</PlaceOfBirth>
+					<StateOfBirth>VIC</StateOfBirth>
+					<CountryOfBirth>1101</CountryOfBirth>
+					<CountriesOfCitizenship>
+						<CountryOfCitizenship>8104</CountryOfCitizenship>
+						<CountryOfCitizenship>1101</CountryOfCitizenship>
+					</CountriesOfCitizenship>
+					<CountriesOfResidency>
+						<CountryOfResidency>8104</CountryOfResidency>
+						<CountryOfResidency>1101</CountryOfResidency>
+					</CountriesOfResidency>
+					<CountryArrivalDate>1990-09-26</CountryArrivalDate>
+					<AustralianCitizenshipStatus>1</AustralianCitizenshipStatus>
+					<EnglishProficiency>
+						<Code>1</Code>
+					</EnglishProficiency>
+					<LanguageList>
+						<Language>
+							<Code>0001</Code>
+							<LanguageType>1</LanguageType>
+						</Language>
+					</LanguageList>
+					<DwellingArrangement>
+						<Code>1671</Code>
+					</DwellingArrangement>
+					<Religion>
+						<Code>2013</Code>
+					</Religion>
+					<ReligiousEventList>
+						<ReligiousEvent>
+							<Type>Baptism</Type>
+							<Date>2000-09-01</Date>
+						</ReligiousEvent>
+						<ReligiousEvent>
+							<Type>Christmas</Type>
+							<Date>2009-12-24</Date>
+						</ReligiousEvent>
+					</ReligiousEventList>
+					<ReligiousRegion>The Religion Region</ReligiousRegion>
+					<PermanentResident>P</PermanentResident>
+					<VisaSubClass>101</VisaSubClass>
+					<VisaStatisticalCode>05</VisaStatisticalCode>
+				</Demographics>
+				<AddressList>
+					<Address Type="0123" Role="2382">
+						<Street>
+							<Line1>Unit1/10</Line1>
+							<Line2>Barkley Street</Line2>
+						</Street>
+						<City>Yarra Glenn</City>
+						<StateProvince>VIC</StateProvince>
+						<Country>1101</Country>
+						<PostalCode>9999</PostalCode>
+					</Address>
+					<Address Type="0123A" Role="013A">
+						<Street>
+							<Line1>34 Term Address Street</Line1>
+						</Street>
+						<City>Home Town</City>
+						<StateProvince>WA</StateProvince>
+						<Country>1101</Country>
+						<PostalCode>9999</PostalCode>
+					</Address>
+				</AddressList>
+				<PhoneNumberList>
+					<PhoneNumber Type="0096">
+						<Number>03 9637-2289</Number>
+						<Extension>72289</Extension>
+						<ListedStatus>Y</ListedStatus>
+					</PhoneNumber>
+					<PhoneNumber Type="0888">
+						<Number>0437-765-234</Number>
+						<ListedStatus>N</ListedStatus>
+					</PhoneNumber>
+				</PhoneNumberList>
+				<EmailList>
+					<Email Type="01">fsmith@yahoo.com</Email>
+					<Email Type="02">freddy@gmail.com</Email>
+				</EmailList>
+			</PersonInfo>
+			<ProjectedGraduationYear>2014</ProjectedGraduationYear>
+			<OnTimeGraduationYear>2012</OnTimeGraduationYear>
+			<MostRecent>
+				     <SchoolLocalId>S1234567</SchoolLocalId>
+				     <HomeroomLocalId>hr12345</HomeroomLocalId>
+					 <YearLevel>
+					   <Code>P</Code>
+					 </YearLevel>
+					<FTE>0.5</FTE>
+					 <Parent1Language>1201</Parent1Language>
+					 <Parent2Language>1201</Parent2Language>
+					 <LocalCampusId>D</LocalCampusId>
+					 <SchoolACARAId>VIC687</SchoolACARAId>
+					 <Homegroup>7A</Homegroup>
+					 <ClassCode>English 7D</ClassCode>
+					 <MembershipType>02</MembershipType>
+					 <FFPOS>2</FFPOS>
+					 <ReportingSchoolId>VIC670</ReportingSchoolId>
+					 <OtherEnrollmentSchoolACARAId>VIC6273</OtherEnrollmentSchoolACARAId>
+			</MostRecent>
+			<AcceptableUsePolicy>Y</AcceptableUsePolicy>
+			<EconomicDisadvantage>N</EconomicDisadvantage>
+			<ESL>U</ESL>
+			<YoungCarersRole>N</YoungCarersRole>
+			<Disability>N</Disability>
+			<IntegrationAide>N</IntegrationAide>
+			 <EducationSupport>N</EducationSupport>
+			 <HomeSchooledStudent>N</HomeSchooledStudent>
+			<Sensitive>N</Sensitive>
+		</StudentPersonal>
+	</xhtml:Example>
+</DataObject>

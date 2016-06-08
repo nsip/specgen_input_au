@@ -1,0 +1,289 @@
+<DataObject name="Sif3Assessment">
+  <Key>@RefId</Key>
+  <EventsReported>false</EventsReported>
+  <Intro>
+    <p>An assessment measures a student's progress and learning on
+    specific academic standards.</p>
+  </Intro>
+  <Item>
+    <Element>Sif3Assessment</Element>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Description>
+      <p>The GUID that uniquely identifies this object.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>Name</Element>
+    <Characteristics>M</Characteristics>
+    <Type name="xs:normalizedString"></Type>
+    <Description>
+      <p>Name of the test.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>AssessmentIdentifiers</Element>
+    <Characteristics>O</Characteristics>
+    <List mode="List"></List>
+    <Description>
+      <p>A list of all assessment identifiers that may be
+      associated with this assessment</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>/AssessmentIdentifier</Element>
+    <Characteristics>MR</Characteristics>
+    <Type name="xs:normalizedString"></Type>
+    <Description>
+      <p>The state, local or publisher unique Id for the
+      assessment.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>AssessmentIdType</Attribute>
+    <Characteristics>M</Characteristics>
+      <Values>
+        <Value>
+          <Code>client</Code>
+          <Text>Assigned by the client, e.g., a state.</Text>
+        </Value>
+        <Value>
+          <Code>local</Code>
+          <Text>Assigned by the local entity.</Text>
+        </Value>
+        <Value>
+          <Code>publisher</Code>
+          <Text>Assigned by the owner of the test.</Text>
+        </Value>
+        <Value>
+          <Code>internal</Code>
+          <Text>Internal assessment service provider
+          identifier.</Text>
+        </Value>
+        <Value>
+          <Code>other</Code>
+          <Text>Custom identifier.</Text>
+        </Value>
+      </Values>
+    <Description>
+      <p>The Id Type Codes indicate the authority that maintains
+      and/or uses the identifier.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>AssessmentPackageRefId</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" relationship="content/resources defined by" count="*:1" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Element>AssessmentDescriptors</Element>
+    <Characteristics>O</Characteristics>
+    <List mode="List"></List>
+    <Description>
+      <p>Describes what type of assessment this represents.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>/AssessmentDescriptor</Element>
+    <Characteristics>MR</Characteristics>
+    <Union>
+      <Type ref="CodeSets"
+      name="AUCodeSetsAssessmentTypeType" />
+
+      <Type name="xs:token">
+        <Values type="additional">
+          <Value>
+            <Code>statewide</Code>
+          </Value>
+          <Value>
+            <Code>formative</Code>
+          </Value>
+          <Value>
+            <Code>localSummative</Code>
+          </Value>
+          <Value>
+            <Code>diagnostic</Code>
+          </Value>
+          <Value>
+            <Code>benchmark</Code>
+          </Value>
+          <Value>
+            <Code>commonCore</Code>
+          </Value>
+		  <Value>
+            <Code>national</Code>
+          </Value>
+        </Values>
+      </Type>
+    </Union> 
+  </Item>
+  <Item>
+    <Element>AssessmentProvider</Element>
+    <Characteristics>O</Characteristics>
+    <Type name="xs:normalizedString"></Type>
+    <Description>
+      <p>Identifies the provider or publisher of the
+      assessment.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>AssessmentItemBanks</Element>
+    <Characteristics>O</Characteristics>
+    <List mode="List"></List>
+    <Description>
+      <p>Assessments may be part of one or more item banks.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>/AssessmentItemBank</Element>
+    <Characteristics>MR</Characteristics>
+    <Description>
+      <p>A wrapper for the Item Bank elements.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>//AssessmentItemBankId</Element>
+    <Characteristics>M</Characteristics>
+    <Type name="xs:normalizedString"></Type>
+    <Description>
+      <p>If the assessment is provided with an item bank, then this
+      identifies the item bank: a unique code or number used by the
+      item banking system.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>//AssessmentItemBankName</Element>
+    <Characteristics>O</Characteristics>
+    <Type name="xs:normalizedString"></Type>
+    <Description>
+      <p>If the assessment is provided with an item bank, then this
+      is the name of the item bank.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>AssessmentSubjects</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="DataModel" name="SubjectAreaList"></Type>
+    <Description>
+      <p>The assessment may be designed to measure specific subject
+      areas. Note that grade levels are also included in the
+      Assessment Form object. Specific forms of an assessment may
+      have more granularity.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>AssessmentGradeLevels</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="DataModel" name="YearLevels"></Type>
+    <Description>
+      <p>The assessment may be designed for specific grade levels.
+      Note that grade levels are also included in the Assessment
+      Form object. Specific forms of an assessment may have more
+      granularity.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>AssessmentLanguages</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="DataModel" name="LanguageList"></Type>
+    <Description>
+      <p>The assessment may be available in multiple languages.
+      This list will indicate which languages are available.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>LearningStandardItemRefIds</Element>
+    <Characteristics>O</Characteristics>
+    <List mode="List"></List>
+    <Description>
+      <p>This list identifies all learning standards that may be
+      measured by this assessment</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>/LearningStandardItemRefId</Element>
+    <Characteristics>MR</Characteristics>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Description>
+      <p>Reference to all learning standards that can be measured
+      by this assessment. Note that a specific form of an
+      assessment may measure all or a subset of the learning
+      standards. If the assessment measures all standards under a
+      parent standard, then the parent and all children should be
+      identified.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="DataModel" name="SIF_Metadata"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="DataModel" name="SIF_ExtendedElements"></Type>
+  </Item>
+  
+  <xhtml:Example name="sif3 Assessment- Example" xmlns="">
+	  <Sif3Assessment RefId="CC2834DE9138FAB032EF399BA72A8234" >
+		<Name>TAKS Test</Name>
+		<AssessmentIdentifiers>
+			<AssessmentIdentifier AssessmentIdType="client">TX48A</AssessmentIdentifier>
+			<AssessmentIdentifier AssessmentIdType="publisher">85976</AssessmentIdentifier>
+		</AssessmentIdentifiers>
+		<AssessmentPackageRefId>B8846EB83F0D4609A3299AC59410814E</AssessmentPackageRefId>
+		<AssessmentDescriptors>
+			<AssessmentDescriptor>statewide</AssessmentDescriptor>
+		</AssessmentDescriptors>
+		<AssessmentProvider>pearson</AssessmentProvider>
+		<AssessmentItemBanks>
+			<AssessmentItemBank>
+				<AssessmentItemBankId>TXTAKSGR4</AssessmentItemBankId>
+				<AssessmentItemBankName>Texas TAKS Grade 4</AssessmentItemBankName>
+			</AssessmentItemBank>
+		</AssessmentItemBanks>
+		<AssessmentSubjects>
+			<SubjectArea>
+				<Code>02</Code>
+				<OtherCodeList>
+					<OtherCode Codeset="Text">Mathmatics</OtherCode>
+				</OtherCodeList>
+			</SubjectArea>
+			<SubjectArea>
+				<Code>03</Code>
+				<OtherCodeList>
+					<OtherCode Codeset="Text">Life and Physical Sciences</OtherCode>
+				</OtherCodeList>
+			</SubjectArea>
+		</AssessmentSubjects>
+		<AssessmentGradeLevels>
+			<YearLevel>
+				<Code>5</Code>
+			</YearLevel>
+			<YearLevel>
+				<Code>6</Code>
+			</YearLevel>
+		</AssessmentGradeLevels>
+		<AssessmentLanguages>
+			<Language>
+				<Code>1201</Code>
+				<OtherCodeList>
+					<OtherCode Codeset="Text">English</OtherCode>
+				</OtherCodeList>
+			</Language>
+		</AssessmentLanguages>
+		<LearningStandardItemRefIds>
+			<LearningStandardItemRefId>FA3023B26277CAD47105327F3A782BED</LearningStandardItemRefId>
+			<LearningStandardItemRefId>DE937CB2627AAE872850E1F3A782BEDF</LearningStandardItemRefId>
+			<LearningStandardItemRefId>BCFA143627AAE87E830E1F3AD92B4DA7</LearningStandardItemRefId>
+			<LearningStandardItemRefId>DE840286ABB72198756E1F349CAE8273</LearningStandardItemRefId>
+			<LearningStandardItemRefId>913DE839BA8329FCA938EF2709BC31A0</LearningStandardItemRefId>
+			<LearningStandardItemRefId>A8930CD176EBB992714ACEB78492AE9C</LearningStandardItemRefId>
+			<LearningStandardItemRefId>0264FFBA72C78ED903BE27CAA18905FB</LearningStandardItemRefId>
+		</LearningStandardItemRefIds>
+	  </Sif3Assessment>
+  </xhtml:Example>
+</DataObject>

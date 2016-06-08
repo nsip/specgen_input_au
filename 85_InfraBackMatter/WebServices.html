@@ -1,0 +1,116 @@
+<Appendix name="Web Services">
+	<Intro>
+		<p>This appendix documents how the web service technologies SOAP and WSDL are leveraged by the SIF standard to create a second reference transport for conveying SIF messages between agent/applications and the ZIS.   </p>
+		<p>While this Appendix is dependent upon and references details contained in the Architecture, Messaging, Infrastructure, and Zone Services sections, unless otherwise noted, those sections remain independent of the information contained here.  It is anticipated that the contents of this Appendix will be more fully integrated into those sections in subsequent releases. </p>
+	</Intro>
+	
+	<Section name="Introduction and Background">
+		<p>The overarching goal of the web service mapping of the SIF Transport was to insure that the large and growing number of deployed SIF-based solutions (Zones), which were created independently of these technologies, could still incorporate them effectively in a seamless and incremental fashion without impacting day to day operations.</p>
+		<p>This subsection provides the context for understanding how that goal was achieved.</p>
+		<Section name="Guiding Principles">
+			<p>Adherence to the set of guiding principles below determined how the SIF architecture was extended to support web service technology.  This included the addition of a new SOAP-based SIF reference transport and a set of WSDL port types to encapsulate the services provided by the ZIS. </p>
+			<Section name="Backwards compatibility must not be broken">
+				<p>There is a seamless and incremental web service migration path provided for all existing deployed SIF v2.x Zones. </p>
+				<ul>
+					<li>A &quot;Web enabled&quot; ZIS (v2.5 and above) is capable of supporting all v2.x agent/application pairs. </li>
+					<li>SIF Web Applications using the new technologies are capable of being added to a SIF v2.5 and above Zone without impacting the operations of any pre-existing component.</li>
+					<li>Existing SIF Zone components remain completely unaware of whether their &quot;partner&quot; (requestor, responder, publisher or subscriber) is a SIF Web Application or not.</li>
+					<li>SIF Web Applications conforming to the architectural requirements defined in this specification are capable of transparently replacing any equivalent agent/application pair in the Zone ...and vice-versa.</li>
+				</ul>
+			</Section>
+			<Section name="Extend the architecture by embracing the new technologies, not by replacing or patching existing ones">
+				<p>Web service technologies such as SOAP and WSDL provide a the framework for the second reference infrastructure for the SIF Standard.  </p>
+				<ul>
+					<li>They co-exist with and do not replace the existing SIF infrastructure within a SIF Zone.</li>
+					<li>Their usage is logically consistent, and not simply a wrapper placed around the existing SIF infrastructure.</li>
+				</ul>				
+				<p>Components conforming to either infrastructure continue to be equal &quot;citizens&quot; in all SIF v2.5 and above Zones.</p>
+			</Section>
+			<Section name="Incorporating a second reference transport within the SIF standard must not decrease &quot;Out-of-the-Box&quot; application interoperability">
+				<p>The set of requirements placed on the new transport is as proscriptive as those on the original.  Where the functionality of an architectural style and a web service standard overlap (ex: REST and SOAP), or two versions of the same web service standard are incompatible to any degree (ex: WSDL 1.1 and WSDL 2.0) only one choice was made a normative dependency for the SIF standard.</p>
+				<p>In those cases where multiple incompatible options exist within the same version of a web service standard (ex: SOAP literal vs. SOAP encoded) only one option was made a normative dependency for the SIF standard.</p>
+			</Section>
+		</Section>
+		<Section name="Glossary of Terms">
+			<p>The following terms will be used throughout the rest of this appendix.  Wherever possible, they reflect common industry usage and consensus.</p>
+			<Section name="Service">
+				<p>A Service is a software application that responds to requests made of it by client applications.  Any given application can be both a service used by multiple clients, and a client which itself uses other services.</p>
+				<p>Every service possesses a public interface, defining exactly what operations its clients can ask it to do. This interface specifies the methods the service supports, the data these methods accept and the results they return.  Each service also has a hidden (private) implementation which determines how it will actually “service” these requests.</p>
+				<p>The fact that the service implementation is hidden (encapsulated) means that even if the details of that implementation radically change, if the interface is unaffected, none of the clients of that service will be impacted.  Having clients be independent of how a service is actually implemented is a key enabler of the architecture described in this appendix.</p>
+				<p></p>
+			</Section>
+			<Section name="SIF Object Service">
+				<p>A SIF Object Provider can be considered an Object Service.  The Service interface in this case is composed completely of CRUD (Create, Read, Update, and Delete) operations for the object data it provides. Making a SIF Request is equivalent to invoking a Read operation, and the SIF Event equates to the Create, Update and Delete service operations.  </p>
+				<p>Neither the cross-object relationships within the SIF object hierarchy nor the behavioral aspects of an educational process are encapsulated by these Object Services.</p>
+			</Section>
+			<Section name="SIF Zone Service">
+				<p>Starting in SIF v2.4, the existing SIF infrastructure was extended to support non-CRUD operations, which allowed Zone Services to be constructed which encapsulate both the details of the object hierarchy and associated transactional behavior (see Section 7).  </p>
+				<p>Three new SIF message types (ServiceIn, ServiceOut and ServiceNotify) were required to carry the non-object operation requests, responses, and event notifications respectively.  As a result, any client of a Zone Service MUST support this extended SIF infrastructure.  </p>
+				<p>All of the message types of the original SIF infrastructure (including these new Zone Service extensions) have been mapped to their SOAP equivalents.</p>
+			</Section>
+			<Section name="Web Service">
+				<p>A Web Service is a Service that conforms to the following general requirements.</p>
+					<ul>
+						<li>The format of the data it accepts and produces is defined by XML Schema</li>
+						<li>Its defined operations (interface) are described by the Web Services Description Language (WSDL) and automatically generate “invocation stubs” in clients of that service. </li>
+						<li>Each operation is bound to a specific XML schema which defines the contents of the associated data.</li>	
+						<li>Web clients interact with the web service in a manner prescribed by its WSDL description.  They exchange data in formats defined by its bound XML schemas, carried over the SOAP transport in accordance with a set of conventions defined in the WS-I Basic Profiles (BPs) and Basic Security Profiles (BSPs).</li>
+						<li>A family of additional WS-* standards provide the conformant Web Service with many of the messaging capabilities already provided by the Zone Integration Server (ZIS) for SIF applications within the Zone.  These capabilities include reliable message delivery, content based routing, and automatic service discovery. </li>
+					</ul>
+			</Section>
+			<Section name="">
+				<p></p>
+				<p></p>
+				<p></p>
+				<p></p>
+			</Section>
+			<Section name="">
+				<p></p>
+				<p></p>
+				<p></p>
+				<p></p>
+			</Section>
+			
+		</Section>
+		
+			
+	</Section>
+
+
+	
+	<Section name="">
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+	</Section>
+	
+	
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+	
+	<table>
+		<thead>
+			<tr>
+				<th></th>
+				<th></th>
+				<th>Declaration</th>
+			</tr>
+		</thead>
+		<tr>
+			<td>
+				
+			</td>
+			<td>
+				
+			</td>
+			<td></td>
+		</tr>
+	</table>
+	
+	
+</Appendix>

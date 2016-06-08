@@ -1,0 +1,165 @@
+<Appendix name="Selective Message Blocking (SMB) Example">
+<Section name="Example">
+						<p>A detailed example of Selective Message Blocking (SMB) follows. The table below represents the agent's message queue as maintained by the ZIS. 
+						The message at the top represents the oldest message in the queue and is the message that is currently being processed
+by the agent as the example begins.</p>
+						<table title="Agent Message Queue - Example 1">
+							<thead>
+								<tr>
+									<td>Agent Message Queue</td>
+								</tr>
+							</thead>
+							<tr>
+								<td><code>SIF_Event</code> message containing a <code>StudentSchoolEnrollment</code> object with an <code>Action</code> of <code>Add</code>.</td>
+							</tr>
+							<tr>
+								<td><code>SIF_Event</code> message containing a <code>StudentPersonal</code> object with an <code>Action</code> of <code>Add</code>.</td>
+							</tr>
+							<tr>
+								<td><code>SIF_Request</code> message for a <code>StudentPersonal</code> object from another agent.</td>
+							</tr>
+							<tr>
+								<td><code>SIF_Event</code> message containing a <code>StudentSchoolEnrollment</code> object with an <code>Action</code> of <code>Add</code>.</td>
+							</tr>
+						</table>
+						<p>When processing the <code>StudentSchoolEnrollment</code> event, the agent requires data from a <code>SchoolInfo</code> object that it doesn't have locally. 
+						It would like to request the <code>SchoolInfo</code> object without needing to process subsequent events.  To do so, the agent acknowledges
+						the <code>StudentSchoolEnrollment</code> event with an &quot;Intermediate&quot; 
+						<code>SIF_Ack</code> indicating that the ZIS will be contacted later to resume delivery of events.  It then opens a channel to the ZIS and
+						submits a <code>SIF_Request</code> for the <code>SchoolInfo</code> object.</p>
+						
+						<p>Upon receipt of the &quot;Intermediate&quot; <code>SIF_Ack</code>, the ZIS freezes the delivery of any <code>SIF_Event</code> messages to this agent 
+						until the agent sends a final <code>SIF_Ack</code> releasing the original event.  The current state of the queue is now:</p>
+						<table title="Agent Message Queue - Example 2">
+							<thead>
+								<tr>
+									<td>Agent Message Queue</td>
+								</tr>
+							</thead>
+							<tr>
+								<td><code>SIF_Event</code> message containing a <code>StudentSchoolEnrollment</code> object with an <code>Action</code> of <code>Add</code>. (blocked)</td>
+							</tr>
+							<tr>
+								<td><code>SIF_Event</code> message containing a <code>StudentPersonal</code> object with an <code>Action</code> of <code>Add</code>. (frozen)</td>
+							</tr>
+							<tr>
+								<td><code>SIF_Request</code> message for a <code>StudentPersonal</code> object from another agent.</td>
+							</tr>
+							<tr>
+								<td><code>SIF_Event</code> message containing a <code>StudentSchoolEnrollment</code> object with an <code>Action</code> of <code>Add</code>. (frozen)</td>
+							</tr>
+						</table>
+						<p>The next message available for delivery to the agent is the <code>SIF_Request</code> for a <code>StudentPersonal</code> object. 
+						For our example, the agent will accept the <code>SIF_Request</code> by returning an &quot;Immediate&quot; <code>SIF_Ack</code> 
+						indicating that processing is complete and the agent will hand the <code>SIF_Request</code> off to another part of the agent for handling.</p>
+						<p>Meanwhile, the ZIS has deposited the <code>SIF_Response</code> from the <code>SchoolInfo</code> provider's agent into the queue. The queue now looks like this:</p>
+						<table title="Agent Message Queue - Example 3">
+							<thead>
+								<tr>
+									<td>Agent Message Queue</td>
+								</tr>
+							</thead>
+							<tr>
+								<td><code>SIF_Event</code> message containing a <code>StudentSchoolEnrollment</code> object with an <code>Action</code> of <code>Add</code>. (blocked)</td>
+							</tr>
+							<tr>
+								<td><code>SIF_Event</code> message containing a <code>StudentPersonal</code> object with an <code>Action</code> of <code>Add</code>. (frozen)</td>
+							</tr>
+							<tr>
+								<td><code>SIF_Event</code> message containing a <code>StudentSchoolEnrollment</code> object with an <code>Action</code> of <code>Add</code>. (frozen)</td>
+							</tr>
+							<tr>
+								<td><code>SIF_Response</code> message containing the <code>SchoolInfo</code> object previously requested.</td>
+							</tr>
+						</table>
+						<p>The next message the agent receives is the <code>SIF_Response</code>. The agent takes the <code>SIF_Response</code> and uses the information from it 
+						along with the data in the original <code>StudentSchoolEnrollment</code> event to update its database.  The agent returns (Pull-Mode) or
+						sends (Push-Mode) an &quot;Immediate&quot; <code>SIF_Ack</code> telling the ZIS to discard the <code>SIF_Response</code> message.</p>
+			
+						
+						<p>The agent has now completed processing of the <code>StudentSchoolEnrollment</code> event and opens a channel to the ZIS and sends a &quot;Final&quot; 
+						<code>SIF_Ack</code> with the message identifier for the <code>StudentSchoolEnrollment</code> event. The <code>SIF_Ack</code> says that the agent has completed processing and the 
+						ZIS removes the event from the agent queue.  The freeze on <code>SIF_Event</code> messages is lifted and the next message to be sent to the agent
+						is the <code>SIF_Event</code> for a <code>StudentPersonal</code> Add:</p>
+						<table title="Agent Message Queue - Example 4">
+							<thead>
+								<tr>
+									<td>Agent Message Queue</td>
+								</tr>
+							</thead>
+							<tr>
+								<td><code>SIF_Event</code> message containing a <code>StudentPersonal</code> object with an <code>Action</code> of <code>Add</code>.</td>
+							</tr>
+							<tr>
+								<td><code>SIF_Event</code> message containing a <code>StudentSchoolEnrollment</code> object with an <code>Action</code> of <code>Add</code>.</td>
+							</tr>
+						</table>
+						<h5>&quot;Immediate&quot; SIF_Ack</h5>
+						<p>The &quot;Immediate&quot; <code>SIF_Ack</code>
+is a <code>SIF_Ack</code> message with status code of <code>1</code>.  This type
+of <code>SIF_Ack</code> is returned as a response to a message sent by the ZIS and indicates
+that the agent has persisted or has processed the message and the ZIS must remove the message from its queue.</p>
+						<xhtml:Example xmlns="" name='"Immediate" SIF_Ack' >
+							<SIF_Message xmlns="http://www.sifinfo.org/au/infrastructure/2.x" Version="2.5">
+								<SIF_Ack>
+									<SIF_Header>
+										<SIF_MsgId>ABCD10580EF250789012AC0554321EA2</SIF_MsgId>
+                    <SIF_Timestamp>2006-02-18T08:39:40-08:00</SIF_Timestamp>
+										<SIF_SourceId>RamseyLIB</SIF_SourceId>
+									</SIF_Header>
+									<SIF_OriginalSourceId>RamseySIS</SIF_OriginalSourceId>
+									<SIF_OriginalMsgId>10580EF2ABCD50789012AC05EA6C71B3</SIF_OriginalMsgId>
+									<SIF_Status>
+										<SIF_Code>1</SIF_Code>
+									</SIF_Status>
+								</SIF_Ack>
+							</SIF_Message>
+						</xhtml:Example>
+	
+						<h5>&quot;Intermediate&quot; SIF_Ack</h5>
+						<p>The &quot;Intermediate&quot; <code>SIF_Ack</code> is a <code>SIF_Ack</code> message with status code of <code>2</code>. 
+This type of <code>SIF_Ack</code> is returned as a response to an event message delivered by the ZIS and indicates that the agent has not completed processing of the event and the ZIS must not remove the event message from its queue. 
+The agent will send a &quot;Final&quot; <code>SIF_Ack</code> to the ZIS in the future to signal that the ZIS can discard the event message. 
+An &quot;Intermediate&quot; <code>SIF_Ack</code> message must not be returned by agents in response to messages other than <code>SIF_Event</code>.</p>
+						<xhtml:Example xmlns="" name='"Intermediate" SIF_Ack' >
+							<SIF_Message xmlns="http://www.sifinfo.org/au/infrastructure/2.x" Version="2.5">
+								<SIF_Ack>
+									<SIF_Header>
+										<SIF_MsgId>ABCD10580EF250789012AC0554321EA3</SIF_MsgId>
+										<SIF_Timestamp>2006-02-18T08:39:40-08:00</SIF_Timestamp>
+										<SIF_SourceId>RamseyLIB</SIF_SourceId>
+									</SIF_Header>
+									<SIF_OriginalSourceId>RamseySIS</SIF_OriginalSourceId>
+									<SIF_OriginalMsgId>10580EF2ABCD50789012AC05EA6C71B3</SIF_OriginalMsgId>
+									<SIF_Status>
+										<SIF_Code>2</SIF_Code>
+									</SIF_Status>
+								</SIF_Ack>
+							</SIF_Message>
+						</xhtml:Example>
+		
+						<h5>&quot;Final&quot; SIF_Ack</h5>
+						<p>A &quot;Final&quot; <code>SIF_Ack</code> is a
+message with status code of <code>3</code>. The agent sends this type of
+<code>SIF_Ack</code> to the ZIS after the agent has completely processed a <code>SIF_Event</code> where
+it previously sent an &quot;Intermediate&quot; <code>SIF_Ack</code>. When the ZIS
+receives this message, it must discard the <code>SIF_Event</code> message referenced in the <code>SIF_Ack</code> upon successfully acknowledging the &quot;Final&quot; <code>SIF_Ack</code>.</p>
+						<xhtml:Example xmlns="" name='"Final" SIF_Ack' >
+							<SIF_Message xmlns="http://www.sifinfo.org/au/infrastructure/2.x" Version="2.5">
+								<SIF_Ack>
+									<SIF_Header>
+										<SIF_MsgId>ABCD10580EF250789012AC0554321EA4</SIF_MsgId>
+                    <SIF_Timestamp>2006-02-18T08:39:40-08:00</SIF_Timestamp>
+                    <SIF_SourceId>RamseyLIB</SIF_SourceId>
+                  </SIF_Header>
+									<SIF_OriginalSourceId>RamseySIS</SIF_OriginalSourceId>
+									<SIF_OriginalMsgId>10580EF2ABCD50789012AC05EA6C71B3</SIF_OriginalMsgId>
+									<SIF_Status>
+										<SIF_Code>3</SIF_Code>
+									</SIF_Status>
+								</SIF_Ack>
+							</SIF_Message>
+						</xhtml:Example>
+		
+</Section>
+</Appendix>

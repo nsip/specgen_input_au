@@ -1,0 +1,181 @@
+<DataObject name="AssessmentRegistration">
+  <Key>@RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>AssessmentRegistration</Element>
+    <Description>
+      <p>This object represents the assignment of a specific assessment to be taken by a student.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Description>
+      <p>The GUID that uniquely identifies an instance of the object.</p>
+    </Description>
+  </Item>
+
+  <Item>
+    <Element>StudentPersonalRefId</Element>
+    <Characteristics>M</Characteristics>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Description>
+      <p>The student associated with the registration.</p>
+    </Description>
+  </Item>
+
+  <Item>
+    <Element>AssessmentAdministrationRefId</Element>
+    <Characteristics>M</Characteristics>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Description>
+      <p>The assessment administration associated with the registration.</p>
+    </Description>
+  </Item>
+
+  <Item>
+    <Element>CreationDateTime</Element>
+    <Characteristics>M</Characteristics>
+    <Type name="xs:dateTime"></Type>
+    <Description>
+      <p>Date/time assignment is made.</p>
+    </Description>
+  </Item>
+
+  <Item>
+    <Element>StudentSpecialConditions</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Records student-specific special conditions during the test. </p>
+    </Description>
+    <List mode="List">
+    </List>
+  </Item>
+
+  <Item>
+    <Element>/StudentSpecialCondition</Element>
+    <Characteristics>MR</Characteristics>
+    <Type name="xs:normalizedString"></Type>
+    <Description>
+      <p>
+        A description of the special condition.  Student special conditions are different
+        from special conditions of the test.
+      </p>
+    </Description>
+  </Item>
+
+  <Item>
+    <Attribute>Code</Attribute>
+    <Characteristics>M</Characteristics>
+    <Type name="xs:token"></Type>
+    <Description>
+      <p>A code indicating the type of special condition.</p>
+    </Description>
+  </Item>
+
+  <Item>
+    <Element>StudentYearLevel</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="DataModel" name="YearLevel"></Type>
+    <Description>
+      <p>Year level of the student at the time of testing.</p>
+    </Description>
+  </Item>
+
+  <Item>
+    <Element>AssessmentYearLevel</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="DataModel" name="YearLevel"></Type>
+    <Description>
+      <p>The Year or level at which the student is to be tested. This element should be omitted unless the student is being tested out-of-level.</p>
+    </Description>
+  </Item>
+
+  <Item>
+    <Element>AssessmentStudentSnapshot</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The status of the student at the time of testing.  The source of this information is meant to be the assessment system and not the student information system.</p>
+    </Description>
+  </Item>
+ 
+  <Item>
+    <Element>/Sex</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Person's gender.</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsSexCodeType"></Type>
+  </Item>
+  <Item>
+    <Element>/BirthDate</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The person's date of birth.</p>
+    </Description>
+    <Type ref="DataModel" name="BirthDate"></Type>
+  </Item>
+  
+  <Item>
+    <Element>LEAInfoRefId</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Description>
+      <p>Optional reference to a district associated with the registration.</p>
+    </Description>
+  </Item>
+
+  <Item>
+    <Element>SchoolInfoRefId</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Description>
+      <p>Optional reference to a school associated with the registration.</p>
+    </Description>
+  </Item>
+
+  <Item>
+    <Element>StaffPersonalRefId</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Description>
+      <p>Optional reference to a staff person associated with the registration.</p>
+    </Description>
+  </Item>
+
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="DataModel" name="SIF_Metadata"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="DataModel" name="SIF_ExtendedElements"></Type>
+  </Item>
+
+  <xhtml:Example xmlns="">
+    <AssessmentRegistration RefId="84243B2716EA4A68889B57A07E3707C9">
+      <StudentPersonalRefId>0D015F74DAB645FD92EFA8F43F2D79C3</StudentPersonalRefId>
+      <AssessmentAdministrationRefId>6B08DF6E158941D9B8206D16E1FA6219</AssessmentAdministrationRefId>
+      <CreationDateTime>2006-03-05T09:30:00-05:00</CreationDateTime>
+      <StudentSpecialConditions>
+        <StudentSpecialCondition Code="45C">Student became ill during test.</StudentSpecialCondition>
+      </StudentSpecialConditions>
+      <StudentYearLevel>
+        <Code>4</Code>
+      </StudentYearLevel>
+      <AssessmentYearLevel>
+        <Code>3</Code>
+      </AssessmentYearLevel>
+      <AssessmentStudentSnapshot>
+        <Sex>2</Sex>
+        <BirthDate>1996-09-12</BirthDate>
+       </AssessmentStudentSnapshot>
+      <LEAInfoRefId>325335F330A24BCD85E263E5C1EAAF89</LEAInfoRefId>
+      <SchoolInfoRefId>0578B825250649DE930BF8916175BBAB</SchoolInfoRefId>
+      <StaffPersonalRefId>3CD4A20CE2D64C27AE977F02D2CE24B3</StaffPersonalRefId>
+    </AssessmentRegistration>
+  </xhtml:Example>
+</DataObject>

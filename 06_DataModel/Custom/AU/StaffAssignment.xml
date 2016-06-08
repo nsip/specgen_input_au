@@ -1,0 +1,248 @@
+<DataObject name="StaffAssignment">
+  <Key>@RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>StaffAssignment</Element>
+    <Description>
+      <p>
+        This object defines information related to a staff member's assignment(s); commonly, this will be a school
+        assignment.
+      </p>
+    </Description>
+  </Item>
+  <Item>
+
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The GUID that uniquely identifies a particular staff assignment.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+  <Item>
+
+    <Element>SchoolInfoRefId</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The ID (GUID) that identifies the school where the staff member is assigned.</p>
+    </Description>
+    <Type ref="CommonTypes" relationship="records staff assignment to" count="1:1" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Element>SchoolYear</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>
+        School year for which the information is applicable, expressed as the four-digit year in which the school year ends (e.g., <code>2007</code>). Release 1.2 allows this to be optional as JobStart and EndDate allow for this Object to be used over more than one year.
+      </p>
+    </Description>
+    <Type ref="DataModel" name="SchoolYear"></Type>
+  </Item>
+  <Item>
+    <Element>StaffPersonalRefId</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>ID (GUID) of this staff member, as represented in the StaffPersonal object.&#160;</p>
+    </Description>
+    <Type ref="CommonTypes" relationship="records assignment for" count="*:1" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Element>Description</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Short assignment description</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  <Item>
+    <Element>PrimaryAssignment</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>
+        Is this the staff member's primary assignment?  Note: There must be one and only one instance of the object with a <code>Yes</code> value in this element per StaffMember per school year.
+      </p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
+  </Item>
+  <Item>
+    <Element>JobStartDate</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>This is the date from which the staff assignment is valid (inclusive).</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+  <Item>
+    <Element>JobEndDate</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>This is the date through which the staff assignment is valid (inclusive).</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+  <Item>
+    <Element>JobFTE</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Full-time job equivalent ratio for this assignment. (Format is x.xx; an employee who is full-time and who is 50% of their time on this assignment would be represented as 0.50)</p>
+    </Description>
+    <Type name="xs:decimal"></Type>
+    <Facets>
+      <xs:minInclusive value="0"/>
+      <xs:maxInclusive value="1"/>
+      <xs:fractionDigits value="2"/>
+    </Facets>
+  </Item>
+  <Item>
+    <Element>JobFunction</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The purpose of the activities as related to students.</p>
+    </Description>
+    <Type name="xs:string"></Type>
+  </Item>
+  <Item>
+    <Element>StaffSubjectList</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Subject(s) Staff member is eligible to teach.</p>
+    </Description>
+    <List mode="List">
+    </List>
+  </Item>
+  <Item>
+    <Element>/StaffSubject</Element>
+    <Characteristics>MR</Characteristics>
+    <Description>
+      <p>This element contains Staff subjects they are eligible to teach together with the teaching preference.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>//PreferenceNumber</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Priority of Subject to Teach.</p>
+    </Description>
+    <Type name="xs:unsignedInt"></Type>
+  </Item>
+  <Item>
+    <Element>//SubjectLocalId</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Local Subject Id</p>
+    </Description>
+    <Type ref="DataModel" name="LocalId"></Type>
+  </Item>
+  <Item>
+    <Element>//TimeTableSubjectRefId</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>RefId of TimeTableSubject</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+  <Item>
+    <Element>StaffActivity</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The purpose of the Teacher's role as related to students. Equivalent to 'JobFunction' in US Object.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>/Code</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Code representing the type of staff activity undertaken.</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsStaffActivityType"></Type>
+  </Item>
+  <Item>
+    <Element>/OtherCodeList</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="DataModel" name="OtherCodeList"></Type>
+  </Item>
+  <Item>
+    <Element>YearLevels</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Year level(s) that the teacher is allowed to teach.</p>
+    </Description>
+    <Type ref="DataModel" name="YearLevels"></Type>
+  </Item>
+
+  <Item>
+    <Element>CasualReliefTeacher</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Is this teacher a casual relief teacher CRT?</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
+  </Item>
+
+  <Item>
+    <Element>Homegroup</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The name of the homegroup the staff member is assigned to.</p>
+    </Description>
+    <Type name='xs:normalizedString'/>
+  </Item>
+
+  <Item>
+    <Element>House</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The name of the house the staff member is assigned to.</p>
+    </Description>
+    <Type name='xs:normalizedString'/>
+  </Item>
+  
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="DataModel" name="SIF_Metadata"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+
+    <Characteristics>O</Characteristics>
+    <Type ref="DataModel" name="SIF_ExtendedElements"></Type>
+  </Item>
+  <xhtml:Example xmlns="">
+    <StaffAssignment RefId="D3E34B359D75101A8C3D00AA001A1652">
+      <SchoolInfoRefId>A8C3D3E34B359D75101D00AA001A1652</SchoolInfoRefId>
+      <SchoolYear>2008</SchoolYear>
+      <StaffPersonalRefId>D3E34B359D75101A8C3D00AA001A1651</StaffPersonalRefId>
+      <Description>VCE English Teacher</Description>
+      <PrimaryAssignment>Y</PrimaryAssignment>
+      <JobStartDate>2000-09-05</JobStartDate>
+      <JobEndDate>2001-06-25</JobEndDate>
+      <JobFTE>1.00</JobFTE>
+      <JobFunction>Teacher</JobFunction>
+      <StaffSubjectList>
+        <StaffSubject>
+          <PreferenceNumber>1</PreferenceNumber>
+          <SubjectLocalId>English</SubjectLocalId>
+        </StaffSubject>
+        <StaffSubject>
+          <PreferenceNumber>2</PreferenceNumber>
+          <SubjectLocalId>Mathematics</SubjectLocalId>
+        </StaffSubject>
+        <StaffSubject>
+          <PreferenceNumber>3</PreferenceNumber>
+          <SubjectLocalId>Science</SubjectLocalId>
+        </StaffSubject>
+      </StaffSubjectList>
+      <YearLevels>
+        <YearLevel>
+          <Code>11</Code>
+        </YearLevel>
+        <YearLevel>
+          <Code>12</Code>
+        </YearLevel>
+      </YearLevels>
+      <CasualReliefTeacher>N</CasualReliefTeacher>
+    </StaffAssignment>
+
+  </xhtml:Example>
+</DataObject>

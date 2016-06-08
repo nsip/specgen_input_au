@@ -1,0 +1,251 @@
+<DataObject name="SystemRole">
+	<EventsReported>true</EventsReported>
+    <Key>@RefId</Key>    
+    <Intro>
+      <p>
+        The SystemRole Object defines the systems that a user has access to, the roles they perform within those systems, and the scope of those roles within the particular system.
+      </p>
+      <p>
+        The RoleScopeList is used to list the entities over which the user has access rights.
+      </p>
+    </Intro>
+    
+    <Item>
+      <Element>SystemRole</Element>
+      <Description>
+        <p>
+          The SystemRole Object defines the systems that a user has access to, the roles they perform within those systems, and the scope of those roles within the particular system.
+        </p>
+        <p>
+          The RoleScopeList is used to list the entities over which the user has access rights.
+        </p>        
+      </Description>
+    </Item>
+    <Item>
+      <Attribute>RefId</Attribute>
+      <Description>The SIF RefId that uniquely identifies this object.</Description>
+      <Characteristics>M</Characteristics>
+      <Type ref="CommonTypes" name="RefIdType"/>
+    </Item>
+    <Item>
+      <Element>SIF_RefId</Element>
+      <Description>The SIF RefId that provides the source Object for this SystemRole Object.</Description>
+      <Characteristics>M</Characteristics>
+      <Type ref="CommonTypes" name="IdRefType"/>
+    </Item>
+    <Item>
+      <Attribute>SIF_RefObject</Attribute>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>The type of SIF object that the SIF_RefId attribute identifies.</p>
+      </Description>
+      <Values>
+        <Value>
+          <Code>Identity</Code>
+        </Value>
+        <Value>
+         <Code>StudentPersonal</Code>
+       </Value>
+       <Value>
+         <Code>StaffPersonal</Code>
+       </Value>
+       <Value>
+         <Code>StudentContactPersonal</Code>
+       </Value>     
+      </Values>
+    </Item>
+    <Item>
+      <Element>SystemContextList</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+         <p>At least one SystemContext must be provided.</p>
+      </Description>
+      <List mode="List">
+      </List>
+    </Item>
+    <Item>
+       <Element>/SystemContext</Element>
+       <Characteristics>MR</Characteristics>
+       <Description>
+         <p>Details about enterprise roles for an Identity/Personal Object for subscribing systems</p>
+       </Description>
+   
+    </Item>
+    <Item>
+      <Attribute>SystemId</Attribute>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Id of the system that this SystemContext relates to.</p>
+      </Description>
+      <Type name="xs:normalizedString"></Type>
+     </Item> 
+    
+    
+  <Item>
+    <Element>//RoleList</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>List of Roles.</p>
+    </Description>
+
+    <List mode="List">
+    </List>
+  </Item>
+  <Item>
+    <Element>///Role</Element>
+    <Characteristics>MR</Characteristics>
+    <Description>
+      <p>Role of the entity this object describes in the SystemContext.</p>
+    </Description>
+      
+  </Item>
+  <Item>
+    
+    <Attribute>RoleId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Role of the entity this object describes in the SystemContext.</p>
+    </Description>
+    <ItemExample>Admin</ItemExample>
+    <ItemExample>User</ItemExample>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+    <Item>
+      <Element>////RoleScopeList</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p></p>
+      </Description>
+      <List mode="List">
+      </List>
+    </Item>
+    <Item>
+      <Element>/////RoleScope</Element>
+      <Characteristics>MR</Characteristics>
+      <Description>
+        <p>Container</p>
+      </Description>
+     
+    </Item>
+    <Item>
+      <Element>//////RoleScopeName</Element>
+      <Characteristics>C</Characteristics>
+      <Description>
+        <p>The group/OU this role is applicable to.</p>
+        <p>One of RoleScopeName or associated RefId must be provided.</p>
+      </Description>
+      <Type name="xs:normalizedString"></Type>
+    </Item>
+    <Item>
+      <Element>//////RoleScopeRefId</Element>
+      <Characteristics>C</Characteristics>
+      <Description>
+        <p>The  SIF_RefId that provides  the source Object for this RoleScope.</p>
+        <p>One of RoleScopeName or associated RefId must be provided.</p>
+      </Description>
+      <Type name="IdRefType"></Type>
+    </Item>
+    <Item>
+      <Attribute>SIF_RefObject</Attribute>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>The type of SIF object that the SIF_RefId attribute identifies.</p>
+      </Description>
+      <Values>
+        <Value>
+          <Code>SchoolInfo</Code>
+        </Value>
+        <Value>
+          <Code>TeachingGroup</Code>
+        </Value>
+        <Value>
+          <Code>StudentActivityParticipation</Code>
+        </Value>
+      </Values>
+    </Item>
+    
+    
+  
+    <Item>
+      <Element>SIF_Metadata</Element>
+      <Characteristics>O</Characteristics>
+      <Type ref="DataModelTaskForce" name="SIF_Metadata"></Type>
+    </Item>
+    <Item>
+     <Element>SIF_ExtendedElements</Element>
+     <Characteristics>O</Characteristics>
+     <Type ref="DataModel" name="SIF_ExtendedElements"></Type>
+    </Item>
+
+    <xhtml:Example xmlns=''>
+      <SystemRole RefId="4286194F43ED43C18EE2F0A27C4BEF86">
+
+  <SIF_RefId SIF_RefObject="Identity">23B08571E4D645C3B82A3E52E5349925</SIF_RefId>
+  <SystemContextList>
+
+    <SystemContext SystemId = 'LearningPlatformSystem1'>
+      
+      <RoleList>    
+
+      <Role RoleId= 'Admin'>
+
+        <RoleScopeList>
+
+          <RoleScope>
+
+            <RoleScopeName>SchoolGroupName1</RoleScopeName>
+
+            <RoleScopeRefId SIF_RefObject= 'SchoolInfo'>23B08571E4D645C3B82A3E52E5349912</RoleScopeRefId>
+
+          </RoleScope>
+
+          <RoleScope>
+
+            <RoleScopeName>ClassName1</RoleScopeName>
+
+            <RoleScopeRefId SIF_RefObject = 'TeachingGroup'>23B08571E4D645C3B82A3E52E5349945</RoleScopeRefId>
+
+
+          </RoleScope>
+
+        </RoleScopeList>
+
+      </Role>
+
+     </RoleList>
+
+    </SystemContext>
+
+    <SystemContext SystemId = 'ContentManagement'>
+	  
+       <RoleList>
+
+       <Role RoleId= 'User'>
+
+        <RoleScopeList>
+
+          <RoleScope>
+
+            <RoleScopeName>SchoolName1</RoleScopeName>
+
+            <RoleScopeRefId SIF_RefObject= 'StudentActivityParticipation'>23B08571E4D645C3B82A3E52E5349923</RoleScopeRefId>
+
+          </RoleScope>
+
+        </RoleScopeList>
+
+      </Role>
+
+     </RoleList>
+
+    </SystemContext>
+
+  </SystemContextList>
+
+</SystemRole>
+
+
+
+    </xhtml:Example>
+  </DataObject>
+

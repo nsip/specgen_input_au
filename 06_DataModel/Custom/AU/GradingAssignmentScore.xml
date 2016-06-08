@@ -1,0 +1,122 @@
+<DataObject name="GradingAssignmentScore">
+  <Key>@RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>GradingAssignmentScore</Element>
+    <Description>
+      <p>
+        This object provides score information about a particular assignment. 
+      </p>
+     </Description>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>A GUID that identifies an instance of this object.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+  
+  <Item>
+    <Element>StudentPersonalRefId</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The GUID for the student whose score this is.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  
+  <Item>
+    <Element>StudentPersonalLocalId</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The Local Id for the student whose score this is.</p>
+    </Description>
+    <Type ref="DataModel" name="LocalId"></Type>
+  </Item>
+  
+  <Item>
+    <Element>TeachingGroupRefId</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The GUID for the TeachingGroup object in which this assignment has been set.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  
+  <Item>
+    <Element>SchoolInfoRefId</Element>    
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The Id (GUID) that uniquely identifies the School in which this assignment has been set.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  
+  <Item>
+    <Element>GradingAssignmentRefId</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The grading assignment for which this is a score.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  
+  <Item>
+    <Element>ScorePoints</Element>
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>The score represented as points. Conditionally required that one or more of ScorePoints, ScorePercent or ScoreLetter must be filled in. For online assignments, ScorePoints should be used to the exclusion of other scores.</p>
+    </Description>
+    <Type name="xs:unsignedInt"></Type>
+  </Item>
+  
+  <Item>
+    <Element>ScorePercent</Element>
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>The score represented as a percent. Conditionally required that one or more of ScorePoints, ScorePercent or ScoreLetter must be filled in.</p>
+    </Description>
+    <Type name="xs:decimal"></Type>
+  </Item>
+
+  <Item>
+    <Element>ScoreLetter</Element>
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>The score represented as a letter grade. Conditionally required that one or more of ScorePoints, ScorePercent or ScoreLetter must be filled in.</p>
+    </Description>
+    <Type name="xs:token"></Type>
+  </Item>
+
+  <Item>
+    <Element>ScoreDescription</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Text description of the score.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="DataModel" name="SIF_Metadata"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="DataModel" name="SIF_ExtendedElements"></Type>
+  </Item>
+  <xhtml:Example xmlns="">
+    <GradingAssignmentScore RefId="359D75101AD0A9D7A8C3DAD0A85103A2">
+      <StudentPersonalRefId>A75A00101A8C301D02E3A05B359D0A00</StudentPersonalRefId>
+      <StudentPersonalLocalId>fred12</StudentPersonalLocalId>
+      <TeachingGroupRefId>D0A0A27AD0A8510AD9D75101A8C3DA39</TeachingGroupRefId>
+      <SchoolInfoRefId>11737EA4301CADCA75C87214A7C46BDB</SchoolInfoRefId>
+      <GradingAssignmentRefId>359D75101AD0A9D7A8C3DAD0A85105D2</GradingAssignmentRefId>
+      <ScorePoints>45</ScorePoints> 
+    </GradingAssignmentScore>
+  </xhtml:Example>
+</DataObject>

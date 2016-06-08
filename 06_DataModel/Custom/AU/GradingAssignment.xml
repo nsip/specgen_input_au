@@ -1,0 +1,144 @@
+<DataObject name="GradingAssignment">
+  <Key>@RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>GradingAssignment</Element>
+    <Description>
+      <p>
+        This object provides information about a particular assignment, allows applications to synchronize each other's assignment tables, gathers the definition for a GradingAssignmentScore object, etc.  
+      </p>
+     </Description>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>A GUID that identifies an instance of this object. </p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+
+  <Item>
+    <Element>TeachingGroupRefId</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The GUID for the TeachingGroup object in which this assignment has been set.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  
+  <Item>
+    <Element>SchoolInfoRefId</Element>    
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The Id (GUID) that uniquely identifies the School in which this assignment has been set.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  
+	<Item>
+    <Element>GradingCategory</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A particular grading category for the assignment, used to provide grouping and type information.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  
+  <Item>
+    <Element>Description</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The text-based description of the assignment.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  
+  <Item>
+    <Element>PointsPossible</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The points possible on the assignment.</p>
+    </Description>
+    <Type name="xs:unsignedInt"></Type>
+  </Item>
+  
+
+  <Item>
+    <Element>CreateDate</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Creation date of the assignment.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+  
+  <Item>
+    <Element>DueDate</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Date the assignment is due.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+  
+  <Item>
+    <Element>Weight</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The weight of the assignment.</p>
+    </Description>
+    <Type name="xs:decimal"></Type>
+  </Item>
+  
+    <Item>
+      <Element>MaxAttemptsAllowed</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>How many attempts the student is allowed on the assignment (applicable particularly to online activities).</p>
+      </Description>
+      <Type name="xs:integer"></Type>
+    </Item>
+    
+  <Item>
+    <Element>DetailedDescriptionURL</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The location of the document that describes the assignment. If Type is PDF, this element will contain the Base64 encoding of the entire document. Preferred against DetailedDescriptionBinary for online assessment.</p>
+    </Description>
+    <Type name="xs:anyURI"></Type>
+  </Item>
+
+  <Item>
+    <Element>DetailedDescriptionBinary</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The Base64 encoding of a document (e.g. PDF) describing the assignment.</p>
+    </Description>
+    <Type name="xs:base64Binary"></Type>
+  </Item>
+  
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="DataModel" name="SIF_Metadata"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="DataModel" name="SIF_ExtendedElements"></Type>
+  </Item>
+  <xhtml:Example xmlns="">
+    <GradingAssignment RefId="359D75101AD0A9D7A8C3DAD0A85103A2">	
+      <TeachingGroupRefId>D0A0A27AD0A8510AD9D75101A8C3DA39</TeachingGroupRefId>
+      <SchoolInfoRefId>11737EA4301CADCA75C87214A7C46BDB</SchoolInfoRefId>
+      <GradingCategory>Classroom Test</GradingCategory>
+      <Description>Pop Quiz</Description>
+      <PointsPossible>100</PointsPossible>
+      <CreateDate>2000-11-21</CreateDate>
+      <DueDate>2000-11-25</DueDate>
+      <Weight>1.0</Weight>
+      <DetailedDescriptionURL>http://www.assignmentinfo.com/assignment1.pdf</DetailedDescriptionURL> 
+    </GradingAssignment>
+  </xhtml:Example>
+</DataObject>

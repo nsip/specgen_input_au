@@ -1,0 +1,71 @@
+<DataObject name="Sif3AssessmentItemAssociation" >
+  <Key>@RefId</Key>
+  <EventsReported>false</EventsReported>
+  <Intro>
+    <p>This object links together two assessment items for various purposes. The AssociationType element indicates the purpose of the relationship. Relationships can be used by content management or test delivery systems.</p>
+  </Intro>
+  <Item>
+    <Element>Sif3AssessmentItemAssociation</Element>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Description>
+      <p>The GUID that uniquely identifies an instance of this object.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>AssessmentItemRefId</Element>
+    <Characteristics>M</Characteristics>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+	<Description>
+      <p>The first item in the association.</p>
+    </Description>
+  </Item>   
+  <Item>
+    <Element>TargetAssessmentItemRefId</Element>
+    <Characteristics>M</Characteristics>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+	<Description>
+      <p>The item being associated to the first item. </p>
+    </Description>
+  </Item>  
+  <Item>
+    <Element>AssociationType</Element>
+    <Characteristics>M</Characteristics>
+	  <Values>
+	    <Value>
+		  <Code>enemy</Code>
+		  <Text>Indicates that the two items are enemies and should not appear on the same test together.</Text>
+		</Value>
+		<Value>
+		  <Code>derivative</Code>
+		  <Text>Indicates that the two items were derived from one another (such as language translation).</Text>
+		</Value>
+	  </Values>
+	<Description>
+      <p>Indicates the type of association.</p>
+    </Description>
+  </Item>  
+  
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="DataModel" name="SIF_Metadata"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="DataModel" name="SIF_ExtendedElements"></Type>
+  </Item>  
+  
+  <xhtml:Example name="sif3 AssessmentItemAssociation - Example" xmlns="">
+	<Sif3AssessmentItemAssociation RefId="80E298F70E094EE2B8B52DFD88006AF2">
+	  <AssessmentItemRefId>80E298F70E094EE2B8B52DFD88006AF4</AssessmentItemRefId>
+	  <TargetAssessmentItemRefId>90E298F70E094EE2B8B52DFD88006AF3</TargetAssessmentItemRefId>
+      <AssociationType>enemy</AssociationType>
+	
+	</Sif3AssessmentItemAssociation>
+  </xhtml:Example>
+</DataObject>

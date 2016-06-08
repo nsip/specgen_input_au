@@ -1,0 +1,351 @@
+<DataObject name="Sif3AssessmentSubTest">
+  <Key>@RefId</Key>
+  <EventsReported>false</EventsReported>
+  <Item>
+    <Element>Sif3AssessmentSubTest</Element>
+    <Description>
+      <p>
+        A psychological construct measured by the assessment. Operationally, a subtest is a class of scores on an
+        assessment. Some assessments may have only one subtest or type of score but most assessments measure more than
+        one psychological construct. The subtest can be based upon items in a section or items that are empirically related.
+        Subtests can also be composites of other subtests that are combined using a particular algorithm. Examples of
+        subtests of an assessment are math total, reading composite, total test, and English composition.
+      </p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Description>
+      <p>The GUID that uniquely identifies an instance of the object.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>SubTestVersion</Element>
+    <Characteristics>O</Characteristics>
+    <Type name="xs:token"></Type>
+	<Description>
+      <p>Identifies the version of the subtest that this object instance represents. Note that new versions of subtests must generate new RefIds and therefore a new subtest object instance. The format of the numbering system is determined by the assessment provider.</p>
+    </Description>
+  </Item>
+  
+  <Item>
+    <Element>SubTestPublishDate</Element>
+    <Characteristics>O</Characteristics>
+    <Type name="xs:dateTime"></Type>
+	<Description>
+      <p>Identifies the date that this version of the subtest was published (published means made available for use). If a SubTestVersion is provided, then this element should also be provided.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>SubTestIdentifiers</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>If the authoring system provides for a unique coding system for subtests then this element is used to store that information.</p>
+    </Description>
+    <List mode="List">
+    </List>
+  </Item>
+  <Item>
+    <Element>/SubTestIdentifier</Element>
+    <Characteristics>MR</Characteristics>
+    <Type name="xs:token"></Type>
+	<Description>
+      <p>An internal or natural identifier for the SubTest used by the assessment system</p>
+    </Description>
+  </Item>  
+  <Item>
+    <Attribute>SubTestIdentifierType</Attribute>
+    <Characteristics>O</Characteristics>
+	  <Values>
+	    <Value>
+		  <Code>client</Code>
+		  <Text>assigned by the client.</Text>
+		</Value>
+		<Value>
+		  <Code>publisher</Code>
+		  <Text>assigned by the owner</Text>
+		</Value>
+		<Value>
+		  <Code>internal</Code>
+		  <Text>assigned by the internal assessment service provider.</Text>
+		</Value>
+		<Value>
+		  <Code>other</Code>
+		  <Text>custom</Text>
+		</Value>
+	  </Values>
+    <Description>
+      <p>The type of identifier that is provided for this SubTest.</p>
+    </Description>
+  </Item> 
+  <Item>
+    <Element>SubTestName</Element>
+    <Description>
+      <p>Text name of the subtest. </p>
+    </Description>
+    <Characteristics>M</Characteristics>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  
+  <Item>
+    <Element>ScoreReporting</Element>
+    <Characteristics>O</Characteristics>
+    <Description>Information about the scores reported about the subtest.</Description>
+  </Item>
+  <Item>
+    <Attribute>ScoreMetric</Attribute>
+    <Characteristics>M</Characteristics>
+    <Type ref="CodeSets" name="AUCodeSetsAssessmentReportingMethodType"></Type>
+    <Description>
+      <p>The metric or scale used to report the scores.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>/Minimum</Element>
+    <Description>
+      <p>Lowest possible score value.</p>
+    </Description>
+    <Type name="xs:token"></Type>
+    <Characteristics>O</Characteristics>
+  </Item>
+  <Item>
+    <Element>/Maximum</Element>
+    <Description>
+      <p>Highest possible score value.</p>
+    </Description>
+    <Type name="xs:token"></Type>
+    <Characteristics>O</Characteristics>
+  </Item>
+  <Item>
+    <Element>/ScoreTableRefId</Element>
+    <Description>
+      <p>This identifies the specific score table used by this subtest to generate the score if applicable. Note that the score metric in this object should match the 'to score metric' in the score table. </p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Characteristics>O</Characteristics>
+  </Item>  
+  <Item>
+    <Element>SubTestSubjectAreas</Element>
+    <Description>
+      <p>Content area covered by the subtest.</p>
+    </Description>
+    <Characteristics>O</Characteristics>
+    <Type ref="DataModel" name="SubjectAreaList"></Type>
+  </Item>
+  <Item>
+    <Element>SubTestGradeLevels</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="DataModel" name="YearLevels"></Type>
+    <Description>
+      <p>Grade levels for which the subtest scores are valid.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>AssessmentSubTestRefIds</Element>
+    <Description>
+      <p>References (possibly recursive) to other SIF AssessmentSubTests. This enables subtests or scores to be composites of other scores creating a parent/child hierachy. If any references are given here, the score is a composite score (it is a parent). The most common composite score is for total test score. The list must be unique. It is also important to note that composite scores may not be simple sums of the subordinate sub test scores.</p>
+    </Description>
+    <Characteristics>O</Characteristics>
+    <List mode="List">
+    </List>
+  </Item>
+  <Item>
+    <Element>/AssessmentSubTestRefId</Element>
+    <Type ref="CommonTypes" relationship="child sub-tests defined by" count="*:1" name="IdRefType"></Type>
+    <Characteristics>MR</Characteristics>
+    <Description>
+      <p>A reference to a child AssessmentSubTest by RefId.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>ContainerOnly</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Indicator describing the purpose of an AssessmentSubTest as being that of a container for the child AssessmentSubTests. There will be no scores within this subtest.</p>
+    </Description>
+    <Type name='xs:boolean'/>
+  </Item>   
+  <Item>
+    <Element>SubTestTier</Element>
+    <Description>
+      <p>An integer that defines the level or tier of the score in a multi-level arrangement of composite scores. Zero indicates the highest or root level.</p>
+    </Description>
+    <Characteristics>O</Characteristics>
+    <Type name="xs:unsignedInt"></Type>
+  </Item>
+  <Item>
+    <Element>LearningStandardItemRefIds</Element>
+    <Description>
+      <p>References to LearningStandardItems that this subtest measures. The list must be unique. If the subtest measures a higher order standard, then only the parent standard should be identified in the list.</p>
+    </Description>
+    <Characteristics>O</Characteristics>
+    <List mode="List">
+    </List>
+  </Item>
+  <Item>
+    <Element>/LearningStandardItemRefId</Element>
+    <Type ref="CommonTypes" relationship="associated learning standards defined by" count="*:1" name="IdRefType"></Type>
+    <Characteristics>MR</Characteristics>
+    <Description>
+      <p>A reference to a LearningStandardItem by RefId.</p>
+    </Description>
+  </Item>
+
+  <Item>
+    <Element>Abbreviation</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>This is the short version of the name of, or code identifying, the assessment subtest. It is often used for quick reference and used in reports. </p>
+    </Description>
+    <Type name='xs:token'/>
+  </Item>
+
+  <Item>
+    <Element>Description</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The description element provides an opportunity to pass additional information about the assessment and also be used for describing elements in a test hierarchy.</p>
+    </Description>
+    <Type name='xs:string'/>
+  </Item>
+
+  <Item>
+    <Element>NumberOfItems</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>This element records the number of items included on the assessment.  This number may be different than the possible score.</p>
+    </Description>
+    <Type name='xs:unsignedInt'/>
+  </Item>
+
+  <Item>
+    <Element>AssessmentItems</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>This is a list of the items that are used to compute the sub-test score.</p>
+    </Description>
+    <List mode="List">
+    </List>
+  </Item>
+  <Item>
+    <Element>/AssessmentItem</Element>
+    <Characteristics>MR</Characteristics>
+	<Description>
+      <p></p>
+    </Description>
+  </Item>  
+  <Item>
+    <Element>//AssessmentItemRefId</Element>
+    <Characteristics>M</Characteristics>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+	<Description>
+      <p>This identifies the specific item that contributes to a sub-test score.</p>
+    </Description>
+  </Item>   
+  <Item>
+    <Element>//ItemWeightCorrect</Element>
+    <Characteristics>M</Characteristics>
+    <Type name="xs:decimal"></Type>
+	<Description>
+      <p>This provides a weighting factor for how the item score is used to compute a sub-test score when the item is correct or partially correct. Item weight of 1 indicates the full item score is used. A weight of .5 would indicate the item only contributes one half of the item score to the subtest. A weight of 0 indicates the item does not affect the sub test score.</p>
+    </Description>
+  </Item> 
+  <Item>
+    <Element>//ItemWeightIncorrect</Element>
+    <Characteristics>M</Characteristics>
+    <Type name="xs:decimal"></Type>
+	<Description>
+      <p>This provides a weighting factor for how the item score is used to compute a sub-test score when the item is attempted and incorrect. Item weight should be a negative value if the item subtracts from the score if missed.</p>
+    </Description>
+  </Item> 
+  <Item>
+    <Element>//ItemWeightNotAttempted</Element>
+    <Characteristics>M</Characteristics>
+    <Type name="xs:decimal"></Type>
+	<Description>
+      <p>This provides a weighting factor for how the item score is used to compute a sub-test score when the item has not been attempted by the student. Item weight should be a negative value if the item subtracts from the score if not attempted.</p>
+    </Description>
+  </Item>   
+
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="DataModel" name="SIF_Metadata"></Type>
+  </Item>
+
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="DataModel" name="SIF_ExtendedElements"></Type>
+  </Item>
+ 
+  <xhtml:Example name="sif3 AssessmentSubTest - Example" xmlns="">
+   
+  <Sif3AssessmentSubTest RefId="90E298F70E094EE2B8B52DFD88006AF2">
+	<SubTestVersion>V6.1054</SubTestVersion>
+    <SubTestPublishDate>2011-12-31T15:23:01</SubTestPublishDate>
+	
+	<SubTestIdentifiers>
+		<SubTestIdentifier SubTestIdentifierType="client">TX48A</SubTestIdentifier>
+		<SubTestIdentifier SubTestIdentifierType="publisher">85976</SubTestIdentifier>
+	</SubTestIdentifiers>
+	
+	<SubTestName>Reading Comprehension Subtest</SubTestName>
+	
+	<ScoreReporting ScoreMetric="3479">
+	  <Minimum>0</Minimum>
+	  <Maximum>600</Maximum>
+	  <ScoreTableRefId>3E4BEBCA14E54A118051DFA249A65999</ScoreTableRefId>
+	</ScoreReporting>
+
+	<SubTestSubjectAreas>
+		<SubjectArea>
+		  <Code>02</Code>
+		  <OtherCodeList>
+			<OtherCode Codeset="Text">Mathmatics</OtherCode>
+		  </OtherCodeList>
+		</SubjectArea>
+		<SubjectArea>
+		  <Code>05</Code>
+		  <OtherCodeList>
+			<OtherCode Codeset="Text">Life and Physical Sciences</OtherCode>
+		  </OtherCodeList>
+		</SubjectArea>
+    </SubTestSubjectAreas>
+
+	
+	<SubTestGradeLevels>
+		<YearLevel>
+		  <Code>3</Code>
+		</YearLevel>
+	</SubTestGradeLevels>
+	<SubTestTier>0</SubTestTier>
+    <LearningStandardItemRefIds>
+		<LearningStandardItemRefId>3E4BEBCA14E54A118051DFA239A65990</LearningStandardItemRefId>
+	</LearningStandardItemRefIds>
+	<Abbreviation>RE065583</Abbreviation>
+	<Description>Read emergent-reader texts with purpose and understanding.</Description>
+	<NumberOfItems>6</NumberOfItems>
+	<AssessmentItems>
+		<AssessmentItem>
+		  <AssessmentItemRefId>3E4BEBCA14E54A111561DFA239A65990</AssessmentItemRefId>
+		  <ItemWeightCorrect>1</ItemWeightCorrect>
+		  <ItemWeightIncorrect>0</ItemWeightIncorrect>
+		  <ItemWeightNotAttempted>0</ItemWeightNotAttempted>
+		</AssessmentItem>
+		<AssessmentItem>
+		  <AssessmentItemRefId>4F4BEBCA14E54A118051DFA239A65990</AssessmentItemRefId>
+		  <ItemWeightCorrect>1</ItemWeightCorrect>
+		  <ItemWeightIncorrect>0</ItemWeightIncorrect>
+		  <ItemWeightNotAttempted>0</ItemWeightNotAttempted>
+		</AssessmentItem>
+	</AssessmentItems>
+
+  
+ </Sif3AssessmentSubTest>
+
+  
+  </xhtml:Example>
+</DataObject>

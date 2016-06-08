@@ -1,0 +1,1877 @@
+<Appendix name="External Code Sets" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.w3.org/1999/xhtml" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Intro>
+		<p>
+      All code sets defined by external bodies and included within the SIF Implementation Infrastructure Specification are shown here for reference.  The left column in each table contains the individual code values that are used
+      in SIF elements and attributes that reference these code sets.  These sets of code values are closed and normative for a given version of this specification.  Including
+      codes not provided here in corresponding SIF elements and attributes can lead to XML validation errors in installations where the zone integration server or any agent
+      is validating XML messages; the SIF data model allows for locally-defined codes, where deemed appropriate, in the <a href="DataModel.html#OtherCodeList">
+				<code>OtherCodeList</code>
+			</a>
+      element.  The right column of each table may provide a textual equivalent or description of the corresponding code, and is provided for informational purposes only.
+      The referenced sources for these code sets serve as the authorities for all descriptions and semantics, and for the definition and maintenance of the code set values themselves.
+      In each release of this specification the SIF Association endeavors to synchronize referenced code sets with updates from external sources.
+    </p>
+	</Intro>
+	<CodeSets>
+		<!-- include external code set xml here -->
+		<Grouping code="ISO" name="International Standards Organization (ISO)">
+			<CodeSet>
+				<Intro>
+					<p>
+        Note that the maintenance agency for these codes is <a href="References.html#ISO3166MA">[ISO 3166/MA]</a>.
+      </p>
+				</Intro>
+				<ID ref="ISO3166-3">3166-3 Code for Formerly Used Names of Countries</ID>
+				<Values>
+					<Value>
+						<Code>AIDJ</Code>
+						<Text>French Territory of the Afars and the Issas</Text>
+					</Value>
+					<Value>
+						<Code>BQAQ</Code>
+						<Text>British Antarctic Territory</Text>
+					</Value>
+					<Value>
+						<Code>BUMM</Code>
+						<Text>Burma</Text>
+					</Value>
+					<Value>
+						<Code>CSHH</Code>
+						<Text>Czechoslovakia</Text>
+					</Value>
+					<Value>
+						<Code>CTKI</Code>
+						<Text>Canton and Enderbury Islands</Text>
+					</Value>
+					<Value>
+						<Code>DDDE</Code>
+						<Text>East Germany</Text>
+					</Value>
+					<Value>
+						<Code>DYBJ</Code>
+						<Text>Dahomey</Text>
+					</Value>
+					<Value>
+						<Code>FQHH</Code>
+						<Text>French Southern and Antarctic Territories</Text>
+					</Value>
+					<Value>
+						<Code>FXFR</Code>
+						<Text>Metropolitan France</Text>
+					</Value>
+					<Value>
+						<Code>GEHH</Code>
+						<Text>Gilbert and Ellice Islands</Text>
+					</Value>
+					<Value>
+						<Code>HVBF</Code>
+						<Text>Upper Volta (Haute-Volta)</Text>
+					</Value>
+					<Value>
+						<Code>JTUM</Code>
+						<Text>Johnston Island</Text>
+					</Value>
+					<Value>
+						<Code>MIUM</Code>
+						<Text>Midway Atoll</Text>
+					</Value>
+					<Value>
+						<Code>NHVU</Code>
+						<Text>New Hebrides</Text>
+					</Value>
+					<Value>
+						<Code>NQAQ</Code>
+						<Text>Queen Maud Land</Text>
+					</Value>
+					<Value>
+						<Code>NTHH</Code>
+						<Text>Neutral Zone</Text>
+					</Value>
+					<Value>
+						<Code>PCHH</Code>
+						<Text>Trust Territory of the Pacific Islands</Text>
+					</Value>
+					<Value>
+						<Code>PUUM</Code>
+						<Text>U.S. Miscellaneous Pacific Islands</Text>
+					</Value>
+					<Value>
+						<Code>PZPA</Code>
+						<Text>Panama Canal Zone</Text>
+					</Value>
+					<Value>
+						<Code>RHZW</Code>
+						<Text>Rhodesia</Text>
+					</Value>
+					<Value>
+						<Code>SKIN</Code>
+						<Text>Sikkim</Text>
+					</Value>
+					<Value>
+						<Code>SUHH</Code>
+						<Text>Soviet Union</Text>
+					</Value>
+					<Value>
+						<Code>TPTL</Code>
+						<Text>East Timor</Text>
+					</Value>
+					<Value>
+						<Code>VDVN</Code>
+						<Text>Democratic Republic of Vietnam</Text>
+					</Value>
+					<Value>
+						<Code>WKUM</Code>
+						<Text>Wake Island</Text>
+					</Value>
+					<Value>
+						<Code>YDYE</Code>
+						<Text>South Yemen</Text>
+					</Value>
+					<Value>
+						<Code>YUCS</Code>
+						<Text>Yugoslavia</Text>
+					</Value>
+					<Value>
+						<Code>ZRCD</Code>
+						<Text>Zaire</Text>
+					</Value>
+				</Values>
+			</CodeSet>
+			<CodeSet>
+				<Intro>
+					<p>
+        Note that the maintenance agency for these codes is <a href="References.html#ISO3166MA">[ISO 3166/MA]</a>.
+      </p>
+				</Intro>
+				<ID ref="ISO3166-1">3166-1 English Country Names and Code Elements</ID>
+				<Values>
+					<Value>
+						<Code>AF</Code>
+						<Text>AFGHANISTAN</Text>
+					</Value>
+					<Value>
+						<Code>AX</Code>
+						<Text>&#197;LAND ISLANDS</Text>
+					</Value>
+					<Value>
+						<Code>AL</Code>
+						<Text>ALBANIA</Text>
+					</Value>
+					<Value>
+						<Code>DZ</Code>
+						<Text>ALGERIA</Text>
+					</Value>
+					<Value>
+						<Code>AS</Code>
+						<Text>AMERICAN SAMOA</Text>
+					</Value>
+					<Value>
+						<Code>AD</Code>
+						<Text>ANDORRA</Text>
+					</Value>
+					<Value>
+						<Code>AO</Code>
+						<Text>ANGOLA</Text>
+					</Value>
+					<Value>
+						<Code>AI</Code>
+						<Text>ANGUILLA</Text>
+					</Value>
+					<Value>
+						<Code>AQ</Code>
+						<Text>ANTARCTICA</Text>
+					</Value>
+					<Value>
+						<Code>AG</Code>
+						<Text>ANTIGUA AND BARBUDA</Text>
+					</Value>
+					<Value>
+						<Code>AR</Code>
+						<Text>ARGENTINA</Text>
+					</Value>
+					<Value>
+						<Code>AM</Code>
+						<Text>ARMENIA</Text>
+					</Value>
+					<Value>
+						<Code>AW</Code>
+						<Text>ARUBA</Text>
+					</Value>
+					<Value>
+						<Code>AU</Code>
+						<Text>AUSTRALIA</Text>
+					</Value>
+					<Value>
+						<Code>AT</Code>
+						<Text>AUSTRIA</Text>
+					</Value>
+					<Value>
+						<Code>AZ</Code>
+						<Text>AZERBAIJAN</Text>
+					</Value>
+					<Value>
+						<Code>BS</Code>
+						<Text>BAHAMAS</Text>
+					</Value>
+					<Value>
+						<Code>BH</Code>
+						<Text>BAHRAIN</Text>
+					</Value>
+					<Value>
+						<Code>BD</Code>
+						<Text>BANGLADESH</Text>
+					</Value>
+					<Value>
+						<Code>BB</Code>
+						<Text>BARBADOS</Text>
+					</Value>
+					<Value>
+						<Code>BY</Code>
+						<Text>BELARUS</Text>
+					</Value>
+					<Value>
+						<Code>BE</Code>
+						<Text>BELGIUM</Text>
+					</Value>
+					<Value>
+						<Code>BZ</Code>
+						<Text>BELIZE</Text>
+					</Value>
+					<Value>
+						<Code>BJ</Code>
+						<Text>BENIN</Text>
+					</Value>
+					<Value>
+						<Code>BM</Code>
+						<Text>BERMUDA</Text>
+					</Value>
+					<Value>
+						<Code>BT</Code>
+						<Text>BHUTAN</Text>
+					</Value>
+					<Value>
+						<Code>BO</Code>
+						<Text>BOLIVIA</Text>
+					</Value>
+					<Value>
+						<Code>BA</Code>
+						<Text>BOSNIA AND HERZEGOVINA</Text>
+					</Value>
+					<Value>
+						<Code>BW</Code>
+						<Text>BOTSWANA</Text>
+					</Value>
+					<Value>
+						<Code>BV</Code>
+						<Text>BOUVET ISLAND</Text>
+					</Value>
+					<Value>
+						<Code>BR</Code>
+						<Text>BRAZIL</Text>
+					</Value>
+					<Value>
+						<Code>IO</Code>
+						<Text>BRITISH INDIAN OCEAN TERRITORY</Text>
+					</Value>
+					<Value>
+						<Code>BN</Code>
+						<Text>BRUNEI DARUSSALAM</Text>
+					</Value>
+					<Value>
+						<Code>BG</Code>
+						<Text>BULGARIA</Text>
+					</Value>
+					<Value>
+						<Code>BF</Code>
+						<Text>BURKINA FASO</Text>
+					</Value>
+					<Value>
+						<Code>BI</Code>
+						<Text>BURUNDI</Text>
+					</Value>
+					<Value>
+						<Code>KH</Code>
+						<Text>CAMBODIA</Text>
+					</Value>
+					<Value>
+						<Code>CM</Code>
+						<Text>CAMEROON</Text>
+					</Value>
+					<Value>
+						<Code>CA</Code>
+						<Text>CANADA</Text>
+					</Value>
+					<Value>
+						<Code>CV</Code>
+						<Text>CAPE VERDE</Text>
+					</Value>
+					<Value>
+						<Code>KY</Code>
+						<Text>CAYMAN ISLANDS</Text>
+					</Value>
+					<Value>
+						<Code>CF</Code>
+						<Text>CENTRAL AFRICAN REPUBLIC</Text>
+					</Value>
+					<Value>
+						<Code>TD</Code>
+						<Text>CHAD</Text>
+					</Value>
+					<Value>
+						<Code>CL</Code>
+						<Text>CHILE</Text>
+					</Value>
+					<Value>
+						<Code>CN</Code>
+						<Text>CHINA</Text>
+					</Value>
+					<Value>
+						<Code>CX</Code>
+						<Text>CHRISTMAS ISLAND</Text>
+					</Value>
+					<Value>
+						<Code>CC</Code>
+						<Text>COCOS (KEELING) ISLANDS</Text>
+					</Value>
+					<Value>
+						<Code>CO</Code>
+						<Text>COLOMBIA</Text>
+					</Value>
+					<Value>
+						<Code>KM</Code>
+						<Text>COMOROS</Text>
+					</Value>
+					<Value>
+						<Code>CG</Code>
+						<Text>CONGO</Text>
+					</Value>
+					<Value>
+						<Code>CD</Code>
+						<Text>CONGO, THE DEMOCRATIC REPUBLIC OF THE</Text>
+					</Value>
+					<Value>
+						<Code>CK</Code>
+						<Text>COOK ISLANDS</Text>
+					</Value>
+					<Value>
+						<Code>CR</Code>
+						<Text>COSTA RICA</Text>
+					</Value>
+					<Value>
+						<Code>CI</Code>
+						<Text>C&#xD4;TE D'IVOIRE</Text>
+					</Value>
+					<Value>
+						<Code>HR</Code>
+						<Text>CROATIA</Text>
+					</Value>
+					<Value>
+						<Code>CU</Code>
+						<Text>CUBA</Text>
+					</Value>
+					<Value>
+						<Code>CY</Code>
+						<Text>CYPRUS</Text>
+					</Value>
+					<Value>
+						<Code>CZ</Code>
+						<Text>CZECH REPUBLIC</Text>
+					</Value>
+					<Value>
+						<Code>DK</Code>
+						<Text>DENMARK</Text>
+					</Value>
+					<Value>
+						<Code>DJ</Code>
+						<Text>DJIBOUTI</Text>
+					</Value>
+					<Value>
+						<Code>DM</Code>
+						<Text>DOMINICA</Text>
+					</Value>
+					<Value>
+						<Code>DO</Code>
+						<Text>DOMINICAN REPUBLIC</Text>
+					</Value>
+					<Value>
+						<Code>EC</Code>
+						<Text>ECUADOR</Text>
+					</Value>
+					<Value>
+						<Code>EG</Code>
+						<Text>EGYPT</Text>
+					</Value>
+					<Value>
+						<Code>SV</Code>
+						<Text>EL SALVADOR</Text>
+					</Value>
+					<Value>
+						<Code>GQ</Code>
+						<Text>EQUATORIAL GUINEA</Text>
+					</Value>
+					<Value>
+						<Code>ER</Code>
+						<Text>ERITREA</Text>
+					</Value>
+					<Value>
+						<Code>EE</Code>
+						<Text>ESTONIA</Text>
+					</Value>
+					<Value>
+						<Code>ET</Code>
+						<Text>ETHIOPIA</Text>
+					</Value>
+					<Value>
+						<Code>FK</Code>
+						<Text>FALKLAND ISLANDS (MALVINAS)</Text>
+					</Value>
+					<Value>
+						<Code>FO</Code>
+						<Text>FAROE ISLANDS</Text>
+					</Value>
+					<Value>
+						<Code>FJ</Code>
+						<Text>FIJI</Text>
+					</Value>
+					<Value>
+						<Code>FI</Code>
+						<Text>FINLAND</Text>
+					</Value>
+					<Value>
+						<Code>FR</Code>
+						<Text>FRANCE</Text>
+					</Value>
+					<Value>
+						<Code>GF</Code>
+						<Text>FRENCH GUIANA</Text>
+					</Value>
+					<Value>
+						<Code>PF</Code>
+						<Text>FRENCH POLYNESIA</Text>
+					</Value>
+					<Value>
+						<Code>TF</Code>
+						<Text>FRENCH SOUTHERN TERRITORIES</Text>
+					</Value>
+					<Value>
+						<Code>GA</Code>
+						<Text>GABON</Text>
+					</Value>
+					<Value>
+						<Code>GM</Code>
+						<Text>GAMBIA</Text>
+					</Value>
+					<Value>
+						<Code>GE</Code>
+						<Text>GEORGIA</Text>
+					</Value>
+					<Value>
+						<Code>DE</Code>
+						<Text>GERMANY</Text>
+					</Value>
+					<Value>
+						<Code>GH</Code>
+						<Text>GHANA</Text>
+					</Value>
+					<Value>
+						<Code>GI</Code>
+						<Text>GIBRALTAR</Text>
+					</Value>
+					<Value>
+						<Code>GR</Code>
+						<Text>GREECE</Text>
+					</Value>
+					<Value>
+						<Code>GL</Code>
+						<Text>GREENLAND</Text>
+					</Value>
+					<Value>
+						<Code>GD</Code>
+						<Text>GRENADA</Text>
+					</Value>
+					<Value>
+						<Code>GP</Code>
+						<Text>GUADELOUPE</Text>
+					</Value>
+					<Value>
+						<Code>GU</Code>
+						<Text>GUAM</Text>
+					</Value>
+					<Value>
+						<Code>GT</Code>
+						<Text>GUATEMALA</Text>
+					</Value>
+					<Value>
+						<Code>GG</Code>
+						<Text>GUERNSEY</Text>
+					</Value>
+					<Value>
+						<Code>GN</Code>
+						<Text>GUINEA</Text>
+					</Value>
+					<Value>
+						<Code>GW</Code>
+						<Text>GUINEA-BISSAU</Text>
+					</Value>
+					<Value>
+						<Code>GY</Code>
+						<Text>GUYANA</Text>
+					</Value>
+					<Value>
+						<Code>HT</Code>
+						<Text>HAITI</Text>
+					</Value>
+					<Value>
+						<Code>HM</Code>
+						<Text>HEARD ISLAND AND MCDONALD ISLANDS</Text>
+					</Value>
+					<Value>
+						<Code>VA</Code>
+						<Text>HOLY SEE (VATICAN CITY STATE)</Text>
+					</Value>
+					<Value>
+						<Code>HN</Code>
+						<Text>HONDURAS</Text>
+					</Value>
+					<Value>
+						<Code>HK</Code>
+						<Text>HONG KONG</Text>
+					</Value>
+					<Value>
+						<Code>HU</Code>
+						<Text>HUNGARY</Text>
+					</Value>
+					<Value>
+						<Code>IS</Code>
+						<Text>ICELAND</Text>
+					</Value>
+					<Value>
+						<Code>IN</Code>
+						<Text>INDIA</Text>
+					</Value>
+					<Value>
+						<Code>ID</Code>
+						<Text>INDONESIA</Text>
+					</Value>
+					<Value>
+						<Code>IR</Code>
+						<Text>IRAN, ISLAMIC REPUBLIC OF</Text>
+					</Value>
+					<Value>
+						<Code>IQ</Code>
+						<Text>IRAQ</Text>
+					</Value>
+					<Value>
+						<Code>IE</Code>
+						<Text>IRELAND</Text>
+					</Value>
+					<Value>
+						<Code>IM</Code>
+						<Text>ISLE OF MAN</Text>
+					</Value>
+					<Value>
+						<Code>IL</Code>
+						<Text>ISRAEL</Text>
+					</Value>
+					<Value>
+						<Code>IT</Code>
+						<Text>ITALY</Text>
+					</Value>
+					<Value>
+						<Code>JM</Code>
+						<Text>JAMAICA</Text>
+					</Value>
+					<Value>
+						<Code>JP</Code>
+						<Text>JAPAN</Text>
+					</Value>
+					<Value>
+						<Code>JE</Code>
+						<Text>JERSEY</Text>
+					</Value>
+					<Value>
+						<Code>JO</Code>
+						<Text>JORDAN</Text>
+					</Value>
+					<Value>
+						<Code>KZ</Code>
+						<Text>KAZAKHSTAN</Text>
+					</Value>
+					<Value>
+						<Code>KE</Code>
+						<Text>KENYA</Text>
+					</Value>
+					<Value>
+						<Code>KI</Code>
+						<Text>KIRIBATI</Text>
+					</Value>
+					<Value>
+						<Code>KP</Code>
+						<Text>KOREA, DEMOCRATIC PEOPLE'S REPUBLIC OF</Text>
+					</Value>
+					<Value>
+						<Code>KR</Code>
+						<Text>KOREA, REPUBLIC OF</Text>
+					</Value>
+					<Value>
+						<Code>KW</Code>
+						<Text>KUWAIT</Text>
+					</Value>
+					<Value>
+						<Code>KG</Code>
+						<Text>KYRGYZSTAN</Text>
+					</Value>
+					<Value>
+						<Code>LA</Code>
+						<Text>LAO PEOPLE'S DEMOCRATIC REPUBLIC</Text>
+					</Value>
+					<Value>
+						<Code>LV</Code>
+						<Text>LATVIA</Text>
+					</Value>
+					<Value>
+						<Code>LB</Code>
+						<Text>LEBANON</Text>
+					</Value>
+					<Value>
+						<Code>LS</Code>
+						<Text>LESOTHO</Text>
+					</Value>
+					<Value>
+						<Code>LR</Code>
+						<Text>LIBERIA</Text>
+					</Value>
+					<Value>
+						<Code>LY</Code>
+						<Text>LIBYAN ARAB JAMAHIRIYA</Text>
+					</Value>
+					<Value>
+						<Code>LI</Code>
+						<Text>LIECHTENSTEIN</Text>
+					</Value>
+					<Value>
+						<Code>LT</Code>
+						<Text>LITHUANIA</Text>
+					</Value>
+					<Value>
+						<Code>LU</Code>
+						<Text>LUXEMBOURG</Text>
+					</Value>
+					<Value>
+						<Code>MO</Code>
+						<Text>MACAO</Text>
+					</Value>
+					<Value>
+						<Code>MK</Code>
+						<Text>MACEDONIA, THE FORMER YUGOSLAV REPUBLIC OF</Text>
+					</Value>
+					<Value>
+						<Code>MG</Code>
+						<Text>MADAGASCAR</Text>
+					</Value>
+					<Value>
+						<Code>MW</Code>
+						<Text>MALAWI</Text>
+					</Value>
+					<Value>
+						<Code>MY</Code>
+						<Text>MALAYSIA</Text>
+					</Value>
+					<Value>
+						<Code>MV</Code>
+						<Text>MALDIVES</Text>
+					</Value>
+					<Value>
+						<Code>ML</Code>
+						<Text>MALI</Text>
+					</Value>
+					<Value>
+						<Code>MT</Code>
+						<Text>MALTA</Text>
+					</Value>
+					<Value>
+						<Code>MH</Code>
+						<Text>MARSHALL ISLANDS</Text>
+					</Value>
+					<Value>
+						<Code>MQ</Code>
+						<Text>MARTINIQUE</Text>
+					</Value>
+					<Value>
+						<Code>MR</Code>
+						<Text>MAURITANIA</Text>
+					</Value>
+					<Value>
+						<Code>MU</Code>
+						<Text>MAURITIUS</Text>
+					</Value>
+					<Value>
+						<Code>YT</Code>
+						<Text>MAYOTTE</Text>
+					</Value>
+					<Value>
+						<Code>MX</Code>
+						<Text>MEXICO</Text>
+					</Value>
+					<Value>
+						<Code>FM</Code>
+						<Text>MICRONESIA, FEDERATED STATES OF</Text>
+					</Value>
+					<Value>
+						<Code>MD</Code>
+						<Text>MOLDOVA, REPUBLIC OF</Text>
+					</Value>
+					<Value>
+						<Code>MC</Code>
+						<Text>MONACO</Text>
+					</Value>
+					<Value>
+						<Code>MN</Code>
+						<Text>MONGOLIA</Text>
+					</Value>
+					<Value>
+						<Code>MS</Code>
+						<Text>MONTSERRAT</Text>
+					</Value>
+					<Value>
+						<Code>MA</Code>
+						<Text>MOROCCO</Text>
+					</Value>
+					<Value>
+						<Code>MZ</Code>
+						<Text>MOZAMBIQUE</Text>
+					</Value>
+					<Value>
+						<Code>MM</Code>
+						<Text>MYANMAR</Text>
+					</Value>
+					<Value>
+						<Code>NA</Code>
+						<Text>NAMIBIA</Text>
+					</Value>
+					<Value>
+						<Code>NR</Code>
+						<Text>NAURU</Text>
+					</Value>
+					<Value>
+						<Code>NP</Code>
+						<Text>NEPAL</Text>
+					</Value>
+					<Value>
+						<Code>NL</Code>
+						<Text>NETHERLANDS</Text>
+					</Value>
+					<Value>
+						<Code>AN</Code>
+						<Text>NETHERLANDS ANTILLES</Text>
+					</Value>
+					<Value>
+						<Code>NC</Code>
+						<Text>NEW CALEDONIA</Text>
+					</Value>
+					<Value>
+						<Code>NZ</Code>
+						<Text>NEW ZEALAND</Text>
+					</Value>
+					<Value>
+						<Code>NI</Code>
+						<Text>NICARAGUA</Text>
+					</Value>
+					<Value>
+						<Code>NE</Code>
+						<Text>NIGER</Text>
+					</Value>
+					<Value>
+						<Code>NG</Code>
+						<Text>NIGERIA</Text>
+					</Value>
+					<Value>
+						<Code>NU</Code>
+						<Text>NIUE</Text>
+					</Value>
+					<Value>
+						<Code>NF</Code>
+						<Text>NORFOLK ISLAND</Text>
+					</Value>
+					<Value>
+						<Code>MP</Code>
+						<Text>NORTHERN MARIANA ISLANDS</Text>
+					</Value>
+					<Value>
+						<Code>NO</Code>
+						<Text>NORWAY</Text>
+					</Value>
+					<Value>
+						<Code>OM</Code>
+						<Text>OMAN</Text>
+					</Value>
+					<Value>
+						<Code>PK</Code>
+						<Text>PAKISTAN</Text>
+					</Value>
+					<Value>
+						<Code>PW</Code>
+						<Text>PALAU</Text>
+					</Value>
+					<Value>
+						<Code>PS</Code>
+						<Text>PALESTINIAN TERRITORY, OCCUPIED</Text>
+					</Value>
+					<Value>
+						<Code>PA</Code>
+						<Text>PANAMA</Text>
+					</Value>
+					<Value>
+						<Code>PG</Code>
+						<Text>PAPUA NEW GUINEA</Text>
+					</Value>
+					<Value>
+						<Code>PY</Code>
+						<Text>PARAGUAY</Text>
+					</Value>
+					<Value>
+						<Code>PE</Code>
+						<Text>PERU</Text>
+					</Value>
+					<Value>
+						<Code>PH</Code>
+						<Text>PHILIPPINES</Text>
+					</Value>
+					<Value>
+						<Code>PN</Code>
+						<Text>PITCAIRN</Text>
+					</Value>
+					<Value>
+						<Code>PL</Code>
+						<Text>POLAND</Text>
+					</Value>
+					<Value>
+						<Code>PT</Code>
+						<Text>PORTUGAL</Text>
+					</Value>
+					<Value>
+						<Code>PR</Code>
+						<Text>PUERTO RICO</Text>
+					</Value>
+					<Value>
+						<Code>QA</Code>
+						<Text>QATAR</Text>
+					</Value>
+					<Value>
+						<Code>RE</Code>
+						<Text>R&#xC9;UNION</Text>
+					</Value>
+					<Value>
+						<Code>RO</Code>
+						<Text>ROMANIA</Text>
+					</Value>
+					<Value>
+						<Code>RU</Code>
+						<Text>RUSSIAN FEDERATION</Text>
+					</Value>
+					<Value>
+						<Code>RW</Code>
+						<Text>RWANDA</Text>
+					</Value>
+					<Value>
+						<Code>SH</Code>
+						<Text>SAINT HELENA</Text>
+					</Value>
+					<Value>
+						<Code>KN</Code>
+						<Text>SAINT KITTS AND NEVIS</Text>
+					</Value>
+					<Value>
+						<Code>LC</Code>
+						<Text>SAINT LUCIA</Text>
+					</Value>
+					<Value>
+						<Code>PM</Code>
+						<Text>SAINT PIERRE AND MIQUELON</Text>
+					</Value>
+					<Value>
+						<Code>VC</Code>
+						<Text>SAINT VINCENT AND THE GRENADINES</Text>
+					</Value>
+					<Value>
+						<Code>WS</Code>
+						<Text>SAMOA</Text>
+					</Value>
+					<Value>
+						<Code>SM</Code>
+						<Text>SAN MARINO</Text>
+					</Value>
+					<Value>
+						<Code>ST</Code>
+						<Text>SAO TOME AND PRINCIPE</Text>
+					</Value>
+					<Value>
+						<Code>SA</Code>
+						<Text>SAUDI ARABIA</Text>
+					</Value>
+					<Value>
+						<Code>SN</Code>
+						<Text>SENEGAL</Text>
+					</Value>
+					<Value>
+						<Code>CS</Code>
+						<Text>SERBIA AND MONTENEGRO</Text>
+					</Value>
+					<Value>
+						<Code>SC</Code>
+						<Text>SEYCHELLES</Text>
+					</Value>
+					<Value>
+						<Code>SL</Code>
+						<Text>SIERRA LEONE</Text>
+					</Value>
+					<Value>
+						<Code>SG</Code>
+						<Text>SINGAPORE</Text>
+					</Value>
+					<Value>
+						<Code>SK</Code>
+						<Text>SLOVAKIA</Text>
+					</Value>
+					<Value>
+						<Code>SI</Code>
+						<Text>SLOVENIA</Text>
+					</Value>
+					<Value>
+						<Code>SB</Code>
+						<Text>SOLOMON ISLANDS</Text>
+					</Value>
+					<Value>
+						<Code>SO</Code>
+						<Text>SOMALIA</Text>
+					</Value>
+					<Value>
+						<Code>ZA</Code>
+						<Text>SOUTH AFRICA</Text>
+					</Value>
+					<Value>
+						<Code>GS</Code>
+						<Text>SOUTH GEORGIA AND THE SOUTH SANDWICH ISLANDS</Text>
+					</Value>
+					<Value>
+						<Code>ES</Code>
+						<Text>SPAIN</Text>
+					</Value>
+					<Value>
+						<Code>LK</Code>
+						<Text>SRI LANKA</Text>
+					</Value>
+					<Value>
+						<Code>SD</Code>
+						<Text>SUDAN</Text>
+					</Value>
+					<Value>
+						<Code>SR</Code>
+						<Text>SURINAME</Text>
+					</Value>
+					<Value>
+						<Code>SJ</Code>
+						<Text>SVALBARD AND JAN MAYEN</Text>
+					</Value>
+					<Value>
+						<Code>SZ</Code>
+						<Text>SWAZILAND</Text>
+					</Value>
+					<Value>
+						<Code>SE</Code>
+						<Text>SWEDEN</Text>
+					</Value>
+					<Value>
+						<Code>CH</Code>
+						<Text>SWITZERLAND</Text>
+					</Value>
+					<Value>
+						<Code>SY</Code>
+						<Text>SYRIAN ARAB REPUBLIC</Text>
+					</Value>
+					<Value>
+						<Code>TW</Code>
+						<Text>TAIWAN, PROVINCE OF CHINA</Text>
+					</Value>
+					<Value>
+						<Code>TJ</Code>
+						<Text>TAJIKISTAN</Text>
+					</Value>
+					<Value>
+						<Code>TZ</Code>
+						<Text>TANZANIA, UNITED REPUBLIC OF</Text>
+					</Value>
+					<Value>
+						<Code>TH</Code>
+						<Text>THAILAND</Text>
+					</Value>
+					<Value>
+						<Code>TL</Code>
+						<Text>TIMOR-LESTE</Text>
+					</Value>
+					<Value>
+						<Code>TG</Code>
+						<Text>TOGO</Text>
+					</Value>
+					<Value>
+						<Code>TK</Code>
+						<Text>TOKELAU</Text>
+					</Value>
+					<Value>
+						<Code>TO</Code>
+						<Text>TONGA</Text>
+					</Value>
+					<Value>
+						<Code>TT</Code>
+						<Text>TRINIDAD AND TOBAGO</Text>
+					</Value>
+					<Value>
+						<Code>TN</Code>
+						<Text>TUNISIA</Text>
+					</Value>
+					<Value>
+						<Code>TR</Code>
+						<Text>TURKEY</Text>
+					</Value>
+					<Value>
+						<Code>TM</Code>
+						<Text>TURKMENISTAN</Text>
+					</Value>
+					<Value>
+						<Code>TC</Code>
+						<Text>TURKS AND CAICOS ISLANDS</Text>
+					</Value>
+					<Value>
+						<Code>TV</Code>
+						<Text>TUVALU</Text>
+					</Value>
+					<Value>
+						<Code>UG</Code>
+						<Text>UGANDA</Text>
+					</Value>
+					<Value>
+						<Code>UA</Code>
+						<Text>UKRAINE</Text>
+					</Value>
+					<Value>
+						<Code>AE</Code>
+						<Text>UNITED ARAB EMIRATES</Text>
+					</Value>
+					<Value>
+						<Code>GB</Code>
+						<Text>UNITED KINGDOM</Text>
+					</Value>
+					<Value>
+						<Code>US</Code>
+						<Text>UNITED STATES</Text>
+					</Value>
+					<Value>
+						<Code>UM</Code>
+						<Text>UNITED STATES MINOR OUTLYING ISLANDS</Text>
+					</Value>
+					<Value>
+						<Code>UY</Code>
+						<Text>URUGUAY</Text>
+					</Value>
+					<Value>
+						<Code>UZ</Code>
+						<Text>UZBEKISTAN</Text>
+					</Value>
+					<Value>
+						<Code>VU</Code>
+						<Text>VANUATU</Text>
+					</Value>
+					<Value>
+						<Code>VA</Code>
+						<Text>Vatican City State see HOLY SEE</Text>
+					</Value>
+					<Value>
+						<Code>VE</Code>
+						<Text>VENEZUELA</Text>
+					</Value>
+					<Value>
+						<Code>VN</Code>
+						<Text>VIET NAM</Text>
+					</Value>
+					<Value>
+						<Code>VG</Code>
+						<Text>VIRGIN ISLANDS, BRITISH</Text>
+					</Value>
+					<Value>
+						<Code>VI</Code>
+						<Text>VIRGIN ISLANDS, U.S.</Text>
+					</Value>
+					<Value>
+						<Code>WF</Code>
+						<Text>WALLIS AND FUTUNA</Text>
+					</Value>
+					<Value>
+						<Code>EH</Code>
+						<Text>WESTERN SAHARA</Text>
+					</Value>
+					<Value>
+						<Code>YE</Code>
+						<Text>YEMEN</Text>
+					</Value>
+					<Value>
+						<Code>CD</Code>
+						<Text>Zaire see CONGO, THE DEMOCRATIC REPUBLIC OF THE</Text>
+					</Value>
+					<Value>
+						<Code>ZM</Code>
+						<Text>ZAMBIA</Text>
+					</Value>
+					<Value>
+						<Code>ZW</Code>
+						<Text>ZIMBABWE</Text>
+					</Value>
+				</Values>
+			</CodeSet>
+			<CodeSet>
+				<ID>4217 Currency names and code elements</ID>
+				<Values>
+					<Value>
+						<Code>AED</Code>
+						<Text>UAE Dirham</Text>
+					</Value>
+					<Value>
+						<Code>AFN</Code>
+						<Text>Afghani</Text>
+					</Value>
+					<Value>
+						<Code>ALL</Code>
+						<Text>Lek</Text>
+					</Value>
+					<Value>
+						<Code>AMD</Code>
+						<Text>Armenian Dram</Text>
+					</Value>
+					<Value>
+						<Code>ANG</Code>
+						<Text>Netherlands Antillian Guikder</Text>
+					</Value>
+					<Value>
+						<Code>AOA</Code>
+						<Text>Kwanza</Text>
+					</Value>
+					<Value>
+						<Code>ARS</Code>
+						<Text>Argentine Peso</Text>
+					</Value>
+					<Value>
+						<Code>AUD</Code>
+						<Text>Australian Dollar</Text>
+					</Value>
+					<Value>
+						<Code>AWG</Code>
+						<Text>Aruban Guilder</Text>
+					</Value>
+					<Value>
+						<Code>AZN</Code>
+						<Text>Azerbaijanian Manat</Text>
+					</Value>
+					<Value>
+						<Code>BAM</Code>
+						<Text>Convertible Marks</Text>
+					</Value>
+					<Value>
+						<Code>BBD</Code>
+						<Text>Barbados Dollar</Text>
+					</Value>
+					<Value>
+						<Code>BDT</Code>
+						<Text>Taka</Text>
+					</Value>
+					<Value>
+						<Code>BGN</Code>
+						<Text>Bulgarian Lev</Text>
+					</Value>
+					<Value>
+						<Code>BHD</Code>
+						<Text>Bahraini Dinar</Text>
+					</Value>
+					<Value>
+						<Code>BIF</Code>
+						<Text>Burundi Franc</Text>
+					</Value>
+					<Value>
+						<Code>BMD</Code>
+						<Text>Bermudian Dollar (customarily known as Bermuda Dollar) </Text>
+					</Value>
+					<Value>
+						<Code>BND</Code>
+						<Text>Brunei Dollar</Text>
+					</Value>
+					<Value>
+						<Code>BOB</Code>
+						<Text>Boliviano</Text>
+					</Value>
+					<Value>
+						<Code>BOV</Code>
+						<Text>Mvdol</Text>
+					</Value>
+					<Value>
+						<Code>BRL</Code>
+						<Text>Brazilian Real</Text>
+					</Value>
+					<Value>
+						<Code>BSD</Code>
+						<Text>Bahamian Dollar</Text>
+					</Value>
+					<Value>
+						<Code>BTN</Code>
+						<Text>Ngultrum</Text>
+					</Value>
+					<Value>
+						<Code>BWP</Code>
+						<Text>Pula</Text>
+					</Value>
+					<Value>
+						<Code>BYR</Code>
+						<Text>Belarussian Ruble</Text>
+					</Value>
+					<Value>
+						<Code>BZD</Code>
+						<Text>Belize Dollar</Text>
+					</Value>
+					<Value>
+						<Code>CAD</Code>
+						<Text>Canadian Dollar</Text>
+					</Value>
+					<Value>
+						<Code>CDF</Code>
+						<Text>Franc Congolais</Text>
+					</Value>
+					<Value>
+						<Code>CHE</Code>
+						<Text>WIR Euro</Text>
+					</Value>
+					<Value>
+						<Code>CHF</Code>
+						<Text>Swiss Franc</Text>
+					</Value>
+					<Value>
+						<Code>CHW</Code>
+						<Text>WIR Franc</Text>
+					</Value>
+					<Value>
+						<Code>CLF</Code>
+						<Text>Unidades de formento</Text>
+					</Value>
+					<Value>
+						<Code>CLP</Code>
+						<Text>Chilean Peso</Text>
+					</Value>
+					<Value>
+						<Code>CNY</Code>
+						<Text>Yuan Renminbi</Text>
+					</Value>
+					<Value>
+						<Code>COP</Code>
+						<Text>Colombian Peso</Text>
+					</Value>
+					<Value>
+						<Code>COU</Code>
+						<Text>Unidad de Valor Real</Text>
+					</Value>
+					<Value>
+						<Code>CRC</Code>
+						<Text>Costa Rican Colon</Text>
+					</Value>
+					<Value>
+						<Code>CSD</Code>
+						<Text>Serbian Dinar</Text>
+					</Value>
+					<Value>
+						<Code>CUP</Code>
+						<Text>Cuban Peso</Text>
+					</Value>
+					<Value>
+						<Code>CVE</Code>
+						<Text>Cape Verde Escudo</Text>
+					</Value>
+					<Value>
+						<Code>CYP</Code>
+						<Text>Cyprus Pound</Text>
+					</Value>
+					<Value>
+						<Code>CZK</Code>
+						<Text>Czech Koruna</Text>
+					</Value>
+					<Value>
+						<Code>DJF</Code>
+						<Text>Djibouti Franc</Text>
+					</Value>
+					<Value>
+						<Code>DKK</Code>
+						<Text>Danish Krone</Text>
+					</Value>
+					<Value>
+						<Code>DOP</Code>
+						<Text>Dominican Peso</Text>
+					</Value>
+					<Value>
+						<Code>DZD</Code>
+						<Text>Algerian Dinar</Text>
+					</Value>
+					<Value>
+						<Code>EEK</Code>
+						<Text>Kroon</Text>
+					</Value>
+					<Value>
+						<Code>EGP</Code>
+						<Text>Egyptian Pound</Text>
+					</Value>
+					<Value>
+						<Code>ERN</Code>
+						<Text>Nakfa</Text>
+					</Value>
+					<Value>
+						<Code>ETB</Code>
+						<Text>Ethiopian Birr</Text>
+					</Value>
+					<Value>
+						<Code>EUR</Code>
+						<Text>Euro</Text>
+					</Value>
+					<Value>
+						<Code>FJD</Code>
+						<Text>Fiji Dollar</Text>
+					</Value>
+					<Value>
+						<Code>FKP</Code>
+						<Text>Falkland Islands Pound</Text>
+					</Value>
+					<Value>
+						<Code>GBP</Code>
+						<Text>Pound Sterling</Text>
+					</Value>
+					<Value>
+						<Code>GEL</Code>
+						<Text>Lari</Text>
+					</Value>
+					<Value>
+						<Code>GHC</Code>
+						<Text>Cedi</Text>
+					</Value>
+					<Value>
+						<Code>GIP</Code>
+						<Text>Gibraltar Pound</Text>
+					</Value>
+					<Value>
+						<Code>GMD</Code>
+						<Text>Dalasi</Text>
+					</Value>
+					<Value>
+						<Code>GNF</Code>
+						<Text>Guinea Franc</Text>
+					</Value>
+					<Value>
+						<Code>GTQ</Code>
+						<Text>Quetzal</Text>
+					</Value>
+					<Value>
+						<Code>GWP</Code>
+						<Text>Guinea-Bissau Peso</Text>
+					</Value>
+					<Value>
+						<Code>GYD</Code>
+						<Text>Guyana Dollar</Text>
+					</Value>
+					<Value>
+						<Code>HKD</Code>
+						<Text>Hong Kong Dollar</Text>
+					</Value>
+					<Value>
+						<Code>HNL</Code>
+						<Text>Lempira</Text>
+					</Value>
+					<Value>
+						<Code>HRK</Code>
+						<Text>Croatian Kuna</Text>
+					</Value>
+					<Value>
+						<Code>HTG</Code>
+						<Text>Gourde</Text>
+					</Value>
+					<Value>
+						<Code>HUF</Code>
+						<Text>Forint</Text>
+					</Value>
+					<Value>
+						<Code>IDR</Code>
+						<Text>Rupiah</Text>
+					</Value>
+					<Value>
+						<Code>ILS</Code>
+						<Text>New Israeli Sheqel</Text>
+					</Value>
+					<Value>
+						<Code>INR</Code>
+						<Text>Indian Rupee</Text>
+					</Value>
+					<Value>
+						<Code>IQD</Code>
+						<Text>Iraqi Dinar</Text>
+					</Value>
+					<Value>
+						<Code>IRR</Code>
+						<Text>Iranian Rial</Text>
+					</Value>
+					<Value>
+						<Code>ISK</Code>
+						<Text>Iceland Krona</Text>
+					</Value>
+					<Value>
+						<Code>JMD</Code>
+						<Text>Jamaican Dollar</Text>
+					</Value>
+					<Value>
+						<Code>JOD</Code>
+						<Text>Jordanian Dinar</Text>
+					</Value>
+					<Value>
+						<Code>JPY</Code>
+						<Text>Yen</Text>
+					</Value>
+					<Value>
+						<Code>KES</Code>
+						<Text>Kenyan Shilling</Text>
+					</Value>
+					<Value>
+						<Code>KGS</Code>
+						<Text>Som</Text>
+					</Value>
+					<Value>
+						<Code>KHR</Code>
+						<Text>Riel</Text>
+					</Value>
+					<Value>
+						<Code>KMF</Code>
+						<Text>Comoro Franc</Text>
+					</Value>
+					<Value>
+						<Code>KPW</Code>
+						<Text>North Korean Won</Text>
+					</Value>
+					<Value>
+						<Code>KRW</Code>
+						<Text>Won</Text>
+					</Value>
+					<Value>
+						<Code>KWD</Code>
+						<Text>Kuwaiti Dinar</Text>
+					</Value>
+					<Value>
+						<Code>KYD</Code>
+						<Text>Cayman Islands Dollar</Text>
+					</Value>
+					<Value>
+						<Code>KZT</Code>
+						<Text>Tenge</Text>
+					</Value>
+					<Value>
+						<Code>LAK</Code>
+						<Text>Kip</Text>
+					</Value>
+					<Value>
+						<Code>LBP</Code>
+						<Text>Lebanese Pound</Text>
+					</Value>
+					<Value>
+						<Code>LKR</Code>
+						<Text>Sri Lanka Rupee</Text>
+					</Value>
+					<Value>
+						<Code>LRD</Code>
+						<Text>Liberian Dollar</Text>
+					</Value>
+					<Value>
+						<Code>LSL</Code>
+						<Text>Loti</Text>
+					</Value>
+					<Value>
+						<Code>LTL</Code>
+						<Text>Lithuanian Litas</Text>
+					</Value>
+					<Value>
+						<Code>LVL</Code>
+						<Text>Latvian Lats</Text>
+					</Value>
+					<Value>
+						<Code>LYD</Code>
+						<Text>Libyan Dinar</Text>
+					</Value>
+					<Value>
+						<Code>MAD</Code>
+						<Text>Moroccan Dirham</Text>
+					</Value>
+					<Value>
+						<Code>MDL</Code>
+						<Text>Moldovan Leu</Text>
+					</Value>
+					<Value>
+						<Code>MGA</Code>
+						<Text>Malagascy Ariary</Text>
+					</Value>
+					<Value>
+						<Code>MKD</Code>
+						<Text>Denar</Text>
+					</Value>
+					<Value>
+						<Code>MMK</Code>
+						<Text>Kyat</Text>
+					</Value>
+					<Value>
+						<Code>MNT</Code>
+						<Text>Tugrik</Text>
+					</Value>
+					<Value>
+						<Code>MOP</Code>
+						<Text>Pataca</Text>
+					</Value>
+					<Value>
+						<Code>MRO</Code>
+						<Text>Ouguiya</Text>
+					</Value>
+					<Value>
+						<Code>MTL</Code>
+						<Text>Maltese Lira</Text>
+					</Value>
+					<Value>
+						<Code>MUR</Code>
+						<Text>Mauritius Rupee</Text>
+					</Value>
+					<Value>
+						<Code>MVR</Code>
+						<Text>Rufiyaa</Text>
+					</Value>
+					<Value>
+						<Code>MWK</Code>
+						<Text>Kwacha</Text>
+					</Value>
+					<Value>
+						<Code>MXN</Code>
+						<Text>Mexican Peso</Text>
+					</Value>
+					<Value>
+						<Code>MXV</Code>
+						<Text>Mexican Unidad de Inversion (UID)</Text>
+					</Value>
+					<Value>
+						<Code>MYR</Code>
+						<Text>Malaysian Ringgit</Text>
+					</Value>
+					<Value>
+						<Code>MZN</Code>
+						<Text>Metical </Text>
+					</Value>
+					<Value>
+						<Code>NAD</Code>
+						<Text>Namibian Dollar</Text>
+					</Value>
+					<Value>
+						<Code>NGN</Code>
+						<Text>Naira</Text>
+					</Value>
+					<Value>
+						<Code>NIO</Code>
+						<Text>Cordoba Oro</Text>
+					</Value>
+					<Value>
+						<Code>NOK</Code>
+						<Text>Norwegian Krone</Text>
+					</Value>
+					<Value>
+						<Code>NPR</Code>
+						<Text>Nepalese Rupee</Text>
+					</Value>
+					<Value>
+						<Code>NZD</Code>
+						<Text>New Zealand Dollar</Text>
+					</Value>
+					<Value>
+						<Code>OMR</Code>
+						<Text>Rial Omani</Text>
+					</Value>
+					<Value>
+						<Code>PAB</Code>
+						<Text>Balboa</Text>
+					</Value>
+					<Value>
+						<Code>PEN</Code>
+						<Text>Nuevo Sol</Text>
+					</Value>
+					<Value>
+						<Code>PGK</Code>
+						<Text>Kina</Text>
+					</Value>
+					<Value>
+						<Code>PHP</Code>
+						<Text>Philippine Peso</Text>
+					</Value>
+					<Value>
+						<Code>PKR</Code>
+						<Text>Pakistan Rupee</Text>
+					</Value>
+					<Value>
+						<Code>PLN</Code>
+						<Text>Zloty</Text>
+					</Value>
+					<Value>
+						<Code>PYG</Code>
+						<Text>Guarani</Text>
+					</Value>
+					<Value>
+						<Code>QAR</Code>
+						<Text>Qatari Rial</Text>
+					</Value>
+					<Value>
+						<Code>ROL</Code>
+						<Text>Old Leu</Text>
+					</Value>
+					<Value>
+						<Code>RON</Code>
+						<Text>New Leu</Text>
+					</Value>
+					<Value>
+						<Code>RUB</Code>
+						<Text>Russian Ruble</Text>
+					</Value>
+					<Value>
+						<Code>RWF</Code>
+						<Text>Rwanda Franc</Text>
+					</Value>
+					<Value>
+						<Code>SAR</Code>
+						<Text>Saudi Riyal</Text>
+					</Value>
+					<Value>
+						<Code>SBD</Code>
+						<Text>Solomon Islands Dollar</Text>
+					</Value>
+					<Value>
+						<Code>SCR</Code>
+						<Text>Seychelles Rupee</Text>
+					</Value>
+					<Value>
+						<Code>SDD</Code>
+						<Text>Sudanese Dinar</Text>
+					</Value>
+					<Value>
+						<Code>SEK</Code>
+						<Text>Swedish Krona</Text>
+					</Value>
+					<Value>
+						<Code>SGD</Code>
+						<Text>Singapore Dollar</Text>
+					</Value>
+					<Value>
+						<Code>SHP</Code>
+						<Text>Saint Helena Pound</Text>
+					</Value>
+					<Value>
+						<Code>SIT</Code>
+						<Text>Tolar</Text>
+					</Value>
+					<Value>
+						<Code>SKK</Code>
+						<Text>Slovak Koruna</Text>
+					</Value>
+					<Value>
+						<Code>SLL</Code>
+						<Text>Leone</Text>
+					</Value>
+					<Value>
+						<Code>SOS</Code>
+						<Text>Somali Shilling</Text>
+					</Value>
+					<Value>
+						<Code>SRD</Code>
+						<Text>Surinam Dollar</Text>
+					</Value>
+					<Value>
+						<Code>STD</Code>
+						<Text>Dobra</Text>
+					</Value>
+					<Value>
+						<Code>SVC</Code>
+						<Text>El Salvador Colon</Text>
+					</Value>
+					<Value>
+						<Code>SYP</Code>
+						<Text>Syrian Pound</Text>
+					</Value>
+					<Value>
+						<Code>SZL</Code>
+						<Text>Lilangeni</Text>
+					</Value>
+					<Value>
+						<Code>THB</Code>
+						<Text>Baht</Text>
+					</Value>
+					<Value>
+						<Code>TJS</Code>
+						<Text>Somoni</Text>
+					</Value>
+					<Value>
+						<Code>TMM</Code>
+						<Text>Manat</Text>
+					</Value>
+					<Value>
+						<Code>TND</Code>
+						<Text>Tunisian Dinar</Text>
+					</Value>
+					<Value>
+						<Code>TOP</Code>
+						<Text>Pa'anga</Text>
+					</Value>
+					<Value>
+						<Code>TRY</Code>
+						<Text>New Turkish Lira</Text>
+					</Value>
+					<Value>
+						<Code>TTD</Code>
+						<Text>Trinidad and Tobago Dollar</Text>
+					</Value>
+					<Value>
+						<Code>TWD</Code>
+						<Text>New Taiwan Dollar</Text>
+					</Value>
+					<Value>
+						<Code>TZS</Code>
+						<Text>Tanzanian Shilling</Text>
+					</Value>
+					<Value>
+						<Code>UAH</Code>
+						<Text>Hryvnia</Text>
+					</Value>
+					<Value>
+						<Code>UGX</Code>
+						<Text>Uganda Shilling</Text>
+					</Value>
+					<Value>
+						<Code>USD</Code>
+						<Text>US Dollar</Text>
+					</Value>
+					<Value>
+						<Code>USN</Code>
+						<Text>US Dollar (Next day)</Text>
+					</Value>
+					<Value>
+						<Code>USS</Code>
+						<Text>US Dollar (Same day)</Text>
+					</Value>
+					<Value>
+						<Code>UYU</Code>
+						<Text>Peso Uruguayo</Text>
+					</Value>
+					<Value>
+						<Code>UZS</Code>
+						<Text>Uzbekistan Sum</Text>
+					</Value>
+					<Value>
+						<Code>VEB</Code>
+						<Text>Bolivar</Text>
+					</Value>
+					<Value>
+						<Code>VND</Code>
+						<Text>Dong</Text>
+					</Value>
+					<Value>
+						<Code>VUV</Code>
+						<Text>Vatu</Text>
+					</Value>
+					<Value>
+						<Code>WST</Code>
+						<Text>Tala</Text>
+					</Value>
+					<Value>
+						<Code>XAF</Code>
+						<Text>CFA Franc BEAC</Text>
+					</Value>
+					<Value>
+						<Code>XAG</Code>
+						<Text>Silver</Text>
+					</Value>
+					<Value>
+						<Code>XAU</Code>
+						<Text>Gold</Text>
+					</Value>
+					<Value>
+						<Code>XBA</Code>
+						<Text>Bond Markets Units European Composite Unit (EURCO)</Text>
+					</Value>
+					<Value>
+						<Code>XBB</Code>
+						<Text>European Monetary Unit (E.M.U.-6)</Text>
+					</Value>
+					<Value>
+						<Code>XBC</Code>
+						<Text>European Unit of Account 9 (E.U.A.-9)</Text>
+					</Value>
+					<Value>
+						<Code>XBD</Code>
+						<Text>European Unit of Account 17 (E.U.A.-17)</Text>
+					</Value>
+					<Value>
+						<Code>XCD</Code>
+						<Text>East Caribbean Dollar</Text>
+					</Value>
+					<Value>
+						<Code>XDR</Code>
+						<Text>SDR</Text>
+					</Value>
+					<Value>
+						<Code>XFO</Code>
+						<Text>Gold-Franc</Text>
+					</Value>
+					<Value>
+						<Code>XFU</Code>
+						<Text>UIC-Franc</Text>
+					</Value>
+					<Value>
+						<Code>XOF</Code>
+						<Text>CFA Franc BCEAO</Text>
+					</Value>
+					<Value>
+						<Code>XPD</Code>
+						<Text>Palladium</Text>
+					</Value>
+					<Value>
+						<Code>XPF</Code>
+						<Text>CFP Franc</Text>
+					</Value>
+					<Value>
+						<Code>XPT</Code>
+						<Text>Platinum</Text>
+					</Value>
+					<Value>
+						<Code>XTS</Code>
+						<Text>Code specifically reserved for testing purposes</Text>
+					</Value>
+					<Value>
+						<Code>XXX</Code>
+						<Text>Code assigned for transactions where no currency is involved</Text>
+					</Value>
+					<Value>
+						<Code>YER</Code>
+						<Text>Yemeni Rial</Text>
+					</Value>
+					<Value>
+						<Code>ZAR</Code>
+						<Text>Rand</Text>
+					</Value>
+					<Value>
+						<Code>ZMK</Code>
+						<Text>Kwacha</Text>
+					</Value>
+					<Value>
+						<Code>ZWN</Code>
+						<Text>Zimbabwe Dollar</Text>
+					</Value>
+				</Values>
+			</CodeSet>
+		</Grouping>
+	</CodeSets>
+</Appendix>

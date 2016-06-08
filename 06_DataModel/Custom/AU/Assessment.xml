@@ -1,0 +1,109 @@
+<DataObject name="Assessment">
+  <Key>@RefId</Key>
+  <EventsReported>false</EventsReported>
+  <Intro>
+    <p>An assessment measures a student's progress and learning on specific academic standards.</p>
+  </Intro>
+  <Item>
+    <Element>Assessment</Element>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Description>
+      <p>The GUID that uniquely identifies this object.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>Name</Element>
+    <Characteristics>M</Characteristics>
+    <Type name="xs:normalizedString"></Type>
+    <Description>
+      <p>Name of the test.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>AssessmentId</Element>
+    <Characteristics>O</Characteristics>
+    <Type name="xs:normalizedString"></Type>
+    <Description>
+      <p>The state, local or publisher unique Id for the assessment.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>AssessmentPackageRefId</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" relationship="content/resources defined by" count="*:1" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Element>AssessmentDescriptors</Element>
+    <Characteristics>O</Characteristics>
+    <List mode="List">
+    </List>
+    <Description>
+      <p>Describes what type of assessment this represents.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>/AssessmentDescriptor</Element>
+    <Characteristics>OR</Characteristics>
+     <Union>
+      <Type ref="CodeSets" name="AUCodeSetsAssessmentTypeType"></Type>
+      <Type name="xs:token">
+        <Values type="additional">
+          <Value>
+            <Code>Statewide</Code>
+          </Value>
+          <Value>
+            <Code>Formative</Code>
+          </Value>
+          <Value>
+            <Code>Local Summative</Code>
+          </Value>
+          <Value>
+            <Code>Diagnostic</Code>
+          </Value>
+          <Value>
+            <Code>Benchmark</Code>
+          </Value>
+        </Values>
+      </Type>
+    </Union>
+  </Item>
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="DataModel" name="SIF_Metadata"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="DataModel" name="SIF_ExtendedElements"></Type>
+  </Item>
+
+  <xhtml:Example xmlns="">
+    <Assessment RefId="CC2834DE9138FAB032EF399BA72A8234">
+      <Name>TAKS Test</Name>
+      <AssessmentId>TX48A</AssessmentId>
+      <AssessmentPackageRefId>B8846EB83F0D4609A3299AC59410814E</AssessmentPackageRefId>
+      <AssessmentDescriptors>
+        <AssessmentDescriptor>Statewide</AssessmentDescriptor>
+      </AssessmentDescriptors>
+      <SIF_Metadata>
+        <EducationFilter>
+          <LearningStandardItems>
+            <LearningStandardItemRefId>FA3023B26277CAD47105327F3A782BED</LearningStandardItemRefId>
+            <LearningStandardItemRefId>DE937CB2627AAE872850E1F3A782BEDF</LearningStandardItemRefId>
+            <LearningStandardItemRefId>BCFA143627AAE87E830E1F3AD92B4DA7</LearningStandardItemRefId>
+            <LearningStandardItemRefId>DE840286ABB72198756E1F349CAE8273</LearningStandardItemRefId>
+            <LearningStandardItemRefId>913DE839BA8329FCA938EF2709BC31A0</LearningStandardItemRefId>
+            <LearningStandardItemRefId>A8930CD176EBB992714ACEB78492AE9C</LearningStandardItemRefId>
+            <LearningStandardItemRefId>0264FFBA72C78ED903BE27CAA18905FB</LearningStandardItemRefId>
+          </LearningStandardItems>
+        </EducationFilter>
+      </SIF_Metadata>
+    </Assessment>
+  </xhtml:Example>
+
+</DataObject>

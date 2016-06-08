@@ -1,0 +1,158 @@
+<DataObject name="StudentDailyAttendance">
+
+  <Key>@RefId</Key>
+  
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>StudentDailyAttendance</Element>
+    <Description>
+      <p>This object provides daily attendance information for a particular student in a particular school on a particular date.</p>
+    </Description>
+  </Item>
+
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The ID (GUID) assigned to uniquely identify this attendance record.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+  
+  <Item>
+
+    <Element>StudentPersonalRefId</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The ID (GUID) of the student for whom this attendance information is being reported.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  <Item>
+
+    <Element>SchoolInfoRefId</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The ID (GUID) of the school for which this attendance information is being reported.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  <Item>
+
+    <Element>Date</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The calendar date to which this attendance information relates.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+  <Item>
+    <Element>SchoolYear</Element>
+
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>
+        School year for which this enrollment is applicable, expressed as the four-digit year in which the school year
+        ends (e.g. <code>2007</code>).
+      </p>
+    </Description>
+    <Type ref="DataModel" name="SchoolYear"></Type>
+  </Item>
+  <Item>
+
+    <Element>DayValue</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Value of a day this instance represents.</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsDayValueCodeType"></Type>
+  </Item>
+  <Item>
+    <Element>AttendanceCode</Element>
+
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Locally defined code for attendance.</p>
+    </Description>
+    <Type ref="DataModel" name="AttendanceCode"></Type>
+  </Item>
+  <Item>
+    <Element>AttendanceStatus</Element>
+
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Approved or Unapproved status of this attendance code.</p>
+    </Description>
+
+    <Type ref="CodeSets" name="AUCodeSetsAttendanceStatusType"></Type>
+  </Item>
+  <Item>
+    <Element>TimeIn</Element>
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>The time the student entered or returned to school.  Must be provided if 'Partial' chosen for DayValue.</p>
+    </Description>
+    <Type name="xs:time"></Type>
+  </Item>
+  <Item>
+    <Element>TimeOut</Element>
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>The time the student left school.  Must be provided if 'Partial' chosen for DayValue..</p>
+    </Description>
+    <Type name="xs:time"></Type>
+  </Item>
+  <Item>
+    <Element>AbsenceValue</Element>
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>Must be provided if the DayValue is "Partial" or "Other". The amount of absence represented by AttendanceCode, up to three decimal places.</p>
+    </Description>
+    <Type name="xs:decimal"></Type>
+    <Facets>
+      <xs:minInclusive value="0"/>
+      <xs:maxInclusive value="1"/>
+    </Facets>
+  </Item>
+  <Item>
+    <Element>AttendanceNote</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Note related to this particular attendance.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="DataModel" name="SIF_Metadata"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+
+    <Characteristics>O</Characteristics>
+    <Type ref="DataModel" name="SIF_ExtendedElements"></Type>
+  </Item>
+  <xhtml:Example xmlns="">
+    <StudentDailyAttendance RefId="2FFB63B4CFEF48208501E7D1E54555CB">
+      <StudentPersonalRefId>D3E34B359D75101A8C3D00AA001A1652</StudentPersonalRefId>
+      <SchoolInfoRefId>CA285746359D75101A8C36432A901A16</SchoolInfoRefId>
+      <Date>2002-11-01</Date>
+      <SchoolYear>2003</SchoolYear>
+      <DayValue>Partial</DayValue>
+      <AttendanceCode>
+        <Code>200</Code>
+        <OtherCodeList>
+          <OtherCode Codeset="Local">S</OtherCode>
+          <OtherCode Codeset="Text">C</OtherCode>
+        </OtherCodeList>
+      </AttendanceCode>
+      <AttendanceStatus>01</AttendanceStatus>
+      <TimeIn>13:30:00</TimeIn>
+      <TimeOut>12:05:00</TimeOut>
+      <AttendanceNote>Left for Orthodontist appt. and returned to school afterward</AttendanceNote>
+    </StudentDailyAttendance>
+
+  </xhtml:Example>
+</DataObject>

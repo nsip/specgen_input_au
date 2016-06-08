@@ -1,0 +1,21 @@
+<Item>
+  <Element>TimeElements</Element>
+  <Characteristics>O</Characteristics>
+  <List mode="List">
+  </List>
+</Item>
+<Item>
+  <Element>/TimeElement</Element>
+  <Characteristics>OR</Characteristics>
+  <Type ref="DataModel" name="TimeElement"></Type>
+</Item>
+<Item>
+  <Element>LifeCycle</Element>
+  <Characteristics>O</Characteristics>
+  <Type ref="DataModel" name="LifeCycle"></Type>
+</Item>
+<Item>
+  <Element>EducationFilter</Element>
+  <Characteristics>O</Characteristics>
+  <Type ref="DataModel" name="EducationFilter"></Type>
+</Item>

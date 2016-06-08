@@ -1,0 +1,541 @@
+<DataObject name='StudentSDTN'>
+  <Key>@RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>StudentSDTN</Element>
+    <Description>
+      <p>
+        This object has been developed to cater for the SDTN - Student Data Transfer Note. Please refer to: http://scseec.edu.au/archive/Publications/ISDTN.aspx 
+        The elements in this object were developed to support the previous LIMF recommendations and allow two or more jurisdictions to exchange this data. 
+      </p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Description>The GUID that uniquely identifies this SDTN Object.</Description>
+    <Characteristics>M</Characteristics>
+    <Type ref='CommonTypes' name='RefIdType'/>
+  </Item>
+  <Item>
+    <Element>SnapDate</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The date that this object was sent.</p>
+    </Description>
+    <Type name='xs:date'/>
+  </Item>
+  <Item>
+    <Element>StudentPersonalRefId</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The RefId of the StudentPersonal object at the sending school.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Element>PersonInfo</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Personal Information.</p>
+    </Description>
+    <Type ref="DataModel" name="PersonInfo"></Type>
+  </Item>
+  <Item>
+
+    <Element>SchoolInfoRefId</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>GUID that identifies the school that provided the SDTN.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Element>SchoolLocalId</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The locally-assigned identifier for the school in the original database (sender)</p>
+    </Description>
+    <Type ref="DataModel" name="LocalId"></Type>
+  </Item>
+  <Item>
+    <Element>SchoolName</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Name of school/campus.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+
+  <Item>
+    <Element>AddressList</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="DataModel" name="AddressList"></Type>
+    <Description>
+      <p>The school's addresses.</p>
+    </Description>
+  </Item>
+
+  <Item>
+    <Element>PrincipalInfo</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="DataModel" name="PrincipalInfo"></Type>
+    <Description>
+      <p>Information about the campus or school principal.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>FurtherInformation</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p></p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>/ContactName</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The name of the person to contact for further information on this student.</p>
+    </Description>
+    <Type ref="CommonTypes" name="NameOfRecordType"></Type>
+  </Item>
+ 
+  <Item>
+    <Element>/PhoneNumberList</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="DataModel" name="PhoneNumberList"></Type>
+    <Description>
+      <p>The further contact person's phone number(s).</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>/EmailList</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The further contact person's e-mail address(es).</p>
+    </Description>
+    <Type ref="DataModel" name="EmailList"></Type>
+  </Item>
+
+  <Item>
+    <Element>EnrollmentDate</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The date when the student first attended the school.</p>
+    </Description>
+    <Type name='xs:date'/>
+  </Item>
+
+  <Item>
+    <Element>DepartureDate</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The last school calendar day the student attended or sign-out date if departure is before end of school year.</p>
+    </Description>
+    <Type name='xs:date'/>
+  </Item>
+  <Item>
+    <Element>YearLevel</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>School Year or academic level of student at departure date.</p>
+    </Description>
+    <Type ref="DataModel" name="YearLevel"></Type>
+  </Item>
+
+  <Item>
+    <Element>ReasonForLeaving</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p></p>
+    </Description>
+    <Type name='xs:normalizedString'/>
+  </Item>
+
+  <Item>
+    <Element>PreviousSchoolsList</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>List of Previous Schools if known (other than the provider school)</p>
+    </Description>
+    <List mode='List'/>
+  </Item>
+  <Item>
+    <Element>/PreviousSchool</Element>
+    <Characteristics>MR</Characteristics>
+    <Description>
+      <p>Repeatable element of previous schools information if known. (other than the provider school)</p>
+    </Description>
+
+  </Item>
+  <Item>
+    <Element>//SchoolName</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Previous School Name</p>
+    </Description>
+    <Type name='xs:normalizedString'/>
+  </Item>
+
+  <Item>
+    <Element>//ReasonLeft</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Reason for leaving previous school if known.</p>
+    </Description>
+    <Type name='xs:normalizedString'/>
+  </Item>
+
+  <Item>
+    <Element>AttendanceConcerns</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Indicator of whether the Student had attendance concerns worth noting.</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
+  </Item>
+
+
+  <Item>
+    <Element>HealthNeeds</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Indicator of whether the Student has any Health Care Needs.</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
+  </Item>
+
+  <Item>
+    <Element>AreasOfInterestList</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p></p>
+    </Description>
+    <List mode='List'/>
+  </Item>
+
+  <Item>
+    <Element>/ActivityInfo</Element>
+    <Characteristics>MR</Characteristics>
+    <Description>
+      <p>Repeatable element containing activities student has an interest in or participates in.</p>
+    </Description>
+
+  </Item>
+
+  <Item>
+    <Element>//StudentActivityInfoRefId</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>GUID that identifies the activity in which the student participates. </p>
+    </Description>
+    <Type ref='CommonTypes' name='IdRefType'/>
+  </Item>
+
+  <Item>
+    <Element>//StudentActivityDescription</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Description of Activity Info in the Previous Schools' zone.</p>
+    </Description>
+    <Type name='xs:normalizedString'/>
+  </Item>
+
+  <Item>
+    <Element>NegotiatedCurriculumPlan</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Does the student have a negotiated curriculum plan?</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
+  </Item>
+
+  <Item>
+    <Element>AdjustedEducationProgram</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Does the student have an adjusted education program?</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
+  </Item>
+
+  <Item>
+    <Element>CareerGuidanceFileHeld</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Does the student have a career guidance file?</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
+  </Item>
+
+  <Item>
+    <Element>SchoolCounsellorFileHeld</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Is there a School counsellor/psychologist file held?</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
+  </Item>
+
+  <Item>
+    <Element>OtherLearningSupport</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Comments describing any other required learning support, eg ESL needs.</p>
+    </Description>
+    <Type name='xs:string'/>
+  </Item>
+
+  <Item>
+    <Element>AcceleratedProgram</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Did the student participate in an accelerated learning program?</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
+  </Item>
+
+  <Item>
+    <Element>YoungCarersRole</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Is the student a carer of other family members?</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
+  </Item>
+
+  <Item>
+    <Element>Literacy</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Progress in Literacy or English according to the National Standard.</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsProgressLevelType"></Type>
+  </Item>
+
+  <Item>
+    <Element>Numeracy</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Progress in Numeracy or Maths according to the National Standard.</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsProgressLevelType"></Type>
+  </Item>
+
+  <Item>
+    <Element>OtherLearningAreasList</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p></p>
+    </Description>
+    <List mode='List'/>
+  </Item>
+
+  <Item>
+    <Element>/OtherLearningArea</Element>
+    <Characteristics>MR</Characteristics>
+    <Description>
+      <p>Repeatable element of progress in other learning areas.</p>
+    </Description>
+
+  </Item>
+
+  <Item>
+    <Element>//Description</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Description of Other Learning Area.</p>
+    </Description>
+    <Type name='xs:normalizedString'/>
+  </Item>
+
+  <Item>
+    <Element>//Result</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Progress in other learning area according to the National Standard.</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsProgressLevelType"></Type>
+  </Item>
+
+  <Item>
+    <Element>LatestStudentReportAvailable</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Is the latest student report available?</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
+  </Item>
+
+  <Item>
+    <Element>PastoralCare</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Pastoral care and behaviour management</p>
+    </Description>
+
+  </Item>
+
+  <Item>
+    <Element>/DisciplinaryAbsences</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Have there been any school disciplinary absences (in or out of school) in the last 12 months</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
+  </Item>
+
+  <Item>
+    <Element>/IndividualBehaviourPlan</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Is there an individual behaviour management plan</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
+  </Item>
+
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="DataModel" name="SIF_Metadata"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="DataModel" name="SIF_ExtendedElements"></Type>
+  </Item>
+  <xhtml:Example xmlns=''>
+    <StudentSDTN RefId="9ECC96830E02406F926C1C4D3542D122">
+      <SnapDate>2009-03-01</SnapDate>
+      <StudentPersonalRefId>646C5D4AC8294886A02B971695C7BC06</StudentPersonalRefId>
+      <PersonInfo>
+         <Name Type="LGL">
+          <FamilyName>Smith</FamilyName>
+          <GivenName>Fred</GivenName>
+          <FullName>Fred Smith</FullName>
+        </Name>
+        <OtherNames>
+          <Name Type="AKA">
+            <FamilyName>Anderson</FamilyName>
+            <GivenName>Samuel</GivenName>
+            <FullName>Samuel Anderson</FullName>
+          </Name>
+          <Name Type="PRF">
+            <FamilyName>Rowinski</FamilyName>
+            <GivenName>Sam</GivenName>
+            <FullName>Sam Rowinski </FullName>
+          </Name>
+        </OtherNames>
+        <Demographics>
+          <Sex>1</Sex>
+          <BirthDate>1995-09-26</BirthDate>
+          <AustralianCitizenshipStatus>1</AustralianCitizenshipStatus>
+        </Demographics>
+      </PersonInfo>
+      <SchoolInfoRefId>476C5D4AC8294886A02B971695C7BC06</SchoolInfoRefId>
+      <SchoolLocalId>01011234</SchoolLocalId>
+      <SchoolName>Lincoln Secondary College</SchoolName>
+      <AddressList>
+	      <Address Type="0123" Role="012B">
+          <Street>
+            <Line1>23 Nicholson Street</Line1>
+          </Street>
+          <City>Carnegie</City>
+          <StateProvince>VIC</StateProvince>
+          <Country>1101</Country>
+          <PostalCode>3004</PostalCode>
+          <GridLocation>
+            <Latitude>23.9876</Latitude>
+            <Longitude>-98.8765</Longitude>
+          </GridLocation>
+        </Address>
+      </AddressList>
+      <PrincipalInfo>
+        <ContactName Type="LGL">
+          <Title>Mr</Title>
+          <FamilyName>Miller</FamilyName>
+          <GivenName>James</GivenName>
+          <MiddleName>Frank</MiddleName>
+          <Suffix>Jr.</Suffix>
+          <FullName>Mr James Frank Miller Jr.</FullName>
+        </ContactName>
+        <ContactTitle>School Principal</ContactTitle>
+        <PhoneNumberList>
+          <PhoneNumber Type="0096">
+            <Number>03 9637-2000</Number>
+            <Extension>72345</Extension>
+            <ListedStatus>Y</ListedStatus>
+          </PhoneNumber>
+        </PhoneNumberList>
+	      <EmailList>
+          <Email Type="01">jmiller@lsc.vic.edu.au</Email>
+          <Email Type="02">jmiller@yahoo.com.au</Email>
+        </EmailList>
+      </PrincipalInfo>
+      <FurtherInformation>
+	      <ContactName Type="LGL">
+          <Title>Mr</Title>
+          <FamilyName>Knudson</FamilyName>
+          <GivenName>Raymond</GivenName>
+          <FullName>Mr Raymond Knudson</FullName>
+        </ContactName>
+	      <PhoneNumberList>
+		      <PhoneNumber Type="0096">
+            <Number>03 9637-2200</Number>
+            <Extension>72348</Extension>
+            <ListedStatus>Y</ListedStatus>
+          </PhoneNumber>
+		      <PhoneNumber Type="0888">
+            <Number>0416 123 785</Number>
+            <ListedStatus>N</ListedStatus>
+          </PhoneNumber>
+        </PhoneNumberList>
+	      <EmailList>
+          <Email Type="01">rknudson@lsc.vic.edu.au</Email>
+          <Email Type="02">rknudson@hotmail.com</Email>
+        </EmailList>
+      </FurtherInformation>
+      <EnrollmentDate>2005-01-31</EnrollmentDate>
+      <DepartureDate>2008-12-18</DepartureDate>
+      <YearLevel>
+        <Code>7</Code>
+      </YearLevel>
+      <ReasonForLeaving>Family re-location</ReasonForLeaving>
+      <PreviousSchoolsList>
+	      <PreviousSchool>
+		      <SchoolName>Lincoln Primary School</SchoolName>
+		      <ReasonLeft>Graduated</ReasonLeft>
+	      </PreviousSchool>
+      </PreviousSchoolsList>
+      <AttendanceConcerns>N</AttendanceConcerns>
+      <HealthNeeds>N</HealthNeeds>
+      <AreasOfInterestList>
+	      <ActivityInfo>
+		      <StudentActivityInfoRefId>6472B2610947583A463DBB345291B001</StudentActivityInfoRefId>
+		      <StudentActivityDescription>Athletics</StudentActivityDescription>
+	      </ActivityInfo>
+      </AreasOfInterestList>
+      <NegotiatedCurriculumPlan>N</NegotiatedCurriculumPlan>
+      <AdjustedEducationProgram>N</AdjustedEducationProgram>
+      <CareerGuidanceFileHeld>N</CareerGuidanceFileHeld>
+      <SchoolCounsellorFileHeld>N</SchoolCounsellorFileHeld>
+      <OtherLearningSupport>ESL Support Given</OtherLearningSupport>
+      <AcceleratedProgram>N</AcceleratedProgram>
+      <YoungCarersRole>N</YoungCarersRole>
+      <Literacy>Below</Literacy>
+      <Numeracy>At</Numeracy>
+      <OtherLearningAreasList>
+        <OtherLearningArea>
+		      <Description>Language</Description>
+		      <Result>At</Result>
+	      </OtherLearningArea>
+      </OtherLearningAreasList>
+      <LatestStudentReportAvailable>Y</LatestStudentReportAvailable>
+      <PastoralCare>
+	      <DisciplinaryAbsences>N</DisciplinaryAbsences>
+	      <IndividualBehaviourPlan>N</IndividualBehaviourPlan>
+      </PastoralCare>
+    </StudentSDTN>
+  </xhtml:Example>
+</DataObject>

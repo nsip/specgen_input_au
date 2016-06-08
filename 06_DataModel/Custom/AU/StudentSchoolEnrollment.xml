@@ -1,0 +1,551 @@
+<DataObject name="StudentSchoolEnrollment">
+
+  <Key>@RefId</Key>
+
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>StudentSchoolEnrollment</Element>
+    <Description>
+      <p>
+        This object defines information related to a student's enrollment.  StudentSchoolEnrollment
+        instances must not span multiple school years.
+      </p>
+      <p>
+        Note there is only one current home enrollment at a time per student.
+        Only one instance of the <code>StudentSchoolEnrollment</code> object must exist for a given student with <code>MembershipType</code>=<code>01</code>
+        (Home School) and <code>TimeFrame</code>=<code>C</code> (Current) 
+        for the time interval between <code>EntryDate</code> and <code>ExitDate</code>, inclusive.
+      </p>
+
+      <p>
+        Agents are required to re-publish a <code>StudentSchoolEnrollment</code> object <code>Change</code> event when the
+        <code>TimeFrame</code> attribute changes, regardless of when the data entry is done.
+        This is in addition to the practice of publishing the object <code>Change</code> event at the time the data changes in the corresponding application.
+      </p>
+
+      <p>
+        When the object is re-published, it must contain all the data in the object that is supported by the publisher.
+      </p>
+
+
+    </Description>
+  </Item>
+  <Item>
+
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The ID (GUID) that uniquely identifies a particular enrollment.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+  <Item>
+
+    <Element>StudentPersonalRefId</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The ID (GUID) of the student to whom this information is linked.</p>
+    </Description>
+    <Type ref="CommonTypes" relationship="records enrollment of" count="*:1" name="IdRefType"></Type>
+  </Item>
+  <Item>
+
+    <Element>SchoolInfoRefId</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The ID (GUID) of the school to which this enrollment applies.</p>
+    </Description>
+    <Type ref="CommonTypes" relationship="records enrollment of student in" count="1:1" name="IdRefType"></Type>
+  </Item>
+  <Item>
+
+    <Element>MembershipType</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The type of this enrollment as it relates to the school identified in SchoolInfoRefId.</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsSchoolEnrollmentTypeType"></Type>
+  </Item>
+  <Item>
+
+    <Element>TimeFrame</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>
+        The timeframe of the enrollment based on the <code>SIF_Date</code> in the <code>SIF_Header</code> of the message. For events, it is determined as of the date the event is generated. For requests and responses, it is calculated based on the date of the request.
+      </p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsEnrollmentTimeFrameType"></Type>
+  </Item>
+  <Item>
+    <Element>SchoolYear</Element>
+
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>
+        School year for which this enrollment is applicable, expressed as the four-digit year in which the school year ends (e.g. <code>2007</code>). StudentSchoolEnrollment instances must not span multiple school years.
+      </p>
+    </Description>
+    <Type ref="DataModel" name="SchoolYear"></Type>
+  </Item>
+  <Item>
+    <Element>EntryDate</Element>
+
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The date from when this enrollment is valid.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+  <Item>
+    <Element>EntryType</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>Container elements for EntryType information</Description>
+  </Item>
+  <Item>
+
+    <Element>/Code</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Code indicating the type of entry for this enrollment</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsEntryTypeType"></Type>
+  </Item>
+  <Item>
+    <Element>/OtherCodeList</Element>
+    <Characteristics>O</Characteristics>
+    <Description>List of other codes or strings that crosswalk to or serve as translations of the Code element paired with this common element. If Code changes and OtherCodes are supported, both Code and all associated OtherCode elements must be present.</Description>
+    <Type ref="DataModel" name="OtherCodeList"></Type>
+  </Item>
+  <Item>
+    <Element>YearLevel</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Year or academic level of student.</p>
+    </Description>
+    <Type ref="DataModel" name="YearLevel"></Type>
+  </Item>
+  <Item>
+    <Element>Homeroom</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Homeroom for this enrollment.</p>
+    </Description>
+    <Type ref="CommonTypes" relationship="records student homeroom as" count="1:?" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Attribute>SIF_RefObject</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The name of the object referenced.</p>
+    </Description>
+    <Values>
+      <Value>
+        <Code>RoomInfo</Code>
+      </Value>
+    </Values>
+  </Item>
+  <Item>
+    <Element>Advisor</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Staff member assigned as an advisor.</p>
+    </Description>
+    <Type ref="CommonTypes" relationship="records student advisor as" count="1:?" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Attribute>SIF_RefObject</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The name of the object referenced.</p>
+    </Description>
+    <Values>
+      <Value>
+        <Code>StaffPersonal</Code>
+      </Value>
+    </Values>
+  </Item>
+  <Item>
+    <Element>Counselor</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Staff member assigned as an advisor.</p>
+    </Description>
+    <Type ref="CommonTypes" relationship="records student counselor as" count="1:?" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Attribute>SIF_RefObject</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The name of the object referenced.</p>
+    </Description>
+    <Values>
+      <Value>
+        <Code>StaffPersonal</Code>
+      </Value>
+    </Values>
+  </Item>
+
+  <Item>
+    <Element>Homegroup</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The name of the homegroup the student enrollment belongs to.</p>
+    </Description>
+    <Type name='xs:normalizedString'/>
+  </Item>
+  
+  <Item>
+    <Element>ACARASchoolId</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>ACARA School Id.</p>
+    </Description>
+    <Type ref="DataModel" name="LocalId"/>
+  </Item>
+  <Item>
+    <Element>ClassCode</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The name of the class code the student belongs to, for the purposes of NAPLAN registration.</p>
+    </Description>
+    <Type name='xs:normalizedString'/>
+  </Item>
+  
+   <Item>
+    <Element>TestLevel</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Values: 3,5,7,9. The test level that the student is registering for.</p>
+    </Description>
+    <Type ref="DataModel" name="YearLevel"></Type>
+  </Item>
+  
+  <Item>
+    <Element>ReportingSchool</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Is this the school to which student's report is to be made available?</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
+  </Item>
+
+  <Item>
+    <Element>House</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The name of the house the student belongs to.</p>
+    </Description>
+    <Type name='xs:normalizedString'/>
+  </Item>
+
+  <Item>
+    <Element>IndividualLearningPlan</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Does this student have an individual learning plan in place?</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
+  </Item>
+
+  <Item>
+    <Element>Calendar</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The calendar assigned to this enrollment. </p>
+    </Description>
+    <Type ref='CommonTypes' name='IdRefType'/>
+  </Item>
+
+
+  <Item>
+    <Attribute>SIF_RefObject</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The name of the object referenced.</p>
+    </Description>
+    <Values>
+      <Value>
+        <Code>CalendarSummary</Code>
+      </Value>
+    </Values>
+  </Item>
+  
+  <Item>
+    <Element>ExitDate</Element>
+
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>
+        The last school calendar day of this enrollment. If the student has exited the school or the enrollment has a <code>RecordClosureReason</code>, <code>ExitDate</code> must have a value.
+      </p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+  <Item>
+    <Element>ExitStatus</Element>
+    <Characteristics>O</Characteristics>
+    <Description>Container element for exit status codes.</Description>
+  </Item>
+  <Item>
+
+    <Element>/Code</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p> Code indicating the closure status for this enrollment.</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsExitWithdrawalStatusType"></Type>
+  </Item>
+  <Item>
+    <Element>/OtherCodeList</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="DataModel" name="OtherCodeList"></Type>
+  </Item>
+  <Item>
+    <Element>ExitType</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description></Description>
+  </Item>
+  <Item>
+
+    <Element>/Code</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Code indicating the type of exit for this enrollment.</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsExitWithdrawalTypeType"></Type>
+  </Item>
+  <Item>
+    <Element>/OtherCodeList</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="DataModel" name="OtherCodeList"></Type>
+  </Item>
+
+  
+ 
+  <Item>
+    <Element>FTE</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Full-time equivalent numeric value of the student's course load during this enrollment, expressed in decimal form, where 1.00 represents a full-time enrollment.</p>
+    </Description>
+    <Type name="xs:decimal"></Type>
+    <Facets>
+      <xs:minInclusive value="0"/>
+      <xs:maxInclusive value="1"/>
+      <xs:fractionDigits value="2"/>
+    </Facets>
+  </Item>
+  <Item>
+    <Element>FTPTStatus</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>An indication of whether the student is enrolled full time or part time.</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsFTPTStatusCodeType"></Type>
+  </Item>
+  <Item>
+    <Element>FFPOS</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Enrolled Full-fee Paying Overseas Student (FFPOS) Status.  Enrolment Frame Element 10 NSCC Collection.</p>  
+	  <p>The status of an enrolment in a CRICOS course and whether the person is liable for a fee which reflects the imputed full average cost of the person's education at the school (including both recurrent and capital costs) irrespective of the actual arrangements to meet the fee.</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsFFPOSStatusCodeType"></Type>
+  </Item>
+
+  <Item>
+    <Element>CatchmentStatus</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Container element for location of an individual's legal residence relative to (within or outside) the boundaries of the school for this enrolment. Enrolment Catchment Status.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>/Code</Element>
+
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Code indicating the residency status for this enrollment. Code indicating Enrollment Catchment Status.</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsPublicSchoolCatchmentStatusType"></Type>
+  </Item>
+  <Item>
+    <Element>/OtherCodeList</Element>
+    <Characteristics>O</Characteristics>
+    <Description>List of other codes or strings that crosswalk to or serve as translations of the Code element paired with this common element. If Code changes and OtherCodes are supported, both Code and all associated OtherCode elements must be present.</Description>
+    <Type ref="DataModel" name="OtherCodeList"></Type>
+  </Item>
+
+  <Item>
+    <Element>RecordClosureReason</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The reason why this enrollment was closed.  The EndOfYear option must be used to convey status change due to rollover activity.</p>
+    </Description>
+    <Values>
+      <Value>
+        <Code>SchoolExit</Code>
+      </Value>
+      <Value>
+        <Code>TimeDependentDataChange</Code>
+      </Value>
+      <Value>
+        <Code>EndOfYear</Code>
+      </Value>
+      <Value>
+        <Code>CampusExit</Code>
+      </Value>
+    </Values>
+  </Item>
+
+  <Item>
+    <Element>PromotionInfo</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Information on a student's promotion, retention, or demotion related to this enrollment instance.</p>
+    </Description>
+
+  </Item>
+
+  <Item>
+    <Element>/PromotionStatus</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>This value should be set if this enrollment instance is closed for an end-of-year closeout or a mid-year promotion or demotion. A value other than NA should be specified when the enrollment instance represents an end-of-year closeout or mid-year promotion/demotion. </p>
+    </Description>
+    <Values>
+      <Value>
+        <Code>Promoted</Code>
+      </Value>
+      <Value>
+        <Code>Demoted</Code>
+      </Value>
+      <Value>
+        <Code>Retained</Code>
+      </Value>
+      <Value>
+        <Code>NA</Code>
+      </Value>
+    </Values>
+  </Item>
+  
+  
+  <Item>
+    <Element>PreviousSchool</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>If the student has previously been enrolled at a school, i.e. student is transferring, the previous school number.</p>
+    </Description>
+    <Type ref="DataModel" name="LocalId"></Type>
+  </Item>
+
+  <Item>
+    <Element>DestinationSchool</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>If the student has exited the school, the local id of the school to which the student has transferred to.</p>
+    </Description>
+    <Type ref="DataModel" name="LocalId"></Type>
+  </Item>
+
+  <Item>
+    <Element>StudentSubjectChoiceList</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>List of Student Subject Choices where available.</p>
+    </Description>
+    <List mode="List"></List>
+  </Item>
+
+  <Item>
+    <Element>/StudentSubjectChoice</Element>
+
+    <Characteristics>MR</Characteristics>
+    <Description>
+      <p>Subjects Students Choose</p>
+    </Description>
+  </Item>
+
+  <Item>
+    <Element>//PreferenceNumber</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Subject Priority</p>
+    </Description>
+    <Type name="xs:unsignedInt"></Type>
+  </Item>
+  <Item>
+    <Element>//SubjectLocalId</Element>
+
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Local Subject Id</p>
+    </Description>
+    <Type ref="DataModel" name="LocalId"></Type>
+  </Item>
+  <Item>
+    <Element>//StudyDescription</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Description about Study Mode.</p>
+    </Description>
+    <Type ref="DataModel" name="SubjectArea"></Type>
+  </Item>
+  <Item>
+    <Element>//OtherSchoolLocalId</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Localid of a school where the student studies this subject if not at the home school.</p>
+    </Description>
+    <Type ref="DataModel" name="LocalId"></Type>
+  </Item>
+
+  
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="DataModel" name="SIF_Metadata"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+
+    <Characteristics>O</Characteristics>
+    <Type ref="DataModel" name="SIF_ExtendedElements"></Type>
+  </Item>
+  <xhtml:Example xmlns="">
+    <StudentSchoolEnrollment RefId="A8C3D3E34B359D75101D00AA001A1652">
+      <StudentPersonalRefId>D3E34B359D75101A8C3D00AA001A1652</StudentPersonalRefId>
+      <SchoolInfoRefId>D3E34B359D75101A8C3D00AA001A1651</SchoolInfoRefId>
+      <MembershipType>01</MembershipType>
+      <TimeFrame>C</TimeFrame>
+      <SchoolYear>2004</SchoolYear>
+      <EntryDate>2004-01-29</EntryDate>
+      <EntryType>
+        <Code>1838</Code>
+      </EntryType>
+      <YearLevel>
+        <Code>10</Code>
+      </YearLevel>
+      <Homeroom SIF_RefObject="RoomInfo">D7510D3E34B3591A8C3D00AA001A1651</Homeroom>
+      <Advisor SIF_RefObject="StaffPersonal">B359D3E34D75101A8C3D00AA001A1652</Advisor>
+      <FTE>1.00</FTE>
+      <FTPTStatus>01</FTPTStatus>
+      
+      
+    </StudentSchoolEnrollment>
+  </xhtml:Example>
+</DataObject>

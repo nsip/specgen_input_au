@@ -1,0 +1,101 @@
+<Appendix name="Wildcard Version Support Implementation Notes">
+	<p>Agents that register the ability to receive <code>SIF_Message</code>s defined by any number of 
+different SIF Implementation Specification versions by using 
+<a href="Infrastructure.html#SIF_Register__SIF_Version">version wildcards</a> in <code>SIF_Register/SIF_Version</code>
+and <code>SIF_Request/SIF_Version</code> may receive messages defined by specification versions that did not
+exist at the time of agent implementation.  This support can maximize agent communication in zones supporting multiple
+SIF versions; agent developers that design this support should be aware of the following implementation notes.  These
+notes focus on wildcard support for releases <b>within a given major release lifecycle</b> and do not address agents 
+that register support for <code>*</code>, indicating the ability to receive ANY version
+<code>SIF_Message</code>.  These messages can be very different structurally across major version boundaries and an
+agent may require more sophisticated capabilities to successfully process any <code>SIF_Message</code>, regardless of
+the SIF version that defines it.</p>
+	<Section name="XML Parsing">
+		<p>The message handling protocols documented in this specification are written from the perspective of having a well-formed
+and&#x2014;optionally&#x2014;valid XML document and the ability to randomly access element and attribute values within the document in performing
+the message handling steps as documented.  While some agent implementations have this ability, there do exist agent
+implementations that may process SIF XML using a streaming interface (e.g. SAX), processing an XML document node by node, 
+to perform equivalent functionality.  When these agents declare the ability to receive a <code>SIF_Message</code>
+defined by any minor release within a major release lifecycle, they cannot assume in processing a message that
+one element follows another without any intervening elements, as new minor releases of this specification can introduce
+optional elements into the SIF Data Model.  An agent written at the time of SIF Implementation Specification 1.1 
+to support <code>1.*</code> and to expect
+<code>OtherId</code> to follow <code>AlertMsg</code> might encounter difficulties with processing a <code>1.5r1</code>
+&#160;<code>StudentPersonal</code> if it were not designed to ignore new intervening 1.5r1 elements
+before <code>OtherId</code> unknown at the time of implementation, including <code>LocalId</code>, as shown here, not to mention <code>StatePrId</code> and <code>ElectronicId</code>, which were also both introduced
+in SIF Implementation Specification 1.5r1.</p>
+		<xhtml:Example xmlns="" intl ="us" name="StudentPersonal from SIF Implementation Specification 1.1">
+			<StudentPersonal RefId="D3E34B359D75101A8C3D00AA001A1652">
+				<AlertMessage Type="Legal">A legal alert for Joe Student.</AlertMessage>
+				<OtherId Type="06">P00001</OtherId>
+				<Name Type="04">
+					<LastName>Student</LastName>
+					<FirstName>Joe</FirstName>
+				</Name>
+			</StudentPersonal>
+		</xhtml:Example>
+		<xhtml:Example xmlns="" intl ="us" name="StudentPersonal from SIF Implementation Specification 1.5r1">
+			<StudentPersonal RefId="D3E34B359D75101A8C3D00AA001A1652">
+				<AlertMessage Type="Legal">A legal alert for Joe Student.</AlertMessage>
+				<LocalId>P00001</LocalId>
+				<OtherId Type="06">P00001</OtherId>
+				<Name Type="04">
+					<LastName>Student</LastName>
+					<FirstName>Joe</FirstName>
+				</Name>
+			</StudentPersonal>
+		</xhtml:Example>
+		<xhtml:Example xmlns = "" intl ="au"  name="StudentPersonal from SIF Implementation Specification 1.1">
+			<StudentPersonal RefId="D3E34B359D75101A8C3D00AA001A1652">
+				<AlertMessages>
+					<AlertMessage Type="Legal">A legal alert for Joe Student.</AlertMessage>
+				</AlertMessages>
+				<OtherIdList>
+					<OtherId Type="EMA">P00001</OtherId>
+				</OtherIdList>
+				<PersonInfo>
+					<Name Type="LGL">
+						<FamilyName>Student</FamilyName>
+						<GivenName>Joe</GivenName>
+					</Name>
+				</PersonInfo>
+			</StudentPersonal>
+		</xhtml:Example>
+		<p>Agents that parse XML on a node-by-node basis and that wish to support wildcard versions must be able to read and skip XML elements not of interest until an expected element of interest is reached.</p>
+	</Section>
+	<Section name="XML Validation">
+		<p>Though minor releases within a major version lifecycle of this specification are designed to be 
+supersets of previous minor releases, agents supporting wildcard versions and performing XML validation 
+should take into consideration that messages from a higher
+minor version in a major version lifecycle will not validate against schemas designed for a lower version, given the potential introduction of new objects,
+and new optional elements into existing data objects.  Agents that do perform XML validation should skip
+validation of received <code>SIF_Message</code>s that are defined by a higher version, unless they have dynamic 
+Internet access to hosted schemas where <code>SIF_Message/@Version</code> can be used to access schemas
+for new specification releases.  These agents can, of course, still establish that received <code>SIF_Message</code>
+XML is well-formed and process that XML to access elements/attributes of interest to the agent implementation.</p>
+		<p>While <code>SIF_Message</code>s defined by lower minor versions in a major version lifecyle may validate against
+a higher-version schema in that lifecycle, it is recommended also that higher-version agents skip XML validation
+of lower-version <code>SIF_Message</code>s unless they have local access to schemas corresponding to the version in
+question, in which case the appropriate schema should be used for validation, or unless they have dynamic Internet
+access to hosted schemas where <code>SIF_Message/@Version</code> can be used to access schemas for other specification
+releases.  This recommendation is made particularly because external code sets may be brought up to date with external
+sources with each release of this specification and a previously valid code set value may become invalid in
+a new specification.</p>
+		<p>Note that schemas hosted by the SIF Association are available at well-known URLs and can be used to dynamically access schemas for older/newer
+specification versions using <code>SIF_Message/@Version</code>, should agents with Internet access require them for
+XML validation:</p>
+		<p>
+			<code>http://www.sifinfo.org/infrastructure/&lt;value of SIF_Message/@Version&gt;/DTD/SIF_Message.dtd</code> (for SIF 1.x&#x2014;<code>XSD/SIF_Message.xsd</code> also available)<br/>
+			<code>http://specification.sifinfo.org/Implementation/&lt;value of SIF_Message/@Version&gt;/XSD/SIF_Message.xsd</code> (for SIF 2.x)</p>
+	</Section>
+	<Section name="SIF_Message Handling">
+		<p>While this is defined in the <a href="Messaging.html#AgentMessageHandlingSIF_Message">SIF_Message Agent Message Handling Protocol</a>, it bears
+repeating in this section that agents receiving an unexpected message from the ZIS respond according to protocol,
+acknowledging receipt of the message with a <code>SIF_Ack</code> including the <code>SIF_Error</code>
+element with a <code>SIF_Category</code> of <code>12</code> (Generic Message Handling) and a <code>SIF_Code</code> of 
+<code>2</code> (message not supported).  This
+allows an agent with wildcard version support to successfully ignore <code>SIF_Message</code>s that may be introduced
+with the addition of optional infrastructure functionality into new minor releases of this specification,
+including new <code>SIF_SystemControl</code> messages.</p>
+	</Section>
+</Appendix>

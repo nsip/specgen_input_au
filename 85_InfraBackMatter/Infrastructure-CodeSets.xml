@@ -1,0 +1,684 @@
+
+			<Intro>
+				<p>The <code>SIF_Status</code> element is returned in a <code>SIF_Ack</code> to acknowledge
+				successfully processing a message and, if necessary, to communicate additional information
+				to the recipient of the <code>SIF_Ack</code>.</p>
+			</Intro>
+			<Grouping code="Infrastructure" name="Infrastructure" file="false" sort="false">
+				<CodeSet>
+					<ID>Status Code</ID>
+					<Values>
+						<Value>
+							<Code>0</Code>
+							<Description>Success (ZIS ONLY). SIF_Status/SIF_Data may contain additional data.</Description>
+						</Value>
+						<Value>
+							<Code>1</Code>
+							<Description>Immediate SIF_Ack (AGENT ONLY). Message is persisted or processing is complete. Discard the referenced message.</Description>
+						</Value>
+						<Value>
+							<Code>2</Code>
+							<Description>Intermediate SIF_Ack (AGENT ONLY). Only valid in response to SIF_Event delivery. Invokes Selective Message Blocking. The event referenced must still be persisted, and no other events must be delivered, until the agent sends a &quot;Final&quot; SIF_Ack at a later time.</Description>
+						</Value>
+						<Value>
+							<Code>3</Code>
+							<Description>Final SIF_Ack (AGENT ONLY). Sent (a SIF_Ack with this value is never returned by an agent in response to a delivered message) by an agent to the ZIS to end Selective Message Blocking. Discard the referenced event and allow for delivery of other events.</Description>
+						</Value>
+						<Value>
+							<Code>7</Code>
+							<Description>Already have a message with this SIF_MsgId from you.</Description>
+						</Value>
+						<Value>
+							<Code>8</Code>
+							<Description>Receiver is sleeping.</Description>
+						</Value>
+						<Value>
+							<Code>9</Code>
+							<Description>No messages available. This is returned when an agent is trying to pull messages from a ZIS and there are no messages available.</Description>
+						</Value>
+					</Values>
+				</CodeSet>
+				
+				<CodeSet>
+					<Intro>
+						<p>
+							The following table describes the functional areas where an error may occur in SIF.
+							When a <code>SIF_Error</code> element is returned within a <code>SIF_Ack</code> message,
+							the <code>SIF_Error/SIF_Category</code> element <span class="rfc2119">MUST</span> contain one of the values from the table.
+						</p>
+						<p>
+							The next tables present the error codes that must be used when constructing a <code>SIF_Error</code> element.
+							The value of <code>SIF_Error/SIF_Code</code> must come from these lists unless the functional category is <code>System</code>
+							where error codes not defined in these tables can be included.
+						</p>
+					</Intro>
+					<ID>Error Category</ID>
+					<Values base="xs:unsignedInt">
+						<Value>
+							<Code>0</Code>
+							<Text>Unknown (This should NEVER be used if possible)</Text>
+						</Value>
+						<Value>
+							<Code>1</Code>
+							<Text>XML Validation</Text>
+						</Value>
+						<Value>
+							<Code>2</Code>
+							<Text>Encryption</Text>
+						</Value>
+						<Value>
+							<Code>3</Code>
+							<Text>Authentication</Text>
+						</Value>
+						<Value>
+							<Code>4</Code>
+							<Text>Access and Permissions</Text>
+						</Value>
+						<Value>
+							<Code>5</Code>
+							<Text>Registration</Text>
+						</Value>
+						<Value>
+							<Code>6</Code>
+							<Text>Provision</Text>
+						</Value>
+						<Value>
+							<Code>7</Code>
+							<Text>Subscription</Text>
+						</Value>
+						<Value>
+							<Code>8</Code>
+							<Text>Request and Response</Text>
+						</Value>
+						<Value>
+							<Code>9</Code>
+							<Text>Event Reporting and Processing</Text>
+						</Value>
+						<Value>
+							<Code>10</Code>
+							<Text>Transport</Text>
+						</Value>
+						<Value>
+							<Code>11</Code>
+							<Text>System (OS, Database, Vendor localized, etc.)</Text>
+						</Value>
+						<Value>
+							<Code>12</Code>
+							<Text>Generic Message Handling</Text>
+						</Value>
+						<Value>
+							<Code>13</Code>
+							<Text>SMB Handling</Text>
+						</Value>
+						<Value>
+							<Code>14</Code>
+							<Text>SIF Zone Service</Text>
+						</Value>
+					</Values>
+				</CodeSet>
+
+				<CodeSet>
+					<ID>XML Validation Error</ID>
+					<Values>
+						<Value>
+							<Code>1</Code>
+							<Text>Generic error</Text>
+						</Value>
+						<Value>
+							<Code>2</Code>
+							<Text>Message is not well-formed</Text>
+						</Value>
+						<Value>
+							<Code>3</Code>
+							<Text>Generic validation error</Text>
+						</Value>
+						<Value>
+							<Code>4</Code>
+							<Text>Invalid value for element/attribute</Text>
+						</Value>
+						<Value>
+							<Code>6</Code>
+							<Text>Missing mandatory element/attribute</Text>
+						</Value>
+					</Values>
+				</CodeSet>
+				<CodeSet>
+					<ID>Encryption Error</ID>
+					<Values>
+						<Value>
+							<Code>1</Code>
+							<Text>Generic error</Text>
+						</Value>
+					</Values>
+				</CodeSet>
+				
+				<CodeSet>
+					<ID>Authentication Error</ID>
+					<Values>
+						<Value>
+							<Code>1</Code>
+							<Text>Generic error</Text>
+						</Value>
+						<Value>
+							<Code>2</Code>
+							<Text>Generic authentication error (with signature)</Text>
+						</Value>
+						<Value>
+							<Code>3</Code>
+							<Text>Missing sender's certificate</Text>
+						</Value>
+						<Value>
+							<Code>4</Code>
+							<Text>Invalid certificate</Text>
+						</Value>
+						<Value>
+							<Code>5</Code>
+							<Text>Sender's certificate is not trusted</Text>
+						</Value>
+						<Value>
+							<Code>6</Code>
+							<Text>Expired certificate</Text>
+						</Value>
+						<Value>
+							<Code>7</Code>
+							<Text>Invalid signature</Text>
+						</Value>
+						<Value>
+							<Code>8</Code>
+							<Text>Invalid encryption algorithm (only accepts MD4)</Text>
+						</Value>
+						<Value>
+							<Code>9</Code>
+							<Text>Missing public key of the receiver (when decrypting message)</Text>
+						</Value>
+						<Value>
+							<Code>10</Code>
+							<Text>Missing receiver's private key (when decrypting message)</Text>
+						</Value>
+					</Values>
+				</CodeSet>
+				
+				<CodeSet>
+					<ID>Access and Permission Error</ID>
+					<Values>
+						<Value>
+							<Code>1</Code>
+							<Text>Generic error</Text>
+						</Value>
+						<Value>
+							<Code>2</Code>
+							<Text>No permission to register</Text>
+						</Value>
+						<Value>
+							<Code>3</Code>
+							<Text>No permission to provide this object</Text>
+						</Value>
+						<Value>
+							<Code>4</Code>
+							<Text>No permission to subscribe to this SIF_Event</Text>
+						</Value>
+						<Value>
+							<Code>5</Code>
+							<Text>No permission to request this object</Text>
+						</Value>
+						<Value>
+							<Code>6</Code>
+							<Text>No permission to respond to this object request</Text>
+						</Value>
+						<Value>
+							<Code>7</Code>
+							<Text>No permission to publish SIF_Event</Text>
+						</Value>
+						<Value>
+							<Code>8</Code>
+							<Text>No permission to administer policies</Text>
+						</Value>
+						<Value>
+							<Code>9</Code>
+							<Text>SIF_SourceId is not registered</Text>
+						</Value>
+						<Value>
+							<Code>10</Code>
+							<Text>No permission to publish SIF_Event Add</Text>
+						</Value>
+						<Value>
+							<Code>11</Code>
+							<Text>No permission to publish SIF_Event Change</Text>
+						</Value>
+						<Value>
+							<Code>12</Code>
+							<Text>No permission to publish SIF_Event Delete</Text>
+						</Value>
+						<Value>
+							<Code>13</Code>
+							<Text>No permission to publish indicated SIF_Notification</Text>
+						</Value>
+						<Value>
+							<Code>14</Code>
+							<Text>No permission to invoke SIF_ServiceInput to this Service</Text>
+						</Value>
+						<Value>
+							<Code>15</Code>
+							<Text>No permission to provide this Service</Text>
+						</Value>
+					</Values>
+				</CodeSet>
+				
+				<CodeSet>
+					<ID>Registration Error</ID>
+					<Values>
+						<Value>
+							<Code>1</Code>
+							<Text>Generic error</Text>
+						</Value>
+						<Value>
+							<Code>2</Code>
+							<Text>The SIF_SourceId is invalid</Text>
+						</Value>
+						<Value>
+							<Code>3</Code>
+							<Text>Requested transport protocol is unsupported</Text>
+						</Value>
+						<Value>
+							<Code>4</Code>
+							<Text>Requested SIF_Version(s) not supported.</Text>
+						</Value>
+						<Value>
+							<Code>6</Code>
+							<Text>Requested SIF_MaxBufferSize is too small</Text>
+						</Value>
+						<Value>
+							<Code>7</Code>
+							<Text>ZIS requires a secure transport</Text>
+						</Value>
+						<Value>
+							<Code>9</Code>
+							<Text>Agent is registered for push mode (returned when a push-mode agent sends a SIF_GetMessage).</Text>
+						</Value>
+						<Value>
+							<Code>10</Code>
+							<Text>ZIS does not support the requested <code>Accept-Encoding</code> value.</Text>
+						</Value>
+					</Values>
+				</CodeSet>
+				
+				<CodeSet>
+					<ID>Provision Error</ID>
+					<Values>
+						<Value>
+							<Code>1</Code>
+							<Text>Generic error</Text>
+						</Value>
+						<Value>
+							<Code>3</Code>
+							<Text>Invalid object</Text>
+						</Value>
+						<Value>
+							<Code>4</Code>
+							<Text>Object already has a provider (SIF_Provide message)</Text>
+						</Value>
+						<!--
+						<Value>
+							<Code>5</Code>
+							<Text>Not the provider of the object (SIF_Unprovide message)</Text>
+						</Value>
+						-->
+					</Values>
+				</CodeSet>
+				
+				<CodeSet>
+					<ID>Subscription Error</ID>
+					<Values>
+						<Value>
+							<Code>1</Code>
+							<Text>Generic error</Text>
+						</Value>
+						<Value>
+							<Code>3</Code>
+							<Text>Invalid object</Text>
+						</Value>
+						<!--
+						<Value>
+							<Code>4</Code>
+							<Text>Not a subscriber of the object (SIF_Unsubscribe message)</Text>
+						</Value>
+						-->
+					</Values>
+				</CodeSet>
+				
+				<CodeSet>
+					<ID>Request and Response Error</ID>
+					<Values>
+						<Value>
+							<Code>1</Code>
+							<Text>Generic error</Text>
+						</Value>
+						<Value>
+							<Code>3</Code>
+							<Text>Invalid object</Text>
+						</Value>
+						<Value>
+							<Code>4</Code>
+							<Text>No provider</Text>
+						</Value>
+						<Value>
+							<Code>7</Code>
+							<Text>Responder does not support requested SIF_Version</Text>
+						</Value>
+						<Value>
+							<Code>8</Code>
+							<Text>Responder does not support requested SIF_MaxBufferSize</Text>
+						</Value>
+						<Value>
+							<Code>9</Code>
+							<Text>Unsupported query in request</Text>
+						</Value>
+						<Value>
+							<Code>10</Code>
+							<Text>Invalid SIF_RequestMsgId specified in SIF_Response</Text>
+						</Value>
+						<Value>
+							<Code>11</Code>
+							<Text>SIF_Response is larger than requested SIF_MaxBufferSize</Text>
+						</Value>
+						<Value>
+							<Code>12</Code>
+							<Text>SIF_PacketNumber is invalid in SIF_Response</Text>
+						</Value>
+						<Value>
+							<Code>13</Code>
+							<Text>SIF_Response does not match any SIF_Version from SIF_Request</Text>
+						</Value>
+						<Value>
+							<Code>14</Code>
+							<Text>SIF_DestinationId does not match SIF_SourceId from SIF_Request</Text>
+						</Value>
+						<Value>
+							<Code>15</Code>
+							<Text>No support for SIF_ExtendedQuery</Text>
+						</Value>
+						<Value>
+							<Code>16</Code>
+							<Text>SIF_RequestMsgId deleted from cache due to timeout</Text>
+						</Value>
+						<Value>
+							<Code>17</Code>
+							<Text>SIF_RequestMsgId deleted from cache by administrator</Text>
+						</Value>
+						<Value>
+							<Code>18</Code>
+							<Text>SIF_Request cancelled by requesting agent</Text>
+						</Value>
+						<Value>
+						  <Code>19</Code>
+						  <Text>SIF_Request cancelled due to a SIF XML filter rule</Text>
+						</Value>
+					</Values>
+				</CodeSet>
+				
+				<CodeSet>
+					<ID>Event Reporting and Processing Error</ID>
+					<Values>
+						<Value>
+							<Code>1</Code>
+							<Text>Generic error</Text>
+						</Value>
+						<Value>
+							<Code>3</Code>
+							<Text>Invalid event</Text>
+						</Value>
+					</Values>
+				</CodeSet>
+				
+				<CodeSet>
+					<ID>Transport Error</ID>
+					<Values>
+						<Value>
+							<Code>1</Code>
+							<Text>Generic error</Text>
+						</Value>
+						<Value>
+							<Code>2</Code>
+							<Text>Requested protocol is not supported</Text>
+						</Value>
+						<Value>
+							<Code>3</Code>
+							<Text>Secure channel requested and no secure path exists</Text>
+						</Value>
+						<Value>
+							<Code>4</Code>
+							<Text>Unable to establish connection</Text>
+						</Value>
+					</Values>
+				</CodeSet>
+				
+				<CodeSet>
+					<ID>System Error</ID>
+					<Values>
+						<Value>
+							<Code>1</Code>
+							<Text>Generic error</Text>
+						</Value>
+					</Values>
+				</CodeSet>
+				
+				<CodeSet>
+					<ID>Generic Message Handling Error</ID>
+					<Values>
+						<Value>
+							<Code>1</Code>
+							<Text>Generic error</Text>
+						</Value>
+						<Value>
+							<Code>2</Code>
+							<Text>Message not supported</Text>
+						</Value>
+						<Value>
+							<Code>3</Code>
+							<Text>Version not supported</Text>
+						</Value>
+						<Value>
+							<Code>4</Code>
+							<Text>Context not supported</Text>
+						</Value>
+						<Value>
+							<Code>5</Code>
+							<Text>Protocol error</Text>
+						</Value>
+						<Value>
+							<Code>6</Code>
+							<Text>No such message (as identified by SIF_OriginalMsgId)</Text>
+						</Value>
+						<Value>
+							<Code>7</Code>
+							<Text>Multiple contexts not supported</Text>
+						</Value>
+					</Values>
+				</CodeSet>
+				
+				<CodeSet>
+					<ID>SMB Error</ID>
+					<Values>
+						<Value>
+							<Code>1</Code>
+							<Text>Generic error</Text>
+						</Value>
+						<Value>
+							<Code>2</Code>
+							<Text>SMB can only be invoked during a SIF_Event acknowledgement</Text>
+						</Value>
+						<Value>
+							<Code>3</Code>
+							<Text>Final SIF_Ack expected from Push-Mode Agent</Text>
+						</Value>
+						<Value>
+							<Code>4</Code>
+							<Text>Incorrect SIF_MsgId in final SIF_Ack</Text>
+						</Value>
+					</Values>
+				</CodeSet>
+				
+				<CodeSet>
+					<ID>SIF Zone Service Error</ID>
+					<Values>
+						<Value>
+							<Code>1</Code>
+							<Text>Generic error</Text>
+						</Value>
+						<Value>
+							<Code>2</Code>
+							<Text>Invalid service</Text>
+						</Value>
+						<Value>
+							<Code>3</Code>
+							<Text>No provider for service</Text>
+						</Value>
+						<Value>
+							<Code>4</Code>
+							<Text>Responder does not support requested SIF_Version</Text>
+						</Value>
+						<Value>
+							<Code>5</Code>
+							<Text>Responder does not support requested SIF_MaxBufferSize</Text>
+						</Value>
+						<Value>
+							<Code>6</Code>
+							<Text>Operation not supported</Text>
+						</Value>
+						<Value>
+							<Code>7</Code>
+							<Text>Argument not valid</Text>
+						</Value>
+						<Value>
+							<Code>8</Code>
+							<Text>Invalid SIF_ServiceMsgId specified in SIF_ServiceOutput</Text>
+						</Value>
+						<Value>
+							<Code>9</Code>
+							<Text>SIF_ServiceOutput is larger than requested SIF_MaxBufferSize</Text>
+						</Value>
+						<Value>
+							<Code>10</Code>
+							<Text>SIF_PacketNumber is invalid</Text>
+						</Value>
+						<Value>
+							<Code>11</Code>
+							<Text>SIF_ServiceOutput does not match any SIF_Version from SIF_ServiceInput</Text>
+						</Value>
+						<Value>
+							<Code>12</Code>
+							<Text>SIF_DestinationId does not match SIF_SourceId from SIF_ServiceInput</Text>
+						</Value>
+						<Value>
+							<Code>13</Code>
+							<Text>SIF_ServiceMsgId deleted from cache due to timeout</Text>
+						</Value>
+						<Value>
+							<Code>14</Code>
+							<Text>SIF_ServiceMsgId deleted from cache by administrator</Text>
+						</Value>
+						<Value>
+							<Code>15</Code>
+							<Text>SIF_ServiceInput cancelled by requesting agent</Text>
+						</Value>
+						<Value>
+							<Code>16</Code>
+							<Text>ACL permission denied</Text>
+						</Value>
+						<Value>
+							<Code>17</Code>
+							<Text>Not a provider for this service</Text>
+						</Value>
+						<Value>
+							<Code>18</Code>
+							<Text>Service or Operation failed</Text>
+						</Value>
+				
+					</Values>
+				</CodeSet>
+			</Grouping>
+			
+			<Grouping code="SIF_LogEntry" name="SIF_LogEntry" file="false">
+
+
+				<CodeSet>
+					<ID>Success Category</ID>
+					<Values>
+						<Value>
+							<Code>1</Code>
+							<Text>Success</Text>
+						</Value>
+					</Values>
+				</CodeSet>
+
+				<CodeSet>
+					<ID>Data Issues with Success Result</ID>
+					<Values>
+						<Value>
+							<Code>1</Code>
+							<Text>Data was changed to complete request successfully</Text>
+						</Value>
+						<Value>
+							<Code>2</Code>
+							<Text>Data was added to complete request successfully</Text>
+						</Value>
+					</Values>
+				</CodeSet>
+
+				<CodeSet>
+					<ID>Data Issues with Failure Result</ID>
+					<Values>
+						<Value>
+							<Code>1</Code>
+							<Text>Insufficient information in message</Text>
+						</Value>
+						<Value>
+							<Code>2</Code>
+							<Text>Cannot process change due to business rule</Text>
+						</Value>
+						<Value>
+							<Code>3</Code>
+							<Text>Related information unavailable</Text>
+						</Value>
+					</Values>
+				</CodeSet>
+
+				<CodeSet>
+					<ID>Agent Error Condition</ID>
+					<Values>
+						<Value>
+							<Code>1</Code>
+							<Text>An exception has occurred in the agent (generic error)</Text>
+						</Value>
+					</Values>
+				</CodeSet>
+
+				<CodeSet>
+					<ID>ZIS Error Condition</ID>
+					<Values>
+						<Value>
+							<Code>1</Code>
+							<Text>An exception has occurred in the ZIS (generic error)</Text>
+						</Value>
+						<Value>
+							<Code>2</Code>
+							<Text>Message could not be delivered due to buffer size limitations</Text>
+						</Value>
+						<Value>
+							<Code>3</Code>
+							<Text>Message could not be delivered due to minimum security requirements</Text>
+						</Value>
+						<Value>
+							<Code>4</Code>
+							<Text>Message could not be delivered due to destination agent not supporting SIF_Version</Text>
+						</Value>
+						<Value>
+							<Code>5</Code>
+							<Text>Message could not be delivered due to SIF_Response validation</Text>
+						</Value>
+					</Values>
+				</CodeSet>
+
+			</Grouping>
+
+

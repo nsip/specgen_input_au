@@ -1,0 +1,173 @@
+<CommonElement name="BaseNameType" type="true" dm="true">
+  <Item>
+    <Element>BaseNameType</Element>
+    <Description>
+      <p>
+        Base type, without attributes, for <code>Name</code> elements, primarily to allow structure to be leveraged with different <code>Type</code> attribute values.
+      </p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>Title</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A title or prefix associated with the name. If any of: Mr, Mrs, Ms, Miss, Rev, Fr, Dr, Prof, Hon, Sir, Lord, Lady - these must be as shown, otherwise free text. Note that title is not applicable to learners. </p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  <Item>
+    <Element>FamilyName</Element>
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>Family name. That part of the person's name which is used to describe family, clan, tribal group, or marital association. Note that this element is required when known. However, it may not be possible to know the family name in which case you should add the available information to the FullName element. </p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  <Item>
+    <Element>GivenName</Element>
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>Given name of the person. Note that this element is required if known. However, it may not be possible to know the given name in which case you should add the available information to the FullName element. </p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  <Item>
+    <Element>MiddleName</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>All other given or middle names, each separated with a single space character. </p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  <Item>
+    <Element>FamilyNameFirst</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>An indicator used to identify the naming conventions used by some predominantly non-European, ethnic or language groups and related to the display nature of a name. </p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
+  </Item>
+  <Item>
+    <Element>PreferredFamilyName</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The family name preferred most by the person (as written). </p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  <Item>
+    <Element>PreferredFamilyNameFirst</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>An indicator used to identify the naming conventions used by some predominantly non-European, ethnic or language groups and related to the display nature of a name. </p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
+  </Item>
+  <Item>
+    <Element>PreferredGivenName</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The given name preferred most by the person (as written). </p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  <Item>
+    <Element>Suffix</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Textual suffix like PHD, JP, BSc. </p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  <Item>
+    <Element>FullName</Element>
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>A free text field for the complete name for display purposes. If this is associated with a StudentPersonal,StaffPersonal or StudentContactPersonal record and the FamilyName and GivenName are not both specified, then this becomes mandatory. </p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  <xhtml:Example xmlns="">
+    <Name Type="LGL">
+      <FamilyName>Wesson</FamilyName>
+      <GivenName>Melanie</GivenName>
+      <MiddleName>Joan</MiddleName>
+      <FamilyNameFirst>N</FamilyNameFirst>
+      <PreferredFamilyName>Wesson</PreferredFamilyName>
+      <PreferredFamilyNameFirst>N</PreferredFamilyNameFirst>
+      <PreferredGivenName>Mel</PreferredGivenName>
+    </Name>
+
+  </xhtml:Example>
+</CommonElement>
+
+<CommonElement name="NameOfRecordType" type="true" dm="true">
+  <Item>
+    <Element>NameOfRecordType</Element>
+    <Description>
+      <p>
+        Extends <code>BaseNameType</code> to allow for one <code>Type</code> attribute value, indicating the name is the name of record;
+        serves as the primary name in some SIF objects, including <code>StudentPersonal</code>.
+      </p>
+    </Description>
+    <Type complex="extension" name="BaseNameType"></Type>
+  </Item>
+  <Item>
+    <Attribute>Type</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>
+        Code that specifies what type of name this is. Note that type "LGL" must be used here.
+      </p>
+    </Description>
+    <Values>
+      <Value>
+        <Code>LGL</Code>
+        <Text>Name of Record</Text>
+      </Value>
+    </Values>
+  </Item>
+</CommonElement>
+
+<CommonElement name="OtherNameType" type="true" dm="true">
+  <Item>
+    <Element>OtherNameType</Element>
+    <Description>
+      <p>
+        Extends <code>BaseNameType</code> to allow for <code>Type</code> attribute values excluding "name of record."  Used for other names to
+        be included in addition to the name of record in objects.
+      </p>
+    </Description>
+    <Type complex="extension" name="BaseNameType"></Type>
+  </Item>
+  <Item>
+    <Attribute>Type</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>
+        Code that specifies what type of name this is. Note that type "LGL" is NOT to be used here.
+      </p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsNameUsageTypeType"></Type>
+  </Item>
+</CommonElement>
+
+<CommonElement name="PartialDateType" type="true">
+  <Item>
+    <Element>PartialDateType</Element>
+    <Description>
+      <p>A year, with an optional month/day, or an optional month by itself.</p>
+    </Description>
+    <Union>
+      <Type name="xs:date"></Type>
+      <Type name="xs:gYearMonth"></Type>
+      <Type name="xs:gYear"></Type>
+    </Union>
+  </Item>
+</CommonElement>
+
+
+
+
+
+

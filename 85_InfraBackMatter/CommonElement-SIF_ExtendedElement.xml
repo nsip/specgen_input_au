@@ -1,0 +1,71 @@
+<CommonElement name="SIF_ExtendedElements"  type="true">
+  <Intro>
+    <p>
+      This element is supported at the end of all SIF objects.
+      The element is used to extend existing SIF objects with locally-defined elements.
+      Extended elements <span class="rfc2119">SHOULD NOT</span> be used to duplicate data that can be obtained from other SIF objects.
+    </p>
+  </Intro>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Description>
+      <p>Allows an agent to include data not yet defined within a SIF data object as name/value pairs.</p>
+    </Description>
+    <List mode="ActionList">
+      <Key>SIF_ExtendedElement/@Name</Key>
+    </List>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElement</Element>
+    <Characteristics>OR</Characteristics>
+    <Description>
+      <p>A name/value pair, the name being contained in the Name attribute, the value being the element content.</p>
+    </Description>
+    <Type ref="CommonTypes" complex="extension" name="ExtendedContentType"></Type>
+  </Item>
+  <Item>
+    <Attribute>Name</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The name of the extended element. As it is possible that names for extended elements may collide from agent to agent, it is recommended that the names of extended elements be configurable in an agent, or that agents use URIs for the names of extended elements.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  <Item>
+    <Attribute>xsi:type</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Allows type of element to be explicitly communicated.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>SIF_Action</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>
+        In a <code>Change</code> event, this flag can be used to indicate an element has been deleted from the parent list container.  At a minimum the key for the list must also be present.
+      </p>
+    </Description>
+    <Values>
+      <Value>
+        <Code>Delete</Code>
+      </Value>
+    </Values>
+  </Item>
+
+  <xhtml:Example xmlns="">
+    <SIF_ExtendedElements>
+      <SIF_ExtendedElement Name="ApplicationSubmissionStatus">4</SIF_ExtendedElement>
+      <SIF_ExtendedElement Name="DynamicXml">
+        <Parent xmlns="http://myapplication.com">
+          <Child n='1'>one</Child>
+          <Child n='2'/>
+          <Child n='3'>three</Child>
+        </Parent>
+      </SIF_ExtendedElement>
+      <SIF_ExtendedElement Name="Note" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+        <xhtml:strong>Double</xhtml:strong>-check submission status.
+      </SIF_ExtendedElement>
+    </SIF_ExtendedElements>
+  </xhtml:Example>
+</CommonElement>
