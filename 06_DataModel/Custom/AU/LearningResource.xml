@@ -19,14 +19,7 @@
     </Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
   </Item>
-  <Item>
-
-    <Attribute>xml:lang</Attribute>
-    <Characteristics>M</Characteristics>
-    <Description>
-      <p>The default language used in the LearningResource object.</p>
-    </Description>
-  </Item>
+ 
   <Item>
     <Element>Name</Element>
 
@@ -70,7 +63,7 @@
     <Description>
       <p>Name of contact person. Use the generic element Name.</p>
     </Description>
-    <Type ref="DataModel" name="Name"></Type>
+    <Type ref="DataModel" name="NameType"></Type>
   </Item>
   <Item>
     <Element>//Address</Element>
@@ -79,7 +72,7 @@
     <Description>
       <p>Address of organization or company.</p>
     </Description>
-    <Type ref="DataModel" name="Address"></Type>
+    <Type ref="DataModel" name="AddressType"></Type>
   </Item>
   <Item>
     <Element>//PhoneNumber</Element>
@@ -88,7 +81,7 @@
     <Description>
       <p>Phone number of organization or company.</p>
     </Description>
-    <Type ref="DataModel" name="PhoneNumber"></Type>
+    <Type ref="DataModel" name="PhoneNumberType"></Type>
   </Item>
   <Item>
     <Element>//Email</Element>
@@ -97,7 +90,7 @@
     <Description>
       <p>The email of the organization or company.</p>
     </Description>
-    <Type ref="DataModel" name="Email"></Type>
+    <Type ref="DataModel" name="EmailType"></Type>
   </Item>
   <Item>
     <Element>Location</Element>
@@ -139,7 +132,7 @@
     <Element>YearLevels</Element>
 
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="YearLevels"></Type>
+    <Type ref="DataModel" name="YearLevelsType"></Type>
   </Item>
   <Item>
     <Element>SubjectAreas</Element>
@@ -150,7 +143,7 @@
     <Element>/ACStrandSubjectArea</Element>
 
     <Characteristics>MR</Characteristics>
-    <Type ref="DataModel" name="ACStrandSubjectArea"></Type>
+    <Type ref="DataModel" name="ACStrandSubjectAreaType"></Type>
   </Item>
   <Item>
     <Element>MediaTypes</Element>
@@ -276,7 +269,7 @@
     <Description>
       <p>Name of individual who submitted evaluation.</p>
     </Description>
-    <Type ref="DataModel" name="Name"></Type>
+    <Type ref="DataModel" name="NameType"></Type>
   </Item>
 
   <Item>
@@ -395,16 +388,16 @@
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_Metadata"></Type>
+    <Type ref="DataModel" name="SIF_MetadataType"></Type>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
 
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_ExtendedElements"></Type>
+    <Type ref="DataModel" name="SIF_ExtendedElementsType"></Type>
   </Item>
   <xhtml:Example xmlns="">
-    <LearningResource RefId="6938D88F82A37EFD88892429EC6AB1B5" xml:lang="en">
+    <LearningResource RefId="6938D88F-82A3-7EFD-8889-2429EC6AB1B5" lang="en">
       <Name>A World of Music (Teacher Reference Sheet)</Name>
       <Author>The Queensland Performing Arts Edge</Author>
       <Contacts>
@@ -463,7 +456,7 @@
         </Approval>
       </Approvals>
       <Evaluations>
-        <Evaluation RefId="F1BC63DFD02CCED654EF558E84904E01">
+        <Evaluation RefId="F1BC63DF-D02C-CED6-54EF-558E84904E01">
           <Description>This resource references QLD curriculum standards</Description>
           <Date>2001-06-15</Date>
           <Name Type="LGL">
@@ -481,15 +474,15 @@
             <Strategy>Inquiry</Strategy>
           </Strategies>
           <AssociatedObjects>
-            <AssociatedObject SIF_RefObject="LearningResource">667A87E21B4B9470CE61568576DF921E</AssociatedObject>
+            <AssociatedObject SIF_RefObject="LearningResource">667A87E2-1B4B-9470-CE61-568576DF921E</AssociatedObject>
           </AssociatedObjects>
         </Component>
       </Components>
       <LearningStandards>
-        <LearningStandardItemRefId>D56D76D40F0B96916DA4CA2E230494E8</LearningStandardItemRefId>
-        <LearningStandardItemRefId>DBCE64060B47E555A64AF7FCE6C1A4A9</LearningStandardItemRefId>
+        <LearningStandardItemRefId>D56D76D4-0F0B-9691-6DA4-CA2E230494E8</LearningStandardItemRefId>
+        <LearningStandardItemRefId>DBCE6406-0B47-E555-A64A-F7FCE6C1A4A9</LearningStandardItemRefId>
       </LearningStandards>
-      <LearningResourcePackageRefId>6D254047C5E542CBB7921D03ED3BD894</LearningResourcePackageRefId>
+      <LearningResourcePackageRefId>6D254047-C5E5-42CB-B792-1D03ED3BD894</LearningResourcePackageRefId>
     </LearningResource>
   </xhtml:Example>
 </DataObject>

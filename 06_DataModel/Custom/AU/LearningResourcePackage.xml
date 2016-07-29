@@ -19,7 +19,7 @@
 		<Type ref="CommonTypes" complex="extension" name="AbstractContentPackageType"/>
 	</Item>
 	<xhtml:Example xmlns="">
-		<LearningResourcePackage RefId="C7DE86685968459FBF9FED22A0E1EA6E">
+		<LearningResourcePackage RefId="C7DE8668-5968-459F-BF9F-ED22A0E1EA6E">
 			<BinaryData MIMEType="text/html;charset=utf-16">...</BinaryData>
 		</LearningResourcePackage>
 	</xhtml:Example>

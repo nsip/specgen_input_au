@@ -204,29 +204,29 @@
     <Description>
       <p>The accounting period against which the transaction is billed.</p>
     </Description>
-    <Type ref="DataModel" name="LocalId"></Type>
+    <Type ref="DataModel" name="LocalIdType"></Type>
   </Item>
   
   
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_Metadata"></Type>
+    <Type ref="DataModel" name="SIF_MetadataType"></Type>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_ExtendedElements"></Type>
+    <Type ref="DataModel" name="SIF_ExtendedElementsType"></Type>
   </Item>
   <xhtml:Example xmlns="">
-    <PaymentReceipt RefId="EDF4985ABC3458FEDA75493AB3812345">
+    <PaymentReceipt RefId="EDF4985A-BC34-58FE-DA75-493AB3812345">
       <TransactionType>GL payment</TransactionType>
-      <InvoiceRefId>CA12345847DEA97463FEB238759FD123</InvoiceRefId>
+      <InvoiceRefId>CA123458-47DE-A974-63FE-B238759FD123</InvoiceRefId>
        <TransactionDate>1999-10-20</TransactionDate>
       <TransactionAmount Currency="AUD" Type="Debit">50.00</TransactionAmount>
       <ReceivedTransactionId>XYZZY</ReceivedTransactionId>
       <FinancialAccountRefIdList>
-        <FinancialAccountRefId>ED12345FDA8497275BC28AA349DD3721</FinancialAccountRefId> 
+        <FinancialAccountRefId>ED12345F-DA84-9727-5BC2-8AA349DD3721</FinancialAccountRefId> 
       </FinancialAccountRefIdList>
     </PaymentReceipt>
     

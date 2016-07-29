@@ -45,7 +45,7 @@
         School year for which the information is applicable, expressed as the four-digit year. e.g. <code>2013</code>
       </p>
     </Description>
-    <Type ref="DataModel" name="SchoolYear"></Type>
+     <Type ref="DataModel" name="SchoolYearType"></Type>
   </Item>
   
 
@@ -182,18 +182,18 @@
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_Metadata"></Type>
+    <Type ref="DataModel" name="SIF_MetadataType"></Type>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
 
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_ExtendedElements"></Type>
+    <Type ref="DataModel" name="SIF_ExtendedElementsType"></Type>
   </Item>
   <xhtml:Example xmlns="">
-    <StudentSectionEnrollment RefId="983AC16598793002C3D00AA00456789D" >
-	  <StudentPersonalRefId>CAE293165987101A8C3D00AA00456789</StudentPersonalRefId>
-      <SectionInfoRefId>9076AB23E386112B7EA2256100BB3312</SectionInfoRefId>
+    <StudentSectionEnrollment RefId="983AC165-9879-3002-C3D0-0AA00456789D" >
+	  <StudentPersonalRefId>CAE29316-5987-101A-8C3D-00AA00456789</StudentPersonalRefId>
+      <SectionInfoRefId>9076AB23-E386-112B-7EA2-256100BB3312</SectionInfoRefId>
 	  <SchoolYear>2013</SchoolYear>
       <EntryDate>2013-02-02</EntryDate>
       <ExitDate>2013-11-15</ExitDate>

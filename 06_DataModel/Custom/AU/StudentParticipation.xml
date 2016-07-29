@@ -75,7 +75,7 @@
   <Item>
     <Element>//OtherCodeList</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="OtherCodeList"></Type>
+    <Type ref="DataModel" name="OtherCodeListType"></Type>
   </Item>
 
 
@@ -120,7 +120,7 @@
   <Item>
     <Element>/OtherCodeList</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="OtherCodeList"/>
+    <Type ref="DataModel" name="OtherCodeListType"/>
   </Item>
   <Item>
     <Element>ProgramStatus</Element>
@@ -128,7 +128,7 @@
     <Description>
       <p>The current status of the student's program participation.</p>
     </Description>
-    <Type ref="DataModel" name="ProgramStatus"/>
+    <Type ref="DataModel" name="ProgramStatusType"/>
   </Item>
   <Item>
     <Element>GiftedEligibilityCriteria</Element>
@@ -256,7 +256,7 @@
   <Item>
     <Element>/OtherCodeList</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="OtherCodeList"/>
+    <Type ref="DataModel" name="OtherCodeListType"/>
   </Item>
   <Item>
     <Element>EntryPerson</Element>
@@ -301,16 +301,16 @@
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_Metadata"></Type>
+    <Type ref="DataModel" name="SIF_MetadataType"></Type>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_ExtendedElements"></Type>
+    <Type ref="DataModel" name="SIF_ExtendedElementsType"></Type>
   </Item>
   <xhtml:Example xmlns="">
-    <StudentParticipation RefId="D3E34B359D75101A8C3D00AA001A1652">
-      <StudentPersonalRefId>A2E34F59A742C1A4B3D11CC002B163A2</StudentPersonalRefId>
+    <StudentParticipation RefId="D3E34B35-9D75-101A-8C3D-00AA001A1652">
+      <StudentPersonalRefId>A2E34F59-A742-C1A4-B3D1-1CC002B163A2</StudentPersonalRefId>
       <StudentParticipationAsOfDate>2006-07-13</StudentParticipationAsOfDate>
       <ProgramType>0240</ProgramType>
       <ProgramFundingSources>
@@ -319,7 +319,7 @@
         </ProgramFundingSource>
       </ProgramFundingSources>
       
-      <ManagingSchool SIF_RefObject="SchoolInfo">D93F4D183A42C1A4B3D11CC002B163A2</ManagingSchool>
+      <ManagingSchool SIF_RefObject="SchoolInfo">D93F4D18-3A42-C1A4-B3D1-1CC002B163A2</ManagingSchool>
       
       
       <ParticipationContact>John Mason</ParticipationContact>

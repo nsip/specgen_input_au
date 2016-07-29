@@ -54,7 +54,7 @@
     <Element>/OtherCodeList</Element>
     <Characteristics>O</Characteristics>
     <Description></Description>
-    <Type ref="DataModel" name="OtherCodeList"></Type>
+    <Type ref="DataModel" name="OtherCodeListType"></Type>
   </Item>
 
   <Item>
@@ -71,7 +71,7 @@
     <Description>
       <p>Collection of year levels applicable to this co-curricular or extra-curricular activity. </p>
     </Description>
-    <Type ref="DataModel" name="YearLevels"></Type>
+    <Type ref="DataModel" name="YearLevelsType"></Type>
   </Item>
   <Item>
     <Element>CurricularStatus</Element>
@@ -87,21 +87,21 @@
     <Description>
       <p>Location where the activity takes place.</p>
     </Description>
-    <Type ref="DataModel" name="Location"></Type>
+    <Type ref="DataModel" name="LocationType"></Type>
   </Item>
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_Metadata"></Type>
+    <Type ref="DataModel" name="SIF_MetadataType"></Type>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_ExtendedElements"></Type>
+    <Type ref="DataModel" name="SIF_ExtendedElementsType"></Type>
   </Item>
 
   <xhtml:Example xmlns=''>
-    <StudentActivityInfo RefId="6472B2610947583A463DBB345291B001">
+    <StudentActivityInfo RefId="6472B261-0947-583A-463D-BB345291B001">
       <Title>Book Club</Title>
       <Description>Group of middle school students promoting reading</Description>
       <StudentActivityType>
@@ -128,7 +128,7 @@
       <CurricularStatus>0750</CurricularStatus>
       <Location Type="Classroom">
         <LocationName>Beaconhills Middle School Library</LocationName>
-        <LocationRefId SIF_RefObject="RoomInfo">947582610947583ACEB2BB345291BAAA</LocationRefId>
+        <LocationRefId SIF_RefObject="RoomInfo">94758261-0947-583A-CEB2-BB345291BAAA</LocationRefId>
       </Location>
     </StudentActivityInfo>
 

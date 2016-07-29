@@ -54,7 +54,7 @@
         School year for which the information is applicable, expressed as the four-digit year in which the school year ends (e.g., "2007").
       </p>
     </Description>
-    <Type ref="DataModel" name="SchoolYear"></Type>
+     <Type ref="DataModel" name="SchoolYearType"></Type>
   </Item>
 
   <Item>
@@ -63,7 +63,7 @@
     <Description>
       <p>Local TimeTable ID</p>
     </Description>
-    <Type ref="DataModel" name="LocalId"></Type>
+    <Type ref="DataModel" name="LocalIdType"></Type>
   </Item>
 
   <Item>
@@ -108,7 +108,7 @@
     <Description>
       <p>Optional Local School Id</p>
     </Description>
-    <Type ref="DataModel" name="LocalId"></Type>
+    <Type ref="DataModel" name="LocalIdType"></Type>
   </Item>
 
   <Item>
@@ -171,7 +171,7 @@
     <Description>
       <p>Local Time Table Identifier</p>
     </Description>
-    <Type ref="DataModel" name="LocalId"></Type>
+    <Type ref="DataModel" name="LocalIdType"></Type>
   </Item>
 
   <Item>
@@ -209,7 +209,7 @@
     <Description>
       <p>Period in Day Identifier</p>
     </Description>
-    <Type ref="DataModel" name="LocalId"></Type>
+    <Type ref="DataModel" name="LocalIdType"></Type>
   </Item>
 
   <Item>
@@ -299,17 +299,17 @@
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_Metadata"></Type>
+    <Type ref="DataModel" name="SIF_MetadataType"></Type>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
 
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_ExtendedElements"></Type>
+    <Type ref="DataModel" name="SIF_ExtendedElementsType"></Type>
   </Item>
   <xhtml:Example xmlns="">
-    <TimeTable RefId="64A309DA063A2E35B359D75101A8C3D0">
-      <SchoolInfoRefId>F2256EE2B67F47D6AB4794D4DEE0D0AD</SchoolInfoRefId>
+    <TimeTable RefId="64A309DA-063A-2E35-B359-D75101A8C3D0">
+      <SchoolInfoRefId>F2256EE2-B67F-47D6-AB47-94D4DEE0D0AD</SchoolInfoRefId>
       <SchoolYear>2008</SchoolYear>
       <LocalId>2008S1</LocalId>
       <Title>2008 Semester 1</Title>

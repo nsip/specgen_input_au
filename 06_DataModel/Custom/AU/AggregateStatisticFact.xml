@@ -66,18 +66,18 @@
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_Metadata"></Type>
+    <Type ref="DataModel" name="SIF_MetadataType"></Type>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_ExtendedElements"></Type>
+    <Type ref="DataModel" name="SIF_ExtendedElementsType"></Type>
   </Item>
   <xhtml:Example xmlns="">
-    <AggregateStatisticFact RefId="3A4E2822C696433B812B49DEAE557E41">
-      <AggregateStatisticInfoRefId>91A4209F7F4F4F4B9DC8D21CEFD1DC2F</AggregateStatisticInfoRefId>
+    <AggregateStatisticFact RefId="3A4E2822-C696-433B-812B-49DEAE557E41">
+      <AggregateStatisticInfoRefId>91A4209F-7F4F-4F4B-9DC8-D21CEFD1DC2F</AggregateStatisticInfoRefId>
       <Characteristics>
-        <AggregateCharacteristicInfoRefId>0B972D8644EE4D7994F5FF1C3131772D</AggregateCharacteristicInfoRefId>
+        <AggregateCharacteristicInfoRefId>0B972D86-44EE-4D79-94F5-FF1C3131772D</AggregateCharacteristicInfoRefId>
       </Characteristics>
       <Excluded>No</Excluded>
       <Value>27</Value>

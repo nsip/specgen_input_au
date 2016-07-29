@@ -20,7 +20,7 @@
     <Description>
       <p>The locally-assigned identifier for this person. Note: LocalId may be used as a unique person identifier rather than a unique contact identifier. In this case there may be more than one StudentContactPersonal instance with the same LocalId.</p>
     </Description>
-    <Type ref="DataModel" name="LocalId"></Type>
+    <Type ref="DataModel" name="LocalIdType"></Type>
   </Item>
 
   <Item>
@@ -54,7 +54,7 @@
     <Description>
       <p>Personal Information </p>
     </Description>
-    <Type ref="DataModel" name="PersonInfo"></Type>
+    <Type ref="DataModel" name="PersonInfoType"></Type>
   </Item>
   <Item>
     <Element>EmploymentType</Element>
@@ -71,7 +71,7 @@
     <Description>
       <p>The highest level of education completed by the contact person.</p>
     </Description>
-    <Type ref="DataModel" name="EducationalLevel"></Type>
+    <Type ref="DataModel" name="EducationalLevelType"></Type>
   </Item>
   <Item>
     <Element>NonSchoolEducation</Element>
@@ -84,15 +84,15 @@
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_Metadata"></Type>
+    <Type ref="DataModel" name="SIF_MetadataType"></Type>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_ExtendedElements"></Type>
+    <Type ref="DataModel" name="SIF_ExtendedElementsType"></Type>
   </Item>
   <xhtml:Example xmlns=''>
-    <StudentContactPersonal RefId='7C834EA9EDA12090347F83297E1C290F'>
+    <StudentContactPersonal RefId='7C834EA9-EDA1-2090-347F-83297E1C290F'>
       <LocalId>P1234567</LocalId>
       <OtherIdList>
         <OtherId Type="Health Care Card">098765</OtherId>

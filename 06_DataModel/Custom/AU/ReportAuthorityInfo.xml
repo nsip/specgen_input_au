@@ -78,30 +78,30 @@
     <Description>
       <p>Information on the contact person in this agency.</p>
     </Description>
-    <Type ref="DataModel" name="ContactInfo"></Type>
+    <Type ref="DataModel" name="ContactInfoType"></Type>
   </Item>
   <Item>
     <Element>Address</Element>
 
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="Address"></Type>
+      <Type ref="DataModel" name="AddressType"></Type>
   </Item>
   <Item>
     <Element>PhoneNumber</Element>
 
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="PhoneNumber"></Type>
+      <Type ref="DataModel" name="PhoneNumberType"></Type>
   </Item>
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_Metadata"></Type>
+    <Type ref="DataModel" name="SIF_MetadataType"></Type>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
 
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_ExtendedElements"></Type>
+    <Type ref="DataModel" name="SIF_ExtendedElementsType"></Type>
   </Item>
   <xhtml:Example xmlns="">
     <ReportAuthorityInfo RefId="9746375937BB2A10AAB2758C46A12001">

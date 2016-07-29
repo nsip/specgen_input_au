@@ -41,7 +41,7 @@
         School year for which the information is applicable, expressed as the four-digit year in which the school year ends (e.g., "2009").
       </p>
     </Description>
-    <Type ref="DataModel" name="SchoolYear"></Type>
+     <Type ref="DataModel" name="SchoolYearType"></Type>
   </Item>
 
   <Item>
@@ -104,18 +104,18 @@
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_Metadata"></Type>
+    <Type ref="DataModel" name="SIF_MetadataType"></Type>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_ExtendedElements"></Type>
+    <Type ref="DataModel" name="SIF_ExtendedElementsType"></Type>
   </Item>
 
   <xhtml:Example xmlns=''>
-    <StudentActivityParticipation RefId="9ECC96830E02406F926C1C4D3542D122">
-      <StudentPersonalRefId>646C5D4AC8294886A02B971695C7BC06</StudentPersonalRefId>
-      <StudentActivityInfoRefId>6472B2610947583A463DBB345291B001</StudentActivityInfoRefId>
+    <StudentActivityParticipation RefId="9ECC9683-0E02-406F-926C-1C4D3542D122">
+      <StudentPersonalRefId>646C5D4A-C829-4886-A02B-971695C7BC06</StudentPersonalRefId>
+      <StudentActivityInfoRefId>6472B261-0947-583A-463D-BB345291B001</StudentActivityInfoRefId>
       <SchoolYear>2009</SchoolYear>
       <ParticipationComment>First year of participation</ParticipationComment>
       <StartDate>2008-09-01</StartDate>

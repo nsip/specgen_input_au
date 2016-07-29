@@ -56,7 +56,7 @@
         ends (e.g. <code>2007</code>).
       </p>
     </Description>
-    <Type ref="DataModel" name="SchoolYear"></Type>
+     <Type ref="DataModel" name="SchoolYearType"></Type>
   </Item>
   <Item>
 
@@ -74,7 +74,7 @@
     <Description>
       <p>Locally defined code for attendance.</p>
     </Description>
-    <Type ref="DataModel" name="AttendanceCode"></Type>
+    <Type ref="DataModel" name="AttendanceCodeType"></Type>
   </Item>
   <Item>
     <Element>AttendanceStatus</Element>
@@ -126,18 +126,18 @@
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_Metadata"></Type>
+    <Type ref="DataModel" name="SIF_MetadataType"></Type>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
 
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_ExtendedElements"></Type>
+    <Type ref="DataModel" name="SIF_ExtendedElementsType"></Type>
   </Item>
   <xhtml:Example xmlns="">
-    <StudentDailyAttendance RefId="2FFB63B4CFEF48208501E7D1E54555CB">
-      <StudentPersonalRefId>D3E34B359D75101A8C3D00AA001A1652</StudentPersonalRefId>
-      <SchoolInfoRefId>CA285746359D75101A8C36432A901A16</SchoolInfoRefId>
+    <StudentDailyAttendance RefId="2FFB63B4-CFEF-4820-8501-E7D1E54555CB">
+      <StudentPersonalRefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</StudentPersonalRefId>
+      <SchoolInfoRefId>CA285746-359D-7510-1A8C-36432A901A16</SchoolInfoRefId>
       <Date>2002-11-01</Date>
       <SchoolYear>2003</SchoolYear>
       <DayValue>Partial</DayValue>

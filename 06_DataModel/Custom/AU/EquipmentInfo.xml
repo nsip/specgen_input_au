@@ -41,7 +41,7 @@
     <Description>
       <p>The Local Id of the equipment.</p>
     </Description>
-    <Type ref="DataModel" name="LocalId"></Type>
+    <Type ref="DataModel" name="LocalIdType"></Type>
   </Item>
   
   <Item>
@@ -50,7 +50,7 @@
     <Description>
       <p>Asset number of the equipment; may be distinct from Local Id.</p>
     </Description>
-    <Type ref="DataModel" name="LocalId"></Type>
+    <Type ref="DataModel" name="LocalIdType"></Type>
   </Item>
   
   <!-- Addition for finance -->
@@ -120,20 +120,20 @@
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_Metadata"></Type>
+    <Type ref="DataModel" name="SIF_MetadataType"></Type>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
 
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_ExtendedElements"></Type>
+    <Type ref="DataModel" name="SIF_ExtendedElementsType"></Type>
   </Item>
   <xhtml:Example name="EquipmentInfo Example" xmlns="">
-    <EquipmentInfo RefId="B5739375800AC4CC63850BB2754114AA">
+    <EquipmentInfo RefId="B5739375-800A-C4CC-6385-0BB2754114AA">
       <Name>Overhead Projector 3</Name>
       <LocalId>OHP3</LocalId>
       <EquipmentType>OverheadProjector</EquipmentType>
-      <SIF_RefId SIF_RefObject="SchoolInfo">B7A34E561C97345C0A4E11BB112B2753</SIF_RefId>
+      <SIF_RefId SIF_RefObject="SchoolInfo">B7A34E56-1C97-345C-0A4E-11BB112B2753</SIF_RefId>
     </EquipmentInfo>
     
 

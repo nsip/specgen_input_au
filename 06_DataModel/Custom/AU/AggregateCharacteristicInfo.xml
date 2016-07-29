@@ -53,15 +53,15 @@
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_Metadata"></Type>
+    <Type ref="DataModel" name="SIF_MetadataType"></Type>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_ExtendedElements"></Type>
+    <Type ref="DataModel" name="SIF_ExtendedElementsType"></Type>
   </Item>
   <xhtml:Example xmlns="">
-    <AggregateCharacteristicInfo RefId="06AF1D69FB064AB388983505714F18FB">
+    <AggregateCharacteristicInfo RefId="06AF1D69-FB06-4AB3-8898-3505714F18FB">
       <Description>Sex</Description>
       <ElementName>StudentPersonal/PersonInfo/Demographics/Sex</ElementName>
     </AggregateCharacteristicInfo>

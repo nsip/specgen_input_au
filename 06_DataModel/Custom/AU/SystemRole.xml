@@ -169,18 +169,18 @@
     <Item>
       <Element>SIF_Metadata</Element>
       <Characteristics>O</Characteristics>
-      <Type ref="DataModelTaskForce" name="SIF_Metadata"></Type>
+      <Type ref="DataModelTaskForce" name="SIF_MetadataType"></Type>
     </Item>
     <Item>
      <Element>SIF_ExtendedElements</Element>
      <Characteristics>O</Characteristics>
-     <Type ref="DataModel" name="SIF_ExtendedElements"></Type>
+     <Type ref="DataModel" name="SIF_ExtendedElementsType"></Type>
     </Item>
 
     <xhtml:Example xmlns=''>
-      <SystemRole RefId="4286194F43ED43C18EE2F0A27C4BEF86">
+      <SystemRole RefId="4286194F-43ED-43C1-8EE2-F0A27C4BEF86">
 
-  <SIF_RefId SIF_RefObject="Identity">23B08571E4D645C3B82A3E52E5349925</SIF_RefId>
+  <SIF_RefId SIF_RefObject="Identity">23B08571-E4D6-45C3-B82A-3E52E5349925</SIF_RefId>
   <SystemContextList>
 
     <SystemContext SystemId = 'LearningPlatformSystem1'>
@@ -195,7 +195,7 @@
 
             <RoleScopeName>SchoolGroupName1</RoleScopeName>
 
-            <RoleScopeRefId SIF_RefObject= 'SchoolInfo'>23B08571E4D645C3B82A3E52E5349912</RoleScopeRefId>
+            <RoleScopeRefId SIF_RefObject= 'SchoolInfo'>23B08571-E4D6-45C3-B82A-3E52E5349912</RoleScopeRefId>
 
           </RoleScope>
 
@@ -203,7 +203,7 @@
 
             <RoleScopeName>ClassName1</RoleScopeName>
 
-            <RoleScopeRefId SIF_RefObject = 'TeachingGroup'>23B08571E4D645C3B82A3E52E5349945</RoleScopeRefId>
+            <RoleScopeRefId SIF_RefObject = 'TeachingGroup'>23B08571-E4D6-45C3-B82A-3E52E5349945</RoleScopeRefId>
 
 
           </RoleScope>
@@ -228,7 +228,7 @@
 
             <RoleScopeName>SchoolName1</RoleScopeName>
 
-            <RoleScopeRefId SIF_RefObject= 'StudentActivityParticipation'>23B08571E4D645C3B82A3E52E5349923</RoleScopeRefId>
+            <RoleScopeRefId SIF_RefObject= 'StudentActivityParticipation'>23B08571-E4D6-45C3-B82A-3E52E5349923</RoleScopeRefId>
 
           </RoleScope>
 

@@ -136,17 +136,17 @@
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_Metadata"></Type>
+    <Type ref="DataModel" name="SIF_MetadataType"></Type>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_ExtendedElements"></Type>
+    <Type ref="DataModel" name="SIF_ExtendedElementsType"></Type>
   </Item>
   <xhtml:Example xmlns="">
-    <Journal RefId="B5739375800AC4CC63850BB2754114AA">
-        <DebitFinancialAccountRefId>8B231144301C4D3B95D48BB74C866AE1</DebitFinancialAccountRefId>
-        <CreditFinancialAccountRefId>B7A34E561C97345C0A4E11BB112B2753</CreditFinancialAccountRefId>
+    <Journal RefId="B5739375-800A-C4CC-6385-0BB2754114AA">
+        <DebitFinancialAccountRefId>8B231144-301C-4D3B-95D4-8BB74C866AE1</DebitFinancialAccountRefId>
+        <CreditFinancialAccountRefId>B7A34E56-1C97-345C-0A4E-11BB112B2753</CreditFinancialAccountRefId>
         <Amount Currency="AUD">7.00</Amount>
         <CreatedDate>2015-02-01</CreatedDate>
         <CreatedBy>Fred Flintstone</CreatedBy>

@@ -103,7 +103,7 @@
     <Description>
       <p>Phone number for the room</p>
     </Description>
-    <Type ref="DataModel" name="PhoneNumber"></Type>
+      <Type ref="DataModel" name="PhoneNumberType"></Type>
   </Item>
   <Item>
     <Element>RoomType</Element>
@@ -116,19 +116,19 @@
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_Metadata"></Type>
+    <Type ref="DataModel" name="SIF_MetadataType"></Type>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_ExtendedElements"></Type>
+    <Type ref="DataModel" name="SIF_ExtendedElementsType"></Type>
   </Item>
   <xhtml:Example name="RoomInfo Example" xmlns="">
-    <RoomInfo RefId="D3E34B359D75101A8C3D00AA001A1652" >
-      <SchoolInfoRefId>A2E35B359D75101A8C3D00AA001A0000</SchoolInfoRefId>
+    <RoomInfo RefId="D3E34B35-9D75-101A-8C3D-00AA001A1652" >
+      <SchoolInfoRefId>A2E35B35-9D75-101A-8C3D-00AA001A0000</SchoolInfoRefId>
       <RoomNumber>101</RoomNumber>
       <StaffList>
-        <StaffPersonalRefId>A8C3A2E35B359D75101D00AA001A0000</StaffPersonalRefId>
+        <StaffPersonalRefId>A8C3A2E3-5B35-9D75-101D-00AA001A0000</StaffPersonalRefId>
       </StaffList>
       <Description>Room 101</Description>
       <Building>Main A</Building>

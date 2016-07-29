@@ -127,21 +127,21 @@
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_Metadata"></Type>
+    <Type ref="DataModel" name="SIF_MetadataType"></Type>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_ExtendedElements"></Type>
+    <Type ref="DataModel" name="SIF_ExtendedElementsType"></Type>
   </Item>
 
   <xhtml:Example xmlns="">
-    <StudentScoreSet RefId="5810E283E928459CBBA76EFE1963F784">
+    <StudentScoreSet RefId="5810E283-E928-459C-BBA7-6EFE1963F784">
       <ScoreMetric>0512</ScoreMetric>
-      <AssessmentAdministrationRefId>1F971F3D414E4146932566638290E6C1</AssessmentAdministrationRefId>
-      <StudentPersonalRefId>8F0934CC2F0448F8BBD788AA1ADE691B</StudentPersonalRefId>
+      <AssessmentAdministrationRefId>1F971F3D-414E-4146-9325-66638290E6C1</AssessmentAdministrationRefId>
+      <StudentPersonalRefId>8F0934CC-2F04-48F8-BBD7-88AA1ADE691B</StudentPersonalRefId>
       <Scores>
-        <Score AssessmentSubTestRefId="E5EDAE63A04D47E49D0224A32956B074">
+        <Score AssessmentSubTestRefId="E5EDAE63-A04D-47E4-9D02-24A32956B074">
           <ScoreValue>25</ScoreValue>
           <DiagnosticStatement>Shows ability to identify symmetry.</DiagnosticStatement>
         </Score>

@@ -1,0 +1,228 @@
+<h3>Architecture/Infrastructure</h3>
+		<table>
+			<thead>
+				<tr>
+					<td>Key</td>
+					<td>Citation</td>
+				</tr>
+			</thead>
+      <tr>
+				<td><a name="EXPORT" />EXPORT</td>
+				<td class="citation">
+					<p>U.S. Bureau of Industry and Security. Commercial Encryption Export Controls.&#160;
+ 6&#160;July&#160;2006&#160;&lt;<a href="http://www.bis.doc.gov/Encryption/">http://www.bis.doc.gov/Encryption/</a>&gt;.</p>
+				</td>
+			</tr>
+			<tr>
+				<td><a name="FAVICON" />FAVICON</td>
+				<td class="citation">
+					<p>Favicon - Wikepedia, the free encyclopedia.&#160;
+ 6&#160;July&#160;2006&#160;&lt;<a href="http://en.wikipedia.org/wiki/Favicon">http://en.wikipedia.org/wiki/Favicon</a>&gt;.</p>
+				</td>
+			</tr>
+			<tr>
+				<td><a name="MIME" />MIME</td>
+				<td class="citation">
+					<p>IETF
+ (Internet Engineering Task Force). RFC 2048: Multipurpose Internet Mail Extensions (MIME) Part Four: Registration Procedures. 1996&#160;November.&#160;
+ 6&#160;July&#160;2006&#160;&lt;<a href="http://www.ietf.org/rfc/rfc2048.txt">http://www.ietf.org/rfc/rfc2048.txt</a>&gt;.</p>
+				</td>
+			</tr>
+			<tr>
+				<td><a name="RFC2045" />RFC 2045</td>
+				<td class="citation">
+					<p>IETF
+ (Internet Engineering Task Force). RFC&#160;2045: Multipurpose Internet Mail Extensions (MIME) Part One: Format of Internet Message Bodies. 6&#160;July&#160;2006&#160;&lt;<a href="http://www.ietf.org/rfc/rfc2045.txt">http://www.ietf.org/rfc/rfc2045.txt</a>&gt;.</p>
+				</td>
+			</tr>
+			<tr>
+				<td><a name="RFC2046" />RFC 2046</td>
+				<td class="citation">
+					<p>IETF
+ (Internet Engineering Task Force). RFC&#160;2046: Multipurpose Internet Mail Extensions (MIME) Part Two: Media Types.&#160;
+ 6&#160;July&#160;2006&#160;&lt;<a href="http://www.ietf.org/rfc/rfc2046.txt">http://www.ietf.org/rfc/rfc2046.txt</a>&gt;.</p>
+				</td>
+			</tr>
+      <tr>
+        <td>
+          <a name="RFC2119" />RFC 2119</td>
+        <td class="citation">
+          <p>
+            IETF
+            (Internet Engineering Task Force). RFC&#160;2119: Key words for use in RFCs to Indicate Requirement Levels. 11&#160;December&#160;2008&#160;&lt;<a href="http://www.ietf.org/rfc/rfc2119.txt">http://www.ietf.org/rfc/rfc2119.txt</a>&gt;.
+          </p>
+        </td>
+      </tr>
+      <tr>
+				<td><a name="RFC2246" />RFC 2246</td>
+				<td class="citation">
+					<p>IETF
+ (Internet Engineering Task Force). RFC&#160;2246: The TLS Protocol: Version&#160;1.0. 6&#160;July&#160;2006&#160;&lt;<a href="http://www.ietf.org/rfc/rfc2246.txt">http://www.ietf.org/rfc/rfc2246.txt</a>&gt;.</p>
+				</td>
+			</tr>
+			<tr>
+				<td><a name="RFC2376" />RFC 2376</td>
+				<td class="citation">
+					<p>IETF
+ (Internet Engineering Task Force): RFC&#160;2376: XML Media Types. 6&#160;July&#160;2006&#160;&lt;<a href="http://www.ietf.org/rfc/rfc2376.txt">http://www.ietf.org/rfc/rfc2376.txt</a>&gt;.</p>
+				</td>
+			</tr>
+			<tr>
+				<td><a name="RFC2396" />RFC 2396</td>
+				<td class="citation">
+					<p>IETF
+ (Internet Engineering Task Force): RFC&#160;2396: Uniform Resource Identifiers (URI): Generic Syntax.  13&#160;July&#160;2006&#160;&lt;<a href="http://www.ietf.org/rfc/rfc2396.txt">http://www.ietf.org/rfc/rfc2396.txt</a>&gt;.</p>
+				</td>
+			</tr>
+			<tr>
+				<td><a name="RFC2518" />RFC 2518</td>
+				<td class="citation">
+					<p>IETF
+ (Internet Engineering Task Force). RFC&#160;2518: HTTP Extensions for Distributed Authority&#x2014;WEBDAV.&#160;
+ 6&#160;July&#160;2006&#160;&lt;<a href="http://www.ietf.org/rfc/rfc2518.txt">http://www.ietf.org/rfc/rfc2518.txt</a>&gt;.</p>
+				</td>
+			</tr>
+			<tr>
+				<td><a name="RFC2616" />RFC 2616</td>
+				<td class="citation">
+					<p>IETF
+ (Internet Engineering Task Force). RFC&#160;2616: Hypertext Transport Protocol&#x2014;HTTP&#160;1.1. 6&#160;July&#160;2006&#160;&lt;<a href="http://www.ietf.org/rfc/rfc2616.txt">http://www.ietf.org/rfc/rfc2616.txt</a>&gt;.</p>
+				</td>
+			</tr>
+			<tr>
+				<td><a name="RFC4122"/>RFC 4122</td>
+				<td class="citation">
+					<p>IETF
+ (Internet Engineering Task Force). A Universally Unique Identifier (UUID) URN Namespace. 
+3&#160;July&#160;2006&#160;&lt;<a href="http://www.ietf.org/rfc/rfc4122.txt">http://www.ietf.org/rfc/rfc4122.txt</a>&gt;.</p>
+				</td>
+			</tr>
+			<tr>
+				<td><a name="SCHEMA" />SCHEMA</td>
+				<td class="citation">
+					<p>World Wide Web Consortium (W3C). XML Schema Part 1: Structures. 
+6&#160;July&#160;2006&#160;&lt;<a href="http://www.w3.org/TR/xmlschema-1/">http://www.w3.org/TR/xmlschema-1/</a>&gt;.</p>
+					<p>World Wide Web Consortium (W3C). XML Schema Part 2: Datatypes. 
+6&#160;July&#160;2006&#160;&lt;<a href="http://www.w3.org/TR/xmlschema-2/">http://www.w3.org/TR/xmlschema-2/</a>&gt;.</p>
+					
+					<p>A non-normative primer on XML Schema is also available:</p>
+
+					<p>World Wide Web Consortium (W3C). XML Schema Part 0: Primer. 
+6&#160;July&#160;2006&#160;&lt;<a href="http://www.w3.org/TR/xmlschema-0/">http://www.w3.org/TR/xmlschema-0/</a>&gt;.</p>
+				</td>
+			</tr>
+			<tr>
+				<td><a name="Schneier" />Schneier</td>
+				<td class="citation">
+					<p>
+            Schneier,
+            Bruce. Applied Cryptography: Protocols, Algorithms, and Source Code in C (Second Edition). John Wiley &amp; Sons, 1995.</p>
+				</td>
+			</tr>
+
+<if intl="uk">
+	<tr>
+	<td><a name="SIF"/>SIF</td>
+	<td class="citation">
+	<p>Systems Interoperability Framework Association (SIF Association).  SIF Implementation Specification.
+	21&#160;June&#160;2007&#160;&lt;<a href="http://specification.sifinfo.org/Implementation/">http://specification.sifinfo.org/Implementation/</a>&gt;.</p>
+	</td>
+	</tr>
+</if>
+<if intl="au">
+	<tr>
+	<td><a name="SIF"/>SIF</td>
+	<td class="citation">
+	<p>Systems Interoperability Framework Association (SIF Association).  SIF Implementation Specification.
+	21&#160;June&#160;2007&#160;&lt;<a href="http://specification.sifinfo.org/Implementation/">http://specification.sifinfo.org/Implementation/</a>&gt;.</p>
+	</td>
+	</tr>
+</if>
+<if intl="us">
+	<tr>
+	<td><a name="SIF"/>SIF</td>
+	<td class="citation">
+	<p>Schools Interoperability Framework Association (SIF Association).  SIF Implementation Specification.
+	21&#160;June&#160;2007&#160;&lt;<a href="http://specification.sifinfo.org/Implementation/">http://specification.sifinfo.org/Implementation/</a>&gt;.</p>
+	</td>
+	</tr>
+</if>
+
+<tr>
+<td><a name="SIF_2_0_r1"/>SIF 2.0r1</td>
+<td class="citation">
+<p>Schools Interoperability Framework Association (SIF Association).  SIF Implementation Specification 2.0r1.
+21&#160;June&#160;2007&#160;&lt;<a href="http://specification.sifinfo.org/Implementation/2.0r1/">http://specification.sifinfo.org/Implementation/2.0r1/</a>&gt;.</p>
+</td>
+</tr>
+
+
+<tr>
+<td><a name="SIFCertification"/>SIF Certification</td>
+<td class="citation">
+<p>Schools Interoperability Framework Association (SIF Association).  SIF Certification - Product Standards.
+23&#160;May&#160;2007&#160;&lt;<a href="http://certification.sifinfo.org/docs/prodstandards.tpl">http://certification.sifinfo.org/docs/prodstandards.tpl</a>&gt;.</p>
+</td>
+</tr>
+
+<tr>
+<td><a name="SIFReportingWS"/>SIF Reporting WS</td>
+<td class="citation">
+<p>Schools Interoperability Framework Association (SIF Association).  Schools Interoperability Framework&#x2122; Reporting Web Service 1.0.
+28&#160;September&#160;2006&#160;&lt;<a href="http://specification.sifinfo.org/WebServices/Reporting/1.0">http://specification.sifinfo.org/WebServices/Reporting/1.0</a>&gt;.</p>
+</td>
+</tr>
+			<tr>
+				<td><a name="SSL2" />SSL2</td>
+				<td class="citation">
+					<p>Netscape.&#160;
+ SSL 2.0 Protocol Specification. 
+6&#160;July&#160;2006&#160;&lt;<a href="http://wp.netscape.com/eng/security/SSL_2.html">http://wp.netscape.com/eng/security/SSL_2.html</a>&gt;.</p>
+				</td>
+			</tr>
+			<tr>
+				<td><a name="SSL3" />SSL3</td>
+				<td class="citation">
+					<p>Netscape.&#160;
+ The SSL Protocol Version 3.0. 
+6&#160;July&#160;2006&#160;&lt;<a href="http://wp.netscape.com/eng/ssl3/draft302.txt">http://wp.netscape.com/eng/ssl3/draft302.txt</a>&gt;.</p>
+				</td>
+			</tr>
+			<tr>
+				<td><a name="WSARCH"/>WSARCH</td>
+				<td class="citation">
+					<p>World Wide Web Consortium (W3C).  Web Services Architecture.  
+16&#160;July&#160;2006&#160;&lt;<a href="http://www.w3.org/TR/ws-arch/">http://www.w3.org/TR/ws-arch/</a>&gt;.</p>
+				</td>
+			</tr>
+			<tr>
+				<td><a name="XML" />XML</td>
+				<td class="citation">
+					<p>W3C
+ (World Wide Web Consortium). Extensible Markup Language (XML)&#160;1.0 (Third Edition). 
+6&#160;July&#160;2006&#160;&lt;<a href="http://www.w3.org/TR/2004/REC-xml-20040204">http://www.w3.org/TR/2004/REC-xml-20040204</a>&gt;.</p>
+				</td>
+			</tr>
+			<tr>
+				<td><a name="XMLINTRO" />XMLINTRO</td>
+				<td class="citation">
+					<p>W3C
+ (World Wide Web Consortium). XML in 10 Points. 
+13&#160;July&#160;2006&#160;&lt;<a href="http://www.w3.org/XML/1999/XML-in-10-points.html">http://www.w3.org/XML/1999/XML-in-10-points.html</a>&gt;.</p>
+				</td>
+			</tr>
+			<tr>
+				<td><a name="XMLNS"/>XMLNS</td>
+				<td class="citation">
+					<p>W3C (World Wide Web Consortium).  Namespaces in XML.  
+6&#160;July&#160;2006&#160;&lt;<a href="http://www.w3.org/TR/REC-xml-names/">http://www.w3.org/TR/REC-xml-names/</a>&gt;.</p>
+				</td>
+			</tr>
+			<tr>
+				<td><a name="XPATH"/>XPATH</td>
+				<td class="citation">
+					<p>W3C (World Wide Web Consortium).  XML Path Language (XPath) Version 1.0.  
+6&#160;July&#160;2006&#160;&lt;<a href="http://www.w3.org/TR/xpath">http://www.w3.org/TR/xpath</a>&gt;.</p>
+				</td>
+			</tr>
+		</table>

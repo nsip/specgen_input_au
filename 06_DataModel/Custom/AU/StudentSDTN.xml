@@ -38,7 +38,7 @@
     <Description>
       <p>Personal Information.</p>
     </Description>
-    <Type ref="DataModel" name="PersonInfo"></Type>
+    <Type ref="DataModel" name="PersonInfoType"></Type>
   </Item>
   <Item>
 
@@ -55,7 +55,7 @@
     <Description>
       <p>The locally-assigned identifier for the school in the original database (sender)</p>
     </Description>
-    <Type ref="DataModel" name="LocalId"></Type>
+    <Type ref="DataModel" name="LocalIdType"></Type>
   </Item>
   <Item>
     <Element>SchoolName</Element>
@@ -69,7 +69,7 @@
   <Item>
     <Element>AddressList</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="AddressList"></Type>
+    <Type ref="DataModel" name="AddressListType"></Type>
     <Description>
       <p>The school's addresses.</p>
     </Description>
@@ -78,7 +78,7 @@
   <Item>
     <Element>PrincipalInfo</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="PrincipalInfo"></Type>
+    <Type ref="DataModel" name="PrincipalInfoType"></Type>
     <Description>
       <p>Information about the campus or school principal.</p>
     </Description>
@@ -104,7 +104,7 @@
   <Item>
     <Element>/PhoneNumberList</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="PhoneNumberList"></Type>
+    <Type ref="DataModel" name="PhoneNumberListType"></Type>
     <Description>
       <p>The further contact person's phone number(s).</p>
     </Description>
@@ -115,7 +115,7 @@
     <Description>
       <p>The further contact person's e-mail address(es).</p>
     </Description>
-    <Type ref="DataModel" name="EmailList"></Type>
+    <Type ref="DataModel" name="EmailListType"></Type>
   </Item>
 
   <Item>
@@ -141,7 +141,7 @@
     <Description>
       <p>School Year or academic level of student at departure date.</p>
     </Description>
-    <Type ref="DataModel" name="YearLevel"></Type>
+    <Type ref="DataModel" name="YearLevelType"></Type>
   </Item>
 
   <Item>
@@ -398,17 +398,17 @@
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_Metadata"></Type>
+    <Type ref="DataModel" name="SIF_MetadataType"></Type>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_ExtendedElements"></Type>
+    <Type ref="DataModel" name="SIF_ExtendedElementsType"></Type>
   </Item>
   <xhtml:Example xmlns=''>
-    <StudentSDTN RefId="9ECC96830E02406F926C1C4D3542D122">
+    <StudentSDTN RefId="9ECC9683-0E02-406F-926C-1C4D3542D122">
       <SnapDate>2009-03-01</SnapDate>
-      <StudentPersonalRefId>646C5D4AC8294886A02B971695C7BC06</StudentPersonalRefId>
+      <StudentPersonalRefId>646C5D4A-C829-4886-A02B-971695C7BC06</StudentPersonalRefId>
       <PersonInfo>
          <Name Type="LGL">
           <FamilyName>Smith</FamilyName>
@@ -433,7 +433,7 @@
           <AustralianCitizenshipStatus>1</AustralianCitizenshipStatus>
         </Demographics>
       </PersonInfo>
-      <SchoolInfoRefId>476C5D4AC8294886A02B971695C7BC06</SchoolInfoRefId>
+      <SchoolInfoRefId>476C5D4A-C829-4886-A02B-971695C7BC06</SchoolInfoRefId>
       <SchoolLocalId>01011234</SchoolLocalId>
       <SchoolName>Lincoln Secondary College</SchoolName>
       <AddressList>
@@ -512,7 +512,7 @@
       <HealthNeeds>N</HealthNeeds>
       <AreasOfInterestList>
 	      <ActivityInfo>
-		      <StudentActivityInfoRefId>6472B2610947583A463DBB345291B001</StudentActivityInfoRefId>
+		      <StudentActivityInfoRefId>6472B261-0947-583A-463D-BB345291B001</StudentActivityInfoRefId>
 		      <StudentActivityDescription>Athletics</StudentActivityDescription>
 	      </ActivityInfo>
       </AreasOfInterestList>

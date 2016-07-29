@@ -1,40 +1,43 @@
 <DataObject name='StudentContactRelationship'>
   <EventsReported>true</EventsReported>
-  <Key>@StudentPersonalRefId</Key>
-  <Key>@StudentContactPersonalRefId</Key>
+  <Key>@StudentContactRelationshipRefId</Key>
+  
   <Item>
     <Element>StudentContactRelationship</Element>
     <Description>
       This object defines a relationship between a contact person and a student.
     </Description>
   </Item>
+  
   <Item>
-    <Attribute>StudentPersonalRefId</Attribute>
+    <Attribute>StudentContactRelationshipRefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>An ID (GUID) for this paticular student-contact relationship. This GUID would be used to form a REST URL.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>  
+  
+  <Item>
+    <Element>StudentPersonalRefId</Element>
     <Description>GUID that identifies the student for the relationship.</Description>
     <Characteristics>M</Characteristics>
     <Type ref='CommonTypes' name='RefIdType'/>
   </Item>
   <Item>
-    <Attribute>StudentContactPersonalRefId</Attribute>
+     <Element>StudentContactPersonalRefId</Element>
     <Description>GUID that identifies the contact person for the relationship.</Description>
     <Characteristics>M</Characteristics>
     <Type ref='CommonTypes' name='RefIdType'/>
   </Item>
-  <Item>
-    <Element>StudentContactRelationshipRefId</Element>
-    <Characteristics>O</Characteristics>
-    <Description>
-      <p>An optional ID (GUID) for this paticular student-contact relationship. This GUID would be used to form a REST URL.</p>
-    </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
-  </Item>
+ 
   <Item>
     <Element>Relationship</Element>
     <Characteristics>M</Characteristics>
     <Description>
       <p>Defines the relationship of the contact to the student.</p>
     </Description>
-    <Type ref="DataModel" name="Relationship"></Type>
+    <Type ref="DataModel" name="RelationshipType"></Type>
   </Item>
   <Item>
     <Element>ParentRelationshipStatus</Element>
@@ -68,7 +71,7 @@
     <Description>
       <p>Repeatable element containing the ID of a household.</p>
     </Description>
-    <Type ref="DataModel" name="LocalId"></Type>
+    <Type ref="DataModel" name="LocalIdType"></Type>
   </Item>
   <Item>
     <Element>ContactFlags</Element>
@@ -213,18 +216,18 @@
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_Metadata"></Type>
+    <Type ref="DataModel" name="SIF_MetadataType"></Type>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_ExtendedElements"></Type>
+    <Type ref="DataModel" name="SIF_ExtendedElementsType"></Type>
   </Item>
 
   <xhtml:Example xmlns=''>
-    <StudentContactRelationship
-      StudentPersonalRefId='DEE34B359D75101A8C3D00AA001A1652'
-      StudentContactPersonalRefId="6472B2610947583A463DBB345291B001">
+    <StudentContactRelationship StudentContactRelationshipRefId = "7572B261-0947-583A-463D-BB345291B332">
+      <StudentPersonalRefId>DEE34B35-9D75-101A-8C3D-00AA001A1652</StudentPersonalRefId>
+      <StudentContactPersonalRefId>6472B261-0947-583A-463D-BB345291B001</StudentContactPersonalRefId>
       <Relationship>
         <Code>01</Code>
       </Relationship>

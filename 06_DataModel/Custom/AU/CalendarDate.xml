@@ -1,8 +1,7 @@
 <DataObject name="CalendarDate">
 
-  <Key>@Date</Key>
-  <Key>@CalendarSummaryRefId</Key>
-
+  <Key>@CalendarDateRefId</Key>
+   
   <EventsReported>true</EventsReported>
 
   <Item>
@@ -11,9 +10,16 @@
       <p>This object defines information related to a school calendar day in a given school calendar year. If both CalendarDate and CalendarSummary objects are supported, there must be an instance of this object for each date between CalendarSummary StartDate and EndDate, inclusive.</p>
     </Description>
   </Item>
-
+    <Item>
+    <Attribute>CalendarDateRefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>An ID (GUID) for this day date of the calendar information that is being reported. This GUID would be used to form a REST URL.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
   <Item>
-    <Attribute>Date</Attribute>
+     <Element>Date</Element>
     <Characteristics>M</Characteristics>
     <Description>
       <p>A specific school day that occurs within the school year.</p>
@@ -21,18 +27,10 @@
     <Type name="xs:date"></Type>
   </Item>
   <Item>
-    <Attribute>CalendarSummaryRefId</Attribute>
+    <Element>CalendarSummaryRefId</Element>
     <Characteristics>M</Characteristics>
     <Description>
       <p>The ID (GUID) of the calendar summary in which this calendar date is.</p>
-    </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
-  </Item>
-  <Item>
-    <Element>CalendarDateRefId</Element>
-    <Characteristics>O</Characteristics>
-    <Description>
-      <p>An optional ID (GUID) for this day date of the calendar information that is being reported. This GUID would be used to form a REST URL.</p>
     </Description>
     <Type ref="CommonTypes" name="IdRefType"></Type>
   </Item>
@@ -50,7 +48,7 @@
     <Description>
       <p>School year for which the information is applicable, expressed as the four-digit year in which the school year ends (e.g., "2009").</p>
     </Description>
-    <Type ref="DataModel" name="SchoolYear"></Type>
+    <Type ref="DataModel" name="SchoolYearType"></Type>
   </Item>
   <Item>
     <Element>CalendarDateType</Element>
@@ -72,7 +70,7 @@
   <Item>
     <Element>/OtherCodeList</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="OtherCodeList"></Type>
+    <Type ref="DataModel" name="OtherCodeListType"></Type>
   </Item>
   <Item>
     <Element>CalendarDateNumber</Element>
@@ -192,16 +190,18 @@
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_Metadata"></Type>
+    <Type ref="DataModel" name="SIF_MetadataType"></Type>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_ExtendedElements"></Type>
+    <Type ref="DataModel" name="SIF_ExtendedElementsType"></Type>
   </Item>
   <xhtml:Example xmlns="">
-    <CalendarDate Date="2007-08-31" CalendarSummaryRefId="B5739375800AC4CC63850BB2754114AA">
-      <SchoolInfoRefId>B7A34E561C97345C0A4E11BB112B2753</SchoolInfoRefId>
+    <CalendarDate CalendarDateRefId="B5739375-800A-C4CC-6385-0BB2754114AA">
+      <Date>2007-08-31</Date>
+      <CalendarSummaryRefId>A8A34E56-1C97-345C-0A4E-11BB113C2753</CalendarSummaryRefId>
+      <SchoolInfoRefId>B7A34E56-1C97-345C-0A4E-11BB112B2753</SchoolInfoRefId>
       <SchoolYear>2007</SchoolYear>
       <CalendarDateType>
         <Code>INST</Code>

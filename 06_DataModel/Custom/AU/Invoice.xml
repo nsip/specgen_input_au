@@ -50,7 +50,7 @@
     <Description>
       <p>Invoice number assigned locally by the system issuing the invoice.</p>
     </Description>
-    <Type ref="DataModel" name="LocalId"></Type>
+    <Type ref="DataModel" name="LocalIdType"></Type>
   </Item>
   
 
@@ -219,7 +219,7 @@
     <Description>
       <p>The accounting period against which the transaction is billed.</p>
     </Description>
-    <Type ref="DataModel" name="LocalId"></Type>
+    <Type ref="DataModel" name="LocalIdType"></Type>
   </Item>
 
   <Item>
@@ -303,16 +303,16 @@
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_Metadata"></Type>
+    <Type ref="DataModel" name="SIF_MetadataType"></Type>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_ExtendedElements"></Type>
+    <Type ref="DataModel" name="SIF_ExtendedElementsType"></Type>
   </Item>
   <xhtml:Example xmlns="">
-    <Invoice RefId="CA12345847DEA97463FEB238759FD123">
-      <InvoicedEntity SIF_RefObject="Debtor">BA497254965FDA48965ABCE4589EA421</InvoicedEntity>
+    <Invoice RefId="CA123458-47DE-A974-63FE-B238759FD123">
+      <InvoicedEntity SIF_RefObject="Debtor">BA497254-965F-DA48-965A-BCE4589EA421</InvoicedEntity>
       <BillingDate>1999-10-12</BillingDate>
       <TransactionDescription>Activity Fees</TransactionDescription>
       <BilledAmount Type="Debit" Currency="AUD">50.00</BilledAmount> 
@@ -323,7 +323,7 @@
       <ApprovedBy>Fred Flintstone</ApprovedBy>
       <ItemDetail>5 Widgets</ItemDetail>
       <FinancialAccountRefIdList>
-        <FinancialAccountRefId>AE109F1AC2DE41E49DF5C418F3DF18A8</FinancialAccountRefId>
+        <FinancialAccountRefId>AE109F1A-C2DE-41E4-9DF5-C418F3DF18A8</FinancialAccountRefId>
       </FinancialAccountRefIdList>
       <AccountingPeriod>200004</AccountingPeriod>
     </Invoice>

@@ -80,7 +80,7 @@
     <Description>
       <p>The locally-assigned identifier for this location.</p>
     </Description>
-    <Type ref="DataModel" name="LocalId"></Type>
+    <Type ref="DataModel" name="LocalIdType"></Type>
   </Item>
   
   <Item>
@@ -90,7 +90,7 @@
     <Description>
       <p>The state-assigned identifier for this location.</p>
     </Description>
-    <Type ref="DataModel" name="StateProvinceId"></Type>
+    <Type ref="DataModel" name="StateProvinceIdType"></Type>
   </Item>
   
   <Item>
@@ -120,7 +120,7 @@
     <Description>
       <p>This element has the ChargedLocationInfo address information.</p>
     </Description>
-    <Type ref="DataModel" name="AddressList"></Type>
+    <Type ref="DataModel" name="AddressListType"></Type>
   </Item>
   
   <Item>
@@ -130,22 +130,22 @@
     <Description>
       <p>The location's phone numbers.</p>
     </Description>
-    <Type ref="DataModel" name="PhoneNumberList"></Type>
+    <Type ref="DataModel" name="PhoneNumberListType"></Type>
   </Item>
   
   
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_Metadata"></Type>
+    <Type ref="DataModel" name="SIF_MetadataType"></Type>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_ExtendedElements"></Type>
+    <Type ref="DataModel" name="SIF_ExtendedElementsType"></Type>
   </Item>
   <xhtml:Example xmlns="">
-    <ChargedLocationInfo RefId="D3E34B359D75101A8C3D00AA001A1652">
+    <ChargedLocationInfo RefId="D3E34B35-9D75-101A-8C3D-00AA001A1652">
       <LocationType>School</LocationType>
       <SiteCategory>Other</SiteCategory>
       <Name>Lincoln High School</Name>

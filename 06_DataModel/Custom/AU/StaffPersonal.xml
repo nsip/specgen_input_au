@@ -23,7 +23,7 @@
     <Description>
       <p>The locally-assigned identifier for this staff member.</p>
     </Description>
-    <Type ref="DataModel" name="LocalId"></Type>
+    <Type ref="DataModel" name="LocalIdType"></Type>
   </Item>
   <Item>
     <Element>StateProvinceId</Element>
@@ -31,12 +31,12 @@
     <Description>
       <p>The state-assigned identifier for this staff member.</p>
     </Description>
-    <Type ref="DataModel" name="StateProvinceId"></Type>
+    <Type ref="DataModel" name="StateProvinceIdType"></Type>
   </Item>
   <Item>
     <Element>ElectronicIdList</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="ElectronicIdList"></Type>
+    <Type ref="DataModel" name="ElectronicIdListType"></Type>
     <Description>
       <p>Electronic identifier(s) associated with this entity.</p>
     </Description>
@@ -72,7 +72,7 @@
     <Description>
       <p>Personal Information </p>
     </Description>
-    <Type ref="DataModel" name="PersonInfo"></Type>
+    <Type ref="DataModel" name="PersonInfoType"></Type>
   </Item>
 
   <Item>
@@ -109,7 +109,7 @@
 		<Description>
 			<p>Local identifier representing the school in which the staff is or was most recently teaching in.</p>
 		</Description>
-		<Type ref="DataModel" name="LocalId"/>
+		<Type ref="DataModel" name="LocalIdType"/>
 	</Item>
 	<Item>
 		<Element>/SchoolACARAId</Element>
@@ -117,7 +117,7 @@
 		<Description>
 			<p>Identifier of the school in which the staff member is or was most recently assigned, as listed in the Australian  School List.</p>
 		</Description>
-		<Type ref="DataModel" name="LocalId"/>
+		<Type ref="DataModel" name="LocalIdType"/>
 	</Item> 
 	
 	<Item>
@@ -126,7 +126,7 @@
 		<Description>
 			<p>Local identifier for a specific campus Id. This may be the same as the school local Id, but is expected to be supplied only if the school does in fact have distinct campuses.</p>
 		</Description>
-		<Type ref="DataModel" name="LocalId"/>
+		<Type ref="DataModel" name="LocalIdType"/>
 	</Item>
 	
 	<Item>
@@ -161,15 +161,15 @@
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_Metadata"></Type>
+    <Type ref="DataModel" name="SIF_MetadataType"></Type>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_ExtendedElements"></Type>
+    <Type ref="DataModel" name="SIF_ExtendedElementsType"></Type>
   </Item>
   <xhtml:Example xmlns="" name="StaffPersonal">
-    <StaffPersonal RefId="D3E34F419D75101A8C3D00AA001A1652">
+    <StaffPersonal RefId="D3E34F41-9D75-101A-8C3D-00AA001A1652">
       <LocalId>946379881</LocalId>
       <StateProvinceId>C2345681</StateProvinceId>
       <ElectronicIdList>

@@ -55,7 +55,7 @@
     <Description>
       <p>Addresses of the debtor to be used for billing. These addresses override any addresses found in the Billed Entity.</p>
     </Description>
-    <Type ref="DataModel" name="AddressList"></Type>
+    <Type ref="DataModelType" name="AddressList"></Type>
   </Item>
   
   <Item>
@@ -90,16 +90,16 @@
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_Metadata"></Type>
+    <Type ref="DataModel" name="SIF_MetadataType"></Type>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_ExtendedElements"></Type>
+    <Type ref="DataModel" name="SIF_ExtendedElementsType"></Type>
   </Item>
   <xhtml:Example xmlns="">
-    <Debtor RefId="B5739375800AC4CC63850BB2754114AA">
-      <BilledEntity SIF_RefObject="StudentContactPersonal">8B231144301C4D3B95D48BB74C866AE1</BilledEntity>
+    <Debtor RefId="B5739375-800A-C4CC-6385-0BB2754114AA">
+      <BilledEntity SIF_RefObject="StudentContactPersonal">8B231144-301C-4D3B-95D4-8BB74C866AE1</BilledEntity>
       <AddressList>
         <Address Type="0123" Role="2382">
           <Street>

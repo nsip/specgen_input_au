@@ -52,7 +52,7 @@
     <Description>
       <p>The Local Id of the resource being booked. Provided whether the resource is a SIF object or not.</p>
     </Description>
-    <Type ref="DataModel" name="LocalId"></Type>
+    <Type ref="DataModel" name="LocalIdType"></Type>
   </Item>
   
    <Item>
@@ -78,7 +78,7 @@
   <Description>
     <p>Starting period for booking. If specified, the booking is intended to align with bell times.</p>
   </Description>
-  <Type ref="DataModel" name="LocalId"></Type>
+  <Type ref="DataModel" name="LocalIdType"></Type>
   </Item>
   
   <Item>
@@ -87,7 +87,7 @@
     <Description>
       <p>Finish period for booking. If specified, the booking is intended to align with bell times.</p>
     </Description>
-    <Type ref="DataModel" name="LocalId"></Type>
+    <Type ref="DataModel" name="LocalIdType"></Type>
   </Item>
   
   
@@ -131,24 +131,24 @@
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_Metadata"></Type>
+    <Type ref="DataModel" name="SIF_MetadataType"></Type>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
 
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_ExtendedElements"></Type>
+    <Type ref="DataModel" name="SIF_ExtendedElementsType"></Type>
   </Item>
   <xhtml:Example name="ResourceBooking Example" xmlns="">
-    <ResourceBooking RefId="B5739375800AC4CC63850BB2754114AA">
-      <ResourceRefId SIF_RefObject="LearningResource">B7A34E561C97345C0A4E11BB112B2753</ResourceRefId>
+    <ResourceBooking RefId="B5739375-800A-C4CC-6385-0BB2754114AA">
+      <ResourceRefId SIF_RefObject="LearningResource">B7A34E56-1C97-345C-0A4E-11BB112B2753</ResourceRefId>
       <ResourceLocalId>ZXY789</ResourceLocalId>
       <StartDateTime>2011-01-01T16:30:00</StartDateTime>  
       <FinishDateTime>2011-01-01T17:30:00</FinishDateTime>
       <FromPeriod>3</FromPeriod>  
       <ToPeriod>3</ToPeriod>  
-      <Booker>98157AA013BA8C3D00AA012B359D7512</Booker>
-      <ScheduledActivityRefId>A75A00101A8C301D02E3A05B359D0A00</ScheduledActivityRefId>
+      <Booker>98157AA0-13BA-8C3D-00AA-012B359D7512</Booker>
+      <ScheduledActivityRefId>A75A0010-1A8C-301D-02E3-A05B359D0A00</ScheduledActivityRefId>
       <KeepOld>false</KeepOld>
     </ResourceBooking>
     

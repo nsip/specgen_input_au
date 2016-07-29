@@ -30,7 +30,7 @@
 		<Description>
 			<p>The locally-assigned identifier for this course section.</p>
 		</Description>
-		<Type ref="DataModel" name="LocalId"/>
+		<Type ref="DataModel" name="LocalIdType"/>
 	</Item>
 	<Item>
 		<Element>Description</Element>
@@ -252,17 +252,17 @@
 	<Item>
 		<Element>SIF_Metadata</Element>
 		<Characteristics>O</Characteristics>
-		<Type ref="DataModel" name="SIF_Metadata"/>
+		<Type ref="DataModel" name="SIF_MetadataType"/>
 	</Item>
 	<Item>
 		<Element>SIF_ExtendedElements</Element>
 		<Characteristics>O</Characteristics>
-		<Type ref="DataModel" name="SIF_ExtendedElements"/>
+		<Type ref="DataModel" name="SIF_ExtendedElementsType"/>
 	</Item>
 	
 	<xhtml:Example name="SectionInfo - Example 1" xmlns="">
-		<SectionInfo RefId="D3E34B359D75101A8C3D00AA001A1652">
-			<SchoolCourseInfoRefId>101A8C3D00AA001A0000A2E35B359D75</SchoolCourseInfoRefId>
+		<SectionInfo RefId="D3E34B35-9D75-101A-8C3D-00AA001A1652">
+			<SchoolCourseInfoRefId>101A8C3D-00AA-001A-0000-A2E35B359D75</SchoolCourseInfoRefId>
 			<LocalId>287-1</LocalId>
 			<SchoolYear>2013</SchoolYear>
 			<MediumOfInstruction>

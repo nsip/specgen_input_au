@@ -33,7 +33,7 @@
     <Description>
       School year for which the information is applicable, expressed as the four-digit year in which the school year ends (e.g., "2009").
     </Description>
-    <Type ref="DataModel" name="SchoolYear"></Type>
+     <Type ref="DataModel" name="SchoolYearType"></Type>
   </Item>
 
   <Item>
@@ -74,23 +74,23 @@
   <Item>
     <Element>//OtherCodeList</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="OtherCodeList"></Type>
+    <Type ref="DataModel" name="OtherCodeListType"></Type>
   </Item>
   
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_Metadata"></Type>
+    <Type ref="DataModel" name="SIF_MetadataType"></Type>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_ExtendedElements"></Type>
+    <Type ref="DataModel" name="SIF_ExtendedElementsType"></Type>
   </Item>
 
   <xhtml:Example xmlns=''>
-    <SchoolPrograms RefId="D3E34B359D75101A8C3D00AA001A1652">
-      <SchoolInfoRefId>73648462888624AA5294BC6380173276</SchoolInfoRefId>
+    <SchoolPrograms RefId="D3E34B35-9D75-101A-8C3D-00AA001A1652">
+      <SchoolInfoRefId>73648462-8886-24AA-5294-BC6380173276</SchoolInfoRefId>
       <SchoolYear>2009</SchoolYear>
       <SchoolProgramList>
         <Program>
