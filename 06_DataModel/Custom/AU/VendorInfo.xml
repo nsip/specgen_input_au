@@ -33,7 +33,7 @@
     <Description>
       <p>Contact information.</p>
     </Description>
-    <Type ref="DataModel" name="ContactInfo"></Type>
+    <Type ref="DataModel" name="ContactInfoType"></Type>
   </Item>
   
   <Item>
@@ -112,15 +112,15 @@
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_Metadata"></Type>
+    <Type ref="DataModel" name="SIF_MetadataType"></Type>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_ExtendedElements"></Type>
+    <Type ref="DataModel" name="SIF_ExtendedElementsType"></Type>
   </Item>
   <xhtml:Example xmlns="">
-    <VendorInfo RefId="AB3647C568654CF45678DD34EF564E22">
+    <VendorInfo RefId="AB3647C5-6865-4CF4-5678-DD34EF564E22">
       <Name>ABC School Supply</Name>
       <ContactInfo>
         <Name Type="LGL">

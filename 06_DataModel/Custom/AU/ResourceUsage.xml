@@ -176,19 +176,19 @@
     <Element>SIF_Metadata</Element>
     <Description></Description>
     <Characteristics>O</Characteristics>
-    <Type ref='DataModel' name='SIF_Metadata'/>
+    <Type ref="DataModel" name="SIF_MetadataType"/>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Description></Description>
     <Characteristics>O</Characteristics>
-    <Type ref='DataModel' name='SIF_ExtendedElements'/>
+    <Type ref="DataModel" name="SIF_ExtendedElementsType"/>
   </Item>
   
   
 <xhtml:Example xmlns="" name="ResourceUsage">
-    <ResourceUsage RefId ="4286194F43ED43C18EE2F0A27C4BEF87">
-	<SchoolInfoRefId>23B08571E4D645C3B82A3E52E5349925</SchoolInfoRefId>
+    <ResourceUsage RefId ="4286194F-43ED-43C1-8EE2-F0A27C4BEF87">
+	<SchoolInfoRefId>23B08571-E4D6-45C3-B82A-3E52E5349925</SchoolInfoRefId>
 	<ResourceUsageContentType>
 		<Code>01</Code>
 		<LocalDescription>Other Description</LocalDescription>
@@ -215,7 +215,7 @@
 	  </ResourceReportColumnList>
 	  <ResourceReportLineList>
 		<ResourceReportLine>
-		  <SIF_RefId SIF_RefObject="StudentPersonal">23B08571E4D645C3B82A3E52E5349925</SIF_RefId>
+		  <SIF_RefId SIF_RefObject="StudentPersonal">23B08571-E4D6-45C3-B82A-3E52E5349925</SIF_RefId>
       
 		  <StartDate>2011-03-18</StartDate>
 		  <EndDate>2011-04-17</EndDate>
@@ -224,7 +224,7 @@
 		  
     </ResourceReportLine>
     <ResourceReportLine>
-      <SIF_RefId SIF_RefObject="StaffPersonal">23B08571E4D345C3B82A3E52E5349925</SIF_RefId>
+      <SIF_RefId SIF_RefObject="StaffPersonal">23B08571-E4D3-45C3-B82A-3E52E5349925</SIF_RefId>
       <StartDate>2011-03-18</StartDate>
       <EndDate>2011-04-17</EndDate>
       <CurrentCost Currency="AUD">0.00</CurrentCost>

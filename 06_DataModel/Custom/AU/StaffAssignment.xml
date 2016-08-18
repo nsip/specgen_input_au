@@ -36,7 +36,7 @@
         School year for which the information is applicable, expressed as the four-digit year in which the school year ends (e.g., <code>2007</code>). Release 1.2 allows this to be optional as JobStart and EndDate allow for this Object to be used over more than one year.
       </p>
     </Description>
-    <Type ref="DataModel" name="SchoolYear"></Type>
+     <Type ref="DataModel" name="SchoolYearType"></Type>
   </Item>
   <Item>
     <Element>StaffPersonalRefId</Element>
@@ -131,7 +131,7 @@
     <Description>
       <p>Local Subject Id</p>
     </Description>
-    <Type ref="DataModel" name="LocalId"></Type>
+    <Type ref="DataModel" name="LocalIdType"></Type>
   </Item>
   <Item>
     <Element>//TimeTableSubjectRefId</Element>
@@ -159,7 +159,7 @@
   <Item>
     <Element>/OtherCodeList</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="OtherCodeList"></Type>
+    <Type ref="DataModel" name="OtherCodeListType"></Type>
   </Item>
   <Item>
     <Element>YearLevels</Element>
@@ -167,7 +167,7 @@
     <Description>
       <p>Year level(s) that the teacher is allowed to teach.</p>
     </Description>
-    <Type ref="DataModel" name="YearLevels"></Type>
+    <Type ref="DataModel" name="YearLevelsType"></Type>
   </Item>
 
   <Item>
@@ -200,19 +200,19 @@
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_Metadata"></Type>
+    <Type ref="DataModel" name="SIF_MetadataType"></Type>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
 
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_ExtendedElements"></Type>
+    <Type ref="DataModel" name="SIF_ExtendedElementsType"></Type>
   </Item>
   <xhtml:Example xmlns="">
-    <StaffAssignment RefId="D3E34B359D75101A8C3D00AA001A1652">
-      <SchoolInfoRefId>A8C3D3E34B359D75101D00AA001A1652</SchoolInfoRefId>
+    <StaffAssignment RefId="D3E34B35-9D75-101A-8C3D-00AA001A1652">
+      <SchoolInfoRefId>A8C3D3E3-4B35-9D75-101D-00AA001A1652</SchoolInfoRefId>
       <SchoolYear>2008</SchoolYear>
-      <StaffPersonalRefId>D3E34B359D75101A8C3D00AA001A1651</StaffPersonalRefId>
+      <StaffPersonalRefId>D3E34B35-9D75-101A-8C3D-00AA001A1651</StaffPersonalRefId>
       <Description>VCE English Teacher</Description>
       <PrimaryAssignment>Y</PrimaryAssignment>
       <JobStartDate>2000-09-05</JobStartDate>

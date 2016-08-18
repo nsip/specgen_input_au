@@ -1,4 +1,4 @@
-<Section name="Introduction">
+﻿<Section name="Introduction">
 <p>
 This section presents the XML structure for SIF Data Model common elements and objects in a tabular format for readers
 less versed in parsing formal XML schema definitions, along with conventions that typically apply in the data model for
@@ -126,13 +126,13 @@ actions take place within a <code>Change</code> event, and repeating elements&#x
 event or can be obtained directly via requests.  Repeatable elements are contained within a parent <em>List</em> element in most SIF objects
 whether or not they support events, e.g.:
 </p>
-<xhtml:Example intl="" xmlns="" name="EmailList" >
+<xhtml:Example intl="" xmlns="" name="EmailList" skipValidate="true">
 <EmailList>
 	<Email Type="Primary">contact@sifinfo.org</Email>
 	<Email Type="Alternate1">info@sifinfo.org</Email>
 </EmailList>
 </xhtml:Example>
-<xhtml:Example intl="au" xmlns="" name="EmailList" >
+<xhtml:Example intl="au" xmlns="" name="EmailList" skipValidate="true">
 <EmailList>
 	<Email Type="01">contact@sifinfo.org</Email>
 	<Email Type="02">info@sifinfo.org</Email>
@@ -165,22 +165,22 @@ compound, is also indicated in the Type column. <em>ActionList</em> key values m
 	no changes have occurred in the list, as does the omission of the list.  Systems storing <em>ActionList</em> data should set/replace/delete any
 	existing values identified by primary keys in the <code>Change</code> event they support.
 </p>
-<xhtml:Example intl="us" xmlns="" name="Indicating a new value for the Primary e-mail address and deleting the Alternate1 address">
+<xhtml:Example intl="us" xmlns="" name="Indicating a new value for the Primary e-mail address and deleting the Alternate1 address" skipValidate="true">
 	<EmailList>
 		<Email Type="Primary">editor@sifinfo.org</Email>
-		<Email Type="Alternate1" SIF_Action="Delete"/>
+		<Email Type="Alternate1" SIF_Action="Delete"></Email>
 	</EmailList>
 </xhtml:Example>
-<xhtml:Example intl="au" xmlns="" name="Indicating a new value for the Primary e-mail address and deleting the Alternate1 address">
+<xhtml:Example intl="au" xmlns="" name="Indicating a new value for the Primary e-mail address and deleting the Alternate1 address" skipValidate="true">
 	<EmailList>
 		<Email Type="01">editor@sifinfo.org</Email>
-		<Email Type="02" SIF_Action="Delete"/>
+		<Email Type="02" SIF_Action="Delete"></Email>
 	</EmailList>
 </xhtml:Example>
-<xhtml:Example xmlns="" name="Indicating a new value for the School e-mail address and deleting the Personal address" intl="uk">
+<xhtml:Example intl="uk"  xmlns="" name="Indicating a new value for the School e-mail address and deleting the Personal address" skipValidate="true">
 	<EmailList>
 		<Email Type="School">hjorgan@myschool.co.uk</Email>
-		<Email Type="Personal" SIF_Action="Delete"/>
+		<Email Type="Personal" SIF_Action="Delete"></Email>
 	</EmailList>
 </xhtml:Example>
 </Section>
@@ -205,13 +205,13 @@ A system that supports an <code>Alternate2</code> e-mail makes no changes to its
 	<em>List</em> data should replace all corresponding data in their systems when persisting the list; likewise when a change is made to one or more
 	list items or when all items in the list are deleted, systems should send the whole list in a <code>Change</code> event.
 </p>
-<xhtml:Example xmlns="" name="Indicating an updated list of country citizenships" intl="">
+<xhtml:Example xmlns="" name="Indicating an updated list of country citizenships" intl="" skipValidate="true">
 	<CountriesOfCitizenship>
 		<CountryOfCitizenship>US</CountryOfCitizenship>
 		<CountryOfCitizenship>DE</CountryOfCitizenship>
 	</CountriesOfCitizenship>
 </xhtml:Example>
-<xhtml:Example xmlns="" name="Indicating an updated list of country citizenships" intl="au">
+<xhtml:Example xmlns="" name="Indicating an updated list of country citizenships" intl="au" skipValidate="true">
 	<CountriesOfCitizenship>
 		<CountryOfCitizenship>1101</CountryOfCitizenship>
 		<CountryOfCitizenship>2304</CountryOfCitizenship>

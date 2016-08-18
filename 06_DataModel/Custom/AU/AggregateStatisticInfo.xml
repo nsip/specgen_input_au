@@ -128,7 +128,7 @@
     <Description>
       <p>Location where the activity takes place.</p>
     </Description>
-    <Type ref="DataModel" name="Location"></Type>
+    <Type ref="DataModel" name="LocationType"></Type>
   </Item>
   <Item>
     <Element>Measure</Element>
@@ -178,15 +178,15 @@
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_Metadata"></Type>
+    <Type ref="DataModel" name="SIF_MetadataType"></Type>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_ExtendedElements"></Type>
+    <Type ref="DataModel" name="SIF_ExtendedElementsType"></Type>
   </Item>
   <xhtml:Example xmlns="">
-    <AggregateStatisticInfo RefId="A5DECBD3161B4F5D9F46EBA64C87B002">
+    <AggregateStatisticInfo RefId="A5DECBD3-161B-4F5D-9F46-EBA64C87B002">
       <StatisticName>Read Proficiency L1</StatisticName>
       <CalculationRule Type="Description">Number of students scoring at Reading Proficiency Level 1</CalculationRule>
       <ApprovalDate>2002-09-01</ApprovalDate>
@@ -197,7 +197,7 @@
       <Source>SIS</Source>
       <Location Type="School">
         <LocationName>Green River High School</LocationName>
-        <LocationRefId SIF_RefObject="SchoolInfo">279BCEE5515E4C1AAC3A765D1F069BC3</LocationRefId>
+        <LocationRefId SIF_RefObject="SchoolInfo">279BCEE5-515E-4C1A-AC3A-765D1F069BC3</LocationRefId>
       </Location>
       <Measure>Count</Measure>
     </AggregateStatisticInfo>

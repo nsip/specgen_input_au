@@ -97,7 +97,7 @@
 		<Description>
 			<p>The locally-assigned identifier for this student.</p>
 		</Description>
-		<Type ref="DataModel" name="LocalId"/>
+		<Type ref="DataModel" name="LocalIdType"/>
 	</Item>
 	<Item>
 		<Element>StateProvinceId</Element>
@@ -105,7 +105,7 @@
 		<Description>
 			<p>The state-assigned identifier for this student.</p>
 		</Description>
-		<Type ref="DataModel" name="StateProvinceId"/>
+		<Type ref="DataModel" name="StateProvinceIdType"/>
 	</Item>
 	<Item>
 		<Element>ElectronicIdList</Element>
@@ -113,7 +113,7 @@
 		<Description>
 			<p>Electronic identifier(s) associated with this entity.</p>
 		</Description>
-		<Type ref="DataModel" name="ElectronicIdList"/>
+		<Type ref="DataModel" name="ElectronicIdListType"/>
 	</Item>
 	<Item>
 		<Element>OtherIdList</Element>
@@ -146,7 +146,7 @@
 		<Description>
 			<p>Personal Information </p>
 		</Description>
-		<Type ref="DataModel" name="PersonInfo"/>
+		<Type ref="DataModel" name="PersonInfoType"/>
 	</Item>
 	<Item>
 		<Element>ProjectedGraduationYear</Element>
@@ -154,7 +154,7 @@
 		<Description>
 			<p>Currently projected graduation year.</p>
 		</Description>
-		<Type ref="DataModel" name="ProjectedGraduationYear"/>
+		<Type ref="DataModel" name="ProjectedGraduationYearType"/>
 	</Item>
 	<Item>
 		<Element>OnTimeGraduationYear</Element>
@@ -162,7 +162,7 @@
 		<Description>
 			<p>First projected graduation year, usually determined when student is accepted into 9th grade.</p>
 		</Description>
-		<Type ref="DataModel" name="OnTimeGraduationYear"/>
+		<Type ref="DataModel" name="OnTimeGraduationYearType"/>
 	</Item>
 	<Item>
 		<Element>GraduationDate</Element>
@@ -170,7 +170,7 @@
 		<Description>
       Date student officially graduated from secondary education.
     </Description>
-		<Type ref="DataModel" name="GraduationDate"/>
+		<Type ref="DataModel" name="GraduationDateType"/>
 	</Item>
 	<Item>
 		<Element>MostRecent</Element>
@@ -188,7 +188,7 @@
 		<Description>
 			<p>Local identifier representing the school in which the student is or was most recently enrolled in the district.</p>
 		</Description>
-		<Type ref="DataModel" name="LocalId"/>
+		<Type ref="DataModel" name="LocalIdType"/>
 	</Item>
 	<Item>
 		<Element>/HomeroomLocalId</Element>
@@ -198,7 +198,7 @@
         Local identifier representing the current or most recent homeroom in which the student is or was most recently assigned in the district.  Use the value from <code>RoomInfo/HomeroomNumber</code> if supported.  If not supported, use the value from <code>RoomInfo/RoomNumber</code>.  If neither is supported, use the most appropriate value from the agent's application.
       </p>
 		</Description>
-		<Type ref="DataModel" name="LocalId"/>
+		<Type ref="DataModel" name="LocalIdType"/>
 	</Item>
 	<Item>
 		<Element>/YearLevel</Element>
@@ -206,7 +206,7 @@
 		<Description>
 			<p>The current or most recent year level of the student.</p>
 		</Description>
-		<Type ref="DataModel" name="YearLevel"/>
+		<Type ref="DataModel" name="YearLevelType"/>
 	</Item>
 	<Item>
 		<Element>/FTE</Element>
@@ -291,7 +291,7 @@
 		<Description>
 			<p>Local identifier for a specific campus Id. This may be the same as the school local Id, but is expected to be supplied only if the school does in fact have distinct campuses.</p>
 		</Description>
-		<Type ref="DataModel" name="LocalId"/>
+		<Type ref="DataModel" name="LocalIdType"/>
 	</Item>
 	<Item>
 		<Element>/SchoolACARAId</Element>
@@ -299,7 +299,7 @@
 		<Description>
 			<p>Identifier of the school in which the student is or was most recently enrolled in the district, as assigned in the Australian  School List.</p>
 		</Description>
-		<Type ref="DataModel" name="LocalId"/>
+		<Type ref="DataModel" name="LocalIdType"/>
 	</Item>
     <Item>
 		<Element>/TestLevel</Element>
@@ -307,7 +307,7 @@
 		<Description>
 		  <p>Values: 3,5,7,9. The test level that the student is registering for.</p>
 		</Description>
-		<Type ref="DataModel" name="YearLevel"></Type>
+		<Type ref="DataModel" name="YearLevelType"></Type>
   </Item>	
    <Item>
     <Element>/Homegroup</Element>
@@ -352,7 +352,7 @@
 		<Description>
 			<p>This is the school ACARAId to which student's report is to be made available.</p>
 		</Description>
-		<Type ref="DataModel" name="LocalId"/>
+		<Type ref="DataModel" name="LocalIdType"/>
 	</Item>
 	
 
@@ -362,7 +362,7 @@
 		<Description>
 			<p>ACARAId of other school that student is enrolled in, if known, as assigned in the Australian School List.</p>
 		</Description>
-		<Type ref="DataModel" name="LocalId"/>
+		<Type ref="DataModel" name="LocalIdType"/>
 	</Item>
 	
 	<Item>
@@ -471,15 +471,15 @@
 	<Item>
 		<Element>SIF_Metadata</Element>
 		<Characteristics>O</Characteristics>
-		<Type ref="DataModel" name="SIF_Metadata"/>
+		<Type ref="DataModel" name="SIF_MetadataType"/>
 	</Item>
 	<Item>
 		<Element>SIF_ExtendedElements</Element>
 		<Characteristics>O</Characteristics>
-		<Type ref="DataModel" name="SIF_ExtendedElements"/>
+		<Type ref="DataModel" name="SIF_ExtendedElementsType"/>
 	</Item>
 	<xhtml:Example xmlns="" name ="StudentPersonal">
-		<StudentPersonal RefId="7C834EA9EDA12090347F83297E1C290C">
+		<StudentPersonal RefId="7C834EA9-EDA1-2090-347F-83297E1C290C">
 			<AlertMessages>
 				<AlertMessage Type="Legal">Mother is legal guardian</AlertMessage>
 			</AlertMessages>

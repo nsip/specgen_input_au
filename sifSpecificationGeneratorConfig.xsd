@@ -60,7 +60,6 @@
 										<xs:element name="xsdTitle" type="xs:normalizedString"/>
 										<xs:element name="diagram" type="xs:boolean"/>
 										<xs:element name="isDataModelXsd" type="xs:boolean"/>
-										<xs:element name="isServiceBodyXsd" type="xs:boolean"/>
 										<xs:element name="singleSchema" type="xs:boolean"/>
 										<xs:element name="annotate" type="xs:boolean"/>
 										<xs:element name="listWithKeyConstraints" type="xs:boolean"/>

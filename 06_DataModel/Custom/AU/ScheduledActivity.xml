@@ -42,7 +42,7 @@
     <Description>
       <p>Day Id.</p>
     </Description>
-    <Type ref="DataModel" name="LocalId"></Type>
+    <Type ref="DataModel" name="LocalIdType"></Type>
   </Item>
   <Item>
     <Element>PeriodId</Element>
@@ -51,7 +51,7 @@
     <Description>
       <p>Period Id within the Day Id</p>
     </Description>
-    <Type ref="DataModel" name="LocalId"></Type>
+    <Type ref="DataModel" name="LocalIdType"></Type>
   </Item>
   
     <Item>
@@ -147,7 +147,7 @@
     <Description>
       <p>LocalId of the StaffPersonal record for the teacher supervising the event or event subset.</p>
     </Description>
-    <Type ref="DataModel" name="LocalId"></Type>
+    <Type ref="DataModel" name="LocalIdType"></Type>
   </Item>
 
   <Item>
@@ -221,7 +221,7 @@
     <Description>
       <p>The address(es) associated with the scheduled activity.</p>
     </Description>
-    <Type ref="DataModel" name="AddressList"></Type>
+    <Type ref="DataModel" name="AddressListType"></Type>
   </Item>
   
   <Item>
@@ -304,7 +304,7 @@
     <Description>
       <p>List of year levels offered by the school.</p>
     </Description>
-    <Type ref="DataModel" name="YearLevels"></Type>
+    <Type ref="DataModel" name="YearLevelsType"></Type>
   </Item>
   
   <Item>
@@ -329,26 +329,26 @@
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_Metadata"></Type>
+    <Type ref="DataModel" name="SIF_MetadataType"></Type>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
 
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_ExtendedElements"></Type>
+    <Type ref="DataModel" name="SIF_ExtendedElementsType"></Type>
   </Item>
   <xhtml:Example name="ScheduledActivity Example" xmlns="">
-      <ScheduledActivity RefId="BD3E34B359D75101A8C3D00AA001A165">
-        <SchoolInfoRefId>B7A34E561C97345C0A4E11BB112B2753</SchoolInfoRefId>
-        <TimeTableCellRefId>FDF052869094440596B3D6CC0ED5F00B</TimeTableCellRefId >
+      <ScheduledActivity RefId="BD3E34B3-59D7-5101-A8C3-D00AA001A165">
+        <SchoolInfoRefId>B7A34E56-1C97-345C-0A4E-11BB112B2753</SchoolInfoRefId>
+        <TimeTableCellRefId>FDF05286-9094-4405-96B3-D6CC0ED5F00B</TimeTableCellRefId >
    <DayId>1</DayId>
-        <TimeTableRefId>2A7F0D963E994B83A958690C360A36C2</TimeTableRefId>
+        <TimeTableRefId>2A7F0D96-3E99-4B83-A958-690C360A36C2</TimeTableRefId>
    <ActivityDate>2014-10-10</ActivityDate>
    <StartTime>12:05:00</StartTime>
    <FinishTime>13:30:00</FinishTime>
    <TeacherList>
      <TeacherCover>
-       <StaffPersonalRefId>98157AA013BA8C3D00AA012B359D7512</StaffPersonalRefId>
+       <StaffPersonalRefId>98157AA0-13BA-8C3D-00AA-012B359D7512</StaffPersonalRefId>
        <StaffLocalId>US8923</StaffLocalId>
        <StartTime>12:05:00</StartTime>
        <FinishTime>13:00:00</FinishTime>
@@ -357,7 +357,7 @@
        <Weighting>0.5</Weighting>
      </TeacherCover>
      <TeacherCover>
-       <StaffPersonalRefId>A75A00101A8C301D02E3A05B359D0A00</StaffPersonalRefId>
+       <StaffPersonalRefId>A75A0010-1A8C-301D-02E3-A05B359D0A00</StaffPersonalRefId>
        <StaffLocalId>ZY3213</StaffLocalId>
        <StartTime>13:00:00</StartTime>
        <FinishTime>13:30:00</FinishTime>
@@ -367,15 +367,15 @@
      </TeacherCover>
    </TeacherList>
    <RoomList>
-     <RoomInfoRefId>11737EA4301CADCA75C87214A7C46BDB</RoomInfoRefId>
+     <RoomInfoRefId>11737EA4-301C-ADCA-75C8-7214A7C46BDB</RoomInfoRefId>
    </RoomList>
    <ActivityType>Incursion</ActivityType>
    <StudentList>
-     <StudentPersonalRefId>FAE9D90A38F84B729C92F868CB63C9F3</StudentPersonalRefId>
+     <StudentPersonalRefId>FAE9D90A-38F8-4B72-9C92-F868CB63C9F3</StudentPersonalRefId>
    </StudentList>
    <TeachingGroupList>
-     <TeachingGroupRefId>EB79C3D1FF1911D785138B604A511DAD</TeachingGroupRefId>
-     <TeachingGroupRefId>B234516384746B387459000F84723A00</TeachingGroupRefId>
+     <TeachingGroupRefId>EB79C3D1-FF19-11D7-8513-8B604A511DAD</TeachingGroupRefId>
+     <TeachingGroupRefId>B2345163-8474-6B38-7459-000F84723A00</TeachingGroupRefId>
    </TeachingGroupList>
  </ScheduledActivity> 
 

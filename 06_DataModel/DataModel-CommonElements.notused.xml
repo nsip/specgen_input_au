@@ -1,0 +1,13 @@
+<CommonElements xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.w3.org/1999/xhtml" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+<!--This file is currently not used. It produces elements that can be reused as xsd refs rather than xsd types  -->
+
+  <Intro>
+    <p>A list of elements commonly used across working groups/task forces or objects.</p>
+  </Intro>
+  <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="Custom/DataModel-CommonElements-Custom.xml"/>
+  <xi:include parse="xml" xmlns:xi="http://www.w3.org/2001/XInclude" href="CommonElement-SIF_Metadata.xml"/>
+  <xi:include parse="xml" xmlns:xi="http://www.w3.org/2001/XInclude" href="CommonElement-SIF_ExtendedElement.xml"/>
+
+  
+</CommonElements>

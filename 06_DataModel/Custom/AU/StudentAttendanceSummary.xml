@@ -1,12 +1,7 @@
 <DataObject name="StudentAttendanceSummary">
 
-  <Key>@StudentPersonalRefId</Key>
-  <Key>@SchoolInfoRefId</Key>
-  <Key>@SchoolYear</Key>
-  <Key>@StartDate</Key>
-  <Key>@EndDate</Key>
-
-
+  <Key>@StudentAttendanceSummaryRefId</Key>
+  
   <EventsReported>true</EventsReported>
 
   <Item>
@@ -17,7 +12,16 @@
   </Item>
 
   <Item>
-    <Attribute>StudentPersonalRefId</Attribute>
+    <Attribute>StudentAttendanceSummaryRefId</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>An ID (GUID) for this summary of attendance information being reported on. This GUID would be used to form a REST URL.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+
+  <Item>
+    <Element>StudentPersonalRefId</Element>
     <Characteristics>M</Characteristics>
     <Description>
       <p>The ID (GUID) of the student for whom this attendance information is being reported.</p>
@@ -25,7 +29,7 @@
     <Type ref="CommonTypes" name="IdRefType"></Type>
   </Item>
   <Item>
-    <Attribute>SchoolInfoRefId</Attribute>
+    <Element>SchoolInfoRefId</Element>
     <Characteristics>M</Characteristics>
     <Description>
       <p>The ID (GUID) of the school for which this attendance information is being reported.</p>
@@ -33,15 +37,7 @@
     <Type ref="CommonTypes" name="IdRefType"></Type>
   </Item>
   <Item>
-    <Attribute>SchoolYear</Attribute>
-    <Characteristics>M</Characteristics>
-    <Description>
-      <p>School year for which the information is applicable.</p>
-    </Description>
-    <Type ref="DataModel" name="SchoolYear"></Type>
-  </Item>
-  <Item>
-    <Attribute>StartDate</Attribute>
+    <Element>StartDate</Element>
     <Characteristics>M</Characteristics>
     <Description>
       <p>Starting date of this attendance reporting period.</p>
@@ -49,20 +45,21 @@
     <Type name="xs:date"></Type>
   </Item>
   <Item>
-    <Attribute>EndDate</Attribute>
+   <Element>EndDate</Element>
     <Characteristics>M</Characteristics>
     <Description>
       <p>Ending date of this attendance reporting period.</p>
     </Description>
     <Type name="xs:date"></Type>
   </Item>
+  
   <Item>
-    <Element>StudentAttendanceSummaryRefId</Element>
-    <Characteristics>O</Characteristics>
+    <Element>SchoolYear</Element>
+    <Characteristics>M</Characteristics>
     <Description>
-      <p>An optional ID (GUID) for this summary of attendance information being reported on. This GUID would be used to form a REST URL.</p>
+      <p>School year for which the information is applicable.</p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
+     <Type ref="DataModel" name="SchoolYearType"></Type>
   </Item>
   <Item>
     <Element>StartDay</Element>
@@ -138,18 +135,22 @@
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_Metadata"></Type>
+    <Type ref="DataModel" name="SIF_MetadataType"></Type>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_ExtendedElements"></Type>
+    <Type ref="DataModel" name="SIF_ExtendedElementsType"></Type>
   </Item>
 
   <xhtml:Example xmlns="">
     <StudentAttendanceSummary
-        StudentPersonalRefId="D3476FAE8647384BDA2431EDA3583211" SchoolInfoRefId="CA285746359D75101A8C36432A901A16" SchoolYear="2005"
-        StartDate="2004-08-30" EndDate="2005-06-10">
+        StudentAttendanceSummaryRefId="D3476FAE-8647-384B-DA24-31EDA3583211" >
+        <StudentPersonalRefId>7C834EA9-EDA1-2090-347F-83297E1C290C</StudentPersonalRefId>
+        <SchoolInfoRefId>CA285746-359D-7510-1A8C-36432A901A16</SchoolInfoRefId>
+        <SchoolYear>2015</SchoolYear>
+        <StartDate>2014-08-30</StartDate>
+        <EndDate>2015-06-10</EndDate>  
       
       <StartDay>1</StartDay>
       

@@ -31,7 +31,7 @@
     <Description>
       <p>School year for which the information is applicable, expressed as the four-digit year in which the school year ends (e.g., "2007").</p>
     </Description>
-    <Type ref="DataModel" name="SchoolYear"></Type>
+    <Type ref="DataModel" name="SchoolYearType"></Type>
   </Item>
   <Item>
     <Element>LocalId</Element>
@@ -39,7 +39,7 @@
     <Description>
       <p>The locally assigned identifier for this calendar.</p>
     </Description>
-    <Type ref="DataModel" name="LocalId"></Type>
+    <Type ref="DataModel" name="LocalIdType"></Type>
   </Item>
   <Item>
     <Element>Description</Element>
@@ -95,7 +95,7 @@
     <Description>
       <p>Date of graduation ceremony.</p>
     </Description>
-    <Type ref="DataModel" name="GraduationDate"></Type>
+    <Type ref="DataModel" name="GraduationDateType"></Type>
   </Item>
   <Item>
     <Element>InstructionalMinutes</Element>
@@ -119,22 +119,22 @@
     <Description>
       <p>Collection of year levels applicable to this school calendar.</p>
     </Description>
-    <Type ref="DataModel" name="YearLevels"></Type>
+    <Type ref="DataModel" name="YearLevelsType"></Type>
   </Item>
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_Metadata"></Type>
+    <Type ref="DataModel" name="SIF_MetadataType"></Type>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_ExtendedElements"></Type>
+    <Type ref="DataModel" name="SIF_ExtendedElementsType"></Type>
   </Item>
 
   <xhtml:Example xmlns="">
-    <CalendarSummary RefId="B5739375800AC4CC63850BB2754114AA">
-      <SchoolInfoRefId>B7A34E561C97345C0A4E11BB112B2753</SchoolInfoRefId>
+    <CalendarSummary RefId="B5739375-800A-C4CC-6385-0BB2754114AA">
+      <SchoolInfoRefId>B7A34E56-1C97-345C-0A4E-11BB112B2753</SchoolInfoRefId>
       <SchoolYear>2005</SchoolYear>
           <LocalId>123321A</LocalId>
           <Description>Elementary School Calendar</Description>

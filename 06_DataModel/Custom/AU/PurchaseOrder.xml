@@ -194,7 +194,7 @@
     <Description>
       <p>Accounting period for the charge.</p>
     </Description>    
-    <Type ref="DataModel" name="LocalId"></Type>
+    <Type ref="DataModel" name="LocalIdType"></Type>
   </Item>
   
   <Item>
@@ -266,19 +266,19 @@
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_Metadata"></Type>
+    <Type ref="DataModel" name="SIF_MetadataType"></Type>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_ExtendedElements"></Type>
+    <Type ref="DataModel" name="SIF_ExtendedElementsType"></Type>
   </Item>
   <xhtml:Example xmlns="">
-    <PurchaseOrder RefId="ED12345FDA8497275BC28AA349DD3721">
+    <PurchaseOrder RefId="ED12345F-DA84-9727-5BC2-8AA349DD3721">
       <FormNumber>00342</FormNumber>
-      <VendorInfoRefId>BD12345FDA8497275BC28AA349DD3723</VendorInfoRefId>
-      <ChargedLocationInfoRefId>ED12345FDA8497275BC28AA349DD3722</ChargedLocationInfoRefId>
-      <EmployeePersonalRefId>AD12345FDA8497275BC28AA349DD3721</EmployeePersonalRefId>
+      <VendorInfoRefId>BD12345F-DA84-9727-5BC2-8AA349DD3723</VendorInfoRefId>
+      <ChargedLocationInfoRefId>ED12345F-DA84-9727-5BC2-8AA349DD3722</ChargedLocationInfoRefId>
+      <EmployeePersonalRefId>AD12345F-DA84-9727-5BC2-8AA349DD3721</EmployeePersonalRefId>
       <PurchasingItems>
         <PurchasingItem>
           <ItemNumber>154486</ItemNumber>

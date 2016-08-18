@@ -82,9 +82,7 @@
     <Description>
       <p>The list of identity assertions for this user.</p>
     </Description>
-    <List mode="ActionList">
-      <Key>IdentityAssertion/@SchemaName</Key>
-    </List>
+    <List mode="List"></List>
   </Item>
   <Item>
     <Element>/IdentityAssertion</Element>
@@ -171,46 +169,46 @@
     <Element>SIF_Metadata</Element>
     <Description></Description>
     <Characteristics>O</Characteristics>
-    <Type ref='DataModel' name='SIF_Metadata'/>
+    <Type ref="DataModel" name="SIF_MetadataType"/>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Description></Description>
     <Characteristics>O</Characteristics>
-    <Type ref='DataModel' name='SIF_ExtendedElements'/>
+    <Type ref="DataModel" name="SIF_ExtendedElementsType"/>
   </Item>
   <Key>@RefId</Key>
   <xhtml:Example xmlns='' name='Identity published by an Access Federation Shibboleth Provider'>
-    <Identity RefId="4286194F43ED43C18EE2F0A27C4BEF86">
-      <SIF_RefId SIF_RefObject="StudentPersonal">23B08571E4D645C3B82A3E52E5349925</SIF_RefId>
+    <Identity RefId="4286194F-43ED-43C1-8EE2-F0A27C4BEF86">
+      <SIF_RefId SIF_RefObject="StudentPersonal">23B08571-E4D6-45C3-B82A-3E52E5349925</SIF_RefId>
       <AuthenticationSource>AUAccessShibboleth</AuthenticationSource>
       <IdentityAssertions>
         <IdentityAssertion SchemaName="eduPersonPrincipalName">john.doe@asdf.edu.au</IdentityAssertion>
       </IdentityAssertions>
-      <AuthenticationSourceGlobalUID>A9A6CB2BC49344278C1FD6587D448B35</AuthenticationSourceGlobalUID>
+      <AuthenticationSourceGlobalUID>A9A6CB2B-C493-4427-8C1F-D6587D448B35</AuthenticationSourceGlobalUID>
     </Identity>
   </xhtml:Example>
   <xhtml:Example xmlns="" name="Identity published by Microsoft Active Directory">
-    <Identity RefId="4286194F43ED43C18EE2F0A27C4BEF86">
-      <SIF_RefId SIF_RefObject="StudentPersonal">23B08571E4D645C3B82A3E52E5349925</SIF_RefId>
+    <Identity RefId="4286194F-43ED-43C1-8EE2-F0A27C4BEF86">
+      <SIF_RefId SIF_RefObject="StudentPersonal">23B08571-E4D6-45C3-B82A-3E52E5349925</SIF_RefId>
       <AuthenticationSource>MSActiveDirectory</AuthenticationSource>
       <IdentityAssertions>
         <IdentityAssertion SchemaName="sAmAccountName">user01</IdentityAssertion>
         <IdentityAssertion SchemaName="userPrincipalName">user01@asdf.edu.au</IdentityAssertion>
         <IdentityAssertion SchemaName="distinguishedName">cn=User01,cn=Users,dc=org</IdentityAssertion>
       </IdentityAssertions>
-      <AuthenticationSourceGlobalUID>23A08571E4D645C3B82A3E52E5349925</AuthenticationSourceGlobalUID>
+      <AuthenticationSourceGlobalUID>23A08571-E4D6-45C3-B82A-3E52E5349925</AuthenticationSourceGlobalUID>
     </Identity>
   </xhtml:Example>
   <xhtml:Example xmlns="" name="Identity published by an OpenID provider">
-  <Identity RefId="4286194F43ED43C18EE2F0A27C4BEF86">
-    <SIF_RefId SIF_RefObject="StudentPersonal">23B08571E4D645C3B82A3E52E5349925</SIF_RefId>
+  <Identity RefId="4286194F-43ED-43C1-8EE2-F0A27C4BEF86">
+    <SIF_RefId SIF_RefObject="StudentPersonal">23B08571-E4D6-45C3-B82A-3E52E5349925</SIF_RefId>
     <AuthenticationSource>OpenID</AuthenticationSource>
     <IdentityAssertions>
       <IdentityAssertion SchemaName="openid.identity">http://verisign.org/p/alice </IdentityAssertion>
       <IdentityAssertion SchemaName="openid.server">http://verisign.org </IdentityAssertion>
     </IdentityAssertions>
-    <AuthenticationSourceGlobalUID>A9A6CB2BC49344278C1FD6587D448B35</AuthenticationSourceGlobalUID>
+    <AuthenticationSourceGlobalUID>A9A6CB2B-C493-4427-8C1F-D6587D448B35</AuthenticationSourceGlobalUID>
   </Identity>
   </xhtml:Example>
 </DataObject>

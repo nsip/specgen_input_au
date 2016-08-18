@@ -18,14 +18,7 @@
     </Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
   </Item>
-  <Item>
-
-    <Attribute>xml:lang</Attribute>
-    <Characteristics>M</Characteristics>
-    <Description>
-      <p>The default language of the text used for the content in the learning standard document.</p>
-    </Description>
-  </Item>
+ 
   <Item>
     <Element>Title</Element>
 
@@ -132,7 +125,7 @@
     <Element>/ACStrandSubjectArea</Element>
 
     <Characteristics>MR</Characteristics>
-    <Type ref="DataModel" name="ACStrandSubjectArea"></Type>
+    <Type ref="DataModel" name="ACStrandSubjectAreaType"></Type>
   </Item>
   <Item>
     <Element>DocumentStatus</Element>
@@ -223,7 +216,7 @@
     <Description>
       <p>SIF common YearLevels element</p>
     </Description>
-    <Type ref="DataModel" name="YearLevels"></Type>
+    <Type ref="DataModel" name="YearLevelsType"></Type>
   </Item>
   <Item>
     <Element>RepositoryDate</Element>
@@ -260,16 +253,16 @@
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_Metadata"></Type>
+    <Type ref="DataModel" name="SIF_MetadataType"></Type>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
 
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_ExtendedElements"></Type>
+    <Type ref="DataModel" name="SIF_ExtendedElementsType"></Type>
   </Item>
   <xhtml:Example xmlns="">
-    <LearningStandardDocument RefId="A5A575C789175101B8E7F08ED123A823" xml:lang="en">
+    <LearningStandardDocument RefId="A5A575C7-8917-5101-B8E7-F08ED123A823" lang="en">
     <Title>Australian National Curriculum: History</Title>
     <Description>
             AIMS: The aim of the History curriculum is to instill in students an appreciation in the diversity of the past and how they inform current developments etc etc.

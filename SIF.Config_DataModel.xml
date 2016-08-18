@@ -3,7 +3,7 @@
 	
 	<globalSettings>
 		<inputDocument>SIF_DataModel.xml</inputDocument>
-		<sifNamespace>http://www.sifinfo.org/au/infrastructure/2.x</sifNamespace>
+		<sifNamespace>http://www.sifassociation.org/datamodel/au/3.4</sifNamespace>
 		<localizationCode>au</localizationCode>
 	</globalSettings>
 	
@@ -13,7 +13,7 @@
 		<htmlDocument>
 			<singleDocument>false</singleDocument>
 			<rootDocumentFileName>index.html</rootDocumentFileName>
-			<rootTitle>SIF Implementation Specification (Australia) 1.4</rootTitle>
+			<rootTitle>SIF Implementation Specification (Australia) 3.4</rootTitle>
 			<documentType>DataModel</documentType>
 		</htmlDocument>
 		
@@ -21,17 +21,12 @@
 		<htmlDocument>
 			<singleDocument>true</singleDocument>
 			<rootDocumentFileName>ImplementationSpecification.html</rootDocumentFileName>
-			<rootTitle>SIF Implementation Specification (Australia) 1.4</rootTitle>
+			<rootTitle>SIF Implementation Specification (Australia) 3.4</rootTitle>
 			<documentType>DataModel</documentType>
 		</htmlDocument>
 		
 	</htmlDocuments>
 	
-	
-	<webServiceDocuments>
-   
-  </webServiceDocuments>
-  
   
 	<xsdDocuments>
 	
@@ -39,7 +34,6 @@
 			<xsdTitle>SIF_MessageNoIncludes</xsdTitle>
 			<diagram>true</diagram>
 			<isDataModelXsd>false</isDataModelXsd>
-			<isServiceBodyXsd>false</isServiceBodyXsd>
 			<singleSchema>true</singleSchema>
 			<annotate>false</annotate>
 			<listWithKeyConstraints>false</listWithKeyConstraints>
@@ -50,7 +44,6 @@
 			<xsdTitle>SIF_MessageNoIncludesAnnotated</xsdTitle>
 			<diagram>false</diagram>
 			<isDataModelXsd>false</isDataModelXsd>
-			<isServiceBodyXsd>false</isServiceBodyXsd>
 			<singleSchema>true</singleSchema>
 			<annotate>true</annotate>
 			<listWithKeyConstraints>false</listWithKeyConstraints>
@@ -61,7 +54,6 @@
 			<xsdTitle>SIF_Message</xsdTitle>
 			<diagram>false</diagram>
 			<isDataModelXsd>false</isDataModelXsd>
-			<isServiceBodyXsd>false</isServiceBodyXsd>
 			<singleSchema>false</singleSchema>
 			<annotate>false</annotate>
 			<listWithKeyConstraints>false</listWithKeyConstraints>
@@ -72,7 +64,6 @@
 			<xsdTitle>SIF_MessageAnnotated</xsdTitle>
 			<diagram>false</diagram>
 			<isDataModelXsd>false</isDataModelXsd>
-			<isServiceBodyXsd>false</isServiceBodyXsd>
 			<singleSchema>false</singleSchema>
 			<annotate>true</annotate>
 			<listWithKeyConstraints>false</listWithKeyConstraints>
@@ -83,7 +74,6 @@
 			<xsdTitle>DataModelNoIncludes</xsdTitle>
 			<diagram>false</diagram>
 			<isDataModelXsd>true</isDataModelXsd>
-			<isServiceBodyXsd>false</isServiceBodyXsd>
 			<singleSchema>true</singleSchema>
 			<annotate>false</annotate>
 			<listWithKeyConstraints>false</listWithKeyConstraints>
@@ -94,7 +84,6 @@
 			<xsdTitle>DataModelNoIncludesAnnotated</xsdTitle>
 			<diagram>false</diagram>
 			<isDataModelXsd>true</isDataModelXsd>
-			<isServiceBodyXsd>false</isServiceBodyXsd>
 			<singleSchema>true</singleSchema>
 			<annotate>true</annotate>
 			<listWithKeyConstraints>false</listWithKeyConstraints>
@@ -105,7 +94,6 @@
 			<xsdTitle>DataModel</xsdTitle>
 			<diagram>false</diagram>
 			<isDataModelXsd>true</isDataModelXsd>
-			<isServiceBodyXsd>false</isServiceBodyXsd>
 			<singleSchema>false</singleSchema>
 			<annotate>false</annotate>
 			<listWithKeyConstraints>false</listWithKeyConstraints>
@@ -116,7 +104,6 @@
 			<xsdTitle>DataModelAnnotated</xsdTitle>
 			<diagram>false</diagram>
 			<isDataModelXsd>true</isDataModelXsd>
-			<isServiceBodyXsd>false</isServiceBodyXsd>
 			<singleSchema>false</singleSchema>
 			<annotate>true</annotate>
 			<listWithKeyConstraints>false</listWithKeyConstraints>
@@ -124,16 +111,6 @@
 		</xsdDocument>
 		
 
-		<xsdDocument>
-			<xsdTitle>ServiceBodyDefinitions</xsdTitle>
-			<diagram>false</diagram>
-			<isDataModelXsd>false</isDataModelXsd>
-			<isServiceBodyXsd>true</isServiceBodyXsd>
-			<singleSchema>false</singleSchema>
-			<annotate>true</annotate>
-			<listWithKeyConstraints>false</listWithKeyConstraints>
-			<isSifMessage2Xsd>false</isSifMessage2Xsd>
-		</xsdDocument>  
 		
 	</xsdDocuments>
 </sifSpecificationGeneratorConfig>

@@ -1,0 +1,87 @@
+
+
+		<!--BEGIN_COMMON_TYPES_COMPUTED-->
+<CommonElement xmlns="http://www.w3.org/1999/xhtml" xmlns:xs="http://www.w3.org/2001/XMLSchema" name="SIF_ProvideObjectNamesType" type="true">
+  <Item>
+    <Element>SIF_ProvideObjectNamesType</Element>
+    <Description>
+      [This is all overridden in code.] 
+    </Description>
+    <Values>
+      
+    </Values>
+  </Item>
+</CommonElement>
+
+<CommonElement xmlns="http://www.w3.org/1999/xhtml" xmlns:xs="http://www.w3.org/2001/XMLSchema" name="SIF_SubscribeObjectNamesType" type="true">
+  <Item>
+    <Element>SIF_SubscribeObjectNamesType</Element>
+    <Description>
+       [This is all overridden in code.] 
+    </Description>
+    <Values>
+      
+    </Values>
+  </Item>
+</CommonElement>
+
+<CommonElement xmlns="http://www.w3.org/1999/xhtml" xmlns:xs="http://www.w3.org/2001/XMLSchema" name="SIF_RequestObjectNamesType" type="true">
+  <Item>
+    <Element>SIF_RequestObjectNamesType</Element>
+    <Description>
+     [This is all overridden in code.] 
+    </Description>
+    <Values>
+    </Values>
+  </Item>
+</CommonElement>
+
+<CommonElement xmlns="http://www.w3.org/1999/xhtml" xmlns:xs="http://www.w3.org/2001/XMLSchema" name="SIF_ResponseObjectType" type="true">
+  <Item>
+    <Element>SIF_ResponseObjectType</Element>
+    <Description>
+       [This is all overridden in code.]  
+    </Description>
+    <Choice>
+      
+    </Choice>
+  </Item>
+</CommonElement>
+
+<CommonElement xmlns="http://www.w3.org/1999/xhtml" xmlns:xs="http://www.w3.org/2001/XMLSchema" name="SIF_ResponseObjectsType" type="true">
+  <Item>
+    <Element>SIF_ResponseObjectsType</Element>
+    <Description>
+	 [This is all overridden in code.]    
+    </Description>
+    <Type>
+      
+    </Type>
+  </Item>
+</CommonElement>
+
+<CommonElement xmlns="http://www.w3.org/1999/xhtml" xmlns:xs="http://www.w3.org/2001/XMLSchema" name="SIF_EventObjectType" type="true">
+  <Item>
+    <Element>SIF_EventObjectType</Element>
+    <Description>
+	 [This is all overridden in code.]     
+	</Description>
+    <Choice>
+      
+    </Choice>
+  </Item>
+</CommonElement>
+
+<CommonElement xmlns="http://www.w3.org/1999/xhtml" xmlns:xs="http://www.w3.org/2001/XMLSchema" name="ReportDataObjectType" type="true">
+  <Item>
+    <Element>ReportDataObjectType</Element>
+    <Description>
+	   [This is all overridden in code.]   
+	</Description>
+    <Choice>
+      
+    </Choice>
+  </Item>
+</CommonElement><!--END_COMMON_TYPES_COMPUTED-->
+		
+  

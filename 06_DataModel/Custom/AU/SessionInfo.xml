@@ -44,7 +44,7 @@
     <Description>
       <p>School year for which the information is applicable, expressed as the four-digit year in which the school year ends (e.g., "2007").</p>
     </Description>
-    <Type ref="DataModel" name="SchoolYear"></Type>
+     <Type ref="DataModel" name="SchoolYearType"></Type>
   </Item>
 
   <Item>
@@ -54,7 +54,7 @@
     <Description>
       <p>Session Local Identifier</p>
     </Description>
-    <Type ref="DataModel" name="LocalId"></Type>
+    <Type ref="DataModel" name="LocalIdType"></Type>
   </Item>
 
   <Item>
@@ -64,7 +64,7 @@
     <Description>
       <p>TimeTableSubject Local Identifier</p>
     </Description>
-    <Type ref="DataModel" name="LocalId"></Type>
+    <Type ref="DataModel" name="LocalIdType"></Type>
   </Item>
 
   <Item>
@@ -74,7 +74,7 @@
     <Description>
       <p>Teaching Group Local Identifier</p>
     </Description>
-    <Type ref="DataModel" name="LocalId"></Type>
+    <Type ref="DataModel" name="LocalIdType"></Type>
   </Item>
 
   <Item>
@@ -84,7 +84,7 @@
     <Description>
       <p>School Local Identifier</p>
     </Description>
-    <Type ref="DataModel" name="LocalId"></Type>
+    <Type ref="DataModel" name="LocalIdType"></Type>
   </Item>
 
   <Item>
@@ -94,7 +94,7 @@
     <Description>
       <p>Staff Local Identifier</p>
     </Description>
-    <Type ref="DataModel" name="LocalId"></Type>
+    <Type ref="DataModel" name="LocalIdType"></Type>
   </Item>
 
   <Item>
@@ -113,7 +113,7 @@
     <Description>
       <p>Day Id.</p>
     </Description>
-    <Type ref="DataModel" name="LocalId"></Type>
+    <Type ref="DataModel" name="LocalIdType"></Type>
   </Item>
 
   <Item>
@@ -123,7 +123,7 @@
     <Description>
       <p>Period Id within the Day Id</p>
     </Description>
-    <Type ref="DataModel" name="LocalId"></Type>
+    <Type ref="DataModel" name="LocalIdType"></Type>
   </Item>
 
   <Item>
@@ -169,18 +169,18 @@
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_Metadata"></Type>
+    <Type ref="DataModel" name="SIF_MetadataType"></Type>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
 
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_ExtendedElements"></Type>
+    <Type ref="DataModel" name="SIF_ExtendedElementsType"></Type>
   </Item>
   <xhtml:Example xmlns="">
-    <SessionInfo RefId="98157AA013BA8C3D00AA012B359D7512">
-      <SchoolInfoRefId>11737EA4301CADCA75C87214A7C46BDB</SchoolInfoRefId>
-      <TimeTableCellRefId>A75A00101A8C301D02E3A05B359D0A00</TimeTableCellRefId>
+    <SessionInfo RefId="98157AA0-13BA-8C3D-00AA-012B359D7512">
+      <SchoolInfoRefId>11737EA4-301C-ADCA-75C8-7214A7C46BDB</SchoolInfoRefId>
+      <TimeTableCellRefId>A75A0010-1A8C-301D-02E3-A05B359D0A00</TimeTableCellRefId>
       <SchoolYear>2008</SchoolYear>
       <LocalId>2</LocalId>
       <TimeTableSubjectLocalId>10MA1</TimeTableSubjectLocalId>

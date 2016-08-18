@@ -21,7 +21,7 @@
     <Description>
       <p>The locally-assigned identifier for this school.</p>
     </Description>
-    <Type ref="DataModel" name="LocalId"></Type>
+    <Type ref="DataModel" name="LocalIdType"></Type>
   </Item>
   <Item>
     <Element>StateProvinceId</Element>
@@ -29,7 +29,7 @@
     <Description>
       <p>The state-assigned identifier for this school.</p>
     </Description>
-    <Type ref="DataModel" name="StateProvinceId"></Type>
+    <Type ref="DataModel" name="StateProvinceIdType"></Type>
   </Item>
   <Item>
     <Element>CommonwealthId</Element>
@@ -123,7 +123,7 @@
     <Description>
       <p>The school district Local ID. This should be the same as the LocalId in the LEAInfo if LEAInfo details are supplied.</p>
     </Description>
-    <Type ref="DataModel" name="LocalId"></Type>
+    <Type ref="DataModel" name="LocalIdType"></Type>
   </Item>
  
   
@@ -160,13 +160,13 @@
     <Description>
       <p>URL for the school.</p>
     </Description>
-    <Type ref="DataModel" name="SchoolURL"></Type>
+    <Type ref="DataModel" name="SchoolURLType"></Type>
   </Item>
   
   <Item>
     <Element>SchoolEmailList</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="EmailList"></Type>
+    <Type ref="DataModel" name="EmailListType"></Type>
     <Description>
       <p>List of contact emails for the school.</p>
     </Description>
@@ -179,7 +179,7 @@
     <Description>
       <p>Information about the campus or school principal.</p>
     </Description>
-    <Type ref="DataModel" name="PrincipalInfo"></Type>
+    <Type ref="DataModel" name="PrincipalInfoType"></Type>
   </Item>
   
   <Item>
@@ -188,12 +188,12 @@
     <Description>
       <p>A list of contact persons associated with a school.</p>
     </Description>
-    <Type ref="DataModel" name="SchoolContactList"></Type>
+    <Type ref="DataModel" name="SchoolContactListType"></Type>
   </Item>
   <Item>
     <Element>AddressList</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="AddressList"></Type>
+    <Type ref="DataModel" name="AddressListType"></Type>
     <Description>
       <p>The school's addresses.</p>
     </Description>
@@ -201,7 +201,7 @@
   <Item>
     <Element>PhoneNumberList</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="PhoneNumberList"></Type>
+    <Type ref="DataModel" name="PhoneNumberListType"></Type>
     <Description>
       <p>The school's phone numbers.</p>
     </Description>
@@ -221,7 +221,7 @@
     <Description>
       <p>List of year levels offered by the school.</p>
     </Description>
-    <Type ref="DataModel" name="YearLevels"></Type>
+    <Type ref="DataModel" name="YearLevelsType"></Type>
   </Item>
   
  
@@ -238,7 +238,7 @@
     <Description>
       <p>Operational condition of a school.</p>
     </Description>
-    <Type ref="DataModel" name="OperationalStatus"></Type>
+     <Type ref="DataModel" name="OperationalStatusType"></Type>
   </Item>
   <Item>
     <Element>FederalElectorate</Element>
@@ -471,26 +471,26 @@
     <Description>
       <p>Repeatable element containing a local identifier to identify a loosely connected group of schools. eg. YarraValley Cluster</p>
     </Description>
-    <Type ref="DataModel" name="LocalId"></Type>
+    <Type ref="DataModel" name="LocalIdType"></Type>
   </Item>
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_Metadata"></Type>
+    <Type ref="DataModel" name="SIF_MetadataType"></Type>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_ExtendedElements"></Type>
+    <Type ref="DataModel" name="SIF_ExtendedElementsType"></Type>
   </Item>
   <xhtml:Example xmlns="">
-    <SchoolInfo RefId="D3E34B359D75101A8C3D00AA001A1652">
+    <SchoolInfo RefId="D3E34B35-9D75-101A-8C3D-00AA001A1652">
       <LocalId>01011234</LocalId>
       <StateProvinceId>01011234</StateProvinceId>
       <CommonwealthId>012345</CommonwealthId>
       <SchoolName>Lincoln Secondary College</SchoolName>
-      <LEAInfoRefId>73648462888624AA5294BC6380173276</LEAInfoRefId>
-      <OtherLEA SIF_RefObject="LEAInfo">AA648462888624AA5294BC638017320B</OtherLEA>
+      <LEAInfoRefId>73648462-8886-24AA-5294-BC6380173276</LEAInfoRefId>
+      <OtherLEA SIF_RefObject="LEAInfo">AA648462-8886-24AA-5294-BC638017320B</OtherLEA>
       <SchoolDistrict> Southern Metropolitan Region</SchoolDistrict>
 
       <SchoolType>Pri/Sec</SchoolType>

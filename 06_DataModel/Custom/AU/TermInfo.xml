@@ -36,7 +36,7 @@
         School year for which the information is applicable, expressed as the four-digit year in which the school year ends (e.g., "2009").
       </p>
     </Description>
-    <Type ref="DataModel" name="SchoolYear"></Type>
+     <Type ref="DataModel" name="SchoolYearType"></Type>
   </Item>
   <Item>
     <Element>StartDate</Element>
@@ -130,17 +130,17 @@
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_Metadata"></Type>
+    <Type ref="DataModel" name="SIF_MetadataType"></Type>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
 
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_ExtendedElements"></Type>
+    <Type ref="DataModel" name="SIF_ExtendedElementsType"></Type>
   </Item>
   <xhtml:Example xmlns="">
-    <TermInfo RefId="7E59D75101A80A70016375DE097A0726">
-      <SchoolInfoRefId>A2E35B359D75101A8C3D00AA001A0000</SchoolInfoRefId>
+    <TermInfo RefId="7E59D751-01A8-0A70-0163-75DE097A0726">
+      <SchoolInfoRefId>A2E35B35-9D75-101A-8C3D-00AA001A0000</SchoolInfoRefId>
       <SchoolYear>2012</SchoolYear>
       <StartDate>2012-01-05</StartDate>
       <EndDate>2012-04-01</EndDate>

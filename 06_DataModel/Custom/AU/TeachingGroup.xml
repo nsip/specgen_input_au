@@ -38,7 +38,7 @@
     <Description>
       <p>School year for which the information is applicable, expressed as the four-digit year in which the school year ends (e.g., "2007").</p>
     </Description>
-    <Type ref="DataModel" name="SchoolYear"></Type>
+     <Type ref="DataModel" name="SchoolYearType"></Type>
   </Item>
   <Item>
     <Element>LocalId</Element>
@@ -47,7 +47,7 @@
     <Description>
       <p>LocalId of the Teaching Group (previously ClassIndicator).</p>
     </Description>
-    <Type ref="DataModel" name="LocalId"></Type>
+    <Type ref="DataModel" name="LocalIdType"></Type>
   </Item>
 
   <Item>
@@ -111,7 +111,7 @@
     <Description>
       <p>Local School Id.</p>
     </Description>
-    <Type ref="DataModel" name="LocalId"></Type>
+    <Type ref="DataModel" name="LocalIdType"></Type>
   </Item>
 
   <Item>
@@ -129,7 +129,7 @@
     <Description>
       <p>Local Course Id.</p>
     </Description>
-    <Type ref="DataModel" name="LocalId"></Type>
+    <Type ref="DataModel" name="LocalIdType"></Type>
   </Item>
 
   <Item>
@@ -147,7 +147,7 @@
     <Description>
       <p>Local subject Id.</p>
     </Description>
-    <Type ref="DataModel" name="LocalId"></Type>
+    <Type ref="DataModel" name="LocalIdType"></Type>
   </Item>
   
   <Item>
@@ -197,7 +197,7 @@
     <Description>
       <p>Local Id of the Student </p>
     </Description>
-    <Type ref="DataModel" name="LocalId"></Type>
+    <Type ref="DataModel" name="LocalIdType"></Type>
   </Item>
 
   <Item>
@@ -247,7 +247,7 @@
     <Description>
       <p>LocalId of the Staff member</p>
     </Description>
-    <Type ref="DataModel" name="LocalId"></Type>
+    <Type ref="DataModel" name="LocalIdType"></Type>
   </Item>
 
   <Item>
@@ -322,7 +322,7 @@
     <Description>
       <p>Room number as presented to the user/application.</p>
     </Description>
-    <Type ref="DataModel" name="HomeroomNumber"></Type>
+    <Type ref="DataModel" name="HomeroomNumberType"></Type>
   </Item>
   <Item>
     <Element>//StaffLocalId</Element>
@@ -330,7 +330,7 @@
     <Description>
       <p>Local Id of Staff member scheduled to take this class.</p>
     </Description>
-    <Type ref="DataModel" name="LocalId"></Type>
+    <Type ref="DataModel" name="LocalIdType"></Type>
   </Item>
 
   <Item>
@@ -339,7 +339,7 @@
     <Description>
       <p>Day Id </p>
     </Description>
-    <Type ref="DataModel" name="LocalId"></Type>
+    <Type ref="DataModel" name="LocalIdType"></Type>
   </Item>
 
   <Item>
@@ -348,7 +348,7 @@
     <Description>
       <p>Period Id within the Day Id. Either Period Id or starting time must be provided.</p>
     </Description>
-    <Type ref="DataModel" name="LocalId"></Type>
+    <Type ref="DataModel" name="LocalIdType"></Type>
   </Item>
 
   <Item>
@@ -375,16 +375,16 @@
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_Metadata"></Type>
+    <Type ref="DataModel" name="SIF_MetadataType"></Type>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
 
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_ExtendedElements"></Type>
+    <Type ref="DataModel" name="SIF_ExtendedElementsType"></Type>
   </Item>
   <xhtml:Example xmlns="">
-    <TeachingGroup RefId="64A309DA063A2E35B359D75101A8C3D1">
+    <TeachingGroup RefId="64A309DA-063A-2E35-B359-D75101A8C3D1">
       <SchoolYear>2008</SchoolYear>
       <LocalId>20087ASPN</LocalId>
       <ShortName>7A SPN</ShortName>
@@ -394,7 +394,7 @@
       <CurriculumLevel>VELS Level 5</CurriculumLevel>
       <StudentList>
         <TeachingGroupStudent>
-          <StudentPersonalRefId>9897466F200E4BC1B9AED1507DA15CEF</StudentPersonalRefId>
+          <StudentPersonalRefId>9897466F-200E-4BC1-B9AE-D1507DA15CEF</StudentPersonalRefId>
           <StudentLocalId>SMI001</StudentLocalId>
           <Name Type="LGL">
             <FamilyName>Smith</FamilyName>
@@ -402,7 +402,7 @@
           </Name>
         </TeachingGroupStudent>
         <TeachingGroupStudent>
-          <StudentPersonalRefId>7C834EA9EDA12090347F83297E1C290D</StudentPersonalRefId>
+          <StudentPersonalRefId>7C834EA9-EDA1-2090-347F-83297E1C290D</StudentPersonalRefId>
           <StudentLocalId>SMI002</StudentLocalId>
           <Name Type="LGL">
             <FamilyName>Smith</FamilyName>
@@ -410,7 +410,7 @@
           </Name>
         </TeachingGroupStudent>
         <TeachingGroupStudent>
-          <StudentPersonalRefId>7C834EA9EDA12090347F83297E1C290E</StudentPersonalRefId>
+          <StudentPersonalRefId>7C834EA9-EDA1-2090-347F-83297E1C290E</StudentPersonalRefId>
           <StudentLocalId>SMI003</StudentLocalId>
           <Name Type="LGL">
             <FamilyName>Smith</FamilyName>
@@ -420,7 +420,7 @@
       </StudentList>
       <TeacherList>
         <TeachingGroupTeacher>
-          <StaffPersonalRefId>A8C3A2E35B359D75101D00AA001A0000</StaffPersonalRefId>
+          <StaffPersonalRefId>A8C3A2E3-5B35-9D75-101D-00AA001A0000</StaffPersonalRefId>
           <StaffLocalId>SMI1</StaffLocalId>
           <Name Type="LGL">
             <FamilyName>Smith</FamilyName>
@@ -429,7 +429,7 @@
           <Association>Class Teacher</Association>
         </TeachingGroupTeacher>
         <TeachingGroupTeacher>
-          <StaffPersonalRefId>A8CCCCE35B359D75101D00AA001A0000</StaffPersonalRefId>
+          <StaffPersonalRefId>A8CCCCE3-5B35-9D75-101D-00AA001A0000</StaffPersonalRefId>
           <StaffLocalId>LONG2</StaffLocalId>
           <Name Type="LGL">
             <FamilyName>Long</FamilyName>

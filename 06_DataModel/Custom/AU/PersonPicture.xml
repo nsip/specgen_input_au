@@ -55,7 +55,7 @@
         ends (e.g. <code>2007</code>).
       </p>
     </Description>
-    <Type ref="DataModel" name="SchoolYear"></Type>
+     <Type ref="DataModel" name="SchoolYearType"></Type>
   </Item>
   <Item>
     <Element>PictureSource</Element>
@@ -88,17 +88,17 @@
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_Metadata"></Type>
+    <Type ref="DataModel" name="SIF_MetadataType"></Type>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
 
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_ExtendedElements"></Type>
+    <Type ref="DataModel" name="SIF_ExtendedElementsType"></Type>
   </Item>
   <xhtml:Example xmlns="">
-    <PersonPicture RefId="D3E34B359D75101A8C3D00AA001A1652">
-      <ParentObjectRefId SIF_RefObject="StudentPersonal">AA648462888624AA5294BC638017320B</ParentObjectRefId>
+    <PersonPicture RefId="D3E34B35-9D75-101A-8C3D-00AA001A1652">
+      <ParentObjectRefId SIF_RefObject="StudentPersonal">AA648462-8886-24AA-5294-BC638017320B</ParentObjectRefId>
       <SchoolYear>2007</SchoolYear>
       <PictureSource Type="01">http://www.schoolsite.com/pictures/2007/1234.jpg </PictureSource>
       <OKToPublish>Y</OKToPublish>

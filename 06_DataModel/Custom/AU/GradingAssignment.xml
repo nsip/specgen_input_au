@@ -121,17 +121,17 @@
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_Metadata"></Type>
+    <Type ref="DataModel" name="SIF_MetadataType"></Type>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_ExtendedElements"></Type>
+    <Type ref="DataModel" name="SIF_ExtendedElementsType"></Type>
   </Item>
   <xhtml:Example xmlns="">
-    <GradingAssignment RefId="359D75101AD0A9D7A8C3DAD0A85103A2">	
-      <TeachingGroupRefId>D0A0A27AD0A8510AD9D75101A8C3DA39</TeachingGroupRefId>
-      <SchoolInfoRefId>11737EA4301CADCA75C87214A7C46BDB</SchoolInfoRefId>
+    <GradingAssignment RefId="359D7510-1AD0-A9D7-A8C3-DAD0A85103A2">	
+      <TeachingGroupRefId>D0A0A27A-D0A8-510A-D9D7-5101A8C3DA39</TeachingGroupRefId>
+      <SchoolInfoRefId>11737EA4-301C-ADCA-75C8-7214A7C46BDB</SchoolInfoRefId>
       <GradingCategory>Classroom Test</GradingCategory>
       <Description>Pop Quiz</Description>
       <PointsPossible>100</PointsPossible>

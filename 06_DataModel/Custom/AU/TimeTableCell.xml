@@ -91,7 +91,7 @@
     <Description>
       <p>Time Table Local Identifier</p>
     </Description>
-    <Type ref="DataModel" name="LocalId"></Type>
+    <Type ref="DataModel" name="LocalIdType"></Type>
   </Item>
 
   <Item>
@@ -100,7 +100,7 @@
     <Description>
       <p>Subject Local Id</p>
     </Description>
-    <Type ref="DataModel" name="LocalId"></Type>
+    <Type ref="DataModel" name="LocalIdType"></Type>
   </Item>
 
   <Item>
@@ -109,7 +109,7 @@
     <Description>
       <p>Teaching Group </p>
     </Description>
-    <Type ref="DataModel" name="LocalId"></Type>
+    <Type ref="DataModel" name="LocalIdType"></Type>
   </Item>
 
   <Item>
@@ -118,7 +118,7 @@
     <Description>
       <p>Room number as presented to the user/application.</p>
     </Description>
-    <Type ref="DataModel" name="HomeroomNumber"></Type>
+    <Type ref="DataModel" name="HomeroomNumberType"></Type>
   </Item>
 
   <Item>
@@ -127,7 +127,7 @@
     <Description>
       <p>Staff LocalId</p>
     </Description>
-    <Type ref="DataModel" name="LocalId"></Type>
+    <Type ref="DataModel" name="LocalIdType"></Type>
   </Item>
 
   <Item>
@@ -136,7 +136,7 @@
     <Description>
       <p>Day Id </p>
     </Description>
-    <Type ref="DataModel" name="LocalId"></Type>
+    <Type ref="DataModel" name="LocalIdType"></Type>
   </Item>
 
   <Item>
@@ -145,7 +145,7 @@
     <Description>
       <p>Period Id within the Day Id</p>
     </Description>
-    <Type ref="DataModel" name="LocalId"></Type>
+    <Type ref="DataModel" name="LocalIdType"></Type>
   </Item>
 
   <Item>
@@ -171,27 +171,27 @@
     <Description>
       <p>Optional, Local School Id</p>
     </Description>
-    <Type ref="DataModel" name="LocalId"></Type>
+    <Type ref="DataModel" name="LocalIdType"></Type>
   </Item>
 
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_Metadata"></Type>
+    <Type ref="DataModel" name="SIF_MetadataType"></Type>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
 
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_ExtendedElements"></Type>
+    <Type ref="DataModel" name="SIF_ExtendedElementsType"></Type>
   </Item>
   <xhtml:Example xmlns="">
-    <TimeTableCell RefId = "64A309DA063A2E35B359D75101A8C3D1">
-   <TimeTableRefId>64A309DA063A2E35B359D75101A8C3D0</TimeTableRefId>
-      <TimeTableSubjectRefId>22860091719245B4AB0CF5B9DC19DE5C</TimeTableSubjectRefId>
-      <TeachingGroupRefId>64A309DA063A2E35B359D75101A8C3D1</TeachingGroupRefId>
-      <RoomInfoRefId>D3E34B359D75101A8C3D00AA001A1652</RoomInfoRefId>
-      <StaffPersonalRefId>D3E34F419D75101A8C3D00AA001A1652</StaffPersonalRefId>
+    <TimeTableCell RefId = "64A309DA-063A-2E35-B359-D75101A8C3D1">
+   <TimeTableRefId>64A309DA-063A-2E35-B359-D75101A8C3D0</TimeTableRefId>
+      <TimeTableSubjectRefId>22860091-7192-45B4-AB0C-F5B9DC19DE5C</TimeTableSubjectRefId>
+      <TeachingGroupRefId>64A309DA-063A-2E35-B359-D75101A8C3D1</TeachingGroupRefId>
+      <RoomInfoRefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</RoomInfoRefId>
+      <StaffPersonalRefId>D3E34F41-9D75-101A-8C3D-00AA001A1652</StaffPersonalRefId>
       <TimeTableLocalId>2008S1</TimeTableLocalId>
       <SubjectLocalId>07AR</SubjectLocalId>
         <TeachingGroupLocalId>20087ASPN 2008S1</TeachingGroupLocalId>
@@ -200,7 +200,7 @@
         <DayId>1</DayId>
         <PeriodId>1</PeriodId>
         <CellType>T</CellType>
-        <SchoolInfoRefId>D3E34B359D75101A8C3D00AA001A1652</SchoolInfoRefId>
+        <SchoolInfoRefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</SchoolInfoRefId>
             <SchoolLocalId>01011234</SchoolLocalId>
           </TimeTableCell>
 

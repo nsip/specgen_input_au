@@ -86,7 +86,7 @@
         School year for which this enrollment is applicable, expressed as the four-digit year in which the school year ends (e.g. <code>2007</code>). StudentSchoolEnrollment instances must not span multiple school years.
       </p>
     </Description>
-    <Type ref="DataModel" name="SchoolYear"></Type>
+     <Type ref="DataModel" name="SchoolYearType"></Type>
   </Item>
   <Item>
     <Element>EntryDate</Element>
@@ -116,7 +116,7 @@
     <Element>/OtherCodeList</Element>
     <Characteristics>O</Characteristics>
     <Description>List of other codes or strings that crosswalk to or serve as translations of the Code element paired with this common element. If Code changes and OtherCodes are supported, both Code and all associated OtherCode elements must be present.</Description>
-    <Type ref="DataModel" name="OtherCodeList"></Type>
+    <Type ref="DataModel" name="OtherCodeListType"></Type>
   </Item>
   <Item>
     <Element>YearLevel</Element>
@@ -125,7 +125,7 @@
     <Description>
       <p>Year or academic level of student.</p>
     </Description>
-    <Type ref="DataModel" name="YearLevel"></Type>
+    <Type ref="DataModel" name="YearLevelType"></Type>
   </Item>
   <Item>
     <Element>Homeroom</Element>
@@ -203,7 +203,7 @@
     <Description>
       <p>ACARA School Id.</p>
     </Description>
-    <Type ref="DataModel" name="LocalId"/>
+    <Type ref="DataModel" name="LocalIdType"/>
   </Item>
   <Item>
     <Element>ClassCode</Element>
@@ -220,7 +220,7 @@
     <Description>
       <p>Values: 3,5,7,9. The test level that the student is registering for.</p>
     </Description>
-    <Type ref="DataModel" name="YearLevel"></Type>
+    <Type ref="DataModel" name="YearLevelType"></Type>
   </Item>
   
   <Item>
@@ -301,7 +301,7 @@
   <Item>
     <Element>/OtherCodeList</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="OtherCodeList"></Type>
+    <Type ref="DataModel" name="OtherCodeListType"></Type>
   </Item>
   <Item>
     <Element>ExitType</Element>
@@ -321,7 +321,7 @@
   <Item>
     <Element>/OtherCodeList</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="OtherCodeList"></Type>
+    <Type ref="DataModel" name="OtherCodeListType"></Type>
   </Item>
 
   
@@ -381,7 +381,7 @@
     <Element>/OtherCodeList</Element>
     <Characteristics>O</Characteristics>
     <Description>List of other codes or strings that crosswalk to or serve as translations of the Code element paired with this common element. If Code changes and OtherCodes are supported, both Code and all associated OtherCode elements must be present.</Description>
-    <Type ref="DataModel" name="OtherCodeList"></Type>
+    <Type ref="DataModel" name="OtherCodeListType"></Type>
   </Item>
 
   <Item>
@@ -445,7 +445,7 @@
     <Description>
       <p>If the student has previously been enrolled at a school, i.e. student is transferring, the previous school number.</p>
     </Description>
-    <Type ref="DataModel" name="LocalId"></Type>
+    <Type ref="DataModel" name="LocalIdType"></Type>
   </Item>
 
   <Item>
@@ -455,7 +455,7 @@
     <Description>
       <p>If the student has exited the school, the local id of the school to which the student has transferred to.</p>
     </Description>
-    <Type ref="DataModel" name="LocalId"></Type>
+    <Type ref="DataModel" name="LocalIdType"></Type>
   </Item>
 
   <Item>
@@ -493,7 +493,7 @@
     <Description>
       <p>Local Subject Id</p>
     </Description>
-    <Type ref="DataModel" name="LocalId"></Type>
+    <Type ref="DataModel" name="LocalIdType"></Type>
   </Item>
   <Item>
     <Element>//StudyDescription</Element>
@@ -502,7 +502,7 @@
     <Description>
       <p>Description about Study Mode.</p>
     </Description>
-    <Type ref="DataModel" name="SubjectArea"></Type>
+    <Type ref="DataModel" name="SubjectAreaType"></Type>
   </Item>
   <Item>
     <Element>//OtherSchoolLocalId</Element>
@@ -511,25 +511,25 @@
     <Description>
       <p>Localid of a school where the student studies this subject if not at the home school.</p>
     </Description>
-    <Type ref="DataModel" name="LocalId"></Type>
+    <Type ref="DataModel" name="LocalIdType"></Type>
   </Item>
 
   
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_Metadata"></Type>
+    <Type ref="DataModel" name="SIF_MetadataType"></Type>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
 
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_ExtendedElements"></Type>
+    <Type ref="DataModel" name="SIF_ExtendedElementsType"></Type>
   </Item>
   <xhtml:Example xmlns="">
-    <StudentSchoolEnrollment RefId="A8C3D3E34B359D75101D00AA001A1652">
-      <StudentPersonalRefId>D3E34B359D75101A8C3D00AA001A1652</StudentPersonalRefId>
-      <SchoolInfoRefId>D3E34B359D75101A8C3D00AA001A1651</SchoolInfoRefId>
+    <StudentSchoolEnrollment RefId="A8C3D3E3-4B35-9D75-101D-00AA001A1652">
+      <StudentPersonalRefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</StudentPersonalRefId>
+      <SchoolInfoRefId>D3E34B35-9D75-101A-8C3D-00AA001A1651</SchoolInfoRefId>
       <MembershipType>01</MembershipType>
       <TimeFrame>C</TimeFrame>
       <SchoolYear>2004</SchoolYear>
@@ -540,8 +540,8 @@
       <YearLevel>
         <Code>10</Code>
       </YearLevel>
-      <Homeroom SIF_RefObject="RoomInfo">D7510D3E34B3591A8C3D00AA001A1651</Homeroom>
-      <Advisor SIF_RefObject="StaffPersonal">B359D3E34D75101A8C3D00AA001A1652</Advisor>
+      <Homeroom SIF_RefObject="RoomInfo">D7510D3E-34B3-591A-8C3D-00AA001A1651</Homeroom>
+      <Advisor SIF_RefObject="StaffPersonal">B359D3E3-4D75-101A-8C3D-00AA001A1652</Advisor>
       <FTE>1.00</FTE>
       <FTPTStatus>01</FTPTStatus>
       

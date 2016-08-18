@@ -20,7 +20,7 @@
   </Item>
   <Item>
 
-    <Attribute>xml:lang</Attribute>
+    <Attribute>lang</Attribute>
     <Characteristics>M</Characteristics>
     <Description>
       <p>The default language of the text used for the content in the LearningStandardItem.</p>
@@ -73,12 +73,12 @@
   <Item>
     <Element>/Country</Element>
     <Characteristics>M</Characteristics>
-    <Type ref="DataModel" name="Country"/>
+    <Type ref="DataModel" name="CountryType"/>
   </Item>
   <Item>
     <Element>/StateProvince</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="StateProvince"/>
+    <Type ref="DataModel" name="StateProvinceType"/>
   </Item>
   <Item>
     <Element>/SettingBodyName</Element>
@@ -163,12 +163,12 @@
     <Element>YearLevels</Element>
 
     <Characteristics>M</Characteristics>
-    <Type ref="DataModel" name="YearLevels"></Type>
+    <Type ref="DataModel" name="YearLevelsType"></Type>
   </Item>
   <Item>
     <Element>ACStrandSubjectArea</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="ACStrandSubjectArea"></Type>
+    <Type ref="DataModel" name="ACStrandSubjectAreaType"></Type>
   </Item>
   <Item>
     <Element>StandardIdentifier</Element>
@@ -191,7 +191,7 @@
     <Description>
       <p>This represents the subject or content area this curriculum item addresses. This would be assigned by and unique to the curriculum setting body.</p>
     </Description>
-    <Type ref="DataModel" name="ACStrandSubjectArea"/>
+    <Type ref="DataModel" name="ACStrandSubjectAreaType"/>
   </Item>
   <Item>
     <Element>/StandardNumber</Element>
@@ -207,7 +207,7 @@
     <Description>
       <p>This represents the grade level(s) this specific learning standard will address. This may be addressed in different ways.  Some states have a grade level that covers several grades and others have just one grade. This would be assigned by and unique to the standard setting body.</p>
     </Description>
-    <Type ref="DataModel" name="YearLevels"/>
+    <Type ref="DataModel" name="YearLevelsType"/>
   </Item>
   <Item>
     <Element>/Benchmark</Element>
@@ -223,7 +223,7 @@
     <Description>
       <p>This is the specific year level.  This is to be utilized if the YearLevel covers several years. This would be assigned by and unique to the standard setting body.</p>
     </Description>
-    <Type ref="DataModel" name="YearLevel"/>
+    <Type ref="DataModel" name="YearLevelType"/>
   </Item>
   <Item>
     <Element>/IndicatorNumber</Element>
@@ -316,16 +316,16 @@
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_Metadata"></Type>
+    <Type ref="DataModel" name="SIF_MetadataType"></Type>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
 
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_ExtendedElements"></Type>
+    <Type ref="DataModel" name="SIF_ExtendedElementsType"></Type>
   </Item>
   <xhtml:Example name="LearningStandardItem" xmlns="">
-    <LearningStandardItem RefId="A5D75F789175101B8C7E08EA123A8234" xml:lang="en">
+    <LearningStandardItem RefId="A5D75F78-9175-101B-8C7E-08EA123A8234" lang="en">
     <StandardSettingBody>
     <Country>1101</Country>
     <StateProvince>VIC</StateProvince>
@@ -336,7 +336,7 @@
     <Description>AchievementStandard</Description>
   </StandardHierarchyLevel>
   <PredecessorItems>
-    <LearningStandardItemRefId>DE072A87EFAD4B778AF9FAF83C94839E</LearningStandardItemRefId>
+    <LearningStandardItemRefId>DE072A87-EFAD-4B77-8AF9-FAF83C94839E</LearningStandardItemRefId>
   </PredecessorItems>
   <StatementCodes>
     <StatementCode>Mathematics.2.03.a</StatementCode>
@@ -388,11 +388,11 @@
     </YearLevels>
 <Organization>DEECD VIC</Organization>
   </StandardIdentifier>
-  <LearningStandardDocumentRefId>8454189F6BBC26C6B97DDB4B6D0E3AC8</LearningStandardDocumentRefId>
+  <LearningStandardDocumentRefId>8454189F-6BBC-26C6-B97D-DB4B6D0E3AC8</LearningStandardDocumentRefId>
   <RelatedLearningStandardItems>
-    <LearningStandardItemRefId RelationshipType="Content">869670E8540A43509515AFB767FADD9A</LearningStandardItemRefId>
-    <LearningStandardItemRefId RelationshipType="State">B14FDAB437CA4565A9765A5B824545C4</LearningStandardItemRefId>
-    <LearningStandardItemRefId RelationshipType="ContentElaboration">D5440A11F5A44AC1920261ECBE5A29F6</LearningStandardItemRefId>
+    <LearningStandardItemRefId RelationshipType="Content">869670E8-540A-4350-9515-AFB767FADD9A</LearningStandardItemRefId>
+    <LearningStandardItemRefId RelationshipType="State">B14FDAB4-37CA-4565-A976-5A5B824545C4</LearningStandardItemRefId>
+    <LearningStandardItemRefId RelationshipType="ContentElaboration">D5440A11-F5A4-4AC1-9202-61ECBE5A29F6</LearningStandardItemRefId>
   </RelatedLearningStandardItems>
 </LearningStandardItem>
 

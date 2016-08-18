@@ -36,7 +36,7 @@
     <Description>
       <p>SubjectLocalID - Distinct piece of curriculum that is to be scheduled.</p>
     </Description>
-    <Type ref="DataModel" name="LocalId"></Type>
+    <Type ref="DataModel" name="LocalIdType"></Type>
   </Item>
 
   <Item>
@@ -45,7 +45,7 @@
     <Description>
       <p>Subject Year Level.  Either AcademicYear or AcademicYearRange must be provided.</p>
     </Description>
-    <Type ref="DataModel" name="YearLevel"></Type>
+    <Type ref="DataModel" name="YearLevelType"></Type>
   </Item>
 
   <Item>
@@ -63,7 +63,7 @@
     <Description>
       <p>Lowest year in range.</p>
     </Description>
-    <Type ref="DataModel" name="YearLevel"></Type>
+    <Type ref="DataModel" name="YearLevelType"></Type>
   </Item>
 
   <Item>
@@ -72,7 +72,7 @@
     <Description>
       <p>Highest year in range</p>
     </Description>
-    <Type ref="DataModel" name="YearLevel"></Type>
+    <Type ref="DataModel" name="YearLevelType"></Type>
   </Item>
 
   <Item>
@@ -81,7 +81,7 @@
     <Description>
       <p>Local Course Id, if associated with a Course.</p>
     </Description>
-    <Type ref="DataModel" name="LocalId"></Type>
+    <Type ref="DataModel" name="LocalIdType"></Type>
   </Item>
   <Item>
 
@@ -161,7 +161,7 @@
     <Description>
       <p>Optional Local School Id</p>
     </Description>
-    <Type ref="DataModel" name="LocalId"></Type>
+    <Type ref="DataModel" name="LocalIdType"></Type>
   </Item>
 
   <Item>
@@ -183,28 +183,28 @@
         School year for which the information is applicable, expressed as the four-digit year in which the school year ends (e.g., "2007").
       </p>
     </Description>
-    <Type ref="DataModel" name="SchoolYear"></Type>
+     <Type ref="DataModel" name="SchoolYearType"></Type>
   </Item>
 
   <Item>
     <Element>OtherCodeList</Element>
     <Characteristics>O</Characteristics>
     <Description>Any other codes this subject is known by; eg VASS code for VCE in Vic.</Description>
-    <Type ref="DataModel" name="OtherCodeList"></Type>
+    <Type ref="DataModel" name="OtherCodeListType"></Type>
   </Item>
 
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_Metadata"></Type>
+    <Type ref="DataModel" name="SIF_MetadataType"></Type>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_ExtendedElements"></Type>
+    <Type ref="DataModel" name="SIF_ExtendedElementsType"></Type>
   </Item>
   <xhtml:Example xmlns="">
-    <TimeTableSubject RefId="D3E34B359D75101A8C3D00AA001A1652">
+    <TimeTableSubject RefId="D3E34B35-9D75-101A-8C3D-00AA001A1652">
       <SubjectLocalId>07AR</SubjectLocalId>
       <AcademicYear>
         <Code>7</Code>

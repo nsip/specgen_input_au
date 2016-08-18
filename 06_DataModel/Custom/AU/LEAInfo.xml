@@ -25,7 +25,7 @@
     <Description>
       <p>The locally-assigned identifier for this LEA.</p>
     </Description>
-    <Type ref="DataModel" name="LocalId"></Type>
+    <Type ref="DataModel" name="LocalIdType"></Type>
   </Item>
   <Item>
     <Element>StateProvinceId</Element>
@@ -34,7 +34,7 @@
     <Description>
       <p>The state-assigned identifier for this LEA.</p>
     </Description>
-    <Type ref="DataModel" name="StateProvinceId"></Type>
+    <Type ref="DataModel" name="StateProvinceIdType"></Type>
   </Item>
   <Item>
     <Element>CommonwealthId</Element>
@@ -83,7 +83,7 @@
   <Item>
     <Element>/OtherCodeList</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="OtherCodeList"></Type>
+    <Type ref="DataModel" name="OtherCodeListType"></Type>
   </Item>
   <Item>
     <Element>LEAContactList</Element>
@@ -104,13 +104,13 @@
     <Description>
       <p>Indicates whether or not this LEA contact's information should be published in a directory of LEA information.</p>
     </Description>
-    <Type ref="DataModel" name="PublishInDirectory"></Type>
+    <Type ref="DataModel" name="PublishInDirectoryType"></Type>
   </Item>
   <Item>
     <Element>//ContactInfo</Element>
 
     <Characteristics>M</Characteristics>
-    <Type ref="DataModel" name="ContactInfo"></Type>
+    <Type ref="DataModel" name="ContactInfoType"></Type>
   </Item>
   <Item>
     <Element>PhoneNumberList</Element>
@@ -119,7 +119,7 @@
     <Description>
       <p>The LEA's phone number(s).</p>
     </Description>
-    <Type ref="DataModel" name="PhoneNumberList"></Type>
+    <Type ref="DataModel" name="PhoneNumberListType"></Type>
   </Item>
   <Item>
     <Element>AddressList</Element>
@@ -128,7 +128,7 @@
     <Description>
       <p>The LEA's address(es).</p>
     </Description>
-    <Type ref="DataModel" name="AddressList"></Type>
+    <Type ref="DataModel" name="AddressListType"></Type>
   </Item>
   <Item>
     <Element>OperationalStatus</Element>
@@ -136,7 +136,7 @@
     <Description>
       <p>Operational condition of a school.</p>
     </Description>
-    <Type ref="DataModel" name="OperationalStatus"></Type>
+     <Type ref="DataModel" name="OperationalStatusType"></Type>
   </Item>
   <Item>
     <Element>JurisdictionLowerHouse</Element>
@@ -157,16 +157,16 @@
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_Metadata"></Type>
+    <Type ref="DataModel" name="SIF_MetadataType"></Type>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
 
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_ExtendedElements"></Type>
+    <Type ref="DataModel" name="SIF_ExtendedElementsType"></Type>
   </Item>
   <xhtml:Example xmlns="">
-    <LEAInfo RefId="D3E34B359D75101A8C3D00AA001A1652">
+    <LEAInfo RefId="D3E34B35-9D75-101A-8C3D-00AA001A1652">
       <LocalId>EMR</LocalId>
       <StateProvinceId>EMR</StateProvinceId>
       <CommonwealthId>4215750</CommonwealthId>

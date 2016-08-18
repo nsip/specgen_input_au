@@ -66,10 +66,6 @@
 				<a href="XSD/DataModelAnnotated/SIF_Message.xsd">DataModel (includes, annotated)</a>
 				<a href="XSD/DataModelAnnotated.zip">(ZIP archive)</a>
 			</dd>
-			 <dd>
-				  <a href="XSD/ServiceBodyDefinitions/SIF_Message.xsd">ServiceBodyDefinitions (includes, annotated)</a>
-				  <a href="XSD/ServiceBodyDefinitions.zip">(ZIP archive)</a>
-			</dd>
 			<dd style="font-size: smaller">
 				<br/>
 				<em>Note:</em>
@@ -93,26 +89,14 @@
 	<!--Introduction-->
 	<xi:include parse="xml" xmlns:xi="http://www.w3.org/2001/XInclude" href="02_Introduction/Introduction-Datamodel.xml"/>
 		
-	<!--Architecture-->
-	
-	<!--Messaging-->
-	
-	<!--Infrastructure-->
-	<xi:include parse="xml" xmlns:xi="http://www.w3.org/2001/XInclude" href="05_Infrastructure/Infrastructure.xml"/>
-
-
-
-	
 	<!--Data Model-->
 	<Section name="Data Model">
 		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="06_DataModel/DataModel-Introduction.xml"/>
-		<xi:include parse="xml" xmlns:xi="http://www.w3.org/2001/XInclude" href="06_DataModel/DataModel-CommonElements.xml"/>
+		<!--<xi:include parse="xml" xmlns:xi="http://www.w3.org/2001/XInclude" href="06_DataModel/DataModel-CommonElements.xml"/>-->
 		<xi:include parse="xml" xmlns:xi="http://www.w3.org/2001/XInclude" href="06_DataModel/DataModel.xml"/>
+		
 	</Section>
 	
-	
-	<!--Zone Services-->
-
 	
 	<!--Back Matter-->
 	<Appendix name="Common Types">
@@ -121,8 +105,8 @@
 		</Intro>
 			<!--Section A-->
 		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="80_BackMatter/Custom/DataModel-CommonTypes-Custom.xml"/>
-		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="85_InfraBackMatter/Infrastructure-CommonTypes.xml"/>
-				
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="80_BackMatter/Generic-CommonTypes.xml"/>
+		
 	</Appendix>
 	
 		<!--Section B-->
@@ -131,11 +115,9 @@
 			<p>Select shared and named code sets defined in SIF are included here for reference.</p>
 		  </Intro>
 		  <CodeSets>
-			<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="85_InfraBackMatter/Infrastructure-CodeSets.xml"/>
-
-			<!-- include data model code sets here -->
+		    
 			<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="80_BackMatter/Custom/DataModel-CodeSets-Custom.xml"/>
-    
+		  
 		  </CodeSets>
 		</Appendix>
 	
@@ -155,7 +137,7 @@
 		<!--Section -->
 	<Appendix name="Index of Objects"/>
 		<!--Section -->
-	<Appendix name="Index of Common Elements"/>
+	<!--<Appendix name="Index of Common Elements"/>-->
 		<!--Section -->
 	<Appendix name="Index of Common Types"/>
 		<!--Section -->

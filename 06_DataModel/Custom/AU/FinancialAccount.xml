@@ -112,15 +112,15 @@
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_Metadata"></Type>
+    <Type ref="DataModel" name="SIF_MetadataType"></Type>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="DataModel" name="SIF_ExtendedElements"></Type>
+    <Type ref="DataModel" name="SIF_ExtendedElementsType"></Type>
   </Item>
   <xhtml:Example xmlns="">
-    <FinancialAccount RefId="EEC8FC128D2C4EE394A86C5395024EDE">
+    <FinancialAccount RefId="EEC8FC12-8D2C-4EE3-94A8-6C5395024EDE">
       <AccountNumber>9990001</AccountNumber>
       <Name>Purchased Foods</Name>
       <Description>Purchased Foods</Description>
