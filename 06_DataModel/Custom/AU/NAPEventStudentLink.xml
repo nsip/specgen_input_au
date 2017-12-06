@@ -1,0 +1,256 @@
+<DataObject name="NAPEventStudentLink"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xmlns:xi="http://www.w3.org/2001/XInclude"
+			xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	
+            xmlns="http://sifassociation.org/SpecGen">
+  <Key>@RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>NAPEventStudentLink</Element>
+    <Description>
+      <p>This object represents a student’s attempt to undergo NAP assessment in a particular test.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Description>
+      <p>The GUID that uniquely identifies an instance of the object.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>StudentPersonalRefId</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Description>
+      <p>The student associated with the NAP event.</p>
+    </Description>
+  </Item>
+  <Item>
+		<Element>PlatformStudentIdentifier</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Platform student identifier, allocated by the National Assessment Platform to the student registration for this school enrollment.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalId"/> 
+	</Item>
+   <Item>
+    <Element>SchoolInfoRefId</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+	<Description>
+      <p>Optional reference to a school associated with the NAP Event.</p>
+    </Description>
+  </Item>  
+  	<Item>
+		<Element>SchoolACARAId</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The ACARA School Id for the school that the student sitting the test is enrolled in, as assigned in the Australian School List.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"/>
+  </Item>
+  
+  <Item>
+    <Element>NAPTestRefId</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Description>
+      <p>The GUID for the test that the student is sitting. May be linking to prior codeframe download.</p>
+    </Description>
+  </Item>
+  <Item>
+		<Element>NAPTestLocalId</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Local identifier of NAP test.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalId"/> 
+  </Item>
+
+  <Item>
+    <Element>SchoolSector</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>(Government, or Non-Government).</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsSchoolSectorCodeType"></Type>
+  </Item> 
+    <Item>
+    <Element>System</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>System if a systemic school.</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsSchoolSystemType"></Type>
+  </Item>
+   <Item>
+    <Element>SchoolGeolocation</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>School Location</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsSchoolLocationType"></Type>
+  </Item>
+     <Item>
+    <Element>ReportingSchoolName</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Name of school where reports will be sent to, in case of walk-ups</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+   <Item>
+    <Element>NAPJurisdiction</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>School Location</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsNAPJurisdictionType"></Type>
+  </Item>
+  <Item>
+		<Element>ParticipationCode</Element>
+		<Characteristics>M</Characteristics>
+		<p>Indicates the participation status of the student for the NAP test.</p>
+		<Type ref="CodeSets" name="AUCodeSetsNAPParticipationCodeType"/>
+  </Item>  
+  <Item>
+    <Element>ParticipationText</Element>
+    <Characteristics>M</Characteristics>
+    <Type name="xs:normalizedString"></Type>
+    <Description>
+      <p>Text added to reports indicating the participation status of the student for the NAP test. Determined by the Participation Code.</p>
+    </Description>
+  </Item>  
+   <Item>
+    <Element>Device</Element>
+    <Characteristics>O</Characteristics>
+    <Type name="xs:token"></Type>
+    <Description>
+      <p>Device used to do the test.</p>
+    </Description>
+  </Item>  
+    <Item>
+    <Element>Date</Element>
+    <Characteristics>C</Characteristics>
+    <Type name="xs:date"></Type>
+    <Description>
+      <p>Date test administered. Not provided unless the student was actually administered the test.</p>
+    </Description>
+  </Item>  
+    <Item>
+    <Element>StartTime</Element>
+    <Characteristics>C</Characteristics>
+    <Type name="xs:time"></Type>
+    <Description>
+      <p>Time student commenced test. Not provided unless the student was actually administered the test.</p>
+    </Description>
+  </Item>  
+   <Item>
+    <Element>LapsedTimeTest</Element>
+    <Characteristics>C</Characteristics>
+    <Type name="xs:duration"></Type>
+    <Description>
+      <p>Time taken for student to complete test. Not provided unless the student was actually administered the test.</p>
+    </Description>
+  </Item>  
+   <Item>
+		<Element>ExemptionReason</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Reason given for student to be exempted from the NAP test.</p>
+		</Description>
+		<Type name="xs:normalizedString"></Type>
+  </Item>
+   <Item>
+		<Element>PersonalDetailsChanged</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Flag that the personal details of the student have changed since registration.</p>
+		</Description>
+		<Type name="xs:boolean"></Type>
+  </Item>
+   <Item>
+		<Element>PSIOtherIdMatch</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Flag indicating possible Platform Student Identifier error.</p>
+		</Description>
+		<Type name="xs:boolean"></Type>
+  </Item>
+   <Item>
+		<Element>PossibleDuplicate</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Flag indicating a possible duplicate record for a student.</p>
+		</Description>
+		<Type name="xs:boolean"></Type>
+  </Item> 
+   <Item>
+		<Element>DOBRange</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Flag indicating whether a student’s date of birth is in expected range.</p>
+		</Description>
+		<Type name="xs:boolean"></Type>
+  </Item> 
+   <Item>
+    <Element>TestDisruptionList</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="TestDisruptionListType"></Type>
+    <Description>
+      <p></p>
+    </Description>
+  </Item>
+   <Item>
+    <Element>Adjustment</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="AdjustmentContainerType"></Type>
+    <Description>
+      <p></p>
+    </Description>
+  </Item>
+  
+  
+  
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_Metadata"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElements"></Type>
+  </Item>
+
+  <xhtml:Example name="NAPEventStudentLink"  xmlns="">
+    <NAPEventStudentLink RefId="2014F046-0C95-4613-8ACD-8A6CA8227C7A">
+		  <StudentPersonalRefId>2F71D7C1-29B2-4FAD-9DB7-9FD80DC8804A</StudentPersonalRefId>
+		  <PlatformStudentIdentifier>R100000004R</PlatformStudentIdentifier>
+		  <SchoolInfoRefId>19F9C467-D299-4A35-9825-2148BF39DB64</SchoolInfoRefId>
+		  <SchoolACARAId>21212</SchoolACARAId>
+		  <NAPTestRefId>5195A2E9-37CE-4F51-AEF2-9095D9CF97FA</NAPTestRefId>
+		  <NAPTestLocalId>NAPLAN-2017-0004-Language Conventions: Grammar and Punctuation</NAPTestLocalId>
+		  <SchoolSector>NG</SchoolSector>
+		  <System>0001</System>
+		  <SchoolGeolocation>11</SchoolGeolocation>
+		  <ReportingSchoolName>Podunk High School</ReportingSchoolName>
+		  <NAPJurisdiction>1</NAPJurisdiction>
+		  <ParticipationCode>P</ParticipationCode>
+		  <ParticipationText>Present</ParticipationText>
+		  <Device>iPad</Device>
+		  <Date>2017-06-01</Date>
+		  <StartTime>09:00:00</StartTime>
+		  <LapsedTimeTest>PT2H57M32S</LapsedTimeTest>
+		  <PersonalDetailsChanged>false</PersonalDetailsChanged>
+		  <PSIOtherIdMatch>false</PSIOtherIdMatch>
+		  <PossibleDuplicate>false</PossibleDuplicate>
+		  <DOBRange>false</DOBRange>
+   </NAPEventStudentLink>
+  </xhtml:Example>   
+</DataObject>
+

@@ -1,0 +1,89 @@
+<DataObject name="NAPTest"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xmlns:xi="http://www.w3.org/2001/XInclude"
+			xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	
+            xmlns="http://sifassociation.org/SpecGen">
+  <Key>@RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>NAPTest</Element>
+    <Description>
+      <p>This object represents an assessment assigned in the context of NAP, targeted at a particular domain and year level.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Description>
+      <p>The GUID that uniquely identifies an instance of the object.</p>
+    </Description>
+  </Item>
+ 
+   <Item>
+    <Element>TestContent</Element>
+    <Characteristics>M</Characteristics>
+    <Type ref="CommonTypes" name="NAPTestContentType"></Type>
+  </Item>
+	
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_Metadata"></Type>
+  </Item>
+  
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElements"></Type>
+  </Item>
+
+  <xhtml:Example name="NAPTest"  xmlns="">
+ <NAPTest RefId="27BD7B5B-19F2-48A9-B645-FD6569E7654E">
+  <TestContent>
+    <NAPTestLocalId>NAPLAN-2017-0001-Reading</NAPTestLocalId>
+    <TestName>NAPLAN Reading Yr 3, 2017</TestName>
+    <TestLevel><Code>3</Code></TestLevel>
+    <TestType>Normal</TestType>
+    <Domain>Reading</Domain>
+    <TestYear>2017</TestYear>
+    <StagesCount>3</StagesCount>
+    <DomainBands>
+      <Band1Lower>0</Band1Lower>
+      <Band1Upper>258</Band1Upper>
+      <Band2Lower>258</Band2Lower>
+      <Band2Upper>318</Band2Upper>
+      <Band3Lower>318</Band3Lower>
+      <Band3Upper>368</Band3Upper>
+      <Band4Lower>368</Band4Lower>
+      <Band4Upper>417</Band4Upper>
+      <Band5Lower>417</Band5Lower>
+      <Band5Upper>466</Band5Upper>
+      <Band6Lower>466</Band6Lower>
+      <Band6Upper>526</Band6Upper>
+      <Band7Lower>526</Band7Lower>
+      <Band7Upper>574</Band7Upper>
+      <Band8Lower>574</Band8Lower>
+      <Band8Upper>633</Band8Upper>
+      <Band9Lower>633</Band9Lower>
+      <Band9Upper>681</Band9Upper>
+      <Band10Lower>681</Band10Lower>
+      <Band10Upper>999</Band10Upper>
+    </DomainBands>
+    <DomainProficiency>
+       <Level1Lower>10</Level1Lower>
+       <Level1Upper>20</Level1Upper>
+       <Level2Lower>30</Level2Lower>
+       <Level2Upper>40</Level2Upper>
+       <Level3Lower>50</Level3Lower>
+       <Level3Upper>60</Level3Upper>
+       <Level4Lower>70</Level4Lower>
+       <Level4Upper>80</Level4Upper>
+    </DomainProficiency>
+  </TestContent>
+</NAPTest>
+  </xhtml:Example>
+</DataObject>
+

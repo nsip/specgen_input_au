@@ -1,0 +1,82 @@
+<DataObject name="AggregateCharacteristicInfo"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xmlns:xi="http://www.w3.org/2001/XInclude"
+			xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	
+            xmlns="http://sifassociation.org/SpecGen">
+
+  <EventsReported>true</EventsReported>
+  <Key>@RefId</Key>
+  <Item>
+    <Element>AggregateCharacteristicInfo</Element>
+    <Description>
+      <p>This object defines the attribute of a group of objects that implicitly or explicitly defines a subset of the group for statistical purposes.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <privacyRating>L</privacyRating>
+    <Description>
+      <p>Key for aggregate characteristic information.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+  <Item>
+    <Element>Description</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>L</privacyRating>
+    <Description>
+      <p>
+        Describes the supercategory of the characteristic described in the <code>Definition</code> element below.
+      </p>
+    </Description>
+    <Type name="xs:string"></Type>
+    <ItemExample>Sex</ItemExample>
+    <ItemExample>CulturalBackground</ItemExample>
+    <ItemExample>YearLevel</ItemExample>
+    <ItemExample>IndigenousStatus</ItemExample>
+  </Item>
+  <Item>
+    <Element>Definition</Element>
+    <Characteristics>M</Characteristics>
+    <privacyRating>L</privacyRating>
+    <Description>
+      <p>Defines the aggregate characteristic information.</p>
+    </Description>
+    <ItemExample>LBOTE</ItemExample>
+    <ItemExample>Male</ItemExample>
+    <Type name="xs:token"></Type>
+  </Item>
+   <Item>
+    <Element>ElementName</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>L</privacyRating>
+    <Description>
+      <p>
+        Reference to SIF elements or external authority (e.g., <code>StudentPersonal/PersonInfo/Demographics/Sex</code>).
+      </p>
+    </Description>
+    <ItemExample>Dropout Status</ItemExample>
+    <Type name="xs:token"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>L</privacyRating>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>L</privacyRating>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+  <xhtml:Example xmlns="" name="AggregateCharacteristicInfo">
+    <AggregateCharacteristicInfo RefId="06AF1D69-FB06-4AB3-8898-3505714F18FB">
+      <Description>Sex</Description>
+      <ElementName>StudentPersonal/PersonInfo/Demographics/Sex</ElementName>
+    </AggregateCharacteristicInfo>
+  </xhtml:Example>
+</DataObject>

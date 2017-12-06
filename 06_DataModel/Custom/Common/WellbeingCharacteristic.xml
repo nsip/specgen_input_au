@@ -1,0 +1,218 @@
+<DataObject name="WellbeingCharacteristic">
+
+  <Key>@RefId</Key>
+  
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>WellbeingCharacteristic</Element>
+    <Description>
+      <p>Core Wellbeing Characteristic that is integral to the Student.  This may be a Medical condition, special needs or a characteristic such as a known disability or any other characteristic or condition that is student specific and impacts their learning. Some characteristics are already captured in the Demographics container of StudentPersonal however this object allows for more complex and targeted information.</p>
+    </Description>
+  </Item>
+
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The ID (GUID) assigned to uniquely identify this WellbeingCharacteristic.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+  <Item>
+    <Element>StudentPersonalRefId</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The ID (GUID) of the student to whom this WellbeingCharacteristic belongs.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Element>SchoolInfoRefId</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The ID (GUID) of the school for which this WellbeingCharacteristic is being reported.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  
+    <Item>
+    <Element>WellbeingCharacteristicClassification</Element>
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>Category of WellbeingCharacteristic.</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsWellbeingCharacteristicClassificationType"></Type>
+  </Item>
+  
+   <Item>
+    <Element>WellbeingCharacteristicStartDate</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Starting Date for this Characteristic to be noted.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+   <Item>
+    <Element>WellbeingCharacteristicEndDate</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>End date for this Characteristic to be noted, if there is one.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+  
+  <Item>
+    <Element>WellbeingCharacteristicReviewDate</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Date at which this information should be reviewed.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+    
+  <Item>
+    <Element>WellbeingCharacteristicNotes</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Text relating to the particular WellbeingCharacteristic.</p>
+    </Description>
+    <Type name="xs:string"></Type>
+  </Item>
+  
+   <Item>
+    <Element>WellbeingCharacteristicCategory</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Category of WellbeingCharacteristic.</p>
+    </Description>
+   
+    <Union>
+			<Type ref="CodeSets" name="AUCodeSetsWellbeingCharacteristicCategoryType"></Type>
+			<Type name="xs:string"/>
+	</Union>	 
+  </Item>
+  
+  <Item>
+    <Element>WellbeingCharacteristicSubCategory</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Sub category of the WellbeingCharacteristic.</p>
+    </Description>
+    <Union>
+			<Type ref="CodeSets" name="AUCodeSetsWellbeingCharacteristicSubCategoryType"></Type>
+			<Type name="xs:string"/>
+	</Union>	 
+  </Item>
+  
+    <Item>
+		<Element>LocalCharacteristicCode</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Local Code if required for Clarity.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalId"/> 
+  </Item> 
+  
+   <Item>
+    <Element>CharacteristicSeverity</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p></p>
+    </Description>
+    <Type name="xs:string"></Type>
+  </Item>
+  
+    <Item>
+    <Element>DailyManagement</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p></p>
+    </Description>
+    <Type name="xs:string"></Type>
+  </Item>
+  
+    <Item>
+    <Element>EmergencyManagement</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p></p>
+    </Description>
+    <Type name="xs:string"></Type>
+  </Item>
+  
+    <Item>
+    <Element>EmergencyResponsePlan</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p></p>
+    </Description>
+    <Type name="xs:string"></Type>
+  </Item>
+  
+     <Item>
+    <Element>Trigger</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p></p>
+    </Description>
+    <Type name="xs:string"></Type>
+  </Item>
+  
+  <Item>
+    <Element>ConfidentialFlag</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Flag indicating if the characteristic is confidential or not.  If ‘Y’ should not be shared with any other system/school.</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
+  </Item>    
+  
+    <Item>
+    <Element>Alert</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Create an Alert for this Characteristic?</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
+  </Item>    
+  
+    <Item>
+    <Element>MedicationList</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p></p>
+    </Description>
+     <Type ref="CommonTypes" name="MedicationListType"></Type>
+  </Item>
+  
+   <Item>
+    <Element>DocumentList</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Describes the Location of any associated documents kept in relation to this Characteristic.</p>
+    </Description>
+     <Type ref="CommonTypes" name="WellbeingDocumentListType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+  <xhtml:Example xmlns="" name="WellbeingCharacteristic">
+    <WellbeingCharacteristic RefId="2FFB63B4-CFEF-4820-8501-E7D1E54555CB">
+      <StudentPersonalRefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</StudentPersonalRefId>
+      <SchoolInfoRefId>CA285746-359D-7510-1A8C-36432A901A16</SchoolInfoRefId>
+      <WellbeingCharacteristicStartDate>2017-11-01</WellbeingCharacteristicStartDate>
+      <WellbeingCharacteristicEndDate>2017-11-10</WellbeingCharacteristicEndDate>
+      <WellbeingCharacteristicNotes>This Student has a special need.</WellbeingCharacteristicNotes>
+      <WellbeingCharacteristicCategory>S</WellbeingCharacteristicCategory>
+    </WellbeingCharacteristic>
+
+  </xhtml:Example>
+</DataObject>

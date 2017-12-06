@@ -1,0 +1,207 @@
+<DataObject name="WellbeingEvent">
+
+  <Key>@RefId</Key>
+  
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>WellbeingEvent</Element>
+    <Description>
+      <p>Event that impacts on a student’s duty of care.  This has been modelled by Sentral as an Incident, by CEOM as a behaviour support incident and by WA previously as an "Incident Report" but looking to move to terminology such as a “Wellbeing Event”.  There is an emphasis that this ‘event’ was needed to track both ‘positive’ and ‘negative’ behaviours and it not just the recording of a discipline incident or an accident.  This event is specific to a student, and is not global (e.g. a pandemic). Where an event involves more than one student, they can be listed in the person’s involved.  Where the event has an impact on a student’s wellbeing an individual record for each student should be generated.  E.g. where a student is reporting that another student fell off his bike, then the reporting student is listed as a person involved.</p>
+    </Description>
+  </Item>
+
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The ID (GUID) assigned to uniquely identify this WellbeingEvent.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+  <Item>
+    <Element>StudentPersonalRefId</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The ID (GUID) of the student to whom this WellbeingEvent belongs.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Element>SchoolInfoRefId</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The ID (GUID) of the school for which this WellbeingEvent is being reported.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  
+  <Item>
+		<Element>EventId</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>A Local Identifier for the Event. It is expected to be unique to the reporting site.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalId"/> 
+  </Item> 
+   
+   <Item>
+    <Element>WellbeingEventNotes</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Text relating to the particular WellbeingEvent.</p>
+    </Description>
+    <Type name="xs:string"></Type>
+  </Item>
+  
+  <Item>
+    <Element>WellbeingEventCategoryClass</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Category of WellbeingEvent.</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsWellbeingEventCategoryClassType"></Type>
+  </Item>
+    
+  <Item>
+    <Element>WellbeingEventCategoryList</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>List of Categories of WellbeingEvent.</p>
+    </Description>
+    <!-- Eventually to be a Code Set - needs to be further defined.
+    <Type ref="CodeSets" name="AUCodeSetsWellbeingEventCategoryType"></Type>
+    -->
+    <Type ref="CommonTypes" name="WellbeingEventCategoryListType"></Type>
+  </Item>
+  
+ 
+  
+    <Item>
+    <Element>ReportingStaffRefId</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The ID (GUID) of the staff member who logged the Wellbeing Event record.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  
+   <Item>
+    <Element>WellbeingEventLocationDetails</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Details of Event Location.</p>
+    </Description>
+     <Type ref="CommonTypes" name="WellbeingEventLocationDetailsType"></Type>
+  </Item>
+
+  <Item>
+    <Element>WellbeingEventCreationTimeStamp</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Date and time of the WellbeingEvent record creation.</p>
+    </Description>
+    <Type name="xs:dateTime"></Type>
+  </Item>  
+  
+  <Item>
+    <Element>WellbeingEventDate</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The calendar date on which this WellbeingEvent occured.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+    
+   <Item>
+    <Element>WellbeingEventTime</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The time when WellbeingEvent occured.</p>
+    </Description>
+    <Type name="xs:time"></Type>
+  </Item>
+  
+   <Item>
+    <Element>WellbeingEventDescription</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A description of the WellbeingEvent.</p>
+    </Description>
+    <Type name="xs:string"></Type>
+  </Item>
+
+   <Item>
+    <Element>WellbeingEventTimePeriod</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Time period of when the event occurred.</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsWellbeingEventTimePeriodType"></Type>
+  </Item>  
+
+  <Item>
+    <Element>ConfidentialFlag</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Flag indicating if the incident is confidential or not.  If ‘Y’ should not be shared with any other system/school.</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
+  </Item>  
+  
+   <Item>
+    <Element>PersonInvolvementList</Element>
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>List of People involved in the Wellbeing event.  Mandatory if more people than the student to which this event occurs is involved.</p>
+    </Description>
+     <Type ref="CommonTypes" name="PersonInvolvementListType"></Type>
+  </Item>
+  
+    <Item>
+    <Element>FollowUpActionList</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>List of Actions where an action resulted and is known – maybe just a link to a WellbeingResponse Object</p>
+    </Description>
+     <Type ref="CommonTypes" name="FollowUpActionListType"></Type>
+  </Item>
+  
+   <Item>
+  	   	<Element>Status</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+		  <p>Current Status.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsWellbeingStatusType"/>
+  	</Item>
+
+   <Item>
+    <Element>DocumentList</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Describes the Location of any associated documents kept in relation to this Response.</p>
+    </Description>
+     <Type ref="CommonTypes" name="WellbeingDocumentListType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+  <xhtml:Example xmlns="" name="WellbeingEvent">
+    <WellbeingEvent RefId="2FFB63B4-CFEF-4820-8501-E7D1E54555CB">
+      <StudentPersonalRefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</StudentPersonalRefId>
+      <SchoolInfoRefId>CA285746-359D-7510-1A8C-36432A901A16</SchoolInfoRefId>
+      <WellbeingEventCategoryClass>P</WellbeingEventCategoryClass>
+      <WellbeingEventDate>2017-11-01</WellbeingEventDate>
+      <WellbeingEventTimePeriod>AM</WellbeingEventTimePeriod>
+    </WellbeingEvent>
+
+  </xhtml:Example>
+</DataObject>

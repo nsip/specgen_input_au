@@ -1,0 +1,108 @@
+<DataObject name="StudentScoreSet"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xmlns:xi="http://www.w3.org/2001/XInclude"
+			xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	
+            xmlns="http://sifassociation.org/SpecGen">
+  <Key>@RefId</Key>
+  <EventsReported>true</EventsReported>
+
+  <Item>
+    <Element>StudentScoreSet</Element>
+    <Description>
+      <p>The scored results from an assessment.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The GUID that uniquely identifies an instance of the object.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+  <Item>
+    <Element>ScoreMetric</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The metric or scale used to report the score.</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsAssessmentReportingMethodType"></Type>
+  </Item>
+  <Item>
+    <Element>AssessmentAdministrationRefId</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The administration associated with this score set.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Element>StudentPersonalRefId</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The student associated with this score set.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Element>AssessmentRegistrationRefId</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The registration associated with this score set.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  
+  <Item>
+    <Element>Scores</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Container for score elements. </p>
+    </Description>
+    <Type ref="CommonTypes" name="ScoresType"></Type>
+  </Item>
+    
+  <Item>
+    <Element>StartDateTime</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Date and time scoring began.</p>
+    </Description>
+    <Type name="xs:dateTime"></Type>
+  </Item>
+  <Item>
+    <Element>FinishDateTime</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Date and time scoring ended.</p>
+    </Description>
+    <Type name="xs:dateTime"></Type>
+  </Item>
+  
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+
+  <xhtml:Example xmlns="" name="StudentScoreSet">
+    <StudentScoreSet RefId="5810E283-E928-459C-BBA7-6EFE1963F784">
+      <ScoreMetric>0512</ScoreMetric>
+      <AssessmentAdministrationRefId>1F971F3D-414E-4146-9325-66638290E6C1</AssessmentAdministrationRefId>
+      <StudentPersonalRefId>8F0934CC-2F04-48F8-BBD7-88AA1ADE691B</StudentPersonalRefId>
+      <Scores>
+        <Score AssessmentSubTestRefId="E5EDAE63-A04D-47E4-9D02-24A32956B074">
+          <ScoreValue>25</ScoreValue>
+          <DiagnosticStatement>Shows ability to identify symmetry.</DiagnosticStatement>
+        </Score>
+      </Scores>
+    </StudentScoreSet>
+  </xhtml:Example>
+</DataObject>

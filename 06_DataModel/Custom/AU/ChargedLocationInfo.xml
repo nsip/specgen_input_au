@@ -1,0 +1,168 @@
+<DataObject name="ChargedLocationInfo"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xmlns:xi="http://www.w3.org/2001/XInclude"
+			xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	
+            xmlns="http://sifassociation.org/SpecGen">
+  <Key>@RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>ChargedLocationInfo</Element>
+    <Description>
+      <p>
+        ChargedLocationInfo represents a location in a school system. It can be used to associate accounts and purchase orders with particular schools or other cost centres.      </p>
+     </Description>
+  </Item>
+  <Item>
+
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <privacyRating>L</privacyRating>
+    <Description>
+      <p>The SIF unique identifier for the location.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+
+  <Item>
+    <Element>LocationType</Element>
+    <Characteristics>M</Characteristics>
+    <privacyRating>L</privacyRating>
+    <Description>
+      <p>Defines whether the location is a school or a non-school location.</p>
+    </Description>
+    <Values>
+      <Value>
+        <Code>School</Code>
+      </Value>
+      <Value>
+        <Code>NonSchool</Code>
+      </Value>
+    </Values>
+  </Item>
+  
+  <Item>
+    <Element>SiteCategory</Element>
+    <Characteristics>M</Characteristics>
+    <privacyRating>L</privacyRating>
+    <Description>
+      <p>Specific site category.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+    <ItemExample>Prep Site</ItemExample>
+    <ItemExample>Satellite</ItemExample>
+    <ItemExample>Central Kitchen</ItemExample>
+    <ItemExample>Warehouse</ItemExample>
+    <ItemExample>Storage</ItemExample>
+    <ItemExample>Central Office</ItemExample>
+    <ItemExample>Other</ItemExample>
+  </Item>
+  
+  <Item>
+    <Element>Name</Element>
+    <Characteristics>M</Characteristics>
+    <privacyRating>L</privacyRating>
+    <Description>
+      <p>Text name of the location.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  
+  <Item>
+    <Element>Description</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>L</privacyRating>
+    <Description>
+      <p>Description about the location.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+
+
+  <Item>
+    <Element>LocalId</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>L</privacyRating>
+    <Description>
+      <p>The locally-assigned identifier for this location.</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>
+  
+  <Item>
+    <Element>StateProvinceId</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>L</privacyRating>
+    <Description>
+      <p>The state-assigned identifier for this location.</p>
+    </Description>
+    <Type ref="CommonTypes" name="StateProvinceIdType"></Type>
+  </Item>
+  
+  <Item>
+    <Element>ParentChargedLocationInfoRefId</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>L</privacyRating>
+    <Description>
+      <p>A ChargedLocationInfo instance could be related to another ChargedLocationInfo. This element will help create that relation.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  
+  <Item>
+    <Element>SchoolInfoRefId</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>L</privacyRating>
+    <Description>
+      <p>The RefId of a corresponding SchoolInfo object.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  
+  <Item>
+    <Element>AddressList</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>L</privacyRating>
+    <Description>
+      <p>This element has the ChargedLocationInfo address information.</p>
+    </Description>
+    <Type ref="CommonTypes" name="AddressListType"></Type>
+  </Item>
+  
+  <Item>
+    <Element>PhoneNumberList</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>L</privacyRating>
+    <Description>
+      <p>The location's phone numbers.</p>
+    </Description>
+    <Type ref="CommonTypes" name="PhoneNumberListType"></Type>
+  </Item>
+  
+  
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>L</privacyRating>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <privacyRating>L</privacyRating>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+  <xhtml:Example xmlns="" name="ChargedLocation">
+    <ChargedLocationInfo RefId="D3E34B35-9D75-101A-8C3D-00AA001A1652">
+      <LocationType>School</LocationType>
+      <SiteCategory>Other</SiteCategory>
+      <Name>Lincoln High School</Name>
+      <LocalId>2343LHS</LocalId>
+    </ChargedLocationInfo>
+    
+    
+    
+
+  </xhtml:Example>
+</DataObject>

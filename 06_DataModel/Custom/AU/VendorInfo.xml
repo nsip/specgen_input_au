@@ -1,0 +1,161 @@
+<DataObject name="VendorInfo"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xmlns:xi="http://www.w3.org/2001/XInclude"
+			xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	
+            xmlns="http://sifassociation.org/SpecGen">
+  <Key>@RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>VendorInfo</Element>
+    <Description>
+      <p>
+        This object contains basic vendor information (commonly known as creditors).</p>
+     </Description>
+  </Item>
+  <Item>
+
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Vendor Id.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+
+  <Item>
+    <Element>Name</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Name of the vendor.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  
+  <Item>
+    <Element>ContactInfo</Element>    
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Contact information.</p>
+    </Description>
+    <Type ref="CommonTypes" name="ContactInfoType"></Type>
+  </Item>
+  
+  <Item>
+    <Element>CustomerId</Element>    
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Account number or other Id.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  
+  <Item>
+    <Element>ABN</Element>    
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Australian Business Number.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  
+  <Item>
+    <Element>RegisteredForGST</Element>    
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The vendor is registered to collect GST.</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
+  </Item>
+  
+  <Item>
+    <Element>PaymentTerms</Element>    
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The vendors payment terms (typically expressed as number of days e.g. 14 days).</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  
+  <Item>
+    <Element>BPay</Element>    
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>BPay Id.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  
+  <Item>
+    <Element>BSB</Element>    
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Vendor's BSB number.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  
+  <Item>
+    <Element>AccountNumber</Element>    
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Vendor's account number.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  
+  <Item>
+    <Element>AccountName</Element>    
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Vendor's account name.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  
+  
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+  <xhtml:Example xmlns="" name="VendorInfo">
+    <VendorInfo RefId="AB3647C5-6865-4CF4-5678-DD34EF564E22">
+      <Name>ABC School Supply</Name>
+      <ContactInfo>
+        <Name Type="LGL">
+          <FamilyName>Brown</FamilyName>
+          <GivenName>James</GivenName>
+        </Name>
+        <Address Type="0123" Role="2382">
+          <Street>
+            <Line1>23 E. 43rd St.</Line1>
+          </Street>
+          <City>Chicago</City>
+         <StateProvince>IL</StateProvince>
+          <Country>8104</Country>
+          <PostalCode>60611</PostalCode>
+        </Address>
+        <EmailList>
+          <Email Type="01">jdr@ABC.com</Email>
+        </EmailList>
+        <PhoneNumberList>
+          <PhoneNumber Type="0096">
+            <Number>(312) 555-1234</Number>
+          </PhoneNumber>
+        </PhoneNumberList>
+      </ContactInfo>
+      <CustomerId>0023556</CustomerId>
+      <ABN>56402325367</ABN>
+      <RegisteredForGST>Y</RegisteredForGST>
+    </VendorInfo>
+    
+
+  </xhtml:Example>
+</DataObject>

@@ -1,0 +1,303 @@
+<h3>Data Model</h3>
+<table>
+  <thead>
+    <tr>
+      <td>Key</td>
+      <td>Citation</td>
+    </tr>
+  </thead>
+  <!--
+			<tr>
+				<td><a name="ASCX12" />ASC X12</td>
+				<td class="citation">
+					<p>ASC
+ (Accredited Standards Committee). X12 Standard Release&#160;4050. Accredited Standards Committee, December&#160;2001.</p>
+				</td>
+			</tr>
+-->
+  <tr>
+    <td>
+      <a name="CanadaPost" />CanadaPost
+    </td>
+    <td>
+      Canada Post. Canada Postal Guide. 6&#160;July&#160;2006&#160;&lt;<a href="http://www.canadapost.ca/personal/tools/pg/manual/b03-e.asp">http://www.canadapost.ca/personal/tools/pg/manual/b03-e.asp</a>&gt;.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a name="ABS" />ABS
+    </td>
+    <td>
+      Australian Bureau of Statistics &lt;<a href="http://www.abs.gov.au/">http://www.abs.gov.au/</a>&gt;.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a name="CNDB" />CNDB
+    </td>
+    <td class="citation">
+      <p>
+        USDA
+        (United States Department of Agriculture). Child Nutrition Database
+        (CNDB). 6&#160;July&#160;2006&#160;&lt;<a href="http://riley.nal.usda.gov/nal_display/index.php?info_center=14&amp;tax_level=2&amp;tax_subject=234&amp;topic_id=1210">http://riley.nal.usda.gov/nal_display/index.php?info_center=14&amp;tax_level=2&amp;tax_subject=234&amp;topic_id=1210</a>&gt;
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a name="DES" />DES
+    </td>
+    <td class="citation">
+      <p>
+        FIPS
+        (Federal Information Processing Standards). Publication 46-3: Data Encryption Standard (DES). 25&#160;October&#160;1999. 06&#160;July&#160;2006&#160;&lt;<a href="http://csrc.nist.gov/publications/fips/fips46-3/fips46-3.pdf">http://csrc.nist.gov/publications/fips/fips46-3/fips46-3.pdf</a>&gt;.
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a name="EDEN" />EDEN
+    </td>
+    <td class="citation">
+      <p>
+        U.S. Department of Education. File Specifications &#x2014; Performance-Based Data Management Initiative (PBDMI). 7&#160;September&#160;2006&#160;&lt;<a href="http://www.ed.gov/about/inits/ed/pbdmi/file-specifications.html">http://www.ed.gov/about/inits/ed/pbdmi/file-specifications.html</a>&gt;.
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a name="FAVICON" />FAVICON
+    </td>
+    <td class="citation">
+      <p>
+        Favicon - Wikepedia, the free encyclopedia.&#160;
+        6&#160;July&#160;2006&#160;&lt;<a href="http://en.wikipedia.org/wiki/Favicon">http://en.wikipedia.org/wiki/Favicon</a>&gt;.
+      </p>
+    </td>
+  </tr>
+  <!--
+			<tr>
+				<td><a name="IMSPACKAGING" />IMSPACKAGING</td>
+				<td class="citation">
+					<p>IMS Global Learning Consortium, Inc.  Content Packaging Specification.  17&#160;July&#160;2006&#160;&lt;<a href="http://www.imsglobal.org/content/packaging/">http://www.imsglobal.org/content/packaging/</a>&gt;</p>
+				</td>
+			</tr>
+			-->
+  <tr>
+    <td>
+      <a name="IRSTIN" />IRSTIN
+    </td>
+    <td class="citation">
+      <p>
+        IRS
+        (Internal Revenue Service) ITIN and ATIN definitions. Publication 1915:
+        Understanding Your IRS Individual Taxpayer Identification Number (Rev. 2-2004). 2004 February. 6&#160;July&#160;2006&#160;&lt;<a href="http://www.irs.gov/pub/irs-pdf/p1915.pdf">http://www.irs.gov/pub/irs-pdf/p1915.pdf</a>&gt;
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a name="ISO" />ISO
+    </td>
+    <td class="citation">
+      <p>
+        ISO
+        (International Organization for Standardization). &lt;<a href="https://www.iso.org/home.html">https://www.iso.org/home.html</a>&gt;.
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a name="JPEG" />JPEG
+    </td>
+    <td class="citation">
+      <p>
+        IJG
+        (Independent JPEG Group). JPEG File Interchange Format Version&#160;1.02. 6&#160;July&#160;2006&#160;&lt;<a href="http://www.w3.org/Graphics/JPEG/jfif3.pdf">http://www.w3.org/Graphics/JPEG/jfif3.pdf</a>&gt;.
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a name="LOM">LOM</a>
+    </td>
+    <td class="citation">
+      <p>
+        IEEE (Institute of Electrical and Electronics Engineers, Inc.).  IEEE LTSC | WG12.  10&#160;July&#160;2006&#160;&lt;<a href="http://ltsc.ieee.org/wg12/">http://ltsc.ieee.org/wg12/</a>&gt;.
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a name="MD5" />MD5
+    </td>
+    <td class="citation">
+      <p>
+        IETF
+        (Internet Engineering Task Force). RFC&#160;1321: The MD5 Message-Digest Algorithm. 1992&#160;April.&#160;
+        6&#160;July&#160;2006&#160;&lt;<a href="http://www.ietf.org/rfc/rfc1321.txt">http://www.ietf.org/rfc/rfc1321.txt</a>&gt;.
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a name="NCES" />NCES
+    </td>
+    <td class="citation">
+      <p>
+        NCES (National Center for Education Statistics). NCES Handbooks Online. 6&#160;July&#160;2006
+        &#160;&lt;<a href="http://nces.ed.gov/programs/handbook/toc.asp">http://nces.ed.gov/programs/handbook/toc.asp</a>&gt;.
+      </p>
+    </td>
+  </tr>
+  <!--
+			<tr>
+				<td><a name="QTI" />QTI</td>
+				<td class="citation">
+					<p>IMS
+ Global Learning Consortium, Inc. IMS Question &amp; Test Interoperability Specification, version 1.2.1. 26&#160;March&#160;2003. 6&#160;July&#160;2006
+&#160;&lt;<a href="http://www.imsglobal.org/question/index.cfm">http://www.imsglobal.org/question/index.cfm</a>&gt;</p>
+					<p>ASI
+ (Assessment, Section Item) Selection &amp; Ordering, 11&#160;February&#160;2002,
+ 6&#160;July&#160;2006&#160;&lt;<a href="http://www.imsglobal.org/question/qtiv1p2/imsqti_asi_saov1p2.html">http://www.imsglobal.org/question/qtiv1p2/imsqti_asi_saov1p2.html</a>&gt;</p>
+				</td>
+			</tr>
+-->
+  <tr>
+    <td>
+      <a name="RC2" />RC2
+    </td>
+    <td class="citation">
+      <p>
+        IETF
+        (Internet Engineering Task Force). RFC&#160;2268: A Description of the RC2 Encryption Algorithm. 1998&#160;March.&#160;
+        6&#160;July&#160;2006&#160;&lt;<a href="http://www.ietf.org/rfc/rfc2268.txt">http://www.ietf.org/rfc/rfc2268.txt</a>&gt;.
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a name="RSA" />RSA
+    </td>
+    <td class="citation">
+      <p>
+        IETF
+        (Internet Engineering Task Force). RFC&#160;2313: PKCS #1: RSA Encryption. 1998&#160;March.
+        6&#160;July&#160;2006&#160;&lt;<a href="http://www.ietf.org/rfc/rfc2313.txt">http://www.ietf.org/rfc/rfc2313.txt</a>&gt;.
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a name="SAFETY" />SAFETY
+    </td>
+    <td class="citation">
+      <p>
+        NCES (National Center for Education Statistics).  Safety in Numbers:  Collecting and Using Crime, Violence and Discipline Incident Data
+        to Make a Difference in Schools.
+        13&#160;July&#160;2006&#160;&lt;<a href="http://nces.ed.gov/pubs2002/safety/chapter4.asp">http://nces.ed.gov/pubs2002/safety/chapter4.asp</a>&gt;.
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a name="SCED" />SCED
+    </td>
+    <td>
+      National Center for Education Statistics.  Secondary School Course Classification System: School Codes for the Exchange of Data.  23&#160;May&#160;2007&#160;&lt;<a href="http://nces.ed.gov/pubs2007/2007341.pdf">http://nces.ed.gov/pubs2007/2007341.pdf</a>&gt;.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a name="SHA1" />SHA1
+    </td>
+    <td class="citation">
+      <p>
+        FIPS
+        (Federal Information Processing Standards). Publication 180-1: Secure Hash Standard (SHS). 17&#160;April&#160;1995.
+        6&#160;July&#160;2006&#160;&lt;<a href="http://www.itl.nist.gov/fipspubs/fip180-1.htm">http://www.itl.nist.gov/fipspubs/fip180-1.htm</a>&gt;.
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a name="ABS-1269.0" />ABS 1269.0
+    </td>
+    <td class="citation">
+      <p>
+        Australian Bureau of Statistics - 
+        1269.0 Standard Australian Classification of Countries, Second Edition, Revision 1, 2011.
+        &lt;<a href="http://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1269.02011">http://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1269.02011</a>&gt;.
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a name="ABS-1249.0" />ABS 1249.0
+    </td>
+    <td class="citation">
+      <p>
+        Australian Bureau of Statistics -
+        1249.0 Australian Standard Classification of Cultural and Ethnic Groups (ASCCEG), Second Edition, 2011
+        &lt;<a href=" http://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1249.02011"> http://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1249.02011</a>&gt;.
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a name="ABS-1267.0" />ABS 1267.0
+    </td>
+    <td class="citation">
+      <p>
+        Australian Bureau of Statistics -
+        1267.0 - Australian Standard Classification of Languages (ASCL), 2005-06.
+        &lt;<a href="http://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1267.02005-06?OpenDocument">http://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1267.02005-06?OpenDocument</a>&gt;.
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a name="ABS-1266.0" />ABS 1266.0
+    </td>
+    <td class="citation">
+      <p>
+        Australian Bureau of Statistics -
+        1266.0 Australian Standard Classification of Religious Groups, Second Edition, 2011
+        &lt;<a href="http://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1266.02011">http://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1266.02011</a>&gt;.
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a name="ABS-1216.0" />ABS 1216.0
+    </td>
+    <td class="citation">
+      <p>
+        Australian Bureau of Statistics -
+        1216.0 - Australian Standard Geographical Classification (ASGC), Jul 2008.
+        &lt;<a href="http://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1216.0Jul%202008?OpenDocument">http://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1216.0Jul%202008?OpenDocument</a>&gt;.
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a name="MCEECDYA" />MCEECDYA
+    </td>
+    <td class="citation">
+      <p>
+        The Ministerial Council for Education, Early Childhood Development and Youth Affairs. Has been renamed and is now known as the Education Council.
+        &lt;<a href="http://www.educationcouncil.edu.au/">hhttp://www.educationcouncil.edu.au/</a>&gt;.
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a name="DEEWR" />DEEWR
+    </td>
+    <td class="citation">
+      <p>
+        The former Department of Education, Employment and Workplace Relations is now the Australian Government - Department of Education and Training. &lt;<a href="https://www.education.gov.au/">https://www.education.gov.au/</a>&gt;.
+      </p>
+    </td>
+  </tr>
+</table>

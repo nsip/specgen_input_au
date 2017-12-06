@@ -1,0 +1,362 @@
+<DataObject name="LearningStandardItem"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xmlns:xi="http://www.w3.org/2001/XInclude"
+			xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	
+            xmlns="http://sifassociation.org/SpecGen">
+  <Key>@RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>LearningStandardItem</Element>
+    <Description>
+      This object contains information related to curriculum standards statements "standards" or "benchmarks" or the like
+      within the document. Each LearningStandardItem reflects an individual standard statement and may occur
+      at several levels within a hierarchially structured document.
+    </Description>
+  </Item>
+  <Item>
+
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>GUID assigned to each statement at each level within the document hierarchy</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+  
+  <!--Item>
+    <Element>lang</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The default language of the text used for the content in the LearningStandardItem.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item-->
+  
+  <Item>
+	 <Element>Resources</Element>
+	 <Characteristics>O</Characteristics>
+	 <Description>
+		 <p>Container for related resources.</p>
+	 </Description>
+    <Type ref="CommonTypes" name="LResourcesType"/>
+  </Item>
+
+
+  <Item>
+    <Element>StandardSettingBody</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The name of the state or organization that authored and manages updates to the curriculum document (i.e., ACARA, NSW DET).</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>/Country</Element>
+    <Characteristics>M</Characteristics>
+    <Type ref="CommonTypes" name="CountryType"/>
+  </Item>
+  <Item>
+    <Element>/StateProvince</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="StateProvinceType"/>
+  </Item>
+  <Item>
+    <Element>/SettingBodyName</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>This is the text version of the organization's name.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  <Item>
+    <Element>StandardHierarchyLevel</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Description of hierarchical level within standards tree.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>/Number</Element>
+
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Integer assigned to each hierarchical level within standards tree. The top level is "1".</p>
+    </Description>
+    <Type name="xs:unsignedInt"></Type>
+  </Item>
+  <Item>
+
+    <Element>/Description</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Used to describe what role this item is serving in the structure. Some documents describe their levels in terms of standard, strands, and topics. Others use standards, benchmarks, and indicators. In Australia, this is typically in terms of Course or Unit, Year Level, Outcomes. This attribute names the level of the item. </p>
+    </Description>
+    <Type name="xs:string"></Type>
+  </Item>
+  
+  <Item>
+    <Element>PredecessorItems</Element>
+
+    <Characteristics>O</Characteristics>
+   <Description>
+      <p>GUID assigned to the LearningStandardItem directly above it in the hierarchy tree. This is a repeatable element because a single granular item may relate to multiple parent levels of the hierarchy.</p>
+      <p>If the object has no parent, the ParentRefId should be the same as the object's RefId. The RefId in LearningStandardDocumentRefId will always point to the parent's LearningStandardDocument object.</p>
+    </Description>
+        <Type ref="CommonTypes" name="LearningStandardsType"/>
+  </Item>
+  
+  <Item>
+    <Element>StatementCodes</Element>
+
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="StatementCodesType"></Type>
+  </Item>
+
+
+  <Item>
+    <Element>Statements</Element>
+
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="StatementsType"></Type>
+  </Item>
+ 
+  <Item>
+    <Element>YearLevels</Element>
+
+    <Characteristics>M</Characteristics>
+    <Type ref="CommonTypes" name="YearLevelsType"></Type>
+  </Item>
+  <Item>
+    <Element>ACStrandSubjectArea</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="ACStrandSubjectAreaType"></Type>
+  </Item>
+  <Item>
+    <Element>StandardIdentifier</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>This element describes the unique identifier for each LearningStandard.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>/YearCreated</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>This represents the year that this specific learning standard was created.  This is important to indicate as standards are updated to reflect the appropriate year it was created. This would be assigned by and unique to the standard setting body.</p>
+    </Description>
+    <Type name="xs:gYear"/>
+  </Item>
+  <Item>
+    <Element>/ACStrandSubjectArea</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>This represents the subject or content area this curriculum item addresses. This would be assigned by and unique to the curriculum setting body.</p>
+    </Description>
+    <Type ref="CommonTypes" name="ACStrandSubjectAreaType"/>
+  </Item>
+  <Item>
+    <Element>/StandardNumber</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>This is the specific number of the standard.  For example, if the subject is mathematics and this standard is Patterns, Functions and Algebra, this would be StandardNumber 1. This would be assigned by and unique to the standard setting body.</p>
+    </Description>
+    <Type name="xs:normalizedString"/>
+  </Item>
+  <Item>
+    <Element>/YearLevels</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>This represents the grade level(s) this specific learning standard will address. This may be addressed in different ways.  Some states have a grade level that covers several grades and others have just one grade. This would be assigned by and unique to the standard setting body.</p>
+    </Description>
+    <Type ref="CommonTypes" name="YearLevelsType"/>
+  </Item>
+  <Item>
+    <Element>/Benchmark</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>This is the next level within the hierarchy of the learning standard.  For example, if the subject is mathematics and the standard is algebra, this would be the next delineation - Represent an unknown quantity as a variable using a symbol, including letters. This would be assigned by and unique to the standard setting body.</p>
+    </Description>
+    <Type name="xs:normalizedString"/>
+  </Item>
+  <Item>
+    <Element>/YearLevel</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>This is the specific year level.  This is to be utilized if the YearLevel covers several years. This would be assigned by and unique to the standard setting body.</p>
+    </Description>
+    <Type ref="CommonTypes" name="YearLevelType"/>
+  </Item>
+  <Item>
+    <Element>/IndicatorNumber</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>This would be the most granular level of the learning standard associated with the grade level. Following the same example, an indicator for Algebra YearLevel 5-7, the indicator for the benchmark above at Year 6 would be to Evaluate simple expressions by replacing variables with given values, and use formulas in problem-solving situations. This would be assigned by and unique to the standard setting body.</p>
+    </Description>
+    <Type name="xs:normalizedString"/>
+  </Item>
+  <Item>
+    <Element>/AlternateIdentificationCodes</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>This element is for an organization to utilize for an internal code.  This may be used for an alignment schema or other purposes that are only internal for the organization.</p>
+    </Description>
+    <List mode="List"/>
+  </Item>
+  <Item>
+    <Element>//AlternateIdentificationCode</Element>
+    <Characteristics>MR</Characteristics>
+    <Description>
+      <p>An alphanumeric Id code as defined by the organization to identify the statement.</p>
+    </Description>
+    <Type name="xs:normalizedString"/>
+  </Item>
+  <Item>
+    <Element>/Organization</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Name of organization represented by the document, i.e., "National Council of Teachers of Mathematics (NCTM)," "NSW," "ACARA." This is the name of the organization that has this AlternateIdentificationCode. This should be a text field.</p>
+    </Description>
+    <Type name="xs:normalizedString"/>
+  </Item>
+
+  <Item>
+    <Element>LearningStandardDocumentRefId</Element>
+
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The RefId of the item's parent LearningStandardDocument.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Element>RelatedLearningStandardItems</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Container for external relationships.</p>
+    </Description>
+    <List mode="List"/>
+  </Item>
+  <Item>
+    <Element>/LearningStandardItemRefId</Element>
+    <Characteristics>OR</Characteristics>
+    <Description>
+      <p>A relationship between the current standard item and another standard item.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Attribute>RelationshipType</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Type of the relationship between the current standard and the target standard.  The value identifies the type of standard of the target item. The purpose of this information is to allow applications to sort/display these relationships in the appropriate context.</p>
+    </Description>
+    <Union>
+      <Type ref="CodeSets" name="AUCodeSetsLearningStandardItemRelationshipTypesType"/>
+      <Type name="xs:token"/>
+    </Union>
+  </Item>
+
+  <Item>
+    <Element>Level4</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>This is the second to most granular level of the learning or performance standard associated with the grade level.</p>
+    </Description>
+    <Type name='xs:normalizedString'/>
+  </Item>
+
+  <Item>
+    <Element>Level5</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>This is the most granular level of the learning or performance standard associated with the grade level.</p>
+    </Description>
+    <Type name='xs:normalizedString'/>
+  </Item>
+  
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+  <xhtml:Example name="LearningStandardItem" xmlns="" >
+    <LearningStandardItem RefId="A5D75F78-9175-101B-8C7E-08EA123A8234">
+    <StandardSettingBody>
+    <Country>1101</Country>
+    <StateProvince>VIC</StateProvince>
+    <SettingBodyName>DEECD</SettingBodyName>
+  </StandardSettingBody>
+  <StandardHierarchyLevel>
+    <Number>3</Number>
+    <Description>AchievementStandard</Description>
+  </StandardHierarchyLevel>
+  <PredecessorItems>
+    <LearningStandardItemRefId>DE072A87-EFAD-4B77-8AF9-FAF83C94839E</LearningStandardItemRefId>
+  </PredecessorItems>
+  <StatementCodes>
+    <StatementCode>Mathematics.2.03.a</StatementCode>
+  </StatementCodes>
+  <Statements>
+    <Statement>Counting from 0 to 100 using whole numbers</Statement>
+  </Statements>
+  <YearLevels>
+    <YearLevel>
+      <Code>4</Code>
+    </YearLevel>
+    <YearLevel>
+      <Code>5</Code>
+    </YearLevel>
+  </YearLevels>
+  <ACStrandSubjectArea>
+    <ACStrand>M</ACStrand>
+    <SubjectArea>  
+    	<Code>Maths</Code>
+    	<OtherCodeList>
+      		<OtherCode Codeset="Text">Mathematics</OtherCode>
+    	</OtherCodeList>
+    </SubjectArea>
+  </ACStrandSubjectArea>
+
+
+  <StandardIdentifier>
+    <YearCreated>2003</YearCreated>
+    <ACStrandSubjectArea>
+       <ACStrand>M</ACStrand>
+      <SubjectArea>
+      	<Code>Maths</Code>
+      	  <OtherCodeList>
+        	<OtherCode Codeset="Text">Mathematics</OtherCode>
+      	</OtherCodeList>
+      </SubjectArea>
+    </ACStrandSubjectArea>
+    <StandardNumber>04</StandardNumber>
+    <YearLevels>
+      <YearLevel>
+        <Code>5</Code>
+      </YearLevel>
+      <YearLevel>
+        <Code>6</Code>
+      </YearLevel>
+      <YearLevel>
+        <Code>7</Code>
+      </YearLevel>
+    </YearLevels>
+<Organization>DEECD VIC</Organization>
+  </StandardIdentifier>
+  <LearningStandardDocumentRefId>8454189F-6BBC-26C6-B97D-DB4B6D0E3AC8</LearningStandardDocumentRefId>
+  <RelatedLearningStandardItems>
+    <LearningStandardItemRefId RelationshipType="Content">869670E8-540A-4350-9515-AFB767FADD9A</LearningStandardItemRefId>
+    <LearningStandardItemRefId RelationshipType="State">B14FDAB4-37CA-4565-A976-5A5B824545C4</LearningStandardItemRefId>
+    <LearningStandardItemRefId RelationshipType="ContentElaboration">D5440A11-F5A4-4AC1-9202-61ECBE5A29F6</LearningStandardItemRefId>
+  </RelatedLearningStandardItems>
+</LearningStandardItem>
+
+  </xhtml:Example>
+</DataObject>

@@ -1,0 +1,195 @@
+<Section name="Introduction"
+		 xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xmlns:xi="http://www.w3.org/2001/XInclude"
+		 xmlns:xhtml="http://www.w3.org/1999/xhtml/"
+		 
+         xmlns="http://sifassociation.org/SpecGen">
+
+<p>
+This section presents the XML structure for SIF Data Model common elements and objects in a tabular format for readers
+less versed in parsing formal XML schema definitions, along with conventions that typically apply in the data model for
+easy reference.
+</p>
+<Section name="Format">
+<p>The Char(acteristics) column for all of the tables in this section use the following codes:</p>
+<table>
+<thead>
+<tr>
+	<td>Code</td>
+	<td>Characteristic</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td>M</td>
+	<td>Mandatory element or attribute</td>
+</tr>
+<tr>
+	<td>O</td>
+	<td>Optional element or attribute</td>
+</tr>
+<tr>
+	<td>C</td>
+	<td>Conditional element or attribute</td>
+</tr>
+<tr>
+	<td>MR</td>
+	<td>Mandatory and repeatable element</td>
+</tr>
+<tr>
+	<td>OR</td>
+	<td>Optional and repeatable element</td>
+</tr>
+<tr>
+	<td>CR</td>
+	<td>Conditional and repeatable element</td>
+</tr>
+</tbody>
+</table>
+<p>
+Mandatory elements <span class="rfc2119">MUST</span> be present in Add events, and
+in non-empty and non-error responses to requests for entire SIF objects (e.g., no <code>SIF_Query/SIF_QueryObject/SIF_Element</code> elements supplied in the request).
+Mandatory attributes <span class="rfc2119">MUST</span> always be present if their corresponding element is present.
+</p>
+<p>
+SIF Adapters and message brokers MUST supply data according to the types specified in the Type columns and their corresponding equivalents in the most recent schema files associated with this specification. If there is a discrepancy between object and element definitions in this specification and the corresponding schema files, the definition in the schema files takes precedence; every effort will be made to note discrepancies in the <a href="errata/1.html">errata</a> for this document as they are identified.
+</p>
+</Section>
+<Section name="Conventions">
+
+<Section name="Object Attributes/Primary Keys">
+<p>
+While XML attributes are primarily used in SIF to provide additional processing information regarding the associated element content,  attributes at the root level of an object have special significance.  These attributes serve as the primary key or identifier for the object; in all cases this is no more than a <code>RefId</code> GUID of <a href="CommonTypes.html#RefIdType">
+	<code>RefIdType</code> </a>
+</p>
+</Section>
+
+<Section name="Object References">
+<p>
+As stated elsewhere, SIF primarily uses GUIDs as object identifiers, primary keys, or <code>RefId</code>s.  References to primary keys (foreign key references)
+follow certain conventions in SIF in most objects:
+</p>
+<ul>
+<li>
+	An element or attribute of type <a href="CommonTypes.html#IdRefType">
+		<code>IdRefType</code>
+	</a> can be defined that consists of the referenced object name
+	concatenated with <code>RefId</code>, e.g., <code>DataPersonalRefId</code> (a reference to the object identifier/primary key/<code>RefId</code>
+	of a <code>DataPersonal</code> object);
+</li>
+<li>
+	An element requiring a more descriptive name for the reference or one that refers to more than one object type is defined as <a href="CommonTypes.html#IdRefType">
+		<code>IdRefType</code>
+	</a>, has an element name of a group's choosing (or generically <code>SIF_RefId</code>) and enumerates all possible object types that can be referenced
+	in the <code>SIF_RefObject</code> attribute; or
+</li>
+<li>
+	A pair of attributes can be defined, one of type <a href="CommonTypes.html#IdRefType">
+		<code>IdRefType</code>
+	</a> containing the referenced object's <code>RefId</code>, the other enumerating
+	all possible object types that can be referenced; generically these are named <code>SIF_RefId</code> and <code>SIF_RefObject</code>, respectively;
+	naming conventions that programmatically allow identification of the pair beyond the generic names will be documented when the need arises.
+</li>
+</ul>
+</Section>
+
+<Section name="Lists/Repeatable Elements">
+<p>
+To those accustomed with normalized relational databases, the SIF Data Model will appear to not be especially normalized, especially with regard to
+repeating groups of data not being separated into their own "tables," or in SIF's case, "objects" with primary/foreign keys to maintain the
+relationship.  Bear in mind that SIF is not a format for storing
+data; it is a format for transmitting data <em>asynchronously</em> between <em>disparate</em> and <em>distributed</em> systems needing to share data for
+interoperability; the format this data takes in different systems can vary greatly, and the data related to any given "entity" may
+come from a variety of sources and systems.
+The goals of normalization&#x2014;eliminating redundancy, organizing data efficiently, reducing inconsistencies, etc.&#x2014;take on a different meaning in
+a message queuing system.  Of primary importance is transmitting the data needed for interoperability in a minimum number of messages.  The need to "join" together
+a great number of separate objects is kept to a minimum in SIF, as individual systems do not have access to all the data required and due to the asynchronous
+nature of SIF, any one of these systems may take a fair amount of time before returning data necessary for joins (<code>SIF_ExtendedQuery</code> has been
+developed to communicate a join to a single system that may have direct access to the all the data necessary to efficiently accomplish this task).  It's one
+thing to make a separate request for a student's picture or enrollment information, another entirely to request every available phone number, address and e-mail
+address separately from the SIF Environment.  As such, it is often the case in SIF that repeating data is stored directly in an object, rather than being separated
+out into a separate object.
+</p>
+<p>
+Repeating data is very analogous to objects, though, within any given object.  In SIF's Publish/Subscribe model, repeating elements in objects
+can be added to, changed in or deleted from an object, much like objects can be added to, changed in or deleted from a SIF Environment.  Within an existing object, all of these
+actions take place within a <code>Change</code> event, and repeating elements&#x2014;if any exist initially&#x2014;are first made available within an object in an <code>Add</code>
+event or can be obtained directly via requests.  Repeatable elements are contained within a parent <em>List</em> element in most SIF objects
+whether or not they support events, e.g.:
+</p>
+<xhtml:Example intl="" xmlns="" name="EmailList" skipValidate="true">
+<EmailList>
+	<Email Type="Primary">contact@sifinfo.org</Email>
+	<Email Type="Alternate1">info@sifinfo.org</Email>
+</EmailList>
+</xhtml:Example>
+<xhtml:Example intl="au" xmlns="" name="EmailList" skipValidate="true">
+<EmailList>
+	<Email Type="01">contact@sifinfo.org</Email>
+	<Email Type="02">info@sifinfo.org</Email>
+</EmailList>
+</xhtml:Example>
+
+<Section name="List">
+<p>
+	While a unique, primary key may still be identifiable in its child elements, a <em>List</em> is used primarily when:
+</p>
+<ul>
+	<li>the list is a cohesive whole conceptually, where supporting or referring to a subset of the list is of little value;</li>
+	<li>when the list consists only of keys, and no associated data;</li>
+	<li>the list is informational/temporary state information and not typically persisted; or</li>
+	<li>when no key exists to uniquely identify items in the list.</li>
+</ul>
+<p>
+	<em>List</em>s are always transmitted as a cohesive unit consisting of the parent list container element and all child elements.  If no child
+	elements exist in the list, the list consists of the container element alone.  Omission of an optional <em>List</em> in an <code>Add</code> event
+	also implies no list items.  In a <code>Change</code> event, omission of the <em>List</em> indicates no changes have been made; otherwise the
+	parent container element and all child elements, if any, are included.  Systems storing
+	<em>List</em> data should replace all corresponding data in their systems when persisting the list; likewise when a change is made to one or more
+	list items or when all items in the list are deleted, systems should send the whole list in a <code>Change</code> event.
+</p>
+<xhtml:Example xmlns="" name="Indicating an updated list of country citizenships" intl="" skipValidate="true">
+	<CountriesOfCitizenship>
+		<CountryOfCitizenship>US</CountryOfCitizenship>
+		<CountryOfCitizenship>DE</CountryOfCitizenship>
+	</CountriesOfCitizenship>
+</xhtml:Example>
+<xhtml:Example xmlns="" name="Indicating an updated list of country citizenships" intl="au" skipValidate="true">
+	<CountriesOfCitizenship>
+		<CountryOfCitizenship>1101</CountryOfCitizenship>
+		<CountryOfCitizenship>2304</CountryOfCitizenship>
+	</CountriesOfCitizenship>
+</xhtml:Example>
+
+<p>
+	A system that supports <code>CountriesOfCitizenship</code> updates its local data to reflect <if intl="au">Australia</if> and German citizenship.
+</p>
+</Section>
+</Section>
+<Section name="Supported Optional Elements Without Values">
+<p>
+Some agents follow the convention of supplying an optional element as empty (e.g. <code>&lt;BirthDate&gt;&lt;/BirthDate&gt;</code> or <code>&lt;BirthDate/&gt;</code> to indicate
+that the application supports the element, but that it currently has no value available within a given object.  To allow for this convention within SIF&#x2014;as in this example
+an empty string does not satisfy the <code>xs:date</code> type definition of <code>BirthDate</code>&#x2014;all optional elements in SIF
+are defined as <code>nillable</code>&#160;<a href="References.html#SCHEMA">[SCHEMA]</a>.  To satisfy type constraints on an element while still supplying an empty or "nil"
+value, agents <span class="rfc2119">MUST</span> tag the element with a <code>true</code> value for the <code>nil</code> attribute from namespace
+<code>http://www.w3.org/2001/XMLSchema-instance</code>&#160;<a href="References.html#SCHEMA">[SCHEMA]</a> (e.g. <code>&lt;BirthDate xsi:nil="true"/&gt;</code> where the prefix <code>xsi</code> has been mapped to
+the namespace <code>http://www.w3.org/2001/XMLSchema-instance</code>), unless an empty value is valid with regard to the element's type definition,
+in which case supplying the <code>nil</code> attribute value of <code>true</code> is optional.
+See <a href="NotesOnRelatedTechnologies.html#SIFAndXMLNamespaces">SIF and XML Namespaces</a> for more details on namespaces, and <a href="NotesOnRelatedTechnologies.html#SIFAndXMLSchema">SIF and XML Schema</a>
+for more details on SIF's use of XML Schema.
+</p>
+</Section>
+<Section name="Externally-Defined XML">
+<p>
+Note that XML not defined within SIF does not necessarily support ad hoc omission of XML elements at will to conform with the conventions of the SIF Publish/Subscribe Model
+(where unchanged elements are typically omitted in Change events, and where non-key elements are often omitted in Delete events) or of the SIF Request/Response Model
+(where a subset of elements can be retrieved from objects with requests).  If externally-defined XML occurs within a SIF data object, SIF conventions do not
+extend to that XML unless that XML is defined to accommodate SIF conventions; the XML, when transmitted, must only conform to any external definitions dictating
+its structure, if any.  Applications should be prepared for the possibility of receiving whole externally-defined XML structures in Change events (regardless of how little or much of the external
+XML has changed) and possibly also Delete events, likewise in responses even when a subset of the XML structure's child elements may have explicitly been requested.
+</p>
+</Section>
+</Section>
+</Section>

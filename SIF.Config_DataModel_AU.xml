@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sifSpecificationGeneratorConfig xmlns="http://www.sifassociation.org/sifSpecificationGenerator/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sifassociation.org/sifSpecificationGenerator/1.0  sifSpecificationGeneratorConfig.xsd">
+	
+	<globalSettings>
+		<inputDocument>SIF_DataModel.xml</inputDocument>
+		<sifNamespace>http://www.sifassociation.org/datamodel/au/3.4</sifNamespace>
+		<localizationCode>au</localizationCode>
+		<schemaVersion>3.4.2</schemaVersion>
+	</globalSettings>
+	
+	<htmlDocuments>
+	
+		<!-- document 1: many documents-->
+		<htmlDocument>
+			<singleDocument>false</singleDocument>
+			<rootDocumentFileName>index.html</rootDocumentFileName>
+			<rootTitle>SIF Implementation Specification (Australia) 3.4.2</rootTitle>
+			<documentType>DataModel</documentType>
+		</htmlDocument>
+		
+		<!-- document 2: Single document-->
+		<htmlDocument>
+			<singleDocument>true</singleDocument>
+			<rootDocumentFileName>ImplementationSpecification.html</rootDocumentFileName>
+			<rootTitle>SIF Implementation Specification (Australia) 3.4.2</rootTitle>
+			<documentType>DataModel</documentType>
+		</htmlDocument>
+		
+	</htmlDocuments>
+	
+  
+	<xsdDocuments>
+	
+		<xsdDocument>
+			<xsdTitle>SIF_MessageNoIncludes</xsdTitle>
+			<diagram>true</diagram>
+			<isDataModelXsd>false</isDataModelXsd>
+			<singleSchema>true</singleSchema>
+			<annotate>false</annotate>
+			<listWithKeyConstraints>false</listWithKeyConstraints>
+			<isSifMessage2Xsd>false</isSifMessage2Xsd>
+		</xsdDocument>
+		
+		<xsdDocument>
+			<xsdTitle>SIF_MessageNoIncludesAnnotated</xsdTitle>
+			<diagram>false</diagram>
+			<isDataModelXsd>false</isDataModelXsd>
+			<singleSchema>true</singleSchema>
+			<annotate>true</annotate>
+			<listWithKeyConstraints>false</listWithKeyConstraints>
+			<isSifMessage2Xsd>false</isSifMessage2Xsd>
+		</xsdDocument>
+		
+		<xsdDocument>
+			<xsdTitle>SIF_Message</xsdTitle>
+			<diagram>false</diagram>
+			<isDataModelXsd>false</isDataModelXsd>
+			<singleSchema>false</singleSchema>
+			<annotate>false</annotate>
+			<listWithKeyConstraints>false</listWithKeyConstraints>
+			<isSifMessage2Xsd>false</isSifMessage2Xsd>
+		</xsdDocument>
+		
+		<xsdDocument>
+			<xsdTitle>SIF_MessageAnnotated</xsdTitle>
+			<diagram>false</diagram>
+			<isDataModelXsd>false</isDataModelXsd>
+			<singleSchema>false</singleSchema>
+			<annotate>true</annotate>
+			<listWithKeyConstraints>false</listWithKeyConstraints>
+			<isSifMessage2Xsd>false</isSifMessage2Xsd>
+		</xsdDocument>
+		
+		<xsdDocument>
+			<xsdTitle>DataModelNoIncludes</xsdTitle>
+			<diagram>false</diagram>
+			<isDataModelXsd>true</isDataModelXsd>
+			<singleSchema>true</singleSchema>
+			<annotate>false</annotate>
+			<listWithKeyConstraints>false</listWithKeyConstraints>
+			<isSifMessage2Xsd>false</isSifMessage2Xsd>
+		</xsdDocument>
+		
+		<xsdDocument>
+			<xsdTitle>DataModelNoIncludesAnnotated</xsdTitle>
+			<diagram>false</diagram>
+			<isDataModelXsd>true</isDataModelXsd>
+			<singleSchema>true</singleSchema>
+			<annotate>true</annotate>
+			<listWithKeyConstraints>false</listWithKeyConstraints>
+			<isSifMessage2Xsd>false</isSifMessage2Xsd>
+		</xsdDocument>
+		
+		<xsdDocument>
+			<xsdTitle>DataModel</xsdTitle>
+			<diagram>false</diagram>
+			<isDataModelXsd>true</isDataModelXsd>
+			<singleSchema>false</singleSchema>
+			<annotate>false</annotate>
+			<listWithKeyConstraints>false</listWithKeyConstraints>
+			<isSifMessage2Xsd>false</isSifMessage2Xsd>
+		</xsdDocument>
+		
+		<xsdDocument>
+			<xsdTitle>DataModelAnnotated</xsdTitle>
+			<diagram>false</diagram>
+			<isDataModelXsd>true</isDataModelXsd>
+			<singleSchema>false</singleSchema>
+			<annotate>true</annotate>
+			<listWithKeyConstraints>false</listWithKeyConstraints>
+			<isSifMessage2Xsd>false</isSifMessage2Xsd>
+		</xsdDocument>
+		
+
+		
+	</xsdDocuments>
+</sifSpecificationGeneratorConfig>

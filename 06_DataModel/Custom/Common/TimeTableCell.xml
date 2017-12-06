@@ -1,0 +1,261 @@
+<DataObject name="TimeTableCell"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xmlns:xi="http://www.w3.org/2001/XInclude"
+			xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	
+            xmlns="http://sifassociation.org/SpecGen">
+  <Key>@RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>TimeTableCell</Element>
+    <Description>
+      <p>
+        The purpose of this object is to identify a specific cell within a particular TimeTable.  A time table is a structure that represents all the available days and times (periods) for which a particular teaching group, or subject can be scheduled.
+      </p>
+      <p>
+        A TimeTableCell is uniquely identified in the ZIF zone by its GUID.
+      </p>
+      <p>
+        And the following must be provided at object creation:
+        <ul>
+          <li>the timetable it belongs to,</li>
+          <li>the subject that is being scheduled,</li>
+          <li>the teaching group (representing the students, teachers and subject),</li>
+          <li>the room that is allocated,</li>
+          <li>the allocated  teacher.</li>
+        </ul>
+      </p>
+      <p>
+        All local ids in non-authoritative objects are optional. It is therefore up to the provider and the actual agent's design and choreography to determine whether or not to use or local ids from parent objects.
+        There are cases in some subscribing systems where it might not possible to add RefId columns and therefore the RefId of related objects cannot be stored.
+        For example a target system that listens to TimeTableSubject events and updates them may not be able to store the associated SchoolCourseInfoRefId with that object.
+        The only way it can link the TimeTableSubject object with the appropriate course might be through its local course id.
+        Having local ids that link the parent objects with the child object can simplify the agent design.
+        Generally it is suggested to use the appropriate RefIds whenever possible and only use local ids if there is no other way to use RefIds.
+      </p>
+    </Description>
+  </Item>
+  <Item>
+
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The GUID of the TimeTableCell</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+
+  <Item>
+    <Element>TimeTableRefId</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The GUID of the TimeTable to which this Cell belongs</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+
+  <Item>
+    <Element>TimeTableSubjectRefId</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The GUID of the Subject that this Cell is scheduling</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+
+  <Item>
+    <Element>TeachingGroupRefId</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The GUID of the TeachingGroup being scheduled</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+
+  <Item>
+    <Element>RoomInfoRefId</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The GUID of the Resource being Scheduled</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+
+  <Item>
+    <Element>StaffPersonalRefId</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The GUID of the Staff Member being Scheduled</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+
+  <Item>
+    <Element>TimeTableLocalId</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Time Table Local Identifier</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>
+
+  <Item>
+    <Element>SubjectLocalId</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Subject Local Id</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>
+
+  <Item>
+    <Element>TeachingGroupLocalId</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Teaching Group </p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>
+
+  <Item>
+    <Element>RoomNumber</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Room number as presented to the user/application.</p>
+    </Description>
+    <Type ref="CommonTypes" name="HomeroomNumberType"></Type>
+  </Item>
+
+  <Item>
+    <Element>StaffLocalId</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Staff LocalId</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>
+
+  <Item>
+    <Element>DayId</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Day Id </p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>
+
+  <Item>
+    <Element>PeriodId</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Period Id within the Day Id</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>
+
+  <Item>
+    <Element>CellType</Element>
+
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Type of Lesson/Session  eg Teaching, Lunch etc</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  <Item>
+    <Element>SchoolInfoRefId</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Optional, the GUID of the SchoolInfo Object  if this object is known in the zone</p>
+    </Description>
+    <Type ref='CommonTypes' name='IdRefType'/>
+  </Item>
+  <Item>
+    <Element>SchoolLocalId</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Optional, Local School Id</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>
+  
+   <Item>
+    <Element>TeacherList</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A listing of the teachers assigned to the activity, and the type of supervision they are credited with. If no teachers are listed, the activity is assumed to be unsupervised.</p>
+    </Description>
+    <Type ref="CommonTypes" name="ScheduledTeacherListType"></Type>
+ </Item>
+
+ <Item>
+    <Element>RoomList</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>List of rooms in which the scheduled activity is held. Used for onsite venues which are represented in the source system as rooms. Can include large venues (ovals, library, etc), if they have been represented as rooms; source system practice varies.</p>
+    </Description>
+      <Type ref="CommonTypes" name="RoomListType"></Type>
+    
+ </Item>
+  
+ 
+
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+  <xhtml:Example xmlns="" name="TimeTableCell">
+    <TimeTableCell RefId = "64A309DA-063A-2E35-B359-D75101A8C3D1">
+   <TimeTableRefId>64A309DA-063A-2E35-B359-D75101A8C3D0</TimeTableRefId>
+      <TimeTableSubjectRefId>22860091-7192-45B4-AB0C-F5B9DC19DE5C</TimeTableSubjectRefId>
+      <TeachingGroupRefId>64A309DA-063A-2E35-B359-D75101A8C3D1</TeachingGroupRefId>
+      <RoomInfoRefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</RoomInfoRefId>
+      <StaffPersonalRefId>D3E34F41-9D75-101A-8C3D-00AA001A1652</StaffPersonalRefId>
+      <TimeTableLocalId>2008S1</TimeTableLocalId>
+      <SubjectLocalId>07AR</SubjectLocalId>
+        <TeachingGroupLocalId>20087ASPN 2008S1</TeachingGroupLocalId>
+        <RoomNumber>101</RoomNumber>
+        <StaffLocalId>946379881</StaffLocalId>
+        <DayId>1</DayId>
+        <PeriodId>1</PeriodId>
+        <CellType>T</CellType>
+        <SchoolInfoRefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</SchoolInfoRefId>
+        <SchoolLocalId>01011234</SchoolLocalId>
+            
+         <TeacherList>
+			 <TeacherCover>
+			   <StaffPersonalRefId>98157AA0-13BA-8C3D-00AA-012B359D7512</StaffPersonalRefId>
+			   <StaffLocalId>US8923</StaffLocalId>
+			   <StartTime>12:05:00</StartTime>
+			   <FinishTime>13:00:00</FinishTime>
+			   <Credit>In-Lieu</Credit>
+			   <Supervision>MinimalSupervision</Supervision>
+			   <Weighting>0.5</Weighting>
+			 </TeacherCover>
+			 <TeacherCover>
+			   <StaffPersonalRefId>A75A0010-1A8C-301D-02E3-A05B359D0A00</StaffPersonalRefId>
+			   <StaffLocalId>ZY3213</StaffLocalId>
+			   <StartTime>13:00:00</StartTime>
+			   <FinishTime>13:30:00</FinishTime>
+			   <Credit>Extra</Credit>
+			   <Supervision>MinimalSupervision</Supervision>
+			   <Weighting>0.5</Weighting>
+			 </TeacherCover>
+		</TeacherList>
+		<RoomList>
+			 <RoomInfoRefId>11737EA4-301C-ADCA-75C8-7214A7C46BDB</RoomInfoRefId>
+		</RoomList>            
+    </TimeTableCell>
+
+  </xhtml:Example>
+</DataObject>

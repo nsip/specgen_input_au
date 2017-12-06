@@ -1,0 +1,184 @@
+# Created by Stuart McGrigor, New Zealand Ministry of Education, October 2017
+#
+#  compact Relax NG schema for SIF Specifications
+#  hand-crafted by Stuart to validate existing SIF Specification files
+#
+default namespace = "http://sifassociation.org/SpecGen"
+
+datatypes xs = "http://www.w3.org/2001/XMLSchema-datatypes"
+
+namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
+namespace rng = "http://relaxng.org/ns/structure/1.0"
+namespace xhtml = "http://www.w3.org/1999/xhtml"
+
+namespace xs = "http://www.w3.org/2001/XMLSchema"
+namespace xsi = "http://www.w3.org/2001/XMLSchema-instance"
+namespace xi = "http://www.w3.org/2001/XInclude"
+
+#
+##  xi:include elements
+#
+xi.include = element xi:include {
+   attribute parse { "text" | "xml" },
+   attribute href { text }
+}
+
+#
+## a subset of HTML is embedded in content (with xi:includes)
+#
+sif.narrative = mixed { (
+    text
+	| xi.include
+	| html.a
+	| html.br
+	| html.code
+	| html.dl
+	| html.em
+	| html.h1
+	| html.h2
+	| html.h3
+	| html.h4
+	| html.img
+	| html.p
+	| html.span
+	| html.ul	
+	| sif.Example
+)* }
+
+html.a = element a {
+   attribute href { text },
+   sif.narrative
+}
+html.br = element br { empty }
+html.code = element code { text }
+
+html.dl = element dl { (
+  element dt { sif.narrative }?,
+  element dd { (attribute style { text })?, sif.narrative}
+)* }
+html.em = element em { sif.narrative }
+html.h1 = element h1 { sif.narrative }
+html.h2 = element h2 { sif.narrative }
+html.h3 = element h3 { sif.narrative }
+html.h4 = element h4 { sif.narrative }
+html.img = element img {
+   attribute src { text },
+   attribute alt { text }?,
+   attribute title { text }?
+}
+html.p = element p  { sif.narrative}
+html.span = element span {
+   attribute class { text },
+   text
+}
+
+html.ul = element ul { element li { sif.narrative }* }
+
+sif.section = (attribute name { text })?, (mixed {
+   sif.narrative
+   | sif.If
+   | element CodeSets {sif.narrative}
+   | element Intro { sif.narrative }
+   | element Section { sif.section }
+} )*
+
+  #
+  ##  Root Elements (Russian Doll model)
+  # 
+start |= sif.SIFSpecification
+      | sif.Section 
+      | sif.CommonElements 
+      | sif.DataObject 
+      | sif.DataObjects 
+      | sif.IncludeGroup
+
+
+
+#
+## Main root element
+#
+sif.SIFSpecification =
+  element SIFSpecification {
+    attribute xsi:* { text } *,
+	
+    element BuildComment { sif.narrative },
+    element TitlePage { sif.narrative },
+	
+	(mixed {
+	   sif.narrative
+	   | element Section { sif.section }
+	   | element Appendix { sif.section} } )*
+ }
+
+sif.CommonElements = element CommonElements { sif.section }
+
+sif.DataObject = element DataObject {
+   attribute name { text },
+   (element Key { text } | element EventsReported { "true" | "false" })+,
+   element Intro { sif.narrative }?,
+   element Item {
+      (element Attribute { text } | element Element { text }),
+	  
+	  element Characteristics { "M" | "O" | "C" | "MR" | "OR"}?,
+	  element privacyRating { "M" | "L" }?,
+	  element Description { sif.narrative }?,
+	  
+	  mixed { (  sif.Type | element Union { sif.Type+ } | (element ItemExample { text })+
+		  | element List { attribute mode { "List" } }
+                  | element Values { element Value { element Code { text } }+ }
+		  | element Facets { mixed { xs.Facets }+ } 
+      ) }*
+   }*,
+   element xhtml:Example {
+      attribute name { text },
+	  element * { anything }
+   }*
+}
+
+anything = ( element * { anything } | attribute * { text } | text )*
+
+sif.DataObjects = element DataObjects { sif.section }
+
+sif.If = element if { attribute intl { "us" | "uk" | "au" | "nz" }, sif.narrative }
+
+sif.IncludeGroup = element IncludeGroup {
+   element Group {
+      attribute name { text },
+
+      (mixed {
+         sif.narrative
+		 | sif.If
+         | element Intro { sif.narrative} } )*
+   }
+}
+
+sif.Section = element Section { attribute xsi:* { text } *, sif.section }
+
+sif.Example = element Example {
+   attribute name { text },
+   text }
+
+sif.Type = element Type {
+   attribute ref { text }?,
+   attribute name { text }?,
+   attribute complex { "extension" }?,
+   (attribute relationship { text }, attribute count { "1:1" | "*:1" | "1:*" | "1:?" } )? }
+
+
+xs.Facets = element xs:pattern { text }
+	  | element xs:enumeration { xs.valueString, element annotation { element documentation { anything } }? }
+	  | element xs:whiteSpace { attribute value { "collapse" }? }
+		  	  
+          | element xs:length { xs.valueInteger }
+          | element xs:minLength { xs.valueInteger }
+	  | element xs:maxLength { xs.valueInteger }
+		  
+	  | element xs:totalDigits { xs.valueInteger }
+	  | element xs:fractionDigits { xs.valueInteger }
+          | element xs:minInclusive {xs.valueInteger }
+          | element xs:maxInclusive { xs.valueInteger }
+          | element xs:minExclusive {xs.valueInteger }
+          | element xs:maxExclusive { xs.valueInteger }
+
+xs.valueInteger = attribute value { xs:integer }
+xs.valueString = attribute value { xs:string }

@@ -1,0 +1,127 @@
+<DataObject name="NAPTestScoreSummary"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xmlns:xi="http://www.w3.org/2001/XInclude"
+			xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	
+            xmlns="http://sifassociation.org/SpecGen">
+  <Key>@RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>NAPTestScoreSummary</Element>
+    <Description>
+      <p>This object represents a the summary of aggregate scores in a NAP test for a school.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Description>
+      <p>The GUID that uniquely identifies an instance of the object.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>SchoolInfoRefId</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+	<Description>
+      <p>Optional reference to a school associated with the administration of the NAP Test.</p>
+    </Description>
+  </Item>  
+  <Item>
+		<Element>SchoolACARAId</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The ACARA School Id as assigned in the Australian School List.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"/>
+  </Item>
+    
+  <Item>
+    <Element>NAPTestRefId</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Description>
+      <p>The GUID for the NAP Test. May be linking to prior codeframe download.</p>
+    </Description>
+  </Item>
+  <Item>
+		<Element>NAPTestLocalId</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Local identifier of NAP test.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalId"/> 
+  </Item>
+  
+  <Item>
+    <Element>DomainNationalAverage</Element>
+    <Characteristics>O</Characteristics>
+    <Type name="xs:decimal"></Type>
+    <Description>
+      <p>The numeric value of the national student scaled score average for the NAP domain and test level.</p>
+    </Description>
+  </Item>  
+
+  <Item>
+    <Element>DomainSchoolAverage</Element>
+    <Characteristics>O</Characteristics>
+    <Type name="xs:decimal"></Type>
+    <Description>
+      <p>The numeric value of the school student scaled score average for the NAP domain and test level.</p>
+    </Description>
+  </Item>  
+  
+  <Item>
+    <Element>DomainJurisdictionAverage</Element>
+    <Characteristics>O</Characteristics>
+    <Type name="xs:decimal"></Type>
+    <Description>
+      <p>The numeric value of the jurisdiction  student scaled score average for the NAP domain and test level.</p>
+    </Description>
+  </Item>    
+  
+  <Item>
+    <Element>DomainTopNational60Percent</Element>
+    <Characteristics>O</Characteristics>
+    <Type name="xs:decimal"></Type>
+    <Description>
+      <p>The numeric value representing the top scaled score of the National 60% band graphic for this NAP domain and test level.</p>
+    </Description>
+  </Item>    
+  
+  <Item>
+    <Element>DomainBottomNational60Percent</Element>
+    <Characteristics>O</Characteristics>
+    <Type name="xs:decimal"></Type>
+    <Description>
+      <p>The numeric value representing the bottom scaled score of the National 60% band graphic for this NAP domain and test level.</p>
+    </Description>
+  </Item>    
+  
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_Metadata"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElements"></Type>
+  </Item>
+
+  <xhtml:Example name="NAPTestScoreSummary"  xmlns="">
+<NAPTestScoreSummary RefId="E2721E52-7661-4A51-BF16-B4CAF12DC2F8">
+  <SchoolInfoRefId>A35CE161-BFDB-4460-952B-7F87789A739C</SchoolInfoRefId>
+  <SchoolACARAId>21212</SchoolACARAId>
+  <NAPTestRefId>FBB8A444-1891-4701-B306-F3CED219369C</NAPTestRefId>
+  <NAPTestLocalId>NAPLAN-2017-0004-Language Conventions: Grammar and Punctuation</NAPTestLocalId>
+  <DomainNationalAverage>399</DomainNationalAverage>
+  <DomainSchoolAverage>404</DomainSchoolAverage>
+  <DomainJurisdictionAverage>402</DomainJurisdictionAverage>
+  <DomainTopNational60Percent>416</DomainTopNational60Percent>
+  <DomainBottomNational60Percent>376</DomainBottomNational60Percent>
+</NAPTestScoreSummary>
+  </xhtml:Example>
+</DataObject>

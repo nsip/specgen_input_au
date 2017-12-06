@@ -1,0 +1,310 @@
+<DataObject name="Activity"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	
+    xmlns="http://sifassociation.org/SpecGen">
+		<!-- Include data model here -->		
+			
+	<Key>@RefId</Key>
+	<EventsReported>true</EventsReported>
+	<Item>
+		<Element>Activity</Element>
+		<Description>
+			<p>
+        The work assigned to students, an educational event planned by a teacher to deliver a particular educational concept
+        or skill.
+      </p>
+		</Description>
+	</Item>
+	<Item>
+		<Attribute>RefId</Attribute>
+		<Characteristics>M</Characteristics>
+	    <privacyRating>L</privacyRating>
+		<Description/>
+		<Type ref="CommonTypes" name="RefIdType"/>
+	</Item>
+	<Item>
+		<Element>Title</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>L</privacyRating>
+		<Description>
+			<p>Descriptive name of the activity.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>Preamble</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>L</privacyRating>
+		<Description>
+			<p>Description and context for the activity.</p>
+		</Description>
+		<Type name="xs:string"/>
+	</Item>
+	
+	<Item>
+		<Element>TechnicalRequirements</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>L</privacyRating>
+		<Description>
+			<p>List of Operating system, network, and other technical requirements for the activity, if applicable.</p>
+		</Description>
+		<Type ref="CommonTypes" name="TechnicalRequirementsType"/>
+	</Item>
+
+	
+	<Item>
+		<Element>SoftwareRequirementList</Element>
+		<Characteristics>O</Characteristics>
+        <privacyRating>L</privacyRating>
+		<Description>
+			<p>Contains information about required software.</p>
+		</Description>
+		<Type ref="CommonTypes" name="SoftwareRequirementListType"/> 
+	</Item>
+		
+	<Item>
+		<Element>EssentialMaterials</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>L</privacyRating>
+		<Description>
+			<p>Essential materials required to engage in this activity.</p>
+		</Description>
+		<Type ref="CommonTypes" name="EssentialMaterialsType"/> 
+	</Item>
+	
+	
+	<Item>
+		<Element>LearningObjectives</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>L</privacyRating>
+		<Description>
+			<p>Educational objectives of the activity.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LearningObjectivesType"/> 
+	</Item>
+	
+	<Item>
+		<Element>LearningStandards</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>L</privacyRating>
+		<Description>
+			<p>Associated <code>LearningStandardItem</code>objects.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LearningStandardsType"/> 
+	</Item>
+	
+	<Item>
+		<Element>SubjectArea</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>L</privacyRating>
+		<Type ref="CommonTypes" name="SubjectAreaType"/>
+	</Item>
+	
+	<Item>
+		<Element>Prerequisites</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>L</privacyRating>
+		<Description>
+			<p>Skills or competencies the student must have to engage in activity.</p>
+		</Description>
+		<Type ref="CommonTypes" name="PrerequisitesType"/>
+	</Item>
+		
+	<Item>
+		<Element>Students</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>L</privacyRating>
+		<Description>
+			<p>Links to any students or group or category of students that this activity is for.</p>
+		</Description>
+		<Type ref="CommonTypes" name="StudentsType"/>
+	</Item>
+	
+	<Item>
+		<Element>SourceObjects</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>L</privacyRating>
+		<Description>
+			<p>Source objects assigned to students.</p>
+		</Description>
+		<Type ref="CommonTypes" name="SourceObjectsType"/>
+	</Item>
+	
+
+	<Item>
+		<Element>Points</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>L</privacyRating>
+		<Description>
+			<p>Number of possible points for an activity.</p>
+		</Description>
+		<Type name="xs:unsignedInt"/>
+	</Item>
+	
+	<Item>
+		<Element>ActivityTime</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Time structures for the activity.</p>
+		</Description>
+		<Type ref="CommonTypes" name="ActivityTimeType"/>
+	</Item>
+		
+	<Item>
+		<Element>AssessmentRefId</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>L</privacyRating>
+		<Description>
+			<p>Link to the SIF Assessment object containing the evaluation information for this activity.</p>
+		</Description>
+		<Type ref="CommonTypes" name="IdRefType"/>
+	</Item>
+	
+	<Item>
+		<Element>MaxAttemptsAllowed</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>How many tries allowed.</p>
+		</Description>
+		<Type name="xs:unsignedInt"/>
+	</Item>
+	
+	<Item>
+		<Element>ActivityWeight</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>L</privacyRating>
+		<Description>
+			<p>The percentage weight of the activity during the particular course or term.</p>
+		</Description>
+		<Type name="xs:decimal"/>
+	</Item>
+	
+	<Item>
+		<Element>Evaluation</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Field for non-numeric types of grading and evaluation such as "narrative."</p>
+		</Description>
+	</Item>
+	
+	<Item>
+		<Attribute>EvaluationType</Attribute>
+		<Characteristics>M</Characteristics>
+		<privacyRating>L</privacyRating>
+		<Description>
+			<p>A qualifer for what type of evaluation this is. Valid values are "Inline" and "RefId". Inline values are contained in the optional Description element, RefIds are contained in the AssessmentRefId element.</p>
+		</Description>
+		<Values>
+			<Value>
+				<Code>Inline</Code>
+			</Value>
+			<Value>
+				<Code>RefId</Code>
+			</Value>
+		</Values>
+	</Item>
+	
+	<Item>
+		<Element>/Description</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>A free text description of the evaluation to be used for this activity</p>
+		</Description>
+		<Type name="xs:string"/>
+	</Item>
+	
+	<Item>
+		<Element>LearningResources</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>L</privacyRating>
+		<Description>
+			<p>Learning resources that support this activity.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LearningResourcesType"/>
+	</Item>
+	
+	<Item>
+		<Element>SIF_Metadata</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>L</privacyRating>
+		<Type ref="CommonTypes" name="SIF_MetadataType"/>
+	</Item>
+	<Item>
+		<Element>SIF_ExtendedElements</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>L</privacyRating>
+		<Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
+	</Item>
+	<xhtml:Example name="Activity - Example 1" xmlns="">
+		<Activity RefId="C27E1FCF-C163-485F-BEF0-F36F18A0493A"  xml:lang="en">
+			<Title>Shakespeare Essay - Much Ado About Nothing</Title>
+			<Preamble>This is a very funny comedy - students should have passing familiarity with Shakespeare</Preamble>
+			<LearningStandards>
+				<LearningStandardItemRefId>9DB15CEA-B2C5-4F66-94C3-7D0A0CAEDDA4</LearningStandardItemRefId>
+			</LearningStandards>
+			<SourceObjects>
+				<SourceObject SIF_RefObject="Lesson">A71ADBD3-D93D-A64B-7166-E420D50EDABC</SourceObject>
+			</SourceObjects>
+			<Points>50</Points>
+			<ActivityTime>
+				<CreationDate>2002-06-15</CreationDate>
+				<Duration Units="minute">30</Duration>
+				<StartDate>2002-09-10</StartDate>
+				<FinishDate>2002-09-12</FinishDate>
+				<DueDate>2002-09-12</DueDate>
+			</ActivityTime>
+			<AssessmentRefId>03EDB29E-8116-B450-0435-FA87E42A0AD2</AssessmentRefId>
+			<MaxAttemptsAllowed>3</MaxAttemptsAllowed>
+			<ActivityWeight>5</ActivityWeight>
+			<Evaluation EvaluationType="Inline">
+				<Description>Students should be able to correctly identify all major characters.</Description>
+			</Evaluation>
+			<LearningResources>
+				<LearningResourceRefId>B7337698-BF6D-B193-7F79-A07B87211B93</LearningResourceRefId>
+			</LearningResources>
+		</Activity>
+	</xhtml:Example>
+	<xhtml:Example name="Activity - Example 2" xmlns="">
+		<Activity RefId="C27E1FCF-C163-485F-BEF0-F36F18A0493A" xml:lang="en">
+			<Title>Shakespeare Essay - Much Ado About Nothing</Title>
+			<Preamble>This is a very funny comedy - students should have passing familiarity with Shakespeare</Preamble>
+			<SoftwareRequirementList>
+				<SoftwareRequirement>
+					<SoftwareTitle>Flash Player</SoftwareTitle>
+					<Version>9.0</Version>
+					<Vendor>Adobe</Vendor>
+				</SoftwareRequirement>
+				<SoftwareRequirement>
+					<SoftwareTitle>Python</SoftwareTitle>
+					<Version>3.0</Version>
+					<OS>Linux</OS>
+				</SoftwareRequirement>
+			</SoftwareRequirementList>
+			<LearningStandards>
+				<LearningStandardItemRefId>9DB15CEA-B2C5-4F66-94C3-7D0A0CAEDDA4</LearningStandardItemRefId>
+			</LearningStandards>
+			<SourceObjects>
+				<SourceObject SIF_RefObject="Lesson">A71ADBD3-D93D-A64B-7166-E420D50EDABC</SourceObject>
+			</SourceObjects>
+			<Points>50</Points>
+			<ActivityTime>
+				<CreationDate>2002-06-15</CreationDate>
+				<Duration Units="minute">30</Duration>
+				<StartDate>2002-09-10</StartDate>
+				<FinishDate>2002-09-12</FinishDate>
+				<DueDate>2002-09-12</DueDate>
+			</ActivityTime>
+			<AssessmentRefId>03EDB29E-8116-B450-0435-FA87E42A0AD2</AssessmentRefId>
+			<MaxAttemptsAllowed>3</MaxAttemptsAllowed>
+			<ActivityWeight>5</ActivityWeight>
+			<Evaluation EvaluationType="Inline">
+				<Description>Students should be able to correctly identify all major characters.</Description>
+			</Evaluation>
+			<LearningResources>
+				<LearningResourceRefId>B7337698-BF6D-B193-7F79-A07B87211B93</LearningResourceRefId>
+			</LearningResources>
+		</Activity>
+	</xhtml:Example></DataObject>

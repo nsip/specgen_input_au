@@ -1,0 +1,208 @@
+<DataObject name="TimeTableSubject"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xmlns:xi="http://www.w3.org/2001/XInclude"
+			xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	
+            xmlns="http://sifassociation.org/SpecGen">
+  <Key>@RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>TimeTableSubject</Element>
+    <Description>
+      <p>
+        This purpose of this object is to define and communicate the subject or distinct piece of curriculum that needs to be scheduled by the time table generator.  This is a new object proposed to meet SIF-AU needs.  Reviews of the existing specifications identified two relevant objects - SchoolCourseInfo, defined in SIF US 2.2 specification and SchoolGroup, defined within the SIF UK 1.1 specification.  These objects appear to have some similar context but seem overly complex considering that Australian requirements, which are limited to the Student Administration System or Curriculum Delivery System providing base information to the Time Tabling application about what curriculum offerings are being proposed.
+
+        When this data is sent in a Request/Response only those subjects that are relevant to be scheduled (or active), should be sent to the TimeTabling application.
+      </p>
+      <p>
+        All local ids in non-authoritative objects are optional. It is therefore up to the provider and the actual agent's design and choreography to determine whether or not to use or local ids from parent objects.
+        There are cases in some subscribing systems where it might not possible to add RefId columns and therefore the RefId of related objects cannot be stored.
+        For example a target system that listens to TimeTableSubject events and updates them may not be able to store the associated SchoolCourseInfoRefId with that object.
+        The only way it can link the TimeTableSubject object with the appropriate course might be through its local course id.
+        Having local ids that link the parent objects with the child object can simplify the agent design.
+        Generally it is suggested to use the appropriate RefIds whenever possible and only use local ids if there is no other way to use RefIds.
+      </p>
+    </Description>
+  </Item>
+  <Item>
+
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>GUID that identifies this TimeTableSubject.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+
+  <Item>
+    <Element>SubjectLocalId</Element>
+
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>SubjectLocalID - Distinct piece of curriculum that is to be scheduled.</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>
+
+  <Item>
+    <Element>AcademicYear</Element>
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>Subject Year Level.  Either AcademicYear or AcademicYearRange must be provided.</p>
+    </Description>
+    <Type ref="CommonTypes" name="YearLevelType"></Type>
+  </Item>
+
+  <Item>
+    <Element>AcademicYearRange</Element>
+
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>Range of Academic Years subject spans.  Either AcademicYear or AcademicYearRange must be provided.</p>
+    </Description>
+    <Type ref="CommonTypes" name="YearRangeType"></Type>
+  </Item>
+
+  <Item>
+    <Element>CourseLocalId</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Local Course Id, if associated with a Course.</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>
+  <Item>
+
+    <Element>SchoolCourseInfoRefId</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The GUID of the SchoolCourseInfo object.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+  <Item>
+    <Element>Faculty</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Faculty</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+
+  <Item>
+    <Element>SubjectShortName</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>SubjectShortName</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+
+  <Item>
+    <Element>SubjectLongName</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>SubjectLongName</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+
+  <Item>
+    <Element>SubjectType</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Core or Elective or ?</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  <Item>
+    <Element>ProposedMaxClassSize</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Suggested maximum class size for this subject.</p>
+    </Description>
+    <Type name="xs:decimal"></Type>
+  </Item>
+  <Item>
+    <Element>ProposedMinClassSize</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Suggested minimum class size for this subject.</p>
+    </Description>
+    <Type name="xs:decimal"></Type>
+  </Item>
+  <Item>
+    <Element>SchoolInfoRefId</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Optional the GUID of the SchoolInfo Object  if this object is known in the zone.</p>
+    </Description>
+    <Type ref="CommonTypes" relationship="records enrollment of student in" count="1:1" name="IdRefType"></Type>
+  </Item>
+
+  <Item>
+    <Element>SchoolLocalId</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Optional Local School Id</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>
+
+  <Item>
+    <Element>Semester</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Semester, Term, or Quarter subject offered.</p>
+    </Description>
+    <Type name="xs:unsignedInt"></Type>
+  </Item>
+
+  <Item>
+    <Element>SchoolYear</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>
+        School year for which the information is applicable, expressed as the four-digit year in which the school year ends (e.g., "2007").
+      </p>
+    </Description>
+     <Type ref="CommonTypes" name="SchoolYearType"></Type>
+  </Item>
+
+  <Item>
+    <Element>OtherCodeList</Element>
+    <Characteristics>O</Characteristics>
+    <Description>Any other codes this subject is known by; eg VASS code for VCE in Vic.</Description>
+    <Type ref="CommonTypes" name="OtherCodeListType"></Type>
+  </Item>
+  
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+  <xhtml:Example xmlns="" name="TimeTableSubject">
+    <TimeTableSubject RefId="D3E34B35-9D75-101A-8C3D-00AA001A1652">
+      <SubjectLocalId>07AR</SubjectLocalId>
+      <AcademicYear>
+        <Code>7</Code>
+      </AcademicYear>
+      <SubjectShortName>7 ART</SubjectShortName>
+      <SubjectLongName>Year 7 Art</SubjectLongName>
+      <SubjectType>E</SubjectType>
+      <SchoolYear>2009</SchoolYear>
+    </TimeTableSubject>
+
+  </xhtml:Example>
+</DataObject>

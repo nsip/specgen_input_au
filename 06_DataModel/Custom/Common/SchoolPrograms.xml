@@ -1,0 +1,82 @@
+<DataObject name='SchoolPrograms'
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xmlns:xi="http://www.w3.org/2001/XInclude"
+			xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	
+            xmlns="http://sifassociation.org/SpecGen">
+  <EventsReported>true</EventsReported>
+  <Key>@RefId</Key>
+  <Intro>
+    This object contains information about Programs offered by a school.
+  </Intro>
+  <Item>
+    <Element>SchoolPrograms</Element>
+    <Description>
+      This object contains information about Programs offered by a school.
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>GUID that uniquely identifies this instance of the object.</Description>
+    <Type ref='CommonTypes' name='RefIdType'/>
+  </Item>
+
+  <Item>
+    <Element>SchoolInfoRefId</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>GUID that identifies the school offering this program.</p>
+    </Description>
+    <Type ref='CommonTypes' name='IdRefType'/>
+  </Item>
+
+  <Item>
+    <Element>SchoolYear</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      School year for which the information is applicable, expressed as the four-digit year in which the school year ends (e.g., "2009").
+    </Description>
+     <Type ref="CommonTypes" name="SchoolYearType"></Type>
+  </Item>
+
+  <Item>
+    <Element>SchoolProgramList</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>List of School Programs</p>
+    </Description>
+    <Type ref="CommonTypes" name="SchoolProgramListType"></Type>
+  </Item>
+  
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+
+  <xhtml:Example xmlns="" name="SchoolPrograms">
+    <SchoolPrograms RefId="D3E34B35-9D75-101A-8C3D-00AA001A1652">
+      <SchoolInfoRefId>73648462-8886-24AA-5294-BC6380173276</SchoolInfoRefId>
+      <SchoolYear>2009</SchoolYear>
+      <SchoolProgramList>
+        <Program>
+          <Category>01</Category>
+          <Type>Steiner program</Type>
+        </Program>
+        <Program>
+          <Category>01</Category>
+          <Type>Tournament of minds</Type>
+        </Program>
+      </SchoolProgramList>
+    </SchoolPrograms>
+
+  </xhtml:Example>
+</DataObject>

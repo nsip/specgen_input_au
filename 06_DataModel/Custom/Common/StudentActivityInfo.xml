@@ -1,0 +1,128 @@
+<DataObject name='StudentActivityInfo'
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xmlns:xi="http://www.w3.org/2001/XInclude"
+			xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	
+            xmlns="http://sifassociation.org/SpecGen">
+  <EventsReported>true</EventsReported>
+  <Key>@RefId</Key>
+  <Item>
+    <Element>StudentActivityInfo</Element>
+    <Description>
+      <p>Co-curricular or extra-curricular activities (e.g., student organizations, inter-school sports, athletics, publications, band, orchestra, and service activities) in which students may participate.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>The ID (GUID) that uniquely identifies the instance of the object.</Description>
+    <Type ref='CommonTypes' name='RefIdType'/>
+  </Item>
+
+  <Item>
+    <Element>Title</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Name of the co-curricular or extra-curricular activity. </p>
+    </Description>
+    <Type name='xs:normalizedString'/>
+  </Item>
+
+  <Item>
+    <Element>Description</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The description of the co-curricular or extra-curricular activity. </p>
+    </Description>
+    <Type name='xs:normalizedString'/>
+  </Item>
+
+  <Item>
+    <Element>StudentActivityType</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Information regarding the co-curricular or extra-curricular activity. </p>
+    </Description>
+    <Type ref="CommonTypes" name="StudentActivityType"></Type>
+  </Item>
+
+ 
+
+  <Item>
+    <Element>StudentActivityLevel</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A description of the separation of level in the activity (e.g. House, Inter-school, Club, State, National).</p>
+    </Description>
+    <Type name='xs:normalizedString'/>
+  </Item>
+  <Item>
+    <Element>YearLevels</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Collection of year levels applicable to this co-curricular or extra-curricular activity. </p>
+    </Description>
+    <Type ref="CommonTypes" name="YearLevelsType"></Type>
+  </Item>
+  <Item>
+    <Element>CurricularStatus</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>An indication of the degree to which an activity is related to a student's curriculum. </p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsActivityTypeType"></Type>
+  </Item>
+  <Item>
+    <Element>Location</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Location where the activity takes place.</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocationType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+
+  <xhtml:Example xmlns='' name="StudentActivityInfo">
+    <StudentActivityInfo RefId="6472B261-0947-583A-463D-BB345291B001">
+      <Title>Book Club</Title>
+      <Description>Group of middle school students promoting reading</Description>
+      <StudentActivityType>
+        <Code>6011</Code>
+        <OtherCodeList>
+          <OtherCode Codeset="Local">MBook</OtherCode>
+        </OtherCodeList>
+      </StudentActivityType>
+      <StudentActivityLevel>Middle School</StudentActivityLevel>
+      <YearLevels>
+        <YearLevel>
+          <Code>5</Code>
+        </YearLevel>
+        <YearLevel>
+          <Code>6</Code>
+        </YearLevel>
+        <YearLevel>
+          <Code>7</Code>
+        </YearLevel>
+        <YearLevel>
+          <Code>8</Code>
+        </YearLevel>
+      </YearLevels>
+      <CurricularStatus>0750</CurricularStatus>
+      <Location Type="Classroom">
+        <LocationName>Beaconhills Middle School Library</LocationName>
+        <LocationRefId SIF_RefObject="RoomInfo">94758261-0947-583A-CEB2-BB345291BAAA</LocationRefId>
+      </Location>
+    </StudentActivityInfo>
+
+  </xhtml:Example>
+</DataObject>

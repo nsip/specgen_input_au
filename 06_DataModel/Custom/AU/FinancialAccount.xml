@@ -1,0 +1,151 @@
+<DataObject name="FinancialAccount"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xmlns:xi="http://www.w3.org/2001/XInclude"
+			xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	
+            xmlns="http://sifassociation.org/SpecGen">
+  <Key>@RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>FinancialAccount</Element>
+    <Description>
+      <p>
+        This object communicates information about a financial account.
+      </p>
+     </Description>
+  </Item>
+  <Item>
+
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <privacyRating>H</privacyRating>
+    <Description>
+      <p>GUID that identifies this financial account.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+
+  <Item>
+    <Element>ParentAccountRefId</Element>
+
+    <Characteristics>O</Characteristics>
+    <privacyRating>H</privacyRating>
+    <Description>
+      <p>Identifier of a parent account of the account. Can be used to construct a hierarchical tree of nesting accounts, e.g. "Revenue" -- "Revenue-Grant" -- "Revenue-Grant-Commonwealth".</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  
+  <Item>
+    <Element>ChargedLocationInfoRefId</Element>
+    
+    <Characteristics>O</Characteristics>
+    <privacyRating>H</privacyRating>
+    <Description>
+      <p>Location associated with the account".</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  
+  <Item>
+    <Element>AccountNumber</Element>
+    <Characteristics>M</Characteristics>
+    <privacyRating>H</privacyRating>
+    <Description>
+      <p>Account number used for ledger.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+
+  <Item>
+    <Element>Name</Element>
+
+    <Characteristics>M</Characteristics>
+    <privacyRating>H</privacyRating>
+    <Description>
+      <p>Name of the account.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+
+  <Item>
+    <Element>Description</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>H</privacyRating>
+    <Description>
+      <p>Description of the account.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+
+  <Item>
+    <Element>ClassType</Element>
+    <Characteristics>M</Characteristics>
+    <privacyRating>H</privacyRating>
+    <Description>
+      <p>The class of the account</p>
+    </Description>
+    <Values>
+      <Value>
+        <Code>Asset</Code>
+      </Value>
+      <Value>
+        <Code>Liability</Code>
+      </Value>
+      <Value>
+        <Code>Revenue</Code>
+      </Value>
+      <Value>
+        <Code>Expense</Code>
+      </Value>
+    </Values>
+  </Item>
+  
+  <Item>
+    <Element>CreationDate</Element>
+    <Characteristics>M</Characteristics>
+    <privacyRating>H</privacyRating>
+    <Description>
+      <p>Account creation date.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+  
+
+    <Item>
+      <Element>CreationTime</Element>
+      <Characteristics>M</Characteristics>
+      <privacyRating>H</privacyRating>
+      <Description>
+        <p>Account creation time.</p>
+      </Description>
+      <Type name="xs:time"></Type>
+    </Item>
+    
+
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>H</privacyRating>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>H</privacyRating>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+  <xhtml:Example xmlns="" name="FinancialAccount">
+    <FinancialAccount RefId="EEC8FC12-8D2C-4EE3-94A8-6C5395024EDE">
+      <AccountNumber>9990001</AccountNumber>
+      <Name>Purchased Foods</Name>
+      <Description>Purchased Foods</Description>
+      <ClassType>Asset</ClassType>
+      <CreationDate>2003-01-01</CreationDate>
+      <CreationTime>04:32:23-08:00</CreationTime> 
+    </FinancialAccount>
+    
+
+  </xhtml:Example>
+</DataObject>

@@ -1,0 +1,74 @@
+<DataObject name="NAPTestItem"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xmlns:xi="http://www.w3.org/2001/XInclude"
+			xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	
+            xmlns="http://sifassociation.org/SpecGen">
+  <Key>@RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>NAPTestItem</Element>
+    <Description>
+      <p>This object represents the description of a test item as context for response; may be exemplar item instead of the actual item.</p>
+    </Description>
+  </Item>
+  
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Description>
+      <p>The GUID that uniquely identifies an instance of the object.</p>
+    </Description>
+  </Item>
+ 
+   <Item>
+  <Element>TestItemContent</Element>
+    <Characteristics>M</Characteristics>
+    <Type ref="CommonTypes" name="NAPTestItemContentType"></Type>
+    <Description>
+      <p></p>
+    </Description>
+  </Item>
+
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_Metadata"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElements"></Type>
+  </Item>
+
+  <xhtml:Example name="NAPTestItem"  xmlns="">
+<NAPTestItem RefId="31CA1A02-4E53-4A29-AE1E-807489C30827">
+  <TestItemContent>
+    <NAPTestItemLocalId>NAPLAN-2017-0005-Language Conventions: Spelling-S2-01-01</NAPTestItemLocalId>
+    <ItemType>MC</ItemType>
+    <Subdomain>Spelling</Subdomain>
+    <ItemDescriptor>Descriptor #1</ItemDescriptor>
+    <ReleasedStatus>false</ReleasedStatus>
+    <MarkingType>AS</MarkingType>
+    <MultipleChoiceOptionCount>4</MultipleChoiceOptionCount>
+    <CorrectAnswer>7</CorrectAnswer>
+    <MaximumScore>1</MaximumScore>
+    <ItemDifficulty>3</ItemDifficulty>
+    <ItemDifficultyLogit5>.8</ItemDifficultyLogit5>
+    <ItemDifficultyLogit62>.9</ItemDifficultyLogit62>
+    <ItemDifficultyLogit5SE>.8</ItemDifficultyLogit5SE>
+    <ItemDifficultyLogit62SE>.9</ItemDifficultyLogit62SE>
+    <ItemProficiencyBand>3</ItemProficiencyBand>
+    <ItemProficiencyLevel>C</ItemProficiencyLevel>
+    <ExemplarURL>http://example.com/n3.xml</ExemplarURL>
+    <ContentDescriptionList>
+        <ContentDescription>MNA32</ContentDescription>
+        <ContentDescription>MNA37</ContentDescription>
+    </ContentDescriptionList>
+  </TestItemContent>
+</NAPTestItem>
+
+  </xhtml:Example>
+</DataObject>

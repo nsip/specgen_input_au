@@ -1,0 +1,92 @@
+<DataObject name="AggregateStatisticFact"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xmlns:xi="http://www.w3.org/2001/XInclude"
+			xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	
+            xmlns="http://sifassociation.org/SpecGen">
+			
+  <EventsReported>true</EventsReported>
+  <Key>@RefId</Key>
+  <Item>
+    <Element>AggregateStatisticFact</Element>
+    <Description>
+      <p>This object is the actual value of a statistical measurement. It is always associated with one statistic and one or more characteristics.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <privacyRating>L</privacyRating>
+    <Description></Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+  <Item>
+    <Element>AggregateStatisticInfoRefId</Element>
+    <Characteristics>M</Characteristics>
+    <privacyRating>L</privacyRating>
+    <Description>
+      Reference to statistic defined by <code>AggregateStatisticInfo</code>.
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Element>Characteristics</Element>
+    <Characteristics>M</Characteristics>
+    <privacyRating>L</privacyRating>
+    <Description>
+      <p>
+        Reference to one or more <code>AggregateCharacteristicInfo</code> objects.
+      </p>
+    </Description>
+    <Type ref="CommonTypes" name="CharacteristicsType"></Type>
+    
+  </Item>
+
+  <Item>
+    <Element>Excluded</Element>
+    <privacyRating>L</privacyRating>
+    <Characteristics>O</Characteristics>
+    <Description></Description>
+    <Values>
+      <Value>
+        <Code>Yes</Code>
+      </Value>
+      <Value>
+        <Code>No</Code>
+      </Value>
+    </Values>
+  </Item>
+  <Item>
+    <Element>Value</Element>
+    <Characteristics>M</Characteristics>
+    <privacyRating>L</privacyRating>
+    <Description>
+      <p>Value of the fact.</p>
+    </Description>
+    <Type name="xs:decimal"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>L</privacyRating>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>L</privacyRating>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+  
+  <xhtml:Example xmlns="" name="AggregateStatisticFact" >
+    <AggregateStatisticFact RefId="3A4E2822-C696-433B-812B-49DEAE557E41">
+      <AggregateStatisticInfoRefId>91A4209F-7F4F-4F4B-9DC8-D21CEFD1DC2F</AggregateStatisticInfoRefId>
+      <Characteristics>
+        <AggregateCharacteristicInfoRefId>0B972D86-44EE-4D79-94F5-FF1C3131772D</AggregateCharacteristicInfoRefId>
+      </Characteristics>
+      <Excluded>No</Excluded>
+      <Value>27</Value>
+    </AggregateStatisticFact>
+  </xhtml:Example>
+</DataObject>

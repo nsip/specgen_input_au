@@ -1,0 +1,29 @@
+<IncludeGroup
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	
+    xmlns="http://sifassociation.org/SpecGen">
+
+	<Group name="SIF AU">
+		<Intro>
+			<p>
+				The introduction for the NAPLAN only edition of the SIF AU data model.
+			</p>
+		</Intro>
+		<xi:include parse="text" href="AU/SchoolInfo.xml"/>
+	
+		<xi:include parse="text" href="AU/StudentPersonal.xml"/>
+		
+	
+		
+		<!-- NAPLAN Additions-->
+		<xi:include parse="text" href="AU/NAPEventStudentLink.xml"/>
+		<xi:include parse="text" href="AU/NAPTest.xml"/>
+		<xi:include parse="text" href="AU/NAPTestlet.xml"/>
+		<xi:include parse="text" href="AU/NAPTestScoreSummary.xml"/>
+		<xi:include parse="text" href="AU/NAPTestItem.xml"/>
+		<xi:include parse="text" href="AU/NAPStudentResponseSet.xml"/>
+		<xi:include parse="text" href="AU/NAPCodeFrame.xml"/>
+	</Group>
+</IncludeGroup>

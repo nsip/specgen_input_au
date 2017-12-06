@@ -1,0 +1,160 @@
+<DataObject name="WellbeingResponse">
+
+  <Key>@RefId</Key>
+  
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>WellbeingResponse</Element>
+    <Description>
+      <p>An outcome of a Student Wellbeing Event – or more often referred to in discussions as an ‘Incident’ usually will have a WellbeingResponse, action or an outcome.  Many events may have WellbeingResponses that need to be reported to other systems or agencies.  This may be a Suspension, an Expulsion/Exclusion, or an experience which requires reward or recognition. WA has specific language around categories of suspension—e.g. they are legally constrained not to refer to expulsion of students.</p>
+    </Description>
+  </Item>
+
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The ID (GUID) assigned to uniquely identify this WellbeingResponse.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+  <Item>
+    <Element>StudentPersonalRefId</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The ID (GUID) of the student to whom this WellbeingResponse belongs.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Element>SchoolInfoRefId</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The ID (GUID) of the school for which this WellbeingResponse is being reported.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  
+  <Item>
+    <Element>Date</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The calendar date on which this WellbeingResponse was published.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+  
+   <Item>
+    <Element>WellbeingResponseStartDate</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The date the WellbeingResponse period commenced.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+   <Item>
+    <Element>WellbeingResponseEndDate</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The date the WellbeingResponse is due to finish.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+  
+  <Item>
+    <Element>WellbeingResponseCategory</Element>
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>Category of WellbeingResponse.</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsWellbeingResponseCategoryType"></Type>
+  </Item>
+  
+  <Item>
+    <Element>WellbeingResponseNotes</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Text relating to the particular WellbeingResponse.</p>
+    </Description>
+    <Type name="xs:string"></Type>
+  </Item>
+  <Item>
+    <Element>PersonInvolvementList</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>>A person (additional to the student) involved in a  Wellbeing event/response where required to be known.</p>
+    </Description>
+     <Type ref="CommonTypes" name="PersonInvolvementListType"></Type>
+  </Item>   
+   <Item>
+    <Element>Suspension</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Container for details of a Suspension or Expulsion.</p>
+    </Description>
+     <Type ref="CommonTypes" name="SuspensionContainerType"></Type>
+  </Item>
+   <Item>
+    <Element>Detention</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Container for details of a Detention.</p>
+    </Description>
+     <Type ref="CommonTypes" name="DetentionContainerType"></Type>
+  </Item>
+   <Item>
+    <Element>PlanRequired</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Container for Information to define the need for an Plan.</p>
+    </Description>
+     <Type ref="CommonTypes" name="PlanRequiredContainerType"></Type>
+  </Item>
+   <Item>
+    <Element>Award</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Container for details of an Award.</p>
+    </Description>
+     <Type ref="CommonTypes" name="AwardContainerType"></Type>
+  </Item>
+   <Item>
+    <Element>OtherResponse</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Container for details of another type of Response.</p>
+    </Description>
+     <Type ref="CommonTypes" name="OtherWellbeingResponseContainerType"></Type>
+  </Item>
+   <Item>
+    <Element>DocumentList</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Describes the Location of any associated documents kept in relation to this Response.</p>
+    </Description>
+     <Type ref="CommonTypes" name="WellbeingDocumentListType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+  <xhtml:Example xmlns="" name="WellbeingResponse">
+    <WellbeingResponse RefId="2FFB63B4-CFEF-4820-8501-E7D1E54555CB">
+      <StudentPersonalRefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</StudentPersonalRefId>
+      <SchoolInfoRefId>CA285746-359D-7510-1A8C-36432A901A16</SchoolInfoRefId>
+      <Date>2017-11-01</Date>
+      <WellbeingResponseStartDate>2017-11-01</WellbeingResponseStartDate>
+      <WellbeingResponseEndDate>2017-11-10</WellbeingResponseEndDate>
+      <WellbeingResponseCategory>S</WellbeingResponseCategory>
+      <WellbeingResponseNotes>This Student is to be withdrawn.</WellbeingResponseNotes>
+    </WellbeingResponse>
+
+  </xhtml:Example>
+</DataObject>

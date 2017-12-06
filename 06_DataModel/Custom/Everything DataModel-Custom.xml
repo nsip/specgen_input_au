@@ -1,0 +1,99 @@
+<IncludeGroup>
+	<Group name="SIF AU" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.w3.org/1999/xhtml" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+		<Intro>
+			<p>
+      The introduction for the SIF AU data model.
+    </p>
+		</Intro>
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="AU/SchoolInfo.xml"/>
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="AU/SystemRole.xml"/>
+		
+		
+		<!-- Include data model here -->
+		
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="AU/AggregateStatisticInfo.xml"/>
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="AU/AggregateCharacteristicInfo.xml"/>
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="AU/AggregateStatisticFact.xml"/>
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="AU/ResourceUsage.xml"/> 
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="AU/RoomInfo.xml"/>
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="AU/StaffAssignment.xml"/>
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="AU/StaffPersonal.xml"/>
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="AU/StudentPersonal.xml"/>
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="AU/StudentSchoolEnrollment.xml"/>
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="AU/StudentContactPersonal.xml"/>
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="AU/StudentParticipation.xml"/>
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="AU/PersonPicture.xml"/>
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="AU/CalendarDate.xml"/>
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="AU/CalendarSummary.xml"/>
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="AU/StudentAttendanceSummary.xml"/>
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="AU/StudentDailyAttendance.xml"/>
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="AU/StudentPeriodAttendance.xml"/>
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="AU/SessionInfo.xml"/>
+		<!--xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="AU/StudentSnapshot.xml"/-->
+		
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="AU/LearningStandardDocument.xml"/>
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="AU/LearningStandardItem.xml"/>
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="AU/LearningResource.xml"/>
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="AU/LearningResourcePackage.xml"/>
+		
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="AU/TimeTableSubject.xml"/>
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="AU/TimeTable.xml"/>
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="AU/TeachingGroup.xml"/>	
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="AU/TimeTableCell.xml"/>
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="AU/SchoolCourseInfo.xml"/>
+		<!--xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="AU/SummaryEnrollmentInfo.xml"/-->
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="AU/LEAInfo.xml"/>
+		<!--xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="AU/StudentSDTN.xml"/-->
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="AU/TermInfo.xml"/>
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="AU/StudentContactRelationship.xml"/>
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="AU/StudentActivityInfo.xml"/>
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="AU/StudentActivityParticipation.xml"/>
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="AU/Identity.xml"/>
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="AU/SchoolPrograms.xml"/>
+		
+		<!-- Section Enrollment 1.3 -->
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="AU/SectionInfo.xml"/>
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="AU/StudentSectionEnrollment.xml"/> 
+		
+		
+		<!-- Activity/Achievement Object-->
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="AU/Activity.xml"/>		
+		
+		<!-- ScheduledActivity Object-->
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="AU/ScheduledActivity.xml"/>		
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="AU/ResourceBooking.xml"/>		
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="AU/EquipmentInfo.xml"/>	
+		
+		<!-- Finance additions-->		
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="AU/Invoice.xml"/>
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="AU/FinancialAccount.xml"/>
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="AU/ChargedLocationInfo.xml"/>
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="AU/PaymentReceipt.xml"/>
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="AU/PurchaseOrder.xml"/>
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="AU/VendorInfo.xml"/>
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="AU/Journal.xml"/>
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="AU/Debtor.xml"/>
+				
+		<!-- Added for granular Attendance Reporting-->
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="AU/StudentAttendanceTimeList.xml"/>	
+		
+		<!-- Classroom assessment -->	
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="AU/GradingAssignment.xml"/>
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="AU/GradingAssignmentScore.xml"/>
+		
+		<!-- NAPLAN Additions-->
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="AU/NAPEventStudentLink.xml"/>
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="AU/NAPTest.xml"/>
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="AU/NAPTestlet.xml"/>
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="AU/NAPTestScoreSummary.xml"/>
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="AU/NAPTestItem.xml"/>
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="AU/NAPStudentResponseSet.xml"/>
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="AU/NAPCodeFrame.xml"/>
+		
+		<!-- Wellbeing Additions-->
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="AU/WellbeingResponse.xml"/>
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="AU/WellbeingAlert.xml"/>
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="AU/WellbeingAppeal.xml"/>
+
+	</Group>
+</IncludeGroup>

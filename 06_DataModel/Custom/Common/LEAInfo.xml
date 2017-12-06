@@ -1,0 +1,183 @@
+<DataObject name="LEAInfo"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xmlns:xi="http://www.w3.org/2001/XInclude"
+			xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	
+            xmlns="http://sifassociation.org/SpecGen">
+  <Key>@RefId</Key>
+
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>LEAInfo</Element>
+    <Description>
+      <p>This object contains information about a school district, region, or other Local, State or Jurisdiction Educational Authority.</p>
+    </Description>
+  </Item>
+  <Item>
+
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The GUID of the LEA whose information this is.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+  <Item>
+    <Element>LocalId</Element>
+
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The locally-assigned identifier for this LEA.</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>
+  <Item>
+    <Element>StateProvinceId</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The state-assigned identifier for this LEA.</p>
+    </Description>
+    <Type ref="CommonTypes" name="StateProvinceIdType"></Type>
+  </Item>
+  <Item>
+    <Element>CommonwealthId</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Commonwealth Identifier for this Entity.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  <Item>
+    <Element>LEAName</Element>
+
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Name of LEA.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  <Item>
+    <Element>LEAURL</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>URL for the LEA.</p>
+    </Description>
+    <Type name="xs:anyURI"></Type>
+  </Item>
+  
+  <Item>
+    <Element>EducationAgencyType</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The classification of the education agency within the geographic boundaries of a state according to the level of administrative and operational control.</p>
+    </Description>
+    <Type ref="CommonTypes" name="AgencyType"></Type>
+  </Item>
+    
+  <Item>
+    <Element>LEAContactList</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="LEAContactListType"></Type>
+  </Item>
+   
+  <Item>
+    <Element>PhoneNumberList</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The LEA's phone number(s).</p>
+    </Description>
+    <Type ref="CommonTypes" name="PhoneNumberListType"></Type>
+  </Item>
+  <Item>
+    <Element>AddressList</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The LEA's address(es).</p>
+    </Description>
+    <Type ref="CommonTypes" name="AddressListType"></Type>
+  </Item>
+  <Item>
+    <Element>OperationalStatus</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Operational condition of a school.</p>
+    </Description>
+     <Type ref="CommonTypes" name="OperationalStatusType"></Type>
+  </Item>
+  <Item>
+    <Element>JurisdictionLowerHouse</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Lower House area  that the school/campus  belongs to.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  <Item>
+    <Element>SLA</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Statistical Local Area that the school/campus belongs to.</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsAustralianStandardGeographicalClassificationASGCType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+  <xhtml:Example xmlns="" name="LEAInfo">
+    <LEAInfo RefId="D3E34B35-9D75-101A-8C3D-00AA001A1652">
+      <LocalId>EMR</LocalId>
+      <StateProvinceId>EMR</StateProvinceId>
+      <CommonwealthId>4215750</CommonwealthId>
+      <LEAName>Eastern Metro School District</LEAName>
+      <LEAURL>http://www.EMR.vic.edu.au</LEAURL>
+      <EducationAgencyType>
+        <Code>01</Code>
+      </EducationAgencyType>
+      <LEAContactList>
+        <LEAContact>
+          <PublishInDirectory>Y</PublishInDirectory>
+          <ContactInfo>
+            <Name Type="LGL">
+              <FamilyName>Smith</FamilyName>
+              <GivenName>Theo</GivenName>
+              <FullName>Theo Smith</FullName>
+            </Name>
+            <PositionTitle>Superintendent</PositionTitle>
+            <EmailList>
+              <Email Type="01">drseuss@edumail.vic.edu.au</Email>
+            </EmailList>
+            <PhoneNumberList>
+              <PhoneNumber Type="0096">
+                <Number>(03) 9745 7455</Number>
+              </PhoneNumber>
+            </PhoneNumberList>
+          </ContactInfo>
+        </LEAContact>
+      </LEAContactList>
+      <PhoneNumberList>
+        <PhoneNumber Type="0096">
+          <Number>(03) 9745 7455</Number>
+        </PhoneNumber>
+      </PhoneNumberList>
+      <OperationalStatus>O</OperationalStatus>
+      <JurisdictionLowerHouse>Unknown</JurisdictionLowerHouse>
+      <SLA>205801452</SLA>
+    </LEAInfo>
+
+  </xhtml:Example>
+</DataObject>

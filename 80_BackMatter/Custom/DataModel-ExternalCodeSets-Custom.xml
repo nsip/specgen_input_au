@@ -1,0 +1,725 @@
+
+<Grouping code="ISO" name="International Standards Organization (ISO)">
+
+
+  <CodeSet>
+    <ID>4217 Currency names and code elements</ID>
+    <Values>
+      <Value>
+        <Code>AED</Code>
+        <Text>UAE Dirham</Text>
+      </Value>
+      <Value>
+        <Code>AFN</Code>
+        <Text>Afghani</Text>
+      </Value>
+      <Value>
+        <Code>ALL</Code>
+        <Text>Lek</Text>
+      </Value>
+      <Value>
+        <Code>AMD</Code>
+        <Text>Armenian Dram</Text>
+      </Value>
+      <Value>
+        <Code>ANG</Code>
+        <Text>Netherlands Antillian Guikder</Text>
+      </Value>
+      <Value>
+        <Code>AOA</Code>
+        <Text>Kwanza</Text>
+      </Value>
+      <Value>
+        <Code>ARS</Code>
+        <Text>Argentine Peso</Text>
+      </Value>
+      <Value>
+        <Code>AUD</Code>
+        <Text>Australian Dollar</Text>
+      </Value>
+      <Value>
+        <Code>AWG</Code>
+        <Text>Aruban Guilder</Text>
+      </Value>
+      <Value>
+        <Code>AZN</Code>
+        <Text>Azerbaijanian Manat</Text>
+      </Value>
+      <Value>
+        <Code>BAM</Code>
+        <Text>Convertible Marks</Text>
+      </Value>
+      <Value>
+        <Code>BBD</Code>
+        <Text>Barbados Dollar</Text>
+      </Value>
+      <Value>
+        <Code>BDT</Code>
+        <Text>Taka</Text>
+      </Value>
+      <Value>
+        <Code>BGN</Code>
+        <Text>Bulgarian Lev</Text>
+      </Value>
+      <Value>
+        <Code>BHD</Code>
+        <Text>Bahraini Dinar</Text>
+      </Value>
+      <Value>
+        <Code>BIF</Code>
+        <Text>Burundi Franc</Text>
+      </Value>
+      <Value>
+        <Code>BMD</Code>
+        <Text>Bermudian Dollar (customarily known as Bermuda Dollar) </Text>
+      </Value>
+      <Value>
+        <Code>BND</Code>
+        <Text>Brunei Dollar</Text>
+      </Value>
+      <Value>
+        <Code>BOB</Code>
+        <Text>Boliviano</Text>
+      </Value>
+      <Value>
+        <Code>BOV</Code>
+        <Text>Mvdol</Text>
+      </Value>
+      <Value>
+        <Code>BRL</Code>
+        <Text>Brazilian Real</Text>
+      </Value>
+      <Value>
+        <Code>BSD</Code>
+        <Text>Bahamian Dollar</Text>
+      </Value>
+      <Value>
+        <Code>BTN</Code>
+        <Text>Ngultrum</Text>
+      </Value>
+      <Value>
+        <Code>BWP</Code>
+        <Text>Pula</Text>
+      </Value>
+      <Value>
+        <Code>BYN</Code>
+        <Text>Belarusian Ruble</Text>
+      </Value>
+      <Value>
+        <Code>BZD</Code>
+        <Text>Belize Dollar</Text>
+      </Value>
+      <Value>
+        <Code>CAD</Code>
+        <Text>Canadian Dollar</Text>
+      </Value>
+      <Value>
+        <Code>CDF</Code>
+        <Text>Franc Congolais</Text>
+      </Value>
+      <Value>
+        <Code>CHE</Code>
+        <Text>WIR Euro</Text>
+      </Value>
+      <Value>
+        <Code>CHF</Code>
+        <Text>Swiss Franc</Text>
+      </Value>
+      <Value>
+        <Code>CHW</Code>
+        <Text>WIR Franc</Text>
+      </Value>
+      <Value>
+        <Code>CLF</Code>
+        <Text>Unidades de formento</Text>
+      </Value>
+      <Value>
+        <Code>CLP</Code>
+        <Text>Chilean Peso</Text>
+      </Value>
+      <Value>
+        <Code>CNY</Code>
+        <Text>Yuan Renminbi</Text>
+      </Value>
+      <Value>
+        <Code>COP</Code>
+        <Text>Colombian Peso</Text>
+      </Value>
+      <Value>
+        <Code>COU</Code>
+        <Text>Unidad de Valor Real</Text>
+      </Value>
+      <Value>
+        <Code>CRC</Code>
+        <Text>Costa Rican Colon</Text>
+      </Value>
+      <Value>
+        <Code>CUC</Code>
+        <Text>Perso Convertible</Text>
+      </Value>
+      <Value>
+        <Code>CUP</Code>
+        <Text>Cuban Peso</Text>
+      </Value>
+      <Value>
+        <Code>CVE</Code>
+        <Text>Cape Verde Escudo</Text>
+      </Value>
+      <Value>
+        <Code>CZK</Code>
+        <Text>Czech Koruna</Text>
+      </Value>
+      <Value>
+        <Code>DJF</Code>
+        <Text>Djibouti Franc</Text>
+      </Value>
+      <Value>
+        <Code>DKK</Code>
+        <Text>Danish Krone</Text>
+      </Value>
+      <Value>
+        <Code>DOP</Code>
+        <Text>Dominican Peso</Text>
+      </Value>
+      <Value>
+        <Code>DZD</Code>
+        <Text>Algerian Dinar</Text>
+      </Value>
+      <Value>
+        <Code>EGP</Code>
+        <Text>Egyptian Pound</Text>
+      </Value>
+      <Value>
+        <Code>ERN</Code>
+        <Text>Nakfa</Text>
+      </Value>
+      <Value>
+        <Code>ETB</Code>
+        <Text>Ethiopian Birr</Text>
+      </Value>
+      <Value>
+        <Code>EUR</Code>
+        <Text>Euro</Text>
+      </Value>
+      <Value>
+        <Code>FJD</Code>
+        <Text>Fiji Dollar</Text>
+      </Value>
+      <Value>
+        <Code>FKP</Code>
+        <Text>Falkland Islands Pound</Text>
+      </Value>
+      <Value>
+        <Code>GBP</Code>
+        <Text>Pound Sterling</Text>
+      </Value>
+      <Value>
+        <Code>GEL</Code>
+        <Text>Lari</Text>
+      </Value>
+      <Value>
+        <Code>GHS</Code>
+        <Text>Cedi</Text>
+      </Value>
+      <Value>
+        <Code>GIP</Code>
+        <Text>Gibraltar Pound</Text>
+      </Value>
+      <Value>
+        <Code>GMD</Code>
+        <Text>Dalasi</Text>
+      </Value>
+      <Value>
+        <Code>GNF</Code>
+        <Text>Guinea Franc</Text>
+      </Value>
+      <Value>
+        <Code>GTQ</Code>
+        <Text>Quetzal</Text>
+      </Value>
+      <Value>
+        <Code>GYD</Code>
+        <Text>Guyana Dollar</Text>
+      </Value>
+      <Value>
+        <Code>HKD</Code>
+        <Text>Hong Kong Dollar</Text>
+      </Value>
+      <Value>
+        <Code>HNL</Code>
+        <Text>Lempira</Text>
+      </Value>
+      <Value>
+        <Code>HRK</Code>
+        <Text>Croatian Kuna</Text>
+      </Value>
+      <Value>
+        <Code>HTG</Code>
+        <Text>Gourde</Text>
+      </Value>
+      <Value>
+        <Code>HUF</Code>
+        <Text>Forint</Text>
+      </Value>
+      <Value>
+        <Code>IDR</Code>
+        <Text>Rupiah</Text>
+      </Value>
+      <Value>
+        <Code>ILS</Code>
+        <Text>New Israeli Sheqel</Text>
+      </Value>
+      <Value>
+        <Code>INR</Code>
+        <Text>Indian Rupee</Text>
+      </Value>
+      <Value>
+        <Code>IQD</Code>
+        <Text>Iraqi Dinar</Text>
+      </Value>
+      <Value>
+        <Code>IRR</Code>
+        <Text>Iranian Rial</Text>
+      </Value>
+      <Value>
+        <Code>ISK</Code>
+        <Text>Iceland Krona</Text>
+      </Value>
+      <Value>
+        <Code>JMD</Code>
+        <Text>Jamaican Dollar</Text>
+      </Value>
+      <Value>
+        <Code>JOD</Code>
+        <Text>Jordanian Dinar</Text>
+      </Value>
+      <Value>
+        <Code>JPY</Code>
+        <Text>Yen</Text>
+      </Value>
+      <Value>
+        <Code>KES</Code>
+        <Text>Kenyan Shilling</Text>
+      </Value>
+      <Value>
+        <Code>KGS</Code>
+        <Text>Som</Text>
+      </Value>
+      <Value>
+        <Code>KHR</Code>
+        <Text>Riel</Text>
+      </Value>
+      <Value>
+        <Code>KMF</Code>
+        <Text>Comoro Franc</Text>
+      </Value>
+      <Value>
+        <Code>KPW</Code>
+        <Text>North Korean Won</Text>
+      </Value>
+      <Value>
+        <Code>KRW</Code>
+        <Text>Won</Text>
+      </Value>
+      <Value>
+        <Code>KWD</Code>
+        <Text>Kuwaiti Dinar</Text>
+      </Value>
+      <Value>
+        <Code>KYD</Code>
+        <Text>Cayman Islands Dollar</Text>
+      </Value>
+      <Value>
+        <Code>KZT</Code>
+        <Text>Tenge</Text>
+      </Value>
+      <Value>
+        <Code>LAK</Code>
+        <Text>Kip</Text>
+      </Value>
+      <Value>
+        <Code>LBP</Code>
+        <Text>Lebanese Pound</Text>
+      </Value>
+      <Value>
+        <Code>LKR</Code>
+        <Text>Sri Lanka Rupee</Text>
+      </Value>
+      <Value>
+        <Code>LRD</Code>
+        <Text>Liberian Dollar</Text>
+      </Value>
+      <Value>
+        <Code>LSL</Code>
+        <Text>Loti</Text>
+      </Value>
+       
+      <Value>
+        <Code>LYD</Code>
+        <Text>Libyan Dinar</Text>
+      </Value>
+      <Value>
+        <Code>MAD</Code>
+        <Text>Moroccan Dirham</Text>
+      </Value>
+      <Value>
+        <Code>MDL</Code>
+        <Text>Moldovan Leu</Text>
+      </Value>
+      <Value>
+        <Code>MGA</Code>
+        <Text>Malagascy Ariary</Text>
+      </Value>
+      <Value>
+        <Code>MKD</Code>
+        <Text>Denar</Text>
+      </Value>
+      <Value>
+        <Code>MMK</Code>
+        <Text>Kyat</Text>
+      </Value>
+      <Value>
+        <Code>MNT</Code>
+        <Text>Tugrik</Text>
+      </Value>
+      <Value>
+        <Code>MOP</Code>
+        <Text>Pataca</Text>
+      </Value>
+      <Value>
+        <Code>MRO</Code>
+        <Text>Ouguiya</Text>
+      </Value>
+      <Value>
+        <Code>MUR</Code>
+        <Text>Mauritius Rupee</Text>
+      </Value>
+      <Value>
+        <Code>MVR</Code>
+        <Text>Rufiyaa</Text>
+      </Value>
+      <Value>
+        <Code>MWK</Code>
+        <Text>Kwacha</Text>
+      </Value>
+      <Value>
+        <Code>MXN</Code>
+        <Text>Mexican Peso</Text>
+      </Value>
+      <Value>
+        <Code>MXV</Code>
+        <Text>Mexican Unidad de Inversion (UID)</Text>
+      </Value>
+      <Value>
+        <Code>MYR</Code>
+        <Text>Malaysian Ringgit</Text>
+      </Value>
+      <Value>
+        <Code>MZN</Code>
+        <Text>Metical </Text>
+      </Value>
+      <Value>
+        <Code>NAD</Code>
+        <Text>Namibian Dollar</Text>
+      </Value>
+      <Value>
+        <Code>NGN</Code>
+        <Text>Naira</Text>
+      </Value>
+      <Value>
+        <Code>NIO</Code>
+        <Text>Cordoba Oro</Text>
+      </Value>
+      <Value>
+        <Code>NOK</Code>
+        <Text>Norwegian Krone</Text>
+      </Value>
+      <Value>
+        <Code>NPR</Code>
+        <Text>Nepalese Rupee</Text>
+      </Value>
+      <Value>
+        <Code>NZD</Code>
+        <Text>New Zealand Dollar</Text>
+      </Value>
+      <Value>
+        <Code>OMR</Code>
+        <Text>Rial Omani</Text>
+      </Value>
+      <Value>
+        <Code>PAB</Code>
+        <Text>Balboa</Text>
+      </Value>
+      <Value>
+        <Code>PEN</Code>
+        <Text>Nuevo Sol</Text>
+      </Value>
+      <Value>
+        <Code>PGK</Code>
+        <Text>Kina</Text>
+      </Value>
+      <Value>
+        <Code>PHP</Code>
+        <Text>Philippine Peso</Text>
+      </Value>
+      <Value>
+        <Code>PKR</Code>
+        <Text>Pakistan Rupee</Text>
+      </Value>
+      <Value>
+        <Code>PLN</Code>
+        <Text>Zloty</Text>
+      </Value>
+      <Value>
+        <Code>PYG</Code>
+        <Text>Guarani</Text>
+      </Value>
+      <Value>
+        <Code>QAR</Code>
+        <Text>Qatari Rial</Text>
+      </Value>
+      <Value>
+        <Code>RON</Code>
+        <Text>New Leu</Text>
+      </Value>
+      <Value>
+        <Code>RUB</Code>
+        <Text>Russian Ruble</Text>
+      </Value>
+      <Value>
+        <Code>RSD</Code>
+        <Text>Serbian Dina</Text>
+      </Value>
+      <Value>
+        <Code>RWF</Code>
+        <Text>Rwanda Franc</Text>
+      </Value>
+      <Value>
+        <Code>SAR</Code>
+        <Text>Saudi Riyal</Text>
+      </Value>
+      <Value>
+        <Code>SBD</Code>
+        <Text>Solomon Islands Dollar</Text>
+      </Value>
+      <Value>
+        <Code>SCR</Code>
+        <Text>Seychelles Rupee</Text>
+      </Value>
+      <Value>
+        <Code>SDG</Code>
+        <Text>Sudanese Pound</Text>
+      </Value>
+      <Value>
+        <Code>SEK</Code>
+        <Text>Swedish Krona</Text>
+      </Value>
+      <Value>
+        <Code>SGD</Code>
+        <Text>Singapore Dollar</Text>
+      </Value>
+      <Value>
+        <Code>SHP</Code>
+        <Text>Saint Helena Pound</Text>
+      </Value>
+      <Value>
+        <Code>SLL</Code>
+        <Text>Leone</Text>
+      </Value>
+      <Value>
+        <Code>SOS</Code>
+        <Text>Somali Shilling</Text>
+      </Value>
+      <Value>
+        <Code>SRD</Code>
+        <Text>Surinam Dollar</Text>
+      </Value>
+      <Value>
+        <Code>SSP</Code>
+        <Text>South Sudanese Pound</Text>
+      </Value>
+      <Value>
+        <Code>STD</Code>
+        <Text>Dobra</Text>
+      </Value>
+      <Value>
+        <Code>SVC</Code>
+        <Text>El Salvador Colon</Text>
+      </Value>
+      <Value>
+        <Code>SYP</Code>
+        <Text>Syrian Pound</Text>
+      </Value>
+      <Value>
+        <Code>SZL</Code>
+        <Text>Lilangeni</Text>
+      </Value>
+      <Value>
+        <Code>THB</Code>
+        <Text>Baht</Text>
+      </Value>
+      <Value>
+        <Code>TJS</Code>
+        <Text>Somoni</Text>
+      </Value>
+      <Value>
+        <Code>TMT</Code>
+        <Text>Turkmenistan New Manat</Text>
+      </Value>
+      <Value>
+        <Code>TND</Code>
+        <Text>Tunisian Dinar</Text>
+      </Value>
+      <Value>
+        <Code>TOP</Code>
+        <Text>Pa'anga</Text>
+      </Value>
+      <Value>
+        <Code>TRY</Code>
+        <Text>New Turkish Lira</Text>
+      </Value>
+      <Value>
+        <Code>TTD</Code>
+        <Text>Trinidad and Tobago Dollar</Text>
+      </Value>
+      <Value>
+        <Code>TWD</Code>
+        <Text>New Taiwan Dollar</Text>
+      </Value>
+      <Value>
+        <Code>TZS</Code>
+        <Text>Tanzanian Shilling</Text>
+      </Value>
+      <Value>
+        <Code>UAH</Code>
+        <Text>Hryvnia</Text>
+      </Value>
+      <Value>
+        <Code>UGX</Code>
+        <Text>Uganda Shilling</Text>
+      </Value>
+      <Value>
+        <Code>USD</Code>
+        <Text>US Dollar</Text>
+      </Value>
+      <Value>
+        <Code>USN</Code>
+        <Text>US Dollar (Next day)</Text>
+      </Value>
+      <Value>
+        <Code>UYI</Code>
+        <Text>Uruguay Peso en Unidades Indexadas (URUIURUI)</Text>
+      </Value>
+	  <Value>
+        <Code>UYU</Code>
+        <Text>Peso Uruguayo</Text>
+      </Value>      
+      <Value>
+        <Code>UZS</Code>
+        <Text>Uzbekistan Sum</Text>
+      </Value>
+      <Value>
+        <Code>VEF</Code>
+        <Text>Bolivar</Text>
+      </Value>
+      <Value>
+        <Code>VND</Code>
+        <Text>Dong</Text>
+      </Value>
+      <Value>
+        <Code>VUV</Code>
+        <Text>Vatu</Text>
+      </Value>
+      <Value>
+        <Code>WST</Code>
+        <Text>Tala</Text>
+      </Value>
+      <Value>
+        <Code>XAF</Code>
+        <Text>CFA Franc BEAC</Text>
+      </Value>
+      <Value>
+        <Code>XAG</Code>
+        <Text>Silver</Text>
+      </Value>
+      <Value>
+        <Code>XAU</Code>
+        <Text>Gold</Text>
+      </Value>
+      <Value>
+        <Code>XBA</Code>
+        <Text>Bond Markets Units European Composite Unit (EURCO)</Text>
+      </Value>
+      <Value>
+        <Code>XBB</Code>
+        <Text>European Monetary Unit (E.M.U.-6)</Text>
+      </Value>
+      <Value>
+        <Code>XBC</Code>
+        <Text>European Unit of Account 9 (E.U.A.-9)</Text>
+      </Value>
+      <Value>
+        <Code>XBD</Code>
+        <Text>European Unit of Account 17 (E.U.A.-17)</Text>
+      </Value>
+      <Value>
+        <Code>XCD</Code>
+        <Text>East Caribbean Dollar</Text>
+      </Value>
+      <Value>
+        <Code>XDR</Code>
+        <Text>SDR</Text>
+      </Value>
+      <Value>
+        <Code>XOF</Code>
+        <Text>CFA Franc BCEAO</Text>
+      </Value>
+      <Value>
+        <Code>XPD</Code>
+        <Text>Palladium</Text>
+      </Value>
+      <Value>
+        <Code>XPF</Code>
+        <Text>CFP Franc</Text>
+      </Value>
+      <Value>
+        <Code>XPT</Code>
+        <Text>Platinum</Text>
+      </Value>
+	  <Value>
+        <Code>XSU</Code>
+        <Text>Sucre</Text>
+      </Value>      
+       <Value>
+        <Code>XUA</Code>
+        <Text>ADB Unit of Account</Text>
+      </Value>
+      <Value>
+        <Code>XTS</Code>
+        <Text>Code specifically reserved for testing purposes</Text>
+      </Value>
+      <Value>
+        <Code>XXX</Code>
+        <Text>Code assigned for transactions where no currency is involved</Text>
+      </Value>
+      <Value>
+        <Code>YER</Code>
+        <Text>Yemeni Rial</Text>
+      </Value>
+      <Value>
+        <Code>ZAR</Code>
+        <Text>Rand</Text>
+      </Value>
+      <Value>
+        <Code>ZMW</Code>
+        <Text>Kwacha</Text>
+      </Value>
+      <Value>
+        <Code>ZWL</Code>
+        <Text>Zimbabwe Dollar</Text>
+      </Value>
+      
+    </Values>
+  </CodeSet>
+
+</Grouping>

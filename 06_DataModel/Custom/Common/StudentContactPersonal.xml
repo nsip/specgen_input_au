@@ -1,0 +1,201 @@
+<DataObject name='StudentContactPersonal'
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xmlns:xi="http://www.w3.org/2001/XInclude"
+			xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	
+            xmlns="http://sifassociation.org/SpecGen">
+  <EventsReported>true</EventsReported>
+  <Key>@RefId</Key>
+  <Item>
+    <Element>StudentContactPersonal</Element>
+    <Description>
+      This object contains information about the people who are referenced as student contacts.
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>The ID (GUID) that uniquely identifies the instance of the object.</Description>
+    <Type ref='CommonTypes' name='RefIdType'/>
+  </Item>
+  <Item>
+    <Element>LocalId</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The locally-assigned identifier for this person. Note: LocalId may be used as a unique person identifier rather than a unique contact identifier. In this case there may be more than one StudentContactPersonal instance with the same LocalId.</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>
+
+  <Item>
+		<Element>OtherIdList</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Lists all "other" identifiers associated with the contact.</p>
+		</Description>
+		<Type ref="CommonTypes" name="OtherIdListType"/>
+  	</Item>
+  
+  <Item> 
+    <Element>PersonInfo</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Personal Information </p>
+    </Description>
+    <Type ref="CommonTypes" name="PersonInfoType"></Type>
+  </Item>
+  <Item>
+    <Element>EmploymentType</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Code that defines employment type. This is compulsory for Parents or Guardians of the Student.</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsEmploymentTypeType"></Type>
+  </Item>
+  <Item>
+    <Element>SchoolEducationalLevel</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The highest level of education completed by the contact person.</p>
+    </Description>
+    <Type ref="CommonTypes" name="EducationalLevelType"></Type>
+  </Item>
+  <Item>
+    <Element>NonSchoolEducation</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>This reflects the level of the Contact's Non-School Education.</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsNonSchoolEducationType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+  <xhtml:Example xmlns='' name="StudentContactPersonal Example">
+    <StudentContactPersonal RefId='7C834EA9-EDA1-2090-347F-83297E1C290F'>
+      <LocalId>P1234567</LocalId>
+      <OtherIdList>
+        <OtherId Type="Health Care Card">098765</OtherId>
+        <OtherId Type="Seniors Card">123456789</OtherId>
+      </OtherIdList>
+      <PersonInfo>
+        <Name Type = "LGL" >
+          <FamilyName>Smith</FamilyName>
+          <GivenName>Fred</GivenName>
+          <FullName>Fred Smith</FullName>
+        </Name>
+        <OtherNames>
+          <Name Type="AKA">
+            <FamilyName>Anderson</FamilyName>
+            <GivenName>Samuel</GivenName>
+            <FullName>Samuel Anderson</FullName>
+          </Name>
+          <Name Type="PRF">
+            <FamilyName>Rowinski</FamilyName>
+            <GivenName>Sam</GivenName>
+            <FullName>Sam Rowinski </FullName>
+          </Name>
+        </OtherNames>
+
+        <Demographics>
+          <IndigenousStatus>3</IndigenousStatus>
+          <Sex>1</Sex>
+          <BirthDate>1990-09-26</BirthDate>
+          <BirthDateVerification>1004</BirthDateVerification>
+          <PlaceOfBirth>Clayton</PlaceOfBirth>
+          <StateOfBirth>VIC</StateOfBirth>
+          <CountryOfBirth>1101</CountryOfBirth>
+          <CountriesOfCitizenship>
+            <CountryOfCitizenship>8104</CountryOfCitizenship>
+            <CountryOfCitizenship>1101</CountryOfCitizenship>
+          </CountriesOfCitizenship>
+          <CountriesOfResidency>
+            <CountryOfResidency>8104</CountryOfResidency>
+            <CountryOfResidency>1101</CountryOfResidency>
+          </CountriesOfResidency>
+          <CountryArrivalDate>1990-09-26</CountryArrivalDate>
+          <AustralianCitizenshipStatus>1</AustralianCitizenshipStatus>
+          <EnglishProficiency>
+            <Code>1</Code>
+          </EnglishProficiency>
+          <LanguageList>
+            <Language>
+              <Code>0001</Code>
+              <LanguageType>1</LanguageType>
+            </Language>
+          </LanguageList>
+          <DwellingArrangement>
+            <Code>1671</Code>
+          </DwellingArrangement>
+          <Religion>
+            <Code>2013</Code>
+          </Religion>
+          <ReligiousEventList>
+            <ReligiousEvent>
+              <Type>Baptism</Type>
+              <Date>2000-09-01</Date>
+            </ReligiousEvent>
+            <ReligiousEvent>
+              <Type>Christmas</Type>
+              <Date>2009-12-24</Date>
+            </ReligiousEvent>
+          </ReligiousEventList>
+          <ReligiousRegion>The Religion Region</ReligiousRegion>
+          <PermanentResident>P</PermanentResident>
+          <VisaSubClass>101</VisaSubClass>
+          <VisaStatisticalCode>05</VisaStatisticalCode>
+        </Demographics>
+        <AddressList>
+          <Address Type ="0123" Role="012B">
+            <Street>
+              <Line1>Unit1/10</Line1>
+              <Line2>Barkley Street</Line2>
+            </Street>
+            <City>Yarra Glenn</City>
+            <StateProvince>VIC</StateProvince>
+            <Country>1101</Country>
+            <PostalCode>9999</PostalCode>
+          </Address>
+          <Address Type="0123A" Role="013A">
+            <Street>
+              <Line1>34 Term Address Street</Line1>
+            </Street>
+            <City>Home Town</City>
+            <StateProvince>WA</StateProvince>
+            <Country>1101</Country>
+            <PostalCode>9999</PostalCode>
+          </Address>
+        </AddressList>
+        <PhoneNumberList>
+          <PhoneNumber Type="0096">
+            <Number>03 9637-2289</Number>
+            <Extension>72289</Extension>
+            <ListedStatus>Y</ListedStatus>
+          </PhoneNumber>
+          <PhoneNumber Type="0888">
+            <Number>0437-765-234</Number>
+            <ListedStatus>N</ListedStatus>
+          </PhoneNumber>
+        </PhoneNumberList>
+        <EmailList>
+          <Email Type="01">fsmith@yahoo.com</Email>
+          <Email Type="02">freddy@gmail.com</Email>
+        </EmailList>
+      </PersonInfo>
+     
+      <EmploymentType>4</EmploymentType>
+      <SchoolEducationalLevel>3</SchoolEducationalLevel>
+        <NonSchoolEducation>6</NonSchoolEducation>
+      </StudentContactPersonal>
+
+  </xhtml:Example>
+</DataObject>

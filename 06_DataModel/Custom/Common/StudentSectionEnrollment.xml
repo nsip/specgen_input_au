@@ -1,0 +1,207 @@
+<DataObject name="StudentSectionEnrollment"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xmlns:xi="http://www.w3.org/2001/XInclude"
+			xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	
+            xmlns="http://sifassociation.org/SpecGen">
+  <Key>@RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>StudentSectionEnrollment</Element>
+    <Description>
+      <p>This object contains information about a student's enrollment in a section of a course.</p>
+    </Description>
+  </Item>
+  <Item>
+
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The Id (GUID) that uniquely identifies this StudentSectionEnrollment entity.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+  <Item>
+
+    <Element>StudentPersonalRefId</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The Id (GUID) of the student to whom the enrollment information applies.</p>
+    </Description>
+    <Type ref="CommonTypes" relationship="records section enrollment for" count="*:1" name="IdRefType"></Type>
+  </Item>
+  <Item>
+
+    <Element>SectionInfoRefId</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The Id (GUID) of the section in which this student is enrolled.</p>
+    </Description>
+    <Type ref="CommonTypes" relationship="records student enrollment in" count="1:1" name="IdRefType"></Type>
+  </Item>
+  
+  <Item>
+    <Element>SchoolYear</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>
+        School year for which the information is applicable, expressed as the four-digit year. e.g. <code>2013</code>
+      </p>
+    </Description>
+     <Type ref="CommonTypes" name="SchoolYearType"></Type>
+  </Item>
+  
+
+  <Item>
+    <Element>EntryDate</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Date from when this course section enrollment is valid.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+  <Item>
+    <Element>ExitDate</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The last school calendar day (membership day) the student was enrolled in the course section (inclusive).</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+  
+  <!--
+  <Item>
+    <Element>ScheduleInfoOverrideList</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A complete replacement of the standard SectionInfo/ScheduleInfoList for this student's course enrollment.</p>
+    </Description>
+    <List mode="List">
+    </List>
+  </Item>
+  <Item>
+    <Element>/ScheduleInfoOverride</Element>
+    <Characteristics>MR</Characteristics>
+    <Description>
+      <p>
+        A complete replacement of the standard SectionInfo/ScheduleInfo for this student's course enrollment.
+        If the student's schedule for this course is different than the standard schedule as defined in SectionInfo,
+        a ScheduleInfoOverride must be provided for each term in which the course is offered,
+        along with the appropriate value for Override. See the use cases for this object for scenario examples.
+      </p>
+    </Description>
+  </Item>
+  <Item>
+
+    <Attribute>Override</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Designates whether or not scheduling information has been overridden with different values for this student.</p>
+    </Description>
+    <Values>
+      <Value>
+        <Code>Yes</Code>
+      </Value>
+      <Value>
+        <Code>No</Code>
+      </Value>
+    </Values>
+  </Item>
+  <Item>
+
+    <Attribute>TermInfoRefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The Id (GUID) of the term to which this override information relates for this student.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+  <Item>
+    <Element>//MeetingTimeList</Element>
+    <Characteristics>O</Characteristics>
+    <List mode="List">
+    </List>
+  </Item>
+  <Item>
+    <Element>///MeetingTime</Element>
+    <Characteristics>MR</Characteristics>
+    <Description>
+      <p>Time(s) this section meets for this student; this should be a subset of the meeting times for the section.</p>
+    </Description>
+    <Type ref="CommonTypes" name="MeetingTime"></Type>
+  </Item>
+  <Item>
+    <Element>CreditsAttempted</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Number of credits the student is attempting to earn. If present, this element's value overrides the credits in SchoolCourseInfo and SectionInfo.</p>
+    </Description>
+    <Type name="xs:decimal"></Type>
+  </Item>
+  <Item>
+
+    <Attribute>Type</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The type of credit.</p>
+    </Description>
+    <Type ref="ExternalCodeSets" name="NCES0108CreditTypeEarnedType"></Type>
+  </Item>
+  
+  <Item>
+    <Element>DualCredit</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Indicates whether this course is applicable in having dual credits. This value overrides the SchoolCourseInfo DualCredit value at the student section level..</p>
+    </Description>
+    <Values>
+      <Value>
+        <Code>Yes</Code>
+      </Value>
+      <Value>
+        <Code>No</Code>
+      </Value>
+    </Values>
+  </Item>
+  <Item>
+    <Element>CTEConcentrator</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Indicates whether this is a CTE concentrator for this course.  This value overrides the SchoolCourseInfo CTEConcentrator value at the student section level..</p>
+    </Description>
+    <Values>
+      <Value>
+        <Code>Yes</Code>
+      </Value>
+      <Value>
+        <Code>No</Code>
+      </Value>
+    </Values>
+  </Item>
+  -->
+
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+  <xhtml:Example xmlns="" name="StudentSectionEnrollment">
+    <StudentSectionEnrollment RefId="983AC165-9879-3002-C3D0-0AA00456789D" >
+	  <StudentPersonalRefId>CAE29316-5987-101A-8C3D-00AA00456789</StudentPersonalRefId>
+      <SectionInfoRefId>9076AB23-E386-112B-7EA2-256100BB3312</SectionInfoRefId>
+	  <SchoolYear>2013</SchoolYear>
+      <EntryDate>2013-02-02</EntryDate>
+      <ExitDate>2013-11-15</ExitDate>
+      
+    </StudentSectionEnrollment>
+  </xhtml:Example>
+</DataObject>

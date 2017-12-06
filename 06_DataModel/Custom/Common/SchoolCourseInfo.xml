@@ -1,0 +1,207 @@
+<DataObject name="SchoolCourseInfo"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xmlns:xi="http://www.w3.org/2001/XInclude"
+			xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	
+            xmlns="http://sifassociation.org/SpecGen">
+  <Key>@RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>SchoolCourseInfo</Element>
+    <Description>
+      <p>This object is for course information.</p>
+      <p>
+        All local ids in non-authoritative objects are optional. It is therefore up to the provider and the actual agent's design and choreography to determine whether or not to use or local ids from parent objects.
+        There are cases in some subscribing systems where it might not possible to add RefId columns and therefore the RefId of related objects cannot be stored.
+        For example a target system that listens to TimeTableSubject events and updates them may not be able to store the associated SchoolCourseInfoRefId with that object.
+        The only way it can link the TimeTableSubject object with the appropriate course might be through its local course id.
+        Having local ids that link the parent objects with the child object can simplify the agent design.
+        Generally it is suggested to use the appropriate RefIds whenever possible and only use local ids if there is no other way to use RefIds.
+      </p>
+    </Description>
+  </Item>
+  <Item>
+
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The ID (GUID) that uniquely identifies the school course.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+  <Item>
+    <Element>SchoolInfoRefId</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The ID (GUID) that identifies the school where the course is offered.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  
+  <Item>
+    <Element>SchoolLocalId</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The locally-assigned identifier for this school/campus.</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>
+  
+  <Item>
+    <Element>SchoolYear</Element>
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>
+        School year for which the information is applicable, expressed as the four-digit year in which the school year ends (e.g. <code>2007</code>).
+      </p>
+    </Description>
+     <Type ref="CommonTypes" name="SchoolYearType"></Type>
+  </Item>
+  <Item>
+    <Element>TermInfoRefId</Element>
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>
+        The ID (GUID) that uniquely identifies this TermInfo (reportable time period).
+        Either SchoolYear or TermInfoRefId must be provided.
+      </p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  
+  <Item>
+    <Element>CourseCode</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>School-defined local code for the course.</p>
+    </Description>
+    <Type name='xs:normalizedString'/>
+  </Item>
+  <Item>
+    <Element>StateCourseCode</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>State-defined standard course code used to report information about courses.</p>
+    </Description>
+    <Type name='xs:normalizedString'/>
+  </Item>
+  <Item>
+    <Element>DistrictCourseCode</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The corresponding district course code.</p>
+    </Description>
+    <Type name='xs:normalizedString'/>
+  </Item>
+  <Item>
+    <Element>SubjectAreaList</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Subject matter areas.</p>
+    </Description>
+    <Type ref="CommonTypes" name="SubjectAreaListType"></Type>
+  </Item>
+  <Item>
+    <Element>CourseTitle</Element>
+
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Title of the course.</p>
+    </Description>
+    <Type name='xs:normalizedString'/>
+  </Item>
+  <Item>
+    <Element>Description</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Textual description of the course.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  <Item>
+    <Element>InstructionalLevel</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>An indication of the general nature and difficulty of instruction provided.</p>
+    </Description>
+    <Type name='xs:normalizedString'/>
+  </Item>
+  <Item>
+    <Element>CourseCredits</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The number of credits awarded upon course completion.</p>
+    </Description>
+    <Type name='xs:normalizedString'/>
+  </Item>
+  <Item>
+    <Element>CoreAcademicCourse</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Does the course meet the state definition of a core academic course?</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
+  </Item>
+  <Item>
+    <Element>GraduationRequirement</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Does the state require that the course be completed for graduation?</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
+  </Item>
+  <Item>
+    <Element>Department</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Department with jurisdiction over this course.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  <Item>
+    <Element>CourseContent</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Description of course content.</p>
+    </Description>
+    <Type name='xs:normalizedString'/>
+  </Item>
+
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+  <xhtml:Example xmlns="" name="SchoolCourseInfo Example">
+    <SchoolCourseInfo RefId="9D75101A-8C3D-00AA-001A-0000A2E35B35">
+      <SchoolInfoRefId>101A8C3D-00AA-001A-0000-A2E35B359D75</SchoolInfoRefId>
+      <SchoolYear>2006</SchoolYear>
+      <CourseCode>CS101</CourseCode>
+      <StateCourseCode>08-001</StateCourseCode>
+      <DistrictCourseCode>CS101</DistrictCourseCode>
+      <SubjectAreaList>
+        <SubjectArea>
+          <Code>Graphic Arts</Code>
+        </SubjectArea>
+      </SubjectAreaList>
+      <CourseTitle>Gif, JPeg, or Png: What's the Difference?</CourseTitle>
+      <Description>Explore the various types of files related to graphic arts.</Description>
+      <InstructionalLevel>0571</InstructionalLevel>
+      <CourseCredits>2</CourseCredits>
+      <CoreAcademicCourse>N</CoreAcademicCourse>
+      <GraduationRequirement>N</GraduationRequirement>
+    </SchoolCourseInfo>
+  </xhtml:Example>
+</DataObject>

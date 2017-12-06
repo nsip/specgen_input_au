@@ -1,0 +1,277 @@
+<DataObject name="Invoice"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xmlns:xi="http://www.w3.org/2001/XInclude"
+			xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	
+            xmlns="http://sifassociation.org/SpecGen">
+  <Key>@RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>Invoice</Element>
+    <Description>
+      <p>
+        This object contains an amount to be invoiced to an outside entity (typically a creditor or debtor). This object can include school fees. The object is also used for payments to an outside entity (using debit amounts), where those payments are not for goods and services (PurchaseOrder object): e.g. credit notes, reimbursements, rebates.     </p>
+    </Description>
+  </Item>
+  <Item>
+
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>GUID for this transaction. The application that owns this object is responsible for generating this unique Id.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+
+  <Item>
+    <Element>InvoicedEntity</Element>
+
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Id of the entity being billed for this billing activity.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+
+  <Item>
+    <Attribute>SIF_RefObject</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>RefId of SIF object referenced by Invoiced Entity.</p>
+    </Description>
+    <Values>
+      <Value>
+        <Code>Debtor</Code>
+      </Value>
+      <Value>
+        <Code>PurchaseOrder</Code>
+      </Value>
+    </Values>
+  </Item>
+  
+  <Item>
+    <Element>FormNumber</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Invoice number assigned locally by the system issuing the invoice.</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>
+  
+
+  <Item>
+    <Element>BillingDate</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Date of the transaction.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+
+
+  <Item>
+    <Element>TransactionDescription</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Description of the transaction.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  
+
+  <Item>
+    <Element>BilledAmount</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Gross amount to be billed, including any tax. Can be credit (e.g. for family credit notes, reimbursements, rebates).</p>
+    </Description>
+    <Type ref="CommonTypes" name="DebitOrCreditAmountType"></Type>
+  </Item>
+  
+
+
+  <Item>
+    <Element>Ledger</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The associated ledger for this transaction</p>
+    </Description>
+    <Values>
+      <Value>
+        <Code>Creditor</Code>
+      </Value>
+      <Value>
+        <Code>Family</Code>
+      </Value>
+      <Value>
+        <Code>Sundry</Code>
+      </Value>
+    </Values>
+  </Item>
+
+  <Item>
+    <Element>ChargedLocationInfoRefId</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Id of the location billed for this billing activity.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  
+  <Item>
+    <Element>NetAmount</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Net amount billed, excluding any tax. Should be BilledAmount minus TaxAmount.</p>
+    </Description>
+    <Type ref="CommonTypes" name="MonetaryAmountType"></Type>
+  </Item>
+  
+  <Item>
+    <Element>TaxRate</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Rate of tax included in the billed amount.</p>
+    </Description>
+    <Type name="xs:decimal"></Type>
+  </Item>
+  <Item>
+    <Element>TaxType</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Tax type (e.g. G11 vs NP6)</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+
+  <Item>
+    <Element>TaxAmount</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Amount of tax included in the billed amount</p>
+    </Description>
+    <Type ref="CommonTypes" name="MonetaryAmountType"></Type>
+  </Item>
+
+  <Item>
+    <Element>CreatedBy</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Authority or person who created the invoice</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+
+  <Item>
+    <Element>ApprovedBy</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Authority or person who approved the invoice</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  <Item>
+    <Element>ItemDetail</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Details of items invoiced (free text)</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  <Item>
+    <Element>DueDate</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Due date for payment.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+  
+  <Item>
+    <Element>FinancialAccountRefIdList</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Suggested minimum class size for this subject.</p>
+    </Description>
+    
+    <Type ref="CommonTypes" name="FinancialAccountRefIdListType"></Type>
+  </Item>
+  
+    
+  <Item>
+    <Element>AccountingPeriod</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The accounting period against which the transaction is billed.</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>
+
+  <Item>
+    <Element>RelatedPurchaseOrderRefId</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>An invoice purchase order related to this invoice (e.g. an invoice raised for the delivery of goods on a purchase order).</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  
+  <Item>
+    <Element>PurchasingItems</Element>    
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Listing of line items from original purchase order. Included to indicate any variation between the items, item cost, or item quantity ordered, and what has been delivered.</p>
+    </Description>
+     <Type ref="CommonTypes" name="PurchasingItemsType"></Type>
+  </Item>
+  
+  <Item>
+    <Element>Voluntary</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>
+        Whether the billing is voluntary (applies to some school fees).
+      </p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
+  </Item>
+
+
+
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+  <xhtml:Example xmlns="" name="Invoice">
+    <Invoice RefId="CA123458-47DE-A974-63FE-B238759FD123">
+      <InvoicedEntity SIF_RefObject="Debtor">BA497254-965F-DA48-965A-BCE4589EA421</InvoicedEntity>
+      <BillingDate>1999-10-12</BillingDate>
+      <TransactionDescription>Activity Fees</TransactionDescription>
+      <BilledAmount Type="Debit" Currency="AUD">50.00</BilledAmount> 
+      <Ledger>Family</Ledger>
+      <TaxRate>10.0</TaxRate>
+      <TaxAmount Currency="AUD">5.00</TaxAmount>
+      <CreatedBy>Peter Rabbit</CreatedBy>
+      <ApprovedBy>Fred Flintstone</ApprovedBy>
+      <ItemDetail>5 Widgets</ItemDetail>
+      <FinancialAccountRefIdList>
+        <FinancialAccountRefId>AE109F1A-C2DE-41E4-9DF5-C418F3DF18A8</FinancialAccountRefId>
+      </FinancialAccountRefIdList>
+      <AccountingPeriod>200004</AccountingPeriod>
+    </Invoice>
+    
+
+  </xhtml:Example>
+</DataObject>

@@ -1,0 +1,18 @@
+<Section name="What is SIF (NZ)?"
+		 xmlns="http://sifassociation.org/SpecGen">
+  <p>
+    SIF Specification (New Zealand) defines a set of data objects
+    supporting New Zealand's interoperability requirements for its
+	education system and combines this data model with
+    established infrastructure protocols from the SIF Implementation
+    Specification <a href="References.html#SIF">[SIF]</a>.
+
+	SIF Specification (New Zealand) 3.4 leverages the SIF architecture
+	and refers to SIF Infrastructure Specifications greater than 3.0.1
+	[SIF 3.x] to support its data objects, with a New Zealand-specific
+	namespace and the data objects defined in this specification.
+	Technical readers should note that the version number internal to
+	SIF XML messages identifies the version number of the SIF Data
+	Model.
+  </p>
+</Section>

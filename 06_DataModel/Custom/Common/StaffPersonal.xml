@@ -1,0 +1,240 @@
+<DataObject name="StaffPersonal"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xmlns:xi="http://www.w3.org/2001/XInclude"
+			xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	
+            xmlns="http://sifassociation.org/SpecGen">
+  <Key>@RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>StaffPersonal</Element>
+    <Description>
+      <p>
+        This object contains all the personal information relating to a staff member, who might be a teacher or other employee of the school or district.
+      </p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The GUID of the staff member.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+  <Item>
+    <Element>LocalId</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The locally-assigned identifier for this staff member.</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>
+  <Item>
+    <Element>StateProvinceId</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The state-assigned identifier for this staff member.</p>
+    </Description>
+    <Type ref="CommonTypes" name="StateProvinceIdType"></Type>
+  </Item>
+  <Item>
+    <Element>ElectronicIdList</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Electronic identifier(s) associated with this entity.</p>
+    </Description>
+    <Type ref="CommonTypes" name="ElectronicIdListType"></Type>
+  </Item>
+  
+  <Item>
+		<Element>OtherIdList</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Lists all "other" identifiers associated with the staff member.</p>
+		</Description>
+		<Type ref="CommonTypes" name="OtherIdListType"/>
+  </Item>
+  	
+  <Item>
+    <Element>PersonInfo</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Personal Information </p>
+    </Description>
+    <Type ref="CommonTypes" name="PersonInfoType"></Type>
+  </Item>
+
+  <Item>
+    <Element>Title</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The staff member's title.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  
+  <Item>
+    <Element>EmploymentStatus</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Status of staff member within employing organisation. Not for NSSC Reporting</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsStaffStatusType"/>
+  </Item>
+  
+  <Item>
+		<Element>MostRecent</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Container for elements reflecting the most recent assignment of a staff member. If the staff member is currently assigned, the elements contain current information.
+            </p>
+		</Description>
+		<Type ref="CommonTypes" name="StaffMostRecentContainerType"></Type>
+	</Item>
+  
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+  <xhtml:Example xmlns="" name="StaffPersonal">
+    <StaffPersonal RefId="D3E34F41-9D75-101A-8C3D-00AA001A1652">
+      <LocalId>946379881</LocalId>
+      <StateProvinceId>C2345681</StateProvinceId>
+      <ElectronicIdList>
+        <ElectronicId Type="01">206655</ElectronicId>
+      </ElectronicIdList>
+      <OtherIdList>
+        <OtherId Type="0004">333333333</OtherId>
+      </OtherIdList>
+      <PersonInfo>
+        <Name Type = "LGL" >
+          <FamilyName>Smith</FamilyName>
+          <GivenName>Fred</GivenName>
+          <FullName>Fred Smith</FullName>
+        </Name>
+        <OtherNames>
+          <Name Type="AKA">
+            <FamilyName>Anderson</FamilyName>
+            <GivenName>Samuel</GivenName>
+            <FullName>Samuel Anderson</FullName>
+          </Name>
+          <Name Type="PRF">
+            <FamilyName>Rowinski</FamilyName>
+            <GivenName>Sam</GivenName>
+            <FullName>Sam Rowinski </FullName>
+          </Name>
+        </OtherNames>
+
+        <Demographics>
+          <IndigenousStatus>3</IndigenousStatus>
+          <Sex>1</Sex>
+          <BirthDate>1990-09-26</BirthDate>
+          <BirthDateVerification>1004</BirthDateVerification>
+          <PlaceOfBirth>Clayton</PlaceOfBirth>
+          <StateOfBirth>VIC</StateOfBirth>
+          <CountryOfBirth>1101</CountryOfBirth>
+          <CountriesOfCitizenship>
+            <CountryOfCitizenship>8104</CountryOfCitizenship>
+            <CountryOfCitizenship>1101</CountryOfCitizenship>
+          </CountriesOfCitizenship>
+          <CountriesOfResidency>
+            <CountryOfResidency>8104</CountryOfResidency>
+            <CountryOfResidency>1101</CountryOfResidency>
+          </CountriesOfResidency>
+          <CountryArrivalDate>1990-09-26</CountryArrivalDate>
+          <AustralianCitizenshipStatus>1</AustralianCitizenshipStatus>
+          <EnglishProficiency>
+            <Code>1</Code>
+          </EnglishProficiency>
+          <LanguageList>
+            <Language>
+              <Code>0001</Code>
+              <LanguageType>1</LanguageType>
+            </Language>
+          </LanguageList>
+          <DwellingArrangement>
+            <Code>1671</Code>
+          </DwellingArrangement>
+          <Religion>
+            <Code>2013</Code>
+          </Religion>
+          <ReligiousEventList>
+            <ReligiousEvent>
+              <Type>Baptism</Type>
+              <Date>2000-09-01</Date>
+            </ReligiousEvent>
+            <ReligiousEvent>
+              <Type>Christmas</Type>
+              <Date>2009-12-24</Date>
+            </ReligiousEvent>
+          </ReligiousEventList>
+          <ReligiousRegion>The Religion Region</ReligiousRegion>
+          <PermanentResident>P</PermanentResident>
+          <VisaSubClass>101</VisaSubClass>
+          <VisaStatisticalCode>05</VisaStatisticalCode>
+        </Demographics>
+        <AddressList>
+          <Address Type ="0123" Role="012A">
+            <Street>
+              <Line1>Unit1/10</Line1>
+              <Line2>Barkley Street</Line2>
+            </Street>
+            <City>Yarra Glenn</City>
+            <StateProvince>VIC</StateProvince>
+            <Country>1101</Country>
+            <PostalCode>9999</PostalCode>
+          </Address>
+          <Address Type="0123A" Role="1073">
+            <Street>
+              <Line1>34 Term Address Street</Line1>
+            </Street>
+            <City>Home Town</City>
+            <StateProvince>WA</StateProvince>
+            <Country>1101</Country>
+            <PostalCode>9999</PostalCode>
+          </Address>
+        </AddressList>
+        <PhoneNumberList>
+          <PhoneNumber Type="0096">
+            <Number>03 9637-2289</Number>
+            <Extension>72289</Extension>
+            <ListedStatus>Y</ListedStatus>
+          </PhoneNumber>
+          <PhoneNumber Type="0888">
+            <Number>0437-765-234</Number>
+            <ListedStatus>N</ListedStatus>
+          </PhoneNumber>
+        </PhoneNumberList>
+        <EmailList>
+          <Email Type="01">fsmith@yahoo.com</Email>
+          <Email Type="02">freddy@gmail.com</Email>
+        </EmailList>
+      </PersonInfo>
+
+      <Title>Principal</Title>
+      <EmploymentStatus>A</EmploymentStatus>
+      
+       <MostRecent>
+         <SchoolLocalId>S12345</SchoolLocalId>
+		 <LocalCampusId>D</LocalCampusId>
+		 <!--<SchoolACARAId>VIC687</SchoolACARAId>-->
+		 <NAPLANClassList>
+				<ClassCode>9</ClassCode>
+				<ClassCode>7</ClassCode>
+		 </NAPLANClassList>
+         <HomeGroup>9G</HomeGroup>
+	   </MostRecent>
+
+      
+    </StaffPersonal>
+   
+  </xhtml:Example>
+</DataObject>

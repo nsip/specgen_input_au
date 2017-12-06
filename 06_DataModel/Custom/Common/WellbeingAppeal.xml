@@ -1,0 +1,122 @@
+<DataObject name="WellbeingAppeal">
+
+  <Key>@RefId</Key>
+  
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>WellbeingAppeal</Element>
+    <Description>
+      <p>A WellbeingAppeal is information about an “appeal” or a “request” in regard to a (negative/punitive) WellbeingResponse to a student event.</p>
+    </Description>
+  </Item>
+
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The ID (GUID) assigned to uniquely identify this WellbeingAppeal.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+  <Item>
+    <Element>StudentPersonalRefId</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The ID (GUID) of the student to whom this WellbeingAppeal belongs.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Element>SchoolInfoRefId</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The ID (GUID) of the school for which this WellbeingAppeal is being reported.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Element>WellbeingResponseRefId</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The ID (GUID) of the WellbeingResponse for which this WellbeingAppeal is in response to.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  
+   <Item>
+    <Element>LocalAppealId</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Local system Id of the Appeal.</p>
+    </Description>
+     <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>
+  
+   <Item>
+    <Element>AppealStatusCode</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Status of WellbeingAppeal.</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsWellbeingAppealStatusType"></Type>
+  </Item>
+  
+  <Item>
+    <Element>Date</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The calendar date on which this WellbeingAppeal was registered.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+    
+  <Item>
+    <Element>AppealNotes</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Text relating to the particular WellbeingAppeal.</p>
+    </Description>
+    <Type name="xs:string"></Type>
+  </Item>
+  
+  <Item>
+    <Element>AppealOutcome</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Outcome of the particular WellbeingAppeal if known.</p>
+    </Description>
+    <Type name="xs:string"></Type>
+  </Item>
+ 
+   <Item>
+    <Element>DocumentList</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Describes the Location of any associated documents kept in relation to this Appeal.</p>
+    </Description>
+     <Type ref="CommonTypes" name="WellbeingDocumentListType"></Type>
+  </Item>
+  
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+  <xhtml:Example xmlns="" name="WellbeingAppeal">
+    <WellbeingAppeal RefId="2FFB63B4-CFEF-4820-8501-E7D1E54555CB">
+      <StudentPersonalRefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</StudentPersonalRefId>
+      <SchoolInfoRefId>CA285746-359D-7510-1A8C-36432A901A16</SchoolInfoRefId>
+      <WellbeingResponseRefId>BC385746-359D-7510-1A8C-36432A901A36</WellbeingResponseRefId>
+      <AppealStatusCode>SU</AppealStatusCode>
+      <Date>2017-11-01</Date>
+      <AppealNotes>This Appeal was successful.</AppealNotes>
+    </WellbeingAppeal>
+
+  </xhtml:Example>
+</DataObject>
