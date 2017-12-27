@@ -7,9 +7,7 @@
 
 	<Group name="SIF AU">
 		<Intro>
-			<p>
-				The introduction for the SIF AU data model.
-			</p>
+			<p></p>
 		</Intro>
 		<xi:include parse="text" href="Common/SchoolInfo.xml"/>
 		<xi:include parse="text" href="Common/SystemRole.xml"/>		

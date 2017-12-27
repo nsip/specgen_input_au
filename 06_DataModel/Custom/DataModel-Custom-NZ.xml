@@ -7,9 +7,7 @@
 	
 	<Group name="SIF NZ">
 		<Intro>
-			<p>
-				The introduction for the SIF New Zealand data model.
-			</p>
+			<p></p>
 		</Intro>
 
 		<!-- Include data model here -->		
