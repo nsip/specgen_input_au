@@ -1,16 +1,9 @@
-<DataObject name="Activity"
-	xmlns:xs="http://www.w3.org/2001/XMLSchema"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:xi="http://www.w3.org/2001/XInclude"
-    xmlns:xhtml="http://www.w3.org/1999/xhtml"
-	
-    xmlns="http://sifassociation.org/SpecGen">
-		<!-- Include data model here -->		
-			
+<DataObject name="Activity">
 	<Key>@RefId</Key>
 	<EventsReported>true</EventsReported>
 	<Item>
 		<Element>Activity</Element>
+		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>
         The work assigned to students, an educational event planned by a teacher to deliver a particular educational concept
@@ -21,14 +14,14 @@
 	<Item>
 		<Attribute>RefId</Attribute>
 		<Characteristics>M</Characteristics>
-	    <privacyRating>L</privacyRating>
+	    <privacyRating>Low</privacyRating>
 		<Description/>
 		<Type ref="CommonTypes" name="RefIdType"/>
 	</Item>
 	<Item>
 		<Element>Title</Element>
 		<Characteristics>O</Characteristics>
-		<privacyRating>L</privacyRating>
+		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>Descriptive name of the activity.</p>
 		</Description>
@@ -37,7 +30,7 @@
 	<Item>
 		<Element>Preamble</Element>
 		<Characteristics>O</Characteristics>
-		<privacyRating>L</privacyRating>
+		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>Description and context for the activity.</p>
 		</Description>
@@ -47,7 +40,7 @@
 	<Item>
 		<Element>TechnicalRequirements</Element>
 		<Characteristics>O</Characteristics>
-		<privacyRating>L</privacyRating>
+		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>List of Operating system, network, and other technical requirements for the activity, if applicable.</p>
 		</Description>
@@ -58,7 +51,7 @@
 	<Item>
 		<Element>SoftwareRequirementList</Element>
 		<Characteristics>O</Characteristics>
-        <privacyRating>L</privacyRating>
+        <privacyRating>Low</privacyRating>
 		<Description>
 			<p>Contains information about required software.</p>
 		</Description>
@@ -68,7 +61,7 @@
 	<Item>
 		<Element>EssentialMaterials</Element>
 		<Characteristics>O</Characteristics>
-		<privacyRating>L</privacyRating>
+		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>Essential materials required to engage in this activity.</p>
 		</Description>
@@ -79,7 +72,7 @@
 	<Item>
 		<Element>LearningObjectives</Element>
 		<Characteristics>O</Characteristics>
-		<privacyRating>L</privacyRating>
+		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>Educational objectives of the activity.</p>
 		</Description>
@@ -89,7 +82,7 @@
 	<Item>
 		<Element>LearningStandards</Element>
 		<Characteristics>O</Characteristics>
-		<privacyRating>L</privacyRating>
+		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>Associated <code>LearningStandardItem</code>objects.</p>
 		</Description>
@@ -99,14 +92,14 @@
 	<Item>
 		<Element>SubjectArea</Element>
 		<Characteristics>O</Characteristics>
-		<privacyRating>L</privacyRating>
+		<privacyRating>Low</privacyRating>
 		<Type ref="CommonTypes" name="SubjectAreaType"/>
 	</Item>
 	
 	<Item>
 		<Element>Prerequisites</Element>
 		<Characteristics>O</Characteristics>
-		<privacyRating>L</privacyRating>
+		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>Skills or competencies the student must have to engage in activity.</p>
 		</Description>
@@ -116,7 +109,7 @@
 	<Item>
 		<Element>Students</Element>
 		<Characteristics>O</Characteristics>
-		<privacyRating>L</privacyRating>
+		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>Links to any students or group or category of students that this activity is for.</p>
 		</Description>
@@ -126,7 +119,7 @@
 	<Item>
 		<Element>SourceObjects</Element>
 		<Characteristics>O</Characteristics>
-		<privacyRating>L</privacyRating>
+		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>Source objects assigned to students.</p>
 		</Description>
@@ -137,7 +130,7 @@
 	<Item>
 		<Element>Points</Element>
 		<Characteristics>O</Characteristics>
-		<privacyRating>L</privacyRating>
+		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>Number of possible points for an activity.</p>
 		</Description>
@@ -146,7 +139,7 @@
 	
 	<Item>
 		<Element>ActivityTime</Element>
-		<Characteristics>M</Characteristics>
+		<Characteristics>Low</Characteristics>
 		<Description>
 			<p>Time structures for the activity.</p>
 		</Description>
@@ -156,7 +149,7 @@
 	<Item>
 		<Element>AssessmentRefId</Element>
 		<Characteristics>O</Characteristics>
-		<privacyRating>L</privacyRating>
+		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>Link to the SIF Assessment object containing the evaluation information for this activity.</p>
 		</Description>
@@ -166,6 +159,7 @@
 	<Item>
 		<Element>MaxAttemptsAllowed</Element>
 		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>How many tries allowed.</p>
 		</Description>
@@ -175,7 +169,7 @@
 	<Item>
 		<Element>ActivityWeight</Element>
 		<Characteristics>O</Characteristics>
-		<privacyRating>L</privacyRating>
+		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>The percentage weight of the activity during the particular course or term.</p>
 		</Description>
@@ -185,6 +179,7 @@
 	<Item>
 		<Element>Evaluation</Element>
 		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>Field for non-numeric types of grading and evaluation such as "narrative."</p>
 		</Description>
@@ -193,7 +188,7 @@
 	<Item>
 		<Attribute>EvaluationType</Attribute>
 		<Characteristics>M</Characteristics>
-		<privacyRating>L</privacyRating>
+		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>A qualifer for what type of evaluation this is. Valid values are "Inline" and "RefId". Inline values are contained in the optional Description element, RefIds are contained in the AssessmentRefId element.</p>
 		</Description>
@@ -210,6 +205,7 @@
 	<Item>
 		<Element>/Description</Element>
 		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>A free text description of the evaluation to be used for this activity</p>
 		</Description>
@@ -219,7 +215,7 @@
 	<Item>
 		<Element>LearningResources</Element>
 		<Characteristics>O</Characteristics>
-		<privacyRating>L</privacyRating>
+		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>Learning resources that support this activity.</p>
 		</Description>
@@ -229,13 +225,13 @@
 	<Item>
 		<Element>SIF_Metadata</Element>
 		<Characteristics>O</Characteristics>
-		<privacyRating>L</privacyRating>
+		<privacyRating>Low</privacyRating>
 		<Type ref="CommonTypes" name="SIF_MetadataType"/>
 	</Item>
 	<Item>
 		<Element>SIF_ExtendedElements</Element>
 		<Characteristics>O</Characteristics>
-		<privacyRating>L</privacyRating>
+		<privacyRating>Low</privacyRating>
 		<Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
 	</Item>
 	<xhtml:Example name="Activity - Example 1" xmlns="">
