@@ -10,6 +10,7 @@
    
    <Item>
 		<Element>ResourceUsage</Element>
+		<privacyRating>Low</privacyRating>
 		<Description>
 		  <p>
 			This object tracks resource usage by a student or staff member at a school over a defined time period.
@@ -20,6 +21,7 @@
    <Item>
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The SIF RefId that uniquely identifies this object.</p>
     </Description>
@@ -28,6 +30,7 @@
   <Item>
     <Element>SchoolInfoRefId</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>SIF RefId that identifies the school providing the resource being tracked.</p>
     </Description>
@@ -37,6 +40,7 @@
   <Item>
     <Element>ResourceUsageContentType</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Information about the ResourceUsage.</p>
     </Description>
@@ -44,6 +48,7 @@
    <Item>
     <Element>/Code</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Codeset for type of resource being tracked.</p>
     </Description>
@@ -52,6 +57,7 @@
   <Item>
     <Element>/LocalDescription</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Local description of type of resource being tracked.</p>
     </Description>
@@ -60,6 +66,7 @@
   <Item>
       <Element>ResourceReportColumnList</Element>
       <Characteristics>M</Characteristics>
+	  <privacyRating>Low</privacyRating>
       <Description>
          <p>Definitions of the values given in ResourceReportList/ ResourceReport/ ReportRow.</p>
       </Description>
@@ -69,6 +76,7 @@
     <Item>
        <Element>/ResourceReportColumn</Element>
        <Characteristics>MR</Characteristics>
+	   <privacyRating>Low</privacyRating>
        <Description>
          <p>Definition of a single value given in ResourceReportList/ ResourceReport/ ReportRow; the value definitions in ReportColumnList appear in the same order as they do in ReportRow.</p>
        </Description>
@@ -77,6 +85,7 @@
     <Item>
     <Element>//ColumnName</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Name of a ReportRow value.</p>
     </Description>
@@ -87,6 +96,7 @@
   <Item>
     <Element>//ColumnDescription</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Description of a ReportRow value.</p>
     </Description>
@@ -96,6 +106,7 @@
   <Item>
     <Element>//ColumnDelimiter</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Delimiter separating this ReportRow value from the next; is assumed by default to be ",", with CSV parsing rules.</p>
     </Description>
@@ -106,6 +117,7 @@
     <Item>
       <Element>ResourceReportLineList</Element>
       <Characteristics>M</Characteristics>
+	  <privacyRating>Low</privacyRating>
       <Description>
          <p>List of resource reports, one per user.</p>
       </Description>
@@ -115,6 +127,7 @@
    <Item>
 		<Element>/ResourceReportLine</Element>
 		<Characteristics>MR</Characteristics>
+		<privacyRating>Low</privacyRating>
 		<Description>List of resource reports, one per user.</Description>
 		 
   </Item>
@@ -122,12 +135,14 @@
   <Item>
 		<Element>//SIF_RefId</Element>
 		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
 		<Description>SIF RefId that identifies the student, staff or group whose usage is being tracked.</Description>
 		 <Type name="IdRefType"></Type> 
   </Item>
   <Item>
     <Attribute>SIF_RefObject</Attribute>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>
         The type of SIF object that the <code>ReportUserRefId</code> attribute identifies.
@@ -149,6 +164,7 @@
    <Item>
     <Element>//StartDate</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Starting date for reporting period of resource usage.</p>
     </Description>
@@ -157,6 +173,7 @@
   <Item>
     <Element>//EndDate</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>End date for reporting period of resource usage.</p>
     </Description>
@@ -165,6 +182,7 @@
   <Item>
     <Element>//CurrentCost</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Current cost of reported resource usage.</p>
     </Description>
@@ -173,6 +191,7 @@
    <Item>
     <Element>//ReportRow</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Key of report-specific values, defined in ReportColumn</p>
     </Description>

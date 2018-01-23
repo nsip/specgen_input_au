@@ -11,6 +11,7 @@
 
   <Item>
     <Element>CalendarSummary</Element>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>This object provides a summary of a school's calendar information for a given school year.  A school may have more than one calendar per school year (e.g., one calendar for Kindergarten students, one for special education students, one for seniors, or one for each calendar track), and each may have different days in session, start and end dates, minutes per day, instructional minutes, etc.</p>
     </Description>
@@ -19,7 +20,7 @@
   <Item>
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Description>
       <p>The ID (GUID) of the calendar to which this information relates.</p>
     </Description>
@@ -28,7 +29,7 @@
   <Item>
     <Element>SchoolInfoRefId</Element>
     <Characteristics>M</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Description>
       <p>The ID (GUID) of the school for which this calendar information is being reported.</p>
     </Description>
@@ -37,7 +38,7 @@
   <Item>
     <Element>SchoolYear</Element>
     <Characteristics>M</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Description>
       <p>School year for which the information is applicable, expressed as the four-digit year in which the school year ends (e.g., "2007").</p>
     </Description>
@@ -46,7 +47,7 @@
   <Item>
     <Element>LocalId</Element>
     <Characteristics>M</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Description>
       <p>The locally assigned identifier for this calendar.</p>
     </Description>
@@ -55,7 +56,7 @@
   <Item>
     <Element>Description</Element>
     <Characteristics>O</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Description>
       <p>Textual description of the school calendar.</p>
     </Description>
@@ -64,7 +65,7 @@
   <Item>
     <Element>DaysInSession</Element>
     <Characteristics>M</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Description>
       <p>The total number of days that the school was or is anticipated to be in session during the school year.  Also included are days on which the education institution facility is closed and the student body as a whole is engaged in planned activities off-campus under the guidance and direction of staff members.</p>
     </Description>
@@ -73,7 +74,7 @@
   <Item>
     <Element>StartDate</Element>
     <Characteristics>O</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Description>
       <p>The first calendar date, whether or not instruction was provided. If both CalendarSummary and CalendarDate objects are supported, StartDate must be the date of the first chronological instance of CalendarDate for the school's calendar.</p>
     </Description>
@@ -82,7 +83,7 @@
   <Item>
     <Element>EndDate</Element>
     <Characteristics>O</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Description>
       <p>The last calendar date, whether or not instruction was provided. If both CalendarSummary and CalendarDate objects are supported, EndDate must be the last chronological instance of CalendarDate for the school's calendar.</p>
     </Description>
@@ -91,7 +92,7 @@
   <Item>
     <Element>FirstInstructionDate</Element>
     <Characteristics>O</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Description>
       <p>The first day of student instruction.</p>
     </Description>
@@ -100,7 +101,7 @@
   <Item>
     <Element>LastInstructionDate</Element>
     <Characteristics>O</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Description>
       <p>The last day of student instruction (including days or times that students are present for purposes of testing and/or evaluation, but not including whole or part-days whose sole purposes is for distribution of report cards).</p>
     </Description>
@@ -109,7 +110,7 @@
   <Item>
     <Element>GraduationDate</Element>
     <Characteristics>O</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Description>
       <p>Date of graduation ceremony.</p>
     </Description>
@@ -118,7 +119,7 @@
   <Item>
     <Element>InstructionalMinutes</Element>
     <Characteristics>O</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Description>
       <p>The total number of instructional minutes for this calendar for the school year.</p>
     </Description>
@@ -127,7 +128,7 @@
   <Item>
     <Element>MinutesPerDay</Element>
     <Characteristics>O</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Description>
       <p>The number of minutes in the day in which the school is normally in session.</p>
     </Description>
@@ -136,7 +137,7 @@
   <Item>
     <Element>YearLevels</Element>
     <Characteristics>O</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Description>
       <p>Collection of year levels applicable to this school calendar.</p>
     </Description>
@@ -145,13 +146,13 @@
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
   </Item>
 

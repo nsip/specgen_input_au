@@ -10,6 +10,7 @@
   <EventsReported>true</EventsReported>
   <Item>
     <Element>LEAInfo</Element>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>This object contains information about a school district, region, or other Local, State or Jurisdiction Educational Authority.</p>
     </Description>
@@ -18,6 +19,7 @@
 
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The GUID of the LEA whose information this is.</p>
     </Description>
@@ -27,6 +29,7 @@
     <Element>LocalId</Element>
 
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The locally-assigned identifier for this LEA.</p>
     </Description>
@@ -36,6 +39,7 @@
     <Element>StateProvinceId</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The state-assigned identifier for this LEA.</p>
     </Description>
@@ -45,6 +49,7 @@
     <Element>CommonwealthId</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Commonwealth Identifier for this Entity.</p>
     </Description>
@@ -54,6 +59,7 @@
     <Element>LEAName</Element>
 
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Name of LEA.</p>
     </Description>
@@ -63,6 +69,7 @@
     <Element>LEAURL</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>URL for the LEA.</p>
     </Description>
@@ -73,6 +80,7 @@
     <Element>EducationAgencyType</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The classification of the education agency within the geographic boundaries of a state according to the level of administrative and operational control.</p>
     </Description>
@@ -82,6 +90,7 @@
   <Item>
     <Element>LEAContactList</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Type ref="CommonTypes" name="LEAContactListType"></Type>
   </Item>
    
@@ -89,6 +98,7 @@
     <Element>PhoneNumberList</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The LEA's phone number(s).</p>
     </Description>
@@ -98,6 +108,7 @@
     <Element>AddressList</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The LEA's address(es).</p>
     </Description>
@@ -106,6 +117,7 @@
   <Item>
     <Element>OperationalStatus</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Operational condition of a school.</p>
     </Description>
@@ -114,6 +126,7 @@
   <Item>
     <Element>JurisdictionLowerHouse</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Lower House area  that the school/campus  belongs to.</p>
     </Description>
@@ -122,6 +135,7 @@
   <Item>
     <Element>SLA</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Statistical Local Area that the school/campus belongs to.</p>
     </Description>

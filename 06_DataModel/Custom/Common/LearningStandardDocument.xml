@@ -9,6 +9,7 @@
   <EventsReported>true</EventsReported>
   <Item>
     <Element>LearningStandardDocument</Element>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>
         A curriculum standards document or the like published by a national, state, district, school site, professional association or other interested party. The LearningStandardDocument reflects an expectation of student work.
@@ -19,6 +20,7 @@
 
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Id for the standards document</p>
     </Description>
@@ -38,6 +40,7 @@
     <Element>Title</Element>
 
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Name of curriculum document, i.e., "NSW History Curriculum K-10."</p>
     </Description>
@@ -47,6 +50,7 @@
     <Element>Description</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Description of the standards document.</p>
     </Description>
@@ -56,6 +60,7 @@
     <Element>RichDescription</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Description of the curriculum document that allows pictures as well as text..</p>
     </Description>
@@ -65,6 +70,7 @@
     <Element>Source</Element>
 
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>
         Defines source of standard document.  This is the descriptive type of the organization listed in <code>Organization</code>. It serves to describe the type of the standards contained within the document.
@@ -98,6 +104,7 @@
   <Item>
     <Element>Organizations</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
        <Type ref="CommonTypes" name="OrganizationsType"></Type>
   </Item>
 
@@ -105,6 +112,7 @@
   <Item>
     <Element>Authors</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
      <Type ref="CommonTypes" name="AuthorsType"></Type>
   </Item>
   
@@ -112,6 +120,7 @@
     <Element>OrganizationContactPoint</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>A brief description of how to contact the organization maintaining the standards. It could be a phone number, email address, or URL.</p>
     </Description>
@@ -121,6 +130,7 @@
   <Item>
     <Element>SubjectAreas</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
      <Type ref="CommonTypes" name="ACStrandAreaListType"></Type>
   </Item>
   
@@ -128,6 +138,7 @@
     <Element>DocumentStatus</Element>
 
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description></Description>
     <Values>
       <Value>
@@ -148,6 +159,7 @@
     <Element>DocumentDate</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The date the current status was achieved.</p>
     </Description>
@@ -157,6 +169,7 @@
     <Element>LocalAdoptionDate</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The date the local organization adopted this standard document</p>
     </Description>
@@ -166,6 +179,7 @@
     <Element>LocalArchiveDate</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The date the local organization stopped using this standard document and superseded by a new document.</p>
     </Description>
@@ -175,6 +189,7 @@
     <Element>EndOfLifeDate</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>This is the date that the governing organization retired this document.&#160;</p>
     </Description>
@@ -184,6 +199,7 @@
     <Element>Copyright</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Copyright for document.</p>
     </Description>
@@ -192,6 +208,7 @@
     <Element>/Date</Element>
 
     <Characteristics>C</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Copyright date</p>
     </Description>
@@ -201,6 +218,7 @@
     <Element>/Holder</Element>
 
     <Characteristics>C</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Name of the copyright holder</p>
     </Description>
@@ -210,6 +228,7 @@
     <Element>YearLevels</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>SIF common YearLevels element</p>
     </Description>
@@ -219,6 +238,7 @@
     <Element>RepositoryDate</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Date document data was added to the repository</p>
     </Description>
@@ -228,6 +248,7 @@
     <Element>LearningStandardItemRefId</Element>
 
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Link to the first/top LearningStandardItem in the standard hierarchy</p>
     </Description>
@@ -238,6 +259,7 @@
   <Item>
     <Element>RelatedLearningStandards</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Type ref="CommonTypes" name="LearningStandardsDocumentType"></Type>
   </Item>
   

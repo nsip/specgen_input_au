@@ -10,6 +10,7 @@
   <EventsReported>true</EventsReported>
   <Item>
     <Element>StudentSchoolEnrollment</Element>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>
         This object defines information related to a student's enrollment.  StudentSchoolEnrollment
@@ -39,6 +40,7 @@
 
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The ID (GUID) that uniquely identifies a particular enrollment.</p>
     </Description>
@@ -48,6 +50,7 @@
 
     <Element>StudentPersonalRefId</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The ID (GUID) of the student to whom this information is linked.</p>
     </Description>
@@ -57,32 +60,37 @@
 
     <Element>SchoolInfoRefId</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The ID (GUID) of the school to which this enrollment applies.</p>
     </Description>
     <Type ref="CommonTypes" relationship="records enrollment of student in" count="1:1" name="IdRefType"></Type>
   </Item>
   <Item>
-	  <Element>LocalId</Element>
-	  <Characteristics>O</Characteristics>
-	  <Description>
-		  <p>The locally-assigned identifier for this student enrollment.</p>
-	  </Description>
-	  <Type ref="CommonTypes" name="LocalId"/> 
-  </Item>
   
-  <Item>
-      <Element>MembershipType</Element>
-      <Characteristics>M</Characteristics>
-      <Description>
-		  <p>The type of this enrollment as it relates to the school identified in SchoolInfoRefId.</p>
-      </Description>
-      <Type ref="CodeSets" name="AUCodeSetsSchoolEnrollmentTypeType"></Type>
+     <Item>
+		<Element>LocalId</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The locally-assigned identifier for this student enrollment.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalId"/> 
+	</Item>
+
+    <Element>MembershipType</Element>
+    <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>The type of this enrollment as it relates to the school identified in SchoolInfoRefId.</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsSchoolEnrollmentTypeType"></Type>
   </Item>
   <Item>
 
     <Element>TimeFrame</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>
         The timeframe of the enrollment based on the <code>SIF_Date</code> of last publication. For events, it is determined as of the date the event is generated. For requests and responses, it is calculated based on the date of the request.
@@ -94,6 +102,7 @@
     <Element>SchoolYear</Element>
 
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>
         School year for which this enrollment is applicable, expressed as the four-digit year in which the school year ends (e.g. <code>2007</code>). StudentSchoolEnrollment instances must not span multiple school years.
@@ -104,6 +113,7 @@
   <Item>
     <Element>EntryDate</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The date from when this enrollment is valid.</p>
     </Description>
@@ -113,6 +123,7 @@
   <Item>
     <Element>EntryType</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>Container elements for EntryType information</Description>
     <Type ref="CommonTypes" name="StudentEntryContainerType"></Type>
   </Item>  
@@ -123,6 +134,7 @@
     <Element>YearLevel</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Year or academic level of student.</p>
     </Description>
@@ -131,6 +143,7 @@
   <Item>
     <Element>Homeroom</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Homeroom for this enrollment.</p>
     </Description>
@@ -139,6 +152,7 @@
   <Item>
     <Attribute>SIF_RefObject</Attribute>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The name of the object referenced.</p>
     </Description>
@@ -151,6 +165,7 @@
   <Item>
     <Element>Advisor</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Staff member assigned as an advisor.</p>
     </Description>
@@ -159,6 +174,7 @@
   <Item>
     <Attribute>SIF_RefObject</Attribute>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The name of the object referenced.</p>
     </Description>
@@ -171,6 +187,7 @@
   <Item>
     <Element>Counselor</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Staff member assigned as an advisor.</p>
     </Description>
@@ -179,6 +196,7 @@
   <Item>
     <Attribute>SIF_RefObject</Attribute>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The name of the object referenced.</p>
     </Description>
@@ -192,6 +210,7 @@
   <Item>
     <Element>Homegroup</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The name of the homegroup the student enrollment belongs to.</p>
     </Description>
@@ -201,6 +220,7 @@
   <Item>
     <Element>ACARASchoolId</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>ACARA School Id.</p>
     </Description>
@@ -209,6 +229,7 @@
   <Item>
     <Element>ClassCode</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The name of the class code the student belongs to, for the purposes of NAPLAN registration.</p>
     </Description>
@@ -218,6 +239,7 @@
    <Item>
     <Element>TestLevel</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Values: 3,5,7,9. The test level that the student is registering for.</p>
     </Description>
@@ -227,6 +249,7 @@
   <Item>
     <Element>ReportingSchool</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Is this the school to which student's report is to be made available?</p>
     </Description>
@@ -236,6 +259,7 @@
   <Item>
     <Element>House</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The name of the house the student belongs to.</p>
     </Description>
@@ -245,6 +269,7 @@
   <Item>
     <Element>IndividualLearningPlan</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Medium</privacyRating>
     <Description>
       <p>Does this student have an individual learning plan in place?</p>
     </Description>
@@ -254,6 +279,7 @@
   <Item>
     <Element>Calendar</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The calendar assigned to this enrollment. </p>
     </Description>
@@ -263,6 +289,7 @@
   <Item>
     <Attribute>SIF_RefObject</Attribute>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The name of the object referenced.</p>
     </Description>
@@ -277,6 +304,7 @@
     <Element>ExitDate</Element>
 
     <Characteristics>C</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>
         The last school calendar day of this enrollment. If the student has exited the school or the enrollment has a <code>RecordClosureReason</code>, <code>ExitDate</code> must have a value.
@@ -289,6 +317,7 @@
   <Item>
     <Element>ExitStatus</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>Container element for exit status codes.</Description>
     <Type ref="CommonTypes" name="StudentExitStatusContainerType"></Type>
   </Item>
@@ -298,6 +327,7 @@
     <Element>ExitType</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description></Description>
     <Type ref="CommonTypes" name="StudentExitContainerType"></Type>
   </Item>
@@ -306,6 +336,7 @@
     <Element>FTE</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description> 
       <p>Full-time equivalent numeric value of the student's course load during this enrollment, expressed in decimal form, where 1.00 represents a full-time enrollment.</p>
     </Description>
@@ -320,6 +351,7 @@
     <Element>FTPTStatus</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>An indication of whether the student is enrolled full time or part time.</p>
     </Description>
@@ -329,6 +361,7 @@
     <Element>FFPOS</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Enrolled Full-fee Paying Overseas Student (FFPOS) Status.  Enrolment Frame Element 10 NSCC Collection.</p>  
 	  <p>The status of an enrolment in a CRICOS course and whether the person is liable for a fee which reflects the imputed full average cost of the person's education at the school (including both recurrent and capital costs) irrespective of the actual arrangements to meet the fee.</p>
@@ -340,6 +373,7 @@
     <Element>CatchmentStatus</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Container element for location of an individual's legal residence relative to (within or outside) the boundaries of the school for this enrolment. Enrolment Catchment Status.</p>
     </Description>
@@ -350,6 +384,7 @@
   <Item>
     <Element>RecordClosureReason</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>The reason why this enrollment was closed.  The EndOfYear option must be used to convey status change due to rollover activity.</p>
     </Description>
@@ -372,6 +407,7 @@
   <Item>
     <Element>PromotionInfo</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Medium</privacyRating>
     <Description>
       <p>Information on a student's promotion, retention, or demotion related to this enrollment instance.</p>
     </Description>
@@ -384,6 +420,7 @@
     <Element>PreviousSchool</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>If the student has previously been enrolled at a school, i.e. student is transferring, the previous school number.</p>
     </Description>
@@ -394,6 +431,7 @@
     <Element>DestinationSchool</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>If the student has exited the school, the local id of the school to which the student has transferred to.</p>
     </Description>
@@ -404,6 +442,7 @@
     <Element>StudentSubjectChoiceList</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>List of Student Subject Choices where available.</p>
     </Description>
@@ -413,6 +452,7 @@
     <Item>
     <Element>StartedAtSchoolDate</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>First date the student was enrolled at this school if known.</p>
     </Description>

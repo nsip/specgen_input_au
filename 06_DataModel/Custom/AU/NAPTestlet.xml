@@ -9,6 +9,7 @@
   <EventsReported>true</EventsReported>
   <Item>
     <Element>NAPTestlet</Element>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>This object represents a student’s attempt to undergo NAP assessment in a particular test.</p>
     </Description>
@@ -16,6 +17,7 @@
   <Item>
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Type ref="CommonTypes" name="RefIdType"></Type>
     <Description>
       <p>The GUID that uniquely identifies an instance of the object.</p>
@@ -25,6 +27,7 @@
    <Item>
     <Element>NAPTestRefId</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Type ref="CommonTypes" name="IdRefType"></Type>
     <Description>
       <p>The GUID for the test that the student is sitting. May be linking to prior codeframe download.</p>
@@ -34,6 +37,7 @@
     <Item>
 		<Element>NAPTestLocalId</Element>
 		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>Local identifier of NAP test.</p>
 		</Description>
@@ -43,12 +47,14 @@
    <Item>
     <Element>TestletContent</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Type ref="CommonTypes" name="NAPTestletContentType"></Type>
   </Item>
   
    <Item>
 		<Element>TestItemList</Element>
 		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>List of test items contained in the testlet.</p>
 		</Description>

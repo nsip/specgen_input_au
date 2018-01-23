@@ -9,20 +9,23 @@
   <Key>@RefId</Key>
   <Item>
     <Element>StudentActivityInfo</Element>
+	 <privacyRating>Low</privacyRating>
     <Description>
       <p>Co-curricular or extra-curricular activities (e.g., student organizations, inter-school sports, athletics, publications, band, orchestra, and service activities) in which students may participate.</p>
     </Description>
   </Item>
   <Item>
     <Attribute>RefId</Attribute>
-    <Characteristics>M</Characteristics>
     <Description>The ID (GUID) that uniquely identifies the instance of the object.</Description>
+    <Characteristics>M</Characteristics>
+	 <privacyRating>Low</privacyRating>
     <Type ref='CommonTypes' name='RefIdType'/>
   </Item>
 
   <Item>
     <Element>Title</Element>
     <Characteristics>M</Characteristics>
+	 <privacyRating>Low</privacyRating>
     <Description>
       <p>Name of the co-curricular or extra-curricular activity. </p>
     </Description>
@@ -32,6 +35,7 @@
   <Item>
     <Element>Description</Element>
     <Characteristics>O</Characteristics>
+	 <privacyRating>Low</privacyRating>
     <Description>
       <p>The description of the co-curricular or extra-curricular activity. </p>
     </Description>
@@ -41,6 +45,7 @@
   <Item>
     <Element>StudentActivityType</Element>
     <Characteristics>M</Characteristics>
+	 <privacyRating>Low</privacyRating>
     <Description>
       <p>Information regarding the co-curricular or extra-curricular activity. </p>
     </Description>
@@ -52,6 +57,7 @@
   <Item>
     <Element>StudentActivityLevel</Element>
     <Characteristics>O</Characteristics>
+	 <privacyRating>Low</privacyRating>
     <Description>
       <p>A description of the separation of level in the activity (e.g. House, Inter-school, Club, State, National).</p>
     </Description>
@@ -60,6 +66,7 @@
   <Item>
     <Element>YearLevels</Element>
     <Characteristics>O</Characteristics>
+	 <privacyRating>Low</privacyRating>
     <Description>
       <p>Collection of year levels applicable to this co-curricular or extra-curricular activity. </p>
     </Description>
@@ -68,6 +75,7 @@
   <Item>
     <Element>CurricularStatus</Element>
     <Characteristics>O</Characteristics>
+	 <privacyRating>Low</privacyRating>
     <Description>
       <p>An indication of the degree to which an activity is related to a student's curriculum. </p>
     </Description>
@@ -76,6 +84,7 @@
   <Item>
     <Element>Location</Element>
     <Characteristics>O</Characteristics>
+	 <privacyRating>Low</privacyRating>
     <Description>
       <p>Location where the activity takes place.</p>
     </Description>

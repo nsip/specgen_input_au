@@ -9,12 +9,14 @@
   <Key>@RefId</Key>
   <Item>
     <Element>StudentContactPersonal</Element>
+	<privacyRating>High</privacyRating>
     <Description>
       This object contains information about the people who are referenced as student contacts.
     </Description>
   </Item>
   <Item>
     <Attribute>RefId</Attribute>
+    <privacyRating>Low</privacyRating>
     <Characteristics>M</Characteristics>
     <Description>The ID (GUID) that uniquely identifies the instance of the object.</Description>
     <Type ref='CommonTypes' name='RefIdType'/>
@@ -23,6 +25,7 @@
     <Element>LocalId</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Medium</privacyRating>
     <Description>
       <p>The locally-assigned identifier for this person. Note: LocalId may be used as a unique person identifier rather than a unique contact identifier. In this case there may be more than one StudentContactPersonal instance with the same LocalId.</p>
     </Description>
@@ -32,6 +35,7 @@
   <Item>
 		<Element>OtherIdList</Element>
 		<Characteristics>O</Characteristics>
+		<privacyRating>Medium</privacyRating>
 		<Description>
 			<p>Lists all "other" identifiers associated with the contact.</p>
 		</Description>
@@ -41,6 +45,7 @@
   <Item> 
     <Element>PersonInfo</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>Personal Information </p>
     </Description>
@@ -49,6 +54,7 @@
   <Item>
     <Element>EmploymentType</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Medium</privacyRating>
     <Description>
       <p>Code that defines employment type. This is compulsory for Parents or Guardians of the Student.</p>
     </Description>
@@ -57,6 +63,7 @@
   <Item>
     <Element>SchoolEducationalLevel</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Medium</privacyRating>
     <Description>
       <p>The highest level of education completed by the contact person.</p>
     </Description>
@@ -65,6 +72,7 @@
   <Item>
     <Element>NonSchoolEducation</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Medium</privacyRating>
     <Description>
       <p>This reflects the level of the Contact's Non-School Education.</p>
     </Description>

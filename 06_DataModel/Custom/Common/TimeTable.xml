@@ -9,6 +9,7 @@
   <EventsReported>true</EventsReported>
   <Item>
     <Element>TimeTable</Element>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>
         The purpose of this object is to define a schedule or Time Table structure/skeleton for the school.  The Time Table is produced by the Time Tabling software.  Once the Time Table is produced, the time tabling software creates the schedule based on business rules and constraints to fit into the time table structure.
@@ -36,6 +37,7 @@
 
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>GUID that identifies this  TimeTable object.</p>
     </Description>
@@ -45,6 +47,7 @@
   <Item>
     <Element>SchoolInfoRefId</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Optional, the GUID of the SchoolInfo Object if this object is known in the zone.</p>
     </Description>
@@ -55,6 +58,7 @@
   <Item>
     <Element>SchoolYear</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>
         School year for which the information is applicable, expressed as the four-digit year in which the school year ends (e.g., "2007").
@@ -66,6 +70,7 @@
   <Item>
     <Element>LocalId</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Local TimeTable ID</p>
     </Description>
@@ -75,6 +80,7 @@
   <Item>
     <Element>Title</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Unique Name of the proposed Time Table</p>
     </Description>
@@ -84,6 +90,7 @@
   <Item>
     <Element>DaysPerCycle</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Max Number of days per Time Table cycle</p>
     </Description>
@@ -93,6 +100,7 @@
   <Item>
     <Element>PeriodsPerDay</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Max Number of periods per Time Table Day</p>
     </Description>
@@ -102,6 +110,7 @@
   <Item>
     <Element>TeachingPeriodsPerDay</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Teaching periods per day if different to PeriodsPerDay</p>
     </Description>
@@ -111,6 +120,7 @@
   <Item>
     <Element>SchoolLocalId</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Optional Local School Id</p>
     </Description>
@@ -120,6 +130,7 @@
   <Item>
     <Element>SchoolName</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The school name in plain text. </p>
     </Description>
@@ -129,6 +140,7 @@
   <Item>
     <Element>TimeTableCreationDate</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Date Schedule was created or last edited.</p>
     </Description>
@@ -138,6 +150,7 @@
   <Item>
     <Element>StartDate</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>First day of TimeTable.</p>
     </Description>
@@ -147,6 +160,7 @@
   <Item>
     <Element>EndDate</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Last day of the TimeTable.</p>
     </Description>
@@ -156,6 +170,7 @@
   <Item>
     <Element>TimeTableDayList</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Container for TimeTableDays in Schedule</p>
     </Description>

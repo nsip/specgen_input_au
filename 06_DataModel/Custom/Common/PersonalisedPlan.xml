@@ -1,16 +1,17 @@
 <DataObject name="PersonalisedPlan"
-                          xmlns:xs="http://www.w3.org/2001/XMLSchema"
-                        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                        xmlns:xi="http://www.w3.org/2001/XInclude"
-                        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+                 xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xmlns:xi="http://www.w3.org/2001/XInclude"
+                 xmlns:xhtml="http://www.w3.org/1999/xhtml"
         
-            xmlns="http://sifassociation.org/SpecGen">
+            	 xmlns="http://sifassociation.org/SpecGen">
 
   <Key>@RefId</Key>
   
   <EventsReported>true</EventsReported>
   <Item>
     <Element>PersonalisedPlan</Element>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>result of a Core Characteristic, Legal order, Pastoral Care info, ability or Student Behaviour. Will be a document, and the feeling in the room was that SIF would most usefully capture metadata around the document. Plans can be specific to a domain, but are still expected to aggregate information gathered about student in disparate locations. Extensive area and need to note in SIF only that information that needs to be transferred between systems or agencies.  Broad categories of Learning Plans that have been identified so far are Medical Plan, Learning Plan, Attendance Plan and Behavioural Plan.</p>
     </Description>
@@ -19,6 +20,7 @@
   <Item>
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>The ID (GUID) assigned to uniquely identify this PersonalisedPlan.</p>
     </Description>
@@ -27,6 +29,7 @@
   <Item>
     <Element>StudentPersonalRefId</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>The ID (GUID) of the student to whom this PersonalisedPlan belongs.</p>
     </Description>
@@ -35,6 +38,7 @@
   <Item>
     <Element>SchoolInfoRefId</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The ID (GUID) of the school for which this PersonalisedPlan is being reported.</p>
     </Description>
@@ -44,6 +48,7 @@
     <Item>
     <Element>PersonalisedPlanCategory</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>Category of PersonalisedPlan.</p>
     </Description>
@@ -53,6 +58,7 @@
    <Item>
     <Element>PersonalisedPlanStartDate</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The date the PersonalisedPlan period commenced.</p>
     </Description>
@@ -62,6 +68,7 @@
    <Item>
     <Element>PersonalisedPlanEndDate</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The date the PersonalisedPlan is due to finish.</p>
     </Description>
@@ -71,6 +78,7 @@
    <Item>
     <Element>PersonalisedPlanReviewDate</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The date the PersonalisedPlan is due to be reviewed.</p>
     </Description>
@@ -80,6 +88,7 @@
   <Item>
     <Element>PersonalisedPlanNotes</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>Text relating to the particular PersonalisedPlan.</p>
     </Description>
@@ -89,6 +98,7 @@
    <Item>
     <Element>DocumentList</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>Describes the Location of any associated documents kept in relation to this Response.</p>
     </Description>
@@ -98,6 +108,7 @@
   <Item>
     <Element>AssociatedAttachment</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>Link to any attachment.</p>
     </Description>

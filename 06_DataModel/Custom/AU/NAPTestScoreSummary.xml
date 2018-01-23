@@ -9,6 +9,7 @@
   <EventsReported>true</EventsReported>
   <Item>
     <Element>NAPTestScoreSummary</Element>
+	<privacyRating>Medium</privacyRating>
     <Description>
       <p>This object represents a the summary of aggregate scores in a NAP test for a school.</p>
     </Description>
@@ -16,6 +17,7 @@
   <Item>
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Type ref="CommonTypes" name="RefIdType"></Type>
     <Description>
       <p>The GUID that uniquely identifies an instance of the object.</p>
@@ -24,6 +26,7 @@
   <Item>
     <Element>SchoolInfoRefId</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Type ref="CommonTypes" name="IdRefType"></Type>
 	<Description>
       <p>Optional reference to a school associated with the administration of the NAP Test.</p>
@@ -32,6 +35,7 @@
   <Item>
 		<Element>SchoolACARAId</Element>
 		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>The ACARA School Id as assigned in the Australian School List.</p>
 		</Description>
@@ -41,6 +45,7 @@
   <Item>
     <Element>NAPTestRefId</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Type ref="CommonTypes" name="IdRefType"></Type>
     <Description>
       <p>The GUID for the NAP Test. May be linking to prior codeframe download.</p>
@@ -49,6 +54,7 @@
   <Item>
 		<Element>NAPTestLocalId</Element>
 		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>Local identifier of NAP test.</p>
 		</Description>
@@ -58,6 +64,7 @@
   <Item>
     <Element>DomainNationalAverage</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Type name="xs:decimal"></Type>
     <Description>
       <p>The numeric value of the national student scaled score average for the NAP domain and test level.</p>
@@ -67,6 +74,7 @@
   <Item>
     <Element>DomainSchoolAverage</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Medium</privacyRating>
     <Type name="xs:decimal"></Type>
     <Description>
       <p>The numeric value of the school student scaled score average for the NAP domain and test level.</p>
@@ -76,6 +84,7 @@
   <Item>
     <Element>DomainJurisdictionAverage</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Type name="xs:decimal"></Type>
     <Description>
       <p>The numeric value of the jurisdiction  student scaled score average for the NAP domain and test level.</p>
@@ -85,6 +94,7 @@
   <Item>
     <Element>DomainTopNational60Percent</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Type name="xs:decimal"></Type>
     <Description>
       <p>The numeric value representing the top scaled score of the National 60% band graphic for this NAP domain and test level.</p>
@@ -94,6 +104,7 @@
   <Item>
     <Element>DomainBottomNational60Percent</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Type name="xs:decimal"></Type>
     <Description>
       <p>The numeric value representing the bottom scaled score of the National 60% band graphic for this NAP domain and test level.</p>

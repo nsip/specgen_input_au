@@ -9,6 +9,7 @@
   <Key>@RefId</Key>
   <Item>
     <Element>ResourceBooking</Element>
+	<privacyRating>Low</privacyRating>
     <Description>
         <p>
           This object represents a booking for any resource for a single contiguous time period. This could be either a room or another resource, such as equipment.
@@ -19,6 +20,7 @@
   <Item>
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>The GUID of the Object</Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
   </Item>
@@ -26,6 +28,7 @@
 
     <Element>ResourceRefId</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The ID (GUID) of the resource being booked. Provided only if the resource being booked is a SIF object with a GUID.</p>
     </Description>
@@ -35,6 +38,7 @@
     <Item>
       <Attribute>SIF_RefObject</Attribute>
       <Characteristics>M</Characteristics>
+	  <privacyRating>Low</privacyRating>
       <Description>
         <p>The type of SIF object that the ResourceRefId element identifies.</p>
       </Description>
@@ -54,6 +58,7 @@
   <Item>
     <Element>ResourceLocalId</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The Local Id of the resource being booked. Provided whether the resource is a SIF object or not.</p>
     </Description>
@@ -63,6 +68,7 @@
    <Item>
     <Element>StartDateTime</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Starting date and time for booking.</p>
     </Description>
@@ -71,6 +77,7 @@
   <Item>
     <Element>FinishDateTime</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Finish date and time for booking.</p>
     </Description>
@@ -80,6 +87,7 @@
   <Item>
     <Element>FromPeriod</Element>
   <Characteristics>O</Characteristics>
+  <privacyRating>Low</privacyRating>
   <Description>
     <p>Starting period for booking. If specified, the booking is intended to align with bell times.</p>
   </Description>
@@ -89,6 +97,7 @@
   <Item>
     <Element>ToPeriod</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Finish period for booking. If specified, the booking is intended to align with bell times.</p>
     </Description>
@@ -100,6 +109,7 @@
     <Item>
     <Element>Booker</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Indicates who booked the room. Points to a StaffPersonal record. This will normally (but not necessarily) be the teacher who will be occupying the room.</p>
     </Description>
@@ -109,6 +119,7 @@
 <Item>
     <Element>Reason</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>A free-text explanation of the reason for the room booking.</p>
     </Description>
@@ -118,6 +129,7 @@
     <Item>
     <Element>ScheduledActivityRefId</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Links the room-booking to a ScheduledActivity.</p>
     </Description>
@@ -127,6 +139,7 @@
    <Item>
     <Element>KeepOld</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>If ScheduledActivity is provided, 'true' means the booker wishes to retain all rooms already specified for the ScheduledActivity. 'false' means that room(s)/resources are now available for other uses.</p>
     </Description>

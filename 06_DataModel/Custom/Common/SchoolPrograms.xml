@@ -10,22 +10,27 @@
   <Intro>
     This object contains information about Programs offered by a school.
   </Intro>
+  <EventsReported>true</EventsReported>
+  <Key>@RefId</Key>
   <Item>
     <Element>SchoolPrograms</Element>
+	<privacyRating>Low</privacyRating>
     <Description>
       This object contains information about Programs offered by a school.
     </Description>
   </Item>
   <Item>
     <Attribute>RefId</Attribute>
-    <Characteristics>M</Characteristics>
     <Description>GUID that uniquely identifies this instance of the object.</Description>
+    <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Type ref='CommonTypes' name='RefIdType'/>
   </Item>
 
   <Item>
     <Element>SchoolInfoRefId</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>GUID that identifies the school offering this program.</p>
     </Description>
@@ -36,6 +41,7 @@
     <Element>SchoolYear</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       School year for which the information is applicable, expressed as the four-digit year in which the school year ends (e.g., "2009").
     </Description>
@@ -45,6 +51,7 @@
   <Item>
     <Element>SchoolProgramList</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>List of School Programs</p>
     </Description>

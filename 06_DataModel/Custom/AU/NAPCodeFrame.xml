@@ -10,6 +10,7 @@
   <EventsReported>true</EventsReported>
   <Item>
     <Element>NAPCodeFrame</Element>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>This object replicates the codeframe information about each NAPLAN test (per year level and domain), as a tree of GUIDs pointing to the relevant testlet and item/stimulus objects, so that the structure of the test can be traversed within one object.</p>
     </Description>
@@ -17,6 +18,7 @@
   <Item>
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Type ref="CommonTypes" name="RefIdType"></Type>
     <Description>
       <p>The GUID that uniquely identifies an instance of the object.</p>
@@ -26,6 +28,7 @@
   <Item>
     <Element>NAPTestRefId</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Type ref="CommonTypes" name="IdRefType"></Type>
     <Description>
       <p>The GUID that identifies the associated NAP test object.</p>
@@ -36,6 +39,7 @@
    <Item>
     <Element>TestContent</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Type ref="CommonTypes" name="NAPTestContentType"></Type>
     <Description>
       <p></p>
@@ -97,6 +101,7 @@
     <Item>
     <Element>TestletList</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
 	<Type ref="CommonTypes" name="NAPCodeFrameTestletListType"/>
    </Item>
   
@@ -614,4 +619,3 @@
 
  </xhtml:Example-->
 </DataObject>
-

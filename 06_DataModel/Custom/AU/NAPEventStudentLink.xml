@@ -9,6 +9,7 @@
   <EventsReported>true</EventsReported>
   <Item>
     <Element>NAPEventStudentLink</Element>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>This object represents a student’s attempt to undergo NAP assessment in a particular test.</p>
     </Description>
@@ -16,6 +17,7 @@
   <Item>
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Type ref="CommonTypes" name="RefIdType"></Type>
     <Description>
       <p>The GUID that uniquely identifies an instance of the object.</p>
@@ -24,6 +26,7 @@
   <Item>
     <Element>StudentPersonalRefId</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
     <Type ref="CommonTypes" name="IdRefType"></Type>
     <Description>
       <p>The student associated with the NAP event.</p>
@@ -32,6 +35,7 @@
   <Item>
 		<Element>PlatformStudentIdentifier</Element>
 		<Characteristics>M</Characteristics>
+		<privacyRating>High</privacyRating>
 		<Description>
 			<p>Platform student identifier, allocated by the National Assessment Platform to the student registration for this school enrollment.</p>
 		</Description>
@@ -40,6 +44,7 @@
    <Item>
     <Element>SchoolInfoRefId</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Type ref="CommonTypes" name="IdRefType"></Type>
 	<Description>
       <p>Optional reference to a school associated with the NAP Event.</p>
@@ -48,6 +53,7 @@
   	<Item>
 		<Element>SchoolACARAId</Element>
 		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>The ACARA School Id for the school that the student sitting the test is enrolled in, as assigned in the Australian School List.</p>
 		</Description>
@@ -57,6 +63,7 @@
   <Item>
     <Element>NAPTestRefId</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Type ref="CommonTypes" name="IdRefType"></Type>
     <Description>
       <p>The GUID for the test that the student is sitting. May be linking to prior codeframe download.</p>
@@ -65,6 +72,7 @@
   <Item>
 		<Element>NAPTestLocalId</Element>
 		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>Local identifier of NAP test.</p>
 		</Description>
@@ -74,6 +82,7 @@
   <Item>
     <Element>SchoolSector</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>(Government, or Non-Government).</p>
     </Description>
@@ -82,6 +91,7 @@
     <Item>
     <Element>System</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>System if a systemic school.</p>
     </Description>
@@ -90,6 +100,7 @@
    <Item>
     <Element>SchoolGeolocation</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>School Location</p>
     </Description>
@@ -98,6 +109,7 @@
      <Item>
     <Element>ReportingSchoolName</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Name of school where reports will be sent to, in case of walk-ups</p>
     </Description>
@@ -106,6 +118,7 @@
    <Item>
     <Element>NAPJurisdiction</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>School Location</p>
     </Description>
@@ -114,12 +127,14 @@
   <Item>
 		<Element>ParticipationCode</Element>
 		<Characteristics>M</Characteristics>
+		<privacyRating>High</privacyRating>
 		<p>Indicates the participation status of the student for the NAP test.</p>
 		<Type ref="CodeSets" name="AUCodeSetsNAPParticipationCodeType"/>
   </Item>  
   <Item>
     <Element>ParticipationText</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>High</privacyRating>
     <Type name="xs:normalizedString"></Type>
     <Description>
       <p>Text added to reports indicating the participation status of the student for the NAP test. Determined by the Participation Code.</p>
@@ -128,6 +143,7 @@
    <Item>
     <Element>Device</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Type name="xs:token"></Type>
     <Description>
       <p>Device used to do the test.</p>
@@ -136,6 +152,7 @@
     <Item>
     <Element>Date</Element>
     <Characteristics>C</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Type name="xs:date"></Type>
     <Description>
       <p>Date test administered. Not provided unless the student was actually administered the test.</p>
@@ -144,6 +161,7 @@
     <Item>
     <Element>StartTime</Element>
     <Characteristics>C</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Type name="xs:time"></Type>
     <Description>
       <p>Time student commenced test. Not provided unless the student was actually administered the test.</p>
@@ -152,6 +170,7 @@
    <Item>
     <Element>LapsedTimeTest</Element>
     <Characteristics>C</Characteristics>
+	<privacyRating>High</privacyRating>
     <Type name="xs:duration"></Type>
     <Description>
       <p>Time taken for student to complete test. Not provided unless the student was actually administered the test.</p>
@@ -160,6 +179,7 @@
    <Item>
 		<Element>ExemptionReason</Element>
 		<Characteristics>O</Characteristics>
+		<privacyRating>High</privacyRating>
 		<Description>
 			<p>Reason given for student to be exempted from the NAP test.</p>
 		</Description>
@@ -168,6 +188,7 @@
    <Item>
 		<Element>PersonalDetailsChanged</Element>
 		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>Flag that the personal details of the student have changed since registration.</p>
 		</Description>
@@ -176,6 +197,7 @@
    <Item>
 		<Element>PSIOtherIdMatch</Element>
 		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>Flag indicating possible Platform Student Identifier error.</p>
 		</Description>
@@ -184,6 +206,7 @@
    <Item>
 		<Element>PossibleDuplicate</Element>
 		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>Flag indicating a possible duplicate record for a student.</p>
 		</Description>
@@ -192,6 +215,7 @@
    <Item>
 		<Element>DOBRange</Element>
 		<Characteristics>O</Characteristics>
+		<privacyRating>High</privacyRating>
 		<Description>
 			<p>Flag indicating whether a student’s date of birth is in expected range.</p>
 		</Description>
@@ -200,6 +224,7 @@
    <Item>
     <Element>TestDisruptionList</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
     <Type ref="CommonTypes" name="TestDisruptionListType"></Type>
     <Description>
       <p></p>
@@ -208,6 +233,7 @@
    <Item>
     <Element>Adjustment</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
     <Type ref="CommonTypes" name="AdjustmentContainerType"></Type>
     <Description>
       <p></p>

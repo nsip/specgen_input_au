@@ -1,4 +1,10 @@
-<DataObject name="Activity">
+<DataObject name="Activity"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xmlns:xi="http://www.w3.org/2001/XInclude"
+			xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	
+            xmlns="http://sifassociation.org/SpecGen">
 	<Key>@RefId</Key>
 	<EventsReported>true</EventsReported>
 	<Item>
@@ -139,7 +145,8 @@
 	
 	<Item>
 		<Element>ActivityTime</Element>
-		<Characteristics>Low</Characteristics>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>Time structures for the activity.</p>
 		</Description>

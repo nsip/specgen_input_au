@@ -9,6 +9,7 @@
   <EventsReported>true</EventsReported>
   <Item>
     <Element>Debtor</Element>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>
         This object is used to capture general information about debtors.</p>
@@ -18,7 +19,7 @@
 
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
-    <privacyRating>H</privacyRating>
+    <privacyRating>High</privacyRating>
     <Description>
       <p>Debtor Id.</p>
     </Description>
@@ -28,7 +29,7 @@
   <Item>
     <Element>BilledEntity</Element>
     <Characteristics>M</Characteristics>
-    <privacyRating>H</privacyRating>
+    <privacyRating>High</privacyRating>
     <Description>
       <p>Id of the entity referred to by this object (e.g., student, employee, organization).</p>
     </Description>
@@ -38,7 +39,7 @@
   <Item>
     <Attribute>SIF_RefObject</Attribute>
     <Characteristics>M</Characteristics>
-    <privacyRating>H</privacyRating>
+    <privacyRating>High</privacyRating>
     <Description>
       <p>SIF object referenced by BilledEntity.</p>
     </Description>
@@ -61,7 +62,7 @@
   <Item>
     <Element>AddressList</Element>    
     <Characteristics>O</Characteristics>
-    <privacyRating>H</privacyRating>
+    <privacyRating>High</privacyRating>
     <Description>
       <p>Addresses of the debtor to be used for billing. These addresses override any addresses found in the Billed Entity.</p>
     </Description>
@@ -71,7 +72,7 @@
   <Item>
     <Element>BillingName</Element>    
     <Characteristics>O</Characteristics>
-    <privacyRating>H</privacyRating>
+    <privacyRating>High</privacyRating>
     <Description>
       <p>Name of the entity to be used for billing (e.g. company name rather than individual name).</p>
     </Description>
@@ -81,7 +82,7 @@
   <Item>
     <Element>BillingNote</Element>    
     <Characteristics>O</Characteristics>
-    <privacyRating>H</privacyRating>
+    <privacyRating>High</privacyRating>
     <Description>
       <p>Note about billing requirements.</p>
     </Description>
@@ -91,7 +92,7 @@
   <Item>
     <Element>Discount</Element>    
     <Characteristics>O</Characteristics>
-    <privacyRating>H</privacyRating>
+    <privacyRating>High</privacyRating>
     <Description>
       <p>Any discount amount applicable to this debtor (e.g. family discount for scholarship, number of children enrolled). Is a percentage.</p>
     </Description>
@@ -103,13 +104,13 @@
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <privacyRating>H</privacyRating>
+    <privacyRating>High</privacyRating>
     <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <privacyRating>H</privacyRating>
+    <privacyRating>High</privacyRating>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
   </Item>
   <xhtml:Example xmlns="" name="Debtor">
@@ -127,7 +128,7 @@
         </Address>
       </AddressList>
       <BillingName>Flintstone Family Trust</BillingName>
-      <BillingNote>Do not invoice under parentâ€™s real name.</BillingNote>
+      <BillingNote>Do not invoice under parent’s real name.</BillingNote>
       <Discount>10.0</Discount>
     </Debtor>
     

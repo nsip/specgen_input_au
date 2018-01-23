@@ -9,6 +9,7 @@
   <EventsReported>true</EventsReported>
   <Item>
     <Element>PaymentReceipt</Element>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>
         This object complements the Invoice object, and contains information about the payment of a Invoice object.</p>
@@ -17,6 +18,7 @@
   <Item>
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>GUID for this payment or receipt. The application that owns this object is responsible for generating this unique Id.</p>
     </Description>
@@ -26,6 +28,7 @@
   <Item>
     <Element>TransactionType</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>Type of transaction.</p>
     </Description>
@@ -54,6 +57,7 @@
   <Item>
     <Element>InvoiceRefId</Element>    
     <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>A pointer back to the Invoice object corresponding to this payment. Is omitted for general ledger transactions, creditor receipts and debtor payments.</p>
     </Description>
@@ -63,6 +67,7 @@
   <Item>
     <Element>VendorInfoRefId</Element>    
     <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>A pointer back to the vendor associated with the Invoice object, if applicable.</p>
     </Description>
@@ -72,6 +77,7 @@
   <Item>
     <Element>DebtorRefId</Element>    
     <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>A pointer back to the debtor associated with the Invoice object, if applicable.</p>
     </Description>
@@ -81,6 +87,7 @@
   <Item>
     <Element>ChargedLocationInfoRefId</Element>    
     <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>Id of the location billed for this transaction.</p>
     </Description>
@@ -90,6 +97,7 @@
   <Item>
     <Element>TransactionDate</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>Date transaction was made.</p>
     </Description>
@@ -99,6 +107,7 @@
   <Item>
     <Element>TransactionAmount</Element>   
     <Characteristics>M</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>Amount received.</p>
     </Description>
@@ -109,6 +118,7 @@
   <Item>
     <Element>ReceivedTransactionId</Element>   
     <Characteristics>M</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>Memo transaction Id from other vendor software.</p>
     </Description>
@@ -121,6 +131,7 @@
     <Element>FinancialAccountRefIdList</Element>
     
     <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p></p>
     </Description>
@@ -130,6 +141,7 @@
   <Item>
     <Element>TransactionDescription</Element>   
     <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>Description of the transaction.</p>
     </Description>
@@ -139,6 +151,7 @@
   <Item>
     <Element>TaxRate</Element>    
     <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>Rate of tax included in the billed amount.</p>
     </Description>
@@ -148,6 +161,7 @@
   <Item>
     <Element>TaxAmount</Element>    
     <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>Amount of tax included in the billed amount.</p>
     </Description>
@@ -157,6 +171,7 @@
   <Item>
     <Element>TransactionMethod</Element>    
     <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>Method through which transaction was made (e.g. cash, credit card). If a receipt is made using two receipt methods (e.g. $20 in cash and $80 on credit), two PaymentReceipt objects are expected to be created, rather than a single object with mixed receipt method.</p>
     </Description>
@@ -166,6 +181,7 @@
   <Item>
     <Element>ChequeNumber</Element>    
     <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>The cheque number issued, if paying creditors by cheque.</p>
     </Description>
@@ -175,6 +191,7 @@
   <Item>
     <Element>TransactionNote</Element>    
     <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>Note about the receipt or payment.</p>
     </Description>
@@ -184,6 +201,7 @@
   <Item>
     <Element>AccountingPeriod</Element>    
     <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>The accounting period against which the transaction is billed.</p>
     </Description>

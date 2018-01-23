@@ -9,6 +9,7 @@
   <EventsReported>true</EventsReported>
   <Item>
     <Element>Journal</Element>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>This object is used to adjust balances between accounts. It is typically used to correct chart of account coding errors (e.g. created invoices for parents against the maths chart of account code when it should have been English).</p>
      </Description>
@@ -17,6 +18,7 @@
   <Item>
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>Journal Id.</p>
     </Description>
@@ -26,6 +28,7 @@
   <Item>
     <Element>DebitFinancialAccountRefId</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>RefId of account to debit.</p>
     </Description>
@@ -35,6 +38,7 @@
   <Item>
     <Element>CreditFinancialAccountRefId</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>RefId of account to credit.</p>
     </Description>
@@ -44,6 +48,7 @@
   <Item>
     <Element>OriginatingTransactionRefId</Element>    
     <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>RefId of the originating transaction which requires adjustment. This could be an Invoice, PaymentReceipt or PurchaseOrder.</p>
     </Description>
@@ -53,6 +58,7 @@
   <Item>
     <Attribute>SIF_RefObject</Attribute>
     <Characteristics>M</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description></Description>
     <Values>
       <Value>
@@ -70,6 +76,7 @@
   <Item>
     <Element>Amount</Element>    
     <Characteristics>M</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>Amount to transfer between the two accounts.</p>
     </Description>
@@ -79,6 +86,7 @@
   <Item>
     <Element>GSTCodeOriginal</Element>    
     <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>Original GST code for journal transfer (if required).</p>
     </Description>
@@ -88,6 +96,7 @@
   <Item>
     <Element>GSTCodeReplacement</Element>    
     <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>Replacement GST code for journal transfer (if required).</p>
     </Description>
@@ -97,6 +106,7 @@
   <Item>
     <Element>Note</Element>    
     <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>Note about the journal.</p>
     </Description>
@@ -106,6 +116,7 @@
   <Item>
     <Element>CreatedDate</Element>    
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Date on which journal was created.</p>
     </Description>
@@ -115,6 +126,7 @@
   <Item>
     <Element>ApprovedDate</Element>    
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Date on which journal was approved.</p>
     </Description>
@@ -124,6 +136,7 @@
   <Item>
     <Element>CreatedBy</Element>    
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Authority or person who created the journal.</p>
     </Description>
@@ -133,6 +146,7 @@
   <Item>
     <Element>ApprovedBy</Element>    
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Authority or person who approved the journal.</p>
     </Description>

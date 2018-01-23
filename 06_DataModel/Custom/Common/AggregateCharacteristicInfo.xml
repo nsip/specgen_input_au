@@ -10,6 +10,7 @@
   <Key>@RefId</Key>
   <Item>
     <Element>AggregateCharacteristicInfo</Element>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>This object defines the attribute of a group of objects that implicitly or explicitly defines a subset of the group for statistical purposes.</p>
     </Description>
@@ -17,7 +18,7 @@
   <Item>
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Description>
       <p>Key for aggregate characteristic information.</p>
     </Description>
@@ -26,7 +27,7 @@
   <Item>
     <Element>Description</Element>
     <Characteristics>O</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Description>
       <p>
         Describes the supercategory of the characteristic described in the <code>Definition</code> element below.
@@ -41,7 +42,7 @@
   <Item>
     <Element>Definition</Element>
     <Characteristics>M</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Description>
       <p>Defines the aggregate characteristic information.</p>
     </Description>
@@ -52,7 +53,7 @@
    <Item>
     <Element>ElementName</Element>
     <Characteristics>O</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Description>
       <p>
         Reference to SIF elements or external authority (e.g., <code>StudentPersonal/PersonInfo/Demographics/Sex</code>).
@@ -64,13 +65,13 @@
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
   </Item>
   <xhtml:Example xmlns="" name="AggregateCharacteristicInfo">

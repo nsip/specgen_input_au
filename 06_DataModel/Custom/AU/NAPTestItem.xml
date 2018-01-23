@@ -9,6 +9,7 @@
   <EventsReported>true</EventsReported>
   <Item>
     <Element>NAPTestItem</Element>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>This object represents the description of a test item as context for response; may be exemplar item instead of the actual item.</p>
     </Description>
@@ -17,6 +18,7 @@
   <Item>
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Type ref="CommonTypes" name="RefIdType"></Type>
     <Description>
       <p>The GUID that uniquely identifies an instance of the object.</p>
@@ -26,6 +28,7 @@
    <Item>
   <Element>TestItemContent</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Type ref="CommonTypes" name="NAPTestItemContentType"></Type>
     <Description>
       <p></p>

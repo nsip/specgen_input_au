@@ -9,6 +9,7 @@
   <EventsReported>true</EventsReported>
   <Item>
     <Element>TimeTableSubject</Element>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>
         This purpose of this object is to define and communicate the subject or distinct piece of curriculum that needs to be scheduled by the time table generator.  This is a new object proposed to meet SIF-AU needs.  Reviews of the existing specifications identified two relevant objects - SchoolCourseInfo, defined in SIF US 2.2 specification and SchoolGroup, defined within the SIF UK 1.1 specification.  These objects appear to have some similar context but seem overly complex considering that Australian requirements, which are limited to the Student Administration System or Curriculum Delivery System providing base information to the Time Tabling application about what curriculum offerings are being proposed.
@@ -29,6 +30,7 @@
 
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>GUID that identifies this TimeTableSubject.</p>
     </Description>
@@ -39,6 +41,7 @@
     <Element>SubjectLocalId</Element>
 
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>SubjectLocalID - Distinct piece of curriculum that is to be scheduled.</p>
     </Description>
@@ -48,6 +51,7 @@
   <Item>
     <Element>AcademicYear</Element>
     <Characteristics>C</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Subject Year Level.  Either AcademicYear or AcademicYearRange must be provided.</p>
     </Description>
@@ -58,6 +62,7 @@
     <Element>AcademicYearRange</Element>
 
     <Characteristics>C</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Range of Academic Years subject spans.  Either AcademicYear or AcademicYearRange must be provided.</p>
     </Description>
@@ -67,6 +72,7 @@
   <Item>
     <Element>CourseLocalId</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Local Course Id, if associated with a Course.</p>
     </Description>
@@ -76,6 +82,7 @@
 
     <Element>SchoolCourseInfoRefId</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The GUID of the SchoolCourseInfo object.</p>
     </Description>
@@ -85,6 +92,7 @@
     <Element>Faculty</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Faculty</p>
     </Description>
@@ -94,6 +102,7 @@
   <Item>
     <Element>SubjectShortName</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>SubjectShortName</p>
     </Description>
@@ -103,6 +112,7 @@
   <Item>
     <Element>SubjectLongName</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>SubjectLongName</p>
     </Description>
@@ -113,6 +123,7 @@
     <Element>SubjectType</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Core or Elective or ?</p>
     </Description>
@@ -121,6 +132,7 @@
   <Item>
     <Element>ProposedMaxClassSize</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Suggested maximum class size for this subject.</p>
     </Description>
@@ -129,6 +141,7 @@
   <Item>
     <Element>ProposedMinClassSize</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Suggested minimum class size for this subject.</p>
     </Description>
@@ -137,6 +150,7 @@
   <Item>
     <Element>SchoolInfoRefId</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Optional the GUID of the SchoolInfo Object  if this object is known in the zone.</p>
     </Description>
@@ -147,6 +161,7 @@
     <Element>SchoolLocalId</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Optional Local School Id</p>
     </Description>
@@ -157,6 +172,7 @@
     <Element>Semester</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Semester, Term, or Quarter subject offered.</p>
     </Description>
@@ -167,6 +183,7 @@
     <Element>SchoolYear</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>
         School year for which the information is applicable, expressed as the four-digit year in which the school year ends (e.g., "2007").
@@ -178,6 +195,7 @@
   <Item>
     <Element>OtherCodeList</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>Any other codes this subject is known by; eg VASS code for VCE in Vic.</Description>
     <Type ref="CommonTypes" name="OtherCodeListType"></Type>
   </Item>

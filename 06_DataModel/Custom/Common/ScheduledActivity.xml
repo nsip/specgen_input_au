@@ -10,6 +10,7 @@
   <Key>@RefId</Key>
   <Item>
     <Element>ScheduledActivity</Element>
+	<privacyRating>Low</privacyRating>
     <Description>
         <p>
         This object provides a broader range of scheduled activities than just normal teaching classes (as covered by SessionInfo).
@@ -20,6 +21,7 @@
   <Item>
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>The GUID of the Object</Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
   </Item>
@@ -27,6 +29,7 @@
 
     <Element>SchoolInfoRefId</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The ID (GUID) of the school for which this attendance information is being reported.</p>
     </Description>
@@ -36,6 +39,7 @@
 
     <Element>TimeTableCellRefId</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>An optional Id (GUID) for the timetable cell that this activity is scheduled in. Instances of cyclical classroom sessions will have this element, but one-off events such as excursions will not use this element.</p>
     </Description>
@@ -45,6 +49,7 @@
    <Item>
     <Element>DayId</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Day Id.</p>
     </Description>
@@ -54,6 +59,7 @@
     <Element>PeriodId</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Period Id within the Day Id</p>
     </Description>
@@ -63,6 +69,7 @@
     <Item>
     <Element>TimeTableRefId</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The GUID of the TimeTable to which this Cell belongs</p>
     </Description>
@@ -72,6 +79,7 @@
 <Item>
     <Element>ActivityDate</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Date for which the activity is scheduled. This element is mandatory even if the object is used for preplanning excursions: a tentative or notional date and time should be provided if a finalised date is not available.</p>
     </Description>
@@ -81,6 +89,7 @@
     <Item>
     <Element>StartTime</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Starting time for activity. This element is mandatory even if the object is used for preplanning excursions: a tentative or notional date and time should be provided if a finalised date is not available.</p>
     </Description>
@@ -90,6 +99,7 @@
    <Item>
     <Element>FinishTime</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Finish time for activity. This element is mandatory even if the object is used for preplanning excursions: a tentative or notional date and time should be provided if a finalised date is not available.</p>
     </Description>
@@ -100,6 +110,7 @@
     <Element>CellType</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Type of Lesson/Session eg Teaching, Lunch etc.</p>
     </Description>
@@ -109,6 +120,7 @@
   <Item>
     <Element>TimeTableSubjectRefId</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Optional to link the GUID of the Subject, if this is a piece of curriculum being scheduled.</p>
     </Description>
@@ -119,6 +131,7 @@
     <Element>TeacherList</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>A listing of the teachers assigned to the activity, and the type of supervision they are credited with. If no teachers are listed, the activity is assumed to be unsupervised.</p>
     </Description>
@@ -129,6 +142,7 @@
     <Element>RoomList</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>List of rooms in which the scheduled activity is held. Used for onsite venues which are represented in the source system as rooms. Can include large venues (ovals, library, etc), if they have been represented as rooms; source system practice varies.</p>
     </Description>
@@ -140,6 +154,7 @@
    <Item>
     <Element>AddressList</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The address(es) associated with the scheduled activity.</p>
     </Description>
@@ -149,6 +164,7 @@
   <Item>
     <Element>Location</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Text description of venue. Can be used for either onsite or offsite venues. Can be used if neither RoomList nor AddressList is appropriate or supported by the source system. (E.g. the venue is the oval, which is not represented as a room; the venue is a specific part of the park). If RoomList, AddressList, and Location conflict, the order of priority in interpreting the object is RoomList, then AddressList, then Location.</p>
     </Description>
@@ -158,6 +174,7 @@
   <Item>
     <Element>ActivityType</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The type of activity undertaken.</p>
     </Description>
@@ -167,6 +184,7 @@
    <Item>
     <Element>ActivityName</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>This element is required if this is a one-off event, i.e. there is no TimeTableCellRefId provided, in order for excursions to be uniquely identified.</p>
     </Description>
@@ -176,6 +194,7 @@
    <Item>
     <Element>ActivityComment</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Allows free-text information, e.g. for excursions. Comment should not be used to identify the location of the venue, since the contents of Comment are open-ended..</p>
     </Description>
@@ -186,6 +205,7 @@
     <Element>StudentList</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Students who are scheduled to attend the event. Not required for cyclical events, as this would be expected to be provided from TimeTableCell/TeachingGroup instead.</p>
     </Description>
@@ -197,6 +217,7 @@
     <Element>TeachingGroupList</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Teaching groups which are scheduled to attend the event. Not required for cyclical events, as this would be expected to be provided from TimeTableCell/TeachingGroup instead.</p>
     </Description>
@@ -206,6 +227,7 @@
  <Item>
     <Element>YearLevels</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>List of year levels offered by the school.</p>
     </Description>
@@ -216,6 +238,7 @@
     <Element>Override</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>This flag should be used to indicate whether or not this ScheduledActivity overrides a previous ScheduledActivity. In any initial provisioning this element should NOT be provided.</p>
     </Description>

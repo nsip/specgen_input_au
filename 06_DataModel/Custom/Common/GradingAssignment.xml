@@ -10,6 +10,7 @@
   <EventsReported>true</EventsReported>
   <Item>
     <Element>GradingAssignment</Element>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>
         This object provides information about a particular assignment, allows applications to synchronize each other's assignment tables, gathers the definition for a GradingAssignmentScore object, etc.  
@@ -19,7 +20,7 @@
   <Item>
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Description>
       <p>A GUID that identifies an instance of this object. </p>
     </Description>
@@ -29,7 +30,7 @@
   <Item>
     <Element>TeachingGroupRefId</Element>
     <Characteristics>O</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Description>
       <p>The GUID for the TeachingGroup object in which this assignment has been set.</p>
     </Description>
@@ -39,7 +40,7 @@
   <Item>
     <Element>SchoolInfoRefId</Element>    
     <Characteristics>O</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Description>
       <p>The Id (GUID) that uniquely identifies the School in which this assignment has been set.</p>
     </Description>
@@ -49,7 +50,7 @@
 	<Item>
     <Element>GradingCategory</Element>
     <Characteristics>O</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Description>
       <p>A particular grading category for the assignment, used to provide grouping and type information.</p>
     </Description>
@@ -59,7 +60,7 @@
   <Item>
     <Element>Description</Element>
     <Characteristics>M</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Description>
       <p>The text-based description of the assignment.</p>
     </Description>
@@ -69,7 +70,7 @@
   <Item>
     <Element>PointsPossible</Element>
     <Characteristics>M</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Description>
       <p>The points possible on the assignment.</p>
     </Description>
@@ -80,7 +81,7 @@
   <Item>
     <Element>CreateDate</Element>
     <Characteristics>O</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Description>
       <p>Creation date of the assignment.</p>
     </Description>
@@ -90,6 +91,7 @@
   <Item>
     <Element>DueDate</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Date the assignment is due.</p>
     </Description>
@@ -99,7 +101,7 @@
   <Item>
     <Element>Weight</Element>
     <Characteristics>O</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Description>
       <p>The weight of the assignment.</p>
     </Description>
@@ -109,7 +111,7 @@
     <Item>
       <Element>MaxAttemptsAllowed</Element>
       <Characteristics>O</Characteristics>
-      <privacyRating>L</privacyRating>
+      <privacyRating>Low</privacyRating>
       <Description>
         <p>How many attempts the student is allowed on the assignment (applicable particularly to online activities).</p>
       </Description>
@@ -119,7 +121,7 @@
   <Item>
     <Element>DetailedDescriptionURL</Element>
     <Characteristics>O</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Description>
       <p>The location of the document that describes the assignment. If Type is PDF, this element will contain the Base64 encoding of the entire document. Preferred against DetailedDescriptionBinary for online assessment.</p>
     </Description>
@@ -129,7 +131,7 @@
   <Item>
     <Element>DetailedDescriptionBinary</Element>
     <Characteristics>O</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Description>
       <p>The Base64 encoding of a document (e.g. PDF) describing the assignment.</p>
     </Description>
@@ -139,13 +141,13 @@
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
   </Item>
   <xhtml:Example xmlns="" name="GradingAssignment">
