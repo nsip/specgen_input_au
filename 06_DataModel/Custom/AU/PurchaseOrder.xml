@@ -9,6 +9,7 @@
   <EventsReported>true</EventsReported>
   <Item>
     <Element>PurchaseOrder</Element>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>
         This object provides information down to the line item level for purchase orders.</p>
@@ -18,6 +19,7 @@
 
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Transaction GUID for this purchasing activity. The application that owns this object and is responsible for generating this unique Id.</p>
     </Description>
@@ -27,6 +29,7 @@
   <Item>
     <Element>FormNumber</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Purchase order number.</p>
     </Description>
@@ -36,6 +39,7 @@
   <Item>
     <Element>VendorInfoRefId</Element>    
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>This object references the VendorInfo object being billed.</p>
     </Description>
@@ -45,6 +49,7 @@
   <Item>
     <Element>ChargedLocationInfoRefId</Element>    
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The location Id for this purchasing activity.</p>
     </Description>
@@ -54,6 +59,7 @@
   <Item>
     <Element>EmployeePersonalRefId</Element>    
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The employee Id for the originator of this purchasing activity.</p>
     </Description>
@@ -63,6 +69,7 @@
   <Item>
     <Element>PurchasingItems</Element>    
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p></p>
     </Description>
@@ -72,6 +79,7 @@
   <Item>
     <Element>CreationDate</Element>    
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Date on which purchase order was created.</p>
     </Description>
@@ -81,6 +89,7 @@
   <Item>
     <Element>TaxRate</Element>    
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Rate of tax included in the billed amount.</p>
     </Description>
@@ -91,6 +100,7 @@
   <Item>
     <Element>TaxAmount</Element>   
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Amount of tax included in the billed amount.</p>
     </Description>
@@ -100,6 +110,7 @@
   <Item>
     <Element>TotalAmount</Element>    
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Total amount billed.</p>
     </Description>
@@ -109,6 +120,7 @@
   <Item>
     <Element>UpdateDate</Element>    
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Date on which the object was last updated.</p>
     </Description>
@@ -118,6 +130,7 @@
   <Item>
     <Element>FullyDelivered</Element>    
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Flag that order has been fully delivered.</p>
     </Description>
@@ -127,6 +140,7 @@
   <Item>
     <Element>OriginalPurchaseOrderRefId</Element>    
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Original purchase order that this purchase order updates (e.g. to cancel line items).</p>
     </Description>

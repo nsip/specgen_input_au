@@ -11,6 +11,7 @@
   <EventsReported>true</EventsReported>
   <Item>
     <Element>WellbeingAlert</Element>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>Alert indicating further intervention or knowledge required with regard to a student, which could be Medical, Legal or other. Can reflect both long-term attributes of a student (Characteristics) and short-term attributes (e.g. resulting from Events). They fulfil the need for something that can be sent, associated with the student to transfer information that carries basic, important information.  Lightweight, it needs to alert teachers and systems that this student has a ‘concern’ that needs to be known for ‘duty of care’.  Currently in the SIF Model there exists the concept of ‘medical alerts’ and ‘alerts’, but these are lists of events that are carried with StudentPersonal: if anything is changed then for it to be recognised by consuming systems, they would need to re-consume StudentPersonal and ALL of the lists of alerts.  It was noted that this information needs to travel as the result of an event or a concern, not necessarily as a by-product of a change in StudentPersonal.</p>
     </Description>
@@ -19,6 +20,7 @@
   <Item>
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The ID (GUID) assigned to uniquely identify this WellbeingAlert.</p>
     </Description>
@@ -27,6 +29,7 @@
   <Item>
     <Element>StudentPersonalRefId</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>The ID (GUID) of the student to whom this WellbeingAlert belongs.</p>
     </Description>
@@ -35,6 +38,7 @@
   <Item>
     <Element>SchoolInfoRefId</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The ID (GUID) of the school for which this WellbeingAlert is being reported.</p>
     </Description>
@@ -44,6 +48,7 @@
   <Item>
     <Element>Date</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The calendar date on which this wellbeing alert was published.</p>
     </Description>
@@ -53,6 +58,7 @@
    <Item>
     <Element>WellbeingAlertStartDate</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The date the wellbeing alert period commenced.</p>
     </Description>
@@ -61,6 +67,7 @@
    <Item>
     <Element>WellbeingAlertEndDate</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The date the wellbeing alert is due to finish.</p>
     </Description>
@@ -70,6 +77,7 @@
   <Item>
     <Element>WellbeingAlertCategory</Element>
     <Characteristics>C</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>Category of WellbeingAlert.</p>
     </Description>
@@ -79,6 +87,7 @@
   <Item>
     <Element>WellbeingAlertDescription</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>Description of this particular wellbeing alert.</p>
     </Description>
@@ -87,6 +96,7 @@
    <Item>
     <Element>EnrolmentRestricted</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Medium</privacyRating>
     <Description>
       <p>Is this Alert Restricted to a particular enrolment at a school?</p>
     </Description>
@@ -95,6 +105,7 @@
    <Item>
     <Element>AlertAudience</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Medium</privacyRating>
     <Description>
       <p>Audience for this particular wellbeing alert.</p>
     </Description>
@@ -103,6 +114,7 @@
    <Item>
     <Element>AlertSeverity</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>Severity of this wellbeing alert.</p>
     </Description>
@@ -111,6 +123,7 @@
     <Item>
     <Element>AlertKeyContact</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Medium</privacyRating>
     <Description>
       <p>Key Contact to get information about this wellbeing alert from.</p>
     </Description>

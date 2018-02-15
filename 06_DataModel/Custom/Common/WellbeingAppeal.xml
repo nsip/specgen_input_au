@@ -11,6 +11,7 @@
   <EventsReported>true</EventsReported>
   <Item>
     <Element>WellbeingAppeal</Element>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>A WellbeingAppeal is information about an “appeal” or a “request” in regard to a (negative/punitive) WellbeingResponse to a student event.</p>
     </Description>
@@ -19,6 +20,7 @@
   <Item>
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The ID (GUID) assigned to uniquely identify this WellbeingAppeal.</p>
     </Description>
@@ -27,6 +29,7 @@
   <Item>
     <Element>StudentPersonalRefId</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>The ID (GUID) of the student to whom this WellbeingAppeal belongs.</p>
     </Description>
@@ -35,6 +38,7 @@
   <Item>
     <Element>SchoolInfoRefId</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The ID (GUID) of the school for which this WellbeingAppeal is being reported.</p>
     </Description>
@@ -43,6 +47,7 @@
   <Item>
     <Element>WellbeingResponseRefId</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>The ID (GUID) of the WellbeingResponse for which this WellbeingAppeal is in response to.</p>
     </Description>
@@ -52,6 +57,7 @@
    <Item>
     <Element>LocalAppealId</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Local system Id of the Appeal.</p>
     </Description>
@@ -61,6 +67,7 @@
    <Item>
     <Element>AppealStatusCode</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>Status of WellbeingAppeal.</p>
     </Description>
@@ -70,6 +77,7 @@
   <Item>
     <Element>Date</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The calendar date on which this WellbeingAppeal was registered.</p>
     </Description>
@@ -79,6 +87,7 @@
   <Item>
     <Element>AppealNotes</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>Text relating to the particular WellbeingAppeal.</p>
     </Description>
@@ -88,6 +97,7 @@
   <Item>
     <Element>AppealOutcome</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>Outcome of the particular WellbeingAppeal if known.</p>
     </Description>
@@ -97,6 +107,7 @@
    <Item>
     <Element>DocumentList</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>Describes the Location of any associated documents kept in relation to this Appeal.</p>
     </Description>

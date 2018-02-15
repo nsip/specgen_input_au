@@ -13,11 +13,13 @@
     <Description>
       This object defines a relationship between a contact person and a student.
     </Description>
+	<privacyRating>High</privacyRating>
   </Item>
   
   <Item>
     <Attribute>StudentContactRelationshipRefId</Attribute>
     <Characteristics>M</Characteristics>
+	<privacyRating>Medium</privacyRating>
     <Description>
       <p>An ID (GUID) for this paticular student-contact relationship. This GUID would be used to form a REST URL.</p>
     </Description>
@@ -28,18 +30,21 @@
     <Element>StudentPersonalRefId</Element>
     <Description>GUID that identifies the student for the relationship.</Description>
     <Characteristics>M</Characteristics>
+	<privacyRating>Medium</privacyRating>
     <Type ref='CommonTypes' name='RefIdType'/>
   </Item>
   <Item>
      <Element>StudentContactPersonalRefId</Element>
     <Description>GUID that identifies the contact person for the relationship.</Description>
     <Characteristics>M</Characteristics>
+	<privacyRating>Medium</privacyRating>
     <Type ref='CommonTypes' name='RefIdType'/>
   </Item>
  
   <Item>
     <Element>Relationship</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Medium</privacyRating>
     <Description>
       <p>Defines the relationship of the contact to the student.</p>
     </Description>
@@ -48,6 +53,7 @@
   <Item>
     <Element>ParentRelationshipStatus</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Medium</privacyRating>
     <Description>
       <p>Confirms whether or not this contact defined in the relationship is to be tracked for MCEECDYA Data Implementation Manual Reporting.</p>
     </Description>
@@ -67,6 +73,7 @@
   <Item>
     <Element>HouseholdList</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Medium</privacyRating>
     <Description>
       <p></p>
     </Description>
@@ -76,6 +83,7 @@
   <Item>
       <Element>ContactFlags</Element>
     <Characteristics>C</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>
         Contains Yes/No characteristics of the contact person's role.  Provide a <code>Yes</code> value for all that apply.
@@ -89,6 +97,7 @@
   <Item>
     <Element>MainlySpeaksEnglishAtHome</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Medium</privacyRating>
     <Description>
       <p>Is English the main language spoken at home?</p>
     </Description>
@@ -97,6 +106,7 @@
   <Item>
     <Element>ContactSequence</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Type name="xs:unsignedInt"></Type>
     <Description>
       <p>Number indicating the order in which the person should be contacted.</p>
@@ -105,6 +115,7 @@
   <Item>
     <Element>ContactSequenceSource</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Indicates the source who provided the contact sequence order. </p>
     </Description>
@@ -115,6 +126,7 @@
     <Element>SchoolInfoRefId</Element>
     <Description>GUID that identifies a school associated with the relationship.</Description>
     <Characteristics>C</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Type ref='CommonTypes' name='IdRefType'/>
   </Item>
   

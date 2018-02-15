@@ -9,6 +9,7 @@
   <EventsReported>true</EventsReported>
   <Item>
     <Element>RoomInfo</Element>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>
         This object contains all of the information about a school's room. This object may contain a reference to a room type so that it may represent anything from a gym, cafeteria, to a standard classroom. The StaffList element usually contains the homeroom teacher.
@@ -18,6 +19,7 @@
   <Item>
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>GUID that identifies this room.</p>
     </Description>
@@ -26,6 +28,7 @@
   <Item>
     <Element>SchoolInfoRefId</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>GUID that identifies the school that this room belongs to.</p>
     </Description>
@@ -34,6 +37,7 @@
   <Item>
     <Element>LocalId</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The locally assigned identifier for the room.</p>
     </Description>
@@ -42,6 +46,7 @@
   <Item>
     <Element>RoomNumber</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Room number as presented to the user/application. It is intended to be human readable and user-friendly corresponding to the physical label of the Room.</p>
     </Description>
@@ -51,6 +56,7 @@
   <Item>
     <Element>StaffList</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Type ref="CommonTypes" name="StaffListType"></Type>
   </Item>
 
@@ -58,6 +64,7 @@
   <Item>
     <Element>Description</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>
         Friendly name that can be assigned to the room (e.g. <code>Staff Cafeteria</code>).
@@ -68,6 +75,7 @@
   <Item>
     <Element>Building</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Extra building information. In the future Building could become its own object in which case this element will need to be changed to a RefId. Currently it is only required as a free text field.</p>
     </Description>
@@ -76,6 +84,7 @@
   <Item>
     <Element>HomeroomNumber</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>When a room is designated as a homeroom it may have a different number. Usually blank when room is not a homeroom.</p>
     </Description>
@@ -84,6 +93,7 @@
   <Item>
     <Element>Size</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Size in square meters.</p>
     </Description>
@@ -92,6 +102,7 @@
   <Item>
     <Element>Capacity</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Number of persons (usually students) that this room can hold.</p>
     </Description>
@@ -100,6 +111,7 @@
   <Item>
     <Element>PhoneNumber</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Phone number for the room</p>
     </Description>
@@ -108,6 +120,7 @@
   <Item>
     <Element>RoomType</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Type of room, for use in timetabling.</p>
     </Description>

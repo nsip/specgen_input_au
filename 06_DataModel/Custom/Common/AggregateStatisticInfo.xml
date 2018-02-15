@@ -10,6 +10,7 @@
   <Key>@RefId</Key>
   <Item>
     <Element>AggregateStatisticInfo</Element>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>This object defines the data that is being aggregated as well as the type of measurement that is being performed.</p>
     </Description>
@@ -17,6 +18,7 @@
   <Item>
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Key</p>
     </Description>
@@ -25,6 +27,7 @@
   <Item>
     <Element>StatisticName</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Name of Aggregate Statistic</p>
     </Description>
@@ -35,6 +38,7 @@
   <Item>
     <Element>CalculationRule</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Rule for calculating the aggregate statistic</p>
     </Description>
@@ -43,6 +47,7 @@
   <Item>
     <Attribute>Type</Attribute>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description></Description>
     <Values>
       <Value>
@@ -62,6 +67,7 @@
   <Item>
     <Element>ApprovalDate</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Date for which the statistic is initially valid</p>
     </Description>
@@ -70,6 +76,7 @@
   <Item>
     <Element>ExpirationDate</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Date after which the statistic is no longer valid</p>
     </Description>
@@ -78,6 +85,7 @@
   <Item>
     <Element>ExclusionRules</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Rules for which statistic may not be reported.</p>
     </Description>
@@ -88,6 +96,7 @@
   <Item>
     <Element>Source</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>System providing the data: i.e., SIS, Transportation,</p>
     </Description>
@@ -96,6 +105,7 @@
   <Item>
     <Element>EffectiveDate</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Effective date of the statistic</p>
     </Description>
@@ -104,6 +114,7 @@
   <Item>
     <Element>DiscontinueDate</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Discontinue date of the statistic</p>
     </Description>
@@ -112,6 +123,7 @@
   <Item>
     <Element>Location</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Location where the activity takes place.</p>
     </Description>
@@ -120,6 +132,7 @@
   <Item>
     <Element>Measure</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Type of the statistic.</p>
     </Description>

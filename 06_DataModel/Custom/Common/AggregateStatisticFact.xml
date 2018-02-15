@@ -10,6 +10,7 @@
   <Key>@RefId</Key>
   <Item>
     <Element>AggregateStatisticFact</Element>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>This object is the actual value of a statistical measurement. It is always associated with one statistic and one or more characteristics.</p>
     </Description>
@@ -17,14 +18,14 @@
   <Item>
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Description></Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
   </Item>
   <Item>
     <Element>AggregateStatisticInfoRefId</Element>
     <Characteristics>M</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Description>
       Reference to statistic defined by <code>AggregateStatisticInfo</code>.
     </Description>
@@ -33,7 +34,7 @@
   <Item>
     <Element>Characteristics</Element>
     <Characteristics>M</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Description>
       <p>
         Reference to one or more <code>AggregateCharacteristicInfo</code> objects.
@@ -45,7 +46,7 @@
 
   <Item>
     <Element>Excluded</Element>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Characteristics>O</Characteristics>
     <Description></Description>
     <Values>
@@ -60,7 +61,7 @@
   <Item>
     <Element>Value</Element>
     <Characteristics>M</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Description>
       <p>Value of the fact.</p>
     </Description>
@@ -69,13 +70,13 @@
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
   </Item>
   

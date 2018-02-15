@@ -9,6 +9,7 @@
   <EventsReported>true</EventsReported>
   <Item>
     <Element>StudentParticipation</Element>
+	<privacyRating>Extreme</privacyRating>
     <Description>
       <p>This object contains information pertaining to student eligibility for and participation in an individualized special program such as special education, ESL, etc.</p>
       <p>
@@ -24,6 +25,7 @@
   <Item>
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
+	<privacyRating>Extreme</privacyRating>
     <Description>
       <p>This is the unique identification code</p>
     </Description>
@@ -32,6 +34,7 @@
   <Item>
     <Element>StudentPersonalRefId</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Extreme</privacyRating>
     <Description>
       <p>The GUID of the student that this object is linked to.</p>
     </Description>
@@ -40,6 +43,7 @@
   <Item>
     <Element>StudentParticipationAsOfDate</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Extreme</privacyRating>
     <Description>
       <p>
         Effective date (NOT the entry date) of this <code>StudentParticipation</code> instance for the identified student and program.
@@ -52,6 +56,7 @@
   <Item>
     <Element>ProgramType</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Extreme</privacyRating>
     <Description>Identifies the individualised program for which the student's participation is described in this instance</Description>
     <Type ref="CodeSets" name="AUCodeSetsStudentFamilyProgramTypeType"></Type>
   </Item>
@@ -59,6 +64,7 @@
   <Item>
     <Element>ProgramFundingSources</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Extreme</privacyRating>
     <Description>List of funding sources</Description>
     <Type ref="CommonTypes" name="ProgramFundingSourcesType"></Type>
   </Item>
@@ -66,6 +72,7 @@
   <Item>
     <Element>ManagingSchool</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Extreme</privacyRating>
     <Description>
       <p>The GUID of the school responsible for coordinating the student's program participation.</p>
     </Description>
@@ -74,6 +81,7 @@
   <Item>
     <Attribute>SIF_RefObject</Attribute>
     <Characteristics>M</Characteristics>
+	<privacyRating>Extreme</privacyRating>
     <Values>
       <Value>
         <Code>SchoolInfo</Code>
@@ -83,6 +91,7 @@
   <Item>
 		<Element>ReferralDate</Element>
 		<Characteristics>O</Characteristics>
+		<privacyRating>Extreme</privacyRating>
 		<Description>
 			<p>Date student was referred for evaluation/program participation.</p>
 		</Description>
@@ -92,6 +101,7 @@
   <Item>
     <Element>ReferralSource</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Extreme</privacyRating>
     <Type ref="CommonTypes" name="ReferralSourceType"/>
   </Item>
   
@@ -99,6 +109,7 @@
   <Item>
     <Element>ProgramStatus</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Extreme</privacyRating>
     <Description>
       <p>The current status of the student's program participation.</p>
     </Description>
@@ -107,6 +118,7 @@
   <Item>
     <Element>GiftedEligibilityCriteria</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Extreme</privacyRating>
     <Description>
       <p>Eligible for Gifted / Talented program?</p>
     </Description>
@@ -115,6 +127,7 @@
   <Item>
     <Element>EvaluationParentalConsentDate</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Extreme</privacyRating>
     <Description>
       <p>Date parent(s) consented to completion of evaluation of child for program participation.</p>
     </Description>
@@ -124,6 +137,7 @@
   <Item>
     <Element>EvaluationDate</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Extreme</privacyRating>
     <Description>
       <p>Date the evaluation/assessment process for student was completed.</p>
     </Description>
@@ -132,6 +146,7 @@
   <Item>
     <Element>EvaluationExtensionDate</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Extreme</privacyRating>
     <Description>
       <p>Actual date by which evaluation must be completed (for state use in determining timeliness in event that parent and LEA agreed to an extension beyond normal state deadline).</p>
     </Description>
@@ -140,6 +155,7 @@
   <Item>
     <Element>ExtensionComments</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Extreme</privacyRating>
     <Description>
       <p>Contains any comments on the extension.  Optional even if an EvaluationExtensionDate is present.</p>
     </Description>
@@ -148,6 +164,7 @@
   <Item>
     <Element>ReevaluationDate</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Extreme</privacyRating>
     <Description>
       <p>Date students will be reevaluated for continued placement in a support program(s).</p>
     </Description>
@@ -156,6 +173,7 @@
   <Item>
     <Element>ProgramEligibilityDate</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Extreme</privacyRating>
     <Description>
       <p>Date student is eligible for beginning the support program(s).</p>
     </Description>
@@ -164,6 +182,7 @@
   <Item>
     <Element>ProgramPlanDate</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Extreme</privacyRating>
     <Description>
       <p>Date the most recent program plan was completed and approved by the team responsible for developing it.  The date the parent consented to placement is NOREPDate.</p>
     </Description>
@@ -172,12 +191,14 @@
   <Item>
     <Element>ProgramPlanEffectiveDate</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Extreme</privacyRating>
     <Description>Date by which the plan must be implemented for the student.</Description>
     <Type name="xs:date"/>
   </Item>
   <Item>
     <Element>NOREPDate</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Extreme</privacyRating>
     <Description>
       <p>Date the Notice of Recommended Educational Placement was signed and approved by the parent / guardian of the student.</p>
     </Description>
@@ -186,6 +207,7 @@
   <Item>
     <Element>PlacementParentalConsentDate</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Extreme</privacyRating>
     <Description>
       <p>Date the parent(s) consented to the proposed placement.</p>
     </Description>
@@ -194,6 +216,7 @@
   <Item>
     <Element>ProgramPlacementDate</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Extreme</privacyRating>
     <Description>
       <p>Date student began the support program.</p>
     </Description>
@@ -202,6 +225,7 @@
   <Item>
     <Element>ExtendedSchoolYear</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Extreme</privacyRating>
     <Description>
       <p>For special education, indicates whether Extended School Year (ESY) / summer  services have been determined as necessary</p>
     </Description>
@@ -210,6 +234,7 @@
   <Item>
     <Element>ExtendedDay</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Extreme</privacyRating>
     <Description>
       <p>For special education, indicates whether Extended School Day (ESD) services have been determined as necessary.</p>
     </Description>
@@ -219,12 +244,14 @@
   <Item>
     <Element>ProgramAvailability</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Extreme</privacyRating>
     <Type ref="CommonTypes" name="ProgramAvailabilityType"></Type>
   </Item>
 
   <Item>
     <Element>EntryPerson</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Extreme</privacyRating>
     <Description>
       <p>Identification / name of the person who created the transaction that led to the creation of this instance of the object.</p>
     </Description>
@@ -234,6 +261,7 @@
   <Item>
     <Element>StudentSpecialEducationFTE</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Extreme</privacyRating>
     <Description>
       <p>Calculated ratio of time the student is in a special ed setting.  Values range from 0.00 to 1.00.  If the student is in a special ed setting 25% of the time, the value is .25; if 100% of the time, the value is 1.00.</p>
     </Description>
@@ -248,6 +276,7 @@
   <Item>
     <Element>ParticipationContact</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Extreme</privacyRating>
     <Description>
       <p>Primary contact for this record.</p>
     </Description>

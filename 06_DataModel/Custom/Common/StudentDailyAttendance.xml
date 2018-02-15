@@ -9,6 +9,7 @@
   <EventsReported>true</EventsReported>
   <Item>
     <Element>StudentDailyAttendance</Element>
+	<privacyRating>Extreme</privacyRating>
     <Description>
       <p>This object provides daily attendance information for a particular student in a particular school on a particular date.</p>
     </Description>
@@ -17,6 +18,7 @@
   <Item>
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The ID (GUID) assigned to uniquely identify this attendance record.</p>
     </Description>
@@ -27,6 +29,7 @@
 
     <Element>StudentPersonalRefId</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Medium</privacyRating>
     <Description>
       <p>The ID (GUID) of the student for whom this attendance information is being reported.</p>
     </Description>
@@ -36,6 +39,7 @@
 
     <Element>SchoolInfoRefId</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The ID (GUID) of the school for which this attendance information is being reported.</p>
     </Description>
@@ -45,6 +49,7 @@
 
     <Element>Date</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The calendar date to which this attendance information relates.</p>
     </Description>
@@ -54,6 +59,7 @@
     <Element>SchoolYear</Element>
 
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>
         School year for which this enrollment is applicable, expressed as the four-digit year in which the school year
@@ -66,6 +72,7 @@
 
     <Element>DayValue</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Value of a day this instance represents.</p>
     </Description>
@@ -75,6 +82,7 @@
     <Element>AttendanceCode</Element>
 
     <Characteristics>M</Characteristics>
+	<privacyRating>Extreme</privacyRating>
     <Description>
       <p>Locally defined code for attendance.</p>
     </Description>
@@ -84,6 +92,7 @@
     <Element>AttendanceStatus</Element>
 
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Approved or Unapproved status of this attendance code.</p>
     </Description>
@@ -93,6 +102,7 @@
   <Item>
     <Element>TimeIn</Element>
     <Characteristics>C</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The time the student entered or returned to school.  Must be provided if 'Partial' chosen for DayValue.</p>
     </Description>
@@ -101,6 +111,7 @@
   <Item>
     <Element>TimeOut</Element>
     <Characteristics>C</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The time the student left school.  Must be provided if 'Partial' chosen for DayValue..</p>
     </Description>
@@ -109,6 +120,7 @@
   <Item>
     <Element>AbsenceValue</Element>
     <Characteristics>C</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Must be provided if the DayValue is "Partial" or "Other". The amount of absence represented by AttendanceCode, up to three decimal places.</p>
     </Description>
@@ -122,6 +134,7 @@
     <Element>AttendanceNote</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Extreme</privacyRating>
     <Description>
       <p>Note related to this particular attendance.</p>
     </Description>

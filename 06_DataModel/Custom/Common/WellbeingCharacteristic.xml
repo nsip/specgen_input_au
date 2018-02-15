@@ -11,6 +11,7 @@
   <EventsReported>true</EventsReported>
   <Item>
     <Element>WellbeingCharacteristic</Element>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>Core Wellbeing Characteristic that is integral to the Student.  This may be a Medical condition, special needs or a characteristic such as a known disability or any other characteristic or condition that is student specific and impacts their learning. Some characteristics are already captured in the Demographics container of StudentPersonal however this object allows for more complex and targeted information.</p>
     </Description>
@@ -19,6 +20,7 @@
   <Item>
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The ID (GUID) assigned to uniquely identify this WellbeingCharacteristic.</p>
     </Description>
@@ -27,6 +29,7 @@
   <Item>
     <Element>StudentPersonalRefId</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>The ID (GUID) of the student to whom this WellbeingCharacteristic belongs.</p>
     </Description>
@@ -35,6 +38,7 @@
   <Item>
     <Element>SchoolInfoRefId</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The ID (GUID) of the school for which this WellbeingCharacteristic is being reported.</p>
     </Description>
@@ -44,6 +48,7 @@
     <Item>
     <Element>WellbeingCharacteristicClassification</Element>
     <Characteristics>C</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>Category of WellbeingCharacteristic.</p>
     </Description>
@@ -53,6 +58,7 @@
    <Item>
     <Element>WellbeingCharacteristicStartDate</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Starting Date for this Characteristic to be noted.</p>
     </Description>
@@ -61,6 +67,7 @@
    <Item>
     <Element>WellbeingCharacteristicEndDate</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>End date for this Characteristic to be noted, if there is one.</p>
     </Description>
@@ -70,6 +77,7 @@
   <Item>
     <Element>WellbeingCharacteristicReviewDate</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Date at which this information should be reviewed.</p>
     </Description>
@@ -79,6 +87,7 @@
   <Item>
     <Element>WellbeingCharacteristicNotes</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>Text relating to the particular WellbeingCharacteristic.</p>
     </Description>
@@ -88,6 +97,7 @@
    <Item>
     <Element>WellbeingCharacteristicCategory</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>Category of WellbeingCharacteristic.</p>
     </Description>
@@ -101,6 +111,7 @@
   <Item>
     <Element>WellbeingCharacteristicSubCategory</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>Sub category of the WellbeingCharacteristic.</p>
     </Description>
@@ -113,6 +124,7 @@
     <Item>
 		<Element>LocalCharacteristicCode</Element>
 		<Characteristics>O</Characteristics>
+		<privacyRating>High</privacyRating>
 		<Description>
 			<p>Local Code if required for Clarity.</p>
 		</Description>
@@ -122,6 +134,7 @@
    <Item>
     <Element>CharacteristicSeverity</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p></p>
     </Description>
@@ -131,6 +144,7 @@
     <Item>
     <Element>DailyManagement</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p></p>
     </Description>
@@ -140,6 +154,7 @@
     <Item>
     <Element>EmergencyManagement</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p></p>
     </Description>
@@ -149,6 +164,7 @@
     <Item>
     <Element>EmergencyResponsePlan</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p></p>
     </Description>
@@ -158,6 +174,7 @@
      <Item>
     <Element>Trigger</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p></p>
     </Description>
@@ -167,6 +184,7 @@
   <Item>
     <Element>ConfidentialFlag</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>Flag indicating if the characteristic is confidential or not.  If ‘Y’ should not be shared with any other system/school.</p>
     </Description>
@@ -176,6 +194,7 @@
     <Item>
     <Element>Alert</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>Create an Alert for this Characteristic?</p>
     </Description>
@@ -185,6 +204,7 @@
     <Item>
     <Element>MedicationList</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p></p>
     </Description>
@@ -194,6 +214,7 @@
    <Item>
     <Element>DocumentList</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>Describes the Location of any associated documents kept in relation to this Characteristic.</p>
     </Description>

@@ -11,6 +11,7 @@
   <Key>@RefId</Key>
   <Item>
     <Element>EquipmentInfo</Element>
+	<privacyRating>Low</privacyRating>
     <Description>
         <p>
           This object represents any resource object that is not already described in SIF AU by an existing object (such as RoomInfo or LearningResource). It is intended for use with ResourceBooking, so it can represent any bookable resource; but it is not limited to that usage. While the obvious type of equipment described for booking purposes are things like computers and projectors, the types of equipment that can be booked depends on the educational organisation, and can easily extend to things like vehicles or animals.      </p>
@@ -20,7 +21,7 @@
   <Item>
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Description>The GUID of the Object</Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
   </Item>
@@ -28,7 +29,7 @@
   <Item>
     <Element>Name</Element>
     <Characteristics>M</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Description>
       <p>Name of the equipment.</p>
     </Description>
@@ -38,7 +39,7 @@
   <Item>
     <Element>Description</Element>
     <Characteristics>O</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Description>
       <p>Description of the equipment.</p>
     </Description>
@@ -48,7 +49,7 @@
   <Item>
     <Element>LocalId</Element>
     <Characteristics>M</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Description>
       <p>The Local Id of the equipment.</p>
     </Description>
@@ -58,7 +59,7 @@
   <Item>
     <Element>AssetNumber</Element>
     <Characteristics>O</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Description>
       <p>Asset number of the equipment; may be distinct from Local Id.</p>
     </Description>
@@ -69,7 +70,7 @@
   <Item>
     <Element>InvoiceRefId</Element>
     <Characteristics>O</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Description>
       <p>The SIF RefId of the invoice for the equipment.</p>
     </Description>
@@ -78,7 +79,7 @@
   <Item>
     <Element>PurchaseOrderRefId</Element>
     <Characteristics>O</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Description>
       <p>The SIF RefId of the purchase order for the equipment.</p>
     </Description>
@@ -89,7 +90,7 @@
   <Item>
     <Element>EquipmentType</Element>
     <Characteristics>O</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Description>
       <p>Type of equipment.</p>
     </Description>
@@ -104,7 +105,7 @@
   <Item>
     <Element>SIF_RefId</Element>
     <Characteristics>O</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Description>
       <p>The SIF RefId of the owner/location of the equipment.</p>
     </Description>
@@ -114,7 +115,7 @@
     <Item>
       <Attribute>SIF_RefObject</Attribute>
       <Characteristics>M</Characteristics>
-      <privacyRating>L</privacyRating>
+      <privacyRating>Low</privacyRating>
       <Description>
         <p>The type of SIF object that the SIF_RefId element identifies.</p>
       </Description>
@@ -137,14 +138,14 @@
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
 
     <Characteristics>O</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
   </Item>
   <xhtml:Example name="EquipmentInfo Example" xmlns="">

@@ -9,6 +9,7 @@
   <EventsReported>true</EventsReported>
   <Item>
     <Element>LearningStandardItem</Element>
+	<privacyRating>Low</privacyRating>
     <Description>
       This object contains information related to curriculum standards statements "standards" or "benchmarks" or the like
       within the document. Each LearningStandardItem reflects an individual standard statement and may occur
@@ -19,6 +20,7 @@
 
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>GUID assigned to each statement at each level within the document hierarchy</p>
     </Description>
@@ -40,6 +42,7 @@
 	 <Description>
 		 <p>Container for related resources.</p>
 	 </Description>
+	 <privacyRating>Low</privacyRating>
     <Type ref="CommonTypes" name="LResourcesType"/>
   </Item>
 
@@ -47,6 +50,7 @@
   <Item>
     <Element>StandardSettingBody</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The name of the state or organization that authored and manages updates to the curriculum document (i.e., ACARA, NSW DET).</p>
     </Description>
@@ -54,16 +58,19 @@
   <Item>
     <Element>/Country</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Type ref="CommonTypes" name="CountryType"/>
   </Item>
   <Item>
     <Element>/StateProvince</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Type ref="CommonTypes" name="StateProvinceType"/>
   </Item>
   <Item>
     <Element>/SettingBodyName</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>This is the text version of the organization's name.</p>
     </Description>
@@ -72,6 +79,7 @@
   <Item>
     <Element>StandardHierarchyLevel</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Description of hierarchical level within standards tree.</p>
     </Description>
@@ -80,6 +88,7 @@
     <Element>/Number</Element>
 
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Integer assigned to each hierarchical level within standards tree. The top level is "1".</p>
     </Description>
@@ -89,6 +98,7 @@
 
     <Element>/Description</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Used to describe what role this item is serving in the structure. Some documents describe their levels in terms of standard, strands, and topics. Others use standards, benchmarks, and indicators. In Australia, this is typically in terms of Course or Unit, Year Level, Outcomes. This attribute names the level of the item. </p>
     </Description>
@@ -99,6 +109,7 @@
     <Element>PredecessorItems</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
    <Description>
       <p>GUID assigned to the LearningStandardItem directly above it in the hierarchy tree. This is a repeatable element because a single granular item may relate to multiple parent levels of the hierarchy.</p>
       <p>If the object has no parent, the ParentRefId should be the same as the object's RefId. The RefId in LearningStandardDocumentRefId will always point to the parent's LearningStandardDocument object.</p>
@@ -110,6 +121,7 @@
     <Element>StatementCodes</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Type ref="CommonTypes" name="StatementCodesType"></Type>
   </Item>
 
@@ -118,6 +130,7 @@
     <Element>Statements</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Type ref="CommonTypes" name="StatementsType"></Type>
   </Item>
  
@@ -125,16 +138,19 @@
     <Element>YearLevels</Element>
 
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Type ref="CommonTypes" name="YearLevelsType"></Type>
   </Item>
   <Item>
     <Element>ACStrandSubjectArea</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Type ref="CommonTypes" name="ACStrandSubjectAreaType"></Type>
   </Item>
   <Item>
     <Element>StandardIdentifier</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>This element describes the unique identifier for each LearningStandard.</p>
     </Description>
@@ -142,6 +158,7 @@
   <Item>
     <Element>/YearCreated</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>This represents the year that this specific learning standard was created.  This is important to indicate as standards are updated to reflect the appropriate year it was created. This would be assigned by and unique to the standard setting body.</p>
     </Description>
@@ -150,6 +167,7 @@
   <Item>
     <Element>/ACStrandSubjectArea</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>This represents the subject or content area this curriculum item addresses. This would be assigned by and unique to the curriculum setting body.</p>
     </Description>
@@ -158,6 +176,7 @@
   <Item>
     <Element>/StandardNumber</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>This is the specific number of the standard.  For example, if the subject is mathematics and this standard is Patterns, Functions and Algebra, this would be StandardNumber 1. This would be assigned by and unique to the standard setting body.</p>
     </Description>
@@ -166,6 +185,7 @@
   <Item>
     <Element>/YearLevels</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>This represents the grade level(s) this specific learning standard will address. This may be addressed in different ways.  Some states have a grade level that covers several grades and others have just one grade. This would be assigned by and unique to the standard setting body.</p>
     </Description>
@@ -174,6 +194,7 @@
   <Item>
     <Element>/Benchmark</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>This is the next level within the hierarchy of the learning standard.  For example, if the subject is mathematics and the standard is algebra, this would be the next delineation - Represent an unknown quantity as a variable using a symbol, including letters. This would be assigned by and unique to the standard setting body.</p>
     </Description>
@@ -182,6 +203,7 @@
   <Item>
     <Element>/YearLevel</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>This is the specific year level.  This is to be utilized if the YearLevel covers several years. This would be assigned by and unique to the standard setting body.</p>
     </Description>
@@ -190,6 +212,7 @@
   <Item>
     <Element>/IndicatorNumber</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>This would be the most granular level of the learning standard associated with the grade level. Following the same example, an indicator for Algebra YearLevel 5-7, the indicator for the benchmark above at Year 6 would be to Evaluate simple expressions by replacing variables with given values, and use formulas in problem-solving situations. This would be assigned by and unique to the standard setting body.</p>
     </Description>
@@ -198,6 +221,7 @@
   <Item>
     <Element>/AlternateIdentificationCodes</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>This element is for an organization to utilize for an internal code.  This may be used for an alignment schema or other purposes that are only internal for the organization.</p>
     </Description>
@@ -206,6 +230,7 @@
   <Item>
     <Element>//AlternateIdentificationCode</Element>
     <Characteristics>MR</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>An alphanumeric Id code as defined by the organization to identify the statement.</p>
     </Description>
@@ -214,6 +239,7 @@
   <Item>
     <Element>/Organization</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Name of organization represented by the document, i.e., "National Council of Teachers of Mathematics (NCTM)," "NSW," "ACARA." This is the name of the organization that has this AlternateIdentificationCode. This should be a text field.</p>
     </Description>
@@ -224,6 +250,7 @@
     <Element>LearningStandardDocumentRefId</Element>
 
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The RefId of the item's parent LearningStandardDocument.</p>
     </Description>
@@ -232,6 +259,7 @@
   <Item>
     <Element>RelatedLearningStandardItems</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Container for external relationships.</p>
     </Description>
@@ -240,6 +268,7 @@
   <Item>
     <Element>/LearningStandardItemRefId</Element>
     <Characteristics>OR</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>A relationship between the current standard item and another standard item.</p>
     </Description>
@@ -248,6 +277,7 @@
   <Item>
     <Attribute>RelationshipType</Attribute>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Type of the relationship between the current standard and the target standard.  The value identifies the type of standard of the target item. The purpose of this information is to allow applications to sort/display these relationships in the appropriate context.</p>
     </Description>
@@ -260,6 +290,7 @@
   <Item>
     <Element>Level4</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>This is the second to most granular level of the learning or performance standard associated with the grade level.</p>
     </Description>
@@ -269,6 +300,7 @@
   <Item>
     <Element>Level5</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>This is the most granular level of the learning or performance standard associated with the grade level.</p>
     </Description>

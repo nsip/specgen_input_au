@@ -12,6 +12,7 @@
 
   <Item>
     <Element>CalendarDate</Element>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>This object defines information related to a school calendar day in a given school calendar year. If both CalendarDate and CalendarSummary objects are supported, there must be an instance of this object for each date between CalendarSummary StartDate and EndDate, inclusive.</p>
     </Description>
@@ -19,7 +20,7 @@
     <Item>
     <Attribute>CalendarDateRefId</Attribute>
     <Characteristics>M</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Description>
       <p>An ID (GUID) for this day date of the calendar information that is being reported. This GUID would be used to form a REST URL.</p>
     </Description>
@@ -28,7 +29,7 @@
   <Item>
     <Element>Date</Element>
     <Characteristics>M</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Description>
       <p>A specific school day that occurs within the school year.</p>
     </Description>
@@ -37,7 +38,7 @@
   <Item>
     <Element>CalendarSummaryRefId</Element>
     <Characteristics>O</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Description>
       <p>The ID (GUID) of the calendar summary in which this calendar date is.</p>
     </Description>
@@ -46,7 +47,7 @@
   <Item>
     <Element>SchoolInfoRefId</Element>
     <Characteristics>M</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Description>
       <p>The ID (GUID) of the school for which this calendar information is being reported.</p>
     </Description>
@@ -55,7 +56,7 @@
   <Item>
     <Element>SchoolYear</Element>
     <Characteristics>M</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Description>
       <p>School year for which the information is applicable, expressed as the four-digit year in which the school year ends (e.g., "2009").</p>
     </Description>
@@ -65,7 +66,7 @@
   <Item>
     <Element>CalendarDateType</Element>
     <Characteristics>M</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Description>
       <p>Calendar date type information.</p>
     </Description>
@@ -75,7 +76,7 @@
   <Item>
     <Element>CalendarDateNumber</Element>
     <Characteristics>O</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Description>
       <p>Order in which the calendar date falls within the school calendar.</p>
     </Description>
@@ -85,7 +86,7 @@
   <Item>
     <Element>StudentAttendance</Element>
     <Characteristics>O</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Description>
       <p>Information describing how the day relates to student attendance.</p>
     </Description>
@@ -96,7 +97,7 @@
   <Item>
     <Element>TeacherAttendance</Element>
     <Characteristics>O</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Description>
       <p>Information describing how the day relates to teacher attendance.</p>
     </Description>
@@ -106,7 +107,7 @@
   <Item>
     <Element>AdministratorAttendance</Element>
     <Characteristics>O</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Description>
       <p>Information describing how the day relates to administrator attendance.</p>
     </Description>
@@ -116,13 +117,13 @@
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
   </Item>
   <xhtml:Example xmlns="" name="CalendarDate">

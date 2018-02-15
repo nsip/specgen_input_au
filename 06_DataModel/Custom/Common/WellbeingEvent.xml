@@ -11,6 +11,7 @@
   <EventsReported>true</EventsReported>
   <Item>
     <Element>WellbeingEvent</Element>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>Event that impacts on a student’s duty of care.  This has been modelled by Sentral as an Incident, by CEOM as a behaviour support incident and by WA previously as an "Incident Report" but looking to move to terminology such as a “Wellbeing Event”.  There is an emphasis that this ‘event’ was needed to track both ‘positive’ and ‘negative’ behaviours and it not just the recording of a discipline incident or an accident.  This event is specific to a student, and is not global (e.g. a pandemic). Where an event involves more than one student, they can be listed in the person’s involved.  Where the event has an impact on a student’s wellbeing an individual record for each student should be generated.  E.g. where a student is reporting that another student fell off his bike, then the reporting student is listed as a person involved.</p>
     </Description>
@@ -19,6 +20,7 @@
   <Item>
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The ID (GUID) assigned to uniquely identify this WellbeingEvent.</p>
     </Description>
@@ -27,6 +29,7 @@
   <Item>
     <Element>StudentPersonalRefId</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>The ID (GUID) of the student to whom this WellbeingEvent belongs.</p>
     </Description>
@@ -35,6 +38,7 @@
   <Item>
     <Element>SchoolInfoRefId</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The ID (GUID) of the school for which this WellbeingEvent is being reported.</p>
     </Description>
@@ -44,6 +48,7 @@
   <Item>
 		<Element>EventId</Element>
 		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>A Local Identifier for the Event. It is expected to be unique to the reporting site.</p>
 		</Description>
@@ -53,6 +58,7 @@
    <Item>
     <Element>WellbeingEventNotes</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>Text relating to the particular WellbeingEvent.</p>
     </Description>
@@ -62,6 +68,7 @@
   <Item>
     <Element>WellbeingEventCategoryClass</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>Category of WellbeingEvent.</p>
     </Description>
@@ -71,6 +78,7 @@
   <Item>
     <Element>WellbeingEventCategoryList</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>List of Categories of WellbeingEvent.</p>
     </Description>
@@ -85,6 +93,7 @@
     <Item>
     <Element>ReportingStaffRefId</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The ID (GUID) of the staff member who logged the Wellbeing Event record.</p>
     </Description>
@@ -94,6 +103,7 @@
    <Item>
     <Element>WellbeingEventLocationDetails</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Medium</privacyRating>
     <Description>
       <p>Details of Event Location.</p>
     </Description>
@@ -103,6 +113,7 @@
   <Item>
     <Element>WellbeingEventCreationTimeStamp</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Date and time of the WellbeingEvent record creation.</p>
     </Description>
@@ -112,6 +123,7 @@
   <Item>
     <Element>WellbeingEventDate</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>The calendar date on which this WellbeingEvent occured.</p>
     </Description>
@@ -121,6 +133,7 @@
    <Item>
     <Element>WellbeingEventTime</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>The time when WellbeingEvent occured.</p>
     </Description>
@@ -130,6 +143,7 @@
    <Item>
     <Element>WellbeingEventDescription</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>A description of the WellbeingEvent.</p>
     </Description>
@@ -139,6 +153,7 @@
    <Item>
     <Element>WellbeingEventTimePeriod</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>Time period of when the event occurred.</p>
     </Description>
@@ -148,6 +163,7 @@
   <Item>
     <Element>ConfidentialFlag</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>Flag indicating if the incident is confidential or not.  If ‘Y’ should not be shared with any other system/school.</p>
     </Description>
@@ -157,6 +173,7 @@
    <Item>
     <Element>PersonInvolvementList</Element>
     <Characteristics>C</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>List of People involved in the Wellbeing event.  Mandatory if more people than the student to which this event occurs is involved.</p>
     </Description>
@@ -166,6 +183,7 @@
     <Item>
     <Element>FollowUpActionList</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>List of Actions where an action resulted and is known – maybe just a link to a WellbeingResponse Object</p>
     </Description>
@@ -175,6 +193,7 @@
    <Item>
   	   	<Element>Status</Element>
 		<Characteristics>O</Characteristics>
+		<privacyRating>High</privacyRating>
 		<Description>
 		  <p>Current Status.</p>
 		</Description>
@@ -184,6 +203,7 @@
    <Item>
     <Element>DocumentList</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>Describes the Location of any associated documents kept in relation to this Response.</p>
     </Description>

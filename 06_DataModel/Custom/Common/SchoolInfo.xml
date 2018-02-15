@@ -9,6 +9,7 @@
   <EventsReported>true</EventsReported>
   <Item>
     <Element>SchoolInfo</Element>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>This object contains information about the school or campus.</p>
     </Description>
@@ -16,6 +17,7 @@
   <Item>
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The GUID that identifies this school.</p>
     </Description>
@@ -24,6 +26,7 @@
   <Item>
     <Element>LocalId</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The locally-assigned identifier for this school.</p>
     </Description>
@@ -32,6 +35,7 @@
   <Item>
     <Element>StateProvinceId</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The state-assigned identifier for this school.</p>
     </Description>
@@ -40,6 +44,7 @@
   <Item>
     <Element>CommonwealthId</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Commonwealth identifier for this school/campus.</p>
     </Description>
@@ -48,6 +53,7 @@
    <Item>
     <Element>ACARAId</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>ACARA identifier for this school/campus.</p>
     </Description>
@@ -57,6 +63,7 @@
  	<Item>
 		<Element>OtherIdList</Element>
 		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>Lists all "other" identifiers associated with the school.</p>
 		</Description>
@@ -66,6 +73,7 @@
   <Item> 
    <Element>SchoolName</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Name of school/campus.</p>
     </Description>
@@ -74,6 +82,7 @@
   <Item>
     <Element>LEAInfoRefId</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The ID (GUID) that references the school district of which this school is a member.</p>
     </Description>
@@ -82,6 +91,7 @@
   <Item>
     <Element>OtherLEA</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The ID (GUID) of another related education agency, such as a regional service agency.</p>
     </Description>
@@ -90,6 +100,7 @@
   <Item>
     <Attribute>SIF_RefObject</Attribute>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The name of the object reference. </p>
     </Description>
@@ -102,6 +113,7 @@
   <Item>
     <Element>SchoolDistrict</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The school district of which this school/campus is a member. Equivalent to DEECD Region.</p>
     </Description>
@@ -111,6 +123,7 @@
   <Item>
     <Element>SchoolDistrictLocalId</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The school district Local ID. This should be the same as the LocalId in the LEAInfo if LEAInfo details are supplied.</p>
     </Description>
@@ -121,6 +134,7 @@
   <Item>
     <Element>SchoolType</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>An indication of the level of the educational institution.</p>
     </Description>
@@ -130,6 +144,7 @@
   <Item>
 		<Element>SchoolFocusList</Element>
 		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>Lists all "other" identifiers associated with the student.</p>
 		</Description>
@@ -141,6 +156,7 @@
     <Element>SchoolURL</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>URL for the school.</p>
     </Description>
@@ -150,6 +166,7 @@
   <Item>
     <Element>SchoolEmailList</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>List of contact emails for the school.</p>
     </Description>
@@ -160,6 +177,7 @@
     <Element>PrincipalInfo</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Information about the campus or school principal.</p>
     </Description>
@@ -169,6 +187,7 @@
   <Item>
     <Element>SchoolContactList</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>A list of contact persons associated with a school.</p>
     </Description>
@@ -177,6 +196,7 @@
   <Item>
     <Element>AddressList</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The school's addresses.</p>
     </Description>
@@ -185,6 +205,7 @@
   <Item>
     <Element>PhoneNumberList</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The school's phone numbers.</p>
     </Description>
@@ -193,6 +214,7 @@
   <Item>
     <Element>SessionType</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Code that specifies the session type.</p>
     </Description>
@@ -202,6 +224,7 @@
   <Item>
     <Element>YearLevels</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>List of year levels offered by the school.</p>
     </Description>
@@ -213,12 +236,14 @@
   <Item>
     <Element>ARIA</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>Accessibility/Remoteness Indicator of Australia.</Description>
     <Type name='xs:decimal'/>
   </Item>
   <Item>
     <Element>OperationalStatus</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Operational condition of a school.</p>
     </Description>
@@ -227,6 +252,7 @@
   <Item>
     <Element>FederalElectorate</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Australian Federal Electorate.</p>
     </Description>
@@ -235,6 +261,7 @@
   <Item>
     <Element>Campus</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Optional campus details.</p>
     </Description>
@@ -243,6 +270,7 @@
   <Item>
     <Element>SchoolSector</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>(Government, or Non-Government).</p>
     </Description>
@@ -251,6 +279,7 @@
   <Item>
     <Element>IndependentSchool</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Indicator as to whether school is an independent school (as opposed to government or catholic school).</p>
     </Description>
@@ -259,6 +288,7 @@
   <Item>
     <Element>NonGovSystemicStatus</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Used to clarify a non-government school's systemic status. Either Systemic or Non-Systemic.</p>
     </Description>
@@ -267,6 +297,7 @@
   <Item>
     <Element>System</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>System if a systemic school.</p>
     </Description>
@@ -275,6 +306,7 @@
   <Item>
     <Element>ReligiousAffiliation</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Religious affiliation (if any).</p>
     </Description>
@@ -283,6 +315,7 @@
   <Item>
     <Element>SchoolGeographicLocation</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>School Location</p>
     </Description>
@@ -291,6 +324,7 @@
   <Item>
     <Element>LocalGovernmentArea</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>LocalGovernmentArea that that school/campus is located in.</p>
     </Description>
@@ -299,6 +333,7 @@
   <Item>
     <Element>JurisdictionLowerHouse</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Lower House area  that the school/campus  belongs to.</p>
     </Description>
@@ -307,6 +342,7 @@
   <Item>
     <Element>SLA</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Statistical Local Area that the school/campus belongs to.</p>
     </Description>
@@ -315,6 +351,7 @@
   <Item>
     <Element>SchoolCoEdStatus</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Gender of student population.</p>
     </Description>
@@ -323,6 +360,7 @@
   <Item>
     <Element>BoardingSchoolStatus</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Is this school a Boarding School?</p>
     </Description>
@@ -332,6 +370,7 @@
    <Item>
     <Element>YearLevelEnrollmentList</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Container for number of students enrolled per year level.</p>
     </Description>
@@ -341,6 +380,7 @@
    <Item>
     <Element>TotalEnrollments</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Optional School/Campus enrolments.</p>
     </Description>
@@ -350,6 +390,7 @@
   <Item>
     <Element>Entity_Open</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Opening date of entity.</p>
     </Description>
@@ -358,6 +399,7 @@
   <Item>
     <Element>Entity_Close</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Closing date of entity.  This element is allowed to be omitted and/or null.</p>
     </Description>
@@ -366,6 +408,7 @@
   <Item>
     <Element>SchoolGroupList</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p></p>
     </Description>
@@ -375,6 +418,7 @@
   <Item>
     <Element>SchoolTimeZone</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>An optional placeholder for a schools time zone.</p>
     </Description>

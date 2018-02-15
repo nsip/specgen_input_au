@@ -9,6 +9,7 @@
 	<EventsReported>true</EventsReported>
 	<Item>
 		<Element>SectionInfo</Element>
+		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>This object provides information about the section, the specific time period a session of the course meets. Australian Implementations have been using TeachingGroup as a representation of a class;</p>
 		</Description>
@@ -16,6 +17,7 @@
 	<Item>
 		<Attribute>RefId</Attribute>
 		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>The Id (GUID) that uniquely identifies this section entity.</p>
 		</Description>
@@ -25,6 +27,7 @@
 	<Item>
 		<Element>SchoolCourseInfoRefId</Element>
 		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>The Id (GUID) that identifies the course being taught in this section.</p>
 		</Description>
@@ -33,6 +36,7 @@
 	<Item>
 		<Element>LocalId</Element>
 		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>The locally-assigned identifier for this course section.</p>
 		</Description>
@@ -41,6 +45,7 @@
 	<Item>
 		<Element>Description</Element>
 		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>Description of the course section.</p>
 		</Description>
@@ -49,6 +54,7 @@
 	<Item>
 		<Element>SchoolYear</Element>
 		<Characteristics>C</Characteristics>
+		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>
         School year for which the information is applicable, expressed as the four-digit year in which the school year ends (e.g. <code>2013</code> for the 2013 school year).
@@ -60,6 +66,7 @@
 	<Item>
 		<Element>TermInfoRefId</Element>
 		<Characteristics>C</Characteristics>
+		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>The Id (GUID) of the term to which this schedule information relates.
 				Either TermInfoRefId or SchoolYear must be provided.</p>
@@ -70,6 +77,7 @@
 	<Item>
 		<Element>MediumOfInstruction</Element>
 		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>Medium through which the student receives instructional communication from the teacher.</p>
 		</Description>
@@ -79,6 +87,7 @@
 	<Item>
 		<Element>LanguageOfInstruction</Element>
 		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>Language in which the section is taught.</p>
 		</Description>
@@ -88,6 +97,7 @@
 	<Item>
 		<Element>LocationOfInstruction</Element>
 		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>Description of the location in which the section is taught.</p>
 		</Description>
@@ -97,6 +107,7 @@
 	<Item>
 		<Element>SummerSchool</Element>
 		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>Is this a summer school assignment?</p>
 		</Description>
@@ -113,6 +124,7 @@
 	<Item>
 		<Element>SchoolCourseInfoOverride</Element>
 		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>Optional overrides of the course information for this section.</p>
 		</Description>
@@ -123,6 +135,7 @@
 	<Item>
 		<Element>CourseSectionCode</Element>
 		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>A section code that is linked to a course.  This should be a unique identifier within the school year and course (i.e. the class instance number for a course).  For example, Algebra I: Section 23 is different from English II: Section 23. </p>
 		</Description>
@@ -131,6 +144,7 @@
 	<Item>
 		<Element>SectionCode</Element>
 		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>A unique identifier of the section for the school year and across courses (i.e. unique across all courses).  For example, Algebra I sections range from 00122 to 00140 and English II courses range from 00141 to 00152.</p>
 		</Description>
@@ -139,6 +153,7 @@
 	<Item>
 		<Element>CountForAttendance</Element>
 		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>Indicates if attendance in this section is collected and used in attendance calculations.</p>
 		</Description>

@@ -11,6 +11,7 @@
   <EventsReported>true</EventsReported>
   <Item>
     <Element>WellbeingResponse</Element>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>An outcome of a Student Wellbeing Event – or more often referred to in discussions as an ‘Incident’ usually will have a WellbeingResponse, action or an outcome.  Many events may have WellbeingResponses that need to be reported to other systems or agencies.  This may be a Suspension, an Expulsion/Exclusion, or an experience which requires reward or recognition. WA has specific language around categories of suspension—e.g. they are legally constrained not to refer to expulsion of students.</p>
     </Description>
@@ -19,6 +20,7 @@
   <Item>
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The ID (GUID) assigned to uniquely identify this WellbeingResponse.</p>
     </Description>
@@ -27,6 +29,7 @@
   <Item>
     <Element>StudentPersonalRefId</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>The ID (GUID) of the student to whom this WellbeingResponse belongs.</p>
     </Description>
@@ -35,6 +38,7 @@
   <Item>
     <Element>SchoolInfoRefId</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The ID (GUID) of the school for which this WellbeingResponse is being reported.</p>
     </Description>
@@ -44,6 +48,7 @@
   <Item>
     <Element>Date</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The calendar date on which this WellbeingResponse was published.</p>
     </Description>
@@ -53,6 +58,7 @@
    <Item>
     <Element>WellbeingResponseStartDate</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The date the WellbeingResponse period commenced.</p>
     </Description>
@@ -61,6 +67,7 @@
    <Item>
     <Element>WellbeingResponseEndDate</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The date the WellbeingResponse is due to finish.</p>
     </Description>
@@ -70,6 +77,7 @@
   <Item>
     <Element>WellbeingResponseCategory</Element>
     <Characteristics>C</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>Category of WellbeingResponse.</p>
     </Description>
@@ -79,6 +87,7 @@
   <Item>
     <Element>WellbeingResponseNotes</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>Text relating to the particular WellbeingResponse.</p>
     </Description>
@@ -87,6 +96,7 @@
   <Item>
     <Element>PersonInvolvementList</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>>A person (additional to the student) involved in a  Wellbeing event/response where required to be known.</p>
     </Description>
@@ -95,6 +105,7 @@
    <Item>
     <Element>Suspension</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>Container for details of a Suspension or Expulsion.</p>
     </Description>
@@ -103,6 +114,7 @@
    <Item>
     <Element>Detention</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>Container for details of a Detention.</p>
     </Description>
@@ -111,6 +123,7 @@
    <Item>
     <Element>PlanRequired</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>Container for Information to define the need for an Plan.</p>
     </Description>
@@ -119,6 +132,7 @@
    <Item>
     <Element>Award</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>Container for details of an Award.</p>
     </Description>
@@ -127,6 +141,7 @@
    <Item>
     <Element>OtherResponse</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>Container for details of another type of Response.</p>
     </Description>
@@ -135,6 +150,7 @@
    <Item>
     <Element>DocumentList</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>Describes the Location of any associated documents kept in relation to this Response.</p>
     </Description>

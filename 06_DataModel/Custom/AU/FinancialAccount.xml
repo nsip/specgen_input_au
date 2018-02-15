@@ -9,6 +9,7 @@
   <EventsReported>true</EventsReported>
   <Item>
     <Element>FinancialAccount</Element>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>
         This object communicates information about a financial account.
@@ -19,7 +20,7 @@
 
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
-    <privacyRating>H</privacyRating>
+    <privacyRating>High</privacyRating>
     <Description>
       <p>GUID that identifies this financial account.</p>
     </Description>
@@ -30,7 +31,7 @@
     <Element>ParentAccountRefId</Element>
 
     <Characteristics>O</Characteristics>
-    <privacyRating>H</privacyRating>
+    <privacyRating>High</privacyRating>
     <Description>
       <p>Identifier of a parent account of the account. Can be used to construct a hierarchical tree of nesting accounts, e.g. "Revenue" -- "Revenue-Grant" -- "Revenue-Grant-Commonwealth".</p>
     </Description>
@@ -41,9 +42,9 @@
     <Element>ChargedLocationInfoRefId</Element>
     
     <Characteristics>O</Characteristics>
-    <privacyRating>H</privacyRating>
+    <privacyRating>High</privacyRating>
     <Description>
-      <p>Location associated with the account".</p>
+      <p>Location associated with the account</p>
     </Description>
     <Type ref="CommonTypes" name="IdRefType"></Type>
   </Item>
@@ -51,7 +52,7 @@
   <Item>
     <Element>AccountNumber</Element>
     <Characteristics>M</Characteristics>
-    <privacyRating>H</privacyRating>
+    <privacyRating>High</privacyRating>
     <Description>
       <p>Account number used for ledger.</p>
     </Description>
@@ -62,7 +63,7 @@
     <Element>Name</Element>
 
     <Characteristics>M</Characteristics>
-    <privacyRating>H</privacyRating>
+    <privacyRating>High</privacyRating>
     <Description>
       <p>Name of the account.</p>
     </Description>
@@ -72,7 +73,7 @@
   <Item>
     <Element>Description</Element>
     <Characteristics>O</Characteristics>
-    <privacyRating>H</privacyRating>
+    <privacyRating>High</privacyRating>
     <Description>
       <p>Description of the account.</p>
     </Description>
@@ -82,7 +83,7 @@
   <Item>
     <Element>ClassType</Element>
     <Characteristics>M</Characteristics>
-    <privacyRating>H</privacyRating>
+    <privacyRating>High</privacyRating>
     <Description>
       <p>The class of the account</p>
     </Description>
@@ -105,7 +106,7 @@
   <Item>
     <Element>CreationDate</Element>
     <Characteristics>M</Characteristics>
-    <privacyRating>H</privacyRating>
+    <privacyRating>High</privacyRating>
     <Description>
       <p>Account creation date.</p>
     </Description>
@@ -116,7 +117,7 @@
     <Item>
       <Element>CreationTime</Element>
       <Characteristics>M</Characteristics>
-      <privacyRating>H</privacyRating>
+      <privacyRating>High</privacyRating>
       <Description>
         <p>Account creation time.</p>
       </Description>
@@ -127,13 +128,13 @@
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <privacyRating>H</privacyRating>
+    <privacyRating>High</privacyRating>
     <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <privacyRating>H</privacyRating>
+    <privacyRating>High</privacyRating>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
   </Item>
   <xhtml:Example xmlns="" name="FinancialAccount">

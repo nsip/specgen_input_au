@@ -9,6 +9,7 @@
   <EventsReported>true</EventsReported>
   <Item>
     <Element>ChargedLocationInfo</Element>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>
         ChargedLocationInfo represents a location in a school system. It can be used to associate accounts and purchase orders with particular schools or other cost centres.      </p>
@@ -18,7 +19,7 @@
 
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Description>
       <p>The SIF unique identifier for the location.</p>
     </Description>
@@ -28,7 +29,7 @@
   <Item>
     <Element>LocationType</Element>
     <Characteristics>M</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Description>
       <p>Defines whether the location is a school or a non-school location.</p>
     </Description>
@@ -45,7 +46,7 @@
   <Item>
     <Element>SiteCategory</Element>
     <Characteristics>M</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Description>
       <p>Specific site category.</p>
     </Description>
@@ -62,7 +63,7 @@
   <Item>
     <Element>Name</Element>
     <Characteristics>M</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Description>
       <p>Text name of the location.</p>
     </Description>
@@ -72,7 +73,7 @@
   <Item>
     <Element>Description</Element>
     <Characteristics>O</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Description>
       <p>Description about the location.</p>
     </Description>
@@ -83,7 +84,7 @@
   <Item>
     <Element>LocalId</Element>
     <Characteristics>O</Characteristics>
-	<privacyRating>L</privacyRating>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The locally-assigned identifier for this location.</p>
     </Description>
@@ -93,7 +94,7 @@
   <Item>
     <Element>StateProvinceId</Element>
     <Characteristics>O</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Description>
       <p>The state-assigned identifier for this location.</p>
     </Description>
@@ -103,7 +104,7 @@
   <Item>
     <Element>ParentChargedLocationInfoRefId</Element>
     <Characteristics>O</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Description>
       <p>A ChargedLocationInfo instance could be related to another ChargedLocationInfo. This element will help create that relation.</p>
     </Description>
@@ -113,7 +114,7 @@
   <Item>
     <Element>SchoolInfoRefId</Element>
     <Characteristics>O</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Description>
       <p>The RefId of a corresponding SchoolInfo object.</p>
     </Description>
@@ -123,7 +124,7 @@
   <Item>
     <Element>AddressList</Element>
     <Characteristics>O</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Description>
       <p>This element has the ChargedLocationInfo address information.</p>
     </Description>
@@ -133,7 +134,7 @@
   <Item>
     <Element>PhoneNumberList</Element>
     <Characteristics>O</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Description>
       <p>The location's phone numbers.</p>
     </Description>
@@ -144,13 +145,13 @@
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
-    <privacyRating>L</privacyRating>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
   </Item>
   <xhtml:Example xmlns="" name="ChargedLocation">

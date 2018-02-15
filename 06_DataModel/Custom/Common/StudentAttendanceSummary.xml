@@ -12,6 +12,7 @@
 
   <Item>
     <Element>StudentAttendanceSummary</Element>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>This object provides a summary of a student's daily attendance and membership information for a given school during the time period between the StartDate and EndDate, inclusive.  As such, there may be multiple instances of this object for a student in a school over the course of a school year.</p>
     </Description>
@@ -20,6 +21,7 @@
   <Item>
     <Attribute>StudentAttendanceSummaryRefId</Attribute>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>An ID (GUID) for this summary of attendance information being reported on. This GUID would be used to form a REST URL.</p>
     </Description>
@@ -29,6 +31,7 @@
   <Item>
     <Element>StudentPersonalRefId</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The ID (GUID) of the student for whom this attendance information is being reported.</p>
     </Description>
@@ -37,6 +40,7 @@
   <Item>
     <Element>SchoolInfoRefId</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The ID (GUID) of the school for which this attendance information is being reported.</p>
     </Description>
@@ -46,6 +50,7 @@
    <Item>
     <Element>SchoolYear</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>School year for which the information is applicable.</p>
     </Description>
@@ -55,6 +60,7 @@
   <Item>
     <Element>StartDate</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Starting date of this attendance reporting period.</p>
     </Description>
@@ -63,6 +69,7 @@
   <Item>
    <Element>EndDate</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Ending date of this attendance reporting period.</p>
     </Description>
@@ -73,6 +80,7 @@
   <Item>
     <Element>StartDay</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Number of the school day represented in StartDate.</p>
     </Description>
@@ -82,6 +90,7 @@
   <Item>
     <Element>EndDay</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Number of the school day represented in EndDate.</p>
     </Description>
@@ -91,6 +100,7 @@
   <Item>
     <Element>FTE</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Full time equivalent numeric value of the student's course load during this attendance period, expressed in decimal form, where 1.00 represents a full time enrollment.</p>
     </Description>
@@ -104,6 +114,7 @@
   <Item>
     <Element>DaysAttended</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The number of days the student attended school when school was in session between the StartDate and EndDate, inclusive.</p>
     </Description>
@@ -112,6 +123,7 @@
   <Item>
     <Element>ExcusedAbsences</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The number of days the student was absent from school with a valid excuse when school was in session between the StartDate and EndDate, inclusive.</p>
     </Description>
@@ -120,6 +132,7 @@
   <Item>
     <Element>UnexcusedAbsences</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The number of days the student was absent from school without a valid excuse when school was in session between the StartDate and EndDate, inclusive.</p>
     </Description>
@@ -128,6 +141,7 @@
   <Item>
     <Element>DaysTardy</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The number of days the student was tardy when school was in session between the StartDate and EndDate, inclusive.</p>
     </Description>
@@ -136,6 +150,7 @@
   <Item>
     <Element>DaysInMembership</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The number of days the student was present plus the number of days the student was absent when school was in session during the period between the StartDate and EndDate, inclusive.</p>
     </Description>

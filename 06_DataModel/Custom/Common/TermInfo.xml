@@ -10,6 +10,7 @@
   <EventsReported>true</EventsReported>
   <Item>
     <Element>TermInfo</Element>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>This object provides information about a term; i.e., a reportable period of time.</p>
     </Description>
@@ -18,6 +19,7 @@
 
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The ID (GUID) that uniquely identifies this TermInfo entity.</p>
     </Description>
@@ -27,6 +29,7 @@
 
     <Element>SchoolInfoRefId</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The ID (GUID) that identifies the school where the term is used.</p>
     </Description>
@@ -36,6 +39,7 @@
 
     <Element>SchoolYear</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>
         School year for which the information is applicable, expressed as the four-digit year in which the school year ends (e.g., "2009").
@@ -47,6 +51,7 @@
     <Element>StartDate</Element>
 
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Starting date of the term.</p>
     </Description>
@@ -56,6 +61,7 @@
     <Element>EndDate</Element>
 
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Ending date of the term.</p>
     </Description>
@@ -65,6 +71,7 @@
     <Element>Description</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Text-based description of the term.</p>
     </Description>
@@ -73,6 +80,7 @@
   <Item>
     <Element>RelativeDuration</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Portion of the school year represented by this term, expressed in decimal form precise to 4 decimal places (e.g., 0.1333).</p>
     </Description>
@@ -87,6 +95,7 @@
     <Element>TermCode</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Locally-defined code.</p>
     </Description>
@@ -96,6 +105,7 @@
     <Element>Track</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The name, description, or code of the track that contains this term. This is used when there are multiple tracks within a school. For instance, kindergarten commonly has a different set of terms than other grades within the school.</p>
     </Description>
@@ -105,12 +115,14 @@
     <Element>TermSpan</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>What sort of Session this TermSpan equates to.</Description>
     <Type ref="CodeSets" name="AUCodeSetsSessionTypeType"></Type>
   </Item>
   <Item>
     <Element>MarkingTerm</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Does this TermInfo represent a marking period?</p>
     </Description>
@@ -119,6 +131,7 @@
   <Item>
     <Element>SchedulingTerm</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Does this TermInfo represent a scheduling term?</p>
     </Description>
@@ -127,6 +140,7 @@
   <Item>
     <Element>AttendanceTerm</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Does this TermInfo represent an attendance term?</p>
     </Description>

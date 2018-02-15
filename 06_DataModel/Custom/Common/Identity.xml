@@ -10,6 +10,7 @@
   <EventsReported>true</EventsReported>
   <Item>
     <Element>Identity</Element>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>
         This object allows a system that stores network identities and/or passwords to share them with other applications through SIF. The provider of the <code>Identity</code> object may only support providing an identity or a password, or it may support both.
@@ -19,6 +20,7 @@
   <Item>
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
+    <privacyRating>High</privacyRating>
     <Description>
       <p>The SIF RefId that uniquely identifies this object.</p>
     </Description>
@@ -27,6 +29,7 @@
   <Item>
     <Element>SIF_RefId</Element>
     <Characteristics>M</Characteristics>
+    <privacyRating>High</privacyRating>
     <Description>
       <p>
         The SIF RefId of a StudentPersonal, StaffPersonal, or StudentContactPersonal object.
@@ -37,6 +40,7 @@
   <Item>
     <Attribute>SIF_RefObject</Attribute>
     <Characteristics>M</Characteristics>
+    <privacyRating>High</privacyRating>
     <Description>
       <p>
         The type of SIF object that the <code>SIF_RefId</code> attribute identifies.
@@ -57,6 +61,7 @@
   <Item>
     <Element>AuthenticationSource</Element>
     <Characteristics>M</Characteristics>
+    <privacyRating>High</privacyRating>
     <Description>
       <p>
         The type of source system that produced this <code>Identity</code> object.
@@ -88,6 +93,7 @@
   <Item>
     <Element>IdentityAssertions</Element>
     <Characteristics>O</Characteristics>
+    <privacyRating>High</privacyRating>
     <Description>
       <p>The list of identity assertions for this user.</p>
     </Description>
@@ -98,6 +104,7 @@
   <Item>
     <Element>PasswordList</Element>
     <Characteristics>O</Characteristics>
+    <privacyRating>High</privacyRating>
     <Description>
       <p>Allows a provider or publisher to specify the same password using multiple algorithms, if supported.</p>
     </Description>
@@ -107,6 +114,7 @@
   <Item>
     <Element>AuthenticationSourceGlobalUID</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>The globally unique person identifier that links together separate Identity objects which reference the same Person.</p>
     </Description>
@@ -114,14 +122,16 @@
   </Item>
   <Item>
     <Element>SIF_Metadata</Element>
-    <Characteristics>O</Characteristics>
     <Description></Description>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
     <Type ref="CommonTypes" name="SIF_MetadataType"/>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
-    <Characteristics>O</Characteristics>
     <Description></Description>
+    <Characteristics>O</Characteristics>
+    <Description>Low</Description>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
   <xhtml:Example xmlns="" name='Identity published by an Access Federation Shibboleth Provider'>

@@ -9,20 +9,23 @@
   <Key>@RefId</Key>
   <Item>
     <Element>StudentActivityParticipation</Element>
+	<privacyRating>Low</privacyRating>
     <Description>
       This object provides information on a co-curricular or extra-curricular activity in which a student participates during a given school year.
     </Description>
   </Item>
   <Item>
     <Attribute>RefId</Attribute>
+	<privacyRating>Low</privacyRating>
     <Characteristics>M</Characteristics>
-    <Description>The ID (GUID) that uniquely identifies the instance of the object.</Description>
+	<Description>The ID (GUID) that uniquely identifies the instance of the object.</Description>
     <Type ref='CommonTypes' name='RefIdType'/>
   </Item>
 
   <Item>
     <Element>StudentPersonalRefId</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>GUID that identifies the student participating in the activity. </p>
     </Description>
@@ -32,6 +35,7 @@
   <Item>
     <Element>StudentActivityInfoRefId</Element>
     <Characteristics>M</Characteristics>
+	 <privacyRating>Low</privacyRating>
     <Description>
       <p>GUID that identifies the activity in which the student participates.</p>
     </Description>
@@ -42,6 +46,7 @@
     <Element>SchoolYear</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>
         School year for which the information is applicable, expressed as the four-digit year in which the school year ends (e.g., "2009").
@@ -53,6 +58,7 @@
   <Item>
     <Element>ParticipationComment</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Comment related to the student's participation in the activity. </p>
     </Description>
@@ -63,6 +69,7 @@
     <Element>StartDate</Element>
 
     <Characteristics>O</Characteristics>
+	 <privacyRating>Low</privacyRating>
     <Description>
       <p>This is the date from which the activity participation is valid (inclusive). </p>
     </Description>
@@ -73,6 +80,7 @@
     <Element>EndDate</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>This is the date through which the activity participation is valid (inclusive). If element is supported by the publisher/responder, should contain a date if the student withdraws from the activity before the end of the school year. </p>
     </Description>
@@ -82,6 +90,7 @@
   <Item>
     <Element>Role</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Specific role the student plays in the activity (e.g., band leader, student body president). </p>
     </Description>
@@ -91,6 +100,7 @@
   <Item>
     <Element>RecognitionList</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>List of awards and other types of recognition given to the student for this activity. </p>
     </Description>

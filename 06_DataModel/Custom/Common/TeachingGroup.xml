@@ -9,6 +9,7 @@
   <EventsReported>true</EventsReported>
   <Item>
     <Element>TeachingGroup</Element>
+	<privacyRating>Medium</privacyRating>
     <Description>
       <p>
         This object identifies a particular Teaching Group or class in a particular a time table.
@@ -30,6 +31,7 @@
 
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The GUID of the TeachingGroup</p>
     </Description>
@@ -39,6 +41,7 @@
     <Element>SchoolYear</Element>
 
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>School year for which the information is applicable, expressed as the four-digit year in which the school year ends (e.g., "2007").</p>
     </Description>
@@ -48,6 +51,7 @@
     <Element>LocalId</Element>
 
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>LocalId of the Teaching Group (previously ClassIndicator).</p>
     </Description>
@@ -58,6 +62,7 @@
     <Element>ShortName</Element>
 
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Short free format label that describes the group.</p>
     </Description>
@@ -67,6 +72,7 @@
   <Item>
     <Element>LongName</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Longer description if required.</p>
     </Description>
@@ -76,6 +82,7 @@
   <Item>
     <Element>GroupType</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Added to allow local implmentations to filter on categories of Teaching Group. Where there is a need to filter particular groups based on their types for particular functions;  group type provides the means of identifying the type of group such as roll class or subject class for instance and treat them accordingly.</p>
     </Description>
@@ -85,6 +92,7 @@
   <Item>
     <Element>Set</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Set Number (UK)</p>
     </Description>
@@ -94,6 +102,7 @@
   <Item>
     <Element>Block</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Block (UK)</p>
     </Description>
@@ -103,6 +112,7 @@
   <Item>
     <Element>CurriculumLevel</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Assessment Stage eg VELS Level</p>
     </Description>
@@ -112,6 +122,7 @@
   <Item>
     <Element>SchoolInfoRefId</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>GUID of SchoolInfo object this teaching group belongs to.</p>
     </Description>
@@ -121,6 +132,7 @@
   <Item>
     <Element>SchoolLocalId</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Local School Id.</p>
     </Description>
@@ -130,6 +142,7 @@
   <Item>
     <Element>SchoolCourseInfoRefId</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>GUID of SchoolCourseInfo object this teaching group is part of.</p>
     </Description>
@@ -139,6 +152,7 @@
   <Item>
     <Element>SchoolCourseLocalId</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Local Course Id.</p>
     </Description>
@@ -148,6 +162,7 @@
   <Item>
     <Element>TimeTableSubjectRefId</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>GUID of TimeTableSubject object this teaching group belongs to.</p>
     </Description>
@@ -157,6 +172,7 @@
   <Item>
     <Element>TimeTableSubjectLocalId</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Local subject Id.</p>
     </Description>
@@ -167,6 +183,7 @@
     <Element>Semester</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Semester, Term, or Quarter subject offered.</p>
     </Description>
@@ -177,6 +194,7 @@
     <Element>StudentList</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Medium</privacyRating>
     <Description>
       <p>List of Students in this Teaching Group</p>
     </Description>
@@ -187,6 +205,7 @@
     <Element>TeacherList</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Medium</privacyRating>
     <Description>
       <p>A List of teachers associated with the group –  may or may not include the teacher timetabled in the schedule.</p>
     </Description>
@@ -196,6 +215,7 @@
   <Item>
     <Element>MinClassSize</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Minimum class size.</p>
     </Description>
@@ -205,6 +225,7 @@
   <Item>
     <Element>MaxClassSize</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Maximum class size</p>
     </Description>
@@ -215,6 +236,7 @@
     <Element>TeachingGroupPeriodList</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>A List of schedule information that can be published by an SIS which is a subset of information available in the TimeTableCell object.</p>
       <p>PeriodId or StartTime must be provided.</p>

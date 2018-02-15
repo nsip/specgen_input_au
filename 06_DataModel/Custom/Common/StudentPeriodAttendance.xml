@@ -10,6 +10,7 @@
   <Key>@RefId</Key>
   <Item>
     <Element>StudentPeriodAttendance</Element>
+	<privacyRating>Extreme</privacyRating>
     <Description>
       <p>
         This object allows recording of period level attendance for a student.
@@ -26,6 +27,7 @@
   <Item>
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The ID (GUID) assigned to uniquely identify this attendance record.</p>
     </Description>
@@ -34,6 +36,7 @@
   <Item>
     <Element>StudentPersonalRefId</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The GUID of the student that this attendance applies to.</p>
     </Description>
@@ -43,6 +46,7 @@
   <Item>
     <Element>SchoolInfoRefId</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The school where the attendance was recorded.  Somewhat redundant, needed for requests.</p>
     </Description>
@@ -51,6 +55,7 @@
   <Item>
     <Element>Date</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The date of the attendance event.</p>
     </Description>
@@ -59,6 +64,7 @@
   <Item>
     <Element>SessionInfoRefId</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The GUID of the session that this attendance applies to.</p>
     </Description>
@@ -67,6 +73,7 @@
   <Item>
     <Element>ScheduledActivityRefId</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The GUID of the ScheduledActivity Object attendance applies to.</p>
     </Description>
@@ -75,6 +82,7 @@
   <Item>
     <Element>TimetablePeriod</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The period within which attendance is being reported, e.g. "4D".</p>
     </Description>
@@ -83,6 +91,7 @@
   <Item>
     <Element>TimeIn</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The time the student entered or returned to this class.</p>
     </Description>
@@ -91,6 +100,7 @@
   <Item>
     <Element>TimeOut</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The time the student left this class.</p>
     </Description>
@@ -100,6 +110,7 @@
     <Element>AttendanceCode</Element>
 
     <Characteristics>M</Characteristics>
+	<privacyRating>Extreme</privacyRating>
     <Description>
       <p>Code that describes the absence or attendance</p>
     </Description>
@@ -109,6 +120,7 @@
     <Element>AttendanceStatus</Element>
 
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Approved or Unapproved status of this attendance code.</p>
     </Description>
@@ -121,6 +133,7 @@
     <Element>SchoolYear</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>
         School year for which this enrollment is applicable, expressed as the four-digit year in which the school year
@@ -133,6 +146,7 @@
   <Item>
     <Element>AuditInfo</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>An audit trail to help determine who entered this attendance event and when.</p>
     </Description>
@@ -144,6 +158,7 @@
   <Item>
     <Element>AttendanceComment</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Extreme</privacyRating>
     <Description>
       <p>This element contains the comments that are relevant to this attendance record.</p>
     </Description>

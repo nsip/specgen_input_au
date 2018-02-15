@@ -10,6 +10,7 @@
   <EventsReported>true</EventsReported>
   <Item>
     <Element>GradingAssignmentScore</Element>
+	<privacyRating>Medium</privacyRating>
     <Description>
       <p>
         This object provides score information about a particular assignment. 
@@ -19,7 +20,7 @@
   <Item>
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Description>
       <p>A GUID that identifies an instance of this object.</p>
     </Description>
@@ -29,7 +30,7 @@
   <Item>
     <Element>StudentPersonalRefId</Element>
     <Characteristics>O</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Description>
       <p>The GUID for the student whose score this is.</p>
     </Description>
@@ -39,7 +40,7 @@
   <Item>
     <Element>StudentPersonalLocalId</Element>
     <Characteristics>M</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Description>
       <p>The Local Id for the student whose score this is.</p>
     </Description>
@@ -49,7 +50,7 @@
   <Item>
     <Element>TeachingGroupRefId</Element>
     <Characteristics>O</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Description>
       <p>The GUID for the TeachingGroup object in which this assignment has been set.</p>
     </Description>
@@ -59,7 +60,7 @@
   <Item>
     <Element>SchoolInfoRefId</Element>    
     <Characteristics>O</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Description>
       <p>The Id (GUID) that uniquely identifies the School in which this assignment has been set.</p>
     </Description>
@@ -69,7 +70,7 @@
   <Item>
     <Element>GradingAssignmentRefId</Element>
     <Characteristics>M</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Description>
       <p>The grading assignment for which this is a score.</p>
     </Description>
@@ -79,7 +80,7 @@
   <Item>
     <Element>ScorePoints</Element>
     <Characteristics>C</Characteristics>
-    <privacyRating>M</privacyRating>
+    <privacyRating>Medium</privacyRating>
     <Description>
       <p>The score represented as points. Conditionally required that one or more of ScorePoints, ScorePercent or ScoreLetter must be filled in. For online assignments, ScorePoints should be used to the exclusion of other scores.</p>
     </Description>
@@ -89,7 +90,7 @@
   <Item>
     <Element>ScorePercent</Element>
     <Characteristics>C</Characteristics>
-    <privacyRating>M</privacyRating>
+    <privacyRating>Medium</privacyRating>
     <Description>
       <p>The score represented as a percent. Conditionally required that one or more of ScorePoints, ScorePercent or ScoreLetter must be filled in.</p>
     </Description>
@@ -99,7 +100,7 @@
   <Item>
     <Element>ScoreLetter</Element>
     <Characteristics>C</Characteristics>
-    <privacyRating>M</privacyRating>
+    <privacyRating>Medium</privacyRating>
     <Description>
       <p>The score represented as a letter grade. Conditionally required that one or more of ScorePoints, ScorePercent or ScoreLetter must be filled in.</p>
     </Description>
@@ -109,7 +110,7 @@
   <Item>
     <Element>ScoreDescription</Element>
     <Characteristics>O</Characteristics>
-    <privacyRating>M</privacyRating>
+    <privacyRating>Medium</privacyRating>
     <Description>
       <p>Text description of the score.</p>
     </Description>
@@ -121,13 +122,13 @@
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <privacyRating>L</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
   </Item>
   <xhtml:Example xmlns="" name="GradingAssignmentScore">

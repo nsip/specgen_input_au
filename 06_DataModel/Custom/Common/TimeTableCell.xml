@@ -9,6 +9,7 @@
   <EventsReported>true</EventsReported>
   <Item>
     <Element>TimeTableCell</Element>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>
         The purpose of this object is to identify a specific cell within a particular TimeTable.  A time table is a structure that represents all the available days and times (periods) for which a particular teaching group, or subject can be scheduled.
@@ -40,6 +41,7 @@
 
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The GUID of the TimeTableCell</p>
     </Description>
@@ -49,6 +51,7 @@
   <Item>
     <Element>TimeTableRefId</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The GUID of the TimeTable to which this Cell belongs</p>
     </Description>
@@ -58,6 +61,7 @@
   <Item>
     <Element>TimeTableSubjectRefId</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The GUID of the Subject that this Cell is scheduling</p>
     </Description>
@@ -67,6 +71,7 @@
   <Item>
     <Element>TeachingGroupRefId</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The GUID of the TeachingGroup being scheduled</p>
     </Description>
@@ -76,6 +81,7 @@
   <Item>
     <Element>RoomInfoRefId</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The GUID of the Resource being Scheduled</p>
     </Description>
@@ -85,6 +91,7 @@
   <Item>
     <Element>StaffPersonalRefId</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The GUID of the Staff Member being Scheduled</p>
     </Description>
@@ -94,6 +101,7 @@
   <Item>
     <Element>TimeTableLocalId</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Time Table Local Identifier</p>
     </Description>
@@ -103,6 +111,7 @@
   <Item>
     <Element>SubjectLocalId</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Subject Local Id</p>
     </Description>
@@ -112,6 +121,7 @@
   <Item>
     <Element>TeachingGroupLocalId</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Teaching Group </p>
     </Description>
@@ -121,6 +131,7 @@
   <Item>
     <Element>RoomNumber</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Room number as presented to the user/application.</p>
     </Description>
@@ -130,6 +141,7 @@
   <Item>
     <Element>StaffLocalId</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Staff LocalId</p>
     </Description>
@@ -139,6 +151,7 @@
   <Item>
     <Element>DayId</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Day Id </p>
     </Description>
@@ -148,6 +161,7 @@
   <Item>
     <Element>PeriodId</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Period Id within the Day Id</p>
     </Description>
@@ -158,6 +172,7 @@
     <Element>CellType</Element>
 
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Type of Lesson/Session  eg Teaching, Lunch etc</p>
     </Description>
@@ -166,6 +181,7 @@
   <Item>
     <Element>SchoolInfoRefId</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Optional, the GUID of the SchoolInfo Object  if this object is known in the zone</p>
     </Description>
@@ -174,6 +190,7 @@
   <Item>
     <Element>SchoolLocalId</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Optional, Local School Id</p>
     </Description>
@@ -184,6 +201,7 @@
     <Element>TeacherList</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>A listing of the teachers assigned to the activity, and the type of supervision they are credited with. If no teachers are listed, the activity is assumed to be unsupervised.</p>
     </Description>
@@ -194,6 +212,7 @@
     <Element>RoomList</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>List of rooms in which the scheduled activity is held. Used for onsite venues which are represented in the source system as rooms. Can include large venues (ovals, library, etc), if they have been represented as rooms; source system practice varies.</p>
     </Description>

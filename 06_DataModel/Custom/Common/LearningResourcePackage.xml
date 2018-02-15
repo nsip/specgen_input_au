@@ -22,6 +22,7 @@
 	</Intro>
 	<Item>
 		<Element>LearningResourcePackage</Element>
+		<privacyRating>Low</privacyRating>
 		<Description>A wrapper for any external learning content to be transmitted across a SIF Zone.</Description>
 		<Type ref="CommonTypes" complex="extension" name="AbstractContentPackageType"/>
 	</Item>

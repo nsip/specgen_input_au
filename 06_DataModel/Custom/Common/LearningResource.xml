@@ -9,7 +9,8 @@
   <EventsReported>true</EventsReported>
   <Item>
     <Element>LearningResource</Element>
-    <Description>
+    <privacyRating>Low</privacyRating>
+	<Description>
       <p>
         This object contains information related to learning resources that may be used in educational settings. These
         include textbooks, Internet content, educational software, videos and DVDs, supplemental print material, etc.
@@ -20,6 +21,7 @@
 
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>GUID assigned to this LearningResource.</p>
     </Description>
@@ -39,6 +41,7 @@
     <Element>Name</Element>
 
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Name of learning resource.</p>
     </Description>
@@ -49,6 +52,7 @@
     <Element>Author</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Name of organization or company that created the resource.</p>
     </Description>
@@ -59,6 +63,7 @@
     <Element>Contacts</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Contains contact information about resource authors.</p>
     </Description>
@@ -69,6 +74,7 @@
     <Element>Location</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Description of location of resource, i.e. location in library or URL, community resource, outside resource supplier.</p>
     </Description>
@@ -78,6 +84,7 @@
 
     <Attribute>ReferenceType</Attribute>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>A qualifying attribute for the Location payload. If ReferenceType is "URI", the payload contains a web address where the resource can be found.</p>
     </Description>
@@ -89,6 +96,7 @@
     <Element>Status</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Describes availability status of resource, e.g. "checked out."</p>
     </Description>
@@ -98,6 +106,7 @@
     <Element>Description</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Description of the resource, e.g., "This textbook is intended for year 4 social studies students and addresses..."</p>
     </Description>
@@ -107,18 +116,21 @@
     <Element>YearLevels</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Type ref="CommonTypes" name="YearLevelsType"></Type>
   </Item>
   
   <Item>
     <Element>SubjectAreas</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
      <Type ref="CommonTypes" name="ACStrandAreaListType"/>
   </Item>
   
   <Item>
     <Element>MediaTypes</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>
         Resource media types.
@@ -131,6 +143,7 @@
     <Element>UseAgreement</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Describes terms of use for resource.</p>
     </Description>
@@ -140,6 +153,7 @@
     <Element>AgreementDate</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>A date that defines the date of agreement.</p>
     </Description>
@@ -149,6 +163,7 @@
   <Item>
     <Element>Approvals</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Authorizations to use this resource. For example, this resource may be included as part of the district's standard curriculum model.</p>
     </Description>
@@ -158,6 +173,7 @@
   <Item>
     <Element>Evaluations</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Evaluations/review of the resource.</p>
     </Description>
@@ -167,6 +183,7 @@
   <Item>
     <Element>Components</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Lesson or activity-sized portions of a resource.</p>
     </Description>
@@ -176,6 +193,7 @@
   <Item>
     <Element>LearningStandards</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>References to LearningStandardItems.</p>
     </Description>
@@ -186,6 +204,7 @@
     <Element>LearningResourcePackageRefId</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>
         Reference to a <code>LearningResourcePackage</code>, a transport envelope for teaching and learning object files.

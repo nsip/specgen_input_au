@@ -9,6 +9,7 @@
   <EventsReported>true</EventsReported>
   <Item>
     <Element>SchoolCourseInfo</Element>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>This object is for course information.</p>
       <p>
@@ -25,6 +26,7 @@
 
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The ID (GUID) that uniquely identifies the school course.</p>
     </Description>
@@ -33,6 +35,7 @@
   <Item>
     <Element>SchoolInfoRefId</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The ID (GUID) that identifies the school where the course is offered.</p>
     </Description>
@@ -42,6 +45,7 @@
   <Item>
     <Element>SchoolLocalId</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The locally-assigned identifier for this school/campus.</p>
     </Description>
@@ -51,6 +55,7 @@
   <Item>
     <Element>SchoolYear</Element>
     <Characteristics>C</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>
         School year for which the information is applicable, expressed as the four-digit year in which the school year ends (e.g. <code>2007</code>).
@@ -61,6 +66,7 @@
   <Item>
     <Element>TermInfoRefId</Element>
     <Characteristics>C</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>
         The ID (GUID) that uniquely identifies this TermInfo (reportable time period).
@@ -73,6 +79,7 @@
   <Item>
     <Element>CourseCode</Element>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>School-defined local code for the course.</p>
     </Description>
@@ -81,6 +88,7 @@
   <Item>
     <Element>StateCourseCode</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>State-defined standard course code used to report information about courses.</p>
     </Description>
@@ -89,6 +97,7 @@
   <Item>
     <Element>DistrictCourseCode</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The corresponding district course code.</p>
     </Description>
@@ -97,6 +106,7 @@
   <Item>
     <Element>SubjectAreaList</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Subject matter areas.</p>
     </Description>
@@ -106,6 +116,7 @@
     <Element>CourseTitle</Element>
 
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Title of the course.</p>
     </Description>
@@ -115,6 +126,7 @@
     <Element>Description</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Textual description of the course.</p>
     </Description>
@@ -124,6 +136,7 @@
     <Element>InstructionalLevel</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>An indication of the general nature and difficulty of instruction provided.</p>
     </Description>
@@ -133,6 +146,7 @@
     <Element>CourseCredits</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>The number of credits awarded upon course completion.</p>
     </Description>
@@ -142,6 +156,7 @@
     <Element>CoreAcademicCourse</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Does the course meet the state definition of a core academic course?</p>
     </Description>
@@ -151,6 +166,7 @@
     <Element>GraduationRequirement</Element>
 
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Does the state require that the course be completed for graduation?</p>
     </Description>
@@ -159,6 +175,7 @@
   <Item>
     <Element>Department</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Department with jurisdiction over this course.</p>
     </Description>
@@ -167,6 +184,7 @@
   <Item>
     <Element>CourseContent</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>Description of course content.</p>
     </Description>
