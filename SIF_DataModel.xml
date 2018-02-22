@@ -1,7 +1,7 @@
 <SIFSpecification xmlns:xs="http://www.w3.org/2001/XMLSchema"
 				  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 				  xmlns:xi="http://www.w3.org/2001/XInclude"
-				  xmlns:xhtml="https://www.w3.org/1999/xhtml/"
+				  xmlns:xhtml="http://www.w3.org/1999/xhtml"
 				  
 				  xmlns="http://sifassociation.org/SpecGen">				  
 
@@ -101,9 +101,7 @@
 	<!--Data Model-->
 	<Section name="Data Model">
 		<xi:include parse="text" href="06_DataModel/DataModel-Introduction.xml"/>
-		<!--<xi:include parse="xml" href="06_DataModel/DataModel-CommonElements.xml"/>-->
    		<xi:include parse="xml" href="06_DataModel/DataModel.xml"/>
-		
 	</Section>
 	
 	
@@ -113,9 +111,8 @@
 			<p>Common and supporting types referenced in this specification are included here as a reference.</p>
 		</Intro>
 			<!--Section A-->
-		<xi:include parse="text" href="80_BackMatter/Custom/DataModel-CommonTypes-Custom.xml"/>
-		<xi:include parse="text" href="80_BackMatter/Generic-CommonTypes.xml"/>
-		
+		<xi:include parse="xml" href="80_BackMatter/Custom/DataModel-CommonTypes-Custom.xml"/>
+		<xi:include parse="xml" href="80_BackMatter/Generic-CommonTypes.xml"/>
 	</Appendix>
 	
 		<!--Section B-->
