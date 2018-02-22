@@ -1,4 +1,6 @@
-<Grouping code="AUCodeSets" name="AU Code Sets">
+<Grouping
+ 	xmlns="http://sifassociation.org/SpecGen"	
+	code="AUCodeSets" name="AU Code Sets">
 <CodeSet>
       <Intro>
         <p>Wellbeing Characteristics - High Level.  Initially provided by WA.  This code set is in draft and changes are expected.  Future changes may re-specify code values.</p> 
@@ -9522,8 +9524,10 @@
 				<Code>Content</Code>
 				<Text>A link to another state or school content standard.</Text>
 			</Value>
-			<Code>Other</Code>
-			<Text>Any other type of relationship between the current standard and the target standard item.</Text>
+			<Value>
+				<Code>Other</Code>
+				<Text>Any other type of relationship between the current standard and the target standard item.</Text>
+			</Value>
 			<Value>
 				<Code>PD</Code>
 				<Text>Personal Development</Text>

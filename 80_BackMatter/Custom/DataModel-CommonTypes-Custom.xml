@@ -108,17 +108,17 @@
  <CommonElement name="MedicationListType" type="true" dm="true">
 	  <Item>
 		<Element>MedicationListType</Element>
+         <Characteristics>O</Characteristics>
 		 <Description>
           <p></p>
         </Description>
-         <Characteristics>O</Characteristics>
   		<List mode="List">
         </List>
     </Item>
     <Item>
       <Element>Medication</Element>
-      <Description></Description>
       <Characteristics>OR</Characteristics>
+      <Description></Description>
 	   <Type ref="CommonTypes" name="MedicationType"/>
 	</Item>
  </CommonElement>
@@ -126,10 +126,10 @@
  <CommonElement name="MedicationType" type="true" dm="true">
     <Item>
 		<Element>MedicationType</Element>
+        <Characteristics>OR</Characteristics>
 		 <Description>
           <p></p>
         </Description>
-        <Characteristics>OR</Characteristics>
   	</Item> 
   	<Item>
   	   	<Element>MedicationName</Element>
@@ -188,26 +188,25 @@
 	</Item>
 	<Item>
       <Element>WellbeingEventCategory</Element>
-      <Desciption></Desciption>
       <Characteristics>MR</Characteristics>
+      <Description></Description>
 	  <Type ref="CommonTypes" name="WellbeingEventCategoryType"></Type>
 	</Item>
   </CommonElement>
    <CommonElement name="WellbeingEventCategoryType" type="true" dm="true">
 	 <Item>
 		<Element>WellbeingEventCategoryType</Element>
+        <Characteristics>MR</Characteristics>
 		 <Description>
           <p>Category of event.</p>
-        </Description>
-        <Characteristics>MR</Characteristics>
-        	 
+        </Description>        	 
     </Item>
     <Item> 
  		<Element>EventCategory</Element>
+        <Characteristics>M</Characteristics>
 		 <Description>
           <p>Category of event.</p>
         </Description>
-        <Characteristics>M</Characteristics>
         <Union>
 			<Type ref="CodeSets" name="AUCodeSetsEventCategoryType"/>
 			<Type name="xs:string"/>
@@ -226,17 +225,17 @@
   <CommonElement name="WellbeingEventSubCategoryListType" type="true" dm="true">
 	  <Item>
 		<Element>WellbeingEventSubCategoryListType</Element>
+         <Characteristics>O</Characteristics>
 		 <Description>
           <p>List of SubTypes associated with a Category.</p>
         </Description>
-         <Characteristics>O</Characteristics>
   		<List mode="List">
         </List>
     </Item>
     <Item>
       <Element>WellbeingEventSubCategory</Element>
-      <Desciption></Desciption>
       <Characteristics>MR</Characteristics>
+      <Description></Description>
 	    <Union>
 			<Type ref="CodeSets" name="AUCodeSetsEventSubCategoryType"/>
 			<Type name="xs:string"/>
@@ -254,10 +253,10 @@
   	<Item>
 		<Element>EventLocation</Element>
 		<Characteristics>M</Characteristics>
-		<Type ref="CodeSets" name="AUCodeSetsWellbeingEventLocationType"/>
 		<Description>
 		  <p>Categorisation of location of Wellbeing event.</p>
 		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsWellbeingEventLocationType"/>
 	  </Item>
 	  
 	  <Item>
@@ -283,17 +282,17 @@
  <CommonElement name="FollowUpActionListType" type="true" dm="true">
 	  <Item>
 		<Element>FollowUpActionListType</Element>
+         <Characteristics>O</Characteristics>
 		 <Description>
           <p>List of Actions where an action resulted and is known – maybe just a link to a WellbeingResponse Object</p>
         </Description>
-         <Characteristics>O</Characteristics>
   		<List mode="List">
         </List>
     </Item>
     <Item>
       <Element>FollowUpAction</Element>
-      <Desciption>Container for the Follow Up details.</Desciption>
       <Characteristics>OR</Characteristics>
+      <Description>Container for the Follow Up details.</Description>
 	   <Type ref="CommonTypes" name="FollowUpActionType"/>
 	</Item>
  </CommonElement>
@@ -301,19 +300,19 @@
  <CommonElement name="FollowUpActionType" type="true" dm="true">
     <Item>
 		<Element>FollowUpActionType</Element>
+        <Characteristics>OR</Characteristics>
 		 <Description>
           <p>Repeatable Follow Up Action.</p>
         </Description>
-        <Characteristics>OR</Characteristics>
   	</Item> 
   	
   	<Item>
     <Element>WellbeingResponseRefId</Element>
     <Characteristics>O</Characteristics>
-	<Type ref="CommonTypes" name="IdRefType"></Type>
     <Description>
       <p>The RefId of a WellbeingResponse Object if it exists..</p>
     </Description>
+	<Type ref="CommonTypes" name="IdRefType"></Type>
   </Item>
   
   	<Item>
@@ -340,17 +339,17 @@
  <CommonElement name="PersonInvolvementListType" type="true" dm="true">
 	  <Item>
 		<Element>PersonInvolvementListType</Element>
+         <Characteristics>O</Characteristics>
 		 <Description>
           <p>List of People involved in the Wellbeing event/response.  Mandatory if more people than the student to which this event/response occurs is involved.</p>
         </Description>
-         <Characteristics>O</Characteristics>
   		<List mode="List">
         </List>
     </Item>
     <Item>
       <Element>PersonInvolvement</Element>
-      <Desciption>A person (additional to the student) involved in a  Wellbeing event/response where required to be known.  </Desciption>
       <Characteristics>OR</Characteristics>
+      <Description>A person (additional to the student) involved in a  Wellbeing event/response where required to be known.  </Description>
 	   <Type ref="CommonTypes" name="PersonInvolvementType"/>
 	</Item>
  </CommonElement>
@@ -358,10 +357,10 @@
  <CommonElement name="PersonInvolvementType" type="true" dm="true">
     <Item>
 		<Element>PersonInvolvementType</Element>
+        <Characteristics>OR</Characteristics>
 		 <Description>
           <p>A person (additional to the student) involved in a  Wellbeing event/response where required to be known.</p>
         </Description>
-        <Characteristics>OR</Characteristics>
   	</Item> 
   	<Item>
   	   	<Element>PersonRefId</Element>
@@ -415,17 +414,17 @@
  <CommonElement name="WithdrawalTimeListType" type="true" dm="true">
 	  <Item>
 		<Element>WithdrawalTimeListType</Element>
+         <Characteristics>O</Characteristics>
 		 <Description>
           <p>Where a student is to be removed or withdrawn partially for particular times in a week within the Start and End dates of the Response.</p>
         </Description>
-         <Characteristics>O</Characteristics>
   		<List mode="List">
         </List>
     </Item>
     <Item>
       <Element>Withdrawal</Element>
-      <Desciption></Desciption>
       <Characteristics>MR</Characteristics>
+      <Description></Description>
 	   <Type ref="CommonTypes" name="WithdrawalType"/>
 	</Item>
  </CommonElement>
@@ -433,10 +432,10 @@
  <CommonElement name="WithdrawalType" type="true" dm="true">
     <Item>
 		<Element>WithdrawalType</Element>
+        <Characteristics>MR</Characteristics>
 		 <Description>
           <p>Repeatable Withdrawal.</p>
         </Description>
-        <Characteristics>MR</Characteristics>
   	</Item> 
   	<Item>
   	   	<Element>WithdrawalDate</Element>
@@ -465,26 +464,26 @@
   	<Item>
     <Element>TimeTableSubjectRefId</Element>
     <Characteristics>O</Characteristics>
-	<Type ref="CommonTypes" name="IdRefType"></Type>
     <Description>
       <p>The GUID of an associated TimeTableSubject Object if there is one.</p>
     </Description>
+	<Type ref="CommonTypes" name="IdRefType"></Type>
   </Item>
 	<Item>
     <Element>ScheduledActivityRefId</Element>
     <Characteristics>O</Characteristics>
-	<Type ref="CommonTypes" name="IdRefType"></Type>
     <Description>
       <p>The GUID of an associated ScheduledActivity Object if there is one.</p>
     </Description>
+	<Type ref="CommonTypes" name="IdRefType"></Type>
   </Item>
   <Item>
     <Element>TimeTableCellRefId</Element>
     <Characteristics>O</Characteristics>
-	<Type ref="CommonTypes" name="IdRefType"></Type>
     <Description>
       <p>The GUID of an associated TimeTableCell Object if there is one.</p>
     </Description>
+	<Type ref="CommonTypes" name="IdRefType"></Type>
   </Item>
  </CommonElement>
  
@@ -498,11 +497,11 @@
   	<Item>
 		<Element>SuspensionCategory</Element>
 		<Characteristics>M</Characteristics>
-		<Type ref="CodeSets" name="AUCodeSetsSuspensionCategoryType"/>
 		<Description>
 		  <p>Categorisation of a Suspension record to fall into, In School, Withdrawal, Expulsion/Exclusion etc.  In School is usually NOT formally recognised by a jurisdiction but managed at a school level where the student is temporarily withdrawn from normal classes. Expulsion/Exclusion may mean the student’s attendance at a school is terminated.
 		  </p>
 		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsSuspensionCategoryType"/>
 	  </Item>
 	   <Item>
 		<Element>WithdrawalTimeList</Element>
@@ -571,11 +570,11 @@
   	<Item>
 		<Element>DetentionCategory</Element>
 		<Characteristics>M</Characteristics>
-		<Type ref="CodeSets" name="AUCodeSetsDetentionCategoryType"/>
 		<Description>
 		  <p>Categorisation of a Detention.
 		  </p>
 		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsDetentionCategoryType"/>
 	  </Item>
 	  <Item>
   	   	<Element>DetentionDate</Element>
@@ -639,17 +638,17 @@
   <CommonElement name="PlanRequiredListType" type="true" dm="true">
 	  <Item>
 		<Element>PlanRequiredListType</Element>
+         <Characteristics>O</Characteristics>
 		 <Description>
           <p>List to contain information of any plans that may eventuate.</p>
         </Description>
-         <Characteristics>O</Characteristics>
   		<List mode="List">
         </List>
     </Item>
     <Item>
       <Element>Plan</Element>
-      <Desciption></Desciption>
       <Characteristics>OR</Characteristics>
+      <Description></Description>
 	   <Type ref="CommonTypes" name="WellbeingPlanType"/>
 	</Item>
  </CommonElement>
@@ -657,10 +656,10 @@
  <CommonElement name="WellbeingPlanType" type="true" dm="true">
     <Item>
 		<Element>WellbeingPlanType</Element>
+        <Characteristics>OR</Characteristics>
 		 <Description>
           <p>Repeatable Plan information.</p>
         </Description>
-        <Characteristics>OR</Characteristics>
   	</Item> 
   	<Item>
   	   	<Element>PersonalisedPlanRefId</Element>
@@ -780,17 +779,17 @@
  <CommonElement name="WellbeingDocumentListType" type="true" dm="true">
 	  <Item>
 		<Element>WellbeingDocumentListType</Element>
+         <Characteristics>O</Characteristics>
 		 <Description>
           <p>List which describes the Location of any associated documents kept in relation. These include evidentiary documents, and action plans.</p>
         </Description>
-         <Characteristics>O</Characteristics>
   		<List mode="List">
         </List>
     </Item>
     <Item>
       <Element>Document</Element>
-      <Desciption></Desciption>
       <Characteristics>MR</Characteristics>
+      <Description></Description>
 	   <Type ref="CommonTypes" name="WellbeingDocumentType"/>
 	</Item>
  </CommonElement>
@@ -798,10 +797,10 @@
  <CommonElement name="WellbeingDocumentType" type="true" dm="true">
     <Item>
 		<Element>WellbeingDocumentType</Element>
+        <Characteristics>MR</Characteristics>
 		 <Description>
           <p>Repeatable information of the location of any associated documents kept in relation. These include evidentiary documents, and action plans.</p>
         </Description>
-        <Characteristics>MR</Characteristics>
   	</Item>
   	<Item>
 		<Element>Location</Element>
@@ -884,10 +883,10 @@
     <Item>
     <Element>ItemType</Element>
     <Characteristics>M</Characteristics>
-	<Type ref="CodeSets" name="AUCodeSetsNAPTestItemTypeType"/>
 	<Description>
       <p>Response type for the test item.</p>
     </Description>
+	<Type ref="CodeSets" name="AUCodeSetsNAPTestItemTypeType"/>
   </Item>
   <!--Item>
 		<Element>Domain</Element>
@@ -917,18 +916,18 @@
 	<Item>
 		<Element>ItemDescriptor</Element>
 		<Characteristics>M</Characteristics>
-		<Type name="xs:normalizedString"></Type>
 		<Description>
 		  <p>Description of the test item.</p>
 		</Description>
+		<Type name="xs:normalizedString"></Type>
 	</Item>  
 	<Item>
 		<Element>ReleasedStatus</Element>
 		<Characteristics>M</Characteristics>
-		<Type name="xs:boolean"></Type>
 		<Description>
 		  <p>Whether the test item has been publicly released.</p>
 		</Description>
+		<Type name="xs:boolean"></Type>
 	</Item>  
 	<Item>
 		<Element>MarkingType</Element>
@@ -941,19 +940,19 @@
     <Item>
 		<Element>MultipleChoiceOptionCount</Element>
 		<Characteristics>C</Characteristics>
-		<Type name="xs:int"></Type>
 		<Description>
 		  <p>For multiple choice and multiple choices questions, the number of questions.</p>
 		</Description>
+		<Type name="xs:int"></Type>
 	</Item>  
   
     <Item>
 		<Element>CorrectAnswer</Element>
 		<Characteristics>O</Characteristics>
-		<Type name="xs:normalizedString"></Type>
 		<Description>
 		  <p>Τhe correct answer to the test item.</p>
 		</Description>
+		<Type name="xs:normalizedString"></Type>
 	</Item> 
 	
 	<Item>
@@ -1035,10 +1034,10 @@
    <Item>
     <Element>ItemSubstitutedForList</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SubstituteItemListType"></Type>
     <Description>
       <p>List of the RefId of the main item(s) for which this is a Substitute item.</p>
     </Description>
+    <Type ref="CommonTypes" name="SubstituteItemListType"></Type>
   </Item>
   
   <Item>
@@ -1092,28 +1091,28 @@
   <Item>
     <Element>TestletName</Element>
     <Characteristics>M</Characteristics>
-    <Type name="xs:normalizedString"></Type>
     <Description>
       <p>Testlet name allocated at test construction.</p>
     </Description>
+    <Type name="xs:normalizedString"></Type>
   </Item>  
     
   <Item>
     <Element>Node</Element>
     <Characteristics>O</Characteristics>
-    <Type name="xs:token"></Type>
     <Description>
       <p>Label of testlet used for testlet sequencing. Values: A,B,C,D,E,F,G.</p>
     </Description>
+    <Type name="xs:token"></Type>
   </Item>  
   
   <Item>
     <Element>LocationInStage</Element>
     <Characteristics>O</Characteristics>
-    <Type name="xs:integer"></Type>
     <Description>
       <p>Location of Testlet in stage.</p>
     </Description>
+    <Type name="xs:integer"></Type>
   </Item>  
   
    <Item>
@@ -1159,34 +1158,33 @@
     <Item>
     <Element>TestName</Element>
     <Characteristics>M</Characteristics>
-    <Type name="xs:normalizedString"></Type>
     <Description>
       <p>Name of the NAP test.</p>
     </Description>
+    <Type name="xs:normalizedString"></Type>
   </Item>  
   <Item>
 		<Element>TestLevel</Element>
 		<Characteristics>M</Characteristics>
-		<p>Values: 3,5,7,9. The test level that the student is registering for.</p>
+		<Description>
+			<p>Values: 3,5,7,9. The test level that the student is registering for.</p>
+		</Description>
 		<Type ref="CommonTypes" name="YearLevelType"/>
   </Item>  
   <Item>
     <Element>TestType</Element>
     <Characteristics>M</Characteristics>
-	<Type ref="CodeSets" name="AUCodeSetsNAPTestTypeType"/>
     <Description>
       <p>Type of NAP Test assigned in the session</p>
     </Description>
+	<Type ref="CodeSets" name="AUCodeSetsNAPTestTypeType"/>
   </Item>
    
     <Item>
 		<Element>Domain</Element>
-		<Desciption>Domain of the NAP test. Values: Writing, Reading, Language Conventions - Spelling, Language Conventions - Grammar and Punctuation, Numeracy.</Desciption>
 		<Characteristics>M</Characteristics>
+		<Description>Domain of the NAP test. Values: Writing, Reading, Language Conventions - Spelling, Language Conventions - Grammar and Punctuation, Numeracy.</Description>
 		<Type ref="CodeSets" name="AUCodeSetsNAPTestDomainType"/>
-		<Description>
-		  <p></p>
-		</Description>
    </Item>
  
     <Item>
@@ -1237,10 +1235,10 @@
 	<Item>
     <Element>PlausibleScaledValue</Element>
     <Characteristics>MR</Characteristics>
-	<Type name="xs:decimal"/>
     <Description>
       <p>Plausible values used for reporting to determine cut points, there are 5 per student per domain.</p>
     </Description>
+	<Type name="xs:decimal"/>
   </Item>
  </CommonElement>
   
@@ -1254,10 +1252,10 @@
 	 <Item>
     <Element>SubstituteItem</Element>
     <Characteristics>MR</Characteristics>
-	<Type ref="CommonTypes" name="SubstituteItemType"/>
     <Description>
       <p></p>
     </Description>
+	<Type ref="CommonTypes" name="SubstituteItemType"/>
   </Item>
  </CommonElement>
  
@@ -1270,10 +1268,10 @@
 	<Item>
     <Element>SubstituteItemRefId</Element>
     <Characteristics>M</Characteristics>
-	<Type ref="CommonTypes" name="IdRefType"></Type>
     <Description>
       <p>The GUID that identifies the test item.</p>
     </Description>
+	<Type ref="CommonTypes" name="IdRefType"></Type>
   </Item>
     <Item>
 		<Element>SubstituteItemLocalId</Element>
@@ -1302,12 +1300,9 @@
     </Item>
     <Item>
       <Element>TestItem</Element>
-      <Desciption></Desciption>
       <Characteristics>MR</Characteristics>
+      <Description></Description>
 	   <Type ref="CommonTypes" name="CodeFrameTestItemType"/>
-       <Description>
-        <p></p>
-       </Description>
     </Item>
    </CommonElement>
    
@@ -1319,10 +1314,10 @@
     <Item>
     <Element>TestItemRefId</Element>
     <Characteristics>M</Characteristics>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
     <Description>
       <p>The GUID of Test item object.</p>
     </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
   </Item>
   <Item>
 		<Element>SequenceNumber</Element>
@@ -1352,12 +1347,11 @@
 	</Item>
 	 <Item>
     <Element>StimulusLocalId</Element>
-    <Desciption></Desciption>
     <Characteristics>MR</Characteristics>
-	<Type ref="CommonTypes" name="LocalIdType"/>
     <Description>
       <p>LocalId of Stimulus</p>
     </Description>
+	<Type ref="CommonTypes" name="LocalIdType"/>
   </Item>
  </CommonElement> 
   
@@ -1372,122 +1366,122 @@
 	 <Item>
 		<Element>Band1Lower</Element>
 		<Characteristics>M</Characteristics>
-		<Type name = "xs:decimal"/>
 		<Description>Lowest scaled score value for Band 1 in domain specified.</Description>
+		<Type name = "xs:decimal"/>
 	  </Item>
 	 <Item>
 		<Element>Band1Upper</Element>
 		<Characteristics>M</Characteristics>
-		<Type name = "xs:decimal"/>
 		<Description>Upper scaled score value for Band 1 in domain specified.</Description>
+		<Type name = "xs:decimal"/>
 	  </Item>
 	  <Item>
 		<Element>Band2Lower</Element>
 		<Characteristics>M</Characteristics>
-		<Type name = "xs:decimal"/>
 		<Description>Lowest scaled score value for Band 2 in domain specified.</Description>
+		<Type name = "xs:decimal"/>
 	  </Item>
 	 <Item>
 		<Element>Band2Upper</Element>
 		<Characteristics>M</Characteristics>
-		<Type name = "xs:decimal"/>
 		<Description>Upper scaled score value for Band 2 in domain specified.</Description>
+		<Type name = "xs:decimal"/>
 	  </Item>
 	 <Item>
 		<Element>Band3Lower</Element>
 		<Characteristics>M</Characteristics>
-		<Type name = "xs:decimal"/>
 		<Description>Lowest scaled score value for Band 3 in domain specified.</Description>
+		<Type name = "xs:decimal"/>
 	  </Item>
 	 <Item>
 		<Element>Band3Upper</Element>
 		<Characteristics>M</Characteristics>
-		<Type name = "xs:decimal"/>
 		<Description>Upper scaled score value for Band 3 in domain specified.</Description>
+		<Type name = "xs:decimal"/>
 	  </Item>
 	 <Item>
 		<Element>Band4Lower</Element>
 		<Characteristics>M</Characteristics>
-		<Type name = "xs:decimal"/>
 		<Description>Lowest scaled score value for Band 4 in domain specified.</Description>
+		<Type name = "xs:decimal"/>
 	  </Item>
 	 <Item>
 		<Element>Band4Upper</Element>
 		<Characteristics>M</Characteristics>
-		<Type name = "xs:decimal"/>
 		<Description>Upper scaled score value for Band 4 in domain specified.</Description>
+		<Type name = "xs:decimal"/>
 	  </Item>
 	 <Item>
 		<Element>Band5Lower</Element>
 		<Characteristics>M</Characteristics>
-		<Type name = "xs:decimal"/>
 		<Description>Lowest scaled score value for Band 5 in domain specified.</Description>
+		<Type name = "xs:decimal"/>
 	  </Item>
 	 <Item>
 		<Element>Band5Upper</Element>
 		<Characteristics>M</Characteristics>
-		<Type name = "xs:decimal"/>
 		<Description>Upper scaled score value for Band 5 in domain specified.</Description>
+		<Type name = "xs:decimal"/>
 	  </Item>
 	 <Item>
 		<Element>Band6Lower</Element>
 		<Characteristics>M</Characteristics>
-		<Type name = "xs:decimal"/>
 		<Description>Lowest scaled score value for Band 6 in domain specified.</Description>
+		<Type name = "xs:decimal"/>
 	  </Item>
 	 <Item>
 		<Element>Band6Upper</Element>
 		<Characteristics>M</Characteristics>
-		<Type name = "xs:decimal"/>
 		<Description>Upper scaled score value for Band 6 in domain specified.</Description>
+		<Type name = "xs:decimal"/>
 	  </Item>
 	 <Item>
 		<Element>Band7Lower</Element>
 		<Characteristics>M</Characteristics>
-		<Type name = "xs:decimal"/>
 		<Description>Lowest scaled score value for Band 7 in domain specified.</Description>
+		<Type name = "xs:decimal"/>
 	  </Item>
 	 <Item>
 		<Element>Band7Upper</Element>
 		<Characteristics>M</Characteristics>
-		<Type name = "xs:decimal"/>
 		<Description>Upper scaled score value for Band 7 in domain specified.</Description>
+		<Type name = "xs:decimal"/>
 	  </Item>
 	 <Item>
 		<Element>Band8Lower</Element>
 		<Characteristics>M</Characteristics>
-		<Type name = "xs:decimal"/>
 		<Description>Lowest scaled score value for Band 8 in domain specified.</Description>
+		<Type name = "xs:decimal"/>
 	  </Item>
 	 <Item>
 		<Element>Band8Upper</Element>
 		<Characteristics>M</Characteristics>
-		<Type name = "xs:decimal"/>
 		<Description>Upper scaled score value for Band 8 in domain specified.</Description>
+		<Type name = "xs:decimal"/>
 	  </Item>
 	 <Item>
 		<Element>Band9Lower</Element>
 		<Characteristics>M</Characteristics>
-		<Type name = "xs:decimal"/>
 		<Description>Lowest scaled score value for Band 9 in domain specified.</Description>
+		<Type name = "xs:decimal"/>
 	  </Item>
 	 <Item>
 		<Element>Band9Upper</Element>
 		<Characteristics>M</Characteristics>
-		<Type name = "xs:decimal"/>
 		<Description>Upper scaled score value for Band 9 in domain specified.</Description>
+		<Type name = "xs:decimal"/>
 	  </Item>
 	 <Item>
 		<Element>Band10Lower</Element>
 		<Characteristics>M</Characteristics>
-		<Type name = "xs:decimal"/>
 		<Description>Lowest scaled score value for Band 10 in domain specified.</Description>
+		<Type name = "xs:decimal"/>
 	  </Item>
 	 <Item>
 		<Element>Band10Upper</Element>
 		<Characteristics>M</Characteristics>
-		<Type name = "xs:decimal"/>
 		<Description>Upper scaled score value for Band 10 in domain specified.</Description>
+		<Type name = "xs:decimal"/>
 	  </Item>
  </CommonElement>
  
@@ -1502,50 +1496,50 @@
 	 <Item>
 		<Element>Level1Lower</Element>
 		<Characteristics>M</Characteristics>
-		<Type name = "xs:decimal"/>
 		<Description>Lowest scaled score value for Proficiency Level 1 in doman specified (place holder).</Description>
+		<Type name = "xs:decimal"/>
 	  </Item>
 	 <Item>
 		<Element>Level1Upper</Element>
 		<Characteristics>M</Characteristics>
-		<Type name = "xs:decimal"/>
 		<Description>Upper scaled score value for Proficiency Level 1 in doman specified (place holder).</Description>
+		<Type name = "xs:decimal"/>
 	  </Item>
 	  <Item>
 		<Element>Level2Lower</Element>
 		<Characteristics>M</Characteristics>
-		<Type name = "xs:decimal"/>
 		<Description>Lowest scaled score value for Proficiency Level 2 in doman specified (place holder).</Description>
+		<Type name = "xs:decimal"/>
 	  </Item>
 	 <Item>
 		<Element>Level2Upper</Element>
 		<Characteristics>M</Characteristics>
-		<Type name = "xs:decimal"/>
 		<Description>Upper scaled score value for Proficiency Level 2 in doman specified (place holder).</Description>
+		<Type name = "xs:decimal"/>
 	  </Item>
 	 <Item>
 		<Element>Level3Lower</Element>
 		<Characteristics>M</Characteristics>
-		<Type name = "xs:decimal"/>
 		<Description>Lowest scaled score value for Proficiency Level 3 in doman specified (place holder).</Description>
+		<Type name = "xs:decimal"/>
 	  </Item>
 	 <Item>
 		<Element>Level3Upper</Element>
 		<Characteristics>M</Characteristics>
-		<Type name = "xs:decimal"/>
 		<Description>Upper scaled score value for Proficiency Level 3 in doman specified (place holder).</Description>
+		<Type name = "xs:decimal"/>
 	  </Item>
 	 <Item>
 		<Element>Level4Lower</Element>
 		<Characteristics>M</Characteristics>
-		<Type name = "xs:decimal"/>
 		<Description>Lowest scaled score value for Proficiency Level 4 in doman specified (place holder).</Description>
+		<Type name = "xs:decimal"/>
 	  </Item>
 	 <Item>
 		<Element>Level4Upper</Element>
 		<Characteristics>M</Characteristics>
-		<Type name = "xs:decimal"/>
 		<Description>Upper scaled score value for Proficiency Level 4 in doman specified (place holder).</Description>
+		<Type name = "xs:decimal"/>
 	  </Item>
   </CommonElement>
   
@@ -1631,10 +1625,10 @@
 	 <Item>
     <Element>TestItem</Element>
     <Characteristics>MR</Characteristics>
-	<Type ref="CommonTypes" name="NAPTestItem2Type"/>
     <Description>
       <p></p>
     </Description>
+	<Type ref="CommonTypes" name="NAPTestItem2Type"/>
   </Item>
  </CommonElement>
  
@@ -1647,10 +1641,10 @@
 	 <Item>
     <Element>TestItemRefId</Element>
     <Characteristics>M</Characteristics>
-	<Type ref="CommonTypes" name="IdRefType"></Type>
     <Description>
       <p>The GUID that identifies the test item.</p>
     </Description>
+	<Type ref="CommonTypes" name="IdRefType"></Type>
   </Item>
     <Item>
 		<Element>TestItemLocalId</Element>
@@ -1696,10 +1690,10 @@
 	<Item>
 		<Element>NAPTestletRefId</Element>
 		<Characteristics>O</Characteristics>
-		<Type ref="CommonTypes" name="IdRefType"></Type>
 		<Description>
 		  <p>GUID of Testlet object.</p>
 		</Description>
+		<Type ref="CommonTypes" name="IdRefType"></Type>
   </Item>
    <Item>
 		<Element>TestletContent</Element>
@@ -1743,10 +1737,10 @@
   <Item>
     <Element>NAPTestletRefId</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
     <Description>
       <p>The GUID for the testlet that the student is sitting. May be linking to prior codeframe download.</p>
     </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
   </Item>
   
   <Item>
@@ -1805,18 +1799,18 @@
 	 <Item>
     <Element>NAPTestItemRefId</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
     <Description>
       <p>The GUID that identifies this NAPLAN test item.</p>
     </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
   </Item>
 	<Item>
        <Element>NAPTestItemLocalId</Element>
        <Characteristics>M</Characteristics>
-       <Type ref="CommonTypes" name="LocalIdType"></Type>
        <Description>
          <p>Local identifier for the test item.</p>
        </Description>
+       <Type ref="CommonTypes" name="LocalIdType"></Type>
      </Item>
      
     <Item>
@@ -2280,13 +2274,11 @@
 		<Description>
 			<p>Booklet Type to be used for the NAP test as an adjustment. Values: Braille.</p>
 		</Description>
-	   <Type name="xs:token">
 	  <Values>
 	    <Value>
 		  <Code>Braille</Code>
 	 	</Value>
 	  </Values>
-	</Type>
 	</Item>
   </CommonElement>    
       
@@ -2803,10 +2795,10 @@
 	<Item>
 		<Element>Code</Element>
 		<Characteristics>M</Characteristics>
-		<Type ref="CodeSets" name="AUCodeSetsReceivingLocationOfInstructionType"/>
 		<Description>
 			<p>Code representing the location of instruction.</p>
 		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsReceivingLocationOfInstructionType"/>
 	</Item>
 	<Item>
 		<Element>OtherCodeList</Element>
@@ -4942,10 +4934,10 @@
 <CommonElement name="LearningResourcesType" type="true" dm="true">
 	<Item>
 		<Element>LearningResourcesType</Element>
+		<Characteristics>O</Characteristics>
 		<Description>
 			<p>Container for related resources.</p>
 		</Description>
-		<Characteristics>O</Characteristics>
 		<List mode="List"/>
 	</Item>
 	<Item>
@@ -5960,15 +5952,15 @@
 		<Values>
 			<Value>
 				<Code>Legal</Code>
-				<Description>Custody, guardian, court orders (e.g. must attend school), lawsuits, etc.</Description>
+				<Text>Custody, guardian, court orders (e.g. must attend school), lawsuits, etc.</Text>
 			</Value>
 			<Value>
 				<Code>Discipline</Code>
-				<Description>Student is suspended, expelled, on probation, etc.</Description>
+				<Text>Student is suspended, expelled, on probation, etc.</Text>
 			</Value>
 			<Value>
 				<Code>Educational</Code>
-				<Description>academic probation, etc.</Description>
+				<Text>academic probation, etc.</Text>
 			</Value>
 			<Value>
 				<Code>Other</Code>
@@ -6240,12 +6232,12 @@
 <CommonElement name="LocalIdType" type="true" dm="true">
 	<Item>
 		<Element>LocalIdType</Element>
-		<Type name="xs:normalizedString"/>
 		<Description>
 			<p>
         This is a common element used to define the locally assigned identifier associated with an entity. 
       </p>
 		</Description>
+		<Type name="xs:normalizedString"/>
 	</Item>
 	<xhtml:Example xmlns="" name="LocalId Example">
 		<LocalId>123321A</LocalId>
@@ -6340,7 +6332,6 @@
 	</Intro>
 	<Item>
 		<Element>StateProvinceIdType</Element>
-		<Characteristics/>
 		<Description>
 			<p>The identifier for this entity as assigned by the state or province.</p>
 		</Description>
@@ -6358,7 +6349,6 @@
 	</Intro>
 	<Item>
 		<Element>AttendanceCodeType</Element>
-		<Characteristics/>
 		<Description>
 			<p>Code that describes the absence/attendance.</p>
 		</Description>
@@ -6394,7 +6384,6 @@
 	</Intro>
 	<Item>
 		<Element>YearLevelType</Element>
-		<Characteristics/>
 		<Description>
 			<p>Year or academic level.</p>
 		</Description>
@@ -6654,10 +6643,10 @@
 	<Item>
 		<Element>PhoneNumberList</Element>
 		<Characteristics>O</Characteristics>
-		<Type ref="CommonTypes" name="PhoneNumberListType"/>
 		<Description>
 			<p>The principal's phone number(s).</p>
 		</Description>
+		<Type ref="CommonTypes" name="PhoneNumberListType"/>
 	</Item>
 	<Item>
 		<Element>EmailList</Element>
@@ -6766,7 +6755,6 @@
 	</Intro>
 	<Item>
 		<Element>PublishInDirectoryType</Element>
-		<Characteristics/>
 		<Description>
 			<p>Indicates whether or not information should be published in a directory.</p>
 		</Description>
@@ -6805,10 +6793,10 @@
 	<Item>
 		<Element>Role</Element>
 		<Characteristics>O</Characteristics>
-		<Type name="xs:normalizedString"/>
 		<Description>
 			<p>Role played by this contact in this instance.</p>
 		</Description>
+		<Type name="xs:normalizedString"/>
 		<ItemExample>Report Contact</ItemExample>
 		<ItemExample>Primary Contact</ItemExample>
 		<ItemExample>Alternate Contact</ItemExample>
@@ -7233,51 +7221,51 @@
 		<Values>
 			<Value>
 				<Code>MB</Code>
-				<Description>Mesh Block</Description>
+				<Text>Mesh Block</Text>
 			</Value>
 			<Value>
 				<Code>SA1</Code>
-				<Description>Statistical Area Level 1</Description>
+				<Text>Statistical Area Level 1</Text>
 			</Value>
 			<Value>
 				<Code>SA2</Code>
-				<Description>Statistical Area Level 2</Description>
+				<Text>Statistical Area Level 2</Text>
 			</Value>
 			<Value>
 				<Code>SA3</Code>
-				<Description>Statistical Area Level 3</Description>
+				<Text>Statistical Area Level 3</Text>
 			</Value>
 			<Value>
 				<Code>SA4</Code>
-				<Description>Statistical Area Level 4</Description>
+				<Text>Statistical Area Level 4</Text>
 			</Value>
 			<Value>
 				<Code>GCCSA</Code>
-				<Description>Greater Capital City Statistical Areas</Description>
+				<Text>Greater Capital City Statistical Areas</Text>
 			</Value>
 			<Value>
 				<Code>S/T</Code>
-				<Description>State and Territory</Description>
+				<Text>State and Territory</Text>
 			</Value>
 			<Value>
 				<Code>LG</Code>
-				<Description>Local Government Area</Description>
+				<Text>Local Government Area</Text>
 			</Value>
 			<Value>
 				<Code>TR</Code>
-				<Description>TourismRegion</Description>
+				<Text>TourismRegion</Text>
 			</Value>
 			<Value>
 				<Code>ILOC</Code>
-				<Description>Indigenous Location</Description>
+				<Text>Indigenous Location</Text>
 			</Value>
 			<Value>
 				<Code>IARE</Code>
-				<Description>Indigenous Area</Description>
+				<Text>Indigenous Area</Text>
 			</Value>
 			<Value>
 				<Code>IREG</Code>
-				<Description>Indigenous Region</Description>
+				<Text>Indigenous Region</Text>
 			</Value>
 		</Values>
 	</Item>
@@ -7343,13 +7331,13 @@
 <CommonElement name="EmailType" type="true" dm="true">
 	<Item>
 		<Element>EmailType</Element>
-		<Type name="xs:normalizedString"/>
 		<Description>
 			<p>
         This element represents an e-mail address of one of a number of types and occurs in objects such as
         StudentPersonal, StaffPersonal, StudentContactPersonal, etc.
       </p>
 		</Description>
+		<Type name="xs:normalizedString"/>
 	</Item>
 	<Item>
 		<Attribute>Type</Attribute>
@@ -7537,7 +7525,6 @@
 	</Intro>
 	<Item>
 		<Element>SchoolYearType</Element>
-		<Characteristics/>
 		<Description>
 			<p>School year for which the information is applicable, expressed as the four-digit year in which the school year ends (e.g., "2009").</p>
 		</Description>
@@ -7571,12 +7558,12 @@
 <CommonElement name="ElectronicIdType" type="true" dm="true">
 	<Item>
 		<Element>ElectronicIdType</Element>
-		<Type name="xs:normalizedString"/>
 		<Description>
 			<p>
         Common element used to specify entity identifiers that are read by electronic equipment. 
       </p>
 		</Description>
+		<Type name="xs:normalizedString"/>
 	</Item>
 	<Item>
 		<Attribute>Type</Attribute>
@@ -7975,7 +7962,6 @@
 	</Intro>
 	<Item>
 		<Element>ProjectedGraduationYearType</Element>
-		<Characteristics/>
 		<Description>
 			<p>Currently projected graduation year (CCYY).</p>
 		</Description>
@@ -7991,7 +7977,6 @@
 	</Intro>
 	<Item>
 		<Element>OnTimeGraduationYearType</Element>
-		<Characteristics/>
 		<Description>
 			<p>First projected graduation year, usually determined when student is accepted into 9th grade (CCYY).</p>
 		</Description>
@@ -8081,14 +8066,13 @@
 </CommonElement>
 <CommonElement name="HomeroomNumberType" type="true" dm="true">
 	<Item>
+		<Element>HomeroomNumberType</Element>
 		<Description>
 			<p>
         Common element used to specify the locally-defined number or identifier for a homeroom. It is used in objects such
         as RoomInfo and StudentSnapshot.
       </p>
 		</Description>
-		<Element>HomeroomNumberType</Element>
-		<Characteristics/>
 		<Type name="xs:normalizedString"/>
 	</Item>
 	<xhtml:Example xmlns="" name="Home Room Number Example">
@@ -8105,7 +8089,6 @@
 	<Item>
 		<Element>Type</Element>
 		<Characteristics>M</Characteristics>
-		<Type name="xs:normalizedString"/>
 		<Description>
 			<p>
         This element is designed to contain the time period attached to an object.
@@ -8118,6 +8101,7 @@
         to utilize the examples here to enhance interoperability.
       </p>
 		</Description>
+		<Type name="xs:normalizedString"/>
 		<ItemExample>
       Full school year
     </ItemExample>
@@ -8155,21 +8139,21 @@
 	<Item>
 		<Element>Code</Element>
 		<Characteristics>M</Characteristics>
-		<Type name="xs:token"/>
 		<Description>
       This element provides a place for the application to send structured data (code values, unique identifier, timestamps).
       This code value can, depending upon the use case agreement between agents, be used to qualify the data in the <code>Value</code> element.
     </Description>
+		<Type name="xs:token"/>
 		<ItemExample>2007SY</ItemExample>
 		<ItemExample>2006.FallConferences</ItemExample>
 	</Item>
 	<Item>
 		<Element>Name</Element>
 		<Characteristics>M</Characteristics>
-		<Type name="xs:normalizedString"/>
 		<Description>
       Contains a human-readable description of the value in <code>Value</code>.
     </Description>
+		<Type name="xs:normalizedString"/>
 		<ItemExample>
       Class of '07
     </ItemExample>
@@ -8180,8 +8164,8 @@
 	<Item>
 		<Element>Value</Element>
 		<Characteristics>M</Characteristics>
-		<Type name="xs:normalizedString"/>
 		<Description>Contains the human-readable value.</Description>
+		<Type name="xs:normalizedString"/>
 		<ItemExample>
       2007
     </ItemExample>
@@ -8202,9 +8186,9 @@
 	<Item>
 		<Element>SpanGaps</Element>
 		<Characteristics>O</Characteristics>
-		<List mode="List">
-    </List>
 		<Description>A container element for holding multiple possible span gaps.</Description>
+		<List mode="List">
+		</List>
 	</Item>
 	<Item>
 		<Element>/SpanGap</Element>
@@ -8247,12 +8231,12 @@
 	<Item>
 		<Element>IsCurrent</Element>
 		<Characteristics>M</Characteristics>
-		<Type name="xs:boolean"/>
 		<Description>
       This element allows for the system to tag an object as being explicitly current.
       Although the baseline assumption in SIF is that objects are always current (default value is typically <code>true</code>),
       there are use cases when that is not the case.
     </Description>
+		<Type name="xs:boolean"/>
 	</Item>
 	<xhtml:Example xmlns="" name="Time Element Example">
 		<TimeElement>
@@ -8312,27 +8296,27 @@
 	<Item>
 		<Element>///Name</Element>
 		<Characteristics>M</Characteristics>
-		<Type name="xs:normalizedString"/>
 		<Description>
       Human-readable name of the data's creator. If the object contains system-generated data,
       the name should identify the creating service or application.
     </Description>
+		<Type name="xs:normalizedString"/>
 	</Item>
 	<Item>
 		<Element>///ID</Element>
 		<Characteristics>M</Characteristics>
-		<Type name="xs:normalizedString"/>
 		<Description>Unique identifier of the creator.  An email address or URI could be used here.</Description>
+		<Type name="xs:normalizedString"/>
 	</Item>
 	<Item>
 		<Element>ModificationHistory</Element>
 		<Characteristics>O</Characteristics>
-		<List mode="List">
-    </List>
 		<Description>
       An ordered set of <code>Modified</code> elements describing which system modified the data, when
       the modification took place, and a brief description of the modification.
     </Description>
+		<List mode="List">
+		</List>
 	</Item>
 	<Item>
 		<Element>/Modified</Element>
@@ -8342,20 +8326,20 @@
 	<Item>
 		<Element>//By</Element>
 		<Characteristics>M</Characteristics>
-		<Type name="xs:normalizedString"/>
 		<Description>Identifier of the system or person that modified the data.</Description>
+		<Type name="xs:normalizedString"/>
 	</Item>
 	<Item>
 		<Element>//DateTime</Element>
 		<Characteristics>M</Characteristics>
-		<Type name="xs:dateTime"/>
 		<Description>The date/time the modification occurred.</Description>
+		<Type name="xs:dateTime"/>
 	</Item>
 	<Item>
 		<Element>//Description</Element>
 		<Characteristics>O</Characteristics>
-		<Type name="xs:string"/>
 		<Description>Human readable description of the data modifications.</Description>
+		<Type name="xs:string"/>
 	</Item>
 	<Item>
 		<Element>TimeElements</Element>
