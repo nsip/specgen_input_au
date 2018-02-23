@@ -13,6 +13,9 @@ namespace xsi = "http://www.w3.org/2001/XMLSchema-instance"
 namespace xi = "http://www.w3.org/2001/XInclude"
 
 
+#
+## embedded XML Schema definitions
+#
 xi.include = element xi:include {
    attribute parse { "text" | "xml" },
    attribute href { text }
@@ -52,12 +55,14 @@ sif.narrative = mixed { (
 	| html.p
 	| html.span
 	| html.strong
+	| html.table
 	| html.ul	
-	| sif.Example
 )* }
 
 html.a = element a {
-   attribute href { text },
+   attribute href { text }?,
+   attribute name { text }?,
+   
    sif.narrative
 }
 html.br = element br { empty }
@@ -85,19 +90,33 @@ html.span = element span {
 
 html.strong = element strong { sif.narrative }
 
+html.table = element table {
+  element thead { html.tr+ },
+  mixed { element tbody { html.tr+ } | html.tr+ } }
+
+html.tr = element tr { html.td+ }
+
+html.td = element td { attribute class { text }?, sif.narrative }
+
 html.ul = element ul { element li { sif.narrative }* }
 
-sif.section = (attribute name { text })?, (mixed {
-   sif.narrative
-   | sif.If
-   | element Intro { sif.narrative }
-   | element Section { sif.section }
-   | sif.CodeSets
-} )*
 
-  #
-  ##  Root Elements (Russian Doll model)
-  # 
+#
+##  repeated lego blocks
+#
+anything = ( element * { anything } | attribute * { text } | text )*
+
+attr.intl = attribute intl { "us" | "uk" | "au" | "nz" | "" }
+
+sif.If = element if { attr.intl, sif.narrative }
+
+sif.Intro = element Intro { sif.narrative }
+
+
+
+#
+##  Root Elements (Russian Doll model)
+# 
 start |= sif.SIFSpecification
       | sif.Section
 	  | sif.DataObject
@@ -108,31 +127,73 @@ start |= sif.SIFSpecification
 
 sif.SIFSpecification =
   element SIFSpecification {
-    attribute xsi:* { text } *,
+    attribute xsi:* { text }*,
 	
     element BuildComment { sif.narrative },
     element TitlePage { sif.narrative },
 	
 	(mixed {
 	   sif.narrative
-	   | element Section { sif.section }
-	   | element Appendix { sif.section} } )*
+	   | sif.Section
+	   | sif.Appendix })*
  }
+
+
+sif.Section = element Section {
+   attribute xsi:* { text }*,
+   attribute name { text }?,
+   attribute xml:base { text }?,
+
+   (mixed {
+	  sif.Section
+        | sif.narrative
+	    | sif.DataObjects
+		| element Example { attribute name { text }, text }
+		| xhtml.Example } )* }
+
+sif.Appendix = element Appendix {
+   attribute name { text },
+   attribute xml:base { text }?,
+
+   (mixed {
+      sif.narrative
+      | sif.Intro
+	  | sif.IncludeGroup
+	  | sif.CodeSets })* }  
+
+
+xhtml.Example = element xhtml:Example {
+      attribute name { text },
+	  attribute skipValidate { "true" | "false" }?,
+	  attr.intl?,
+	  
+	  element * { anything }
+   }*
+
+
+sif.IncludeGroup = element IncludeGroup {
+   attribute xml:base { text }?,
+   (mixed {
+
+      sif.If
+	  | xi.include
+	  | sif.Intro
+      | sif.Group
+      | sif.CommonElement } )* }
+
+
+sif.DataObjects = element DataObjects {
+   attribute xml:base { text }?,
+   sif.IncludeGroup }
 
 sif.DataObject = element DataObject {
    attribute name { text },
+   
    (element Key { text } | element EventsReported { "true" | "false" })+,
    element Intro { sif.narrative }?,
    (mixed { sif.Item | sif.Choice })*,
-   sif.Example*
+   xhtml.Example*
 }
-
-
-sif.Example = element xhtml:Example {
-      attribute name { text },
-	  attribute skipValidate { "true" | "false" }?,
-	  element * { anything }
-   }*
 
 sif.CommonElement = element CommonElement {
    attribute name { text },
@@ -142,16 +203,40 @@ sif.CommonElement = element CommonElement {
    sif.Intro?,
    element Key { text }?,
    (mixed { sif.Item | sif.Choice })*,
-   sif.Example*
+   xhtml.Example*
 }
 
-anything = ( element * { anything } | attribute * { text } | text )*
+sif.Grouping = element Grouping {
+   attribute code { text },
+   attribute name { text },
+
+   element CodeSet {
+     element Intro { sif.narrative }?,
+	 element ID { text },
+     element Values { element Value { element Code { text }, element Text { text } }+ }
+   }+ }
+
+sif.Group = element Group {
+   attribute name { text },
+
+   (mixed {
+      sif.narrative
+        | sif.If
+        | sif.Intro
+		| sif.DataObject } )* }
+
+sif.CodeSets = element CodeSets {
+     sif.If
+	 | xi.include
+	 | sif.Grouping
+}
+
 
 sif.Item = element Item {
       (element Attribute { text } | element Element { text }),
 	  
 	  element Characteristics { "M" | "O" | "C" | "MR" | "OR"}?,
-	  element privacyRating { "M" | "L" }?,
+	  element privacyRating { "Low" | "Medium" | "High" | "Extreme"}?,
 	  element Description { sif.narrative }?,
 	  
 	  mixed { (  sif.Type
@@ -163,56 +248,6 @@ sif.Item = element Item {
 		 
       ) }* }
 
-sif.Choice = element Choice { sif.Item+ }
-
-sif.DataObjects = element DataObjects { sif.section }
-
-sif.Values = element Values {
-   element Value {
-      element Code { text },
-	  element Text { text }?    ## Note - Description field doesn't end up as annotation in XSD, so use Text instead
-}+ }
-
-sif.CodeSets = element CodeSets {
-     sif.If
-	 | xi.include
-	 | sif.Grouping
-}
-
-sif.Grouping = element Grouping {
-   attribute code { text },
-   attribute name { text },
-
-   element CodeSet {
-     element Intro { sif.narrative }?,
-	 element ID { text },
-     element Values { element Value { element Code { text }, element Text { text } }+ }
-   }+
-}
-
-sif.If = element if { attribute intl { "us" | "uk" | "au" | "nz" }, sif.narrative }
-
-sif.IncludeGroup = element IncludeGroup { (mixed {
-  sif.If
-   | xi.include
-   | sif.Intro
-   | sif.Group
-   | sif.CommonElement } )*
-}
-
-sif.Intro = element Intro { sif.narrative }
-
-sif.Group = element Group {
-   attribute name { text },
-
-   (mixed {
-      sif.narrative
-        | sif.If
-        | sif.Intro } )*
-}
-
-sif.Section = element Section { attribute xsi:* { text } *, sif.section }
-
 sif.Type = element Type {
    attribute ref { text }?,
    attribute name { text }?,
@@ -222,6 +257,13 @@ sif.Type = element Type {
    (mixed { xs.any | xs.sequence | xs.complexContent })?
 }
 
+sif.Choice = element Choice { sif.Item+ }
+
+sif.Values = element Values {
+   element Value {
+      element Code { text },
+	  element Text { text }?    ## Note - Description field doesn't end up as annotation in XSD, so use Text instead
+}+ }
 
 xs.Facets = element xs:pattern { attribute value { text } }
 		  | element xs:enumeration { xs.valueString, element annotation { element documentation { anything } }? }
