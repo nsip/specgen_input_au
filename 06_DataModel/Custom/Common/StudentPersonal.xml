@@ -151,10 +151,10 @@
 	<Item>
 		<Element>EconomicDisadvantage</Element>
 		<Characteristics>O</Characteristics>
+		<privacyRating>High</privacyRating>
 		<Description>
 			<p>Does the student meet the State criteria for classification as having an economic disadvantage?</p>
 		</Description>
-		<privacyRating>High</privacyRating>
 		<Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"/>
 	</Item>
 	<Item>

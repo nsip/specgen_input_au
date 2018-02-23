@@ -39,10 +39,10 @@
   <Item>
 	 <Element>Resources</Element>
 	 <Characteristics>O</Characteristics>
+	 <privacyRating>Low</privacyRating>
 	 <Description>
 		 <p>Container for related resources.</p>
 	 </Description>
-	 <privacyRating>Low</privacyRating>
     <Type ref="CommonTypes" name="LResourcesType"/>
   </Item>
 

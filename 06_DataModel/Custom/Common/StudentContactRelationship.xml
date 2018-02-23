@@ -10,10 +10,10 @@
   
   <Item>
     <Element>StudentContactRelationship</Element>
+	<privacyRating>High</privacyRating>
     <Description>
       This object defines a relationship between a contact person and a student.
     </Description>
-	<privacyRating>High</privacyRating>
   </Item>
   
   <Item>
@@ -28,16 +28,16 @@
   
   <Item>
     <Element>StudentPersonalRefId</Element>
-    <Description>GUID that identifies the student for the relationship.</Description>
     <Characteristics>M</Characteristics>
 	<privacyRating>Medium</privacyRating>
+    <Description>GUID that identifies the student for the relationship.</Description>
     <Type ref='CommonTypes' name='RefIdType'/>
   </Item>
   <Item>
      <Element>StudentContactPersonalRefId</Element>
-    <Description>GUID that identifies the contact person for the relationship.</Description>
     <Characteristics>M</Characteristics>
 	<privacyRating>Medium</privacyRating>
+    <Description>GUID that identifies the contact person for the relationship.</Description>
     <Type ref='CommonTypes' name='RefIdType'/>
   </Item>
  
@@ -107,10 +107,10 @@
     <Element>ContactSequence</Element>
     <Characteristics>O</Characteristics>
 	<privacyRating>Low</privacyRating>
-    <Type name="xs:unsignedInt"></Type>
     <Description>
       <p>Number indicating the order in which the person should be contacted.</p>
     </Description>
+    <Type name="xs:unsignedInt"></Type>
   </Item>
   <Item>
     <Element>ContactSequenceSource</Element>
@@ -124,9 +124,9 @@
   
   <Item>
     <Element>SchoolInfoRefId</Element>
-    <Description>GUID that identifies a school associated with the relationship.</Description>
     <Characteristics>C</Characteristics>
 	<privacyRating>Low</privacyRating>
+    <Description>GUID that identifies a school associated with the relationship.</Description>
     <Type ref='CommonTypes' name='IdRefType'/>
   </Item>
   

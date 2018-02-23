@@ -65,9 +65,7 @@
       <p>The ID (GUID) of the school to which this enrollment applies.</p>
     </Description>
     <Type ref="CommonTypes" relationship="records enrollment of student in" count="1:1" name="IdRefType"></Type>
-  </Item>
-  <Item>
-  
+  </Item> 
      <Item>
 		<Element>LocalId</Element>
 		<Characteristics>O</Characteristics>
@@ -77,7 +75,7 @@
 		</Description>
 		<Type ref="CommonTypes" name="LocalId"/> 
 	</Item>
-
+  <Item>
     <Element>MembershipType</Element>
     <Characteristics>M</Characteristics>
 	<privacyRating>Low</privacyRating>

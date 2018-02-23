@@ -18,19 +18,19 @@
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
 	<privacyRating>Low</privacyRating>
-    <Type ref="CommonTypes" name="RefIdType"></Type>
     <Description>
       <p>The GUID that uniquely identifies an instance of the object.</p>
     </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
   </Item>
   <Item>
     <Element>StudentPersonalRefId</Element>
     <Characteristics>O</Characteristics>
 	<privacyRating>High</privacyRating>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
     <Description>
       <p>The student associated with the NAP event.</p>
     </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
   </Item>
   <Item>
 		<Element>PlatformStudentIdentifier</Element>
@@ -45,10 +45,10 @@
     <Element>SchoolInfoRefId</Element>
     <Characteristics>O</Characteristics>
 	<privacyRating>Low</privacyRating>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
 	<Description>
       <p>Optional reference to a school associated with the NAP Event.</p>
     </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
   </Item>  
   	<Item>
 		<Element>SchoolACARAId</Element>
@@ -64,10 +64,10 @@
     <Element>NAPTestRefId</Element>
     <Characteristics>O</Characteristics>
 	<privacyRating>Low</privacyRating>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
     <Description>
       <p>The GUID for the test that the student is sitting. May be linking to prior codeframe download.</p>
     </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
   </Item>
   <Item>
 		<Element>NAPTestLocalId</Element>
@@ -128,53 +128,55 @@
 		<Element>ParticipationCode</Element>
 		<Characteristics>M</Characteristics>
 		<privacyRating>High</privacyRating>
-		<p>Indicates the participation status of the student for the NAP test.</p>
+		<Description>
+			<p>Indicates the participation status of the student for the NAP test.</p>
+		</Description>
 		<Type ref="CodeSets" name="AUCodeSetsNAPParticipationCodeType"/>
   </Item>  
   <Item>
     <Element>ParticipationText</Element>
     <Characteristics>M</Characteristics>
 	<privacyRating>High</privacyRating>
-    <Type name="xs:normalizedString"></Type>
     <Description>
       <p>Text added to reports indicating the participation status of the student for the NAP test. Determined by the Participation Code.</p>
     </Description>
+    <Type name="xs:normalizedString"></Type>
   </Item>  
    <Item>
     <Element>Device</Element>
     <Characteristics>O</Characteristics>
 	<privacyRating>Low</privacyRating>
-    <Type name="xs:token"></Type>
     <Description>
       <p>Device used to do the test.</p>
     </Description>
+    <Type name="xs:token"></Type>
   </Item>  
     <Item>
     <Element>Date</Element>
     <Characteristics>C</Characteristics>
 	<privacyRating>Low</privacyRating>
-    <Type name="xs:date"></Type>
     <Description>
       <p>Date test administered. Not provided unless the student was actually administered the test.</p>
     </Description>
+    <Type name="xs:date"></Type>
   </Item>  
     <Item>
     <Element>StartTime</Element>
     <Characteristics>C</Characteristics>
 	<privacyRating>Low</privacyRating>
-    <Type name="xs:time"></Type>
     <Description>
       <p>Time student commenced test. Not provided unless the student was actually administered the test.</p>
     </Description>
+    <Type name="xs:time"></Type>
   </Item>  
    <Item>
     <Element>LapsedTimeTest</Element>
     <Characteristics>C</Characteristics>
 	<privacyRating>High</privacyRating>
-    <Type name="xs:duration"></Type>
     <Description>
       <p>Time taken for student to complete test. Not provided unless the student was actually administered the test.</p>
     </Description>
+    <Type name="xs:duration"></Type>
   </Item>  
    <Item>
 		<Element>ExemptionReason</Element>
@@ -225,19 +227,19 @@
     <Element>TestDisruptionList</Element>
     <Characteristics>O</Characteristics>
 	<privacyRating>High</privacyRating>
-    <Type ref="CommonTypes" name="TestDisruptionListType"></Type>
     <Description>
       <p></p>
     </Description>
+    <Type ref="CommonTypes" name="TestDisruptionListType"></Type>
   </Item>
    <Item>
     <Element>Adjustment</Element>
     <Characteristics>O</Characteristics>
 	<privacyRating>High</privacyRating>
-    <Type ref="CommonTypes" name="AdjustmentContainerType"></Type>
     <Description>
       <p></p>
     </Description>
+    <Type ref="CommonTypes" name="AdjustmentContainerType"></Type>
   </Item>
   
   
