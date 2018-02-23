@@ -39,7 +39,7 @@
 		<Description>
 			<p>Platform student identifier, allocated by the National Assessment Platform to the student registration for this school enrollment.</p>
 		</Description>
-		<Type ref="CommonTypes" name="LocalId"/> 
+		<Type ref="CommonTypes" name="LocalIdType"/> 
 	</Item>
    <Item>
     <Element>SchoolInfoRefId</Element>
@@ -76,7 +76,7 @@
 		<Description>
 			<p>Local identifier of NAP test.</p>
 		</Description>
-		<Type ref="CommonTypes" name="LocalId"/> 
+		<Type ref="CommonTypes" name="LocalIdType"/> 
   </Item>
 
   <Item>
@@ -247,12 +247,12 @@
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_Metadata"></Type>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_ExtendedElements"></Type>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
   </Item>
 
   <xhtml:Example name="NAPEventStudentLink"  xmlns="">

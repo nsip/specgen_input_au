@@ -52,7 +52,7 @@
 		<Description>
 			<p>A Local Identifier for the Event. It is expected to be unique to the reporting site.</p>
 		</Description>
-		<Type ref="CommonTypes" name="LocalId"/> 
+		<Type ref="CommonTypes" name="LocalIdType"/> 
   </Item> 
    
    <Item>

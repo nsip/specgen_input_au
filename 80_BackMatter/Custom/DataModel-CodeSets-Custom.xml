@@ -1029,7 +1029,7 @@
 			<p>1249.0 Australian Standard Classification of Cultural and Ethnic Groups, 2016</p>
 			<p>Source Data ABS: http://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1249.02016?OpenDocument</p>
 		</Intro>
-		<ID>Australian Standard Classification of Cultural and Ethnic Groups (ASCCEG)</ID>
+		<ID>Australian Standard Classification Of Cultural And Ethnic Groups (ASCCEG)</ID>
  <Values><Value><Code>1101</Code><Text>Australian</Text></Value>
 <Value><Code>1102</Code><Text>Australian Aboriginal</Text></Value>
 <Value><Code>1103</Code><Text>Australian South Sea Islander</Text></Value>
@@ -2865,7 +2865,7 @@
 			<p>1269.0 Standard Australian Classification of Countries (SACC), 2016</p>
 			<p>Source Data ABS: http://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1269.02016?OpenDocument</p>
 		</Intro>
-		<ID>Standard Australian Classification of Countries (SACC)</ID>
+		<ID>Standard Australian Classification Of Countries (SACC)</ID>
 	       <Values><Value><Code>1101</Code><Text>Australia</Text></Value>
 <Value><Code>1102</Code><Text>Norfolk Island</Text></Value>
 <Value><Code>1199</Code><Text>Australian External Territories, nec</Text></Value>
@@ -4087,7 +4087,7 @@
  </p>
 			<p>Source Data ABS: http://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1266.02016?OpenDocument</p>
 		</Intro>
-		<ID>Australian Standard Classification of Religious Groups (ASCRG)</ID>
+		<ID>Australian Standard Classification Of Religious Groups (ASCRG)</ID>
 		<Values>
 			<Value>
 				<Code>0001</Code>
@@ -6369,7 +6369,7 @@
 			<p>Source Data: http://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1267.02016?OpenDocument</p>
 			<p>This extract contains all 4 digit classifications and supplementary codes.</p>
 		</Intro>
-		<ID>Australian Standard Classification of Languages (ASCL)</ID>
+		<ID>Australian Standard Classification Of Languages (ASCL)</ID>
 <Values>
 <Value><Code>1101</Code><Text>Gaelic (Scotland)</Text></Value>
 <Value><Code>1102</Code><Text>Irish</Text></Value>
@@ -9889,7 +9889,7 @@
 		<Intro>
 			<p>Source: US 2.6 0209 Medium Of Instruction</p>
 		</Intro>
-		<ID>Medium of Instruction</ID>
+		<ID>Medium Of Instruction</ID>
 		<Values>
 			<Value>
 				<Code>0603</Code>

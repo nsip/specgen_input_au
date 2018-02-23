@@ -61,7 +61,7 @@
 		Either SchoolYear or TermInfoRefId must be provided.
 		  </p>
 		</Description>
-		<Type ref="CommonTypes" name="SchoolYear"/>
+		<Type ref="CommonTypes" name="SchoolYearType"/>
 	</Item>
 	<Item>
 		<Element>TermInfoRefId</Element>
