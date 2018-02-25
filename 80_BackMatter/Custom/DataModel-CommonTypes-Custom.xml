@@ -1,4 +1,4 @@
-<!--CommonElement name ="ScoresType" type="true" dm="true"> 
+﻿<!--CommonElement name ="ScoresType" type="true" dm="true"> 
 <Item>
     <Element>ScoresType</Element>
     <Characteristics>M</Characteristics>
@@ -106,7 +106,7 @@
     </Item>
     <Item>
       <Element>Medication</Element>
-      <Desciption></Desciption>
+      <Description></Description>
       <Characteristics>OR</Characteristics>
 	   <Type ref="CommonTypes" name="MedicationType"/>
 	</Item>
@@ -121,10 +121,18 @@
         <Characteristics>OR</Characteristics>
   	</Item> 
   	<Item>
-  	   	<Element>Dosage</Element>
+  	   	<Element>MedicationName</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
-		  <p>Dosage and strength of medication required for student.</p>
+		  <p>Name of medication required for the student.</p>
+		</Description>
+		<Type name="xs:string"></Type>  
+  	</Item>
+  	<Item>
+	  	<Element>Dosage</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+		  <p>Dosage and strength of medication required for the student.</p>
 		</Description>
 		<Type name="xs:string"></Type>  
   	</Item>
@@ -5255,7 +5263,7 @@
 		<Element>FinancialAccountRefIdListType</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
-			<p>Suggested minimum class size for this subject.</p>
+			<p>List of RefIds of financial account codes.</p>
 		</Description>
 		<List mode="List"/>
 	</Item>
