@@ -7090,7 +7090,7 @@
 		<Element>StatisticalAreas</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
-			<p>A list of Statistical Areas assoicated with an address that will be referenced back to ABS 1270.  Only applicable to a physical address, e.g. not relevant for a Post Office Box.</p>
+			<p>A list of Statistical Areas associated with an address that will be referenced back to ABS 1270.  Only applicable to a physical address, e.g. not relevant for a Post Office Box.</p>
 		</Description>
 		<Type ref="CommonTypes" complex="extension" name="StatisticalAreasType"/>
 	</Item>
@@ -7162,7 +7162,7 @@
 		<Element>StatisticalAreasType</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
-			<p>A list of Statistical Areas assoicated with an address that will be referenced back to ABS 1270.  Only applicable to a physical address, e.g. not relevant for a Post Office Box.</p>
+			<p>A list of Statistical Areas associated with an address that will be referenced back to ABS 1270.  Only applicable to a physical address, e.g. not relevant for a Post Office Box.</p>
 		</Description>
 		<List mode="List">
     </List>
@@ -7799,7 +7799,7 @@
 		<Element>LBOTE</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
-			<p>Language Background is Other Than English. (http://www.acara.edu.au/verve/_resources/DSM_1.pdf), the LBOTE metric is under review. Currently it can be derived from Student and Parents Language Background.</p>
+			<p>Language Background is Other Than English. (http://www.acara.edu.au/reporting/data-standards-manual-student-background-characteristics), the LBOTE metric is under review. Currently it can be derived from Student and Parents Language Background.</p>
 		</Description>
 		<Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"/>
 	</Item>

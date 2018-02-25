@@ -21,7 +21,7 @@
     <Characteristics>M</Characteristics>
 	<privacyRating>Medium</privacyRating>
     <Description>
-      <p>An ID (GUID) for this paticular student-contact relationship. This GUID would be used to form a REST URL.</p>
+      <p>An ID (GUID) for this particular student-contact relationship. This GUID would be used to form a REST URL.</p>
     </Description>
     <Type ref="CommonTypes" name="IdRefType"></Type>
   </Item>  
