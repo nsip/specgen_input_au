@@ -13,7 +13,7 @@
     <Description>
       This object contains information related to curriculum standards statements "standards" or "benchmarks" or the like
       within the document. Each LearningStandardItem reflects an individual standard statement and may occur
-      at several levels within a hierarchially structured document.
+      at several levels within a hierarchically structured document.
     </Description>
   </Item>
   <Item>
