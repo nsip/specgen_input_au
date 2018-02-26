@@ -36,7 +36,15 @@
     </Description>
     <Type ref="CommonTypes" name="IdRefType"></Type>
   </Item>
-  
+  <Item>
+    <Element>StudentPersonalRefIdList</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The GUIDs for individuals that this assignment has been set for.</p>
+    </Description>
+    <Type ref="CommonTypes" name="StudentsType"></Type>
+  </Item>
   <Item>
     <Element>SchoolInfoRefId</Element>    
     <Characteristics>O</Characteristics>
