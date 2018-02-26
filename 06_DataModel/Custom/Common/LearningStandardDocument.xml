@@ -62,7 +62,7 @@
     <Characteristics>O</Characteristics>
 	<privacyRating>Low</privacyRating>
     <Description>
-      <p>Description of the curriculum document that allows pictures as well as text..</p>
+      <p>Description of the curriculum document that allows pictures as well as text.</p>
     </Description>
    <Type ref="CommonTypes" name="AbstractContentElementType"></Type>
   </Item>
