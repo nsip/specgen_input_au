@@ -197,32 +197,12 @@
   </Item>
   <Item>
     <Element>Copyright</Element>
-
     <Characteristics>O</Characteristics>
 	<privacyRating>Low</privacyRating>
     <Description>
       <p>Copyright for document.</p>
     </Description>
-  </Item>
-  <Item>
-    <Element>/Date</Element>
-
-    <Characteristics>C</Characteristics>
-	<privacyRating>Low</privacyRating>
-    <Description>
-      <p>Copyright date</p>
-    </Description>
-    <Type name="xs:date"></Type>
-  </Item>
-  <Item>
-    <Element>/Holder</Element>
-
-    <Characteristics>C</Characteristics>
-	<privacyRating>Low</privacyRating>
-    <Description>
-      <p>Name of the copyright holder</p>
-    </Description>
-    <Type name="xs:normalizedString"></Type>
+    <Type ref="CommonTypes" name="CopyRightContainerType"></Type>
   </Item>
   <Item>
     <Element>YearLevels</Element>
