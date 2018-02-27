@@ -1,0 +1,1978 @@
+<IncludeGroup
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	
+ 	xmlns="http://sifassociation.org/SpecGen">
+
+	<!-- Australian Standard Classifications ... -->
+	<CodeSet>
+  		<Intro>
+			<p>1249.0 Australian Standard Classification of Cultural and Ethnic Groups, 2016</p>
+			<p>Source Data ABS: http://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1249.02016?OpenDocument</p>
+		</Intro>
+		<ID>Australian Standard Classification Of Cultural And Ethnic Groups (ASCCEG)</ID>
+ <Values><Value><Code>1101</Code><Text>Australian</Text></Value>
+<Value><Code>1102</Code><Text>Australian Aboriginal</Text></Value>
+<Value><Code>1103</Code><Text>Australian South Sea Islander</Text></Value>
+<Value><Code>1104</Code><Text>Torres Strait Islander</Text></Value>
+<Value><Code>1201</Code><Text>Maori</Text></Value>
+<Value><Code>1202</Code><Text>New Zealander</Text></Value>
+<Value><Code>1301</Code><Text>New Caledonian</Text></Value>
+<Value><Code>1302</Code><Text>Ni-Vanuatu</Text></Value>
+<Value><Code>1303</Code><Text>Papua New Guinean</Text></Value>
+<Value><Code>1304</Code><Text>Solomon Islander</Text></Value>
+<Value><Code>1399</Code><Text>Melanesian and Papuan, nec</Text></Value>
+<Value><Code>1401</Code><Text>I-Kiribati</Text></Value>
+<Value><Code>1402</Code><Text>Nauruan</Text></Value>
+<Value><Code>1499</Code><Text>Micronesian, nec</Text></Value>
+<Value><Code>1501</Code><Text>Cook Islander</Text></Value>
+<Value><Code>1502</Code><Text>Fijian</Text></Value>
+<Value><Code>1503</Code><Text>Niuean</Text></Value>
+<Value><Code>1504</Code><Text>Samoan</Text></Value>
+<Value><Code>1505</Code><Text>Tongan</Text></Value>
+<Value><Code>1506</Code><Text>Hawaiian</Text></Value>
+<Value><Code>1507</Code><Text>Tahitian</Text></Value>
+<Value><Code>1508</Code><Text>Tokelauan</Text></Value>
+<Value><Code>1511</Code><Text>Tuvaluan</Text></Value>
+<Value><Code>1512</Code><Text>Pitcairn</Text></Value>
+<Value><Code>1599</Code><Text>Polynesian, nec</Text></Value>
+<Value><Code>2101</Code><Text>English</Text></Value>
+<Value><Code>2102</Code><Text>Scottish</Text></Value>
+<Value><Code>2103</Code><Text>Welsh</Text></Value>
+<Value><Code>2104</Code><Text>Channel Islander</Text></Value>
+<Value><Code>2105</Code><Text>Manx</Text></Value>
+<Value><Code>2199</Code><Text>British, nec</Text></Value>
+<Value><Code>2201</Code><Text>Irish</Text></Value>
+<Value><Code>2301</Code><Text>Austrian</Text></Value>
+<Value><Code>2303</Code><Text>Dutch</Text></Value>
+<Value><Code>2304</Code><Text>Flemish</Text></Value>
+<Value><Code>2305</Code><Text>French</Text></Value>
+<Value><Code>2306</Code><Text>German</Text></Value>
+<Value><Code>2307</Code><Text>Swiss</Text></Value>
+<Value><Code>2311</Code><Text>Belgian</Text></Value>
+<Value><Code>2312</Code><Text>Frisian</Text></Value>
+<Value><Code>2313</Code><Text>Luxembourg</Text></Value>
+<Value><Code>2399</Code><Text>Western European, nec</Text></Value>
+<Value><Code>2401</Code><Text>Danish</Text></Value>
+<Value><Code>2402</Code><Text>Finnish</Text></Value>
+<Value><Code>2403</Code><Text>Icelandic</Text></Value>
+<Value><Code>2404</Code><Text>Norwegian</Text></Value>
+<Value><Code>2405</Code><Text>Swedish</Text></Value>
+<Value><Code>2499</Code><Text>Northern European, nec</Text></Value>
+<Value><Code>3101</Code><Text>Basque</Text></Value>
+<Value><Code>3102</Code><Text>Catalan</Text></Value>
+<Value><Code>3103</Code><Text>Italian</Text></Value>
+<Value><Code>3104</Code><Text>Maltese</Text></Value>
+<Value><Code>3105</Code><Text>Portuguese</Text></Value>
+<Value><Code>3106</Code><Text>Spanish</Text></Value>
+<Value><Code>3107</Code><Text>Gibraltarian</Text></Value>
+<Value><Code>3199</Code><Text>Southern European, nec</Text></Value>
+<Value><Code>3201</Code><Text>Albanian</Text></Value>
+<Value><Code>3202</Code><Text>Bosnian</Text></Value>
+<Value><Code>3203</Code><Text>Bulgarian</Text></Value>
+<Value><Code>3204</Code><Text>Croatian</Text></Value>
+<Value><Code>3205</Code><Text>Greek</Text></Value>
+<Value><Code>3206</Code><Text>Macedonian</Text></Value>
+<Value><Code>3207</Code><Text>Moldovan</Text></Value>
+<Value><Code>3208</Code><Text>Montenegrin</Text></Value>
+<Value><Code>3211</Code><Text>Romanian</Text></Value>
+<Value><Code>3212</Code><Text>Roma Gypsy</Text></Value>
+<Value><Code>3213</Code><Text>Serbian</Text></Value>
+<Value><Code>3214</Code><Text>Slovene</Text></Value>
+<Value><Code>3215</Code><Text>Cypriot</Text></Value>
+<Value><Code>3216</Code><Text>Vlach</Text></Value>
+<Value><Code>3299</Code><Text>South Eastern European, nec</Text></Value>
+<Value><Code>3301</Code><Text>Belarusan</Text></Value>
+<Value><Code>3302</Code><Text>Czech</Text></Value>
+<Value><Code>3303</Code><Text>Estonian</Text></Value>
+<Value><Code>3304</Code><Text>Hungarian</Text></Value>
+<Value><Code>3305</Code><Text>Latvian</Text></Value>
+<Value><Code>3306</Code><Text>Lithuanian</Text></Value>
+<Value><Code>3307</Code><Text>Polish</Text></Value>
+<Value><Code>3308</Code><Text>Russian</Text></Value>
+<Value><Code>3311</Code><Text>Slovak</Text></Value>
+<Value><Code>3312</Code><Text>Ukrainian</Text></Value>
+<Value><Code>3313</Code><Text>Sorb/Wend</Text></Value>
+<Value><Code>3399</Code><Text>Eastern European, nec</Text></Value>
+<Value><Code>4101</Code><Text>Algerian</Text></Value>
+<Value><Code>4102</Code><Text>Egyptian</Text></Value>
+<Value><Code>4103</Code><Text>Iraqi</Text></Value>
+<Value><Code>4104</Code><Text>Jordanian</Text></Value>
+<Value><Code>4105</Code><Text>Kuwaiti</Text></Value>
+<Value><Code>4106</Code><Text>Lebanese</Text></Value>
+<Value><Code>4107</Code><Text>Libyan</Text></Value>
+<Value><Code>4108</Code><Text>Moroccan</Text></Value>
+<Value><Code>4111</Code><Text>Palestinian</Text></Value>
+<Value><Code>4112</Code><Text>Saudi Arabian</Text></Value>
+<Value><Code>4113</Code><Text>Syrian</Text></Value>
+<Value><Code>4114</Code><Text>Tunisian</Text></Value>
+<Value><Code>4115</Code><Text>Yemeni</Text></Value>
+<Value><Code>4116</Code><Text>Bahraini</Text></Value>
+<Value><Code>4117</Code><Text>Emirati</Text></Value>
+<Value><Code>4118</Code><Text>Omani</Text></Value>
+<Value><Code>4121</Code><Text>Qatari</Text></Value>
+<Value><Code>4199</Code><Text>Arab, nec</Text></Value>
+<Value><Code>4201</Code><Text>Jewish</Text></Value>
+<Value><Code>4301</Code><Text>Bari</Text></Value>
+<Value><Code>4302</Code><Text>Darfur</Text></Value>
+<Value><Code>4303</Code><Text>Dinka</Text></Value>
+<Value><Code>4304</Code><Text>Nuer</Text></Value>
+<Value><Code>4305</Code><Text>South Sudanese</Text></Value>
+<Value><Code>4306</Code><Text>Sudanese</Text></Value>
+<Value><Code>4399</Code><Text>Peoples of the Sudan, nec</Text></Value>
+<Value><Code>4902</Code><Text>Berber</Text></Value>
+<Value><Code>4903</Code><Text>Coptic</Text></Value>
+<Value><Code>4904</Code><Text>Iranian</Text></Value>
+<Value><Code>4905</Code><Text>Kurdish</Text></Value>
+<Value><Code>4907</Code><Text>Turkish</Text></Value>
+<Value><Code>4908</Code><Text>Assyrian</Text></Value>
+<Value><Code>4911</Code><Text>Chaldean</Text></Value>
+<Value><Code>4912</Code><Text>Mandaean</Text></Value>
+<Value><Code>4913</Code><Text>Nubian</Text></Value>
+<Value><Code>4914</Code><Text>Yezidi</Text></Value>
+<Value><Code>4999</Code><Text>Other North African and Middle Eastern, nec</Text></Value>
+<Value><Code>5101</Code><Text>Anglo-Burmese</Text></Value>
+<Value><Code>5102</Code><Text>Burmese</Text></Value>
+<Value><Code>5103</Code><Text>Hmong</Text></Value>
+<Value><Code>5104</Code><Text>Khmer (Cambodian)</Text></Value>
+<Value><Code>5105</Code><Text>Lao</Text></Value>
+<Value><Code>5106</Code><Text>Thai</Text></Value>
+<Value><Code>5107</Code><Text>Vietnamese</Text></Value>
+<Value><Code>5108</Code><Text>Karen</Text></Value>
+<Value><Code>5111</Code><Text>Mon</Text></Value>
+<Value><Code>5112</Code><Text>Chin</Text></Value>
+<Value><Code>5113</Code><Text>Rohingya</Text></Value>
+<Value><Code>5199</Code><Text>Mainland South-East Asian, nec</Text></Value>
+<Value><Code>5201</Code><Text>Filipino</Text></Value>
+<Value><Code>5202</Code><Text>Indonesian</Text></Value>
+<Value><Code>5203</Code><Text>Javanese</Text></Value>
+<Value><Code>5204</Code><Text>Madurese</Text></Value>
+<Value><Code>5205</Code><Text>Malay</Text></Value>
+<Value><Code>5206</Code><Text>Sundanese</Text></Value>
+<Value><Code>5207</Code><Text>Timorese</Text></Value>
+<Value><Code>5208</Code><Text>Acehnese</Text></Value>
+<Value><Code>5211</Code><Text>Balinese</Text></Value>
+<Value><Code>5212</Code><Text>Bruneian</Text></Value>
+<Value><Code>5213</Code><Text>Kadazan</Text></Value>
+<Value><Code>5214</Code><Text>Singaporean</Text></Value>
+<Value><Code>5215</Code><Text>Temoq</Text></Value>
+<Value><Code>5299</Code><Text>Maritime South-East Asian, nec</Text></Value>
+<Value><Code>6101</Code><Text>Chinese</Text></Value>
+<Value><Code>6102</Code><Text>Taiwanese</Text></Value>
+<Value><Code>6199</Code><Text>Chinese Asian, nec</Text></Value>
+<Value><Code>6901</Code><Text>Japanese</Text></Value>
+<Value><Code>6902</Code><Text>Korean</Text></Value>
+<Value><Code>6903</Code><Text>Mongolian</Text></Value>
+<Value><Code>6904</Code><Text>Tibetan</Text></Value>
+<Value><Code>6999</Code><Text>Other North-East Asian, nec</Text></Value>
+<Value><Code>7101</Code><Text>Anglo-Indian</Text></Value>
+<Value><Code>7102</Code><Text>Bengali</Text></Value>
+<Value><Code>7103</Code><Text>Burgher</Text></Value>
+<Value><Code>7104</Code><Text>Gujarati</Text></Value>
+<Value><Code>7106</Code><Text>Indian</Text></Value>
+<Value><Code>7107</Code><Text>Malayali</Text></Value>
+<Value><Code>7111</Code><Text>Nepalese</Text></Value>
+<Value><Code>7112</Code><Text>Pakistani</Text></Value>
+<Value><Code>7113</Code><Text>Punjabi</Text></Value>
+<Value><Code>7114</Code><Text>Sikh</Text></Value>
+<Value><Code>7115</Code><Text>Sinhalese</Text></Value>
+<Value><Code>7117</Code><Text>Maldivian</Text></Value>
+<Value><Code>7118</Code><Text>Bangladeshi</Text></Value>
+<Value><Code>7121</Code><Text>Bhutanese</Text></Value>
+<Value><Code>7122</Code><Text>Fijian Indian</Text></Value>
+<Value><Code>7123</Code><Text>Kashmiri</Text></Value>
+<Value><Code>7124</Code><Text>Parsi</Text></Value>
+<Value><Code>7125</Code><Text>Sindhi</Text></Value>
+<Value><Code>7126</Code><Text>Sri Lankan</Text></Value>
+<Value><Code>7127</Code><Text>Sri Lankan Tamil</Text></Value>
+<Value><Code>7128</Code><Text>Indian Tamil</Text></Value>
+<Value><Code>7131</Code><Text>Tamil, nfd</Text></Value>
+<Value><Code>7132</Code><Text>Telugu</Text></Value>
+<Value><Code>7199</Code><Text>Southern Asian, nec</Text></Value>
+<Value><Code>7201</Code><Text>Afghan</Text></Value>
+<Value><Code>7202</Code><Text>Armenian</Text></Value>
+<Value><Code>7203</Code><Text>Georgian</Text></Value>
+<Value><Code>7204</Code><Text>Kazakh</Text></Value>
+<Value><Code>7205</Code><Text>Pathan</Text></Value>
+<Value><Code>7206</Code><Text>Uzbek</Text></Value>
+<Value><Code>7207</Code><Text>Azeri</Text></Value>
+<Value><Code>7208</Code><Text>Hazara</Text></Value>
+<Value><Code>7211</Code><Text>Tajik</Text></Value>
+<Value><Code>7212</Code><Text>Tatar</Text></Value>
+<Value><Code>7213</Code><Text>Turkmen</Text></Value>
+<Value><Code>7214</Code><Text>Uighur</Text></Value>
+<Value><Code>7215</Code><Text>Kyrgyz</Text></Value>
+<Value><Code>7299</Code><Text>Central Asian, nec</Text></Value>
+<Value><Code>8101</Code><Text>African American</Text></Value>
+<Value><Code>8102</Code><Text>American</Text></Value>
+<Value><Code>8103</Code><Text>Canadian</Text></Value>
+<Value><Code>8104</Code><Text>French Canadian</Text></Value>
+<Value><Code>8105</Code><Text>Hispanic North American</Text></Value>
+<Value><Code>8106</Code><Text>Native North American Indian</Text></Value>
+<Value><Code>8107</Code><Text>Bermudan</Text></Value>
+<Value><Code>8199</Code><Text>North American, nec</Text></Value>
+<Value><Code>8201</Code><Text>Argentinian</Text></Value>
+<Value><Code>8202</Code><Text>Bolivian</Text></Value>
+<Value><Code>8203</Code><Text>Brazilian</Text></Value>
+<Value><Code>8204</Code><Text>Chilean</Text></Value>
+<Value><Code>8205</Code><Text>Colombian</Text></Value>
+<Value><Code>8206</Code><Text>Ecuadorian</Text></Value>
+<Value><Code>8207</Code><Text>Guyanese</Text></Value>
+<Value><Code>8208</Code><Text>Peruvian</Text></Value>
+<Value><Code>8211</Code><Text>Uruguayan</Text></Value>
+<Value><Code>8212</Code><Text>Venezuelan</Text></Value>
+<Value><Code>8213</Code><Text>Paraguayan</Text></Value>
+<Value><Code>8299</Code><Text>South American, nec</Text></Value>
+<Value><Code>8301</Code><Text>Mexican</Text></Value>
+<Value><Code>8302</Code><Text>Nicaraguan</Text></Value>
+<Value><Code>8303</Code><Text>Salvadoran</Text></Value>
+<Value><Code>8304</Code><Text>Costa Rican</Text></Value>
+<Value><Code>8305</Code><Text>Guatemalan</Text></Value>
+<Value><Code>8306</Code><Text>Mayan</Text></Value>
+<Value><Code>8399</Code><Text>Central American, nec</Text></Value>
+<Value><Code>8401</Code><Text>Cuban</Text></Value>
+<Value><Code>8402</Code><Text>Jamaican</Text></Value>
+<Value><Code>8403</Code><Text>Trinidadian Tobagonian</Text></Value>
+<Value><Code>8404</Code><Text>Barbadian</Text></Value>
+<Value><Code>8405</Code><Text>Puerto Rican</Text></Value>
+<Value><Code>8499</Code><Text>Caribbean Islander, nec</Text></Value>
+<Value><Code>9101</Code><Text>Akan</Text></Value>
+<Value><Code>9102</Code><Text>Fulani</Text></Value>
+<Value><Code>9103</Code><Text>Ghanaian</Text></Value>
+<Value><Code>9104</Code><Text>Nigerian</Text></Value>
+<Value><Code>9105</Code><Text>Yoruba</Text></Value>
+<Value><Code>9106</Code><Text>Ivorean</Text></Value>
+<Value><Code>9107</Code><Text>Liberian</Text></Value>
+<Value><Code>9108</Code><Text>Sierra Leonean</Text></Value>
+<Value><Code>9111</Code><Text>Acholi</Text></Value>
+<Value><Code>9112</Code><Text>Cameroonian</Text></Value>
+<Value><Code>9113</Code><Text>Congolese</Text></Value>
+<Value><Code>9114</Code><Text>Gio</Text></Value>
+<Value><Code>9115</Code><Text>Igbo</Text></Value>
+<Value><Code>9116</Code><Text>Krahn</Text></Value>
+<Value><Code>9117</Code><Text>Mandinka</Text></Value>
+<Value><Code>9118</Code><Text>Senegalese</Text></Value>
+<Value><Code>9121</Code><Text>Themne</Text></Value>
+<Value><Code>9122</Code><Text>Togolese</Text></Value>
+<Value><Code>9199</Code><Text>Central and West African, nec</Text></Value>
+<Value><Code>9201</Code><Text>Afrikaner</Text></Value>
+<Value><Code>9202</Code><Text>Angolan</Text></Value>
+<Value><Code>9203</Code><Text>Eritrean</Text></Value>
+<Value><Code>9204</Code><Text>Ethiopian</Text></Value>
+<Value><Code>9205</Code><Text>Kenyan</Text></Value>
+<Value><Code>9206</Code><Text>Malawian</Text></Value>
+<Value><Code>9207</Code><Text>Mauritian</Text></Value>
+<Value><Code>9208</Code><Text>Mozambican</Text></Value>
+<Value><Code>9211</Code><Text>Namibian</Text></Value>
+<Value><Code>9212</Code><Text>Oromo</Text></Value>
+<Value><Code>9213</Code><Text>Seychellois</Text></Value>
+<Value><Code>9214</Code><Text>Somali</Text></Value>
+<Value><Code>9215</Code><Text>South African</Text></Value>
+<Value><Code>9216</Code><Text>Tanzanian</Text></Value>
+<Value><Code>9217</Code><Text>Ugandan</Text></Value>
+<Value><Code>9218</Code><Text>Zambian</Text></Value>
+<Value><Code>9221</Code><Text>Zimbabwean</Text></Value>
+<Value><Code>9222</Code><Text>Amhara</Text></Value>
+<Value><Code>9223</Code><Text>Batswana</Text></Value>
+<Value><Code>9225</Code><Text>Hutu</Text></Value>
+<Value><Code>9226</Code><Text>Masai</Text></Value>
+<Value><Code>9228</Code><Text>Tigrayan</Text></Value>
+<Value><Code>9231</Code><Text>Tigre</Text></Value>
+<Value><Code>9232</Code><Text>Zulu</Text></Value>
+<Value><Code>9233</Code><Text>Burundian</Text></Value>
+<Value><Code>9234</Code><Text>Kunama</Text></Value>
+<Value><Code>9235</Code><Text>Madi</Text></Value>
+<Value><Code>9236</Code><Text>Ogaden</Text></Value>
+<Value><Code>9237</Code><Text>Rwandan</Text></Value>
+<Value><Code>9238</Code><Text>Shona</Text></Value>
+<Value><Code>9241</Code><Text>Swahili</Text></Value>
+<Value><Code>9242</Code><Text>Swazilander</Text></Value>
+<Value><Code>9299</Code><Text>Southern and East African, nec</Text></Value>
+<Value><Code>0000</Code><Text>Inadequately described</Text></Value>
+<Value><Code>0001</Code><Text>Not stated</Text></Value>
+<Value><Code>0901</Code><Text>Eurasian, so described</Text></Value>
+<Value><Code>0902</Code><Text>Asian, so described</Text></Value>
+<Value><Code>0903</Code><Text>African, so described</Text></Value>
+<Value><Code>0904</Code><Text>European, so described</Text></Value>
+<Value><Code>0905</Code><Text>Caucasian, so described</Text></Value>
+<Value><Code>0906</Code><Text>Creole, so described</Text></Value>
+<Value><Code>1000</Code><Text>Oceanian, nfd</Text></Value>
+<Value><Code>1100</Code><Text>Australian Peoples, nfd</Text></Value>
+<Value><Code>1200</Code><Text>New Zealand Peoples, nfd</Text></Value>
+<Value><Code>1300</Code><Text>Melanesian and Papuan, nfd</Text></Value>
+<Value><Code>1400</Code><Text>Micronesian, nfd</Text></Value>
+<Value><Code>1500</Code><Text>Polynesian, nfd</Text></Value>
+<Value><Code>2000</Code><Text>North-West European, nfd</Text></Value>
+<Value><Code>2100</Code><Text>British, nfd</Text></Value>
+<Value><Code>2300</Code><Text>Western European, nfd</Text></Value>
+<Value><Code>2400</Code><Text>Northern European, nfd</Text></Value>
+<Value><Code>3000</Code><Text>Southern and  Eastern European, nfd</Text></Value>
+<Value><Code>3100</Code><Text>Southern European, nfd</Text></Value>
+<Value><Code>3200</Code><Text>South Eastern European, nfd</Text></Value>
+<Value><Code>3300</Code><Text>Eastern European, nfd</Text></Value>
+<Value><Code>4000</Code><Text>North African and Middle Eastern, nfd</Text></Value>
+<Value><Code>4100</Code><Text>Arab, nfd</Text></Value>
+<Value><Code>4300</Code><Text>Peoples of the Sudan, nfd</Text></Value>
+<Value><Code>4900</Code><Text>Other North African and Middle Eastern, nfd</Text></Value>
+<Value><Code>5000</Code><Text>South-East  Asian, nfd</Text></Value>
+<Value><Code>5100</Code><Text>Mainland South-East Asian, nfd</Text></Value>
+<Value><Code>5200</Code><Text>Maritime South-East Asian, nfd</Text></Value>
+<Value><Code>6000</Code><Text>North-East Asian, nfd</Text></Value>
+<Value><Code>6100</Code><Text>Chinese Asian, nfd</Text></Value>
+<Value><Code>6900</Code><Text>Other North-East Asian, nfd</Text></Value>
+<Value><Code>7000</Code><Text>Southern and Central Asian, nfd</Text></Value>
+<Value><Code>7100</Code><Text>Southern Asian, nfd</Text></Value>
+<Value><Code>7200</Code><Text>Central Asian, nfd</Text></Value>
+<Value><Code>8000</Code><Text>Peoples of the Americas, nfd</Text></Value>
+<Value><Code>8100</Code><Text>North American, nfd</Text></Value>
+<Value><Code>8200</Code><Text>South American, nfd</Text></Value>
+<Value><Code>8300</Code><Text>Central American, nfd</Text></Value>
+<Value><Code>8400</Code><Text>Caribbean Islander, nfd</Text></Value>
+<Value><Code>9000</Code><Text>Sub-Saharan African, nfd</Text></Value>
+<Value><Code>9100</Code><Text>Central and West African, nfd</Text></Value>
+<Value><Code>9200</Code><Text>Southern and East African, nfd</Text></Value>
+</Values>
+</CodeSet>
+<CodeSet>
+	<Intro>
+			<p>ABS 1267.0 - Australian Standard Classification of Languages (ASCL), 2016</p>
+			<p>Updated to correspond to ACARA Data Standards Manual, 2012</p>
+			<p>Source Data: http://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1267.02016?OpenDocument</p>
+			<p>This extract contains all 4 digit classifications and supplementary codes.</p>
+		</Intro>
+		<ID>Australian Standard Classification Of Languages (ASCL)</ID>
+<Values>
+<Value><Code>1101</Code><Text>Gaelic (Scotland)</Text></Value>
+<Value><Code>1102</Code><Text>Irish</Text></Value>
+<Value><Code>1103</Code><Text>Welsh</Text></Value>
+<Value><Code>1199</Code><Text>Celtic, nec</Text></Value>
+<Value><Code>1201</Code><Text>English</Text></Value>
+<Value><Code>1301</Code><Text>German</Text></Value>
+<Value><Code>1302</Code><Text>Letzeburgish</Text></Value>
+<Value><Code>1303</Code><Text>Yiddish</Text></Value>
+<Value><Code>1401</Code><Text>Dutch</Text></Value>
+<Value><Code>1402</Code><Text>Frisian</Text></Value>
+<Value><Code>1403</Code><Text>Afrikaans</Text></Value>
+<Value><Code>1501</Code><Text>Danish</Text></Value>
+<Value><Code>1502</Code><Text>Icelandic</Text></Value>
+<Value><Code>1503</Code><Text>Norwegian</Text></Value>
+<Value><Code>1504</Code><Text>Swedish</Text></Value>
+<Value><Code>1599</Code><Text>Scandinavian, nec</Text></Value>
+<Value><Code>1601</Code><Text>Estonian</Text></Value>
+<Value><Code>1602</Code><Text>Finnish</Text></Value>
+<Value><Code>1699</Code><Text>Finnish and Related Languages, nec</Text></Value>
+<Value><Code>2101</Code><Text>French</Text></Value>
+<Value><Code>2201</Code><Text>Greek</Text></Value>
+<Value><Code>2301</Code><Text>Catalan</Text></Value>
+<Value><Code>2302</Code><Text>Portuguese</Text></Value>
+<Value><Code>2303</Code><Text>Spanish</Text></Value>
+<Value><Code>2399</Code><Text>Iberian Romance, nec</Text></Value>
+<Value><Code>2401</Code><Text>Italian</Text></Value>
+<Value><Code>2501</Code><Text>Maltese</Text></Value>
+<Value><Code>2901</Code><Text>Basque</Text></Value>
+<Value><Code>2902</Code><Text>Latin</Text></Value>
+<Value><Code>2999</Code><Text>Other Southern European Languages, nec</Text></Value>
+<Value><Code>3101</Code><Text>Latvian</Text></Value>
+<Value><Code>3102</Code><Text>Lithuanian</Text></Value>
+<Value><Code>3301</Code><Text>Hungarian</Text></Value>
+<Value><Code>3401</Code><Text>Belorussian</Text></Value>
+<Value><Code>3402</Code><Text>Russian</Text></Value>
+<Value><Code>3403</Code><Text>Ukrainian</Text></Value>
+<Value><Code>3501</Code><Text>Bosnian</Text></Value>
+<Value><Code>3502</Code><Text>Bulgarian</Text></Value>
+<Value><Code>3503</Code><Text>Croatian</Text></Value>
+<Value><Code>3504</Code><Text>Macedonian</Text></Value>
+<Value><Code>3505</Code><Text>Serbian</Text></Value>
+<Value><Code>3506</Code><Text>Slovene</Text></Value>
+<Value><Code>3507</Code><Text>Serbo-Croatian/Yugoslavian, so described</Text></Value>
+<Value><Code>3601</Code><Text>Czech</Text></Value>
+<Value><Code>3602</Code><Text>Polish</Text></Value>
+<Value><Code>3603</Code><Text>Slovak</Text></Value>
+<Value><Code>3604</Code><Text>Czechoslovakian, so described</Text></Value>
+<Value><Code>3901</Code><Text>Albanian</Text></Value>
+<Value><Code>3903</Code><Text>Aromunian (Macedo-Romanian)</Text></Value>
+<Value><Code>3904</Code><Text>Romanian</Text></Value>
+<Value><Code>3905</Code><Text>Romany</Text></Value>
+<Value><Code>3999</Code><Text>Other Eastern European Languages, nec</Text></Value>
+<Value><Code>4101</Code><Text>Kurdish</Text></Value>
+<Value><Code>4102</Code><Text>Pashto</Text></Value>
+<Value><Code>4104</Code><Text>Balochi</Text></Value>
+<Value><Code>4105</Code><Text>Dari</Text></Value>
+<Value><Code>4106</Code><Text>Persian (excluding Dari)</Text></Value>
+<Value><Code>4107</Code><Text>Hazaraghi</Text></Value>
+<Value><Code>4199</Code><Text>Iranic, nec</Text></Value>
+<Value><Code>4202</Code><Text>Arabic</Text></Value>
+<Value><Code>4204</Code><Text>Hebrew</Text></Value>
+<Value><Code>4206</Code><Text>Assyrian Neo-Aramaic</Text></Value>
+<Value><Code>4207</Code><Text>Chaldean Neo-Aramaic</Text></Value>
+<Value><Code>4208</Code><Text>Mandaean (Mandaic)</Text></Value>
+<Value><Code>4299</Code><Text>Middle Eastern Semitic Languages, nec</Text></Value>
+<Value><Code>4301</Code><Text>Turkish</Text></Value>
+<Value><Code>4302</Code><Text>Azeri</Text></Value>
+<Value><Code>4303</Code><Text>Tatar</Text></Value>
+<Value><Code>4304</Code><Text>Turkmen</Text></Value>
+<Value><Code>4305</Code><Text>Uygur</Text></Value>
+<Value><Code>4306</Code><Text>Uzbek</Text></Value>
+<Value><Code>4399</Code><Text>Turkic, nec</Text></Value>
+<Value><Code>4901</Code><Text>Armenian</Text></Value>
+<Value><Code>4902</Code><Text>Georgian</Text></Value>
+<Value><Code>4999</Code><Text>Other Southwest and Central Asian Languages, nec</Text></Value>
+<Value><Code>5101</Code><Text>Kannada</Text></Value>
+<Value><Code>5102</Code><Text>Malayalam</Text></Value>
+<Value><Code>5103</Code><Text>Tamil</Text></Value>
+<Value><Code>5104</Code><Text>Telugu</Text></Value>
+<Value><Code>5105</Code><Text>Tulu</Text></Value>
+<Value><Code>5199</Code><Text>Dravidian, nec</Text></Value>
+<Value><Code>5201</Code><Text>Bengali</Text></Value>
+<Value><Code>5202</Code><Text>Gujarati</Text></Value>
+<Value><Code>5203</Code><Text>Hindi</Text></Value>
+<Value><Code>5204</Code><Text>Konkani</Text></Value>
+<Value><Code>5205</Code><Text>Marathi</Text></Value>
+<Value><Code>5206</Code><Text>Nepali</Text></Value>
+<Value><Code>5207</Code><Text>Punjabi</Text></Value>
+<Value><Code>5208</Code><Text>Sindhi</Text></Value>
+<Value><Code>5211</Code><Text>Sinhalese</Text></Value>
+<Value><Code>5212</Code><Text>Urdu</Text></Value>
+<Value><Code>5213</Code><Text>Assamese</Text></Value>
+<Value><Code>5214</Code><Text>Dhivehi</Text></Value>
+<Value><Code>5215</Code><Text>Kashmiri</Text></Value>
+<Value><Code>5216</Code><Text>Oriya</Text></Value>
+<Value><Code>5217</Code><Text>Fijian Hindustani</Text></Value>
+<Value><Code>5299</Code><Text>Indo-Aryan, nec</Text></Value>
+<Value><Code>5999</Code><Text>Other Southern Asian Languages</Text></Value>
+<Value><Code>6101</Code><Text>Burmese</Text></Value>
+<Value><Code>6102</Code><Text>Chin Haka</Text></Value>
+<Value><Code>6103</Code><Text>Karen</Text></Value>
+<Value><Code>6104</Code><Text>Rohingya</Text></Value>
+<Value><Code>6105</Code><Text>Zomi</Text></Value>
+<Value><Code>6199</Code><Text>Burmese and Related Languages, nec</Text></Value>
+<Value><Code>6201</Code><Text>Hmong</Text></Value>
+<Value><Code>6299</Code><Text>Hmong-Mien, nec</Text></Value>
+<Value><Code>6301</Code><Text>Khmer</Text></Value>
+<Value><Code>6302</Code><Text>Vietnamese</Text></Value>
+<Value><Code>6303</Code><Text>Mon</Text></Value>
+<Value><Code>6399</Code><Text>Mon-Khmer, nec</Text></Value>
+<Value><Code>6401</Code><Text>Lao</Text></Value>
+<Value><Code>6402</Code><Text>Thai</Text></Value>
+<Value><Code>6499</Code><Text>Tai, nec</Text></Value>
+<Value><Code>6501</Code><Text>Bisaya</Text></Value>
+<Value><Code>6502</Code><Text>Cebuano</Text></Value>
+<Value><Code>6503</Code><Text>IIokano</Text></Value>
+<Value><Code>6504</Code><Text>Indonesian</Text></Value>
+<Value><Code>6505</Code><Text>Malay</Text></Value>
+<Value><Code>6507</Code><Text>Tetum</Text></Value>
+<Value><Code>6508</Code><Text>Timorese</Text></Value>
+<Value><Code>6511</Code><Text>Tagalog</Text></Value>
+<Value><Code>6512</Code><Text>Filipino</Text></Value>
+<Value><Code>6513</Code><Text>Acehnese</Text></Value>
+<Value><Code>6514</Code><Text>Balinese</Text></Value>
+<Value><Code>6515</Code><Text>Bikol</Text></Value>
+<Value><Code>6516</Code><Text>Iban</Text></Value>
+<Value><Code>6517</Code><Text>Ilonggo (Hiligaynon)</Text></Value>
+<Value><Code>6518</Code><Text>Javanese</Text></Value>
+<Value><Code>6521</Code><Text>Pampangan</Text></Value>
+<Value><Code>6599</Code><Text>Southeast Asian Austronesian Languages, nec</Text></Value>
+<Value><Code>6999</Code><Text>Other Southeast Asian Languages</Text></Value>
+<Value><Code>7101</Code><Text>Cantonese</Text></Value>
+<Value><Code>7102</Code><Text>Hakka</Text></Value>
+<Value><Code>7104</Code><Text>Mandarin</Text></Value>
+<Value><Code>7106</Code><Text>Wu</Text></Value>
+<Value><Code>7107</Code><Text>Min Nan</Text></Value>
+<Value><Code>7199</Code><Text>Chinese, nec</Text></Value>
+<Value><Code>7201</Code><Text>Japanese</Text></Value>
+<Value><Code>7301</Code><Text>Korean</Text></Value>
+<Value><Code>7901</Code><Text>Tibetan</Text></Value>
+<Value><Code>7902</Code><Text>Mongolian</Text></Value>
+<Value><Code>7999</Code><Text>Other Eastern Asian Languages, nec</Text></Value>
+<Value><Code>8101</Code><Text>Anindilyakwa</Text></Value>
+<Value><Code>8111</Code><Text>Maung</Text></Value>
+<Value><Code>8113</Code><Text>Ngan'gikurunggurr</Text></Value>
+<Value><Code>8114</Code><Text>Nunggubuyu</Text></Value>
+<Value><Code>8115</Code><Text>Rembarrnga</Text></Value>
+<Value><Code>8117</Code><Text>Tiwi</Text></Value>
+<Value><Code>8121</Code><Text>Alawa</Text></Value>
+<Value><Code>8122</Code><Text>Dalabon</Text></Value>
+<Value><Code>8123</Code><Text>Gudanji</Text></Value>
+<Value><Code>8127</Code><Text>Iwaidja</Text></Value>
+<Value><Code>8128</Code><Text>Jaminjung</Text></Value>
+<Value><Code>8131</Code><Text>Jawoyn</Text></Value>
+<Value><Code>8132</Code><Text>Jingulu</Text></Value>
+<Value><Code>8133</Code><Text>Kunbarlang</Text></Value>
+<Value><Code>8136</Code><Text>Larrakiya</Text></Value>
+<Value><Code>8137</Code><Text>Malak Malak</Text></Value>
+<Value><Code>8138</Code><Text>Mangarrayi</Text></Value>
+<Value><Code>8141</Code><Text>Maringarr</Text></Value>
+<Value><Code>8142</Code><Text>Marra</Text></Value>
+<Value><Code>8143</Code><Text>Marrithiyel</Text></Value>
+<Value><Code>8144</Code><Text>Matngala</Text></Value>
+<Value><Code>8146</Code><Text>Murrinh Patha</Text></Value>
+<Value><Code>8147</Code><Text>Na-kara</Text></Value>
+<Value><Code>8148</Code><Text>Ndjebbana (Gunavidji)</Text></Value>
+<Value><Code>8151</Code><Text>Ngalakgan</Text></Value>
+<Value><Code>8152</Code><Text>Ngaliwurru</Text></Value>
+<Value><Code>8153</Code><Text>Nungali</Text></Value>
+<Value><Code>8154</Code><Text>Wambaya</Text></Value>
+<Value><Code>8155</Code><Text>Wardaman</Text></Value>
+<Value><Code>8156</Code><Text>Amurdak</Text></Value>
+<Value><Code>8157</Code><Text>Garrwa</Text></Value>
+<Value><Code>8158</Code><Text>Kuwema</Text></Value>
+<Value><Code>8161</Code><Text>Marramaninyshi</Text></Value>
+<Value><Code>8162</Code><Text>Ngandi</Text></Value>
+<Value><Code>8163</Code><Text>Waanyi</Text></Value>
+<Value><Code>8164</Code><Text>Wagiman</Text></Value>
+<Value><Code>8165</Code><Text>Yanyuwa</Text></Value>
+<Value><Code>8166</Code><Text>Marridan (Maridan)</Text></Value>
+<Value><Code>8171</Code><Text>Gundjeihmi</Text></Value>
+<Value><Code>8172</Code><Text>Kune</Text></Value>
+<Value><Code>8173</Code><Text>Kuninjku</Text></Value>
+<Value><Code>8174</Code><Text>Kunwinjku</Text></Value>
+<Value><Code>8175</Code><Text>Mayali</Text></Value>
+<Value><Code>8179</Code><Text>Kunwinjkuan, nec</Text></Value>
+<Value><Code>8181</Code><Text>Burarra</Text></Value>
+<Value><Code>8182</Code><Text>Gun-nartpa</Text></Value>
+<Value><Code>8183</Code><Text>Gurr-goni</Text></Value>
+<Value><Code>8189</Code><Text>Burarran, nec</Text></Value>
+<Value><Code>8199</Code><Text>Arnhem Land and Daly River Region Languages, nec</Text></Value>
+<Value><Code>8211</Code><Text>Galpu</Text></Value>
+<Value><Code>8212</Code><Text>Golumala</Text></Value>
+<Value><Code>8213</Code><Text>Wangurri</Text></Value>
+<Value><Code>8219</Code><Text>Dhangu, nec</Text></Value>
+<Value><Code>8221</Code><Text>Dhalwangu</Text></Value>
+<Value><Code>8222</Code><Text>Djarrwark</Text></Value>
+<Value><Code>8229</Code><Text>Dhay'yi, nec</Text></Value>
+<Value><Code>8231</Code><Text>Djambarrpuyngu</Text></Value>
+<Value><Code>8232</Code><Text>Djapu</Text></Value>
+<Value><Code>8233</Code><Text>Daatiwuy</Text></Value>
+<Value><Code>8234</Code><Text>Marrangu</Text></Value>
+<Value><Code>8235</Code><Text>Liyagalawumirr</Text></Value>
+<Value><Code>8236</Code><Text>Liyagawumirr</Text></Value>
+<Value><Code>8239</Code><Text>Dhuwal, nec</Text></Value>
+<Value><Code>8242</Code><Text>Gumatj</Text></Value>
+<Value><Code>8243</Code><Text>Gupapuyngu</Text></Value>
+<Value><Code>8244</Code><Text>Guyamirrilili</Text></Value>
+<Value><Code>8246</Code><Text>Manggalili</Text></Value>
+<Value><Code>8247</Code><Text>Wubulkarra</Text></Value>
+<Value><Code>8249</Code><Text>Dhuwala, nec</Text></Value>
+<Value><Code>8251</Code><Text>Wurlaki</Text></Value>
+<Value><Code>8259</Code><Text>Djinang, nec</Text></Value>
+<Value><Code>8261</Code><Text>Ganalbingu</Text></Value>
+<Value><Code>8262</Code><Text>Djinba</Text></Value>
+<Value><Code>8263</Code><Text>Manyjalpingu</Text></Value>
+<Value><Code>8269</Code><Text>Djinba, nec</Text></Value>
+<Value><Code>8271</Code><Text>Ritharrngu</Text></Value>
+<Value><Code>8272</Code><Text>Wagilak</Text></Value>
+<Value><Code>8279</Code><Text>Yakuy, nec</Text></Value>
+<Value><Code>8281</Code><Text>Nhangu</Text></Value>
+<Value><Code>8282</Code><Text>Yan-nhangu</Text></Value>
+<Value><Code>8289</Code><Text>Nhangu, nec</Text></Value>
+<Value><Code>8291</Code><Text>Dhuwaya</Text></Value>
+<Value><Code>8292</Code><Text>Djangu</Text></Value>
+<Value><Code>8293</Code><Text>Madarrpa</Text></Value>
+<Value><Code>8294</Code><Text>Warramiri</Text></Value>
+<Value><Code>8295</Code><Text>Rirratjingu</Text></Value>
+<Value><Code>8299</Code><Text>Other Yolngu Matha, nec</Text></Value>
+<Value><Code>8301</Code><Text>Kuku Yalanji</Text></Value>
+<Value><Code>8302</Code><Text>Guugu Yimidhirr</Text></Value>
+<Value><Code>8303</Code><Text>Kuuku-Ya'u</Text></Value>
+<Value><Code>8304</Code><Text>Wik Mungkan</Text></Value>
+<Value><Code>8305</Code><Text>Djabugay</Text></Value>
+<Value><Code>8306</Code><Text>Dyirbal</Text></Value>
+<Value><Code>8307</Code><Text>Girramay</Text></Value>
+<Value><Code>8308</Code><Text>Koko-Bera</Text></Value>
+<Value><Code>8311</Code><Text>Kuuk Thayorre</Text></Value>
+<Value><Code>8312</Code><Text>Lamalama</Text></Value>
+<Value><Code>8313</Code><Text>Yidiny</Text></Value>
+<Value><Code>8314</Code><Text>Wik Ngathan</Text></Value>
+<Value><Code>8315</Code><Text>Alngith</Text></Value>
+<Value><Code>8316</Code><Text>Kugu Muminh</Text></Value>
+<Value><Code>8317</Code><Text>Morrobalama</Text></Value>
+<Value><Code>8318</Code><Text>Thaynakwith</Text></Value>
+<Value><Code>8321</Code><Text>Yupangathi</Text></Value>
+<Value><Code>8322</Code><Text>Tjungundji</Text></Value>
+<Value><Code>8399</Code><Text>Cape York Peninsula Languages, nec</Text></Value>
+<Value><Code>8401</Code><Text>Kalaw Kawaw Ya/Kalaw Lagaw Ya</Text></Value>
+<Value><Code>8402</Code><Text>Meriam Mir</Text></Value>
+<Value><Code>8403</Code><Text>Yumplatok (Torres Strait Creole)</Text></Value>
+<Value><Code>8504</Code><Text>Bilinarra</Text></Value>
+<Value><Code>8505</Code><Text>Gurindji</Text></Value>
+<Value><Code>8506</Code><Text>Gurindji Kriol</Text></Value>
+<Value><Code>8507</Code><Text>Jaru</Text></Value>
+<Value><Code>8508</Code><Text>Light Warlpiri</Text></Value>
+<Value><Code>8511</Code><Text>Malngin</Text></Value>
+<Value><Code>8512</Code><Text>Mudburra</Text></Value>
+<Value><Code>8514</Code><Text>Ngardi</Text></Value>
+<Value><Code>8515</Code><Text>Ngarinyman</Text></Value>
+<Value><Code>8516</Code><Text>Walmajarri</Text></Value>
+<Value><Code>8517</Code><Text>Wanyjirra</Text></Value>
+<Value><Code>8518</Code><Text>Warlmanpa</Text></Value>
+<Value><Code>8521</Code><Text>Warlpiri</Text></Value>
+<Value><Code>8522</Code><Text>Warumungu</Text></Value>
+<Value><Code>8599</Code><Text>Northern Desert Fringe Area Languages, nec</Text></Value>
+<Value><Code>8603</Code><Text>Alyawarr</Text></Value>
+<Value><Code>8606</Code><Text>Kaytetye</Text></Value>
+<Value><Code>8607</Code><Text>Antekerrepenh</Text></Value>
+<Value><Code>8611</Code><Text>Central Anmatyerr</Text></Value>
+<Value><Code>8612</Code><Text>Eastern Anmatyerr</Text></Value>
+<Value><Code>8619</Code><Text>Anmatyerr, nec</Text></Value>
+<Value><Code>8621</Code><Text>Eastern Arrernte</Text></Value>
+<Value><Code>8622</Code><Text>Western Arrarnta</Text></Value>
+<Value><Code>8629</Code><Text>Arrernte, nec</Text></Value>
+<Value><Code>8699</Code><Text>Arandic, nec</Text></Value>
+<Value><Code>8703</Code><Text>Antikarinya</Text></Value>
+<Value><Code>8704</Code><Text>Kartujarra</Text></Value>
+<Value><Code>8705</Code><Text>Kukatha</Text></Value>
+<Value><Code>8706</Code><Text>Kukatja</Text></Value>
+<Value><Code>8707</Code><Text>Luritja</Text></Value>
+<Value><Code>8708</Code><Text>Manyjilyjarra</Text></Value>
+<Value><Code>8711</Code><Text>Martu Wangka</Text></Value>
+<Value><Code>8712</Code><Text>Ngaanyatjarra</Text></Value>
+<Value><Code>8713</Code><Text>Pintupi</Text></Value>
+<Value><Code>8714</Code><Text>Pitjantjatjara</Text></Value>
+<Value><Code>8715</Code><Text>Wangkajunga</Text></Value>
+<Value><Code>8716</Code><Text>Wangkatha</Text></Value>
+<Value><Code>8717</Code><Text>Warnman</Text></Value>
+<Value><Code>8718</Code><Text>Yankunytjatjara</Text></Value>
+<Value><Code>8721</Code><Text>Yulparija</Text></Value>
+<Value><Code>8722</Code><Text>Tjupany</Text></Value>
+<Value><Code>8799</Code><Text>Western Desert Languages, nec</Text></Value>
+<Value><Code>8801</Code><Text>Bardi</Text></Value>
+<Value><Code>8802</Code><Text>Bunuba</Text></Value>
+<Value><Code>8803</Code><Text>Gooniyandi</Text></Value>
+<Value><Code>8804</Code><Text>Miriwoong</Text></Value>
+<Value><Code>8805</Code><Text>Ngarinyin</Text></Value>
+<Value><Code>8806</Code><Text>Nyikina</Text></Value>
+<Value><Code>8807</Code><Text>Worla</Text></Value>
+<Value><Code>8808</Code><Text>Worrorra</Text></Value>
+<Value><Code>8811</Code><Text>Wunambal</Text></Value>
+<Value><Code>8812</Code><Text>Yawuru</Text></Value>
+<Value><Code>8813</Code><Text>Gambera</Text></Value>
+<Value><Code>8814</Code><Text>Jawi</Text></Value>
+<Value><Code>8815</Code><Text>Kija</Text></Value>
+<Value><Code>8899</Code><Text>Kimberley Area Languages, nec</Text></Value>
+<Value><Code>8901</Code><Text>Adnymathanha</Text></Value>
+<Value><Code>8902</Code><Text>Arabana</Text></Value>
+<Value><Code>8903</Code><Text>Bandjalang</Text></Value>
+<Value><Code>8904</Code><Text>Banyjima</Text></Value>
+<Value><Code>8905</Code><Text>Batjala</Text></Value>
+<Value><Code>8906</Code><Text>Bidjara</Text></Value>
+<Value><Code>8907</Code><Text>Dhanggatti</Text></Value>
+<Value><Code>8908</Code><Text>Diyari</Text></Value>
+<Value><Code>8911</Code><Text>Gamilaraay</Text></Value>
+<Value><Code>8913</Code><Text>Garuwali</Text></Value>
+<Value><Code>8914</Code><Text>Githabul</Text></Value>
+<Value><Code>8915</Code><Text>Gumbaynggir</Text></Value>
+<Value><Code>8916</Code><Text>Kanai</Text></Value>
+<Value><Code>8917</Code><Text>Karajarri</Text></Value>
+<Value><Code>8918</Code><Text>Kariyarra</Text></Value>
+<Value><Code>8921</Code><Text>Kaurna</Text></Value>
+<Value><Code>8922</Code><Text>Kayardild</Text></Value>
+<Value><Code>8924</Code><Text>Kriol</Text></Value>
+<Value><Code>8925</Code><Text>Lardil</Text></Value>
+<Value><Code>8926</Code><Text>Mangala</Text></Value>
+<Value><Code>8927</Code><Text>Muruwari</Text></Value>
+<Value><Code>8928</Code><Text>Narungga</Text></Value>
+<Value><Code>8931</Code><Text>Ngarluma</Text></Value>
+<Value><Code>8932</Code><Text>Ngarrindjeri</Text></Value>
+<Value><Code>8933</Code><Text>Nyamal</Text></Value>
+<Value><Code>8934</Code><Text>Nyangumarta</Text></Value>
+<Value><Code>8935</Code><Text>Nyungar</Text></Value>
+<Value><Code>8936</Code><Text>Paakantyi</Text></Value>
+<Value><Code>8937</Code><Text>Palyku/Nyiyaparli</Text></Value>
+<Value><Code>8938</Code><Text>Wajarri</Text></Value>
+<Value><Code>8941</Code><Text>Wiradjuri</Text></Value>
+<Value><Code>8943</Code><Text>Yindjibarndi</Text></Value>
+<Value><Code>8944</Code><Text>Yinhawangka</Text></Value>
+<Value><Code>8945</Code><Text>Yorta Yorta</Text></Value>
+<Value><Code>8946</Code><Text>Baanbay</Text></Value>
+<Value><Code>8947</Code><Text>Badimaya</Text></Value>
+<Value><Code>8948</Code><Text>Barababaraba</Text></Value>
+<Value><Code>8951</Code><Text>Dadi Dadi</Text></Value>
+<Value><Code>8952</Code><Text>Dharawal</Text></Value>
+<Value><Code>8953</Code><Text>Djabwurrung</Text></Value>
+<Value><Code>8954</Code><Text>Gudjal</Text></Value>
+<Value><Code>8955</Code><Text>Keerray-Woorroong</Text></Value>
+<Value><Code>8956</Code><Text>Ladji Ladji</Text></Value>
+<Value><Code>8957</Code><Text>Mirning</Text></Value>
+<Value><Code>8958</Code><Text>Ngatjumaya</Text></Value>
+<Value><Code>8961</Code><Text>Waluwarra</Text></Value>
+<Value><Code>8962</Code><Text>Wangkangurru</Text></Value>
+<Value><Code>8963</Code><Text>Wargamay</Text></Value>
+<Value><Code>8964</Code><Text>Wergaia</Text></Value>
+<Value><Code>8965</Code><Text>Yugambeh</Text></Value>
+<Value><Code>8998</Code><Text>Aboriginal English, so described</Text></Value>
+<Value><Code>8999</Code><Text>Other Australian Indigenous Languages, nec</Text></Value>
+<Value><Code>9101</Code><Text>American Languages</Text></Value>
+<Value><Code>9201</Code><Text>Acholi</Text></Value>
+<Value><Code>9203</Code><Text>Akan</Text></Value>
+<Value><Code>9205</Code><Text>Mauritian Creole</Text></Value>
+<Value><Code>9206</Code><Text>Oromo</Text></Value>
+<Value><Code>9207</Code><Text>Shona</Text></Value>
+<Value><Code>9208</Code><Text>Somali</Text></Value>
+<Value><Code>9211</Code><Text>Swahili</Text></Value>
+<Value><Code>9212</Code><Text>Yoruba</Text></Value>
+<Value><Code>9213</Code><Text>Zulu</Text></Value>
+<Value><Code>9214</Code><Text>Amharic</Text></Value>
+<Value><Code>9215</Code><Text>Bemba</Text></Value>
+<Value><Code>9216</Code><Text>Dinka</Text></Value>
+<Value><Code>9217</Code><Text>Ewe</Text></Value>
+<Value><Code>9218</Code><Text>Ga</Text></Value>
+<Value><Code>9221</Code><Text>Harari</Text></Value>
+<Value><Code>9222</Code><Text>Hausa</Text></Value>
+<Value><Code>9223</Code><Text>Igbo</Text></Value>
+<Value><Code>9224</Code><Text>Kikuyu</Text></Value>
+<Value><Code>9225</Code><Text>Krio</Text></Value>
+<Value><Code>9226</Code><Text>Luganda</Text></Value>
+<Value><Code>9227</Code><Text>Luo</Text></Value>
+<Value><Code>9228</Code><Text>Ndebele</Text></Value>
+<Value><Code>9231</Code><Text>Nuer</Text></Value>
+<Value><Code>9232</Code><Text>Nyanja (Chichewa)</Text></Value>
+<Value><Code>9233</Code><Text>Shilluk</Text></Value>
+<Value><Code>9234</Code><Text>Tigre</Text></Value>
+<Value><Code>9235</Code><Text>Tigrinya</Text></Value>
+<Value><Code>9236</Code><Text>Tswana</Text></Value>
+<Value><Code>9237</Code><Text>Xhosa</Text></Value>
+<Value><Code>9238</Code><Text>Seychelles Creole</Text></Value>
+<Value><Code>9241</Code><Text>Anuak</Text></Value>
+<Value><Code>9242</Code><Text>Bari</Text></Value>
+<Value><Code>9243</Code><Text>Bassa</Text></Value>
+<Value><Code>9244</Code><Text>Dan (Gio-Dan)</Text></Value>
+<Value><Code>9245</Code><Text>Fulfulde</Text></Value>
+<Value><Code>9246</Code><Text>Kinyarwanda (Rwanda)</Text></Value>
+<Value><Code>9247</Code><Text>Kirundi (Rundi)</Text></Value>
+<Value><Code>9248</Code><Text>Kpelle</Text></Value>
+<Value><Code>9251</Code><Text>Krahn</Text></Value>
+<Value><Code>9252</Code><Text>Liberian (Liberian English)</Text></Value>
+<Value><Code>9253</Code><Text>Loma (Lorma)</Text></Value>
+<Value><Code>9254</Code><Text>Lumun (Kuku Lumun)</Text></Value>
+<Value><Code>9255</Code><Text>Madi</Text></Value>
+<Value><Code>9256</Code><Text>Mandinka</Text></Value>
+<Value><Code>9257</Code><Text>Mann</Text></Value>
+<Value><Code>9258</Code><Text>Moro (Nuba Moro)</Text></Value>
+<Value><Code>9261</Code><Text>Themne</Text></Value>
+<Value><Code>9262</Code><Text>Lingala</Text></Value>
+<Value><Code>9299</Code><Text>African Languages, nec</Text></Value>
+<Value><Code>9301</Code><Text>Fijian</Text></Value>
+<Value><Code>9302</Code><Text>Gilbertese</Text></Value>
+<Value><Code>9303</Code><Text>Maori (Cook Island)</Text></Value>
+<Value><Code>9304</Code><Text>Maori (New Zealand)</Text></Value>
+<Value><Code>9306</Code><Text>Nauruan</Text></Value>
+<Value><Code>9307</Code><Text>Niue</Text></Value>
+<Value><Code>9308</Code><Text>Samoan</Text></Value>
+<Value><Code>9311</Code><Text>Tongan</Text></Value>
+<Value><Code>9312</Code><Text>Rotuman</Text></Value>
+<Value><Code>9313</Code><Text>Tokelauan</Text></Value>
+<Value><Code>9314</Code><Text>Tuvaluan</Text></Value>
+<Value><Code>9315</Code><Text>Yapese</Text></Value>
+<Value><Code>9399</Code><Text>Pacific Austronesian Languages, nec</Text></Value>
+<Value><Code>9402</Code><Text>Bislama</Text></Value>
+<Value><Code>9403</Code><Text>Hawaiian English</Text></Value>
+<Value><Code>9404</Code><Text>Norf'k-Pitcairn</Text></Value>
+<Value><Code>9405</Code><Text>Solomon Islands Pijin</Text></Value>
+<Value><Code>9499</Code><Text>Oceanian Pidgins and Creoles, nec</Text></Value>
+<Value><Code>9502</Code><Text>Kiwai</Text></Value>
+<Value><Code>9503</Code><Text>Motu (HiriMotu)</Text></Value>
+<Value><Code>9504</Code><Text>Tok Pisin (Neomelanesian)</Text></Value>
+<Value><Code>9599</Code><Text>Papua New Guinea Languages, nec</Text></Value>
+<Value><Code>9601</Code><Text>Invented Languages</Text></Value>
+<Value><Code>9701</Code><Text>Auslan</Text></Value>
+<Value><Code>9702</Code><Text>Key Word Sign Australia</Text></Value>
+<Value><Code>9799</Code><Text>Sign Languages, nec</Text></Value>
+<Value><Code>0000</Code><Text>Inadequately Described</Text></Value>
+<Value><Code>0001</Code><Text>Non Verbal, so described</Text></Value>
+<Value><Code>0002</Code><Text>Not Stated</Text></Value>
+<Value><Code>0003</Code><Text>Swiss, so described</Text></Value>
+<Value><Code>0004</Code><Text>Cypriot, so described</Text></Value>
+<Value><Code>0005</Code><Text>Creole, nfd</Text></Value>
+<Value><Code>0006</Code><Text>French Creole, nfd</Text></Value>
+<Value><Code>0007</Code><Text>Spanish Creole, nfd</Text></Value>
+<Value><Code>0008</Code><Text>Portuguese Creole, nfd</Text></Value>
+<Value><Code>0009</Code><Text>Pidgin, nfd</Text></Value>
+<Value><Code>1000</Code><Text>Northern European Languages, nfd</Text></Value>
+<Value><Code>1100</Code><Text>Celtic, nfd</Text></Value>
+<Value><Code>1300</Code><Text>German and Related Languages, nfd</Text></Value>
+<Value><Code>1400</Code><Text>Dutch and Related Languages, nfd</Text></Value>
+<Value><Code>1500</Code><Text>Scandinavian, nfd</Text></Value>
+<Value><Code>1600</Code><Text>Finnish and Related Languages, nfd</Text></Value>
+<Value><Code>2000</Code><Text>Southern European Languages, nfd</Text></Value>
+<Value><Code>2300</Code><Text>Iberian Romance, nfd</Text></Value>
+<Value><Code>2900</Code><Text>Other Southern European Languages, nfd</Text></Value>
+<Value><Code>3000</Code><Text>Eastern European Languages, nfd</Text></Value>
+<Value><Code>3100</Code><Text>Baltic, nfd</Text></Value>
+<Value><Code>3400</Code><Text>East Slavic, nfd</Text></Value>
+<Value><Code>3500</Code><Text>South Slavic, nfd</Text></Value>
+<Value><Code>3600</Code><Text>West Slavic, nfd</Text></Value>
+<Value><Code>3900</Code><Text>Other Eastern European Languages, nfd</Text></Value>
+<Value><Code>4000</Code><Text>Southwest and Central Asian Languages, nfd</Text></Value>
+<Value><Code>4100</Code><Text>Iranic, nfd</Text></Value>
+<Value><Code>4200</Code><Text>Middle Eastern Semitic Languages, nfd</Text></Value>
+<Value><Code>4300</Code><Text>Turkic, nfd</Text></Value>
+<Value><Code>4900</Code><Text>Other Southwest and Central Asian Languages, nfd</Text></Value>
+<Value><Code>5000</Code><Text>Southern Asian Languages, nfd</Text></Value>
+<Value><Code>5100</Code><Text>Dravidian, nfd</Text></Value>
+<Value><Code>5200</Code><Text>Indo-Aryan, nfd</Text></Value>
+<Value><Code>6000</Code><Text>Southeast Asian Languages, nfd</Text></Value>
+<Value><Code>6100</Code><Text>Burmese and Related Languages, nfd</Text></Value>
+<Value><Code>6200</Code><Text>Hmong-Mien, nfd</Text></Value>
+<Value><Code>6300</Code><Text>Mon-Khmer, nfd</Text></Value>
+<Value><Code>6400</Code><Text>Tai, nfd</Text></Value>
+<Value><Code>6500</Code><Text>Southeast Asian Austronesian Languages, nfd</Text></Value>
+<Value><Code>7000</Code><Text>Eastern Asian Languages, nfd</Text></Value>
+<Value><Code>7100</Code><Text>Chinese, nfd</Text></Value>
+<Value><Code>7900</Code><Text>Other Eastern Asian Languages, nfd</Text></Value>
+<Value><Code>8000</Code><Text>Australian Indigenous Languages, nfd</Text></Value>
+<Value><Code>8100</Code><Text>Arnhem Land and Daly River Region Languages, nfd</Text></Value>
+<Value><Code>8170</Code><Text>Kunwinjkuan, nfd</Text></Value>
+<Value><Code>8180</Code><Text>Burarran, nfd</Text></Value>
+<Value><Code>8200</Code><Text>Yolngu Matha, nfd</Text></Value>
+<Value><Code>8210</Code><Text>Dhangu, nfd</Text></Value>
+<Value><Code>8220</Code><Text>Dhay'yi, nfd</Text></Value>
+<Value><Code>8230</Code><Text>Dhuwal, nfd</Text></Value>
+<Value><Code>8240</Code><Text>Dhuwala, nfd</Text></Value>
+<Value><Code>8250</Code><Text>Djinang, nfd</Text></Value>
+<Value><Code>8260</Code><Text>Djinba, nfd</Text></Value>
+<Value><Code>8270</Code><Text>Yakuy, nfd</Text></Value>
+<Value><Code>8300</Code><Text>Cape York Peninsula Languages, nfd</Text></Value>
+<Value><Code>8400</Code><Text>Torres Strait Island Languages, nfd</Text></Value>
+<Value><Code>8500</Code><Text>Northern Desert Fringe Area Languages, nfd</Text></Value>
+<Value><Code>8600</Code><Text>Arandic, nfd</Text></Value>
+<Value><Code>8610</Code><Text>Anmatyerr, nfd</Text></Value>
+<Value><Code>8620</Code><Text>Arrernte, nfd</Text></Value>
+<Value><Code>8700</Code><Text>Western Desert Languages, nfd</Text></Value>
+<Value><Code>8800</Code><Text>Kimberley Area Languages, nfd</Text></Value>
+<Value><Code>8900</Code><Text>Other Australian  Indigenous Languages, nfd</Text></Value>
+<Value><Code>9000</Code><Text>Other Languages, nfd</Text></Value>
+<Value><Code>9200</Code><Text>African Languages, nfd</Text></Value>
+<Value><Code>9300</Code><Text>Pacific Austronesian Languages, nfd</Text></Value>
+<Value><Code>9400</Code><Text>Oceanic Pidgins and Creoles, nfd</Text></Value>
+<Value><Code>9500</Code><Text>Papua New Guinea Languages,  nfd</Text></Value>
+<Value><Code>9700</Code><Text>Sign Languages, nfd</Text></Value>
+</Values>
+</CodeSet>
+<CodeSet>
+		<Intro>
+			<p>Reference: ACARA Data Standards Manual - Indigenous status</p>
+			<p>https://www.acara.edu.au/reporting/data-standards-manual-student-background-characteristics</p>
+		</Intro>
+		<ID>Indigenous Status</ID>
+		<Values>
+			<Value>
+				<Code>1</Code>
+				<Text>Aboriginal but not Torres Strait Islander Origin</Text>
+			</Value>
+			<Value>
+				<Code>2</Code>
+				<Text>Torres Strait Islander but not Aboriginal Origin</Text>
+			</Value>
+			<Value>
+				<Code>3</Code>
+				<Text>Both Torres Strait and Aboriginal Origin</Text>
+			</Value>
+			<Value>
+				<Code>4</Code>
+				<Text>Neither Aboriginal or Torres Strait Origin</Text>
+			</Value>
+			<Value>
+				<Code>9</Code>
+				<Text>Not Stated/Unknown</Text>
+			</Value>
+			 
+		</Values>
+	</CodeSet>
+<CodeSet>
+		<Intro>
+			<p>From http://www.border.gov.au/ Australian Government - Department of Immigration and Border Protection: Updated from Source Data on 28 February, 2017 - Refer to: http://www.border.gov.au/Trav/Visa-1/Visa-listing</p>
+		</Intro>
+		<ID>Visa Sub Class</ID>
+     <Values><Value><Code>10</Code><Text>Bridging Visa A - BVA</Text></Value>
+<Value><Code>20</Code><Text>Bridging Visa B - BVB</Text></Value>
+<Value><Code>30</Code><Text>Bridging Visa C - BVC</Text></Value>
+<Value><Code>40</Code><Text>Bridging Visa (Prospective Applicant) - BVD</Text></Value>
+<Value><Code>41</Code><Text>Bridging Visa (Non-Applicant) - BVD</Text></Value>
+<Value><Code>51</Code><Text>Bridging Visa - BVE</Text></Value>
+<Value><Code>186</Code><Text>Employer Nomination Scheme</Text></Value>
+<Value><Code>187</Code><Text>Regional Sponsor Migration Scheme</Text></Value>
+<Value><Code>188</Code><Text>Business Innovation and Investment (provisional)</Text></Value>
+<Value><Code>189</Code><Text>Skilled Independent visa </Text></Value>
+<Value><Code>190</Code><Text>Skilled Nominated</Text></Value>
+<Value><Code>400</Code><Text>Temporary Work (short stay)</Text></Value>
+<Value><Code>401</Code><Text>Temporary Work (long stay)</Text></Value>
+<Value><Code>402</Code><Text>Training and Research</Text></Value>
+<Value><Code>403</Code><Text>Temporary Work (International Relations)</Text></Value>
+<Value><Code>405</Code><Text>Investment Retirement</Text></Value>
+<Value><Code>407</Code><Text>Training visa</Text></Value>
+<Value><Code>408</Code><Text>Temporary Activity visa</Text></Value>
+<Value><Code>410</Code><Text>Retirement</Text></Value>
+<Value><Code>416</Code><Text>Special program visa for the Seasonal Worker Program</Text></Value>
+<Value><Code>417</Code><Text>Working holiday</Text></Value>
+<Value><Code>444</Code><Text>Special Category - New Zealand Citizen</Text></Value>
+<Value><Code>459</Code><Text>Sponsored Business Visitor (short stay) (repealed)</Text></Value>
+<Value><Code>461</Code><Text>New Zealand Citizen Family Relationship (Temporary)</Text></Value>
+<Value><Code>462</Code><Text>Work and Holiday</Text></Value>
+<Value><Code>488</Code><Text>Superyacht Crew</Text></Value>
+<Value><Code>489</Code><Text>Skilled Regional (provisional)</Text></Value>
+<Value><Code>500</Code><Text>Student visa</Text></Value>
+<Value><Code>590</Code><Text>Student Guardian visa</Text></Value>
+<Value><Code>600</Code><Text>Visitor</Text></Value>
+<Value><Code>601</Code><Text>Electronic Travel Authority</Text></Value>
+<Value><Code>602</Code><Text>Medical Treatment</Text></Value>
+<Value><Code>651</Code><Text>eVisitor Visa</Text></Value>
+<Value><Code>675</Code><Text>Medical treatment - short stay (repealed)</Text></Value>
+<Value><Code>676</Code><Text>Tourist - short stay (repealed)</Text></Value>
+<Value><Code>679</Code><Text>Sponsored Family Visitor (short stay) (repealed)</Text></Value>
+<Value><Code>685</Code><Text>Medical treatment - Long Stay (repealed)</Text></Value>
+<Value><Code>771</Code><Text>Transit</Text></Value>
+<Value><Code>888</Code><Text>Business Innovation and Investment (permanent)</Text></Value>
+<Value><Code>942</Code><Text>Crew Travel Authority</Text></Value>
+<Value><Code>956</Code><Text>Electronic Travel Authority - Business - Long (repealed)</Text></Value>
+<Value><Code>976</Code><Text>Electronic Travel Authority - Visitor (repealed)</Text></Value>
+<Value><Code>977</Code><Text>Electronic Travel Authority - Business - Short (repealed)</Text></Value>
+<Value><Code>988</Code><Text>Maritime Crew</Text></Value>
+<Value><Code>42</Code><Text>Bridging Visa Class A (No longer issued)</Text></Value>
+<Value><Code>50</Code><Text>Bridging Visa (General) (No longer issued)</Text></Value>
+<Value><Code>60</Code><Text>Bridging Visa F (No longer issued)</Text></Value>
+<Value><Code>70</Code><Text>Removal Pending Bridging Visa (No longer issued)</Text></Value>
+<Value><Code>100</Code><Text>Spouse (No longer issued)</Text></Value>
+<Value><Code>101</Code><Text>Child (No longer issued)</Text></Value>
+<Value><Code>102</Code><Text>Adoption (No longer issued)</Text></Value>
+<Value><Code>103</Code><Text>Parent (No longer issued)</Text></Value>
+<Value><Code>104</Code><Text>Preferential family (No longer issued)</Text></Value>
+<Value><Code>105</Code><Text>Skilled - Australian Linked (No longer issued)</Text></Value>
+<Value><Code>106</Code><Text>Regional-linked (No longer issued)</Text></Value>
+<Value><Code>110</Code><Text>Interdependency (No longer issued)</Text></Value>
+<Value><Code>113</Code><Text>Aged Parent (No longer issued)</Text></Value>
+<Value><Code>114</Code><Text>Aged Dependent Relative (No longer issued)</Text></Value>
+<Value><Code>115</Code><Text>Remaining Relative (No longer issued)</Text></Value>
+<Value><Code>116</Code><Text>Carer (No longer issued)</Text></Value>
+<Value><Code>117</Code><Text>Orphan Relative (No longer issued)</Text></Value>
+<Value><Code>118</Code><Text>Designated Parent (No longer issued)</Text></Value>
+<Value><Code>119</Code><Text>Regional Sponsored Migration Scheme (No longer issued)</Text></Value>
+<Value><Code>120</Code><Text>Labour Agreement (No longer issued)</Text></Value>
+<Value><Code>121</Code><Text>Employer nomination (No longer issued)</Text></Value>
+<Value><Code>124</Code><Text>Distinguished talent (No longer issued)</Text></Value>
+<Value><Code>125</Code><Text>Distinguished talent and special service - independent (No longer issued)</Text></Value>
+<Value><Code>126</Code><Text>Independent (No longer issued)</Text></Value>
+<Value><Code>127</Code><Text>Business Owner (No longer issued)</Text></Value>
+<Value><Code>128</Code><Text>Senior Executive (No longer issued)</Text></Value>
+<Value><Code>129</Code><Text>State/Territory sponsored business owner  (No longer issued)</Text></Value>
+<Value><Code>130</Code><Text>State/Territory Sponsored Senior Executive  (No longer issued)</Text></Value>
+<Value><Code>131</Code><Text>Investment-linked (No longer issued)</Text></Value>
+<Value><Code>132</Code><Text>Business Talent (No longer issued)</Text></Value>
+<Value><Code>134</Code><Text>Skill Matching (No longer issued)</Text></Value>
+<Value><Code>135</Code><Text>State/Territory nominated independent (No longer issued)</Text></Value>
+<Value><Code>136</Code><Text>Skilled - Independent (No longer issued)</Text></Value>
+<Value><Code>137</Code><Text>Skilled - State/Territory nominated independent (No longer issued)</Text></Value>
+<Value><Code>138</Code><Text>Skilled - Australian sponsored (No longer issued)</Text></Value>
+<Value><Code>139</Code><Text>Skilled Designated Area-sponsored (No longer issued)</Text></Value>
+<Value><Code>143</Code><Text>Contributory Parent (No longer issued)</Text></Value>
+<Value><Code>150</Code><Text>Former citizen (No longer issued)</Text></Value>
+<Value><Code>151</Code><Text>Former resident (No longer issued)</Text></Value>
+<Value><Code>152</Code><Text>Family of NZ citizen (No longer issued)</Text></Value>
+<Value><Code>154</Code><Text>Resident Return (No longer issued)</Text></Value>
+<Value><Code>155</Code><Text>Five year resident return (No longer issued)</Text></Value>
+<Value><Code>156</Code><Text>One Year Resident Return (No longer Issued)</Text></Value>
+<Value><Code>157</Code><Text>Three month resident return (No longer issued)</Text></Value>
+<Value><Code>159</Code><Text>Provisional resident return (No longer issued)</Text></Value>
+<Value><Code>160</Code><Text>Business Owner (Provisional) (No longer issued)</Text></Value>
+<Value><Code>161</Code><Text>Senior Executive (Provisional) (No longer issued)</Text></Value>
+<Value><Code>162</Code><Text>Investor (Provisional) (No longer issued)</Text></Value>
+<Value><Code>163</Code><Text>State/Territory Sponsored Business Owner (Prov.) (No longer issued)</Text></Value>
+<Value><Code>164</Code><Text>State/Territory Sponsored Senior Executive (Prov.) (No longer issued)</Text></Value>
+<Value><Code>165</Code><Text>State/Territory Sponsored Investor (Provisional) (No longer issued)</Text></Value>
+<Value><Code>173</Code><Text>Contributory Parent (Temporary) (No longer issued)</Text></Value>
+<Value><Code>175</Code><Text>Skilled - independent (No longer issued)</Text></Value>
+<Value><Code>176</Code><Text>Skilled - sponsored (No longer issued)</Text></Value>
+<Value><Code>200</Code><Text>Refugee (No longer issued)</Text></Value>
+<Value><Code>201</Code><Text>In-country special humanitarian (No longer issued)</Text></Value>
+<Value><Code>202</Code><Text>Global special humanitarian (No longer issued)</Text></Value>
+<Value><Code>203</Code><Text>Emergency rescue (No longer issued)</Text></Value>
+<Value><Code>204</Code><Text>Woman at risk (No longer issued)</Text></Value>
+<Value><Code>205</Code><Text>Camp clearance (No longer issued)</Text></Value>
+<Value><Code>208</Code><Text>East Timorese in Portugal, Macau or Mozambique (No longer issued)</Text></Value>
+<Value><Code>209</Code><Text>Citizen of former Yugoslavia - displaced person (No longer issued)</Text></Value>
+<Value><Code>210</Code><Text>Minorities of former USSR (No longer issued)</Text></Value>
+<Value><Code>211</Code><Text>Burmese in Burma (No longer issued)</Text></Value>
+<Value><Code>212</Code><Text>Sudanese (No longer issued)</Text></Value>
+<Value><Code>213</Code><Text>Burmese in Thailand (No longer issued)</Text></Value>
+<Value><Code>214</Code><Text>Cambodian (No longer issued)</Text></Value>
+<Value><Code>215</Code><Text>Sri Lankan - special assistance (No longer issued)</Text></Value>
+<Value><Code>216</Code><Text>Ahmadi (No longer issued)</Text></Value>
+<Value><Code>217</Code><Text>Vietnamese (No longer issued)</Text></Value>
+<Value><Code>300</Code><Text>Prospective marriage (No longer issued)</Text></Value>
+<Value><Code>302</Code><Text>Emergency (Permanent Visa Applicant) (No longer issued)</Text></Value>
+<Value><Code>303</Code><Text>Emergency (Temporary Visa Applicant) (No longer issued)</Text></Value>
+<Value><Code>309</Code><Text>Spouse (provisional) (No longer issued)</Text></Value>
+<Value><Code>310</Code><Text>Interdependency (provisional) (No longer issued)</Text></Value>
+<Value><Code>406</Code><Text>Government Agreement (No longer issued)</Text></Value>
+<Value><Code>411</Code><Text>Exchange (No longer issued)</Text></Value>
+<Value><Code>412</Code><Text>Independent Executive (No longer issued)</Text></Value>
+<Value><Code>413</Code><Text>Business Executive (No longer issued)</Text></Value>
+<Value><Code>414</Code><Text>Business Specialist (No longer issued)</Text></Value>
+<Value><Code>415</Code><Text>Foreign government agency (No longer issued)</Text></Value>
+<Value><Code>418</Code><Text>Educational (No longer issued)</Text></Value>
+<Value><Code>419</Code><Text>Visiting academic (No longer issued)</Text></Value>
+<Value><Code>420</Code><Text>Entertainment (No longer issued)</Text></Value>
+<Value><Code>421</Code><Text>Sport (No longer issued)</Text></Value>
+<Value><Code>422</Code><Text>Medical practitioner (No longer issued)</Text></Value>
+<Value><Code>423</Code><Text>Media and film staff (No longer issued)</Text></Value>
+<Value><Code>424</Code><Text>Public lecturer (No longer issued)</Text></Value>
+<Value><Code>425</Code><Text>Family relationship (No longer issued)</Text></Value>
+<Value><Code>426</Code><Text>Domestic worker - diplomatic or consular (No longer issued)</Text></Value>
+<Value><Code>427</Code><Text>Domestic worker - executive (No longer issued)</Text></Value>
+<Value><Code>428</Code><Text>Religious worker (No longer issued)</Text></Value>
+<Value><Code>430</Code><Text>Supported dependant (No longer issued)</Text></Value>
+<Value><Code>432</Code><Text>Expatriate (No longer issued)</Text></Value>
+<Value><Code>435</Code><Text>Sri Lankan (No longer issued)</Text></Value>
+<Value><Code>442</Code><Text>Occupational Trainee (No longer issued)</Text></Value>
+<Value><Code>443</Code><Text>Citizens of former Yugoslavia (No longer issued)</Text></Value>
+<Value><Code>445</Code><Text>Dependent Child (No longer issued)</Text></Value>
+<Value><Code>446</Code><Text>Confirmatory (Temporary) (No longer issued)</Text></Value>
+<Value><Code>447</Code><Text>Secondary Movement Offshore Entry (Temporary) (No longer issued)</Text></Value>
+<Value><Code>448</Code><Text>Kosovar Safe Haven (No longer issued)</Text></Value>
+<Value><Code>449</Code><Text>Humanitarian Stay (Temporary) (No longer issued)</Text></Value>
+<Value><Code>450</Code><Text>Resolution of Status - Family member (Temporary) (No longer issued)</Text></Value>
+<Value><Code>451</Code><Text>Secondary Movement Relocation (Temporary) (No longer issued)</Text></Value>
+<Value><Code>456</Code><Text>Business - Short Stay (No longer issued)</Text></Value>
+<Value><Code>457</Code><Text>Business - long stay (No longer issued)</Text></Value>
+<Value><Code>470</Code><Text>Professional Development (No longer issued)</Text></Value>
+<Value><Code>471</Code><Text>Trade Skills Training (No longer issued)</Text></Value>
+<Value><Code>475</Code><Text>Skilled Regional Sponsored (No longer issued)</Text></Value>
+<Value><Code>476</Code><Text>Skilled - Recognised Graduate (No longer issued)</Text></Value>
+<Value><Code>485</Code><Text>Skilled - Graduate (No longer issued)</Text></Value>
+<Value><Code>487</Code><Text>Skilled - Regional Sponsored (No longer issued)</Text></Value>
+<Value><Code>495</Code><Text>Skilled Independent Regional (Temporary) (No longer issued)</Text></Value>
+<Value><Code>496</Code><Text>Skilled - Designated Area Sponsored (Provisional) (No longer issued)</Text></Value>
+<Value><Code>497</Code><Text>Graduate - Skilled (No longer issued)</Text></Value>
+<Value><Code>499</Code><Text>Olympic (Support) (No longer issued)</Text></Value>
+<Value><Code>560</Code><Text>Student (No longer issued)</Text></Value>
+<Value><Code>562</Code><Text>Iranian Postgraduate Student (No longer issued)</Text></Value>
+<Value><Code>563</Code><Text>Iranian Postgraduate Student Dependent (No longer issued)</Text></Value>
+<Value><Code>570</Code><Text>Student - ELICOS (No longer issued)</Text></Value>
+<Value><Code>571</Code><Text>Student - Schools (No longer issued)</Text></Value>
+<Value><Code>572</Code><Text>Student - VET (No longer issued)</Text></Value>
+<Value><Code>573</Code><Text>Student - Higher Education (No longer issued)</Text></Value>
+<Value><Code>574</Code><Text>Student - Masters &amp; Doctorate (No longer issued)</Text></Value>
+<Value><Code>575</Code><Text>Student - Non-Award Foundation (No longer issued)</Text></Value>
+<Value><Code>576</Code><Text>Student - AusAID &amp; Defence (No longer issued)</Text></Value>
+<Value><Code>580</Code><Text>Student Guardian Visa (No longer issued)</Text></Value>
+<Value><Code>686</Code><Text>Tourist - Long Stay (No longer issued)</Text></Value>
+<Value><Code>695</Code><Text>Temporary Provisional - Pending return (No longer issued)</Text></Value>
+<Value><Code>773</Code><Text>Border (No longer issued)</Text></Value>
+<Value><Code>785</Code><Text>Temporary Protection (No longer issued)</Text></Value>
+<Value><Code>786</Code><Text>Temporary (Humanitarian Concern) (No longer issued)</Text></Value>
+<Value><Code>800</Code><Text>Territorial Asylum (No longer issued)</Text></Value>
+<Value><Code>801</Code><Text>Spouse (No longer issued)</Text></Value>
+<Value><Code>802</Code><Text>Child (No longer issued)</Text></Value>
+<Value><Code>804</Code><Text>Aged Parent (No longer issued)</Text></Value>
+<Value><Code>805</Code><Text>Skilled (No longer issued)</Text></Value>
+<Value><Code>806</Code><Text>Family (No longer issued)</Text></Value>
+<Value><Code>808</Code><Text>Confirmatory Residence (No longer issued)</Text></Value>
+<Value><Code>814</Code><Text>Interdependency (No longer issued)</Text></Value>
+<Value><Code>819</Code><Text>Aged Parent (No longer issued)</Text></Value>
+<Value><Code>820</Code><Text>Spouse (No longer issued)</Text></Value>
+<Value><Code>826</Code><Text>Interdependency (No longer issued)</Text></Value>
+<Value><Code>828</Code><Text>TEP Processing (No longer issued)</Text></Value>
+<Value><Code>831</Code><Text>Prospective marriage spouse (No longer issued)</Text></Value>
+<Value><Code>832</Code><Text>Close Ties (No longer issued)</Text></Value>
+<Value><Code>833</Code><Text>Certain unlawful non-citizens (No longer issued)</Text></Value>
+<Value><Code>834</Code><Text>Permanent resident of Norfolk Island (No longer issued)</Text></Value>
+<Value><Code>835</Code><Text>Remaining Relative (No longer issued)</Text></Value>
+<Value><Code>836</Code><Text>Carer (No longer issued)</Text></Value>
+<Value><Code>837</Code><Text>Orphan Relative (No longer issued)</Text></Value>
+<Value><Code>838</Code><Text>Aged Dependant Relative (No longer issued)</Text></Value>
+<Value><Code>840</Code><Text>Business Owner (No longer issued)</Text></Value>
+<Value><Code>841</Code><Text>Senior Executive (No longer issued)</Text></Value>
+<Value><Code>842</Code><Text>State/Territory sponsored business owner (No longer issued)</Text></Value>
+<Value><Code>843</Code><Text>State/Territory sponsored senior executive (No longer issued)</Text></Value>
+<Value><Code>844</Code><Text>Investment-linked (No longer issued)</Text></Value>
+<Value><Code>845</Code><Text>Established Business in Australia (No longer issued)</Text></Value>
+<Value><Code>846</Code><Text>State/Territory Sponsored Regional Established Business (No longer issued)</Text></Value>
+<Value><Code>850</Code><Text>Resolution Status (Temporary) (No longer issued)</Text></Value>
+<Value><Code>851</Code><Text>Resolution of Status (No longer issued)</Text></Value>
+<Value><Code>852</Code><Text>Witness Protection (No longer issued)</Text></Value>
+<Value><Code>855</Code><Text>Labour Agreement (No longer issued)</Text></Value>
+<Value><Code>856</Code><Text>Employer Nomination Scheme (No longer issued)</Text></Value>
+<Value><Code>857</Code><Text>Regional Sponsored Migration Scheme (No longer issued)</Text></Value>
+<Value><Code>858</Code><Text>Distinguished Talent (No longer issued)</Text></Value>
+<Value><Code>859</Code><Text>Designated Parent (No longer issued)</Text></Value>
+<Value><Code>861</Code><Text>Skilled - Onshore Independent New Zealand Citizen (No longer issued)</Text></Value>
+<Value><Code>862</Code><Text>Skilled Australian-sponsored New Zealand Citizen (No longer issued)</Text></Value>
+<Value><Code>863</Code><Text>Skilled Designated Area-sponsored New Zealand Citizen (No longer issued)</Text></Value>
+<Value><Code>864</Code><Text>Contributory Aged Parent (Residence) (No longer issued)</Text></Value>
+<Value><Code>866</Code><Text>Protection (No longer issued)</Text></Value>
+<Value><Code>880</Code><Text>Skilled - Independent Overseas Student (No longer issued)</Text></Value>
+<Value><Code>881</Code><Text>Skilled - Australian-sponsored Overseas Student (No longer issued)</Text></Value>
+<Value><Code>882</Code><Text>Skilled - Designated Area-sponsored Overseas Student (No longer issued)</Text></Value>
+<Value><Code>883</Code><Text>Skilled Designated Area Sponsored (Residence) (No longer issued)</Text></Value>
+<Value><Code>884</Code><Text>Contributory Aged Parent (Temporary) (No longer issued)</Text></Value>
+<Value><Code>885</Code><Text>Skilled - Independent (No longer issued)</Text></Value>
+<Value><Code>886</Code><Text>Skilled - Sponsored (No longer issued)</Text></Value>
+<Value><Code>887</Code><Text>Skilled - Regional (No longer issued)</Text></Value>
+<Value><Code>890</Code><Text>Business Owner (No longer issued)</Text></Value>
+<Value><Code>891</Code><Text>Investor (No longer issued)</Text></Value>
+<Value><Code>892</Code><Text>State/Territory sponsored business owner (No longer issued)</Text></Value>
+<Value><Code>893</Code><Text>State/Territory sponsored senior executive (No longer issued)</Text></Value>
+<Value><Code>944</Code><Text>APEC Travel Authority (No longer issued)</Text></Value>
+<Value><Code>995</Code><Text>Diplomatic (Temporary) (No longer issued)</Text></Value>
+<Value><Code>998</Code><Text>Declaratory (No longer issued)</Text></Value>
+     	
+     </Values>
+ </CodeSet>
+<CodeSet>
+		<Intro>
+			<p>Reference: ACARA Data Standards Manual - Parental occupation group</p>
+			<p>https://www.acara.edu.au/reporting/data-standards-manual-student-background-characteristics</p>
+		</Intro>
+		<ID>Employment Type</ID>
+		<Values>
+			<Value>
+				<Code>1</Code>
+				<Text>Senior management in large business organisation, government administration and defence and qualified professionals</Text>
+			</Value>
+			<Value>
+				<Code>2</Code>
+				<Text>Other business managers, arts/media/sportspersons and associate professionals</Text>
+			</Value>
+			<Value>
+				<Code>3</Code>
+				<Text>Tradesmen/women, clerks and skilled office, sales and service staff</Text>
+			</Value>
+			<Value>
+				<Code>4</Code>
+				<Text>Machine operators, hospitality staff, assistants, labourers and related workers</Text>
+			</Value>
+			<Value>
+				<Code>8</Code>
+				<Text>Out of employed work for 12 months or more (If less use previous occupational group)</Text>
+			</Value>
+			<Value>
+				<Code>9</Code>
+				<Text>Unknown</Text>
+			</Value>
+			 
+		</Values>
+	</CodeSet>
+<CodeSet>
+		<Intro>
+			<p>
+				<p>Reference: ACARA Data Standards Manual  - Parental school education</p>
+				<p>https://www.acara.edu.au/reporting/data-standards-manual-student-background-characteristics</p>
+			</p>
+		</Intro>
+		<ID>School Education Level Type</ID>
+		<Values>
+			<Value>
+				<Code>0</Code>
+				<Text>Not stated/Unknown</Text>
+			</Value>
+			<Value>
+				<Code>1</Code>
+				<Text>Year 9 or equivalent or below</Text>
+			</Value>
+			<Value>
+				<Code>2</Code>
+				<Text>Year 10 or equivalent</Text>
+			</Value>
+			<Value>
+				<Code>3</Code>
+				<Text>Year 11 or equivalent</Text>
+			</Value>
+			<Value>
+				<Code>4</Code>
+				<Text>Year 12 or equivalent</Text>
+			</Value>
+			 
+		</Values>
+	</CodeSet>
+<CodeSet>
+		<Intro>
+			<p>
+				<p>Reference: ACARA Data Standards Manual  - Parental non-school education</p>
+				<p>https://www.acara.edu.au/reporting/data-standards-manual-student-background-characteristics</p>
+			</p>
+		</Intro>
+		<ID>Non-School Education</ID>
+		<Values>
+			<Value>
+				<Code>0</Code>
+				<Text>Not stated/Unknown</Text>
+			</Value>
+			<Value>
+				<Code>5</Code>
+				<Text>Certificate I to IV (including trade certificate)</Text>
+			</Value>
+			<Value>
+				<Code>6</Code>
+				<Text>Advanced diploma/Diploma</Text>
+			</Value>
+			<Value>
+				<Code>7</Code>
+				<Text>Bachelor degree or above</Text>
+			</Value>
+			<Value>
+				<Code>8</Code>
+				<Text>No non-school qualification</Text>
+			</Value>
+			 
+		</Values>
+	</CodeSet>
+<CodeSet>
+		<Intro>
+			<p>Acceptable Values for Enrolled Full-fee Paying Overseas Student (FFPOS) Status.</p>
+			<p>Source Data: NSSC Data Collection Manual 2012</p>
+		</Intro>
+		<ID>FFPOS Status Code</ID>
+		<Values>
+			<Value>
+				<Code>1</Code>
+				<Text>FFPOS</Text>
+			</Value>
+			<Value>
+				<Code>2</Code>
+				<Text>Non-FFPOS</Text>
+			</Value>
+			<Value>
+				<Code>9</Code>
+				<Text>Not stated/Unknown</Text>
+			</Value>
+			 
+		</Values>
+	</CodeSet>
+<CodeSet>
+		<Intro>
+			<p>Reference:ACARA Data Standards Manual - Technical Specs - Sex</p>
+			<p>https://www.acara.edu.au/reporting/data-standards-manual-student-background-characteristics</p>
+		</Intro>
+		<ID>Sex Code</ID>
+		<Values>
+			<Value>
+				<Code>1</Code>
+				<Text>Male</Text>
+			</Value>
+			<Value>
+				<Code>2</Code>
+				<Text>Female</Text>
+			</Value>
+			<Value>
+				<Code>3</Code>
+				<Text>Intersex or indeterminate</Text>
+			</Value>
+			<Value>
+				<Code>9</Code>
+				<Text>Not Stated/Inadequately Described</Text>
+			</Value>
+		 
+		</Values>
+	</CodeSet>
+<CodeSet>
+		<Intro>
+			<p>MaritalStatus - AIHW</p>
+			<p>http://meteor.aihw.gov.au/content/index.phtml/itemId/291045</p>
+			<p>From Meteor - Australian Institute of Health and Welfare</p>
+		</Intro>
+		<ID>Marital Status AIHW</ID>
+		<Values>
+			<Value>
+				<Code>1</Code>
+				<Text>Never Married</Text>
+			</Value>
+			<Value>
+				<Code>2</Code>
+				<Text>Widowed</Text>
+			</Value>
+			<Value>
+				<Code>3</Code>
+				<Text>Divorced</Text>
+			</Value>
+			<Value>
+				<Code>4</Code>
+				<Text>Separated</Text>
+			</Value>
+			<Value>
+				<Code>5</Code>
+				<Text>Married (registered and de facto)</Text>
+			</Value>
+			<Value>
+				<Code>6</Code>
+				<Text>Not stated/inadequately described</Text>
+			</Value>
+		 
+		</Values>
+	</CodeSet>
+ 
+    <!-- SIF defined code sets ... -->
+	<CodeSet>
+		<Intro>
+			<p/>
+		</Intro>
+		<ID>Email Type</ID>
+		<Values>
+			<Value>
+				<Code>01</Code>
+				<Text>Primary</Text>
+			</Value>
+			<Value>
+				<Code>02</Code>
+				<Text>Alternate 1</Text>
+			</Value>
+			<Value>
+				<Code>03</Code>
+				<Text>Alternate 2</Text>
+			</Value>
+			<Value>
+				<Code>04</Code>
+				<Text>Alternate 3</Text>
+			</Value>
+			<Value>
+				<Code>05</Code>
+				<Text>Alternate 4</Text>
+			</Value>
+			<Value>
+				<Code>06</Code>
+				<Text>Work</Text>
+			</Value>
+			<Value>
+				<Code>07</Code>
+				<Text>Personal</Text>
+			</Value>
+			 
+		</Values>
+	</CodeSet>
+<CodeSet>
+		<Intro>
+			<p/>
+		</Intro>
+		<ID>Birthdate Verification</ID>
+		<Values>
+			<Value>
+				<Code>1004</Code>
+				<Text>Birth certificate</Text>
+			</Value>
+			<Value>
+				<Code>1006</Code>
+				<Text>Hospital certificate</Text>
+			</Value>
+			<Value>
+				<Code>1008</Code>
+				<Text>Passport</Text>
+			</Value>
+			<Value>
+				<Code>1009</Code>
+				<Text>Physician's certificate</Text>
+			</Value>
+			<Value>
+				<Code>1010</Code>
+				<Text>Previously verified school records</Text>
+			</Value>
+			<Value>
+				<Code>1011</Code>
+				<Text>State-issued ID</Text>
+			</Value>
+			<Value>
+				<Code>1012</Code>
+				<Text>Driver's license</Text>
+			</Value>
+			<Value>
+				<Code>1013</Code>
+				<Text>Immigration document/visa</Text>
+			</Value>
+			<Value>
+				<Code>3423</Code>
+				<Text>Other official document</Text>
+			</Value>
+			<Value>
+				<Code>3424</Code>
+				<Text>Other non-official document</Text>
+			</Value>
+			<Value>
+				<Code>9999</Code>
+				<Text>Other</Text>
+			</Value>
+			<Value>
+				<Code>N</Code>
+				<Text>Birthdate NOT Verified</Text>
+			</Value>
+			<Value>
+				<Code>Y</Code>
+				<Text>Documentation Sighted, type not recorded</Text>
+			</Value>
+		 
+		</Values>
+	</CodeSet>
+<CodeSet>
+		<Intro>
+			<p/>
+		</Intro>
+		<ID>Australian Citizenship Status</ID>
+		<Values>
+			<Value>
+				<Code>1</Code>
+				<Text>Australian Citizen</Text>
+			</Value>
+			<Value>
+				<Code>2</Code>
+				<Text>New Zealand Citizen</Text>
+			</Value>
+			<Value>
+				<Code>3</Code>
+				<Text>Permanent Resident</Text>
+			</Value>
+			<Value>
+				<Code>4</Code>
+				<Text>Temporary Entry Permit</Text>
+			</Value>
+			<Value>
+				<Code>5</Code>
+				<Text>Other Overseas</Text>
+			</Value>
+			<Value>
+				<Code>8</Code>
+				<Text>Permanent Humanitarian Visa</Text>
+			</Value>
+			<Value>
+				<Code>X</Code>
+				<Text>Not Provided</Text>
+			</Value>
+			 
+		</Values>
+	</CodeSet>
+<CodeSet>
+		<Intro>
+			<p/>
+		</Intro>
+		<ID>English Proficiency</ID>
+		<Values>
+			<Value>
+				<Code>0</Code>
+				<Text>Not Stated/Inadequately described</Text>
+			</Value>
+			<Value>
+				<Code>1</Code>
+				<Text>Very well</Text>
+			</Value>
+			<Value>
+				<Code>2</Code>
+				<Text>Well</Text>
+			</Value>
+			<Value>
+				<Code>3</Code>
+				<Text>Not well</Text>
+			</Value>
+			<Value>
+				<Code>4</Code>
+				<Text>Not at all</Text>
+			</Value>
+			<Value>
+				<Code>9</Code>
+				<Text>Not Applicable - English is 'first language spoken' and do not 'speak a language other than English at home'.</Text>
+			</Value>
+			 
+		</Values>
+	</CodeSet>
+<CodeSet>
+		<Intro>
+			<p/>
+		</Intro>
+		<ID>Language Type</ID>
+		<Values>
+			<Value>
+				<Code>1</Code>
+				<Text>Main Language Spoken at Home</Text>
+			</Value>
+			<Value>
+				<Code>2</Code>
+				<Text>Main Language Other Than English Spoken at Home</Text>
+			</Value>
+			<Value>
+				<Code>3</Code>
+				<Text>First Language Spoken</Text>
+			</Value>
+			<Value>
+				<Code>4</Code>
+				<Text>Language Spoken at Home</Text>
+			</Value>
+			<Value>
+				<Code>5</Code>
+				<Text>Language of Greatest Competency</Text>
+			</Value>
+			<Value>
+				<Code>6</Code>
+				<Text>Preferred Language</Text>
+			</Value>
+			<Value>
+				<Code>9</Code>
+				<Text>Other</Text>
+			</Value>
+			 
+		</Values>
+	</CodeSet>
+<CodeSet>
+		<Intro>
+			<p/>
+		</Intro>
+		<ID>Dwelling Arrangement</ID>
+		<Values>
+			<Value>
+				<Code>1669</Code>
+				<Text>Boarding house</Text>
+			</Value>
+			<Value>
+				<Code>1670</Code>
+				<Text>Cooperative house</Text>
+			</Value>
+			<Value>
+				<Code>1671</Code>
+				<Text>Crisis shelter</Text>
+			</Value>
+			<Value>
+				<Code>1672</Code>
+				<Text>Disaster shelter</Text>
+			</Value>
+			<Value>
+				<Code>1673</Code>
+				<Text>Residential school/dormitory</Text>
+			</Value>
+			<Value>
+				<Code>1674</Code>
+				<Text>Family residence - Both Parents/Guardians</Text>
+			</Value>
+			<Value>
+				<Code>1675</Code>
+				<Text>Foster home</Text>
+			</Value>
+			<Value>
+				<Code>1676</Code>
+				<Text>Institution</Text>
+			</Value>
+			<Value>
+				<Code>1677</Code>
+				<Text>Prison or juvenile detention center</Text>
+			</Value>
+			<Value>
+				<Code>1678</Code>
+				<Text>Rooming house</Text>
+			</Value>
+			<Value>
+				<Code>1679</Code>
+				<Text>Transient shelter</Text>
+			</Value>
+			<Value>
+				<Code>167I</Code>
+				<Text>Independent</Text>
+			</Value>
+			<Value>
+				<Code>167o</Code>
+				<Text>Family residence - One Parent/Guardian</Text>
+			</Value>
+			<Value>
+				<Code>1680</Code>
+				<Text>No home (Homeless Youth)</Text>
+			</Value>
+			<Value>
+				<Code>1681</Code>
+				<Text>Other dormitory</Text>
+			</Value>
+			<Value>
+				<Code>168A</Code>
+				<Text>Arranged by State - Out of Home Care</Text>
+			</Value>
+			<Value>
+				<Code>3425</Code>
+				<Text>Group home/halfway house</Text>
+			</Value>
+			<Value>
+				<Code>4000</Code>
+				<Text>Boarder</Text>
+			</Value>
+			<Value>
+				<Code>9999</Code>
+				<Text>Other</Text>
+			</Value>
+		 
+		</Values>
+	</CodeSet>
+<CodeSet>
+		<Intro>
+			<p/>
+		</Intro>
+		<ID>Permanent Resident Status</ID>
+		<Values>
+			<Value>
+				<Code>99</Code>
+				<Text>Unknown</Text>
+			</Value>
+			<Value>
+				<Code>N</Code>
+				<Text>Not a Resident</Text>
+			</Value>
+			<Value>
+				<Code>P</Code>
+				<Text>Permanent Resident</Text>
+			</Value>
+			<Value>
+				<Code>T</Code>
+				<Text>Temporary Resident</Text>
+			</Value>
+			 
+		</Values>
+	</CodeSet>
+<CodeSet>
+		<Intro>
+			<p/>
+		</Intro>
+		<ID>Immunisation Certificate Status</ID>
+		<Values>
+			<Value>
+				<Code>C</Code>
+				<Text>Complete</Text>
+			</Value>
+			<Value>
+				<Code>I</Code>
+				<Text>Incomplete no reason given</Text>
+			</Value>
+			<Value>
+				<Code>IU</Code>
+				<Text>Incomplete but Up to date</Text>
+			</Value>
+			<Value>
+				<Code>IN</Code>
+				<Text>Incomplete and Not up to date</Text>
+			</Value>
+	 		<Value>
+				<Code>IM</Code>
+				<Text>Incomplete - Medical Reason</Text>
+			</Value>
+			<Value>
+				<Code>IO</Code>
+				<Text>Incomplete - Objection</Text>
+			</Value>
+			<Value>
+				<Code>N</Code>
+				<Text>Not Sighted or Not Provided</Text>
+			</Value>
+			 
+		</Values>
+	</CodeSet>
+<CodeSet>
+		<Intro>
+			<p/>
+		</Intro>
+		<ID>Relationship To Student</ID>
+		<Values>
+			<Value>
+				<Code>01</Code>
+				<Text>Parent</Text>
+			</Value>
+			<Value>
+				<Code>02</Code>
+				<Text>Step-Parent</Text>
+			</Value>
+			<Value>
+				<Code>03</Code>
+				<Text>Adoptive Parent</Text>
+			</Value>
+			<Value>
+				<Code>04</Code>
+				<Text>Foster Parent</Text>
+			</Value>
+			<Value>
+				<Code>05</Code>
+				<Text>Host Family</Text>
+			</Value>
+			<Value>
+				<Code>06</Code>
+				<Text>Relative</Text>
+			</Value>
+			<Value>
+				<Code>07</Code>
+				<Text>Friend</Text>
+			</Value>
+			<Value>
+				<Code>08</Code>
+				<Text>Self</Text>
+			</Value>
+			<Value>
+				<Code>09</Code>
+				<Text>Other</Text>
+			</Value>
+			<Value>
+				<Code>10</Code>
+				<Text>Sibling</Text>
+			</Value>
+			<Value>
+				<Code>11</Code>
+				<Text>Grandparent</Text>
+			</Value>
+			<Value>
+				<Code>12</Code>
+				<Text>Aunt/Uncle</Text>
+			</Value>
+			<Value>
+				<Code>13</Code>
+				<Text>Nephew/Niece</Text>
+			</Value>
+			<Value>
+				<Code>00</Code>
+				<Text>Spouse</Text>
+			</Value>
+			<Value>
+				<Code>32</Code>
+				<Text>Duty Manager</Text>
+			</Value>
+			<Value>
+				<Code>31</Code>
+				<Text>Supervisor</Text>
+			</Value>
+			<Value>
+				<Code>30</Code>
+				<Text>Case Worker</Text>
+			</Value>
+			<Value>
+				<Code>20</Code>
+				<Text>Guardian</Text>
+			</Value>
+			<Value>
+				<Code>99</Code>
+				<Text>Not provided</Text>
+			</Value>
+			 
+		</Values>
+	</CodeSet>
+<CodeSet>
+		<Intro>
+			<p/>
+		</Intro>
+		<ID>School Enrollment Type</ID>
+		<Values>
+			<Value>
+				<Code>01</Code>
+				<Text>Home School</Text>
+			</Value>
+			<Value>
+				<Code>02</Code>
+				<Text>Other School</Text>
+			</Value>
+			<Value>
+				<Code>03</Code>
+				<Text>Concurrent Enrolment</Text>
+			</Value>
+			 
+		</Values>
+	</CodeSet>
+<CodeSet>
+		<Intro>
+			<p/>
+		</Intro>
+		<ID>Source Code Type</ID>
+		<Values>
+			<Value>
+				<Code>C</Code>
+				<Text>Provided by the child (ie pupil)</Text>
+			</Value>
+			<Value>
+				<Code>O</Code>
+				<Text>Other </Text>
+			</Value>
+			<Value>
+				<Code>P</Code>
+				<Text>Provided by the parent</Text>
+			</Value>
+			<Value>
+				<Code>S</Code>
+				<Text>Ascribed by the current school</Text>
+			</Value>
+			<Value>
+				<Code>T</Code>
+				<Text>Ascribed by a previous school</Text>
+			</Value>
+			 
+		</Values>
+	</CodeSet>
+<CodeSet>
+		<Intro>
+			<p/>
+		</Intro>
+		<ID>Picture Source</ID>
+		<Values>
+			<Value>
+				<Code>01</Code>
+				<Text>URL</Text>
+			</Value>
+			<Value>
+				<Code>02</Code>
+				<Text>JPG</Text>
+			</Value>
+			<Value>
+				<Code>03</Code>
+				<Text>Bitmap</Text>
+			</Value>
+			<Value>
+				<Code>04</Code>
+				<Text>Gif</Text>
+			</Value>
+			<Value>
+				<Code>05</Code>
+				<Text>PIF</Text>
+			</Value>
+			<Value>
+				<Code>06</Code>
+				<Text>PDF</Text>
+			</Value>
+			<Value>
+				<Code>09</Code>
+				<Text>Other</Text>
+			</Value>
+			<Value>
+				<Code>10</Code>
+				<Text>MIME</Text>
+			</Value>
+			 
+		</Values>
+    </CodeSet>
+
+	<CodeSet>
+		<Intro/>
+		<ID>Electronic Id Type</ID>
+		<Values>
+			<Value>
+				<Code>01</Code>
+				<Text>Barcode</Text>
+			</Value>
+			<Value>
+				<Code>02</Code>
+				<Text>Magstripe</Text>
+			</Value>
+			<Value>
+				<Code>03</Code>
+				<Text>PIN</Text>
+			</Value>
+			<Value>
+				<Code>04</Code>
+				<Text>RFID</Text>
+			</Value>
+		 
+		</Values>
+	</CodeSet>
+	
+	<CodeSet>
+		<Intro>
+			<p/>
+		</Intro>
+		<ID>Telephone Number Type</ID>
+		<Values>
+			<Value>
+				<Code>0096</Code>
+				<Text>Main telephone number</Text>
+			</Value>
+			<Value>
+				<Code>0350</Code>
+				<Text>Alternate telephone number</Text>
+			</Value>
+			<Value>
+				<Code>0359</Code>
+				<Text>Answering service</Text>
+			</Value>
+			<Value>
+				<Code>0370</Code>
+				<Text>Beeper number</Text>
+			</Value>
+			<Value>
+				<Code>0400</Code>
+				<Text>Appointment telephone number</Text>
+			</Value>
+			<Value>
+				<Code>0426</Code>
+				<Text>Telex number</Text>
+			</Value>
+			<Value>
+				<Code>0437</Code>
+				<Text>Telemail</Text>
+			</Value>
+			<Value>
+				<Code>0448</Code>
+				<Text>Voice mail</Text>
+			</Value>
+			<Value>
+				<Code>0478</Code>
+				<Text>Instant messaging number</Text>
+			</Value>
+			<Value>
+				<Code>0486</Code>
+				<Text>Media conferencing number</Text>
+			</Value>
+			<Value>
+				<Code>2364</Code>
+				<Text>Facsimile number</Text>
+			</Value>
+			<Value>
+				<Code>0888</Code>
+				<Text>Mobile</Text>
+			</Value>
+			<Value>
+				<Code>0887</Code>
+				<Text>Work Telephone Number</Text>
+			</Value>
+			<Value>
+				<Code>0889</Code>
+				<Text>Work Mobile</Text>
+			</Value>
+			<Value>
+				<Code>0777</Code>
+				<Text>Home Telephone Number</Text>
+			</Value>
+			<Value>
+				<Code>0779</Code>
+				<Text>Home Mobile</Text>
+			</Value>
+			 
+		</Values>
+	</CodeSet>
+	
+	<CodeSet>
+		<Intro>
+			<p/>
+		</Intro>
+		<ID>Name Usage Type</ID>
+		<Values>
+			<Value>
+				<Code>AKA</Code>
+				<Text>Also known as or alias</Text>
+			</Value>
+			<Value>
+				<Code>BTH </Code>
+				<Text>Name at Birth</Text>
+			</Value>
+			<Value>
+				<Code>LGL</Code>
+				<Text>Legal Name of the client as defined by the organisation which collects it (legal not defined in this standard)</Text>
+			</Value>
+			<Value>
+				<Code>MDN</Code>
+				<Text>Maiden Name</Text>
+			</Value>
+			<Value>
+				<Code>NEW</Code>
+				<Text>New born identification name</Text>
+			</Value>
+			<Value>
+				<Code>OTH</Code>
+				<Text>Non specific name usage type</Text>
+			</Value>
+			<Value>
+				<Code>PRF</Code>
+				<Text>Preferred name</Text>
+			</Value>
+			<Value>
+				<Code>PRV</Code>
+				<Text>Previous name</Text>
+			</Value>
+			<Value>
+				<Code>STG</Code>
+				<Text>Stage name</Text>
+			</Value>
+			<Value>
+				<Code>TRB</Code>
+				<Text>Tribal Name</Text>
+			</Value>
+			 
+		</Values>
+	</CodeSet>
+</IncludeGroup>

@@ -1,0 +1,482 @@
+﻿<IncludeGroup
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	
+	xmlns="http://sifassociation.org/SpecGen">
+
+	<!-- IncludeGroup is syntactic sugar that makes this a well-formed XML file that can
+		 be validated separately; and allows the xi:include to have parse="xml"  SpecGen tool ignores it. -->
+
+
+	<!-- Element types for the Student SchoolEnrollment, SectionEnrollment & StudentParticipation domains -->
+
+
+	<!-- Student Enrolment -->
+<CommonElement name="PromotionInfoType" type="true" dm="true">
+ <Item>
+    <Element>PromotionInfoType</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Information on a student's promotion, retention, or demotion related to this enrollment instance.</p>
+    </Description>
+
+  </Item>
+
+  <Item>
+    <Element>PromotionStatus</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>This value should be set if this enrollment instance is closed for an end-of-year closeout or a mid-year promotion or demotion. A value other than NA should be specified when the enrollment instance represents an end-of-year closeout or mid-year promotion/demotion. </p>
+    </Description>
+    <Values>
+      <Value>
+        <Code>Promoted</Code>
+      </Value>
+      <Value>
+        <Code>Demoted</Code>
+      </Value>
+      <Value>
+        <Code>Retained</Code>
+      </Value>
+      <Value>
+        <Code>NA</Code>
+      </Value>
+    </Values>
+  </Item>
+  </CommonElement>
+<CommonElement name="CatchmentStatusContainerType" type="true" dm="true">
+
+  <Item>
+    <Element>CatchmentStatusContainerType</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Container element for location of an individual's legal residence relative to (within or outside) the boundaries of the school for this enrolment. Enrolment Catchment Status.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>Code</Element>
+
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Code indicating the residency status for this enrollment. Code indicating Enrollment Catchment Status.</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsPublicSchoolCatchmentStatusType"></Type>
+  </Item>
+  <Item>
+    <Element>OtherCodeList</Element>
+    <Characteristics>O</Characteristics>
+    <Description>List of other codes or strings that crosswalk to or serve as translations of the Code element paired with this common element. If Code changes and OtherCodes are supported, both Code and all associated OtherCode elements must be present.</Description>
+    <Type ref="CommonTypes" name="OtherCodeListType"></Type>
+  </Item>
+</CommonElement>
+<CommonElement name="StudentExitStatusContainerType" type="true" dm="true">
+
+ <Item>
+    <Element>StudentExitStatusContainerType</Element>
+    <Characteristics>O</Characteristics>
+    <Description>Container element for exit status codes.</Description>
+  </Item>
+  
+  <Item>
+    <Element>Code</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p> Code indicating the closure status for this enrollment.</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsExitWithdrawalStatusType"></Type>
+  </Item>
+  
+  <Item>
+    <Element>OtherCodeList</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="OtherCodeListType"></Type>
+  </Item>
+  
+</CommonElement>
+<CommonElement name="StudentExitContainerType" type="true" dm="true">
+
+ <Item>
+    <Element>StudentExitContainerType</Element>    
+    <Characteristics>O</Characteristics>
+    <Description></Description>
+  </Item>
+  
+  <Item>
+    <Element>Code</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Code indicating the type of exit for this enrollment.</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsExitWithdrawalTypeType"></Type>
+  </Item>
+  
+  <Item>
+    <Element>OtherCodeList</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="OtherCodeListType"></Type>
+  </Item>
+</CommonElement>
+<CommonElement name="StudentEntryContainerType" type="true" dm="true">
+	<Item>
+		<Element>StudentEntryContainerType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>Container elements for EntryType information</Description>
+	</Item>
+	<Item>
+		<Element>Code</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Code indicating the type of entry for this enrollment</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsEntryTypeType"/>
+	</Item>
+	<Item>
+		<Element>OtherCodeList</Element>
+		<Characteristics>O</Characteristics>
+		<Description>List of other codes or strings that crosswalk to or serve as translations of the Code element paired with this common element. If Code changes and OtherCodes are supported, both Code and all associated OtherCode elements must be present.</Description>
+		<Type ref="CommonTypes" name="OtherCodeListType"/>
+	</Item>
+</CommonElement>
+<CommonElement name="StudentSubjectChoiceListType" type="true" dm="true">
+	<Item>
+		<Element>StudentSubjectChoiceListType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>List of Student Subject Choices where available.</p>
+		</Description>
+		<List mode="List"/>
+	</Item>
+	<Item>
+		<Element>StudentSubjectChoice</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>Subjects Students Choose</p>
+		</Description>
+		<Type ref="CommonTypes" name="StudentSubjectChoiceType"/>
+	</Item>
+</CommonElement>
+<CommonElement name="StudentSubjectChoiceType" type="true" dm="true">
+	<Item>
+		<Element>StudentSubjectChoiceType</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>Subjects Students Choose</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>PreferenceNumber</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Subject Priority</p>
+		</Description>
+		<Type name="xs:unsignedInt"/>
+	</Item>
+	<Item>
+		<Element>SubjectLocalId</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Local Subject Id</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"/>
+	</Item>
+	<Item>
+		<Element>StudyDescription</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Description about Study Mode.</p>
+		</Description>
+		<Type ref="CommonTypes" name="SubjectAreaType"/>
+	</Item>
+	<Item>
+		<Element>OtherSchoolLocalId</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Local Id of a school where the student studies this subject if not at the home school.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"/>
+	</Item>
+</CommonElement>
+
+
+	<!-- SectionEnrollment -->
+<CommonElement name="SchoolCourseInfoOverrideType" type="true" dm="true">
+ 	<Item>
+		<Element>SchoolCourseInfoOverrideType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Optional overrides of the course information for this section.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Attribute>Override</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Designates whether or not SchoolCourseInfo information has been overridden with different values for this section.</p>
+		</Description>
+		<Values>
+			<Value>
+				<Code>Yes</Code>
+			</Value>
+			<Value>
+				<Code>No</Code>
+			</Value>
+		</Values>
+	</Item>
+	<Item>
+		<Element>CourseCode</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Override of the school-defined course code for this section.</p>
+		</Description>
+		<Type name='xs:normalizedString'/>
+	</Item>
+	<Item>
+		<Element>StateCourseCode</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Override of the state-defined course code for this section.</p>
+		</Description>
+		<Type name='xs:normalizedString'/>
+	</Item>
+	<Item>
+		<Element>DistrictCourseCode</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Override of the district course code for this section.</p>
+		</Description>
+		 <Type name='xs:normalizedString'/>
+	</Item>
+	
+	<Item>
+		<Element>SubjectArea</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Override of the subject matter area for this section.</p>
+		</Description>
+		<Type ref="CommonTypes" name="SubjectAreaType"></Type>
+	</Item>
+	<Item>
+		<Element>CourseTitle</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Override of the course title for this section.</p>
+		</Description>
+		<Type name='xs:normalizedString'/>
+	</Item>
+	<Item>
+		<Element>InstructionalLevel</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Override of the instructional level for this section.</p>
+		</Description>
+		<Type name='xs:normalizedString'/>
+	</Item>
+	<Item>
+		<Element>CourseCredits</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Override of the course credits for this section.</p>
+		</Description>
+		 <Type name='xs:normalizedString'/>
+	</Item>
+ </CommonElement>
+<CommonElement name="LocationOfInstructionType" type="true" dm="true">
+  	<Item>
+		<Element>LocationOfInstructionType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Description of the location in which the section is taught.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>Code</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Code representing the location of instruction.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsReceivingLocationOfInstructionType"/>
+	</Item>
+	<Item>
+		<Element>OtherCodeList</Element>
+		<Characteristics>O</Characteristics>
+		<Type ref="CommonTypes" name="OtherCodeListType"/>
+	</Item>
+  </CommonElement>
+<CommonElement name="LanguageOfInstructionType" type="true" dm="true">
+  	<Item>
+		<Element>LanguageOfInstructionType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Language in which the section is taught.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>Code</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Code representing the language of instruction.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsAustralianStandardClassificationOfLanguagesASCLType"></Type>
+	</Item>
+	<Item>
+		<Element>OtherCodeList</Element>
+		<Characteristics>O</Characteristics>
+		<Type ref="CommonTypes" name="OtherCodeListType"/>
+	</Item>
+  </CommonElement>
+<CommonElement name="MediumOfInstructionType" type="true" dm="true">
+  	<Item>
+		<Element>MediumOfInstructionType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Medium through which the student receives instructional communication from the teacher.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>Code</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Code representing the medium of instruction.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsMediumOfInstructionType"></Type>
+	</Item>
+	<Item>
+		<Element>OtherCodeList</Element>
+		<Characteristics>O</Characteristics>
+		<Type ref="CommonTypes" name="OtherCodeListType"/>
+	</Item>  
+</CommonElement>
+
+<!-- StudentParticipation (in special Programs) -->
+<CommonElement name="ProgramAvailabilityType" type="true" dm="true">
+
+ <Item>
+    <Element>ProgramAvailabilityType</Element>
+    <Characteristics>O</Characteristics>
+  </Item>
+  <Item>
+    <Element>Code</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Describes the availability of the program.</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSets0211ProgramAvailabilityType"/>
+  </Item>
+  <Item>
+    <Element>OtherCodeList</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="OtherCodeListType"/>
+  </Item>
+  
+</CommonElement>
+<CommonElement name="ReferralSourceType" type="true" dm="true">
+  <Item>
+    <Element>ReferralSourceType</Element>
+    <Characteristics>O</Characteristics>
+  </Item>
+  <Item>
+    <Element>Code</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The method by which a student was identified for referral to a particular program.</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSets0792IdentificationProcedureType"/>
+  </Item>
+  <Item>
+    <Element>OtherCodeList</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="OtherCodeListType"/>
+  </Item>
+  </CommonElement>
+<CommonElement name="ProgramFundingSourcesType" type="true" dm="true">
+	<Item>
+		<Element>ProgramFundingSourcesType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>List of funding sources</Description>
+		<List mode="List">
+    </List>
+	</Item>
+	<Item>
+		<Element>ProgramFundingSource</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>Funding source of the special program</Description>
+		<Type ref="CommonTypes" name="ProgramFundingSourceType"/>
+	</Item>
+</CommonElement>
+<CommonElement name="ProgramFundingSourceType" type="true" dm="true">
+	<Item>
+		<Element>ProgramFundingSourceType</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>Funding source of the special program</Description>
+	</Item>
+	<Item>
+		<Element>Code</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Funding source for the program, may be more than one.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsProgramFundingSourceCodeType"/>
+	</Item>
+	<Item>
+		<Element>OtherCodeList</Element>
+		<Characteristics>O</Characteristics>
+		<Type ref="CommonTypes" name="OtherCodeListType"/>
+	</Item>
+</CommonElement>
+<CommonElement name="ProgramStatusType" type="true" dm="true">
+	<Item>
+		<Element>ProgramStatusType</Element>
+	</Item>
+	<Item>
+		<Element>Code</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The current status of the student's program participation.</p>
+		</Description>
+		<Values>
+			<Value>
+				<Code>S001</Code>
+				<Text>Referred</Text>
+			</Value>
+			<Value>
+				<Code>S002</Code>
+				<Text>Eligible</Text>
+			</Value>
+			<Value>
+				<Code>S003</Code>
+				<Text>Not Eligible</Text>
+			</Value>
+			<Value>
+				<Code>S004</Code>
+				<Text>Active</Text>
+			</Value>
+			<Value>
+				<Code>S005</Code>
+				<Text>Exited</Text>
+			</Value>
+			<Value>
+				<Code>S006</Code>
+				<Text>Withdrew/refused</Text>
+			</Value>
+			<Value>
+				<Code>9999</Code>
+				<Text>Other</Text>
+			</Value>
+		</Values>
+	</Item>
+	<Item>
+		<Element>OtherCodeList</Element>
+		<Characteristics>O</Characteristics>
+		<Type ref="CommonTypes" name="OtherCodeListType"/>
+	</Item>
+	<xhtml:Example xmlns="" name="Programme Status Example">
+		<ProgramStatus>
+			<Code>S004</Code>
+		</ProgramStatus>
+	</xhtml:Example>
+</CommonElement>
+
+</IncludeGroup>

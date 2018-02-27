@@ -1,0 +1,64 @@
+<IncludeGroup
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	
+	xmlns="http://sifassociation.org/SpecGen">
+
+	<!-- IncludeGroup is syntactic sugar that makes this a well-formed XML file that can
+		 be validated separately; and allows the xi:include to have parse="xml"  SpecGen tool ignores it. -->
+
+
+	<!-- CommonElement types that are defined, but not actually used by any DataObject -->
+
+<!--  Unused:GlobalRefIdPointerType -->
+<!--
+		CommonElement name="GlobalRefIdPointerType" type="true" dm="true">
+          <Item>
+             <Element>GlobalRefIdPointerType</Element>
+             <Description></Description>
+          </Item>     
+          <Item>
+          <Element>ParentObjectRefId</Element>
+          <Description></Description>
+          <Type Ref="CommonTypes" name = "IdRefType"
+          </Item>       
+          <Item>
+             <Attribute>SIF_Object</Attribute>
+             <Description></Description>
+             <Values>
+             <Value>
+             <Code>StudentPersonal</Code>
+             </Value>
+             </Values>
+          </Item>      
+		</CommonElement
+-->
+
+<!-- Unused:  AlternateIdentificationCodesType -->
+<!--
+	<CommonElement name="AlternateIdentificationCodesType" type="true" dm="true">
+		<Item>
+			<Element>AlternateIdentificationCodes</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>This element is for an organization to utilize for
+				an internal code.  This may be used for an alignment
+				schema or other purposes that are only internal for
+				the organization.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>AlternateIdentificationCode</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>An alphanumeric Id code as defined by the
+				organization to identify the statement.</p>
+			</Description>
+			<Type name="xs:normalizedString"/>
+		</Item>
+	</CommonElement>
+-->
+</IncludeGroup>

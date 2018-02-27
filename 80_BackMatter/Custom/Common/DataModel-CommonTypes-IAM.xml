@@ -1,0 +1,101 @@
+﻿<IncludeGroup
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	
+	xmlns="http://sifassociation.org/SpecGen">
+
+	<!-- IncludeGroup is syntactic sugar that makes this a well-formed XML file that can
+		 be validated separately; and allows the xi:include to have parse="xml"  SpecGen tool ignores it. -->
+
+
+	<!-- Element types for the Identity & Access Management IAM domain -->
+
+<CommonElement name="IdentityAssertionsType" type="true" dm="true">
+	<Item>
+		<Element>IdentityAssertionsType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The list of identity assertions for this user.</p>
+		</Description>
+		<List mode="List"/>
+	</Item>
+	<Item>
+		<Element>IdentityAssertion</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>The identification string for this user.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Attribute>SchemaName</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The name of the field.</p>
+			<p>See implementation notes for details on required schema elements.</p>
+		</Description>
+		<ItemExample>eduPersonPrincipalName</ItemExample>
+		<ItemExample>sAmAccountName</ItemExample>
+		<Type name="xs:normalizedString"/>
+	</Item>
+</CommonElement>
+<CommonElement name="PasswordListType" type="true" dm="true">
+	<Item>
+		<Element>PasswordListType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Allows a provider or publisher to specify the same password using multiple algorithms, if supported.</p>
+		</Description>
+		<List mode="List"/>
+	</Item>
+	<Item>
+		<Element>Password</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>A representation of the user's password using the given algorithm.</p>
+		</Description>
+		<Type name="xs:base64Binary"/>
+	</Item>
+	<Item>
+		<Attribute>Algorithm</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The method used to encrypt the user's password. See the implementation details below.</p>
+		</Description>
+		<Values>
+			<Value>
+				<Code>MD5</Code>
+			</Value>
+			<Value>
+				<Code>SHA1</Code>
+			</Value>
+			<Value>
+				<Code>DES</Code>
+			</Value>
+			<Value>
+				<Code>TripleDES</Code>
+			</Value>
+			<Value>
+				<Code>RC2</Code>
+			</Value>
+			<Value>
+				<Code>AES</Code>
+			</Value>
+			<Value>
+				<Code>RSA</Code>
+			</Value>
+		</Values>
+	</Item>
+	<Item>
+		<Attribute>KeyName</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The name of the key to be used for decryption of the password. Left blank for hash algorithms (MD5 and SHA1).</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+</CommonElement>
+
+	</IncludeGroup>

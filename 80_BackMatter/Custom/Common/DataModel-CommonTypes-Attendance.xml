@@ -1,0 +1,390 @@
+﻿<IncludeGroup
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	
+	xmlns="http://sifassociation.org/SpecGen">
+
+	<!-- IncludeGroup is syntactic sugar that makes this a well-formed XML file that can
+		 be validated separately; and allows the xi:include to have parse="xml"  SpecGen tool ignores it. -->
+
+
+	<!-- Element types for the Attendance domain includes:
+
+	-->
+	
+
+ <CommonElement name="AuditInfoType" type="true" dm="true">
+ 
+ <Item>
+    <Element>AuditInfoType</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>An audit trail to help determine who entered this event and when.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>CreationUser</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Information about which staff member created this record.</p>
+    </Description>
+    <Type ref="CommonTypes" name="CreationUserType"/>
+  </Item>
+
+  <Item>
+    <Element>CreationDateTime</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The date and time this record was created.</p>
+    </Description>
+    <Type name="xs:dateTime"></Type>
+  </Item> 
+ </CommonElement>
+
+ <CommonElement name="CreationUserType" type="true" dm="true">
+ <Item>
+    <Element>CreationUserType</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Information about which staff member created this record.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>Type</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The role of the staff member that created this record.</p>
+    </Description>
+    <Values>
+      <Value>
+        <Code>Office Staff</Code>
+      </Value>
+      <Value>
+        <Code>School Admin</Code>
+      </Value>
+      <Value>
+        <Code>Parent</Code>
+      </Value>
+      <Value>
+        <Code>Nurse</Code>
+      </Value>
+      <Value>
+        <Code>Teacher</Code>
+      </Value>
+      <Value>
+        <Code>Other</Code>
+      </Value>
+    </Values>
+  </Item>
+  <Item>
+    <Element>UserId</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Unique identifier of the user that created the attendance record.  This will depend on the user and the source.  The preferred identifier would be a RefId for a StaffPersonal, StudentContact, or StudentPersonal Object.  However, the user may not be associated with any of these SIF objects.  In that case a unique Id given by the source should be used.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+ </CommonElement>
+ 
+ 
+<CommonElement name="AttendanceTimesType" type="true" dm="true">
+	<Item>
+		<Element>AttendanceTimesType</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Breakdown of times that the student entered or returned to school.</p>
+		</Description>
+		<List mode="List"> </List>
+	</Item>
+	<Item>
+		<Element>AttendanceTime</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p/>
+		</Description>
+		<Type ref="CommonTypes" name="AttendanceTimeType"/>
+	</Item>
+</CommonElement>
+<CommonElement name="AttendanceTimeType" type="true" dm="true">
+	<Item>
+		<Element>AttendanceTimeType</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>Time span that the student entered or returned to school</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>AttendanceType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Nature of the attendance e.g. 'Taken at Roll Call'</p>
+		</Description>
+		<Type name="xs:string"/>
+	</Item>
+	<Item>
+		<Element>AttendanceCode</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Locally defined code for attendance.</p>
+		</Description>
+		<Type ref="CommonTypes" name="AttendanceCodeType"/>
+	</Item>
+	<Item>
+		<Element>AttendanceStatus</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Approved or Unapproved status of this attendance code.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsAttendanceStatusType"/>
+	</Item>
+	<Item>
+		<Element>StartTime</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The start of this particular time span.</p>
+		</Description>
+		<Type name="xs:time"/>
+	</Item>
+	<Item>
+		<Element>EndTime</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The end of this particular time span.</p>
+		</Description>
+		<Type name="xs:time"/>
+	</Item>
+	<Item>
+		<Element>DurationValue</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The amount of absence represented by AttendanceCode, up to three decimal places. May be
+				greater than 1.0.</p>
+		</Description>
+		<Type name="xs:decimal"/>
+		<Facets>
+			<xs:minInclusive value="0"/>
+		</Facets>
+	</Item>
+
+	<Item>
+		<Element>TimeTableSubjectRefId</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>RefId of TimeTableSubject</p>
+		</Description>
+		<Type ref="CommonTypes" name="RefIdType"/>
+	</Item>
+	<Item>
+		<Element>AttendanceNote</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Note related to this particular time span.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+</CommonElement>
+
+<CommonElement name="PeriodAttendancesType" type="true" dm="true">
+	<Item>
+		<Element>PeriodAttendancesType</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Breakdown of grouped period attendance.</p>
+		</Description>
+		<List mode="List"> </List>
+	</Item>
+	<Item>
+		<Element>PeriodAttendance</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p/>
+		</Description>
+		<Type ref="CommonTypes" name="PeriodAttendanceType"/>
+	</Item>
+</CommonElement>
+
+<CommonElement name="PeriodAttendanceType" type="true" dm="true">
+	<Item>
+		<Element>PeriodAttendanceType</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>This container type allows recording of period level attendance for a student.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>AttendanceType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Nature of the attendance e.g. 'Taken at Roll Call'</p>
+		</Description>
+		<Type name="xs:string"/>
+    </Item>
+	<Item>
+		<Element>AttendanceCode</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Locally defined code for attendance.</p>
+		</Description>
+		<Type ref="CommonTypes" name="AttendanceCodeType"/>
+	</Item>
+	<Item>
+		<Element>AttendanceStatus</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Approved or Unapproved status of this attendance code.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsAttendanceStatusType"/>
+	</Item>
+  <Item>
+    <Element>Date</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The date of the attendance event.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+  <Item>
+    <Element>SessionInfoRefId</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The GUID of the session that this attendance applies to.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Element>ScheduledActivityRefId</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The GUID of the ScheduledActivity Object attendance applies to.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Element>TimetablePeriod</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The period within which attendance is being reported, e.g. "4D".</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  <Item>
+    <Element>DayId</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Day Id.</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>
+  <Item>
+    <Element>StartTime</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Optional Start Time of Curriculum Session</p>
+    </Description>
+    <Type name="xs:time"></Type>
+  </Item>
+  <Item>
+    <Element>EndTime</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Optional End Time of Curriculum Session</p>
+    </Description>
+    <Type name="xs:time"></Type>
+  </Item>
+
+  <Item>
+    <Element>TimeIn</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The time the student entered or returned to this class.</p>
+    </Description>
+    <Type name="xs:time"></Type>
+  </Item>
+  <Item>
+    <Element>TimeOut</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The time the student left this class.</p>
+    </Description>
+    <Type name="xs:time"></Type>
+  </Item>
+  <Item>
+    <Element>TimeTableCellRefId</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The (GUID) of the piece of Curriculum (TT Grid) scheduled</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  <Item>
+		<Element>TimeTableSubjectRefId</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>RefId of TimeTableSubject</p>
+		</Description>
+		<Type ref="CommonTypes" name="RefIdType"/>
+	</Item>
+	<Item>
+		<Element>TeacherList</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>List of teachers</p>
+		</Description>
+		<Type ref="CommonTypes" name="ScheduledTeacherListType"/>
+	</Item>
+	<Item>
+		<Element>RoomList</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>List of rooms</p>
+		</Description>
+		<Type ref="CommonTypes" name="RoomListType"/>
+	</Item>
+	<Item>
+		<Element>AttendanceNote</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Note related to this particular attendance.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+</CommonElement>
+<CommonElement name="AttendanceCodeType" type="true" dm="true">
+	<Intro>
+		<p>
+
+    </p>
+	</Intro>
+	<Item>
+		<Element>AttendanceCodeType</Element>
+		<Description>
+			<p>Code that describes the absence/attendance.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>Code</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Code representing the absence/attendance.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsAttendanceCodeType"/>
+	</Item>
+	<Item>
+		<Element>OtherCodeList</Element>
+		<Characteristics>O</Characteristics>
+		<Type ref="CommonTypes" name="OtherCodeListType"/>
+	</Item>
+	<xhtml:Example xmlns="" name="Attendance Code Example">
+		<AttendanceCode>
+			<Code>200</Code>
+			<OtherCodeList>
+				<OtherCode Codeset="Local">S</OtherCode>
+				<OtherCode Codeset="Other">C</OtherCode>
+			</OtherCodeList>
+		</AttendanceCode>
+	</xhtml:Example>
+</CommonElement>
+	
+</IncludeGroup>
