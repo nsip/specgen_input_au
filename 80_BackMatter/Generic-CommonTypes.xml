@@ -9,6 +9,9 @@
 	<!-- IncludeGroup is syntactic sugar that makes this a well-formed XML file that can
 		 be validated separately; and allows the xi:include to have parse="xml"  SpecGen tool ignores it. -->
 
+
+	<!-- Unused: ReportReportPackageType -->
+	<!--
 <CommonElement name="ReportPackageType" type="true">
   <Item>
     <Element>ReportPackageType</Element>
@@ -22,7 +25,8 @@
     <Type ref="CommonTypes" complex="extension" name="AbstractContentPackageType"></Type>
   </Item>
 </CommonElement>
-
+	-->
+	
 <CommonElement type="true" name="AbstractContentPackageType">
   <Key>@RefId</Key>
   <Item>
@@ -366,6 +370,8 @@
 	</Item>
 </CommonElement>
 
+<!-- Unused: ServiceNameType -->
+<!--
 <CommonElement type="true" name="ServiceNameType" >
 	<Item>
 		<Element>ServiceNameType</Element>
@@ -375,7 +381,10 @@
 		<Type name="xs:NCName"></Type>
 	</Item>
 </CommonElement>
+-->
 
+<!-- Unused: ObjectType -->
+<!--
 <CommonElement type="true" name="ObjectType" >
 	<Item>
 		<Element>ObjectType</Element>
@@ -389,7 +398,10 @@
 		</Type>
 	</Item>
 </CommonElement>
+-->
 
+<!-- Unused: ReportDataObjectType -->
+<!--
 <CommonElement type="true" name="ReportDataObjectType" >
 	<Item>
 		<Element>ReportDataObjectType</Element>
@@ -403,8 +415,11 @@
 		</Type>
 	</Item>
 </CommonElement>
+-->
 
-<!--<CommonElement type="true" name="SIF_ExampleObjectType" >
+<!-- Unused: SIF_ExampleObjectType -->
+<!--
+<CommonElement type="true" name="SIF_ExampleObjectType" >
 	<Item>
 		<Element>SIF_ExampleObjectType</Element>
 		<Type>
@@ -413,7 +428,8 @@
 		</xs:choice>
 		</Type>
 	</Item>
-</CommonElement>-->
+</CommonElement>
+-->
 
 
 
@@ -442,6 +458,8 @@
 			</Item>
 		</CommonElement>
 
+<!-- Unused: MsgIdType -->
+<!--
 		<CommonElement type="true" name='MsgIdType'>
 			<Item>
 				<Element>MsgIdType</Element>
@@ -449,6 +467,8 @@
 				<Type name='GUIDType'/>
 			</Item>
 		</CommonElement>
+-->
+
 
 		<CommonElement type="true" name='RefIdType'>
 			<Item>
@@ -466,6 +486,8 @@
 			</Item>
 		</CommonElement>
 
+<!-- Unused: VersionType -->
+<!--
 		<CommonElement type="true" name='VersionType'>
 			<Item>
 				<Element>VersionType</Element>
@@ -477,7 +499,10 @@
 				</Facets>
 			</Item>
 		</CommonElement>
+-->
 
+<!-- Unused: VersionWithWildcardsType -->
+<!--
 		<CommonElement type="true" name='VersionWithWildcardsType'>
 			<Item>
 				<Element>VersionWithWildcardsType</Element>
@@ -489,7 +514,10 @@
 				</Facets>
 			</Item>
 		</CommonElement>
+-->
 
+<!-- Unused: DefinedProtocolsType -->
+<!--
 		<CommonElement type="true" name='DefinedProtocolsType'>
 			<Item>
 				<Element>DefinedProtocolsType</Element>
@@ -504,6 +532,7 @@
 				</Values>
 			</Item>
 		</CommonElement>
+-->
 
 		<CommonElement name='ExtendedContentType' type='true'>
 			<Item>
@@ -521,6 +550,8 @@
 			</Item>
 		</CommonElement>
 
+<!-- Unused: Selected Content Type -->
+<!--
 		<CommonElement name='SelectedContentType' type='true'>
 			<Item>
 				<Element>SelectedContentType</Element>
@@ -536,5 +567,6 @@
 				</Type>
 
 			</Item>
-		</CommonElement>
+			</CommonElement>
+-->			
 </IncludeGroup>
