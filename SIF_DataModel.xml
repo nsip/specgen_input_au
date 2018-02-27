@@ -121,9 +121,7 @@
 			<p>Select shared and named code sets defined in SIF are included here for reference.</p>
 		</Intro>
 		<CodeSets>
-		    
-			<xi:include parse="text" href="80_BackMatter/Custom/DataModel-CodeSets-Custom.xml"/>
-		  
+			<xi:include parse="xml" href="80_BackMatter/Custom/DataModel-CodeSets-Custom.xml"/>
 		  </CodeSets>
 		</Appendix>
 	
