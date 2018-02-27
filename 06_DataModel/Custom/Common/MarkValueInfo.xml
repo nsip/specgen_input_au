@@ -1,0 +1,200 @@
+<DataObject name="MarkValueInfo"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xmlns:xi="http://www.w3.org/2001/XInclude"
+			xmlns:xhtml="http://www.w3.org/1999/xhtml"
+            xmlns="http://sifassociation.org/SpecGen">
+
+	<EventsReported>true</EventsReported>
+	<Key>@RefId</Key>
+
+  <Item>
+    <Element>MarkValueInfo</Element>
+	<privacyRating>Medium</privacyRating>
+    <Description>
+      <p>
+        This object defines the types of values allowed for a mark and the domain for each mark value. At least one of the Percentage, Numeric, Letter or Narrative nodes must be used to create a valid MarkValueInfo. 
+      </p>
+     </Description>
+  </Item>
+	
+	<Item>
+		<Attribute>RefId</Attribute>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The Id (GUID) that uniquely identifies this MarkValueInfo entity.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RefIdType"/>
+	</Item>
+	<Item>
+		<Element>SchoolInfoRefId</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The Id (GUID) that uniquely identifies the School that these Mark Values apply to.</p>
+		</Description>
+		<Type ref="CommonTypes" name="IdRefType"/>
+	</Item>
+	<Item>
+		<Element>YearLevels</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The year levels that this MarkValueInfo applies to.</p>
+		</Description>
+		<Type ref="CommonTypes" name="YearLevelsType"/>
+	</Item>
+	<Item>
+		<Element>Name</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The text name of the value list ("Letter Grades", "Letter Grades (+/-)", "ESU", "Pass/Fail", "Override Grades", "Citizenship Comment Codes", etc.).</p>
+		</Description>
+		<Type name="xs:string"/>
+	</Item>
+	<Item>
+		<Element>PercentageMinimum</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The minimum percent value accepted for this mark.</p>
+		</Description>
+			<Type name="xs:decimal"></Type>
+	</Item>
+	<Item>
+		<Element>PercentageMaximum</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The maximum percent value accepted for this mark.</p>
+		</Description>
+			<Type name="xs:decimal"></Type>
+	</Item>
+	<Item>
+		<Element>PercentagePassingGrade</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The threshold for a mark to be considered passing.</p>
+		</Description>
+			<Type name="xs:decimal"></Type>
+	</Item>
+	<Item>
+		<Element>NumericPrecision</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>Number of significant digits.</p>
+		</Description>
+	    <Type name="xs:unsignedInt"></Type>
+	</Item>
+	<Item>
+		<Element>NumericScale</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>Number of decimal places.</p>
+		</Description>
+	    <Type name="xs:unsignedInt"></Type>
+	</Item>
+	<Item>
+		<Element>NumericLow</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>Lowest Mark in the range (e.g., 98, 3.95).</p>
+		</Description>
+			<Type name="xs:decimal"></Type>
+	</Item>
+	<Item>
+		<Element>NumericHigh</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>Highest Mark in the range (e.g., 100, 4.0).</p>
+		</Description>
+			<Type name="xs:decimal"></Type>
+	</Item>
+	<Item>
+		<Element>NumericPassingGrade</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The threshold for a mark to be considered passing.</p>
+		</Description>
+			<Type name="xs:decimal"></Type>
+	</Item>
+	<Item>
+		<Element>ValidLetterMarkList</Element>
+		<Characteristics>C</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>List of specific valid letter Marks.</p>
+		</Description>
+		<Type ref="CommonTypes" name="ValidLetterMarkListType"></Type>
+	</Item>
+	<Item>
+		<Element>Narrative</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>If present, indicates that a free-form text narrative is accepted.</p>
+		</Description>
+		<Type name="xs:string"/>
+	</Item>
+	<Item>
+		<Element>NarrativeMaximumSize</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>An integer value representing the maximum number of Unicode characters for the narrative, the UTF-8 encoding of which may be longer.</p>
+		</Description>
+	    <Type name="xs:unsignedInt"></Type>
+	</Item>	
+	
+	
+	<Item>
+		<Element>SIF_Metadata</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Type ref="CommonTypes" name="SIF_MetadataType"/>
+	</Item>
+	<Item>
+		<Element>SIF_ExtendedElements</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
+	</Item>
+	<xhtml:Example xmlns="" name="MarkValueInfo">
+	  <MarkValueInfo RefId="11737E21-4A7C-46BD-BA43-01CADCA75C87" >
+	  <SchoolInfoRefId>A137D78A-E00B-C744-EF90-F2871CEB90A2</SchoolInfoRefId>
+	  <Name>Letter Grades</Name>
+	  <ValidLetterMarkList>
+			<ValidLetterMark>
+			  <Code>A</Code>
+			  <NumericEquivalent>100</NumericEquivalent>
+			</ValidLetterMark>
+			<ValidLetterMark>
+			  <Code>B</Code>
+			  <NumericEquivalent>90</NumericEquivalent>
+			</ValidLetterMark>
+			<ValidLetterMark>
+			  <Code>C</Code>
+			  <NumericEquivalent>80</NumericEquivalent>
+			</ValidLetterMark>
+			<ValidLetterMark>
+			  <Code>D</Code>
+			  <NumericEquivalent>70</NumericEquivalent>
+			</ValidLetterMark>
+			<ValidLetterMark>
+			  <Code>F</Code>
+			  <NumericEquivalent>60</NumericEquivalent>
+			</ValidLetterMark>
+		</ValidLetterMarkList>
+
+		</MarkValueInfo>
+	</xhtml:Example>
+>
+</DataObject>

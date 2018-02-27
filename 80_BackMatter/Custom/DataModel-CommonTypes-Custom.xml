@@ -299,7 +299,7 @@
 			<Type ref="CommonTypes" name="RelatedLearningStandardItemRefIdType"/>
 		</Item>
 	</CommonElement>
-		<CommonElement name="RelatedLearningStandardItemRefIdType" type="true" dm="true">
+	<CommonElement name="RelatedLearningStandardItemRefIdType" type="true" dm="true">
 		<Item>
 			<Element>RelatedLearningStandardItemRefIdType</Element>
 			<Characteristics>OR</Characteristics>
@@ -320,13 +320,265 @@
 			</Union>
 		</Item>
 	</CommonElement>
+	
+	<CommonElement name="ValidLetterMarkListType" type="true" dm="true">
+		<Item>
+			<Element>ValidLetterMarkListType</Element>
+			<Description>
+				<p>A list of valid Letter Marks</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>ValidLetterMark</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>Definition of a valid Letter Mark.</p>
+			</Description>
+			<Type ref="CommonTypes" name="ValidLetterMarkType"/>
+		</Item>
+	</CommonElement>
+	
+	<CommonElement name="ValidLetterMarkType" type="true" dm="true">
+		<Item>
+			<Element>ValidLetterMarkType</Element>
+			<Description>
+				<p>Definition of a valid Letter Mark</p>
+			</Description>
+		</Item>
+		<Item>
+			<Element>Code</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>String representing the actual Mark that would appear on the report card (e.g., "A+", "I", "100").</p>
+			</Description>
+			<Type name="xs:token"/>
+		</Item>
+		<Item>
+			<Element>NumericEquivalent</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>Numeric equivalent for the Mark (e.g., 100, 4.0).</p>
+			</Description>
+			<Type name="xs:decimal"/>
+		</Item>
+		<Item>
+			<Element>Description</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The description for this code. (e.g. "Excellent", "Participates in Class", "Incomplete", etc...).</p>
+			</Description>
+			<Type name="xs:string"/>
+		</Item>
+	</CommonElement>
+	<CommonElement name="StudentGradeMarkersListType" type="true" dm="true">
+	  <Item>
+		<Element>StudentGradeMarkersListType</Element>
+		 <Description>
+          <p>A list of staff members who were involved with the grading of the student, or who were responsible for any associated teacher judgement/s.</p>
+        </Description>
+         <Characteristics>O</Characteristics>
+  		<List mode="List">
+        </List>
+        </Item>
+        <Item>
+		  <Element>Marker</Element>
+		  <Description></Description>
+		  <Characteristics>OR</Characteristics>
+	      <Type ref="CommonTypes" name="MarkerType"/>
+		
+		</Item>
+    </CommonElement>
+    
+    <CommonElement name="MarkerType" type="true" dm="true">
+		<Item>
+			<Element>MarkerType</Element>
+			 <Description>
+			  <p>A staff members who was involved with the grading of the student, or who was responsible for any associated teacher judgement and their associated role.  Must be a current member of staff.</p>
+			</Description>
+			<Characteristics>OR</Characteristics>
+		</Item> 
+		<Item>
+			<Element>StaffPersonalRefId</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+			  <p>The RefId of the staff member involved in the marking.</p>
+			</Description>
+			<Type name="xs:string"></Type>  
+		</Item>
+		<Item>
+			<Element>Role</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+			  <p>The role the staff member played in grading the student.</p>
+			</Description>
+			<Type name="xs:string"></Type>  
+		</Item>
+  
+  </CommonElement>
+	<CommonElement name="GradingScoreListType" type="true" dm="true">
+		<Item>
+			<Element>GradingScoreListType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>Assignments that the student went through to achieve this summative assessment.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>GradingAssignmentScore</Element>
+			<Characteristics>OR</Characteristics>
+			<Description>
+				<p>AssignmentScore.</p>
+			</Description>
+			<Type ref="CommonTypes" name="AssignmentScoreType"/>
+		</Item>
+	</CommonElement>
+
+	<CommonElement name="AssignmentScoreType" type="true" dm="true">
+	<Item>
+		<Element>AssignmentScoreType</Element>
+		<Characteristics>OR</Characteristics>
+		<Description>
+			<p></p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>GradingAssignmentScoreRefId</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>GUID of a Grading assignment score included in this grade.</p>
+		</Description>
+		<Type ref="CommonTypes" name="IdRefType"/>
+	</Item>
+	<Item>
+  	   	<Element>Weight</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+		  <p>Weight of the assignment to the overall assessment grade.</p>
+		</Description>
+		<Type name="xs:decimal"></Type> 
+		
+	</Item>
+</CommonElement>
+
+<CommonElement name="GradeType" type="true" dm="true">
+	<Item>
+		<Element>GradeType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Overall Student Grade. At least one numeric, percentage or letter must be provided as defined in the fields below.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>Percentage</Element>
+		<Characteristics>C</Characteristics>
+		<Description>
+			<p>The grade percentage for this grade (0.00-100.00).</p>
+		</Description>
+		<Type name="xs:decimal"></Type> 
+		<Facets>
+		  <xs:minInclusive value="0.00"/>
+		  <xs:maxInclusive value="100.00"/>
+		</Facets>
+	</Item>
+	<Item>
+	   	<Element>Numeric</Element>
+		<Characteristics>C</Characteristics>
+		<Description>
+		  <p>The raw numeric value for this grade.</p>
+		</Description>
+		<Type name="xs:decimal"></Type> 
+	</Item>
+	<Item>
+	   	<Element>Letter</Element>
+		<Characteristics>C</Characteristics>
+		<Description>
+		  <p>The letter grade value for this grade. If this is provided, the numeric value or percentage value must also be entered in order to provide a numeric value for the grade to be utilized in any computations.</p>
+		</Description>
+		<Type name="xs:token"></Type> 
+	</Item>
+	<Item>
+	   	<Element>Narrative</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+		  <p>The free form text narrative for this grade.  Can incorporate teacher judgement.</p>
+		</Description>
+		<Type name="xs:string"></Type> 
+	</Item>
+	<Item>
+		<Element>MarkInfoRefId</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>GUID of a the MarkInfo Object that provides information about this grading.</p>
+		</Description>
+		<Type ref="CommonTypes" name="IdRefType"/>
+	</Item>
+	
+</CommonElement>
+  <CommonElement name="LearningStandardListType" type="true" dm="true">
+	<Item>
+		<Element>LearningStandardListType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>References to LearningStandardItems.</p>
+		</Description>
+		<List mode="List"/>
+	</Item>
+	<Item>
+		<Element>LearningStandard</Element>
+		<Characteristics>OR</Characteristics>
+		<Description>
+			<p>Reference to a LearningStandardType.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LearningStandardType"/>
+	</Item>
+  </CommonElement>
+
+<CommonElement name="LearningStandardType" type="true" dm="true"> 
+	<Item>
+		<Element>LearningStandardType</Element>
+		<Characteristics>OR</Characteristics>
+		<Description>
+			<p></p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>LearningStandardItemRefId</Element>
+		<Characteristics>OR</Characteristics>
+		<Description>
+			<p>GUID of a LearningStandardItem object, presenting the learning standard as part of a well-defined hierarchy (which a client would need to recover and reconstruct).</p>
+		</Description>
+		<Type ref="CommonTypes" name="IdRefType"/>
+	</Item>
+	<Item>
+  	   	<Element>LearningStandardURL</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+		  <p>URL allocated to the learning standard (e.g. in the Machine Readable Australian Curriculum).</p>
+		</Description>
+		<Type name="xs:anyURI"></Type> 
+		
+	</Item>
+	
+	<Item>
+  	   	<Element>LearningStandardLocalId</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+		  <p></p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"></Type>  
+  	</Item>	 
+   
+ 
+</CommonElement>
  <!-- Wellbeing Items-->  
  
  <CommonElement name="MedicationListType" type="true" dm="true">
 	  <Item>
 		<Element>MedicationListType</Element>
 		 <Description>
-          <p></p>
+          <p>A list of Medications.</p>
         </Description>
          <Characteristics>O</Characteristics>
   		<List mode="List">
@@ -7318,7 +7570,7 @@
 		<Element>StatisticalAreas</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
-			<p>A list of Statistical Areas associated with an address that will be referenced back to ABS 1270.  Only applicable to a physical address, e.g. not relevant for a Post Office Box.</p>
+			<p>A list of Statistical Areas assoicated with an address that will be referenced back to ABS 1270.  Only applicable to a physical address, e.g. not relevant for a Post Office Box.</p>
 		</Description>
 		<Type ref="CommonTypes" complex="extension" name="StatisticalAreasType"/>
 	</Item>
@@ -7390,7 +7642,7 @@
 		<Element>StatisticalAreasType</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
-			<p>A list of Statistical Areas associated with an address that will be referenced back to ABS 1270.  Only applicable to a physical address, e.g. not relevant for a Post Office Box.</p>
+			<p>A list of Statistical Areas assoicated with an address that will be referenced back to ABS 1270.  Only applicable to a physical address, e.g. not relevant for a Post Office Box.</p>
 		</Description>
 		<List mode="List">
     </List>
@@ -8027,7 +8279,7 @@
 		<Element>LBOTE</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
-			<p>Language Background is Other Than English. (http://www.acara.edu.au/reporting/data-standards-manual-student-background-characteristics), the LBOTE metric is under review. Currently it can be derived from Student and Parents Language Background.</p>
+			<p>Language Background is Other Than English. (http://www.acara.edu.au/verve/_resources/DSM_1.pdf), the LBOTE metric is under review. Currently it can be derived from Student and Parents Language Background.</p>
 		</Description>
 		<Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"/>
 	</Item>
