@@ -213,7 +213,7 @@
     <Characteristics>O</Characteristics>
 	<privacyRating>High</privacyRating>
     <Description>
-      <p>Suggested minimum class size for this subject.</p>
+      <p>List of RefIds of the Associated Financial Accounts.</p>
     </Description>
     
     <Type ref="CommonTypes" name="FinancialAccountRefIdListType"></Type>
