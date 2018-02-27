@@ -197,7 +197,7 @@
 		<Characteristics>M</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
-			<p>A qualifier for what type of evaluation this is. Valid values are "Inline" and "RefId". Inline values are contained in the optional Description element, RefIds are contained in the AssessmentRefId element.</p>
+			<p>A qualifer for what type of evaluation this is. Valid values are "Inline" and "RefId". Inline values are contained in the optional Description element, RefIds are contained in the AssessmentRefId element.</p>
 		</Description>
 		<Values>
 			<Value>

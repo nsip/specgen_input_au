@@ -125,7 +125,7 @@
     <Characteristics>O</Characteristics>
 	<privacyRating>Low</privacyRating>
     <Description>
-      <p>Core or Elective or Other</p>
+      <p>Core or Elective or ?</p>
     </Description>
     <Type name="xs:normalizedString"></Type>
   </Item>

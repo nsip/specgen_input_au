@@ -84,7 +84,7 @@
     <Characteristics>O</Characteristics>
 	<privacyRating>Low</privacyRating>
     <Description>
-      <p>Added to allow local implementations to filter on categories of Teaching Group. Where there is a need to filter particular groups based on their types for particular functions;  group type provides the means of identifying the type of group such as roll class or subject class for instance and treat them accordingly.</p>
+      <p>Added to allow local implmentations to filter on categories of Teaching Group. Where there is a need to filter particular groups based on their types for particular functions;  group type provides the means of identifying the type of group such as roll class or subject class for instance and treat them accordingly.</p>
     </Description>
     <Type name="xs:normalizedString"></Type>
   </Item>

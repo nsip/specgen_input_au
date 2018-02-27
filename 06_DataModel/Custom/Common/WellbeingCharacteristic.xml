@@ -136,7 +136,7 @@
     <Characteristics>O</Characteristics>
 	<privacyRating>High</privacyRating>
     <Description>
-      <p>Severity of the WellbeingCharacteristic</p>
+      <p></p>
     </Description>
     <Type name="xs:string"></Type>
   </Item>
@@ -145,7 +145,7 @@
     <Element>DailyManagement</Element>
     <Characteristics>O</Characteristics>
 	<privacyRating>High</privacyRating>
-    <Description>Test relating to DailyManagement.
+    <Description>
       <p></p>
     </Description>
     <Type name="xs:string"></Type>
@@ -156,7 +156,7 @@
     <Characteristics>O</Characteristics>
 	<privacyRating>High</privacyRating>
     <Description>
-      <p>Text relating to EmergencyManagement.</p>
+      <p></p>
     </Description>
     <Type name="xs:string"></Type>
   </Item>
@@ -166,7 +166,7 @@
     <Characteristics>O</Characteristics>
 	<privacyRating>High</privacyRating>
     <Description>
-      <p>Describes EmergencyResponsePlan</p>
+      <p></p>
     </Description>
     <Type name="xs:string"></Type>
   </Item>
@@ -176,7 +176,7 @@
     <Characteristics>O</Characteristics>
 	<privacyRating>High</privacyRating>
     <Description>
-      <p>Text relating to Trigger.</p>
+      <p></p>
     </Description>
     <Type name="xs:string"></Type>
   </Item>
@@ -206,7 +206,7 @@
     <Characteristics>O</Characteristics>
 	<privacyRating>High</privacyRating>
     <Description>
-      <p>Describes any Medication relating to the WellbeingCharacteristic.</p>
+      <p></p>
     </Description>
      <Type ref="CommonTypes" name="MedicationListType"></Type>
   </Item>
