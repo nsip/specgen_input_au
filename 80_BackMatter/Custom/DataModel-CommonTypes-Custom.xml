@@ -572,6 +572,62 @@
    
  
 </CommonElement>
+
+<CommonElement name="AssignmentListType" type="true" dm="true">
+	<Item>
+		<Element>AssignmentListType</Element>
+		<Characteristics>O</Characteristics>
+		<List mode="List">
+    </List>
+	</Item>
+	<Item>
+		<Element>GradingAssignmentRefId</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>GUID that identifies the GradingAssignment.</p>
+		</Description>
+		<Type ref="CommonTypes" name="IdRefType"/>
+	</Item>
+</CommonElement>
+
+<CommonElement name="GenericRubricType" type="true" dm="true">
+	<Item>
+		<Element>GenericRubricType</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p></p>
+		</Description>
+	</Item>
+
+	<Item>
+		<Element>RubricType</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Category that rubric is scoring for.</p>
+		</Description>
+     
+         <Type name="xs:normalizedString"></Type>
+	</Item>
+   
+   	<Item>
+		<Element>ScoreList</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Category that rubric is scoring for.</p>
+		</Description>
+	    <Type ref="CommonTypes" name="ScoreListType"/>
+	</Item>
+	
+ 	<Item>
+		<Element>Descriptor</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Descriptor of Score Point of the Rubric.</p>
+		</Description>
+	  <Type name="xs:normalizedString"></Type>
+	</Item>
+
+  </CommonElement>    
  <!-- Wellbeing Items-->  
  
  <CommonElement name="MedicationListType" type="true" dm="true">
@@ -5751,7 +5807,7 @@
 		<Element>FinancialAccountRefId</Element>
 		<Characteristics>OR</Characteristics>
 		<Description>
-			<p>The chart of account codes associated with the invoice.</p>
+			<p>RefId of a chart of account code associated with the invoice.</p>
 		</Description>
 		<Type ref="CommonTypes" name="IdRefType"/>
 	</Item>

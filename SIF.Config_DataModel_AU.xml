@@ -5,7 +5,7 @@
 		<inputDocument>SIF_DataModel.xml</inputDocument>
 		<sifNamespace>http://www.sifassociation.org/datamodel/au/3.4</sifNamespace>
 		<localizationCode>au</localizationCode>
-		<schemaVersion>3.4.2</schemaVersion>
+		<schemaVersion>3.4.3</schemaVersion>
 	</globalSettings>
 	
 	<htmlDocuments>
@@ -14,7 +14,7 @@
 		<htmlDocument>
 			<singleDocument>false</singleDocument>
 			<rootDocumentFileName>index.html</rootDocumentFileName>
-			<rootTitle>SIF Implementation Specification (Australia) 3.4.2</rootTitle>
+			<rootTitle>SIF Implementation Specification (Australia) 3.4.3</rootTitle>
 			<documentType>DataModel</documentType>
 		</htmlDocument>
 		
@@ -22,7 +22,7 @@
 		<htmlDocument>
 			<singleDocument>true</singleDocument>
 			<rootDocumentFileName>ImplementationSpecification.html</rootDocumentFileName>
-			<rootTitle>SIF Implementation Specification (Australia) 3.4.2</rootTitle>
+			<rootTitle>SIF Implementation Specification (Australia) 3.4.3</rootTitle>
 			<documentType>DataModel</documentType>
 		</htmlDocument>
 		

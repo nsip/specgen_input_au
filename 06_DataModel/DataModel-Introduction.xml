@@ -167,6 +167,8 @@ whether or not they support events, e.g.:
 </p>
 </Section>
 </Section>
+</Section>
+<Section name= "Validation">
 <Section name="Supported Optional Elements Without Values">
 <p>
 Some agents follow the convention of supplying an optional element as empty (e.g. <code>&lt;BirthDate&gt;&lt;/BirthDate&gt;</code> or <code>&lt;BirthDate/&gt;</code> to indicate
@@ -191,5 +193,27 @@ its structure, if any.  Applications should be prepared for the possibility of r
 XML has changed) and possibly also Delete events, likewise in responses even when a subset of the XML structure's child elements may have explicitly been requested.
 </p>
 </Section>
+<Section name="Payload Validation">
+<p>
+There are two sets of XSDs available for Validation of Payload.
+</p>
+<Section name="Create">
+<p>
+The first set, "DataModel" is 'strict' and all of the elements that are required for validation are 'Mandatory' in this suite of XSDs.
+This suite is traditionally used for Creation of new entities, which generally require validation before being saved into a Data Store.
+</p>
+</Section>
+<Section name="Update">
+<p>
+The second set, "SIF_Message" is 'lax' and every element within the schema is 'optional' except the 'RefId' the identifying GUID/UUID. (However, required elements are not nillable.)
+This suite of XSDs are traditionally used for Update and Delete of current entities.
+If an element is not included in the payload of an Update operation, its value is assumed to be unchanged.
+
+In additon, if the payload contains the RefId/UUID only, the consumer must assume that object to be DELETED or that it has been deleted since the original request was made.
+</p>
 </Section>
 </Section>
+</Section>
+</Section>
+
+

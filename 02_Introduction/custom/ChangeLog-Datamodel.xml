@@ -6,23 +6,15 @@
          xmlns="http://sifassociation.org/SpecGen">
 	
 	<p>This release contains the following significant updates and extensions to the SIF specification.</p>
-	<h3>Additions/Changes since 3.4.1 (April 27, 2017)</h3>
+	<h3>Additions/Changes since 3.4.2 (November, 2017)</h3>
 	<ul>
-		<li>StudentContactRelationship - Added “FeesAccess” flag to go with “FeesBilling”. This is to represent a contact who is not responsible for paying the fees but does get access to the fees </li>
-		<li>Demographics - Medicare Number added.</li>
-		<li>StudentSchoolEnrollment - Date first started at a particular school “StartedAtSchoolDate”.</li>
-		<li>StudentAttendanceTimeList  - Support for PeriodAttendance added to support NSW 3PI project.</li>
-		<li>New events added to ‘Calendar Event Type Code Set’: WEAT -Weather event,POUT - Power outage,FDAM - Facility damage,RELI - Religious observance,INAW- -Industrial Award'.</li>
-		<li>SchoolInfo - TimeZone support added as requested by NSW.</li>
-		<li>‘Relationship to Student Code Set’; values added to support WA Public Schools requirements:00- Spouse,30 - Case Worker,31 - Supervisor,32 - Duty Manager.</li>
-		<li>‘Immunisation Certificate Status Code Set’; values added to support WA Public Schools requirements:IM - Incomplete-Medical Reason, IN - Incomplete and Not up to date, IO - Incomplete - Objection, IU - Incomplete but Up to date.</li>
-		<li>Addition of Wellbeing suite of Objects in beta form to support WA Public Schools migration requirements.</li>
-		<li>CalendarSummaryRefId made "Optional" in CalendarDate requested by NSW 3PI project</li>
-		<li>TimeTableSubjectRefId made "Optional" in TimeTableCell optional requested by NSW 3PI project.</li>
-		<li>Correction made to in StudentPersonal/MostRecent - Error identified by CEO, MembershipType was "Mandatory" corrected to "Optional".</li>
-		<li>Exit/Withdrawal Type CodeSet – support for ‘Excluded’ for WA Public Schools requirements,Value 1925 – Description changed to “Expelled, Excluded or involuntarily withdrawn”.
-</li>
-		<li>ZZ Redacted values removed from CodeSets – not being used.</li>
-		<li>Entry Type CodeSet - support for English centres added requested by NSW 3PI project. Code: "1841" - Entry into Intensive English Centre</li>
-  </ul>
+		<li>WellbeingCharacteristic - MedicationType - MedicationName added</li>
+		<li>ResourceUsage and SystemRole marked for deprecation in 3.5</li>
+		<li>GradingAssignment and GradingAssignmentScore updated after Assessment workshops</li>
+		<li>StudentGrade and MarkValueInfo added after Assessment workshops</li>
+		<li>NAPLAN PNP Codeset - BRA deleted and values ETD and OFF added as per advice from ACARA</li>
+		<li>LearningStandardDocument and LearningStandardItem updated to Venetian Blind Typing</li>
+		<li>Other minor typos, broken links updated in various descriptions</li>
+		<li>Privacy Ratings added as annotations at Object Level</li>
+	</ul>
 </Section>

@@ -1,4 +1,4 @@
-﻿<Section name="Preamble"
+<Section name="Preamble"
 		 xmlns:xs="http://www.w3.org/2001/XMLSchema"
 		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		 xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -27,7 +27,7 @@
 	</ul>
 	
 	<ul>
-	<li>A <em>SIF Environment</em> is a distributed system that consists of one or more software applications with a SIF Adapter (a SIF-enabled application) sharing/reporting one or more SIF data objects over a network; it may also involve middleware (a message broker). A <em>SIF Implementation</em> consists of one or more SIF Environments deployed and configured to meet customer data sharing and reporting needs..</li>	
+	<li>A <em>SIF Environment</em> is a distributed system that consists of one or more software applications with a SIF Adapter (a SIF-enabled application) sharing/reporting one or more SIF data objects over a network; it may also involve middleware (a message broker). A <em>SIF Implementation</em> consists of one or more SIF Environments deployed and configured to meet customer data sharing and reporting needs.</li>	
 	
 	<li>The SIF Implementation Specification defines architecture requirements and communication protocols for software components and the interfaces between them; it makes no assumption of specific hardware or software products needed to develop SIF-enabled applications and/or middleware implementations, other than their ability to support technologies leveraged as the foundation for SIF, most prominently XML and HTTP(S) and including JSON and REST.</li>
 	</ul>
