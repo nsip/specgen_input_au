@@ -192,11 +192,13 @@
     <Item>
       <Element>SIF_Metadata</Element>
       <Characteristics>O</Characteristics>
+	  <privacyRating>Low</privacyRating>
       <Type ref="DataModelTaskForce" name="SIF_MetadataType"></Type>
     </Item>
     <Item>
      <Element>SIF_ExtendedElements</Element>
      <Characteristics>O</Characteristics>
+	 <privacyRating>Low</privacyRating>
      <Type ref="DataModel" name="SIF_ExtendedElementsType"></Type>
     </Item>
 

@@ -114,11 +114,13 @@
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Medium</privacyRating>
     <Type ref="CommonTypes" name="SIF_Metadata"></Type>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Medium</privacyRating>
     <Type ref="CommonTypes" name="SIF_ExtendedElements"></Type>
   </Item>
 
