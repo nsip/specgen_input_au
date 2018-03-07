@@ -1,9 +1,10 @@
+
 <IncludeGroup
 	xmlns:xi="http://www.w3.org/2001/XInclude"
 	
  	xmlns="http://sifassociation.org/SpecGen">
 
-
+<if intl="au">
 	<CodeSet>
 		<Intro>
 			<p>1216.0 - Australian Standard Geographical Classification (ASGC), July 2011   </p>
@@ -1413,8 +1414,7 @@
 <Value><Code>910052009</Code><Text>Territory of Christmas Island</Text></Value>
 <Value><Code>910053009</Code><Text>Territory of Cocos (Keeling) Islands</Text></Value>
 </Values>
-	</CodeSet>
-	
+	</CodeSet>    <!-- AU Standard Geographical Classification -->	
 	<CodeSet>
 		<Intro>
 			<p>This Code Set is union between the Australian Statistical Geography Standard (ASGS):  http://www.abs.gov.au/ausstats/abs@.nsf/PrimaryMainFeatures/1270.0.55.001?OpenDocument</p>
@@ -1525,8 +1525,7 @@
 			</Value>
 		 
 </Values>
-</CodeSet>
-	
+</CodeSet>    <!-- AU School Location -->	
 	<CodeSet>
 		<Intro>
 			<p>Federal Electorates from the Australian Electoral Commission</p>
@@ -2187,99 +2186,7 @@
 			</Value>
 		 
 		</Values>
-	</CodeSet>
-
-	<CodeSet>
-		<Intro>
-			<p/>
-		</Intro>
-		<ID>Address Type</ID>
-		<Values>
-			<Value>
-				<Code>0123</Code>
-				<Text>Mailing address</Text>
-			</Value>
-			<Value>
-				<Code>0123A</Code>
-				<Text>Alternate Mailing address</Text>
-			</Value>
-			<Value>
-				<Code>0124</Code>
-				<Text>Shipping address</Text>
-			</Value>
-			<Value>
-				<Code>0124A</Code>
-				<Text>Alternate Shipping address</Text>
-			</Value>
-			<!-- Addition for finance -->
-			<Value>
-				<Code>0125</Code>
-				<Text>Billing address</Text>
-			</Value>
-			<Value>
-				<Code>0765</Code>
-				<Text>Physical location address</Text>
-			</Value>
-			<Value>
-				<Code>0765A</Code>
-				<Text>Alternate Physical location address</Text>
-			</Value>
-			<Value>
-				<Code>9999</Code>
-				<Text>Other</Text>
-			</Value>
-			<Value>
-				<Code>9999A</Code>
-				<Text>Alternate Other address</Text>
-			</Value>
-			 
-		</Values>
-	</CodeSet>
-	<CodeSet>
-		<Intro>
-			<p/>
-		</Intro>
-		<ID>Address Role</ID>
-		<Values>
-			<Value>
-				<Code>012A</Code>
-				<Text>Term Address</Text>
-			</Value>
-			<Value>
-				<Code>012B</Code>
-				<Text>Home Address</Text>
-			</Value>
-			<Value>
-				<Code>012C</Code>
-				<Text>Home Stay Address</Text>
-			</Value>
-			<Value>
-				<Code>013A</Code>
-				<Text>Overseas Address</Text>
-			</Value>
-			<Value>
-				<Code>1073</Code>
-				<Text>Other home address</Text>
-			</Value>
-			<Value>
-				<Code>1074</Code>
-				<Text>Employer's address</Text>
-			</Value>
-			<Value>
-				<Code>1075</Code>
-				<Text>Employment address</Text>
-			</Value>
-			<Value>
-				<Code>2382</Code>
-				<Text>Other organisation address</Text>
-			</Value>
-			<Value>
-				<Code>9999</Code>
-				<Text>Other Address</Text>
-			</Value>
-		 
-		</Values>
-	</CodeSet>
+	</CodeSet>    <!-- AU Federal Electorates -->
 	<CodeSet>
 		<Intro>
 			<p/>
@@ -2328,7 +2235,7 @@
 			</Value>
 		 
 		</Values>
-	</CodeSet>
+	</CodeSet>    <!-- AU State or Territory -->
 	<CodeSet>
 		<Intro>
 			<p>1269.0 Standard Australian Classification of Countries (SACC), 2016</p>
@@ -2678,6 +2585,99 @@
 <Value><Code>0746</Code><Text>Australia (includes External Territories, Australian Antarctic Territory and Norfolk Island)</Text></Value>
 <Value><Code>0747</Code><Text>JPDA (Joint Petroleum Development Area - administered by Australia and Timor-Leste)</Text></Value>
 </Values>
-	</CodeSet>
+	</CodeSet>    <!-- AU Standard Country Classification -->
+</if>
+
+	<CodeSet>
+		<Intro>
+			<p/>
+		</Intro>
+		<ID>Address Type</ID>
+		<Values>
+			<Value>
+				<Code>0123</Code>
+				<Text>Mailing address</Text>
+			</Value>
+			<Value>
+				<Code>0123A</Code>
+				<Text>Alternate Mailing address</Text>
+			</Value>
+			<Value>
+				<Code>0124</Code>
+				<Text>Shipping address</Text>
+			</Value>
+			<Value>
+				<Code>0124A</Code>
+				<Text>Alternate Shipping address</Text>
+			</Value>
+			<!-- Addition for finance -->
+			<Value>
+				<Code>0125</Code>
+				<Text>Billing address</Text>
+			</Value>
+			<Value>
+				<Code>0765</Code>
+				<Text>Physical location address</Text>
+			</Value>
+			<Value>
+				<Code>0765A</Code>
+				<Text>Alternate Physical location address</Text>
+			</Value>
+			<Value>
+				<Code>9999</Code>
+				<Text>Other</Text>
+			</Value>
+			<Value>
+				<Code>9999A</Code>
+				<Text>Alternate Other address</Text>
+			</Value>
+			 
+		</Values>
+	</CodeSet>    <!-- Address Type -->
+	<CodeSet>
+		<Intro>
+			<p/>
+		</Intro>
+		<ID>Address Role</ID>
+		<Values>
+			<Value>
+				<Code>012A</Code>
+				<Text>Term Address</Text>
+			</Value>
+			<Value>
+				<Code>012B</Code>
+				<Text>Home Address</Text>
+			</Value>
+			<Value>
+				<Code>012C</Code>
+				<Text>Home Stay Address</Text>
+			</Value>
+			<Value>
+				<Code>013A</Code>
+				<Text>Overseas Address</Text>
+			</Value>
+			<Value>
+				<Code>1073</Code>
+				<Text>Other home address</Text>
+			</Value>
+			<Value>
+				<Code>1074</Code>
+				<Text>Employer's address</Text>
+			</Value>
+			<Value>
+				<Code>1075</Code>
+				<Text>Employment address</Text>
+			</Value>
+			<Value>
+				<Code>2382</Code>
+				<Text>Other organisation address</Text>
+			</Value>
+			<Value>
+				<Code>9999</Code>
+				<Text>Other Address</Text>
+			</Value>
+		 
+		</Values>
+	</CodeSet>    <!-- Address Role -->
 
 </IncludeGroup>

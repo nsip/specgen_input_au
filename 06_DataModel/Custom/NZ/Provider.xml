@@ -1,0 +1,206 @@
+<DataObject name="Provider"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xmlns:xi="http://www.w3.org/2001/XInclude"
+			xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	
+            xmlns="http://sifassociation.org/SpecGen">
+  <Key>@RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>Provider</Element>
+	<privacyRating>Low</privacyRating>
+    <Description>
+		<p>A unified data object providing details of Early Child Education Service, (ECEService),
+		Schools, and Tertiary Institutions.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>The SIF GUID that identifies this provider.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item> <!-- @RefId -->
+  <Item>
+    <Element>LocalId</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>An identifier used by the education sector to identify the provider.</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item> <!-- LocalId -->
+  <Item>
+    <Element>Organisation</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The generic organisation data on the provider</p>
+    </Description>
+    <Type ref="CommonTypes" name="OrganisationType"></Type>
+  </Item> <!-- Organisation -->
+  <Item>
+	  <Element>School</Element>
+	  <Characteristics>O</Characteristics>
+	  <privacyRating>Low</privacyRating>
+	  <Description>
+		  <p>Only present if the Provider is a provider of school education services.
+		  Contains properties that are school-specific. </p>
+	  </Description>
+	  <Type ref="CommonTypes" name="NZSchoolServiceType"/>
+  </Item> <!-- School -->
+  <Item>
+	  <Element>Authority</Element>
+	  <Characteristics>M</Characteristics>
+	  <privacyRating>Low</privacyRating>
+	  <Description>
+		  <p>A code denoting the authority by which the Provider is authorised to
+		  provide education services.
+		  </p>
+	  </Description>
+	  <Type ref="CodeSets" name="NZCodeSetsProviderAuthorityType"/>
+  </Item> <!-- Authority -->
+    
+  <xhtml:Example xmlns="" name="School Provider Example">
+    <Provider RefId="D3E34B35-9D75-101A-8C3D-00AA001A1652">
+		<LocalId>01011234</LocalId>
+		<Organisation>
+			<AddressList>
+				<Address Type="0124">
+					<Street>
+						<Line1>1175 Lake Ferry Rd</Line1>
+					</Street>
+					<Suburb>RD 1</Suburb>
+					<City>Martinborough</City>
+				</Address>
+			</AddressList>
+			<EmailList>
+				<Email Type="01">stuart@gmail.com</Email>
+			</EmailList>
+			<PhoneNumberList>
+				<PhoneNumber Type="0888">
+					<Number>(021) 300 999</Number>
+				</PhoneNumber>
+			</PhoneNumberList>
+			<ContactList>
+				<Contact>
+					<Role>Principal</Role>
+					<ContactInfo>
+						<Name>
+							<FamilyName>Dumbledore</FamilyName>
+							<GivenName>Albus</GivenName>
+							<FullName>Albus Dumbledore</FullName>
+						</Name>
+						<AddressList>
+							<Address Type="0123">
+								<Street>
+									<Line1>533 Hogwart's Way</Line1>
+								</Street>
+								<City>Hogsmead</City>
+								<PostalCode>7733</PostalCode>
+							</Address>
+						</AddressList>
+						<EmailList/>
+						<PhoneNumberList/>
+					</ContactInfo>
+				</Contact>
+			</ContactList>
+			<EducationRegion>12013</EducationRegion>
+			<Name>Hogwart's Area School</Name>
+			<RelatedOrganisationList>
+				<RelatedOrganisation RefId="0951bacf-fc88-4ed6-8113-11a6d6335c07">
+					<LocalId>99102</LocalId>
+					<Name>Tai Tokerau</Name>
+					<ObjectType>EducationOrganisation</ObjectType>
+					<OrganisationType>16</OrganisationType>
+				</RelatedOrganisation>
+				<RelatedOrganisation RefId="ac0871d9-6562-4209-ae86-abdb3661842b">
+					<LocalId>99204</LocalId>
+					<Name>Masterton (Whakaoriori) Kāhui Ako</Name>
+					<ObjectType>EducationOrganisation</ObjectType>
+					<OrganisationType>15</OrganisationType>
+				</RelatedOrganisation>
+			</RelatedOrganisationList>
+			<OperationalStatus>O</OperationalStatus>
+			<Type>2</Type>
+			<URL>http://www.hogwarts.school.nz/</URL>
+		</Organisation>
+		<School>
+			<Decile>5</Decile>
+			<CoEdStatus>C1</CoEdStatus>
+			<SchoolYearList>
+				<SchoolYear>
+					<YearLevel>1</YearLevel>
+					<Gender>C</Gender>
+				</SchoolYear>
+				<SchoolYear>
+					<YearLevel>2</YearLevel>
+					<Gender>C</Gender>
+				</SchoolYear>
+				<SchoolYear>
+					<YearLevel>3</YearLevel>
+					<Gender>C</Gender>
+				</SchoolYear>
+				<SchoolYear>
+					<YearLevel>4</YearLevel>
+					<Gender>C</Gender>
+				</SchoolYear>
+				<SchoolYear>
+					<YearLevel>5</YearLevel>
+					<Gender>C</Gender>
+				</SchoolYear>
+				<SchoolYear>
+					<YearLevel>6</YearLevel>
+					<Gender>C</Gender>
+				</SchoolYear>
+				<SchoolYear>
+					<YearLevel>7</YearLevel>
+					<Gender>C</Gender>
+				</SchoolYear>
+				<SchoolYear>
+					<YearLevel>8</YearLevel>
+					<Gender>C</Gender>
+				</SchoolYear>
+				<SchoolYear>
+					<YearLevel>9</YearLevel>
+					<Gender>F</Gender>
+				</SchoolYear>
+				<SchoolYear>
+					<YearLevel>10</YearLevel>
+					<Gender>F</Gender>
+				</SchoolYear>
+				<SchoolYear>
+					<YearLevel>11</YearLevel>
+					<Gender>F</Gender>
+				</SchoolYear>
+				<SchoolYear>
+					<YearLevel>12</YearLevel>
+					<Gender>F</Gender>
+				</SchoolYear>
+				<SchoolYear>
+					<YearLevel>13</YearLevel>
+					<Gender>F</Gender>
+					</SchoolYear>
+			</SchoolYearList>
+			<NewEntrantPolicyList>
+				<PolicyChoice>
+					<EffectiveTo>2018-12-31</EffectiveTo>
+					<Choice>AgeEntry</Choice>
+				</PolicyChoice>
+				<PolicyChoice>
+					<EffectiveFrom>2019-01-01</EffectiveFrom>
+					<Choice>CohortEntry</Choice>
+				</PolicyChoice>
+			</NewEntrantPolicyList>
+			<DefinitionList>
+				<Definition>101</Definition>
+				<Definition>103</Definition>
+				<Definition>108</Definition>
+			</DefinitionList>			
+		</School>
+		<Authority>42000</Authority>
+    </Provider>
+  </xhtml:Example>
+</DataObject>

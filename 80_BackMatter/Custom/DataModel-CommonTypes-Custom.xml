@@ -12,11 +12,12 @@
 
 	<!-- This file has been chopped up into domain based component files -->
 	<xi:include parse="xml" href="Common/DataModel-CommonTypes-SchoolStructure.xml"/>
-	<xi:include parse="xml" href="Common/DataModel-CommonTypes-Calendar.xml"/>
-	<xi:include parse="xml" href="Common/DataModel-CommonTypes-TimeTable.xml"/>
-
 	<xi:include parse="xml" href="Common/DataModel-CommonTypes-PartyRole.xml"/>
 	<xi:include parse="xml" href="Common/DataModel-CommonTypes-Location.xml"/>
+
+<if intl="au">
+	<xi:include parse="xml" href="Common/DataModel-CommonTypes-Calendar.xml"/>
+	<xi:include parse="xml" href="Common/DataModel-CommonTypes-TimeTable.xml"/>
 
 	<xi:include parse="xml" href="Common/DataModel-CommonTypes-Curriculum.xml"/>
 	<xi:include parse="xml" href="Common/DataModel-CommonTypes-Resource.xml"/>
@@ -25,28 +26,17 @@
 	<xi:include parse="xml" href="Common/DataModel-CommonTypes-Assessment.xml"/>	
 	<xi:include parse="xml" href="Common/DataModel-CommonTypes-Wellbeing.xml"/>
 	
-	<if intl="au">
-		<xi:include parse="xml" href="AU/DataModel-CommonTypes-NAPLAN.xml"/>
-	</if>
+	<xi:include parse="xml" href="AU/DataModel-CommonTypes-NAPLAN.xml"/>
 	
     <xi:include parse="xml" href="Common/DataModel-CommonTypes-Financial.xml"/>
 	<xi:include parse="xml" href="Common/DataModel-CommonTypes-IAM.xml"/>
 	<xi:include parse="xml" href="Common/DataModel-CommonTypes-Statistics.xml"/>
-	<xi:include parse="xml" href="Common/DataModel-CommonTypes-Metadata.xml"/>
 	<xi:include parse="xml" href="Common/DataModel-CommonTypes-Unused.xml"/>
 
-<CommonElement name="GraduationDateType" type="true" dm="true">
-	<Item>
-		<Element>GraduationDateType</Element>
-		<Description>
-			<p>Date student officially graduated from secondary education.</p>
-		</Description>
-		<Type ref="CommonTypes" name="PartialDateType"/>
-	</Item>
-	<xhtml:Example xmlns="" name="Graduation Date Example">
-		<GraduationDate>2005-05-27</GraduationDate>
-	</xhtml:Example>
-</CommonElement>
+    <xi:include parse="xml" href="Common/DataModel-CommonTypes-Metadata.xml"/>
+</if>
+
+
 <CommonElement name="PartialDateType" type="true" dm="true">
 	<Item>
 		<Element>PartialDateType</Element>
@@ -60,7 +50,6 @@
 		</Union>
 	</Item>
 	</CommonElement>
-
 <CommonElement name="LocalIdType" type="true" dm="true">
 	<Item>
 		<Element>LocalIdType</Element>
@@ -73,6 +62,21 @@
 	</Item>
 	<xhtml:Example xmlns="" name="LocalId Example">
 		<LocalId>123321A</LocalId>
+	</xhtml:Example>
+</CommonElement>
+
+
+<if intl="au">   
+<CommonElement name="GraduationDateType" type="true" dm="true">
+	<Item>
+		<Element>GraduationDateType</Element>
+		<Description>
+			<p>Date student officially graduated from secondary education.</p>
+		</Description>
+		<Type ref="CommonTypes" name="PartialDateType"/>
+	</Item>
+	<xhtml:Example xmlns="" name="Graduation Date Example">
+		<GraduationDate>2005-05-27</GraduationDate>
 	</xhtml:Example>
 </CommonElement>
 <CommonElement name="OtherCodeListType" type="true" dm="true">
@@ -127,7 +131,6 @@
 		</OtherCodeList>
 	</xhtml:Example>
 </CommonElement>
-
 <CommonElement name="SIF_ExtendedElementsType" type="true" dm="true">
 	<Intro>
 		<p>
@@ -197,4 +200,7 @@
 		</SIF_ExtendedElements>
 	</xhtml:Example>
 </CommonElement>
+</if>
+
+
 </IncludeGroup>

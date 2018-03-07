@@ -1,0 +1,271 @@
+<IncludeGroup
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	
+ 	xmlns="http://sifassociation.org/SpecGen">
+
+	<CodeSet>
+		<Intro>
+			<p>An enumeration of valid SIF DataObject names, to be included in Object References</p>
+		</Intro>
+		<ID>Referrable Data Objects</ID>
+		<Values>
+			<Value>
+				<Code>EducationOrganisation</Code>
+				<Text>An organisation other than a Provider</Text>
+			</Value>
+			<Value>
+				<Code>Provider</Code>
+				<Text>A recognised provider of education services such as ECE Service, School or TEI</Text>
+			</Value>
+		</Values>
+	</CodeSet>    <!-- Referrable Data Object -->
+	<CodeSet>
+		<Intro>Regions of New Zealand defined by Ministry of Education for administrative purposes.
+		(North to South):</Intro>
+		<ID>Education Region</ID>
+		<Values>
+			<Value>
+				<Code>12007</Code>
+				<Text>Tai Tokerau</Text>
+			</Value>
+			<Value>
+				<Code>12008</Code>
+				<Text>Auckland</Text>
+			</Value>
+			<Value>
+				<Code>12009</Code>
+				<Text>Waikato</Text>
+			</Value>
+			<Value>
+				<Code>12010</Code>
+				<Text>Bay of Plenty, Waiariki</Text>
+			</Value>
+			<Value>
+				<Code>12012</Code>
+				<Text>Hawke's Bay, Tairāwhiti</Text>
+			</Value>
+			<Value>
+				<Code>12011</Code>
+				<Text>Taranaki, Whanganui &amp; Manawatū</Text>
+			</Value>
+			<Value>
+				<Code>12013</Code>
+				<Text>Wellington</Text>
+			</Value>
+			<Value>
+				<Code>12014</Code>
+				<Text>Nelson, Marlborough &amp; West Coast</Text>
+			</Value>
+			<Value>
+				<Code>12015</Code>
+				<Text>Canterbury &amp; Chatham Islands</Text>
+			</Value>
+			<Value>
+				<Code>12016</Code>
+				<Text>Otago &amp; Southland</Text>
+			</Value>
+		</Values>
+	</CodeSet>    <!-- Education Region -->
+	<CodeSet>
+		<Intro>
+			Codes describing the nature of an Education Organisation; for Schools this
+		    indicates the schooling levels offered.
+		</Intro>
+		<ID>Organisation Type</ID>
+		<Values>
+			<Value>
+				<Code>1</Code>
+				<Text>Composite (Year 1-10)</Text>
+			</Value>
+			<Value>
+				<Code>2</Code>
+				<Text>Composite (Year 1-15)</Text>
+			</Value>
+			<Value>
+				<Code>3</Code>
+				<Text>Contributing (Year 1-6)</Text>
+			</Value>
+			<Value>
+				<Code>4</Code>
+				<Text>Correspondence School</Text>
+			</Value>
+			<Value>
+				<Code>5</Code>
+				<Text>Full Primary (Year 1-8)</Text>
+			</Value>
+			<Value>
+				<Code>6</Code>
+				<Text>Intermediate (Year 7 &amp; 8)</Text>
+			</Value>
+			<Value>
+				<Code>7</Code>
+				<Text>Restricted Composite (Year 7-10)</Text>
+			</Value>
+			<Value>
+				<Code>8</Code>
+				<Text>Secondary (Year 7-10)</Text>
+			</Value>
+			<Value>
+				<Code>9</Code>
+				<Text>Secondary (Year 11-15)</Text>
+			</Value>
+			<Value>
+				<Code>10</Code>
+				<Text>Secondary (Year 7-15)</Text>
+			</Value>
+			<Value>
+				<Code>11</Code>
+				<Text>Secondary (Year 9-15)</Text>
+			</Value>
+			<Value>
+				<Code>12</Code>
+				<Text>Special School</Text>
+			</Value>
+			<Value>
+				<Code>13</Code>
+				<Text>Teen Parent Unit</Text>
+			</Value>
+
+			<Value>
+				<Code>15</Code>
+				<Text>Community of Learning|Kāhui Ako</Text>
+			</Value>
+			<Value>
+				<Code>16</Code>
+				<Text>Ministry of Education Local Office</Text>
+			</Value>
+		</Values>
+	</CodeSet>    <!-- Organisation Type -->
+	<CodeSet>
+		<Intro>
+			Codes describing state legislated policies that can be adopted by schools.
+		</Intro>
+		<ID>Policy Choice</ID>
+		<Values>
+			<Value>
+				<Code>AgeEntry</Code>
+				<Text>New entrants policy choice whereby children may start school on or soon after their 5th birthday</Text>
+			</Value>
+			<Value>
+				<Code>CohortEntry</Code>
+				<Text>New entrants policy choice whereby children may
+				start school only on specific notified dates after
+				their 5th birthday.</Text>
+			</Value>
+		</Values>
+	</CodeSet>	  <!-- Policy Choice -->
+	<CodeSet>
+		<Intro>
+			The authority by which a Provider is authorised to provide education services.
+		</Intro>
+		<ID>Provider Authority</ID>
+		<Values>
+			<Value>
+				<Code>42000</Code>
+				<Text>State</Text>
+			</Value>
+			<Value>
+				<Code>42001</Code>
+				<Text>State: Integrated</Text>
+			</Value>
+			<Value>
+				<Code>42002</Code>
+				<Text>Private: Fully Registered</Text>
+			</Value>
+			<Value>
+				<Code>42003</Code>
+				<Text>Private: Provisionally Registered</Text>
+			</Value>
+			<Value>
+				<Code>42012</Code>
+				<Text>Partnership School</Text>
+			</Value>
+		</Values>
+	</CodeSet>	  <!-- Provider Authority -->
+	<CodeSet>
+		<Intro>
+			Criteria for defining the nature of a school.
+		</Intro>
+		<ID>School Definition</ID>
+		<Values>
+
+			<!-- Ex:  MoE  School Classifications -->
+			<Value>
+				<Code>101</Code>
+				<Text>Designated Character School</Text>
+			</Value>
+			<Value>
+				<Code>102</Code>
+				<Text>Secondary Māori Boarding School</Text>
+			</Value>
+			<Value>
+				<Code>103</Code>
+				<Text>Bilingual School</Text>
+			</Value>
+			<Value>
+				<Code>104</Code>
+				<Text>Kura Kaupapa Māori</Text>
+			</Value>
+			<Value>
+				<Code>105</Code>
+				<Text>Contributing with Year 7 &amp; 8 Bilingual Students</Text>
+			</Value>
+			<Value>
+				<Code>106</Code>
+				<Text>Restricted Composite (Year 7-9)</Text>
+			</Value>
+			<Value>
+				<Code>107</Code>
+				<Text>Restricted Composite (Year 7-10)</Text>
+			</Value>
+			<Value>
+				<Code>108</Code>
+				<Text>School with Boarding Facilities</Text>
+			</Value>
+			
+
+			<!-- Ex: MoE Special Schooling Types -->
+			<Value>
+				<Code>201</Code>
+				<Text>School for Vision Impaired</Text>
+			</Value>
+			<Value>
+				<Code>202</Code>
+				<Text>School for Deaf/Hearing Impaired</Text>
+			</Value>
+			<Value>
+				<Code>203</Code>
+				<Text>School for Physical Disabilities</Text>
+			</Value>
+			<Value>
+				<Code>204</Code>
+				<Text>School for Intellectual Disabilities</Text>
+			</Value>
+			<Value>
+				<Code>205</Code>
+				<Text>School for Learing/Scoial Difficulties</Text>
+			</Value>
+			<Value>
+				<Code>206</Code>
+				<Text>Regional Health School</Text>
+			</Value>
+
+
+			
+			<!-- Ex:  MoE Teaching of Teaching Classification -->
+			<Value>
+				<Code>301</Code>
+				<Text>Normal School</Text>
+			</Value>
+			<Value>
+				<Code>302</Code>
+				<Text>Model School</Text>
+			</Value>
+			<Value>
+				<Code>303</Code>
+				<Text>Normal School (Model Classes)</Text>
+			</Value>
+					
+		</Values>
+	</CodeSet>	  <!-- School Definition -->
+</IncludeGroup>

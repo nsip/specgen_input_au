@@ -119,6 +119,8 @@
 	<Appendix name="Code Sets">
 		<Intro>
 			<p>Select shared and named code sets defined in SIF are included here for reference.</p>
+			<p>Code set enumerations defined by NSIP primarily for use in the Australian SIF Data Model, but
+			some are re-used by the New Zealand SIF Data Model</p>
 		</Intro>
 		<CodeSets>
 			<xi:include parse="xml" href="80_BackMatter/Custom/DataModel-CodeSets-Custom.xml"/>

@@ -3,7 +3,8 @@
 	
  	xmlns="http://sifassociation.org/SpecGen">
 
-	<!-- Australian Standards -->
+	<!-- Australian Bureau of Standards defined codesets  -->
+<if intl="au">
 	<CodeSet>
 		<Intro>
 			<p>1266.0 Australian Standard Classification of Religious Groups, 2016	
@@ -562,9 +563,11 @@
 			</Value>
 			 
 		</Values>
-	</CodeSet>
+	</CodeSet>  <!-- Religious Groups -->
+</if>
 
-    <!-- SIF defined codesets -->
+    <!-- NSIP defined codesets for AU only -->
+<if intl="au">	
     <CodeSet>
       <Intro>
         <p>Australian Time Zone Abbreviations - https://www.timeanddate.com/time/zones/au</p>
@@ -587,7 +590,7 @@
 		  <Value><Code>NFT</Code><Text>Norfolk Time	UTC +11</Text></Value>
 		  <Value><Code>Other</Code><Text>Other Time Zone not defined</Text></Value>
       </Values>
-    </CodeSet>
+    </CodeSet>    <!-- AU Time Zones -->
 	<CodeSet>
 		<Intro>
 			<p/>
@@ -684,40 +687,7 @@
 			</Value>
 			 
 		</Values>
-	</CodeSet>
-	<CodeSet>
-		<Intro>
-			<p/>
-		</Intro>
-		<ID>Operational Status</ID>
-		<Values>
-			<Value>
-				<Code>B</Code>
-				<Text>Building or Construction Started</Text>
-			</Value>
-			<Value>
-				<Code>C</Code>
-				<Text>Closed</Text>
-			</Value>
-			<Value>
-				<Code>O</Code>
-				<Text>Open</Text>
-			</Value>
-			<Value>
-				<Code>P</Code>
-				<Text>Pending</Text>
-			</Value>
-			<Value>
-				<Code>S</Code>
-				<Text>Site</Text>
-			</Value>
-			<Value>
-				<Code>U</Code>
-				<Text>Unstaffed</Text>
-			</Value>
-			 
-		</Values>
-	</CodeSet>
+	</CodeSet>    <!-- School Level -->
 	<CodeSet>
 		<Intro>
 			<p/>
@@ -750,7 +720,7 @@
 			</Value>
 			 
 		</Values>
-	</CodeSet>
+	</CodeSet>    <!-- School Focus -->
 	<CodeSet>
 		<Intro>
 			<p/>
@@ -791,8 +761,7 @@
 			</Value>
 		 
 		</Values>
-	</CodeSet>
-
+	</CodeSet>    <!-- Session Type -->
 	<CodeSet>
 		<Intro>
 			<p>Sourced from DEEWR</p>
@@ -809,7 +778,7 @@
 			</Value>
 		 
 		</Values>
-	</CodeSet>
+	</CodeSet>    <!-- AU School Sector -->
 	<CodeSet>
 		<Intro>
 			<p>Codes provided by DEEWR</p>
@@ -826,7 +795,7 @@
 			</Value>
 			 
 		</Values>
-	</CodeSet>
+	</CodeSet>    <!-- AU Systemic Status -->
 	<CodeSet>
 		<Intro>
 			<p>Codes provided by DEEWR</p>
@@ -855,28 +824,7 @@
 			</Value>
 			 
 		</Values>
-	</CodeSet>	
-	<CodeSet>
-		<Intro>
-			<p>Sourced from DEEWR</p>
-		</Intro>
-		<ID>School Co-Ed Status</ID>
-		<Values>
-			<Value>
-				<Code>C</Code>
-				<Text>Co-Educational</Text>
-			</Value>
-			<Value>
-				<Code>F</Code>
-				<Text>Female</Text>
-			</Value>
-			<Value>
-				<Code>M</Code>
-				<Text>Male</Text>
-			</Value>
-			 
-		</Values>
-	</CodeSet>
+	</CodeSet>	  <!-- AU School System -->
 	<CodeSet>
 		<Intro>
 			<p>Describes the Activity of a Staff Member in a StaffAssignment</p>
@@ -1638,7 +1586,7 @@
 			</Value>
 			 
 		</Values>
-	</CodeSet>
+	</CodeSet>    <!-- Stafff Activity -->
 	<CodeSet>
 		<Intro>
 			<p>Set of possible values of Staff Status with employing organisation.</p>
@@ -1663,7 +1611,7 @@
 			</Value>
 			 
 		</Values>
-	</CodeSet>
+	</CodeSet>    <!-- AU Staff Status -->
 	<CodeSet>
 		<Intro>
 			<p/>
@@ -1688,6 +1636,92 @@
 			</Value>
 			 
 		</Values>
-	</CodeSet>
-	
+	</CodeSet>    <!-- Education Agency Type -->
+</if>
+
+    <!-- NSIP & NZ defined codesets for AU & NZ -->
+	<CodeSet>
+		<Intro>
+			<p/>
+		</Intro>
+		<ID>Operational Status</ID>
+		<Values>
+			<Value>
+				<Code>B</Code>
+				<Text>Building or Construction Started</Text>
+			</Value>
+			<Value>
+				<Code>C</Code>
+				<Text>Closed</Text>
+			</Value>
+			<Value>
+				<Code>O</Code>
+				<Text>Open</Text>
+			</Value>
+			<Value>
+				<Code>P</Code>
+				<Text>Pending</Text>
+			</Value>
+			<Value>
+				<Code>S</Code>
+				<Text>Site</Text>
+			</Value>
+			<Value>
+				<Code>U</Code>
+				<Text>Unstaffed</Text>
+			</Value>
+			 
+		</Values>
+	</CodeSet>    <!-- Operational Status -->
+	<CodeSet>
+		<Intro>
+			<p>Sourced from DEEWR;  <if intl="nz"> and augmented for use in New Zealand</if></p>
+		</Intro>
+		<ID>School Co-Ed Status</ID>
+		<Values>
+			<Value>
+				<Code>C</Code>
+				<Text>Co-Educational</Text>
+			</Value>
+			<Value>
+				<Code>F</Code>
+				<Text>Female</Text>
+			</Value>
+			<Value>
+				<Code>M</Code>
+				<Text>Male</Text>
+			</Value>
+			<if intl="nz">
+				<Value>
+					<Code>C1</Code>
+					<Text>Primary Co-Ed, Secondary Girls</Text>
+				</Value>
+				<Value>
+					<Code>C2</Code>
+					<Text>Junior Boys &amp; Senior Co-Ed</Text>
+				</Value>
+			</if>
+		</Values>
+	</CodeSet>    <!-- School Co-Ed Status -->
+	<CodeSet>
+		<Intro>
+			<p>Just three values for Year Level Co-Ed Status</p>
+		</Intro>
+		<ID>Year Level Co-Ed Status</ID>
+		<Values>
+			<Value>
+				<Code>C</Code>
+				<Text>Co-Educational</Text>
+			</Value>
+			<Value>
+				<Code>F</Code>
+				<Text>Female</Text>
+			</Value>
+			<Value>
+				<Code>M</Code>
+				<Text>Male</Text>
+			</Value>
+		</Values>
+	</CodeSet>    <!-- Year Level Co-Ed Status -->	
+
 </IncludeGroup>

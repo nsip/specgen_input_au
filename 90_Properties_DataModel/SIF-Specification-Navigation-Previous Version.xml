@@ -1,1 +1,4 @@
-<a href="http://specification.sifassociation.org/Implementation/AU/3.4.1/">http://specification.sifassociation.org/Implementation/AU/3.4.1/</a>
+<if intl="au">
+	<a href="http://specification.sifassociation.org/Implementation/AU/3.4.1/">http://specification.sifassociation.org/Implementation/AU/3.4.1/</a>
+</if>
+<if intl="nz">This is the first NZ version</if>

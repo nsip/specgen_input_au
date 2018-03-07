@@ -22,9 +22,9 @@
 	<Item>
 		<Element>Address</Element>
 		<Characteristics>MR</Characteristics>
-		<Type ref="CommonTypes" complex="extension" name="AddressType"/>
+		<Type ref="CommonTypes" name="AddressType"/>
 	</Item>
-	<xhtml:Example xmlns="" name="Address List Example">
+	<xhtml:Example xmlns="" name="Address List Example" intl="">
 		<AddressList>
 			<Address Type="0123" Role="012B">
 				<Street>
@@ -43,6 +43,35 @@
 				<GridLocation>
 					<Latitude>41.850000</Latitude>
 					<Longitude>-87.650000</Longitude>
+				</GridLocation>
+			</Address>
+		</AddressList>
+	</xhtml:Example>
+	<xhtml:Example xmlns="" name="NZ Address List Example" intl="nz">
+		<AddressList>
+			<!-- Postal Address -->
+			<Address Type="0123" Role="2382">
+				<Street>
+					<Line1>P O Box 81</Line1>
+				</Street>
+				<City>Martinborough</City>
+				<PostalCode>5741</PostalCode>
+				<GridLocation>
+					<Latitude>-41.219069</Latitude>
+					<Longitude>175.457776</Longitude>
+				</GridLocation>
+			</Address>
+			<!-- Delivery Address -->
+			<Address Type="0124" Role="2382">
+				<Street>
+					<Line1>1175 Lake Ferry Rd</Line1>
+				</Street>
+				<Suburb>RD 1</Suburb>
+				<City>Martinborough</City>
+				<PostalCode>5781</PostalCode>
+				<GridLocation>
+					<Latitude>-41.282319</Latitude>
+					<Longitude>175.347780</Longitude>
 				</GridLocation>
 			</Address>
 		</AddressList>
@@ -69,6 +98,7 @@
 		</Description>
 		<Type ref="CodeSets" name="AUCodeSetsAddressTypeType"/>
 	</Item>
+<if intl="au">
 	<Item>
 		<Attribute>Role</Attribute>
 		<Characteristics>M</Characteristics>
@@ -77,6 +107,17 @@
 		</Description>
 		<Type ref="CodeSets" name="AUCodeSetsAddressRoleType"/>
 	</Item>
+</if>	
+<if intl="nz">   <!--  NZ edition is optional -->
+	<Item>
+		<Attribute>Role</Attribute>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>A facet of Address</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsAddressRoleType"/>
+	</Item>
+</if>	
 	<Item>
 		<Element>EffectiveFromDate</Element>
 		<Characteristics>O</Characteristics>
@@ -102,6 +143,17 @@
 		<Type ref="CommonTypes" name="AddressStreetType"/>
 	</Item>
 	
+<if intl="nz">	
+	<Item>
+		<Element>Suburb</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The suburb part of the address. Also holds 'RD No' part of rural addresses</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+</if>
+
 	<Item>
 		<Element>City</Element>
 		<Characteristics>M</Characteristics>
@@ -114,17 +166,33 @@
 		<Element>StateProvince</Element>
 		<Characteristics>C</Characteristics>
 		<Description>
-			<p>The state or province code. StateTerritory Code only applicable if an Australian Address. Conditional- If Australian Address this is mandatory. </p>
+<if intl="au">			
+	<p>The state or province code. StateTerritory Code only applicable if an Australian Address. Conditional- If Australian Address this is mandatory. </p>
+</if>
+<if intl="nz">
+	<p>The state or province code. StateTerritory Code only applicable if a non-New Zealand Address.</p>
+</if>
 		</Description>
-		<Type ref="CommonTypes" name="StateProvinceType"/>
+		<if intl="au">
+			<Type ref="CommonTypes" name="StateProvinceType"/>
+		</if>
+		<if intl="nz">
+			<Type name="xs:string"/>
+		</if>
 	</Item>
+
 	<Item>
 		<Element>Country</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
 			<p>The country code.</p>
 		</Description>
-		<Type ref="CommonTypes" name="CountryType"/>
+		<if intl="au">
+			<Type ref="CommonTypes" name="CountryType"/>
+		</if>
+		<if intl="nz">
+			<Type name="xs:string"/>
+		</if>
 	</Item>
 	<Item>
 		<Element>PostalCode</Element>
@@ -193,10 +261,10 @@
 		<Description>
 			<p>A list of Statistical Areas assoicated with an address that will be referenced back to ABS 1270.  Only applicable to a physical address, e.g. not relevant for a Post Office Box.</p>
 		</Description>
-		<Type ref="CommonTypes" complex="extension" name="StatisticalAreasType"/>
+		<Type ref="CommonTypes" name="StatisticalAreasType"/>
 	</Item>
 	
-	<xhtml:Example xmlns="" name="Address Example">
+	<xhtml:Example xmlns="" name="Address Example" intl="au">
 		<Address Type="0123" Role="012B">
 			<Street>
 				<Line1>1 IBM Plaza</Line1>
@@ -221,6 +289,50 @@
 			<StatisticalAreas>
 				<StatisticalArea SpatialUnitType="SA2">502011021</StatisticalArea>
 			</StatisticalAreas>
+		</Address>
+	</xhtml:Example>
+	<xhtml:Example name="NZ Street Address Example" intl="nz" xmlns="">
+		<Address Type="0123">
+			<Street>
+				<Line1>84 Washington Ave</Line1>
+			</Street>
+			<Suburb>Brooklyn</Suburb>
+			<City>Wellington</City>
+			<Country>New Zealand</Country>
+			<PostalCode>6002</PostalCode>
+			<GridLocation>
+				<Latitude>-41.306881</Latitude>
+				<Longitude>174.766667</Longitude>
+			</GridLocation>
+		</Address>
+	</xhtml:Example>
+	<xhtml:Example name="NZ P O Box Address Example" intl="nz" xmlns="">
+		<Address Type="0123">
+			<Street>
+				<Line1>P O Box 81</Line1>
+			</Street>
+			<City>Martinborough</City>
+			<Country>New Zealand</Country>
+			<PostalCode>5741</PostalCode>
+			<GridLocation>
+				<Latitude>-41.219069</Latitude>
+				<Longitude>175.457776</Longitude>
+			</GridLocation>
+		</Address>
+	</xhtml:Example>
+	<xhtml:Example name="NZ Rural Address Example" intl="nz" xmlns="">
+		<Address Type="0123">
+			<Street>
+				<Line1>1175 Lake Ferry Rd</Line1>
+			</Street>
+			<Suburb>RD 1</Suburb>
+			<City>Martinborough</City>
+			<Country>New Zealand</Country>
+			<PostalCode>5781</PostalCode>
+			<GridLocation>
+				<Latitude>-41.282319</Latitude>
+				<Longitude>175.347780</Longitude>
+			</GridLocation>
 		</Address>
 	</xhtml:Example>
 </CommonElement>
@@ -256,6 +368,8 @@
 		</Description>
 		<Type name="xs:normalizedString"/>
 	</Item>
+	
+<if intl="au">
 	<Item>
 		<Element>Complex</Element>
 		<Characteristics>O</Characteristics>
@@ -336,7 +450,10 @@
 		</Description>
 		<Type name="xs:normalizedString"/>
 	</Item>
+</if>	
 </CommonElement>
+
+<if intl="au">
 <CommonElement name="StateProvinceType" type="true" dm="true">
 	<Item>
 		<Element>StateProvinceType</Element>
@@ -381,6 +498,8 @@
 		<Country>1101</Country>
 	</xhtml:Example>
 </CommonElement>
+</if>
+
 <CommonElement name="GridLocationType" type="true" dm="true">
 	<Item>
 		<Element>GridLocationType</Element>
@@ -485,7 +604,7 @@
 			<p>1270.0.55.002 - Australian Statistical Geography Standard (ASGS): Volume 2 - Indigenous Structure, July 2011  </p>
 			<p>1270.0.55.003 - Australian Statistical Geography Standard (ASGS): Volume 3 - Non ABS Structures, July, 2012 </p>
 		</Description>
-		<Type ref="CommonTypes" complex="extension" name="StatisticalAreaType"/>
+		<Type ref="CommonTypes" name="StatisticalAreaType"/>
 	</Item>
 </CommonElement>
 <CommonElement name="StatisticalAreaType" type="true" dm="true">

@@ -1,24 +1,26 @@
-<Grouping
+<IncludeGroup
 	xmlns:xi="http://www.w3.org/2001/XInclude"
-	
- 	xmlns="http://sifassociation.org/SpecGen"	
-	code="AUCodeSets" name="AU Code Sets">
+ 	xmlns="http://sifassociation.org/SpecGen">
 
+    <Grouping code="AUCodeSets" name="AU Code Sets">
+		
 	<xi:include parse="xml" href="Common/DataModel-Codesets-SchoolStructure.xml"/>
+<if intl="au">		
 	<xi:include parse="xml" href="Common/DataModel-Codesets-Calendar.xml"/>
 	<xi:include parse="xml" href="Common/DataModel-Codesets-TimeTable.xml"/>
 	<xi:include parse="xml" href="Common/DataModel-Codesets-Resource.xml"/>
 	<xi:include parse="xml" href="Common/DataModel-Codesets-Curriculum.xml"/>
+</if>
+
 	<xi:include parse="xml" href="Common/DataModel-Codesets-PartyRole.xml"/>
 	<xi:include parse="xml" href="Common/DataModel-Codesets-Location.xml"/>
 
+<if intl="au">
 	<xi:include parse="xml" href="Common/DataModel-Codesets-Enrollment.xml"/>
 	<xi:include parse="xml" href="Common/DataModel-Codesets-Attendance.xml"/>
 	<xi:include parse="xml" href="Common/DataModel-Codesets-Wellbeing.xml"/>
-
-	<if intl="au">
-		<xi:include parse="xml" href="AU/DataModel-Codesets-NAPLAN.xml"/>
-	</if>
+	<xi:include parse="xml" href="AU/DataModel-Codesets-NAPLAN.xml"/>
+</if>
 
 <!-- Unused:  AUCodeSetsProgressLevelType -->
 <!--	
@@ -69,7 +71,7 @@
 			</Value>
 			 
 		</Values>
-	</CodeSet>
+	</CodeSet>  <!-- Yes or No -->
 
 	<CodeSet>
 		<Intro>
@@ -97,6 +99,12 @@
 				<Code>13</Code>
 				<Text>Year 13</Text>
 			</Value>
+<if intl="nz">			
+			<Value>
+				<Code>14</Code>
+				<Text>Year 14 and above</Text>
+			</Value>
+</if>			
 			<Value>
 				<Code>2</Code>
 				<Text>Year 2</Text>
@@ -129,6 +137,7 @@
 				<Code>9</Code>
 				<Text>Year 9</Text>
 			</Value>
+<if intl="au">			
 			<Value>
 				<Code>K</Code>
 				<Text>Kindergarten</Text>
@@ -181,12 +190,12 @@
 				<Code>UGSnrSec</Code>
 				<Text>Ungraded Senior Secondary</Text>
 			</Value>
-		 
+</if>		 
 		</Values>
-	</CodeSet>
+	</CodeSet>  <!-- School Year Levels -->
 
 <!-- Unused:  AUCodeSetsAssessmentType -->
-<!--
+<!-- 
 <CodeSet>
 		<Intro>
 			<p/>
@@ -279,7 +288,7 @@
 -->
 
 <!-- Unused: AssessmentReportingMethodType -->	
-<!--
+<!-- 
 <CodeSet>
 		<Intro>
 			<p/>
@@ -378,6 +387,12 @@
 		</Values>
 	</CodeSet>
 -->
-
-
 </Grouping>
+
+<if intl="nz">
+    <Grouping code="NZCodeSets" name="NZ Code Sets">
+		<xi:include parse="xml" href="NZ/DataModel-CodeSets-NZ.xml"/>
+	</Grouping>
+</if>
+
+</IncludeGroup>

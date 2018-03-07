@@ -1,1 +1,6 @@
-<a href="http://specification.sifassociation.org/Implementation/AU/">http://specification.sifassociation.org/Implementation/AU/</a>
+<if intl="au">
+	<a href="http://specification.sifassociation.org/Implementation/AU/">http://specification.sifassociation.org/Implementation/AU/</a>
+</if>
+<if intl="nz">
+	<a href="http://specification.sifassociation.org/Implementation/NZ/">http://specification.sifassociation.org/Implementation/NZ/</a>
+</if>

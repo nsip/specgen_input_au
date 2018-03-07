@@ -11,6 +11,7 @@
 
 
 	<!-- Element types for the Party & Role domains -->
+<if intl="au">
 <CommonElement name="PersonInfoType" type="true" dm="true">
 	<Item>
 		<Element>PersonInfoType</Element>
@@ -180,35 +181,8 @@
 		</PersonInfo>
 	</xhtml:Example>
 </CommonElement>
+</if>
 
-<CommonElement name="NameType" type="true" dm="true">
-	<Item>
-		<Element>NameType</Element>
-		<Description>
-      The Name element, which could belong to a student, staff member, contact, etc. This element or a form of this element with a
-      subset of Type values occurs within objects
-      such as StudentPersonal, StudentContactPersonal, StaffPersonal, etc.
-    </Description>
-		<Type ref="CommonTypes" complex="extension" name="BaseNameType"/>
-	</Item>
-	<Item>
-		<Attribute>Type</Attribute>
-		<Characteristics>M</Characteristics>
-		<Description>
-			<p>
-        Code that specifies what type of name this is.  If unsure, use <code>LGL</code>.
-      </p>
-		</Description>
-		<Type ref="CodeSets" name="AUCodeSetsNameUsageTypeType"/>
-	</Item>
-	<xhtml:Example xmlns="" name="Name Example">
-		<Name Type="LGL">
-			<FamilyName>Woodall</FamilyName>
-			<GivenName>Charles</GivenName>
-			<MiddleName>William</MiddleName>
-		</Name>
-	</xhtml:Example>
-</CommonElement>
 <CommonElement name="BaseNameType" type="true" dm="true">
 	<Item>
 		<Element>BaseNameType</Element>
@@ -310,6 +284,39 @@
 		</BaseName>
 	</xhtml:Example>
 </CommonElement>
+
+<if intl="au">
+<CommonElement name="NameType" type="true" dm="true">
+	<Item>
+		<Element>NameType</Element>
+		<Description>
+			<p>The Name element, which could belong to a
+			<if intl="nz">Provider, </if> Student, Staff Member, Contact, etc.
+			This element or a form of this element
+			with a subset of Type values occurs within objects such as
+			<if intl="nz">Provider, </if> StudentPersonal, StudentContactPersonal, StaffPersonal, etc.
+		</p>
+    </Description>
+		<Type ref="CommonTypes" complex="extension" name="BaseNameType"/>
+	</Item>
+	<Item>
+		<Attribute>Type</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>
+        Code that specifies what type of name this is.  If unsure, use <code>LGL</code>.
+      </p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsNameUsageTypeType"/>
+	</Item>
+	<xhtml:Example xmlns="" name="Name Example">
+		<Name Type="LGL">
+			<FamilyName>Woodall</FamilyName>
+			<GivenName>Charles</GivenName>
+			<MiddleName>William</MiddleName>
+		</Name>
+	</xhtml:Example>
+</CommonElement>
 <CommonElement name="NameOfRecordType" type="true" dm="true">
 	<Item>
 		<Element>NameOfRecordType</Element>
@@ -348,7 +355,6 @@
 		</BaseName>
 	</xhtml:Example>
 </CommonElement>
-
 <CommonElement name="OtherNamesType" type="true" dm="true">
 	<Item>
 		<Element>OtherNamesType</Element>
@@ -483,12 +489,14 @@
 	<Item>
 		<Element>CountriesOfCitizenship</Element>
 		<Characteristics>O</Characteristics>
+		<Description/>
 		<Type ref="CommonTypes" name="CountryListType"/>
 	</Item>
 
 	<Item>
 		<Element>CountriesOfResidency</Element>
 		<Characteristics>O</Characteristics>
+		<Description/>
 		<Type ref="CommonTypes" name="CountryList2Type"/>
 	</Item>
 	
@@ -857,6 +865,7 @@
 		<Type name="xs:normalizedString"/>
 	</Item>
 </CommonElement>
+</if>
 
 <CommonElement name="EmailListType" type="true" dm="true">
 	<Item>
@@ -901,6 +910,7 @@
 		<Email Type="01">contact@sifinfo.org</Email>
 	</xhtml:Example>
 </CommonElement>
+
 <CommonElement name="PhoneNumberListType" type="true" dm="true">
 	<Item>
 		<Element>PhoneNumberListType</Element>
@@ -912,7 +922,7 @@
 	<Item>
 		<Element>PhoneNumber</Element>
 		<Characteristics>MR</Characteristics>
-		<Type ref="CommonTypes" complex="extension" name="PhoneNumberType"/>
+		<Type ref="CommonTypes" name="PhoneNumberType"/>
 	</Item>
 	<xhtml:Example xmlns="" name="Phone Number List Example">
 		<PhoneNumberList>
@@ -937,6 +947,7 @@
 		</Description>
 		<Type ref="CodeSets" name="AUCodeSetsTelephoneNumberTypeType"/>
 	</Item>
+<if intl="au">	
 	<Item>
 		<Element>Number</Element>
 		<Characteristics>M</Characteristics>
@@ -950,6 +961,23 @@
 		</Description>
 		<Type name="xs:normalizedString"/>
 	</Item>
+</if>
+<if intl="nz">	
+	<Item>
+		<Element>Number</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Phone number.  Free-form, but typical New Zealand formats include:</p>
+			<ul>
+				<li>(0##) ###-####</li>
+				<li>###-####</li>
+				<li>+##### ### ####</li>
+			</ul>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+</if>
+
 	<Item>
 		<Element>Extension</Element>
 		<Characteristics>O</Characteristics>
@@ -982,6 +1010,7 @@
 	</xhtml:Example>
 </CommonElement>
 
+<if intl="au">
 <CommonElement name="BirthDateType" type="true" dm="true">
 	<Item>
 		<Element>BirthDateType</Element>
@@ -1280,6 +1309,7 @@
 <Item>
 		<Element>CountryList2Type</Element>
 		<Characteristics>O</Characteristics>
+		<Description/>
 		<List mode="List">
     </List>
 	</Item>
@@ -1792,5 +1822,305 @@
 		</Values>
 	</Item>
 </CommonElement>
+</if>
 
+<!-- EducationOrganisation & Provider -->
+<CommonElement name="OrganisationType" type="true" dm="true">
+	<Item>
+		<Element>OrganisationType</Element>
+		<Description>
+			<p>
+				Generic organisation that operates within the education sector.
+				e.g. Providers, Communities of Learning, Ministry local offices, etc.
+			</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>AddressList</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+			<p>The set of location and postal addresses that the Organisation uses</p>
+		</Description>
+		<Type ref="CommonTypes" name="AddressListType"/>
+	</Item>   <!-- AddressList -->
+	<Item>
+		<Element>EmailList</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+			<p>The set of contact email addresses that the Organisation uses</p>
+		</Description>
+		<Type ref="CommonTypes" name="EmailListType"/>
+	</Item>   <!-- EmailList -->
+	<Item>
+		<Element>PhoneNumberList</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+			<p>The set of contact phone numbers that the Organisation uses</p>
+		</Description>
+		<Type ref="CommonTypes" name="PhoneNumberListType"/>
+	</Item>   <!-- PhoneNumberList -->
+	<Item>
+		<Element>ContactList</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>Contact details for partiular people at the organisation</p>
+		</Description>
+		<Type ref="CommonTypes" name="ContactListType"/>
+	</Item>   <!-- ContactList -->
+	<Item>
+		<Element>EducationRegion</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>A region of New Zealand defined by the Ministry of Education for adminstrative purposes</p>
+		</Description>
+		<Type ref="CodeSets" name="NZCodeSetsEducationRegionType"/>
+	</Item>   <!-- EducationRegion -->
+	<Item>
+		<Element>Name</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The normal business name of the Organisation</p>
+		</Description>
+		<Type name="xs:string"/>
+	</Item>   <!-- Name -->
+	<Item>
+		<Element>RelatedOrganisationList</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>A list of other organisations that are related to the Provider</p>
+		</Description>
+		<Type ref="CommonTypes" name="RelatedOrganisationListType"/>
+	</Item>   <!-- RelatedOrganisationList -->
+	<Item>
+		<Element>OperationalStatus</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>Current status of the Provider</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsOperationalStatusType"/>
+	</Item>   <!-- OperationalStatus-->
+	<Item>
+		<Element>Type</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>Describes the nature of the Organisation;  for Schools this indicate
+			the schooling levels offered.
+			</p>
+		</Description>
+		<Type ref="CodeSets" name="NZCodeSetsOrganisationTypeType"/>
+	</Item>   <!-- Type -->
+	<Item>
+		<Element>URL</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>URL of the Organisation's main public facing website</p>
+		</Description>
+		<Type name="xs:anyURI"/>
+	</Item>   <!-- URL -->
+</CommonElement>
+<CommonElement name="ContactListType" type="true" dm="true">
+	<Item>
+		<Element>ContactListType</Element>
+		<Description>
+			<p>A list of people's contact details</p>
+		</Description>
+		<List mode="List"/>
+	</Item>
+	<Item>
+		<Element>Contact</Element>
+		<Characteristics>MR</Characteristics>
+		<Description/>
+		<Type ref="CommonTypes" name="ContactType"/>
+	</Item>
+</CommonElement>
+<CommonElement name="ContactType" type="true" dm="true">
+	<Item>
+		<Element>ContactType</Element>
+		<Description>
+			<p>A particular person's contact details</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>Role</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The role the contact plays within the Organisation being contacted</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>ContactInfo</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The person's contact details</p>
+		</Description>
+		<Type ref="CommonTypes" name="ContactInfoType"/>
+	</Item>
+</CommonElement>
+<CommonElement name="ContactInfoType" type="true" dm="true">
+	<Item>
+		<Element>ContactInfoType</Element>
+		<Description>
+			<p>Generic type holding a person's contact details</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>Name</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+			<p>The contact's name</p>
+		</Description>
+		<Type ref="CommonTypes" name="BaseNameType"/>
+	</Item>
+	<Item>
+		<Element>AddressList</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p/>
+		</Description>
+		<Type ref="CommonTypes" name="AddressListType"/>
+	</Item>
+	<Item>
+		<Element>EmailList</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>List of Email elements.</p>
+		</Description>
+		<Type ref="CommonTypes" name="EmailListType"/>
+	</Item>
+	<Item>
+		<Element>PhoneNumberList</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>List of PhoneNumber elements.</p>
+		</Description>
+		<Type ref="CommonTypes" name="PhoneNumberListType"/>
+	</Item>
+</CommonElement>
+<CommonElement name="RelatedOrganisationListType" type="true" dm="true">
+	<Item>
+		<Element>RelatedOrganisationListType</Element>
+		<Description>
+			<p>A list of an Organisation's related organisations</p>
+		</Description>
+		<List mode="List"/>
+	</Item>
+	<Item>
+		<Element>RelatedOrganisation</Element>
+		<Characteristics>MR</Characteristics>
+		<Description/>
+		<Type ref="CommonTypes" name="RelatedOrganisationType"/>
+	</Item>
+	<xhtml:Example xmlns="" name="Related Organisation List Example">
+		<RelatedOrganisationList>
+			<RelatedOrganisation RefId="0951bacf-fc88-4ed6-8113-11a6d6335c07">
+				<LocalId>99102</LocalId>
+				<Name>Tai Tokerau</Name>
+				<ObjectType>EducationOrganisation</ObjectType>
+				<OrganisationType>16</OrganisationType>
+			</RelatedOrganisation>
+			<RelatedOrganisation RefId="ac0871d9-6562-4209-ae86-abdb3661842b">
+				<LocalId>99204</LocalId>
+				<Name>Masterton (Whakaoriori) Kāhui Ako</Name>
+				<ObjectType>EducationOrganisation</ObjectType>
+				<OrganisationType>15</OrganisationType>
+			</RelatedOrganisation>
+		</RelatedOrganisationList>
+	</xhtml:Example>
+</CommonElement> 
+
+<CommonElement name="ObjectReferenceType" type="true" dm="true">
+	<Item>
+		<Element>ObjectReferenceType</Element>
+		<Description>
+			<p>A reference to another SIF Data Object</p>
+		</Description>
+	</Item>
+	<Item>
+		<Attribute>RefId</Attribute>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description><p>The GUUID of the referenced object</p></Description>
+		<Type ref="CommonTypes" name="RefIdType"/>
+	</Item>
+	<Item>
+		<Element>LocalId</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>Local identifier representing the referenced object.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"/>
+	</Item>
+	<Item>
+		<Element>Name</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description><p>The normal descriptive name of the referenced object.</p></Description>
+		<Type name="xs:string"/>
+	</Item>
+	<Item>
+		<Element>ObjectType</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The type of the referenced object:</p>
+		</Description>
+		<Type ref="CodeSets" name="NZCodeSetsReferrableDataObjectsType"/>
+	</Item>
+</CommonElement>
+<CommonElement name="RelatedOrganisationType" type="true" dm="true">
+	<Item>
+		<Element>RelatedOrganisationType</Element>
+		<Description>
+			<p>Extends <code>ObjectReferenceType</code> to add an extra element, <code>OrganisationType</code>,
+			describing the nature of the related organisation.</p>
+		</Description>
+		<Type complex="extension" name="ObjectReferenceType"/>
+	</Item>
+	<Item>
+		<Element>OrganisationType</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>Describes the nature of the related Education Organisation.</p>
+		</Description>
+		<Type ref="CodeSets" name="NZCodeSetsOrganisationTypeType"/>
+	</Item>
+	<xhtml:Example xmlns="" name="Secondary School Related Organisation">
+		<RelatedOrganisation RefId="a2f8c526-4e39-42b7-a7a6-0c7188ea5cf3">
+			<LocalId>275</LocalId>
+			<Name>Hogwart's High School</Name>
+			<ObjectType>Provider</ObjectType>
+			<OrganisationType>11</OrganisationType>
+		</RelatedOrganisation>
+	</xhtml:Example>
+	<xhtml:Example xmlns="" name="MoE Region Related Organisation">
+		<RelatedOrganisation RefId="0951bacf-fc88-4ed6-8113-11a6d6335c07">
+			<LocalId>99102</LocalId>
+			<Name>Tai Tokerau</Name>
+			<ObjectType>EducationOrganisation</ObjectType>
+			<OrganisationType>16</OrganisationType>
+		</RelatedOrganisation>
+	</xhtml:Example>
+	<xhtml:Example xmlns="" name="Kāhui Ako Related Organisation">
+		<RelatedOrganisation RefId="ac0871d9-6562-4209-ae86-abdb3661842b">
+			<LocalId>99204</LocalId>
+			<Name>Masterton (Whakaoriori) Kāhui Ako</Name>
+			<ObjectType>EducationOrganisation</ObjectType>
+			<OrganisationType>15</OrganisationType>
+		</RelatedOrganisation>
+	</xhtml:Example>
+</CommonElement>
 </IncludeGroup>
