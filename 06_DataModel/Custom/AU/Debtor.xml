@@ -128,7 +128,7 @@
         </Address>
       </AddressList>
       <BillingName>Flintstone Family Trust</BillingName>
-      <BillingNote>Do not invoice under parent’s real name.</BillingNote>
+      <BillingNote>Do not invoice under parent's real name.</BillingNote>
       <Discount>10.0</Discount>
     </Debtor>
     
