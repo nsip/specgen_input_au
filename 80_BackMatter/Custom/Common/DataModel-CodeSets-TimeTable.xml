@@ -55,7 +55,7 @@
 			</Value>
 			 
 		</Values>
-	</CodeSet>
+	</CodeSet>    <!-- Scheduled Activity Type -->
 	<CodeSet>
 		<Intro>
 			<p>Source: SIF-AU (EquipmentInfo)</p>
@@ -92,7 +92,7 @@
 			</Value>
 			 
 		</Values>
-	</CodeSet>	
+	</CodeSet>	  <!-- Equipment Type -->
 	<CodeSet>
 		<Intro>
 			<p>Source: SIF-AU (Scheduled Activity)</p>
@@ -117,7 +117,7 @@
 			</Value>
 			 
 		</Values>
-	</CodeSet>
+	</CodeSet>    <!-- Teacher Cover Credit -->
 	<CodeSet>
 		<Intro>
 			<p>Source: SIF-AU (Scheduled Activity)</p>
@@ -138,7 +138,7 @@
 			</Value>
 			 
 		</Values>
-	</CodeSet>
+	</CodeSet>    <!-- Teacher Cover Supervision -->
 	<CodeSet>
 		<Intro>
 			<p/>
@@ -1336,10 +1336,9 @@
 			<Value>
 				<Code>7019</Code>
 				<Text>Other general activity</Text>
-			</Value>
-			 
+			</Value>			 
 		</Values>
-	</CodeSet>
+	</CodeSet>    <!-- Activity Involvement Code -->
 	<CodeSet>
 		<Intro>
 			<p/>
@@ -1360,7 +1359,7 @@
 			</Value>
 			 
 		</Values>
-	</CodeSet>
+	</CodeSet>    <!-- Activity Type -->
 	
 </IncludeGroup>
 

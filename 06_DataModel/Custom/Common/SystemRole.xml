@@ -8,6 +8,8 @@
 	<EventsReported>true</EventsReported>
     <Key>@RefId</Key>    
     <Intro>
+      <p>Note: WARNING This object has been marked for deprecation and is planned to be removed with the 3.5 SIF AU Data Model release. If you plan to use this object, please contact your SIF AU DSWG member, please note that it may become unavailable.
+      </p>
       <p>
         The SystemRole Object defines the systems that a user has access to, the roles they perform within those systems, and the scope of those roles within the particular system.
       </p>
@@ -190,11 +192,13 @@
     <Item>
       <Element>SIF_Metadata</Element>
       <Characteristics>O</Characteristics>
+	  <privacyRating>Low</privacyRating>
       <Type ref="DataModelTaskForce" name="SIF_MetadataType"></Type>
     </Item>
     <Item>
      <Element>SIF_ExtendedElements</Element>
      <Characteristics>O</Characteristics>
+	 <privacyRating>Low</privacyRating>
      <Type ref="DataModel" name="SIF_ExtendedElementsType"></Type>
     </Item>
 

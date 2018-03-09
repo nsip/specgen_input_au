@@ -22,9 +22,10 @@
 	<xi:include parse="xml" href="AU/DataModel-Codesets-NAPLAN.xml"/>
 </if>
 
+
 <!-- Unused:  AUCodeSetsProgressLevelType -->
-<!--	
-	<CodeSet>
+<!--
+    <CodeSet>
 		<Intro>
 			<p/>
 		</Intro>
@@ -71,8 +72,7 @@
 			</Value>
 			 
 		</Values>
-	</CodeSet>  <!-- Yes or No -->
-
+	</CodeSet>      <!-- Yes or No -->
 	<CodeSet>
 		<Intro>
       
@@ -192,8 +192,8 @@
 			</Value>
 </if>		 
 		</Values>
-	</CodeSet>  <!-- School Year Levels -->
-
+	</CodeSet>      <!-- Year Level Code -->
+	
 <!-- Unused:  AUCodeSetsAssessmentType -->
 <!-- 
 <CodeSet>

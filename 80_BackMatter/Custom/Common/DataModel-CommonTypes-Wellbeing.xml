@@ -30,7 +30,6 @@
 	   <Type ref="CommonTypes" name="MedicationType"/>
 	</Item>
  </CommonElement>
- 
  <CommonElement name="MedicationType" type="true" dm="true">
     <Item>
 		<Element>MedicationType</Element>
@@ -81,7 +80,7 @@
   	</Item>
   </CommonElement>
   
-  <CommonElement name="WellbeingEventCategoryListType" type="true" dm="true">
+ <CommonElement name="WellbeingEventCategoryListType" type="true" dm="true">
     <Item>
 		<Element>WellbeingEventCategoryListType</Element>
 		<Characteristics>O</Characteristics>
@@ -101,7 +100,7 @@
 	  <Type ref="CommonTypes" name="WellbeingEventCategoryType"></Type>
 	</Item>
   </CommonElement>
-   <CommonElement name="WellbeingEventCategoryType" type="true" dm="true">
+ <CommonElement name="WellbeingEventCategoryType" type="true" dm="true">
 	 <Item>
 		<Element>WellbeingEventCategoryType</Element>
         <Characteristics>MR</Characteristics>
@@ -130,7 +129,7 @@
 	 </Item>
  </CommonElement>
  
-  <CommonElement name="WellbeingEventSubCategoryListType" type="true" dm="true">
+ <CommonElement name="WellbeingEventSubCategoryListType" type="true" dm="true">
 	  <Item>
 		<Element>WellbeingEventSubCategoryListType</Element>
          <Characteristics>O</Characteristics>
@@ -151,7 +150,7 @@
 	</Item>
  </CommonElement>
  
-   <CommonElement name="WellbeingEventLocationDetailsType" type="true" dm="true">
+ <CommonElement name="WellbeingEventLocationDetailsType" type="true" dm="true">
     <Item>
 		<Element>WellbeingEventLocationDetailsType</Element>
 		 <Description>
@@ -243,7 +242,6 @@
   
  </CommonElement>
  
- 
  <CommonElement name="PersonInvolvementListType" type="true" dm="true">
 	  <Item>
 		<Element>PersonInvolvementListType</Element>
@@ -261,7 +259,6 @@
 	   <Type ref="CommonTypes" name="PersonInvolvementType"/>
 	</Item>
  </CommonElement>
- 
  <CommonElement name="PersonInvolvementType" type="true" dm="true">
     <Item>
 		<Element>PersonInvolvementType</Element>
@@ -468,7 +465,7 @@
 		<Type ref="CodeSets" name="AUCodeSetsWellbeingStatusType"/>
   	</Item>
  </CommonElement>
-  <CommonElement name="DetentionContainerType" type="true" dm="true">
+ <CommonElement name="DetentionContainerType" type="true" dm="true">
     <Item>
 		<Element>DetentionContainerType</Element>
 		 <Description>
@@ -543,7 +540,7 @@
   	</Item>
  </CommonElement>
  
-  <CommonElement name="PlanRequiredListType" type="true" dm="true">
+ <CommonElement name="PlanRequiredListType" type="true" dm="true">
 	  <Item>
 		<Element>PlanRequiredListType</Element>
          <Characteristics>O</Characteristics>
@@ -587,7 +584,7 @@
   	</Item>
   </CommonElement>
  
-   <CommonElement name="AwardContainerType" type="true" dm="true">
+ <CommonElement name="AwardContainerType" type="true" dm="true">
     <Item>
 		<Element>AwardContainerType</Element>
 		 <Description>
@@ -635,7 +632,7 @@
 		<Type ref="CodeSets" name="AUCodeSetsWellbeingStatusType"/>
   	</Item>
  </CommonElement>
-  <CommonElement name="OtherWellbeingResponseContainerType" type="true" dm="true">
+ <CommonElement name="OtherWellbeingResponseContainerType" type="true" dm="true">
     <Item>
 		<Element>OtherWellbeingResponseContainerType</Element>
 		 <Description>

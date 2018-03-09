@@ -505,7 +505,7 @@
 	<Type ref="CommonTypes" name="LocalIdType"/>
   </Item>
  </CommonElement> 
-   -->
+-->
    
 <CommonElement name="DomainBandsContainerType" type="true" dm="true">
 	<Item>
@@ -695,7 +695,8 @@
   </CommonElement>
   
 <!--Not actually used anywhere -->
-<!-- <CommonElement name="BranchingScoresType" type="true" dm="true">
+<!--
+	<CommonElement name="BranchingScoresType" type="true" dm="true">
 	<Item>
 		<Element>BranchingScoresType</Element>
 		<Characteristics>M</Characteristics>
@@ -764,7 +765,8 @@
 		  <p>Minimum Testlet Score resulting in same difficulty testlet presented at the end of stage 2</p>
 		</Description>
 	  </Item>
- </CommonElement-->  
+	  </CommonElement>
+-->
    
 <CommonElement name="NAPTestItemListType" type="true" dm="true">
 	<Item>

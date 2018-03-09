@@ -1,7 +1,7 @@
 <Section name="What is SIF (AU)?"
 		 xmlns="http://sifassociation.org/SpecGen">
   <p>
-    SIF Implementation Specification (Australia) defines a set of data objects supporting the Australia's interoperability
+    SIF Implementation Specification (Australia) defines a set of data objects supporting Australia's interoperability
     requirements for the education sector and combines this data model with established infrastructure protocols from the SIF Implementation Specification <a href="References.html#SIF">[SIF]</a>.
     SIF Implementation Specification (Australia) 3.4 leverages the SIF architecture and refers to SIF Infrastructure Specifications greater than 3.0.1 [SIF 3.x]  to support its data objects, with an Australia-specific namespace and the data objects defined in this specification.
     Technical readers should note that the version number internal to SIF XML messages identifies the version number of the SIF Data Model.

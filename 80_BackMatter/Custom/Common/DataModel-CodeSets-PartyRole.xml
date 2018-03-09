@@ -1708,27 +1708,6 @@
 		<Intro>
 			<p/>
 		</Intro>
-		<ID>School Enrollment Type</ID>
-		<Values>
-			<Value>
-				<Code>01</Code>
-				<Text>Home School</Text>
-			</Value>
-			<Value>
-				<Code>02</Code>
-				<Text>Other School</Text>
-			</Value>
-			<Value>
-				<Code>03</Code>
-				<Text>Concurrent Enrolment</Text>
-			</Value>
-			 
-		</Values>
-	</CodeSet>    <!-- School Enrollment Type -->
-    <CodeSet>
-		<Intro>
-			<p/>
-		</Intro>
 		<ID>Source Code Type</ID>
 		<Values>
 			<Value>
@@ -1753,7 +1732,7 @@
 			</Value>
 			 
 		</Values>
-	</CodeSet>    <!-- Source Code -->
+	</CodeSet>    <!-- Source Code Type -->
     <CodeSet>
 		<Intro>
 			<p/>
@@ -1868,8 +1847,6 @@
 		</Values>
 	</CodeSet>    <!-- Name Usage Type -->
 </if>
-
-
 
 	<CodeSet>
 		<Intro>

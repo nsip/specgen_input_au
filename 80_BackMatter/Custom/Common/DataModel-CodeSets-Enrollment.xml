@@ -3,6 +3,27 @@
 	
  	xmlns="http://sifassociation.org/SpecGen">
 
+    <CodeSet>
+		<Intro>
+			<p/>
+		</Intro>
+		<ID>School Enrollment Type</ID>
+		<Values>
+			<Value>
+				<Code>01</Code>
+				<Text>Home School</Text>
+			</Value>
+			<Value>
+				<Code>02</Code>
+				<Text>Other School</Text>
+			</Value>
+			<Value>
+				<Code>03</Code>
+				<Text>Concurrent Enrolment</Text>
+			</Value>
+			 
+		</Values>
+	</CodeSet>    <!-- School Enrollment Type -->
 	<CodeSet>
 		<Intro>
 			<p/>
@@ -23,7 +44,7 @@
 			</Value>
 			 
 		</Values>
-	</CodeSet>
+	</CodeSet>    <!-- Enrollment Time Frame -->
 	<CodeSet>
 		
 		<Intro>
@@ -121,7 +142,7 @@
 			</Value>
 			 
 		</Values>
-	</CodeSet>
+	</CodeSet>    <!-- Entry Type -->
 	<CodeSet>
 		<Intro>
 			<p/>
@@ -142,7 +163,7 @@
 			</Value>
 			 
 		</Values>
-	</CodeSet>
+	</CodeSet>    <!-- Exit/Withdrawal Status -->
 	<CodeSet>
 		<Intro>
 			<p/>
@@ -284,7 +305,7 @@
 			</Value>
 			 
 		</Values>
-	</CodeSet>
+	</CodeSet>    <!-- Exit/Withdrawal Type -->
 	<CodeSet>
 		<Intro>
 			<p/>
@@ -301,7 +322,7 @@
 			</Value>
 			 
 		</Values>
-	</CodeSet>
+	</CodeSet>    <!-- FTPT Status Code -->
 	<CodeSet>
 		<Intro>
 			<p/>
@@ -322,8 +343,7 @@
 			</Value>
 			 
 		</Values>
-	</CodeSet>
-
+	</CodeSet>    <!-- Public School Catchment Status -->
 	<CodeSet>
 		<Intro>
 			<p>Source: US 2.6 0209 Medium Of Instruction</p>
@@ -364,7 +384,7 @@
 			</Value>
 			 
 		</Values>
-	</CodeSet>
+	</CodeSet>    <!-- Medium of Instruction -->
 	<CodeSet>
 		<Intro>
 			<p>Source: US 2.6 0171 Receiving Location Of Instruction/Service</p>
@@ -413,9 +433,7 @@
 			</Value>
 			 
 		</Values>
-	</CodeSet>
-
-
+	</CodeSet>    <!-- Receiving Location of Instruction -->
 	<CodeSet>
 		<Intro>
 			<p/>
@@ -620,7 +638,7 @@
 			</Value>
 			 
 		</Values>
-	</CodeSet>
+	</CodeSet>    <!-- Student/Family Program Type -->
 	<CodeSet>
 		<Intro>
 			<p/>
@@ -653,7 +671,7 @@
 			</Value>
 			 
 		</Values>
-	</CodeSet>
+	</CodeSet>    <!-- Programme Funding Source Code -->
 	<CodeSet>
 		<ID>0792 Identification Procedure</ID>
 		<Values>
@@ -687,7 +705,7 @@
 			</Value>
 		 
 		</Values>
-	</CodeSet>
+	</CodeSet>    <!-- 0792 Identification Procedure -->
 	<CodeSet>
 		<ID>0211 Program Availability</ID>
 		<Values>
@@ -729,6 +747,5 @@
 			</Value>
 		 
 		</Values>
-	</CodeSet>
-	
+	</CodeSet>    <!-- 0211 Program Availability -->	
 </IncludeGroup>

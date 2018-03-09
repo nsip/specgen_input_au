@@ -14,7 +14,7 @@
 		  <Value><Code>NotInPath</Code><Text>NotInPath</Text></Value>
 		  <Value><Code>NotAttempted</Code><Text>NotAttempted</Text></Value>
       </Values>
-    </CodeSet>
+    </CodeSet>    <!-- NAP Response Correctness -->
   <CodeSet>
       <Intro>
         <p></p>
@@ -31,8 +31,11 @@
 		  <Value><Code>8</Code><Text>Australian Capital Territory</Text></Value>
 		  <Value><Code>9</Code><Text>Other Territories</Text></Value>
       </Values>
-  </CodeSet>   
- <!--CodeSet>
+  </CodeSet>    <!-- NAP Jurisdiction -->
+
+<!-- Unused: NAP Writing Rubric -->
+<!--
+<CodeSet>
       <Intro>
         <p></p>
       </Intro>
@@ -79,9 +82,10 @@
 			  <Text>Spelling</Text>
 		  </Value>
       </Values>
-   </CodeSet-->      
+	  </CodeSet>
+-->
     
-   <CodeSet>
+  <CodeSet>
       <Intro>
         <p></p>
       </Intro>
@@ -96,9 +100,8 @@
 			  <Text>Narrative</Text>
 		  </Value>
       </Values>
-   </CodeSet>   
-   
-   <CodeSet>
+   </CodeSet>    <!-- NAP Writing Genre -->  
+  <CodeSet>
       <Intro>
         <p></p>
       </Intro>
@@ -117,9 +120,8 @@
 			  <Text>Auto Essay Scoring</Text>
 		  </Value>
       </Values>
-   </CodeSet>   
-   
-<CodeSet>
+   </CodeSet>    <!-- NAP Test Item Marking Type -->
+  <CodeSet>
       <Intro>
         <p></p>
       </Intro>
@@ -144,8 +146,7 @@
 		<Value><Code>SP</Code><Text>Select point</Text></Value>
 		<Value><Code>TE</Code><Text>Text entry</Text></Value>
 		<Value><Code>Unknown</Code><Text>Unknown</Text></Value>
-	</Values></CodeSet>    
-    
+	</Values></CodeSet>    <!-- NAP Test Item Type -->
   <CodeSet>
       <Intro>
         <p></p>
@@ -161,8 +162,7 @@
 		      <Text>Equating</Text>
 		  </Value>
       </Values>
-    </CodeSet>    
-  
+    </CodeSet>    <!-- NAP Test Type -->
   <CodeSet>
       <Intro>
         <p></p>
@@ -190,7 +190,7 @@
 		      <Text>Grammar and Punctuation</Text>
 		  </Value>
       </Values>
-    </CodeSet>  
+    </CodeSet>    <!-- NAP Test Domain -->
   <CodeSet>
       <Intro>
         <p>This codeset has been compiled for the Personal Needs and Preferences for students sitting NAPLAN.  Source: ACARA</p>
@@ -213,8 +213,8 @@
 		<Value><Code>SCR</Code><Text>Scribe</Text></Value>
 		<Value><Code>SUP</Code><Text>NAPLAN Support person</Text></Value>
 		</Values>
-   </CodeSet>
-   <CodeSet>
+   </CodeSet>    <!-- PNP Code -->
+  <CodeSet>
       <Intro>
         <p>This codeset has been introduced to enumerate the status of a student participating in a NAPLAN event.  Derived from valid values in the AD Assessment Delivery Platform.</p>
       </Intro>
@@ -253,5 +253,5 @@
 		  <Text>No Longer Enrolled</Text>
 		</Value>
       </Values>
-   </CodeSet>
+   </CodeSet>    <!-- NAP Participation Code -->
 </IncludeGroup>

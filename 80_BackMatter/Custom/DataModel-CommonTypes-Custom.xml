@@ -3,8 +3,8 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:xi="http://www.w3.org/2001/XInclude"
 	xmlns:xhtml="http://www.w3.org/1999/xhtml"
-	
-	xmlns="http://sifassociation.org/SpecGen">
+
+	xmlns="http://sifassociation.org/SpecGen">	
 
 	<!-- IncludeGroup is syntactic sugar that makes this a well-formed XML file that can
 		 be validated separately; and allows the xi:include to have parse="xml"  SpecGen tool ignores it. -->
@@ -37,7 +37,647 @@
 </if>
 
 
-<CommonElement name="PartialDateType" type="true" dm="true">
+<!--
+<CommonElement name ="ScoresType" type="true" dm="true"> 
+<Item>
+    <Element>ScoresType</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Container for score elements. </p>
+    </Description>
+    <List mode="List">
+    </List>
+  </Item>
+  <Item>
+    <Element>Score</Element>
+    <Characteristics>OR</Characteristics>
+    <Description>
+      <p>The score with other information related to the score.</p>
+    </Description>
+    <Type ref="CommonTypes" name="ScoreType"></Type>
+  </Item>
+ </CommonElement>
+ 
+<CommonElement name ="ScoreType" type="true" dm="true">
+ <Item>
+    <Element>ScoreType</Element>
+    <Characteristics>OR</Characteristics>
+    <Description>
+      <p>The score with other information related to the score.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>AssessmentSubTestRefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Description>
+      <p>References the AssessmentSubTest that defines the score.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>ScoreValue</Element>
+    <Type name="xs:normalizedString"></Type>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The value of the score.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>DiagnosticStatement</Element>
+    <Characteristics>O</Characteristics>
+    <Type name="xs:string"></Type>
+    <Description>
+      <p>Comment created by any logical analysis of this score.</p>
+    </Description>
+  </Item>
+
+  <Item>
+    <Element>Description</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>This is further qualification of a Student Score.</p>
+    </Description>
+    <Type name='xs:string'/>
+  </Item>
+
+  <Item>
+    <Element>NumberOfResponses</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>This is the number of responses that are included with the StudentScoreSet.</p>
+    </Description>
+    <Type name='xs:unsignedInt'/>
+  </Item>
+  </CommonElement
+-->
+<!-- The above was from StudentScoreSet not implemented in the first 3.4 release-->
+
+<!--
+<CommonElement name="GlobalRefIdPointerType" type="true" dm="true">
+<Item>
+             <Element>GlobalRefIdPointerType</Element>
+             <Description></Description>
+          </Item>     
+          <Item>
+          <Element>ParentObjectRefId</Element>
+          <Description></Description>
+          <Type Ref="CommonTypes" name = "IdRefType"
+          </Item>       
+          <Item>
+             <Attribute>SIF_Object</Attribute>
+             <Description></Description>
+             <Values>
+             <Value>
+             <Code>StudentPersonal</Code>
+             </Value>
+             </Values>
+          </Item>                     
+ </CommonElement>
+-->
+
+<!-- Added for 3.4.3 -->
+<if intl="au">
+	<CommonElement name="CopyRightContainerType" type="true" dm="true">
+		<Item>
+			<Element>CopyRightContainerType</Element>
+			
+			<Characteristics>O</Characteristics>
+			<!--privacyRating>Low</privacyRating-->
+			<Description>
+			  <p>Copyright for document.</p>
+			</Description>
+		</Item>
+		<Item>
+			<Element>Date</Element>
+			
+			<Characteristics>C</Characteristics>
+			<!-- privacyRating>Low</privacyRating -->
+			<Description>
+			  <p>Copyright date</p>
+			</Description>
+			<Type name="xs:date"></Type>
+		</Item>
+		<Item>
+			<Element>Holder</Element>
+			
+			<Characteristics>C</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+			  <p>Name of the copyright holder</p>
+			</Description>
+			<Type name="xs:normalizedString"></Type>
+		</Item>
+	</CommonElement>
+	
+	<CommonElement name="StandardsSettingBodyType" type="true" dm="true">
+		<Item>
+			<Element>StandardsSettingBodyType</Element>
+			<Description>
+				<p>The name of the state or organization that authored and manages updates to the curriculum document (i.e., ACARA, NSW DET).</p>
+			</Description>
+		</Item>
+<if intl="au">		
+		<Item>
+			<Element>Country</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The country of the standard setting body.</p>
+			</Description>
+			<Type ref="CommonTypes" name="CountryType"/>
+		</Item>
+		<Item>
+			<Element>StateProvince</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The state or province of the standard setting body. </p>
+			</Description>
+			<Type ref="CommonTypes" name="StateProvinceType"/>
+		</Item>
+</if>
+		<Item>
+			<Element>SettingBodyName</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The text version of the organization's name.</p>
+			</Description>
+			<Type name='xs:normalizedString'/>
+		</Item>
+	</CommonElement>	
+	<CommonElement name="StandardHierarchyLevelType" type="true" dm="true">
+		<Item>
+			<Element>StandardHierarchyLevelType</Element>
+			<Description>
+				<p>Description of hierarchical level within standards tree.</p>
+			</Description>
+		</Item>
+		<Item>
+			<Element>Number</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>Integer assigned to each hierarchical level within standards tree. The top level is "1".</p>
+			</Description>
+			<Type name="xs:unsignedInt"></Type>
+		</Item>
+		<Item>
+
+			<Element>Description</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>Used to describe what role this item is serving in the structure. Some documents describe their levels in terms of standard, strands, and topics. Others use standards, benchmarks, and indicators. In Australia, this is typically in terms of Course or Unit, Year Level, Outcomes. This attribute names the level of the item.</p>
+			</Description>
+			<Type name="xs:string"></Type>
+		</Item>
+	</CommonElement>
+	<CommonElement name="StandardIdentifierType" type="true" dm="true">
+		<Item>
+			<Element>StandardIdentifierType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>This element describes the unique identifier for each LearningStandard.</p>
+			</Description>
+		</Item>
+		<Item>
+			<Element>YearCreated</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>This represents the year that this specific learning standard was created.  This is important to indicate as standards are updated to reflect the appropriate year it was created. This would be assigned by and unique to the standard setting body.</p>
+			</Description>
+			<Type name="xs:gYear"/>
+		</Item>
+<if intl="au">		
+		<Item>
+			<Element>ACStrandSubjectArea</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>This represents the subject or content area this curriculum item addresses. This would be assigned by and unique to the curriculum setting body.</p>
+			</Description>
+			<Type ref="CommonTypes" name="ACStrandSubjectAreaType"/>
+		</Item>
+</if>		
+		<Item>
+			<Element>StandardNumber</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>This is the specific number of the standard.  For example, if the subject is mathematics and this standard is Patterns, Functions and Algebra, this would be StandardNumber 1. This would be assigned by and unique to the standard setting body.</p>
+			</Description>
+			<Type name="xs:normalizedString"/>
+		</Item>
+		<Item>
+			<Element>YearLevels</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>This represents the grade level(s) this specific learning standard will address. This may be addressed in different ways.  Some states have a grade level that covers several grades and others have just one grade. This would be assigned by and unique to the standard setting body.</p>
+			</Description>
+			<Type ref="CommonTypes" name="YearLevelsType"/>
+		</Item>
+		<Item>
+			<Element>Benchmark</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>This is the next level within the hierarchy of the learning standard.  For example, if the subject is mathematics and the standard is algebra, this would be the next delineation - Represent an unknown quantity as a variable using a symbol, including letters. This would be assigned by and unique to the standard setting body.</p>
+			</Description>
+			<Type name="xs:normalizedString"/>
+		</Item>
+		<Item>
+			<Element>YearLevel</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>This is the specific year level.  This is to be utilized if the YearLevel covers several years. This would be assigned by and unique to the standard setting body.</p>
+			</Description>
+			<Type ref="CommonTypes" name="YearLevelType"/>
+		</Item>
+		<Item>
+			<Element>IndicatorNumber</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>This would be the most granular level of the learning standard associated with the grade level. Following the same example, an indicator for Algebra YearLevel 5-7, the indicator for the benchmark above at Year 6 would be to Evaluate simple expressions by replacing variables with given values, and use formulas in problem-solving situations. This would be assigned by and unique to the standard setting body.</p>
+			</Description>
+			<Type name="xs:normalizedString"/>
+		</Item>
+		<Item>
+			<Element>AlternateIdentificationCodes</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>This element is for an organization to utilize for an internal code.  This may be used for an alignment schema or other purposes that are only internal for the organization.</p>
+			</Description>
+			<Type ref="CommonTypes" name="AlternateIdentificationCodeListType"/>
+		</Item>
+		<Item>
+			<Element>Organization</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>Name of organization represented by the document, i.e., "National Council of Teachers of Mathematics (NCTM)," "NSW," "ACARA." This is the name of the organization that has this AlternateIdentificationCode. This should be a text field.</p>
+			</Description>
+			<Type name="xs:normalizedString"/>
+		</Item>
+	</CommonElement>
+	
+	<CommonElement name="AlternateIdentificationCodeListType" type="true" dm="true">
+		<Item>
+			<Element>AlternateIdentificationCodeListType</Element>
+			<Description>
+				<p>A list of elements for an organization to utilize for an internal code.  This may be used for an alignment schema or other purposes that are only internal for the organization.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>AlternateIdentificationCode</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>An alphanumeric Id code as defined by the organization to identify a statement.</p>
+			</Description>
+			<Type name="xs:normalizedString"/>
+		</Item>
+	</CommonElement>
+	
+	<CommonElement name="RelatedLearningStandardItemRefIdListType" type="true" dm="true">
+		<Item>
+			<Element>RelatedLearningStandardItemRefIdListType</Element>
+			<Description>
+				<p>Container for external relationships.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>LearningStandardItemRefId</Element>
+			<Characteristics>OR</Characteristics>
+			<Description>
+				<p>A relationship between the current standard item and another standard item.</p>
+			</Description>
+			<Type ref="CommonTypes" name="RelatedLearningStandardItemRefIdType"/>
+		</Item>
+	</CommonElement>
+	<CommonElement name="RelatedLearningStandardItemRefIdType" type="true" dm="true">
+		<Item>
+			<Element>RelatedLearningStandardItemRefIdType</Element>
+			<Characteristics>OR</Characteristics>
+			<Description>
+				<p>A relationship between the current standard item and another standard item.</p>
+			</Description>
+			<Type ref="CommonTypes" name="IdRefType"/>
+		</Item>
+		<Item>
+			<Attribute>RelationshipType</Attribute>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>Type of the relationship between the current standard and the target standard.  The value identifies the type of standard of the target item. The purpose of this information is to allow applications to sort/display these relationships in the appropriate context.</p>
+			</Description>
+			<Union>
+				<Type ref="CodeSets" name="AUCodeSetsLearningStandardItemRelationshipTypesType"/>
+				<Type name="xs:token"/>
+			</Union>
+		</Item>
+	</CommonElement>
+	
+	<CommonElement name="ValidLetterMarkListType" type="true" dm="true">
+		<Item>
+			<Element>ValidLetterMarkListType</Element>
+			<Description>
+				<p>A list of valid Letter Marks</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>ValidLetterMark</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>Definition of a valid Letter Mark.</p>
+			</Description>
+			<Type ref="CommonTypes" name="ValidLetterMarkType"/>
+		</Item>
+	</CommonElement>
+	
+	<CommonElement name="ValidLetterMarkType" type="true" dm="true">
+		<Item>
+			<Element>ValidLetterMarkType</Element>
+			<Description>
+				<p>Definition of a valid Letter Mark</p>
+			</Description>
+		</Item>
+		<Item>
+			<Element>Code</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>String representing the actual Mark that would appear on the report card (e.g., "A+", "I", "100").</p>
+			</Description>
+			<Type name="xs:token"/>
+		</Item>
+		<Item>
+			<Element>NumericEquivalent</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>Numeric equivalent for the Mark (e.g., 100, 4.0).</p>
+			</Description>
+			<Type name="xs:decimal"/>
+		</Item>
+		<Item>
+			<Element>Description</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>The description for this code. (e.g. "Excellent", "Participates in Class", "Incomplete", etc...).</p>
+			</Description>
+			<Type name="xs:string"/>
+		</Item>
+	</CommonElement>
+	<CommonElement name="StudentGradeMarkersListType" type="true" dm="true">
+	  <Item>
+		<Element>StudentGradeMarkersListType</Element>
+		 <Description>
+          <p>A list of staff members who were involved with the grading of the student, or who were responsible for any associated teacher judgement/s.</p>
+        </Description>
+         <Characteristics>O</Characteristics>
+  		<List mode="List">
+        </List>
+        </Item>
+        <Item>
+		  <Element>Marker</Element>
+		  <Description></Description>
+		  <Characteristics>OR</Characteristics>
+	      <Type ref="CommonTypes" name="MarkerType"/>
+		
+		</Item>
+    </CommonElement>
+    
+    <CommonElement name="MarkerType" type="true" dm="true">
+		<Item>
+			<Element>MarkerType</Element>
+			 <Description>
+			  <p>A staff members who was involved with the grading of the student, or who was responsible for any associated teacher judgement and their associated role.  Must be a current member of staff.</p>
+			</Description>
+			<Characteristics>OR</Characteristics>
+		</Item> 
+		<Item>
+			<Element>StaffPersonalRefId</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+			  <p>The RefId of the staff member involved in the marking.</p>
+			</Description>
+			<Type name="xs:string"></Type>  
+		</Item>
+		<Item>
+			<Element>Role</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+			  <p>The role the staff member played in grading the student.</p>
+			</Description>
+			<Type name="xs:string"></Type>  
+		</Item>
+  
+  </CommonElement>
+	<CommonElement name="GradingScoreListType" type="true" dm="true">
+		<Item>
+			<Element>GradingScoreListType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>Assignments that the student went through to achieve this summative assessment.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>GradingAssignmentScore</Element>
+			<Characteristics>OR</Characteristics>
+			<Description>
+				<p>AssignmentScore.</p>
+			</Description>
+			<Type ref="CommonTypes" name="AssignmentScoreType"/>
+		</Item>
+	</CommonElement>
+
+	<CommonElement name="AssignmentScoreType" type="true" dm="true">
+	<Item>
+		<Element>AssignmentScoreType</Element>
+		<Characteristics>OR</Characteristics>
+		<Description>
+			<p></p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>GradingAssignmentScoreRefId</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>GUID of a Grading assignment score included in this grade.</p>
+		</Description>
+		<Type ref="CommonTypes" name="IdRefType"/>
+	</Item>
+	<Item>
+  	   	<Element>Weight</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+		  <p>Weight of the assignment to the overall assessment grade.</p>
+		</Description>
+		<Type name="xs:decimal"></Type> 
+		
+	</Item>
+</CommonElement>
+
+    <CommonElement name="GradeType" type="true" dm="true">
+	<Item>
+		<Element>GradeType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Overall Student Grade. At least one numeric, percentage or letter must be provided as defined in the fields below.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>Percentage</Element>
+		<Characteristics>C</Characteristics>
+		<Description>
+			<p>The grade percentage for this grade (0.00-100.00).</p>
+		</Description>
+		<Type name="xs:decimal"></Type> 
+		<Facets>
+		  <xs:minInclusive value="0.00"/>
+		  <xs:maxInclusive value="100.00"/>
+		</Facets>
+	</Item>
+	<Item>
+	   	<Element>Numeric</Element>
+		<Characteristics>C</Characteristics>
+		<Description>
+		  <p>The raw numeric value for this grade.</p>
+		</Description>
+		<Type name="xs:decimal"></Type> 
+	</Item>
+	<Item>
+	   	<Element>Letter</Element>
+		<Characteristics>C</Characteristics>
+		<Description>
+		  <p>The letter grade value for this grade. If this is provided, the numeric value or percentage value must also be entered in order to provide a numeric value for the grade to be utilized in any computations.</p>
+		</Description>
+		<Type name="xs:token"></Type> 
+	</Item>
+	<Item>
+	   	<Element>Narrative</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+		  <p>The free form text narrative for this grade.  Can incorporate teacher judgement.</p>
+		</Description>
+		<Type name="xs:string"></Type> 
+	</Item>
+	<Item>
+		<Element>MarkInfoRefId</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>GUID of a the MarkInfo Object that provides information about this grading.</p>
+		</Description>
+		<Type ref="CommonTypes" name="IdRefType"/>
+	</Item>
+	
+</CommonElement>
+    <CommonElement name="LearningStandardListType" type="true" dm="true">
+	<Item>
+		<Element>LearningStandardListType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>References to LearningStandardItems.</p>
+		</Description>
+		<List mode="List"/>
+	</Item>
+	<Item>
+		<Element>LearningStandard</Element>
+		<Characteristics>OR</Characteristics>
+		<Description>
+			<p>Reference to a LearningStandardType.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LearningStandardType"/>
+	</Item>
+  </CommonElement>
+
+    <CommonElement name="LearningStandardType" type="true" dm="true">
+	<Item>
+		<Element>LearningStandardType</Element>
+		<Characteristics>OR</Characteristics>
+		<Description>
+			<p></p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>LearningStandardItemRefId</Element>
+		<Characteristics>OR</Characteristics>
+		<Description>
+			<p>GUID of a LearningStandardItem object, presenting the learning standard as part of a well-defined hierarchy (which a client would need to recover and reconstruct).</p>
+		</Description>
+		<Type ref="CommonTypes" name="IdRefType"/>
+	</Item>
+	<Item>
+  	   	<Element>LearningStandardURL</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+		  <p>URL allocated to the learning standard (e.g. in the Machine Readable Australian Curriculum).</p>
+		</Description>
+		<Type name="xs:anyURI"></Type> 
+		
+	</Item>
+	
+	<Item>
+  	   	<Element>LearningStandardLocalId</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+		  <p></p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"></Type>  
+  	</Item>	 
+   
+ 
+</CommonElement>
+
+    <CommonElement name="AssignmentListType" type="true" dm="true">
+	<Item>
+		<Element>AssignmentListType</Element>
+		<Characteristics>O</Characteristics>
+		<List mode="List">
+    </List>
+	</Item>
+	<Item>
+		<Element>GradingAssignmentRefId</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>GUID that identifies the GradingAssignment.</p>
+		</Description>
+		<Type ref="CommonTypes" name="IdRefType"/>
+	</Item>
+</CommonElement>
+
+    <CommonElement name="GenericRubricType" type="true" dm="true">
+	<Item>
+		<Element>GenericRubricType</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p></p>
+		</Description>
+	</Item>
+
+	<Item>
+		<Element>RubricType</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Category that rubric is scoring for.</p>
+		</Description>
+     
+         <Type name="xs:normalizedString"></Type>
+	</Item>
+   
+   	<Item>
+		<Element>ScoreList</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Category that rubric is scoring for.</p>
+		</Description>
+	    <Type ref="CommonTypes" name="ScoreListType"/>
+	</Item>
+	
+ 	<Item>
+		<Element>Descriptor</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Descriptor of Score Point of the Rubric.</p>
+		</Description>
+	  <Type name="xs:normalizedString"></Type>
+	</Item>
+
+	</CommonElement>
+
+	<CommonElement name="PartialDateType" type="true" dm="true">
 	<Item>
 		<Element>PartialDateType</Element>
 		<Description>
@@ -50,7 +690,9 @@
 		</Union>
 	</Item>
 	</CommonElement>
-<CommonElement name="LocalIdType" type="true" dm="true">
+</if>
+
+	<CommonElement name="LocalIdType" type="true" dm="true">
 	<Item>
 		<Element>LocalIdType</Element>
 		<Description>
@@ -64,7 +706,6 @@
 		<LocalId>123321A</LocalId>
 	</xhtml:Example>
 </CommonElement>
-
 
 <if intl="au">   
 <CommonElement name="GraduationDateType" type="true" dm="true">

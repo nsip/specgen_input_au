@@ -103,7 +103,8 @@
         <!-- Classroom assessment -->
 		<xi:include parse="text" href="Common/GradingAssignment.xml"/>
 		<xi:include parse="text" href="Common/GradingAssignmentScore.xml"/>
-
+		<xi:include parse="text" href="Common/MarkValueInfo.xml"/>
+		<xi:include parse="text" href="Common/StudentGrade.xml"/>
 
 		<!-- NAPLAN Additions -->
 		<xi:include parse="text" href="AU/NAPEventStudentLink.xml"/>

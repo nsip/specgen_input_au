@@ -36,7 +36,15 @@
     </Description>
     <Type ref="CommonTypes" name="IdRefType"></Type>
   </Item>
-  
+  <Item>
+    <Element>StudentPersonalRefIdList</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The GUIDs for individuals that this assignment has been set for.</p>
+    </Description>
+    <Type ref="CommonTypes" name="StudentsType"></Type>
+  </Item>
   <Item>
     <Element>SchoolInfoRefId</Element>    
     <Characteristics>O</Characteristics>
@@ -137,6 +145,74 @@
     </Description>
     <Type name="xs:base64Binary"></Type>
   </Item>
+  
+  <Item>
+    <Element>AssessmentType</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Type of assessment (e.g. diagnostic vs paedagogical).</p>
+    </Description>
+    <Type name="xs:token"></Type>
+  </Item>
+  <Item>
+    <Element>LevelAssessed</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Level at which assessment is aimed; may be year level.</p>
+    </Description>
+    <Type name="xs:token"></Type>
+  </Item> 
+  <Item>
+    <Element>AssignmentPurpose</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Purpose for assignment.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item> 
+  
+  <Item>
+    <Element>SubAssignmentList</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Assignments which this assignment is composed of.</p>
+    </Description>
+    <Type ref="CommonTypes" name="AssignmentListType"></Type>
+  </Item>   
+  
+  <Item>
+    <Element>RubricScoringGuide</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Rubric Scoring information.</p>
+    </Description>
+    <Type ref="CommonTypes" name="GenericRubricType"></Type>
+  </Item>   
+  
+  <Item>
+    <Element>PrerequisiteList</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Prerequisite conditions to be met for assessment.</p>
+    </Description>
+    <Type ref="CommonTypes" name="PrerequisitesType"></Type>
+  </Item>     
+  
+  <Item>
+    <Element>LearningStandardList</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p></p>
+    </Description>
+    <Type ref="CommonTypes" name="LearningStandardListType"></Type>
+  </Item>  
   
   <Item>
     <Element>SIF_Metadata</Element>

@@ -1,0 +1,208 @@
+<DataObject name="StudentGrade"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xmlns:xi="http://www.w3.org/2001/XInclude"
+			xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	        xmlns="http://sifassociation.org/SpecGen">
+            
+  <EventsReported>true</EventsReported>
+
+  <Key>@RefId</Key>
+
+  <Intro>
+    <p>
+      StudentGrade is a grade in isolation, not necessarily linked to an assessment, teaching group, class, or curriculum.
+    </p>
+  </Intro>
+
+  <Item>
+    <Element>StudentGrade</Element>
+    <Description>
+      <p>StudentGrade is a grade in isolation, not necessarily linked to an assessment, teaching group, class, or curriculum.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>The Id (GUID) that uniquely identifies this object.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+  <Item>
+    <Element>StudentPersonalRefId</Element>
+    <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>
+        The Id (GUID) that uniquely identifies the <code>StudentPersonal</code> object that this item refers to.
+      </p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Element>Homegroup</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>
+        Homegroup that the student belongs to.
+      </p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  <Item>
+    <Element>YearLevel</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Year level of student.</p>
+    </Description>
+    <Type ref="CommonTypes" name="YearLevelType"></Type>
+  </Item>
+  <Item>
+    <Element>TeachingGroupShortName</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>
+        Short free format label that describes the teaching group.
+      </p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+
+  <Item>
+    <Element>TeachingGroupRefId</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>	
+    <Description>
+      The Id (GUID) that uniquely identifies the Teaching Group in which this Grade was assigned.
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+ </Item>
+ 
+ <Item>
+    <Element>StaffPersonalRefId</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>	
+    <Description>
+      The main staff member who graded the student, and was responsible for any associated teacher judgement.
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+ </Item>
+ 
+ <Item>
+    <Element>Markers</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>	
+    <Description>
+      Any other staff members who were involved in the grading or the student or who were responsible for any associated teacher judgement/s.
+    </Description>
+    <Type ref="CommonTypes" name="StudentGradeMarkersListType"></Type>
+ </Item>
+<Item>
+    <Element>SchoolInfoRefId</Element>    
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The Id (GUID) that uniquely identifies the School that these values apply to.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+ <Item>
+    <Element>TermInfoRefId</Element>    
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Period over which grade is calculated. StudentGrade is intended to range over work done through a marking period; it is not intended for one-off pieces of formative assessment.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Element>Description</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>
+        The scope of the StudentGrade; e.g. subject matter. Should be used if no TeachingGroup is associated with the grade.
+      </p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+ <Item>
+    <Element>LearningArea</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>	
+    <Description>
+      Learning area against which the grade was given. 
+    </Description>
+    <Type ref="CommonTypes" name="ACStrandSubjectAreaType"></Type>
+ </Item>
+ 
+ <Item>
+    <Element>LearningStandardList</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>	
+    <Description>
+      We will now allow this in 3.4.3 to be either a GUID to LearningStandardItem, or a URL to the National Curriculum. This can be a content description or a strand. 
+    </Description>
+    <Type ref="CommonTypes" name="LearningStandardListType"></Type>
+ </Item>
+ 
+ <Item>
+    <Element>GradingScoreList</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>	
+    <Description>Assignments that the student went through to achieve this summative assessment.</Description>
+    <Type ref="CommonTypes" name="GradingScoreListType"></Type>
+ </Item>
+ 
+ <Item>
+    <Element>Grade</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>	
+    <Description>
+      Overall grade that the student has received.
+    </Description>
+    <Type ref="CommonTypes" name="GradeType"></Type>
+ </Item>
+ 
+ <Item>
+    <Element>TeacherJudgement</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>
+        The teacher judgement of the student’s performance as captured in this object.
+      </p>
+    </Description>
+    <Type name="xs:string"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+
+  <xhtml:Example xmlns="" name="StudentGrade">
+    <StudentGrade RefId="359D7510-1AD0-A9D7-A8C3-DAD0A85103A2">
+      <StudentPersonalRefId>A137D78A-E00B-C744-EF90-F2871CEB90A2</StudentPersonalRefId>
+      <SchoolInfoRefId>B237D78A-E00B-C744-EF90-F2871CEB91A2</SchoolInfoRefId>
+      <Grade>
+        <Percentage>79</Percentage>
+        <Numeric>3.0</Numeric>
+        <Letter>C</Letter>
+        <Narrative>Johnny is only achieving average performance.</Narrative>
+      </Grade>
+    </StudentGrade>
+  </xhtml:Example>
+</DataObject>

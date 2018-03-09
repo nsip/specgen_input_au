@@ -27,7 +27,7 @@
 			</Value>
 			 
 		</Values>
-	</CodeSet>
+	</CodeSet>   <!-- LearningStandardItem Relationship Types -->
 	<CodeSet>
 		<Intro>
 			<p>Australian education vocabularies</p>
@@ -98,6 +98,6 @@
 			</Value>
 		 
 		</Values>
-	</CodeSet>
+	</CodeSet>   <!-- AC Strand -->
 	
 </IncludeGroup>

@@ -1825,6 +1825,7 @@
 </if>
 
 <!-- EducationOrganisation & Provider -->
+<if intl="nz">
 <CommonElement name="OrganisationType" type="true" dm="true">
 	<Item>
 		<Element>OrganisationType</Element>
@@ -2123,4 +2124,5 @@
 		</RelatedOrganisation>
 	</xhtml:Example>
 </CommonElement>
+</if>
 </IncludeGroup>

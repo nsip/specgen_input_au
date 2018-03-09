@@ -263,8 +263,7 @@
 				<Text>Other</Text>
 			</Value>
 		 </Values>
-	</CodeSet>
-
+	</CodeSet>    <!-- Attendance Code -->
 	<CodeSet>
 		<Intro>
 			<p/>
@@ -293,7 +292,7 @@
 			</Value>
 			 
 		</Values>
-	</CodeSet>
+	</CodeSet>    <!-- Day Value Code -->
 	<CodeSet>
 		<Intro>
 			<p/>
@@ -318,6 +317,6 @@
 			</Value>
 			 
 		</Values>
-	</CodeSet>
+	</CodeSet>    <!-- Attendance Status -->
 	
 </IncludeGroup>

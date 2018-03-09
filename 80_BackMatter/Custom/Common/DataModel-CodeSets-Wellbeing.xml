@@ -17,9 +17,8 @@
 		  <Value><Code>L</Code><Text>Legal</Text></Value>
 		  <Value><Code>O</Code><Text>Other</Text></Value>
       </Values>
-</CodeSet>
-
-<CodeSet>
+</CodeSet>    <!-- Personalised Plan -->
+   <CodeSet>
       <Intro>
         <p>Wellbeing Characteristics - High Level.  Initially provided by WA.  This code set is in draft and changes are expected.  Future changes may re-specify code values.</p> 
       </Intro>
@@ -109,8 +108,8 @@
 <Value><Code>MCM-24</Code><Text>Turners Syndrome</Text></Value>
 <Value><Code>MCM-25</Code><Text>Velocardiofacial Syndrome</Text></Value>
 <Value><Code>MCM-26</Code><Text>Wolf-Hirschhorn Syndrome</Text></Value>
-</Values></CodeSet>
- <CodeSet>
+</Values></CodeSet>    <!-- Wellbeing Characteristic Sub Category -->
+   <CodeSet>
       <Intro>
         <p>Wellbeing Characteristics - High Level.  Initially provided by WA. This code set is in draft and changes are expected.  Future changes may re-specify code values.</p>
       </Intro>
@@ -138,10 +137,8 @@
 <Value><Code>D-Other</Code><Text>Disability Other</Text></Value>
 <Value><Code>S-Other</Code><Text>Special Needs Other</Text></Value>
 <Value><Code>Other</Code><Text>Other</Text></Value>
-</Values></CodeSet>
-	
-
-     <CodeSet>
+</Values></CodeSet>	 <!-- Wellbeing Characteristic Category -->
+   <CodeSet>
       <Intro>
         <p>Wellbeing Event Category - initially provided from WA DET. This code set is in draft and changes are expected.  Future changes may re-specify code values.</p>
       </Intro>
@@ -167,8 +164,8 @@
 			<Value><Code>M9</Code><Text>E-breaches</Text></Value>
 			<Value><Code>99</Code><Text>Other Behaviour</Text></Value>
 		</Values>
-    </CodeSet>
-       <CodeSet>
+    </CodeSet>    <!-- Wellbeing Event Category -->
+   <CodeSet>
       <Intro>
         <p>Wellbeing Event Sub Category - initially provided from WA DET. This code set is in draft and changes are expected.  Future changes may re-specify code values.</p>
       </Intro>
@@ -353,7 +350,7 @@
 			<Value><Code>M9h</Code><Text>Public posting of messages that bring the school or Department into disrepute</Text></Value>
 			<Value><Code>M9i</Code><Text>Copyright infringement or plagiarism</Text></Value>
 		</Values>
-    </CodeSet>
+    </CodeSet>    <!-- Wellbeing Event Sub Category -->
    <CodeSet>
       <Intro>
         <p>Wellbeing Characteristic Classification - initially provided from WA DET. This code set is in draft and changes are expected.  Future changes may re-specify code values.</p>
@@ -365,8 +362,7 @@
 		  <Value><Code>S</Code><Text>SpecialNeeds</Text></Value>
 		  <Value><Code>O</Code><Text>Other</Text></Value>
       </Values>
-    </CodeSet>
-
+    </CodeSet>    <!-- Wellbeing Characteristic Classification -->
    <CodeSet>
       <Intro>
         <p>Initially provided from WA DET. This code set is in draft and changes are expected.  Future changes may re-specify code values.</p>
@@ -382,8 +378,8 @@
 		  <Value><Code>W</Code><Text>Weekend</Text></Value>
 		  <Value><Code>O</Code><Text>Other</Text></Value>
       </Values>
-   </CodeSet>    
-  <CodeSet>
+   </CodeSet>    <!-- Wellbeing Event Time Period -->
+   <CodeSet>
       <Intro>
         <p>Initially provided from WA DET. This code set is in draft and changes are expected.  Future changes may re-specify code values.</p>
       </Intro>
@@ -394,7 +390,7 @@
 		  <Value><Code>D</Code><Text>Data Record Only</Text></Value>
 		  <Value><Code>O</Code><Text>Other</Text></Value>
       </Values>
-   </CodeSet>  
+   </CodeSet>    <!-- Wellbeing Event Category Class -->
    <CodeSet>
       <Intro>
         <p>Initially provided from WA DET. This code set is in draft and changes are expected.  Future changes may re-specify code values.</p>
@@ -411,8 +407,8 @@
 		  <Value><Code>C</Code><Text>Classroom</Text></Value>
 		  <Value><Code>O</Code><Text>Other</Text></Value>
       </Values>
-   </CodeSet>  
-  <CodeSet>
+   </CodeSet>    <!-- Wellbeing Event Location -->
+   <CodeSet>
       <Intro>
         <p>Initially provided from WA DET. This code set is in draft and changes are expected.  Future changes may re-specify code values.</p>
       </Intro>
@@ -426,8 +422,8 @@
 		  <Value><Code>P</Code><Text>Plan Review</Text></Value>
 		  <Value><Code>O</Code><Text>Other</Text></Value>
       </Values>
-    </CodeSet>
-     <CodeSet>
+    </CodeSet>    <!-- Wellbeing Alert Category -->
+   <CodeSet>
       <Intro>
         <p>Initially provided from WA DET. This code set is in draft and changes are expected.  Future changes may re-specify code values.</p>
       </Intro>
@@ -438,8 +434,8 @@
 		  <Value><Code>RE</Code><Text>Rejected</Text></Value>
 		  <Value><Code>SU</Code><Text>Successful</Text></Value>
 	  </Values>
-    </CodeSet>
-<CodeSet>
+  </CodeSet>    <!-- Wellbeing Appeal Status -->
+   <CodeSet>
       <Intro>
         <p>Initially provided from WA DET. This code set is in draft and changes are expected.  Future changes may re-specify code values.</p>
       </Intro>
@@ -449,8 +445,8 @@
 		  <Value><Code>R</Code><Text>Resolved</Text></Value>
 		  <Value><Code>O</Code><Text>Other</Text></Value>
       </Values>
-    </CodeSet>  
-<CodeSet>
+    </CodeSet>    <!-- Wellbeing Status -->
+   <CodeSet>
       <Intro>
         <p>Initially provided from WA DET. This code set is in draft and changes are expected.  Future changes may re-specify code values.</p>
       </Intro>
@@ -465,8 +461,8 @@
 		  <Value><Code>R</Code><Text>Removal</Text></Value>
 		  <Value><Code>O</Code><Text>Other</Text></Value>
       </Values>
-    </CodeSet>  
-<CodeSet>
+    </CodeSet>    <!-- Suspension Category -->
+   <CodeSet>
       <Intro>
         <p>Initially provided from WA DET. This code set is in draft and changes are expected.  Future changes may re-specify code values.</p>
       </Intro>
@@ -480,8 +476,8 @@
 		  <Value><Code>L</Code><Text>Lunch</Text></Value>
 		  <Value><Code>O</Code><Text>Other</Text></Value>
       </Values>
-    </CodeSet>
-	  <CodeSet>
+    </CodeSet>    <!-- Detention Category -->
+   <CodeSet>
       <Intro>
         <p>Initially provided from WA DET. This code set is in draft and changes are expected.  Future changes may re-specify code values.</p>
       </Intro>
@@ -494,6 +490,6 @@
 		  <Value><Code>M</Code><Text>MultipleResponse</Text></Value>
 		  <Value><Code>O</Code><Text>Other</Text></Value>
       </Values>
-      </CodeSet>
+      </CodeSet>    <!-- Wellbeing Response Category -->
 
 </IncludeGroup>

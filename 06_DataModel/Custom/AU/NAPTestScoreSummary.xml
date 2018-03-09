@@ -11,7 +11,7 @@
     <Element>NAPTestScoreSummary</Element>
 	<privacyRating>Medium</privacyRating>
     <Description>
-      <p>This object represents a the summary of aggregate scores in a NAP test for a school.</p>
+      <p>This object represents the summary of aggregate scores in a NAP test for a school.</p>
     </Description>
   </Item>
   <Item>
@@ -114,11 +114,13 @@
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Medium</privacyRating>
     <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Medium</privacyRating>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
   </Item>
 

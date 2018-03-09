@@ -1586,7 +1586,7 @@
 			</Value>
 			 
 		</Values>
-	</CodeSet>    <!-- Stafff Activity -->
+	</CodeSet>    <!-- Staff Activity -->
 	<CodeSet>
 		<Intro>
 			<p>Set of possible values of Staff Status with employing organisation.</p>
@@ -1703,6 +1703,10 @@
 			</if>
 		</Values>
 	</CodeSet>    <!-- School Co-Ed Status -->
+
+
+<if intl = "nz">
+	<!-- NZ defined codesets -->
 	<CodeSet>
 		<Intro>
 			<p>Just three values for Year Level Co-Ed Status</p>
@@ -1723,5 +1727,5 @@
 			</Value>
 		</Values>
 	</CodeSet>    <!-- Year Level Co-Ed Status -->	
-
+</if>
 </IncludeGroup>

@@ -2,6 +2,7 @@
  	xmlns="http://sifassociation.org/SpecGen"
 	code="ISO" name="International Standards Organization (ISO)">
 
+<if intl="au">
   <CodeSet>
     <ID>4217 Currency Names And Code Elements</ID>
     <Values>
@@ -720,6 +721,7 @@
       </Value>
       
     </Values>
-  </CodeSet>
+</CodeSet>   <!-- ISO 4217 - International Currency Codes -->
+</if>
 
 </Grouping>

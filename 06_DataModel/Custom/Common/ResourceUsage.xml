@@ -12,6 +12,8 @@
 		<Element>ResourceUsage</Element>
 		<privacyRating>Low</privacyRating>
 		<Description>
+		  <p>Note: WARNING This object has been marked for deprecation and is planned to be removed with the 3.5 SIF AU Data Model release. If you plan to use this object, please contact your SIF AU DSWG member, please note that it may become unavailable.
+		  </p>
 		  <p>
 			This object tracks resource usage by a student or staff member at a school over a defined time period.
 		  </p>
@@ -200,12 +202,14 @@
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description></Description>
     <Type ref="CommonTypes" name="SIF_MetadataType"/>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description></Description>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>

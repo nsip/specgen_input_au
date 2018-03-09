@@ -77,6 +77,34 @@
     <Type ref="CommonTypes" name="IdRefType"></Type>
   </Item>
   
+   <Item>
+    <Element>StaffPersonalRefId</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The staff member who marked the assignment, and was responsible for any associated teacher judgement.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  
+  <Item>
+    <Element>DateGraded</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Date the assignment was graded.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>  
+  <Item>
+    <Element>ExpectedScore</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>If true, this is the expected or calculated score for the assignment. If false, this is the score the student received through attempting the assignment. The expected score can be used to substitute for the received score, where the received score is unavailable; e.g. the student has not done the assessment, but will receive a default mark rather than be penalised with a zero grade.</p>
+    </Description>
+    <Type name="xs:boolean"></Type>
+  </Item>    
   <Item>
     <Element>ScorePoints</Element>
     <Characteristics>C</Characteristics>
@@ -116,6 +144,46 @@
     </Description>
     <Type name="xs:normalizedString"></Type>
   </Item>
+  
+    <Item>
+	<Element>SubscoreList</Element>
+	<Characteristics>O</Characteristics>
+	<privacyRating>Medium</privacyRating>
+	<Description>
+		<p>Subscores contributing to the total mark.</p>
+	</Description>
+	<Type ref="CommonTypes" name="NAPSubscoreListType"/> 
+  </Item>
+  
+   <Item>
+    <Element>TeacherJudgement</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>High</privacyRating>
+    <Description>
+      <p>Teacher judgement associated with the score.</p>
+    </Description>
+    <Type name="xs:string"></Type>
+  </Item>  
+   
+ <Item>
+    <Element>MarkInfoRefId</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>Interpretation of Grade.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  
+ <Item>
+    <Element>AssignmentScoreIteration</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>If this is a draft submission, or re-submission, iteration of the attempt.</p>
+    </Description>
+    <Type name="xs:token"></Type>
+  </Item>  
   
  
 

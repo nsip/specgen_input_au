@@ -26,8 +26,11 @@
   </Item>
 </CommonElement>
 	-->
-	
-<CommonElement type="true" name="AbstractContentPackageType">
+
+
+<if intl="au">	
+	<!-- Generic types not used by NZ (yet) -->	
+	<CommonElement type="true" name="AbstractContentPackageType">
   <Key>@RefId</Key>
   <Item>
     <Element>AbstractContentPackageType</Element>
@@ -191,8 +194,7 @@
   </Choice>
   
 </CommonElement>
-
-<CommonElement type="true" name="AbstractContentElementType">
+    <CommonElement type="true" name="AbstractContentElementType">
 		  <Item>
 			<Element>AbstractContentElementType</Element>
 			<Description>
@@ -338,9 +340,9 @@
 			  <Type name="xs:anyURI"/>
 			</Item>
 		  </Choice>
-		</CommonElement>
+		  </CommonElement>
 
-	<CommonElement type="true" name="MonetaryAmountType">
+    <CommonElement type="true" name="MonetaryAmountType">
 			<Item>
 				<Element>MonetaryAmountType</Element>
 				<Description>
@@ -354,10 +356,8 @@
 				<Description>Currency code.  Where omitted, defaults to implementation-defined local currency, typically <code>USD</code> in the United States.</Description>
 				<Type ref="ExternalCodeSets" name="ISO4217CurrencyNamesAndCodeElementsType"/>
 			</Item>
-		</CommonElement>
-
-
-<CommonElement type="true" name="ObjectNameType" >
+	</CommonElement>
+	<CommonElement type="true" name="ObjectNameType" >
 	<Item>
 		<Element>ObjectNameType</Element>
 		<Description>
@@ -369,6 +369,8 @@
 		</Facets>
 	</Item>
 </CommonElement>
+</if>
+
 
 <!-- Unused: ServiceNameType -->
 <!--
@@ -434,8 +436,8 @@
 
 
 
-
-		<CommonElement type="true" name="URIOrBinaryType">
+<if intl="au">
+	<CommonElement type="true" name="URIOrBinaryType">
 			<Item>
 				<Element>URIOrBinaryType</Element>
 				<Description>Allows for a URL or a Base-64 encoding.</Description>
@@ -445,9 +447,10 @@
 				</Union>
 			</Item>
 		</CommonElement>
-		
-			<CommonElement type="true" name='GUIDType'>
-			<Item>
+</if>
+
+    <CommonElement type="true" name='GUIDType'>
+		<Item>
 				<Element>GUIDType</Element>
 				<Description>SIF format for a GUID. This is different for 2.x Infrastructure  and 3.x Infrastructure - 2.x xs:pattern value='[0-9A-F]{32}'  3.x - xs:pattern value="[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}" ></Description>
 				<Type name='xs:token'/>
@@ -478,6 +481,7 @@
 			</Item>
 		</CommonElement>
 
+<if intl="au">		
 		<CommonElement type="true" name='IdRefType'>
 			<Item>
 				<Element>IdRefType</Element>
@@ -485,6 +489,8 @@
 				<Type name='RefIdType'/>
 			</Item>
 		</CommonElement>
+</if>
+
 
 <!-- Unused: VersionType -->
 <!--
@@ -534,7 +540,8 @@
 		</CommonElement>
 -->
 
-		<CommonElement name='ExtendedContentType' type='true'>
+<if intl="au">
+	<CommonElement name='ExtendedContentType' type='true'>
 			<Item>
 				<Element>ExtendedContentType</Element>
 				<Description>Allows for any mixed XML in an element.</Description>
@@ -549,6 +556,8 @@
 				</Type>
 			</Item>
 		</CommonElement>
+</if>
+
 
 <!-- Unused: Selected Content Type -->
 <!--

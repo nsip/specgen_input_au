@@ -213,7 +213,7 @@
     <Characteristics>O</Characteristics>
 	<privacyRating>High</privacyRating>
     <Description>
-      <p>List of RefIds of financial account codes.</p>
+      <p>List of RefIds of the Associated Financial Accounts.</p>
     </Description>
     
     <Type ref="CommonTypes" name="FinancialAccountRefIdListType"></Type>
@@ -270,11 +270,13 @@
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
     <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
   </Item>
   <xhtml:Example xmlns="" name="Invoice">
