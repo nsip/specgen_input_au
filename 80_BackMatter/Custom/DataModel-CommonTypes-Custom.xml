@@ -422,17 +422,17 @@
 	<CommonElement name="StudentGradeMarkersListType" type="true" dm="true">
 	  <Item>
 		<Element>StudentGradeMarkersListType</Element>
+         <Characteristics>O</Characteristics>
 		 <Description>
           <p>A list of staff members who were involved with the grading of the student, or who were responsible for any associated teacher judgement/s.</p>
         </Description>
-         <Characteristics>O</Characteristics>
   		<List mode="List">
         </List>
         </Item>
         <Item>
 		  <Element>Marker</Element>
-		  <Description></Description>
 		  <Characteristics>OR</Characteristics>
+		  <Description></Description>
 	      <Type ref="CommonTypes" name="MarkerType"/>
 		
 		</Item>
@@ -441,10 +441,10 @@
     <CommonElement name="MarkerType" type="true" dm="true">
 		<Item>
 			<Element>MarkerType</Element>
+			<Characteristics>OR</Characteristics>
 			 <Description>
 			  <p>A staff members who was involved with the grading of the student, or who was responsible for any associated teacher judgement and their associated role.  Must be a current member of staff.</p>
 			</Description>
-			<Characteristics>OR</Characteristics>
 		</Item> 
 		<Item>
 			<Element>StaffPersonalRefId</Element>
@@ -692,7 +692,9 @@
 	</CommonElement>
 </if>
 
-	<CommonElement name="LocalIdType" type="true" dm="true">
+
+<!-- Remaining genuine 'Common Types' -->
+<CommonElement name="LocalIdType" type="true" dm="true">
 	<Item>
 		<Element>LocalIdType</Element>
 		<Description>
@@ -707,7 +709,7 @@
 	</xhtml:Example>
 </CommonElement>
 
-<if intl="au">   
+<if intl="au">
 <CommonElement name="GraduationDateType" type="true" dm="true">
 	<Item>
 		<Element>GraduationDateType</Element>
