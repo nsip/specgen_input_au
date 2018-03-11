@@ -56,7 +56,8 @@ sif.narrative = mixed { (
 	| html.span
 	| html.strong
 	| html.table
-	| html.ul	
+	| html.ul
+	| sif.If.narrative
 )* }
 
 html.a = element a {
@@ -108,7 +109,19 @@ anything = ( element * { anything } | attribute * { text } | text )*
 
 attr.intl = attribute intl { "us" | "uk" | "au" | "nz" | "" }
 
-sif.If = element if { attr.intl, sif.narrative }
+sif.If.narrative = element if { attr.intl, sif.narrative }
+
+sif.If.includeGroup = element if { attr.intl,
+   (mixed {
+      xi.include
+	    | sif.CommonElement
+	    | sif.DataObject
+		| sif.Grouping
+		| sif.CodeSet })+ }
+		
+sif.If.Item = element if { attr.intl, sif.Item+ }
+sif.If.Value = element if { attr.intl, sif.Value+ }
+sif.If.Type = element if { attr.intl, sif.Type+ }
 
 sif.Intro = element Intro { sif.narrative }
 
@@ -175,16 +188,18 @@ sif.IncludeGroup = element IncludeGroup {
    attribute xml:base { text }?,
    (mixed {
 
-      sif.If
+      sif.If.includeGroup
 	  | xi.include
 	  | sif.Intro
       | sif.Group
-      | sif.CommonElement } )* }
+      | sif.CommonElement
+	  | sif.CodeSet
+	  | sif.Grouping} )* }
 
 
 sif.DataObjects = element DataObjects {
    attribute xml:base { text }?,
-   sif.IncludeGroup }
+   (mixed  { sif.If.includeGroup | sif.IncludeGroup }* ) }
 
 sif.DataObject = element DataObject {
    attribute name { text },
@@ -202,7 +217,7 @@ sif.CommonElement = element CommonElement {
 
    sif.Intro?,
    element Key { text }?,
-   (mixed { sif.Item | sif.Choice })*,
+   (mixed { sif.If.Item | sif.Item | sif.Choice })*,
    xhtml.Example*
 }
 
@@ -210,36 +225,41 @@ sif.Grouping = element Grouping {
    attribute code { text },
    attribute name { text },
 
-   element CodeSet {
+   (mixed { sif.If.includeGroup | xi.include | sif.CodeSet}) * }
+
+sif.CodeSet = element CodeSet {
      element Intro { sif.narrative }?,
 	 element ID { text },
-     element Values { element Value { element Code { text }, element Text { text } }+ }
-   }+ }
+     element Values {
+	   (mixed { sif.If.Value | sif.Value })* } }
 
+sif.Value = element Value { element Code { text }, element Text { text } }
 sif.Group = element Group {
    attribute name { text },
 
    (mixed {
       sif.narrative
-        | sif.If
+        | sif.If.includeGroup
         | sif.Intro
 		| sif.DataObject } )* }
 
 sif.CodeSets = element CodeSets {
-     sif.If
-	 | xi.include
-	 | sif.Grouping
-}
+  (mixed {
+     sif.If.includeGroup
+      | xi.include
+      | sif.Grouping} )* }
 
 
 sif.Item = element Item {
       (element Attribute { text } | element Element { text }),
-	  
+
 	  element Characteristics { "M" | "O" | "C" | "MR" | "OR"}?,
 	  element privacyRating { "Low" | "Medium" | "High" | "Extreme"}?,
-	  element Description { sif.narrative }?,
+	  element Description { (mixed { sif.If.narrative | sif.narrative})* }?,
 	  
-	  mixed { (  sif.Type
+	  mixed { (
+	     sif.If.Type
+		 | sif.Type
 	     | element Union { sif.Type+ }
 	     | (element ItemExample { text })+
 		 | element List { attribute mode { "List" } }
@@ -275,10 +295,12 @@ xs.Facets = element xs:pattern { attribute value { text } }
 		  
 		  | element xs:totalDigits { xs.valueInteger }
 		  | element xs:fractionDigits { xs.valueInteger }
-          | element xs:minInclusive {xs.valueInteger }
-          | element xs:maxInclusive { xs.valueInteger }
-          | element xs:minExclusive {xs.valueInteger }
-          | element xs:maxExclusive { xs.valueInteger }
+		  
+          | element xs:minInclusive {xs.valueDecimal }
+          | element xs:maxInclusive { xs.valueDecimal }
+          | element xs:minExclusive {xs.valueDecimal }
+          | element xs:maxExclusive { xs.valueDecimal }
 
 xs.valueInteger = attribute value { xs:integer }
+xs.valueDecimal = attribute value { xs:decimal }
 xs.valueString = attribute value { xs:string }
