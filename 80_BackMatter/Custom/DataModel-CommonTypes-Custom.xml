@@ -4980,7 +4980,7 @@
 </CommonElement>
 <CommonElement name="ExpenseAccountsType" type="true" dm="true">
 	<Item>
-		<Element>ExpenseAccountType</Element>
+		<Element>ExpenseAccountsType</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
 			<p/>
