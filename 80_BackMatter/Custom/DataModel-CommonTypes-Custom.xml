@@ -4899,7 +4899,7 @@
 </CommonElement>
 <CommonElement name="PurchasingItemType" type="true" dm="true">
 	<Item>
-		<Element>PurchasingItem</Element>
+		<Element>PurchasingItemType</Element>
 		<Characteristics>MR</Characteristics>
 		<Description>
 			<p>Contains information about the item delivered.</p>
