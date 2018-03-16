@@ -128,7 +128,7 @@
 		<Description>
 			<p>Local Code if required for Clarity.</p>
 		</Description>
-		<Type ref="CommonTypes" name="LocalId"/> 
+		<Type ref="CommonTypes" name="LocalIdType"/> 
   </Item> 
   
    <Item>
