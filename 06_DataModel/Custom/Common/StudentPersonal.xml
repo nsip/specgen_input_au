@@ -46,7 +46,7 @@
 		<Description>
 			<p>The locally-assigned identifier for this student.</p>
 		</Description>
-		<Type ref="CommonTypes" name="LocalId"/> 
+		<Type ref="CommonTypes" name="LocalIdType"/> 
 	</Item>
 	<Item>
 		<Element>StateProvinceId</Element>
