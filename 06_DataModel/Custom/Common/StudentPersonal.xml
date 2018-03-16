@@ -55,7 +55,7 @@
 		<Description>
 			<p>The state-assigned identifier for this student.</p>
 		</Description>
-		<Type ref="CommonTypes" name="StateProvinceId"/>
+		<Type ref="CommonTypes" name="StateProvinceIdType"/>
 	</Item>
     
 	<Item>
