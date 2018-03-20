@@ -56,10 +56,6 @@
 				</Street>
 				<City>Martinborough</City>
 				<PostalCode>5741</PostalCode>
-				<GridLocation>
-					<Latitude>-41.219069</Latitude>
-					<Longitude>175.457776</Longitude>
-				</GridLocation>
 			</Address>
 			<!-- Residential Rural Address -->
 			<Address Type="2" Role="1">
@@ -69,10 +65,6 @@
 				<Suburb>RD 1</Suburb>
 				<City>Martinborough</City>
 				<PostalCode>5781</PostalCode>
-				<GridLocation>
-					<Latitude>-41.282319</Latitude>
-					<Longitude>175.347780</Longitude>
-				</GridLocation>
 			</Address>
 		</AddressList>
 	</xhtml:Example>
@@ -127,7 +119,8 @@
 		</Description>
 		<Type ref="CodeSets" name="NZCodeSetsAddressRoleType"/>
 	</Item>
-</if>	
+</if>
+<if intl="au">
 	<Item>
 		<Element>EffectiveFromDate</Element>
 		<Characteristics>O</Characteristics>
@@ -143,7 +136,8 @@
 			<p>Date the address ceases to be active.</p>
 		</Description>
 		<Type name="xs:date"/>
-	</Item>	
+	</Item>
+</if>	
 	<Item>
 		<Element>Street</Element>
 		<Characteristics>M</Characteristics>
@@ -212,6 +206,7 @@
 		</Description>
 		<Type name="xs:normalizedString"/>
 	</Item>
+<if intl="au">	
 	<Item>
 		<Element>GridLocation</Element>
 		<Characteristics>O</Characteristics>
@@ -273,7 +268,7 @@
 		</Description>
 		<Type ref="CommonTypes" name="StatisticalAreasType"/>
 	</Item>
-	
+</if>
 	<xhtml:Example xmlns="" name="Address Example" intl="au">
 		<Address Type="0123" Role="012B">
 			<Street>
@@ -310,10 +305,6 @@
 			<City>Wellington</City>
 			<Country>New Zealand</Country>
 			<PostalCode>6002</PostalCode>
-			<GridLocation>
-				<Latitude>-41.306881</Latitude>
-				<Longitude>174.766667</Longitude>
-			</GridLocation>
 		</Address>
 	</xhtml:Example>
 	<xhtml:Example name="NZ P O Box Postal Address Example" intl="nz" xmlns="">
@@ -324,10 +315,6 @@
 			<City>Martinborough</City>
 			<Country>New Zealand</Country>
 			<PostalCode>5741</PostalCode>
-			<GridLocation>
-				<Latitude>-41.219069</Latitude>
-				<Longitude>175.457776</Longitude>
-			</GridLocation>
 		</Address>
 	</xhtml:Example>
 	<xhtml:Example name="NZ Rural Residential Address Example" intl="nz" xmlns="">
@@ -339,10 +326,6 @@
 			<City>Martinborough</City>
 			<Country>New Zealand</Country>
 			<PostalCode>5781</PostalCode>
-			<GridLocation>
-				<Latitude>-41.282319</Latitude>
-				<Longitude>175.347780</Longitude>
-			</GridLocation>
 		</Address>
 	</xhtml:Example>
 </CommonElement>
@@ -508,8 +491,6 @@
 		<Country>1101</Country>
 	</xhtml:Example>
 </CommonElement>
-</if>
-
 <CommonElement name="GridLocationType" type="true" dm="true">
 	<Item>
 		<Element>GridLocationType</Element>
@@ -692,5 +673,6 @@
 		</Values>
 	</Item>
 </CommonElement>
+</if>
 
 </IncludeGroup>

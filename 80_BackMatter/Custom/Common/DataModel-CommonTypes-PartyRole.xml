@@ -3,6 +3,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:xi="http://www.w3.org/2001/XInclude"
 	xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	xmlns:json="http://james.newtonking.com/projects/json"
 	
 	xmlns="http://sifassociation.org/SpecGen">
 
@@ -1928,6 +1929,69 @@
 		</Description>
 		<Type name="xs:anyURI"/>
 	</Item>   <!-- URL -->
+	<xhtml:Example xmlns="" name="Organisation Example">
+		<Organisation>
+			<AddressList>
+				<Address Type="2" Role="2" json:Array="true">
+					<Street>
+						<Line1>1175 Lake Ferry Rd</Line1>
+					</Street>
+					<Suburb>RD 1</Suburb>
+					<City>Martinborough</City>
+				</Address>
+			</AddressList>
+			<EmailList>
+				<Email Type="01">stuart@gmail.com</Email>
+			</EmailList>
+			<PhoneNumberList>
+				<PhoneNumber Type="0888">
+					<Number>(021) 300 999</Number>
+				</PhoneNumber>
+			</PhoneNumberList>
+			<ContactList>
+				<Contact>
+					<Role>Head Cattle Wrangler</Role>
+					<ContactInfo>
+						<Name>
+							<FamilyName>Dumbledore</FamilyName>
+							<GivenName>Albus</GivenName>
+							<FullName>Albus Dumbledore</FullName>
+						</Name>
+						<AddressList>
+							<Address Type="1" Role="1">
+								<Street>
+									<Line1>533 Hogwart's Way</Line1>
+								</Street>
+								<City>Hogsmead</City>
+								<PostalCode>7733</PostalCode>
+							</Address>
+						</AddressList>
+						<EmailList/>
+						<PhoneNumberList/>
+					</ContactInfo>
+				</Contact>
+			</ContactList>
+			<EducationRegion>12013</EducationRegion>
+			<Name>Stuart's Cattle School</Name>
+			<RelatedOrganisationList>
+				<RelatedOrganisation RefId="0951bacf-fc88-4ed6-8113-11a6d6335c07">
+					<LocalId>99102</LocalId>
+					<Name>Tai Tokerau</Name>
+					<ObjectType>EducationOrganisation</ObjectType>
+					<OrganisationType>16</OrganisationType>
+				</RelatedOrganisation>
+				<RelatedOrganisation RefId="ac0871d9-6562-4209-ae86-abdb3661842b">
+					<LocalId>99204</LocalId>
+					<Name>Masterton (Whakaoriori) Kāhui Ako</Name>
+					<ObjectType>EducationOrganisation</ObjectType>
+					<OrganisationType>15</OrganisationType>
+				</RelatedOrganisation>
+			</RelatedOrganisationList>
+			<OperationalStatus>O</OperationalStatus>
+			<Type>12</Type>
+			<URL>http://www.hogwarts.school.nz/</URL>
+		</Organisation>
+	</xhtml:Example>
 </CommonElement>
 <CommonElement name="ContactListType" type="true" dm="true">
 	<Item>
