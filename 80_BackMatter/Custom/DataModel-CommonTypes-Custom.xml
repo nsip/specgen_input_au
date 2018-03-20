@@ -1396,7 +1396,7 @@
 		<Description>
 			<p>Local identifier of NAP test item.</p>
 		</Description>
-		<Type ref="CommonTypes" name="LocalId"/> 
+		<Type ref="CommonTypes" name="LocalIdType"/> 
   </Item>
   <Item>
 		<Element>ItemName</Element>
@@ -4899,7 +4899,7 @@
 </CommonElement>
 <CommonElement name="PurchasingItemType" type="true" dm="true">
 	<Item>
-		<Element>PurchasingItem</Element>
+		<Element>PurchasingItemType</Element>
 		<Characteristics>MR</Characteristics>
 		<Description>
 			<p>Contains information about the item delivered.</p>
@@ -4980,7 +4980,7 @@
 </CommonElement>
 <CommonElement name="ExpenseAccountsType" type="true" dm="true">
 	<Item>
-		<Element>ExpenseAccountType</Element>
+		<Element>ExpenseAccountsType</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
 			<p/>

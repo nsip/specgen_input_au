@@ -66,7 +66,7 @@
     <Description>
       <p>Addresses of the debtor to be used for billing. These addresses override any addresses found in the Billed Entity.</p>
     </Description>
-    <Type ref="DataModelType" name="AddressList"></Type>
+    <Type ref="DataModelType" name="AddressListType"></Type>
   </Item>
   
   <Item>
