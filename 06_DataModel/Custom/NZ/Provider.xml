@@ -3,16 +3,16 @@
 			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 			xmlns:xi="http://www.w3.org/2001/XInclude"
 			xmlns:xhtml="http://www.w3.org/1999/xhtml"
-	
+			xmlns:json="http://james.newtonking.com/projects/json"
+			
             xmlns="http://sifassociation.org/SpecGen">
   <Key>@RefId</Key>
   <EventsReported>true</EventsReported>
   <Item>
     <Element>Provider</Element>
 	<privacyRating>Low</privacyRating>
-    <Description>
-		<p>A unified data object providing details of Early Child Education Service, (ECEService),
-		Schools, and Tertiary Institutions.</p>
+    <Description>A unified data object providing details of Early Child Education Service,
+	(ECEService), Schools, and Tertiary Institutions.
     </Description>
   </Item>
   <Item>
@@ -68,7 +68,7 @@
 		<LocalId>01011234</LocalId>
 		<Organisation>
 			<AddressList>
-				<Address Type="0124">
+				<Address Type="0124" json:Array="true">
 					<Street>
 						<Line1>1175 Lake Ferry Rd</Line1>
 					</Street>

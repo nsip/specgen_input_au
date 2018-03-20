@@ -9,6 +9,7 @@
 		<sifNamespace>http://www.sifassociation.org/datamodel/nz/3.4</sifNamespace>
 		<localizationCode>nz</localizationCode>
 		<schemaVersion>3.4.1</schemaVersion>
+		<jsonExamples>true</jsonExamples>
 	</globalSettings>
 	
 	<htmlDocuments>
