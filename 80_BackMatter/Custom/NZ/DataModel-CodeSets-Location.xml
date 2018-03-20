@@ -1,0 +1,51 @@
+
+<IncludeGroup
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	
+ 	xmlns="http://sifassociation.org/SpecGen">
+
+	<CodeSet>
+		<Intro>
+			<p>
+				Describes three classes of address as recognised by NZ Post, plus Overseas address.
+			</p>
+		</Intro>
+		<ID>Address Type</ID>
+		<Values>
+			<Value>
+				<Code>1</Code>
+				<Text>Urban</Text>
+			</Value>
+			<Value>
+				<Code>2</Code>
+				<Text>Rural</Text>
+			</Value>
+			
+			<!-- Includes P O Box, Pvt Bag, CMB, etc. -->
+			<Value>
+				<Code>3</Code>
+				<Text>Delivery Service</Text>
+			</Value>
+			<Value>
+				<Code>4</Code>
+				<Text>Foreign Addres</Text>
+			</Value>
+		</Values>
+	</CodeSet>    <!-- NZ Address Type -->
+	<CodeSet>
+		<Intro>
+			<p>Describes what a particular address is used for.</p>
+		</Intro>
+		<ID>Address Role</ID>
+		<Values>
+			<Value>
+				<Code>1</Code>
+				<Text>Residental Address</Text>
+			</Value>
+			<Value>
+				<Code>2</Code>
+				<Text>Postal Address</Text>
+			</Value>
+		</Values>
+	</CodeSet>    <!-- NZ Address Role -->
+</IncludeGroup>

@@ -4,7 +4,6 @@
 	
  	xmlns="http://sifassociation.org/SpecGen">
 
-<if intl="au">
 	<CodeSet>
 		<Intro>
 			<p>1216.0 - Australian Standard Geographical Classification (ASGC), July 2011   </p>
@@ -2586,8 +2585,6 @@
 <Value><Code>0747</Code><Text>JPDA (Joint Petroleum Development Area - administered by Australia and Timor-Leste)</Text></Value>
 </Values>
 	</CodeSet>    <!-- AU Standard Country Classification -->
-</if>
-
 	<CodeSet>
 		<Intro>
 			<p/>
@@ -2633,7 +2630,7 @@
 			</Value>
 			 
 		</Values>
-	</CodeSet>    <!-- Address Type -->
+	</CodeSet>    <!-- AU Address Type -->
 	<CodeSet>
 		<Intro>
 			<p/>
@@ -2678,6 +2675,5 @@
 			</Value>
 		 
 		</Values>
-	</CodeSet>    <!-- Address Role -->
-
+	</CodeSet>    <!-- AU Address Role -->
 </IncludeGroup>

@@ -24,7 +24,7 @@
 		<Characteristics>MR</Characteristics>
 		<Type ref="CommonTypes" name="AddressType"/>
 	</Item>
-	<xhtml:Example xmlns="" name="Address List Example" intl="">
+	<xhtml:Example xmlns="" name="Address List Example" intl="au">
 		<AddressList>
 			<Address Type="0123" Role="012B">
 				<Street>
@@ -49,8 +49,8 @@
 	</xhtml:Example>
 	<xhtml:Example xmlns="" name="NZ Address List Example" intl="nz">
 		<AddressList>
-			<!-- Postal Address -->
-			<Address Type="0123" Role="2382">
+			<!-- Postal P O Box Address -->
+			<Address Type="3" Role="2">
 				<Street>
 					<Line1>P O Box 81</Line1>
 				</Street>
@@ -61,8 +61,8 @@
 					<Longitude>175.457776</Longitude>
 				</GridLocation>
 			</Address>
-			<!-- Delivery Address -->
-			<Address Type="0124" Role="2382">
+			<!-- Residential Rural Address -->
+			<Address Type="2" Role="1">
 				<Street>
 					<Line1>1175 Lake Ferry Rd</Line1>
 				</Street>
@@ -94,9 +94,19 @@
 		<Attribute>Type</Attribute>
 		<Characteristics>M</Characteristics>
 		<Description>
-			<p>Code that defines the location of the address. Note: A subset of specific valid values for each instance in a data object may be listed in that object.</p>
+			<if intl="au">
+				<p>Code that defines the location of the address. Note: A subset of specific valid values for each instance in a data object may be listed in that object.</p>
+			</if>
+			<if intl="nz">
+				<p>Code defining the class of the address: Urban, Rural, Delivery Service or Foreign.</p>
+			</if>
 		</Description>
-		<Type ref="CodeSets" name="AUCodeSetsAddressTypeType"/>
+		<if intl="au">
+			<Type ref="CodeSets" name="AUCodeSetsAddressTypeType"/>
+		</if>
+		<if intl="nz">
+			<Type ref="CodeSets" name="NZCodeSetsAddressTypeType"/>
+		</if>
 	</Item>
 <if intl="au">
 	<Item>
@@ -108,14 +118,14 @@
 		<Type ref="CodeSets" name="AUCodeSetsAddressRoleType"/>
 	</Item>
 </if>	
-<if intl="nz">   <!--  NZ edition is optional -->
+<if intl="nz">
 	<Item>
 		<Attribute>Role</Attribute>
 		<Characteristics>O</Characteristics>
 		<Description>
-			<p>A facet of Address</p>
+			<p>Describes how the Person/Organisation uses the Address</p>
 		</Description>
-		<Type ref="CodeSets" name="AUCodeSetsAddressRoleType"/>
+		<Type ref="CodeSets" name="NZCodeSetsAddressRoleType"/>
 	</Item>
 </if>	
 	<Item>
@@ -291,8 +301,8 @@
 			</StatisticalAreas>
 		</Address>
 	</xhtml:Example>
-	<xhtml:Example name="NZ Street Address Example" intl="nz" xmlns="">
-		<Address Type="0123">
+	<xhtml:Example name="NZ Street Postal Address Example" intl="nz" xmlns="">
+		<Address Type="1" Role="2">
 			<Street>
 				<Line1>84 Washington Ave</Line1>
 			</Street>
@@ -306,8 +316,8 @@
 			</GridLocation>
 		</Address>
 	</xhtml:Example>
-	<xhtml:Example name="NZ P O Box Address Example" intl="nz" xmlns="">
-		<Address Type="0123">
+	<xhtml:Example name="NZ P O Box Postal Address Example" intl="nz" xmlns="">
+		<Address Type="3" Role="2">
 			<Street>
 				<Line1>P O Box 81</Line1>
 			</Street>
@@ -320,8 +330,8 @@
 			</GridLocation>
 		</Address>
 	</xhtml:Example>
-	<xhtml:Example name="NZ Rural Address Example" intl="nz" xmlns="">
-		<Address Type="0123">
+	<xhtml:Example name="NZ Rural Residential Address Example" intl="nz" xmlns="">
+		<Address Type="2" Role="1">
 			<Street>
 				<Line1>1175 Lake Ferry Rd</Line1>
 			</Street>

@@ -68,7 +68,7 @@
 		<LocalId>01011234</LocalId>
 		<Organisation>
 			<AddressList>
-				<Address Type="0124" json:Array="true">
+				<Address Type="2" Role="2" json:Array="true">
 					<Street>
 						<Line1>1175 Lake Ferry Rd</Line1>
 					</Street>
@@ -94,7 +94,7 @@
 							<FullName>Albus Dumbledore</FullName>
 						</Name>
 						<AddressList>
-							<Address Type="0123">
+							<Address Type="1" Role="1">
 								<Street>
 									<Line1>533 Hogwart's Way</Line1>
 								</Street>

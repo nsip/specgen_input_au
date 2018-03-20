@@ -3,7 +3,7 @@
  	xmlns="http://sifassociation.org/SpecGen">
 
     <Grouping code="AUCodeSets" name="AU Code Sets">
-		
+
 	<xi:include parse="xml" href="Common/DataModel-Codesets-SchoolStructure.xml"/>
 <if intl="au">		
 	<xi:include parse="xml" href="Common/DataModel-Codesets-Calendar.xml"/>
@@ -13,12 +13,13 @@
 </if>
 
 	<xi:include parse="xml" href="Common/DataModel-Codesets-PartyRole.xml"/>
-	<xi:include parse="xml" href="Common/DataModel-Codesets-Location.xml"/>
 
 <if intl="au">
 	<xi:include parse="xml" href="Common/DataModel-Codesets-Enrollment.xml"/>
 	<xi:include parse="xml" href="Common/DataModel-Codesets-Attendance.xml"/>
 	<xi:include parse="xml" href="Common/DataModel-Codesets-Wellbeing.xml"/>
+
+	<xi:include parse="xml" href="AU/DataModel-Codesets-Location.xml"/>
 	<xi:include parse="xml" href="AU/DataModel-Codesets-NAPLAN.xml"/>
 </if>
 
@@ -392,6 +393,7 @@
 <if intl="nz">
     <Grouping code="NZCodeSets" name="NZ Code Sets">
 		<xi:include parse="xml" href="NZ/DataModel-CodeSets-NZ.xml"/>
+		<xi:include parse="xml" href="NZ/DataModel-CodeSets-Location.xml"/>
 	</Grouping>
 </if>
 
