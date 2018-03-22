@@ -77,7 +77,7 @@
     <Description>
       <p></p>
     </Description>
-    <Type ref="CommonTypes" name="HouseholdList"></Type>
+    <Type ref="CommonTypes" name="HouseholdListType"></Type>
   </Item>
 
   <Item>
