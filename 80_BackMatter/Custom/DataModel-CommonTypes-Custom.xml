@@ -394,7 +394,7 @@
 		<Item>
 			<Element>MarkerType</Element>
 			 <Description>
-			  <p>A staff members who was involved with the grading of the student, or who was responsible for any associated teacher judgement and their associated role.  Must be a current member of staff.</p>
+			  <p>A staff member, (or members), who were involved with the grading of the student, or who was responsible for any associated teacher judgement and their associated role.  Must be a current member of staff.</p>
 			</Description>
 			<Characteristics>OR</Characteristics>
 		</Item> 
@@ -837,7 +837,7 @@
     <Characteristics>O</Characteristics>
 	<Type ref="CommonTypes" name="IdRefType"></Type>
     <Description>
-      <p>The RefId of a WellbeingResponse Object if it exists..</p>
+      <p>The RefId of a WellbeingResponse Object if it exists.</p>
     </Description>
   </Item>
   
@@ -930,7 +930,7 @@
   	   	<Element>HowInvolved</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
-		  <p>Optional free text detailing involvement..</p>
+		  <p>Optional free text detailing involvement.</p>
 		</Description>
 		<Type name="xs:string"></Type>  
   	</Item>
@@ -1140,7 +1140,7 @@
     <Item>
 		<Element>PlanRequiredContainerType</Element>
 		 <Description>
-          <p>Container for Information outling details of a possible Plan.  A Personalised Plan will be referenced by a separate Object.</p>
+          <p>Container for Information outlining details of a possible Plan.  A Personalised Plan will be referenced by a separate Object.</p>
         </Description>
   	</Item> 
     <Item>
@@ -1209,7 +1209,7 @@
     <Item>
 		<Element>AwardContainerType</Element>
 		 <Description>
-          <p>Container for details of an Award, where this response was in relation to a particular Award..</p>
+          <p>Container for details of an Award, where this response was in relation to a particular Award.</p>
         </Description>
   	</Item> 
   	<Item>
@@ -1257,7 +1257,7 @@
     <Item>
 		<Element>OtherWellbeingResponseContainerType</Element>
 		 <Description>
-          <p>Container for details of any other response that can not be classifed by previous types.</p>
+          <p>Container for details of any other response that can not be classified by previous types.</p>
         </Description>
   	</Item> 
   	<Item>
@@ -1601,7 +1601,7 @@
 		<Element>NAPTestletContentType</Element>
 		<Characteristics>M</Characteristics>
 		 <Description>
-          <p>Contents of a Teslet in the context of NAP.</p>
+          <p>Contents of a Testlet in the context of NAP.</p>
         </Description>
   	</Item> 	
   	
@@ -2028,49 +2028,49 @@
 		<Element>Level1Lower</Element>
 		<Characteristics>M</Characteristics>
 		<Type name = "xs:decimal"/>
-		<Description>Lowest scaled score value for Proficiency Level 1 in doman specified (place holder).</Description>
+		<Description>Lowest scaled score value for Proficiency Level 1 in domain specified (place holder).</Description>
 	  </Item>
 	 <Item>
 		<Element>Level1Upper</Element>
 		<Characteristics>M</Characteristics>
 		<Type name = "xs:decimal"/>
-		<Description>Upper scaled score value for Proficiency Level 1 in doman specified (place holder).</Description>
+		<Description>Upper scaled score value for Proficiency Level 1 in domain specified (place holder).</Description>
 	  </Item>
 	  <Item>
 		<Element>Level2Lower</Element>
 		<Characteristics>M</Characteristics>
 		<Type name = "xs:decimal"/>
-		<Description>Lowest scaled score value for Proficiency Level 2 in doman specified (place holder).</Description>
+		<Description>Lowest scaled score value for Proficiency Level 2 in domain specified (place holder).</Description>
 	  </Item>
 	 <Item>
 		<Element>Level2Upper</Element>
 		<Characteristics>M</Characteristics>
 		<Type name = "xs:decimal"/>
-		<Description>Upper scaled score value for Proficiency Level 2 in doman specified (place holder).</Description>
+		<Description>Upper scaled score value for Proficiency Level 2 in domain specified (place holder).</Description>
 	  </Item>
 	 <Item>
 		<Element>Level3Lower</Element>
 		<Characteristics>M</Characteristics>
 		<Type name = "xs:decimal"/>
-		<Description>Lowest scaled score value for Proficiency Level 3 in doman specified (place holder).</Description>
+		<Description>Lowest scaled score value for Proficiency Level 3 in domain specified (place holder).</Description>
 	  </Item>
 	 <Item>
 		<Element>Level3Upper</Element>
 		<Characteristics>M</Characteristics>
 		<Type name = "xs:decimal"/>
-		<Description>Upper scaled score value for Proficiency Level 3 in doman specified (place holder).</Description>
+		<Description>Upper scaled score value for Proficiency Level 3 in domain specified (place holder).</Description>
 	  </Item>
 	 <Item>
 		<Element>Level4Lower</Element>
 		<Characteristics>M</Characteristics>
 		<Type name = "xs:decimal"/>
-		<Description>Lowest scaled score value for Proficiency Level 4 in doman specified (place holder).</Description>
+		<Description>Lowest scaled score value for Proficiency Level 4 in domain specified (place holder).</Description>
 	  </Item>
 	 <Item>
 		<Element>Level4Upper</Element>
 		<Characteristics>M</Characteristics>
 		<Type name = "xs:decimal"/>
-		<Description>Upper scaled score value for Proficiency Level 4 in doman specified (place holder).</Description>
+		<Description>Upper scaled score value for Proficiency Level 4 in domain specified (place holder).</Description>
 	  </Item>
   </CommonElement>
   
@@ -6401,7 +6401,7 @@
 		<Element>YearLevelEnrollment</Element>
 		<Characteristics>MR</Characteristics>
 		<Description>
-			<p>Containter for Year Level of Enrolments.</p>
+			<p>Container for Year Level of Enrolments.</p>
 		</Description>
 		<Type ref="CommonTypes" name="YearLevelEnrollmentType"/>
 	</Item>
@@ -6411,7 +6411,7 @@
 		<Element>YearLevelEnrollmentType</Element>
 		<Characteristics>MR</Characteristics>
 		<Description>
-			<p>Containter for Year Level of Enrolments.</p>
+			<p>Container for Year Level of Enrolments.</p>
 		</Description>
 	</Item>
 	<Item>
@@ -7617,7 +7617,7 @@
         This is the GUID generated by the Provider system.  Where it is available to be provided, the globally unique identifier links together separate instances of the Address Common Element which reference the same physical address.
       </p>
 			<p>
-        When it can be provided, it can be used by subsribing systems to connect addresses from different personal objects.
+        When it can be provided, it can be used by subscribing systems to connect addresses from different personal objects.
       </p>
 		</Description>
 		<Type ref="CommonTypes" name="GUIDType"/>
@@ -7626,7 +7626,7 @@
 		<Element>StatisticalAreas</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
-			<p>A list of Statistical Areas assoicated with an address that will be referenced back to ABS 1270.  Only applicable to a physical address, e.g. not relevant for a Post Office Box.</p>
+			<p>A list of Statistical Areas associated with an address that will be referenced back to ABS 1270.  Only applicable to a physical address, e.g. not relevant for a Post Office Box.</p>
 		</Description>
 		<Type ref="CommonTypes" complex="extension" name="StatisticalAreasType"/>
 	</Item>
@@ -7698,7 +7698,7 @@
 		<Element>StatisticalAreasType</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
-			<p>A list of Statistical Areas assoicated with an address that will be referenced back to ABS 1270.  Only applicable to a physical address, e.g. not relevant for a Post Office Box.</p>
+			<p>A list of Statistical Areas associated with an address that will be referenced back to ABS 1270.  Only applicable to a physical address, e.g. not relevant for a Post Office Box.</p>
 		</Description>
 		<List mode="List">
     </List>
@@ -9239,7 +9239,7 @@
 		<p>
       Metadata is commonly referred to as data about data and includes information such as author, grade level, or keywords relating to a learning object, as examples.
       Metadata can be used to structure and contain any of this kind of information in a consistent manner.
-      In the context of SIF, <code>SIF_Metadata</code> provides a consistent structure to appropriate SIF objects for the purpose of cataloging and object discovery,
+      In the context of SIF, <code>SIF_Metadata</code> provides a consistent structure to appropriate SIF objects for the purpose of cataloguing and object discovery,
       as well as other metadata functions and purposes.  One recurring use case within the SIF data model is the requirement for some form of temporal constraints and tagging
       on objects (see <a href="#TimeElement">
 				<code>TimeElement</code>

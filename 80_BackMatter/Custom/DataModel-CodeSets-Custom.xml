@@ -7207,11 +7207,12 @@
 <Value><Code>450</Code><Text>Resolution of Status - Family member (Temporary) (No longer issued)</Text></Value>
 <Value><Code>451</Code><Text>Secondary Movement Relocation (Temporary) (No longer issued)</Text></Value>
 <Value><Code>456</Code><Text>Business - Short Stay (No longer issued)</Text></Value>
-<Value><Code>457</Code><Text>Business - long stay (No longer issued)</Text></Value>
+<Value><Code>457</Code><Text>Business - long stay (Closed to new applicants)</Text></Value>
 <Value><Code>470</Code><Text>Professional Development (No longer issued)</Text></Value>
 <Value><Code>471</Code><Text>Trade Skills Training (No longer issued)</Text></Value>
 <Value><Code>475</Code><Text>Skilled Regional Sponsored (No longer issued)</Text></Value>
 <Value><Code>476</Code><Text>Skilled - Recognised Graduate (No longer issued)</Text></Value>
+<Value><Code>482</Code><Text>Temporary Skill Shortage (TSS)</Text></Value>
 <Value><Code>485</Code><Text>Skilled - Graduate (No longer issued)</Text></Value>
 <Value><Code>487</Code><Text>Skilled - Regional Sponsored (No longer issued)</Text></Value>
 <Value><Code>495</Code><Text>Skilled Independent Regional (Temporary) (No longer issued)</Text></Value>

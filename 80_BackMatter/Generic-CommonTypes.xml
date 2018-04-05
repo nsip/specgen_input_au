@@ -43,7 +43,7 @@
         <xs:any processContents="lax"/>
       </Type>
       <Description>
-        <p>Contains an arbitary XML element, encoded in UTF-8.</p>
+        <p>Contains an arbitrary XML element, encoded in UTF-8.</p>
       </Description>
     </Item>
     <Item>
@@ -195,7 +195,7 @@
 				<xs:any processContents="lax"/>
 			  </Type>
 			  <Description>
-				<p>Contains an arbitary XML element, encoded in UTF-8.</p>
+				<p>Contains an arbitrary XML element, encoded in UTF-8.</p>
 			  </Description>
 			</Item>
 			<Item>

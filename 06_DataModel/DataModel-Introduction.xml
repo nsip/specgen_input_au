@@ -179,8 +179,8 @@ value, agents <span class="rfc2119">MUST</span> tag the element with a <code>tru
 <code>http://www.w3.org/2001/XMLSchema-instance</code>&#160;<a href="References.html#SCHEMA">[SCHEMA]</a> (e.g. <code>&lt;BirthDate xsi:nil="true"/&gt;</code> where the prefix <code>xsi</code> has been mapped to
 the namespace <code>http://www.w3.org/2001/XMLSchema-instance</code>), unless an empty value is valid with regard to the element's type definition,
 in which case supplying the <code>nil</code> attribute value of <code>true</code> is optional.
-See <a href="NotesOnRelatedTechnologies.html#SIFAndXMLNamespaces">SIF and XML Namespaces</a> for more details on namespaces, and <a href="NotesOnRelatedTechnologies.html#SIFAndXMLSchema">SIF and XML Schema</a>
-for more details on SIF's use of XML Schema.
+<!--See <a href="NotesOnRelatedTechnologies.html#SIFAndXMLNamespaces">SIF and XML Namespaces</a> for more details on namespaces, and <a href="NotesOnRelatedTechnologies.html#SIFAndXMLSchema">SIF and XML Schema</a>
+for more details on SIF's use of XML Schema. -->
 </p>
 </Section>
 <Section name="Externally-Defined XML">
