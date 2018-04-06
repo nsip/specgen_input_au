@@ -50,7 +50,9 @@
 	<xhtml:Example xmlns="" name="NZ Address List Example" intl="nz">
 		<AddressList>
 			<!-- Postal P O Box Address -->
-			<Address Type="3" Role="2">
+			<Address>
+				<Type>3</Type>
+				<Role>2</Role>
 				<Street>
 					<Line1>P O Box 81</Line1>
 				</Street>
@@ -58,7 +60,9 @@
 				<PostalCode>5741</PostalCode>
 			</Address>
 			<!-- Residential Rural Address -->
-			<Address Type="2" Role="1">
+			<Address>
+				<Type>2</Type>
+				<Role>1</Role>
 				<Street>
 					<Line1>1175 Lake Ferry Rd</Line1>
 				</Street>
@@ -82,25 +86,16 @@
 			<p>This element contains address data.</p>
 		</Description>
 	</Item>
+<if intl="au">
 	<Item>
 		<Attribute>Type</Attribute>
 		<Characteristics>M</Characteristics>
 		<Description>
-			<if intl="au">
-				<p>Code that defines the location of the address. Note: A subset of specific valid values for each instance in a data object may be listed in that object.</p>
-			</if>
-			<if intl="nz">
-				<p>Code defining the class of the address: Urban, Rural, Delivery Service or Foreign.</p>
-			</if>
+			<p>Code that defines the location of the address. Note: A subset of specific
+			valid values for each instance in a data object may be listed in that object.</p>
 		</Description>
-		<if intl="au">
-			<Type ref="CodeSets" name="AUCodeSetsAddressTypeType"/>
-		</if>
-		<if intl="nz">
-			<Type ref="CodeSets" name="NZCodeSetsAddressTypeType"/>
-		</if>
+		<Type ref="CodeSets" name="AUCodeSetsAddressTypeType"/>
 	</Item>
-<if intl="au">
 	<Item>
 		<Attribute>Role</Attribute>
 		<Characteristics>M</Characteristics>
@@ -112,7 +107,15 @@
 </if>	
 <if intl="nz">
 	<Item>
-		<Attribute>Role</Attribute>
+		<Element>Type</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Code defining the class of the address: Urban, Rural, Delivery Service or Foreign.</p>
+		</Description>
+		<Type ref="CodeSets" name="NZCodeSetsAddressTypeType"/>
+	</Item>
+	<Item>
+		<Element>Role</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
 			<p>Describes how the Person/Organisation uses the Address</p>
@@ -152,7 +155,7 @@
 		<Element>Suburb</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
-			<p>The suburb part of the address. Also holds 'RD No' part of rural addresses</p>
+			<p>The suburb part of urban addresses, or the 'RD No' part of rural addresses</p>
 		</Description>
 		<Type name="xs:normalizedString"/>
 	</Item>
@@ -297,7 +300,9 @@
 		</Address>
 	</xhtml:Example>
 	<xhtml:Example name="NZ Street Postal Address Example" intl="nz" xmlns="">
-		<Address Type="1" Role="2">
+		<Address>
+			<Type>1</Type>
+			<Role>2</Role>
 			<Street>
 				<Line1>84 Washington Ave</Line1>
 			</Street>
@@ -308,7 +313,9 @@
 		</Address>
 	</xhtml:Example>
 	<xhtml:Example name="NZ P O Box Postal Address Example" intl="nz" xmlns="">
-		<Address Type="3" Role="2">
+		<Address>
+			<Type>3</Type>
+			<Role>2</Role>
 			<Street>
 				<Line1>P O Box 81</Line1>
 			</Street>
@@ -318,7 +325,9 @@
 		</Address>
 	</xhtml:Example>
 	<xhtml:Example name="NZ Rural Residential Address Example" intl="nz" xmlns="">
-		<Address Type="2" Role="1">
+		<Address>
+			<Type>2</Type>
+			<Role>1</Role>
 			<Street>
 				<Line1>1175 Lake Ferry Rd</Line1>
 			</Street>

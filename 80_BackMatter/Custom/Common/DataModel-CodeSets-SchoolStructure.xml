@@ -1646,10 +1646,12 @@
 		</Intro>
 		<ID>Operational Status</ID>
 		<Values>
+<if intl="au">			
 			<Value>
 				<Code>B</Code>
 				<Text>Building or Construction Started</Text>
 			</Value>
+</if>			
 			<Value>
 				<Code>C</Code>
 				<Text>Closed</Text>
@@ -1658,6 +1660,13 @@
 				<Code>O</Code>
 				<Text>Open</Text>
 			</Value>
+<if intl="nz">			
+			<Value>
+				<Code>P</Code>
+				<Text>Proposed</Text>
+			</Value>
+</if>			
+<if intl="au">
 			<Value>
 				<Code>P</Code>
 				<Text>Pending</Text>
@@ -1670,7 +1679,7 @@
 				<Code>U</Code>
 				<Text>Unstaffed</Text>
 			</Value>
-			 
+</if>			 
 		</Values>
 	</CodeSet>    <!-- Operational Status -->
 	<CodeSet>

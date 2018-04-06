@@ -170,7 +170,7 @@
 					<Extension>72289</Extension>
 					<ListedStatus>Y</ListedStatus>
 				</PhoneNumber>
-				<PhoneNumber Type="0888">
+				<PhoneNumber Type="2364">
 					<Number>0437-765-234</Number>
 					<ListedStatus>N</ListedStatus>
 				</PhoneNumber>
@@ -181,6 +181,42 @@
 			</EmailList>
 		</PersonInfo>
 	</xhtml:Example>
+</CommonElement>
+</if>
+
+<if intl="nz">
+<CommonElement name="BaseCommunicationChannelType" type="true" dm="true">
+	<Item>
+		<Element>BaseCommunicationChannelType</Element>
+		<Description>
+			<p>A set of attributes common to multiple kinds of communication channel</p>
+		</Description>
+	</Item>	
+	<Item>
+		<Element>Notes</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Notes on when / how to use the communication channel. eg: Phone after 4pm</p>
+		</Description>
+		<Type name="xs:string"/>
+	</Item>
+	<Item>
+		<Element>Preference</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Preference number indicating an order in which communication channels should be used
+			when contacting person or organisation.</p>
+		</Description>
+		<Type name="xs:unsignedInt"/>
+	</Item>
+	<Item>
+		<Element>Usage</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>A code describing the acceptable usage of a person or organisation's communication channel</p>
+		</Description>
+		<Type ref="CodeSets" name="NZCodeSetsCommunicationUsageType"/>
+	</Item>
 </CommonElement>
 </if>
 
@@ -291,11 +327,9 @@
 	<Item>
 		<Element>NameType</Element>
 		<Description>
-			<p>The Name element, which could belong to a
-			<if intl="nz">Provider, </if> Student, Staff Member, Contact, etc.
-			This element or a form of this element
-			with a subset of Type values occurs within objects such as
-			<if intl="nz">Provider, </if> StudentPersonal, StudentContactPersonal, StaffPersonal, etc.
+			<p>The Name element, which could belong to a Student, Staff Member, Contact, etc.
+			This element or a form of this element with a subset of Type values occurs within
+			objects such as StudentPersonal, StudentContactPersonal, StaffPersonal, etc.
 		</p>
     </Description>
 		<Type ref="CommonTypes" complex="extension" name="BaseNameType"/>
@@ -881,37 +915,31 @@
 		<Characteristics>MR</Characteristics>
 		<Type ref="CommonTypes" name="EmailType"/>
 	</Item>
-	<xhtml:Example xmlns="" name="Email List Example">
+	<xhtml:Example xmlns="" name="NZ Email List Example" intl="au">
 		<EmailList>
 			<Email Type="01">contact@sifinfo.org</Email>
 			<Email Type="02">info@sifinfo.org</Email>
 		</EmailList>
 	</xhtml:Example>
-</CommonElement>
-<CommonElement name="EmailType" type="true" dm="true">
-	<Item>
-		<Element>EmailType</Element>
-		<Description>
-			<p>
-        This element represents an e-mail address of one of a number of types and occurs in objects such as
-        StudentPersonal, StaffPersonal, StudentContactPersonal, etc.
-      </p>
-		</Description>
-		<Type name="xs:normalizedString"/>
-	</Item>
-	<Item>
-		<Attribute>Type</Attribute>
-		<Characteristics>M</Characteristics>
-		<Description>
-			<p>This attribute specifies the type of e-mail address.</p>
-		</Description>
-		<Type ref="CodeSets" name="AUCodeSetsEmailTypeType"/>
-	</Item>
-	<xhtml:Example xmlns="" name="Email Type Example">
-		<Email Type="01">contact@sifinfo.org</Email>
+	<xhtml:Example xmlns="" name="NZ Email List Example" intl="nz">
+		<EmailList>
+			<Email>
+				<Notes>Not on Thursdays</Notes>
+				<Preference>1</Preference>
+				<Usage>UnexplainedAbsence</Usage>
+				<Type>01</Type>
+				<Address>contact@sifinfo.org</Address>
+			</Email>
+			<Email>
+				<Notes>Only on Thursdays</Notes>
+				<Preference>1</Preference>
+				<Usage>UnexplainedAbsence</Usage>
+				<Type>02</Type>
+				<Address>info@sifinfo.org</Address>
+			</Email>
+		</EmailList>
 	</xhtml:Example>
 </CommonElement>
-
 <CommonElement name="PhoneNumberListType" type="true" dm="true">
 	<Item>
 		<Element>PhoneNumberListType</Element>
@@ -925,12 +953,55 @@
 		<Characteristics>MR</Characteristics>
 		<Type ref="CommonTypes" name="PhoneNumberType"/>
 	</Item>
-	<xhtml:Example xmlns="" name="Phone Number List Example">
+	<xhtml:Example xmlns="" name="AU Phone Number List Example" intl="au">
 		<PhoneNumberList>
 			<PhoneNumber Type="0096">
 				<Number>(03) 9543 2000</Number>
 			</PhoneNumber>
 		</PhoneNumberList>
+	</xhtml:Example>
+	<xhtml:Example xmlns="" name="NZ Phone Number List Example" intl="nz">
+		<PhoneNumberList>
+			<PhoneNumber>
+				<Notes>Not on Thursdays</Notes>
+				<Preference>1</Preference>
+				<Usage>UnexplainedAbsence</Usage>
+				<Type>0096</Type>
+				<Number>(03) 273 2000</Number>
+			</PhoneNumber>
+			<PhoneNumber>
+				<Notes>Only on Thursdays</Notes>
+				<Preference>1</Preference>
+				<Usage>SMS</Usage>
+				<Type>0096</Type>
+				<Number>(0274) 273 2000</Number>
+			</PhoneNumber>
+		</PhoneNumberList>
+	</xhtml:Example>
+</CommonElement>
+
+<if intl="au">
+<CommonElement name="EmailType" type="true" dm="true">
+	<Item>
+		<Element>EmailType</Element>
+		<Description>
+			<p>
+				This element represents an e-mail address of one of a number of types and
+				occurs in objects such as StudentPersonal, StaffPersonal, StudentContactPersonal, etc.
+			</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+	    <Attribute>Type</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>This attribute specifies the type of e-mail address.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsEmailTypeType"/>
+	</Item>
+	<xhtml:Example xmlns="" name="AU Email Type Example">
+		<Email Type="01">contact@sifinfo.org</Email>
 	</xhtml:Example>
 </CommonElement>
 <CommonElement name="PhoneNumberType" type="true" dm="true">
@@ -948,7 +1019,6 @@
 		</Description>
 		<Type ref="CodeSets" name="AUCodeSetsTelephoneNumberTypeType"/>
 	</Item>
-<if intl="au">	
 	<Item>
 		<Element>Number</Element>
 		<Characteristics>M</Characteristics>
@@ -962,23 +1032,6 @@
 		</Description>
 		<Type name="xs:normalizedString"/>
 	</Item>
-</if>
-<if intl="nz">	
-	<Item>
-		<Element>Number</Element>
-		<Characteristics>M</Characteristics>
-		<Description>
-			<p>Phone number.  Free-form, but typical New Zealand formats include:</p>
-			<ul>
-				<li>(0##) ###-####</li>
-				<li>###-####</li>
-				<li>+##### ### ####</li>
-			</ul>
-		</Description>
-		<Type name="xs:normalizedString"/>
-	</Item>
-</if>
-
 	<Item>
 		<Element>Extension</Element>
 		<Characteristics>O</Characteristics>
@@ -1010,6 +1063,109 @@
 		</PhoneNumber>
 	</xhtml:Example>
 </CommonElement>
+</if>
+
+<if intl="nz">
+<CommonElement name="EmailType" type="true" dm="true">
+	<Item>
+		<Element>EmailType</Element>
+		<Description>
+			<p>
+				This element represents an e-mail address of one of a
+				number of types and occurs in objects such as
+				StudentPersonal, StaffPersonal,
+				StudentContactPersonal, etc.
+			</p>
+		</Description>
+		<Type complex="extension" name="BaseCommunicationChannelType"/>
+	</Item>
+	<Item>
+	    <Element>Type</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+			<p>A Code denoting how the owner of the e-mail address describes it.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsEmailTypeType"/>
+	</Item>
+	 <Item>
+		<Element>Address</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The actual email address.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	 </Item>
+	<xhtml:Example xmlns="" name="NZ Email Type Example">
+		<Email>
+			<Notes>Not on Thursdays</Notes>
+			<Preference>1</Preference>
+			<Usage>UnexplainedAbsence</Usage>
+			<Type>01</Type>
+			<Address>contact@sifinfo.org</Address>
+		</Email>
+	</xhtml:Example>
+</CommonElement>
+<CommonElement name="PhoneNumberType" type="true" dm="true">
+	<Item>
+		<Element>PhoneNumberType</Element>
+		<Description>
+			<p>This element represents a phone number and occurs within objects such as StudentPersonal, StaffPersonal, etc.</p>
+		</Description>
+		<Type complex="extension" name="BaseCommunicationChannelType"/>
+	</Item>
+	<Item>
+		<Element>Type</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+			<p>Code that specifies what type of phone number this is.  Note: A subset of valid values may be specified in data objects.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsTelephoneNumberTypeType"/>
+	</Item>
+	<Item>
+		<Element>Number</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Phone number.  Free-form, but typical New Zealand formats include:</p>
+			<ul>
+				<li>(0##) ###-####</li>
+				<li>###-####</li>
+				<li>+##### ### ####</li>
+			</ul>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+
+	<Item>
+		<Element>Extension</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Phone number extension.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>ListedStatus</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Indicates whether or not the phone number is available to the public.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"/>
+	</Item>
+	<xhtml:Example xmlns="" name="Phone Number Example">
+		<PhoneNumber>
+			<Notes>Not on Thursdays</Notes>
+			<Preference>1</Preference>
+			<Usage>UnexplainedAbsence</Usage>
+			<Type>0096</Type>
+			<Number>(03) 9543 2000</Number>
+			<Extension>245</Extension>
+			<ListedStatus>Y</ListedStatus>
+		</PhoneNumber>
+	</xhtml:Example>
+</CommonElement>
+</if>
 
 <if intl="au">
 <CommonElement name="BirthDateType" type="true" dm="true">
@@ -1842,7 +1998,7 @@
 		<Characteristics>M</Characteristics>
 		<privacyRating>High</privacyRating>
 		<Description>
-			<p>The set of location and postal addresses that the Organisation uses</p>
+			<p>The set of postal and other addresses that the Organisation uses</p>
 		</Description>
 		<Type ref="CommonTypes" name="AddressListType"/>
 	</Item>   <!-- AddressList -->
@@ -1865,11 +2021,20 @@
 		<Type ref="CommonTypes" name="PhoneNumberListType"/>
 	</Item>   <!-- PhoneNumberList -->
 	<Item>
+		<Element>CommunicationChannelList</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>A list of one or more methods of communication with the organisation</p>
+		</Description>
+		<Type ref="CommonTypes" name="CommunicationChannelListType"/>
+	</Item>   <!-- CommunicationChannelList -->
+	<Item>
 		<Element>ContactList</Element>
 		<Characteristics>M</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
-			<p>Contact details for partiular people at the organisation</p>
+			<p>A list of one or more cotact persons related to the organisation</p>
 		</Description>
 		<Type ref="CommonTypes" name="ContactListType"/>
 	</Item>   <!-- ContactList -->
@@ -1909,7 +2074,7 @@
 		</Description>
 		<Type ref="CodeSets" name="AUCodeSetsOperationalStatusType"/>
 	</Item>   <!-- OperationalStatus-->
-	<Item>
+	<Item>h
 		<Element>Type</Element>
 		<Characteristics>M</Characteristics>
 		<privacyRating>Low</privacyRating>
@@ -1920,19 +2085,12 @@
 		</Description>
 		<Type ref="CodeSets" name="NZCodeSetsOrganisationTypeType"/>
 	</Item>   <!-- Type -->
-	<Item>
-		<Element>URL</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-			<p>URL of the Organisation's main public facing website</p>
-		</Description>
-		<Type name="xs:anyURI"/>
-	</Item>   <!-- URL -->
 	<xhtml:Example xmlns="" name="Organisation Example">
 		<Organisation>
 			<AddressList>
-				<Address Type="2" Role="2" json:Array="true">
+				<Address json:Array="true">
+					<Type>2</Type>
+					<Role>2</Role>
 					<Street>
 						<Line1>1175 Lake Ferry Rd</Line1>
 					</Street>
@@ -1941,55 +2099,79 @@
 				</Address>
 			</AddressList>
 			<EmailList>
-				<Email Type="01">stuart@gmail.com</Email>
+				<Email>
+					<Notes>School Secretary</Notes>
+					<Type>01</Type>
+					<Address>stuart@gmail.com</Address>
+				</Email>
 			</EmailList>
 			<PhoneNumberList>
-				<PhoneNumber Type="0888">
+				<PhoneNumber>
+					<Notes>School Secretary DDI</Notes>
+					<Type>0096</Type>
+					<Number>(021) 300 999</Number>
+				</PhoneNumber>
+				<PhoneNumber>
+					<Notes>Attendance Office (Automated)</Notes>
+					<Usage>SMS</Usage>
+					<Type>0096</Type>
 					<Number>(021) 300 999</Number>
 				</PhoneNumber>
 			</PhoneNumberList>
+			<CommunicationChannelList>
+				<Channel>
+					<Notes>School Attendance System (Self Service)</Notes>
+					<Type>Website</Type>
+					<Value>http://att.hogwarts.school.nz</Value>
+				</Channel>
+				<Channel>
+					<Notes>School Website</Notes>
+					<Type>Website</Type>
+					<Value>http://www.hogwarts.school.nz/</Value>
+				</Channel>
+			</CommunicationChannelList>
 			<ContactList>
 				<Contact>
-					<Role>Head Cattle Wrangler</Role>
-					<ContactInfo>
-						<Name>
-							<FamilyName>Dumbledore</FamilyName>
-							<GivenName>Albus</GivenName>
-							<FullName>Albus Dumbledore</FullName>
-						</Name>
-						<AddressList>
-							<Address Type="1" Role="1">
-								<Street>
-									<Line1>533 Hogwart's Way</Line1>
-								</Street>
-								<City>Hogsmead</City>
-								<PostalCode>7733</PostalCode>
-							</Address>
-						</AddressList>
-						<EmailList/>
-						<PhoneNumberList/>
-					</ContactInfo>
+					<Name>
+						<FamilyName>Dumbledore</FamilyName>
+						<GivenName>Albus</GivenName>
+						<FullName>Albus Dumbledore</FullName>
+					</Name>
+					<PositionTitle>Head Cattle Wrangler</PositionTitle>
+					<Role>Principal</Role>
+					<AddressList>
+						<Address>
+							<Type>1</Type>
+							<Role>1</Role>
+							<Street>
+								<Line1>533 Hogwart's Way</Line1>
+							</Street>
+							<City>Hogsmead</City>
+							<PostalCode>7733</PostalCode>
+						</Address>
+					</AddressList>
+					<EmailList/>
+					<PhoneNumberList/>
 				</Contact>
 			</ContactList>
-			<EducationRegion>12013</EducationRegion>
+			<EducationRegion>7</EducationRegion>
 			<Name>Stuart's Cattle School</Name>
 			<RelatedOrganisationList>
 				<RelatedOrganisation RefId="0951bacf-fc88-4ed6-8113-11a6d6335c07">
 					<LocalId>99102</LocalId>
 					<Name>Tai Tokerau</Name>
 					<ObjectType>EducationOrganisation</ObjectType>
-					<OrganisationType>16</OrganisationType>
+					<OrganisationType>102</OrganisationType>
 				</RelatedOrganisation>
 				<RelatedOrganisation RefId="ac0871d9-6562-4209-ae86-abdb3661842b">
 					<LocalId>99204</LocalId>
 					<Name>Masterton (Whakaoriori) Kāhui Ako</Name>
 					<ObjectType>EducationOrganisation</ObjectType>
-					<OrganisationType>15</OrganisationType>
+					<OrganisationType>101</OrganisationType>
 				</RelatedOrganisation>
 			</RelatedOrganisationList>
 			<OperationalStatus>O</OperationalStatus>
 			<Type>12</Type>
-			<URL>http://www.hogwarts.school.nz/</URL>
 		</Organisation>
 	</xhtml:Example>
 </CommonElement>
@@ -2007,36 +2189,61 @@
 		<Description/>
 		<Type ref="CommonTypes" name="ContactType"/>
 	</Item>
+	<xhtml:Example xmlns="" name="Contact List Example">
+		<ContactList>
+			<Contact>
+				<Name>
+					<FamilyName>Dumbledore</FamilyName>
+					<GivenName>Albus</GivenName>
+					<FullName>Albus Dumbledore</FullName>
+				</Name>
+				<PositionTitle>Headmaster</PositionTitle>
+				<Role>Principal</Role>
+				<AddressList>
+					<Address>
+						<Type>1</Type>
+						<Role>1</Role>
+						<Street>
+							<Line1>533 Hogwart's Way</Line1>
+						</Street>
+						<City>Hogsmead</City>
+						<PostalCode>7733</PostalCode>
+					</Address>
+				</AddressList>
+				<EmailList/>
+				<PhoneNumberList/>
+			</Contact>
+			<Contact>
+				<Name>
+					<FamilyName>Rubeus</FamilyName>
+					<GivenName>Hagrid</GivenName>
+					<FullName>Rubeud Hagrid</FullName>
+				</Name>
+				<PositionTitle>Gamekeeper</PositionTitle>
+				<Role>SupportStaff</Role>
+				<AddressList>
+					<Address>
+						<Type>1</Type>
+						<Role>1</Role>
+						<Street>
+							<Line1>The Enchanted Wood</Line1>
+							<Line2>533 Hogwart's Way</Line2>
+						</Street>
+						<City>Hogsmead</City>
+						<PostalCode>7733</PostalCode>
+					</Address>
+				</AddressList>
+				<EmailList/>
+				<PhoneNumberList/>
+			</Contact>
+		</ContactList>
+	</xhtml:Example>	
 </CommonElement>
 <CommonElement name="ContactType" type="true" dm="true">
 	<Item>
 		<Element>ContactType</Element>
 		<Description>
 			<p>A particular person's contact details</p>
-		</Description>
-	</Item>
-	<Item>
-		<Element>Role</Element>
-		<Characteristics>O</Characteristics>
-		<Description>
-			<p>The role the contact plays within the Organisation being contacted</p>
-		</Description>
-		<Type name="xs:normalizedString"/>
-	</Item>
-	<Item>
-		<Element>ContactInfo</Element>
-		<Characteristics>M</Characteristics>
-		<Description>
-			<p>The person's contact details</p>
-		</Description>
-		<Type ref="CommonTypes" name="ContactInfoType"/>
-	</Item>
-</CommonElement>
-<CommonElement name="ContactInfoType" type="true" dm="true">
-	<Item>
-		<Element>ContactInfoType</Element>
-		<Description>
-			<p>Generic type holding a person's contact details</p>
 		</Description>
 	</Item>
 	<Item>
@@ -2047,7 +2254,23 @@
 			<p>The contact's name</p>
 		</Description>
 		<Type ref="CommonTypes" name="BaseNameType"/>
-	</Item>
+		</Item>		<!-- Name -->
+	<Item>
+		<Element>PositionTitle</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The title the contact has within the Organisation being contacted</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>   <!-- PositionTitle -->
+	<Item>
+		<Element>Role</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The role the contact plays within the Organisation being contacted</p>
+		</Description>
+		<Type ref="CodeSets" name="NZCodeSetsOrganisationContactRoleType"/>
+	</Item>   <!-- Role -->
 	<Item>
 		<Element>AddressList</Element>
 		<Characteristics>O</Characteristics>
@@ -2055,7 +2278,7 @@
 			<p/>
 		</Description>
 		<Type ref="CommonTypes" name="AddressListType"/>
-	</Item>
+	</Item>   <!-- AddressList -->
 	<Item>
 		<Element>EmailList</Element>
 		<Characteristics>O</Characteristics>
@@ -2063,7 +2286,7 @@
 			<p>List of Email elements.</p>
 		</Description>
 		<Type ref="CommonTypes" name="EmailListType"/>
-	</Item>
+	</Item>   <!-- EmailList -->
 	<Item>
 		<Element>PhoneNumberList</Element>
 		<Characteristics>O</Characteristics>
@@ -2071,8 +2294,82 @@
 			<p>List of PhoneNumber elements.</p>
 		</Description>
 		<Type ref="CommonTypes" name="PhoneNumberListType"/>
+	</Item>   <!-- PhoneNumberList -->
+	<xhtml:Example xmlns="" name="Contact Example">
+		<Contact>
+			<Name>
+				<FamilyName>Dumbledore</FamilyName>
+				<GivenName>Albus</GivenName>
+				<FullName>Albus Dumbledore</FullName>
+			</Name>
+			<PositionTitle>Head Cattle Wrangler</PositionTitle>
+			<Role>Principal</Role>
+			<AddressList>
+				<Address>
+					<Type>1</Type>
+					<Role>1</Role>
+					<Street>
+						<Line1>533 Hogwart's Way</Line1>
+					</Street>
+					<City>Hogsmead</City>
+					<PostalCode>7733</PostalCode>
+				</Address>
+			</AddressList>
+			<EmailList/>
+			<PhoneNumberList/>
+		</Contact>
+	</xhtml:Example>
+</CommonElement>
+
+<CommonElement name="CommunicationChannelListType" type="true" dm="true">
+	<Item>
+		<Element>CommunicationChannelListType</Element>
+		<Description>
+			<p>A list of people/organisation's ccommunications channels</p>
+		</Description>
+		<List mode="List"/>
+	</Item>
+	<Item>
+		<Element>Channel</Element>
+		<Characteristics>MR</Characteristics>
+		<Description/>
+		<Type ref="CommonTypes" name="CommunicationChannelType"/>
 	</Item>
 </CommonElement>
+<CommonElement name="CommunicationChannelType" type="true" dm="true">
+	<Item>
+		<Element>CommunicationChannelType</Element>
+		<Description>
+			<p>A particular person or organisation's communications method</p>
+		</Description>
+		<Type complex="extension" name="BaseCommunicationChannelType"/>
+	</Item>	
+	<Item>
+		<Element>Type</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>A code classifying the Communication's method</p>
+		</Description>
+		<Type ref="CodeSets" name="NZCodeSetsCommunicationChannelTypeType"/>
+	</Item>
+	<Item>
+		<Element>Value</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The unique value that provides access to the channel. eg: URL for a website;
+			Facebook page addess, Twitter handle.</p>
+		</Description>
+		<Type name="xs:string"/>
+	</Item>
+	<xhtml:Example xmlns="" name="Communication Channel Example">
+		<CommunicationChannel>
+			<Notes>School Attendance System (Self Service)</Notes>
+			<Type>Website</Type>
+			<Value>http://www.hogwarts.school.nz/Attendance</Value>
+		</CommunicationChannel>
+	</xhtml:Example>
+</CommonElement>
+
 <CommonElement name="RelatedOrganisationListType" type="true" dm="true">
 	<Item>
 		<Element>RelatedOrganisationListType</Element>
@@ -2093,58 +2390,18 @@
 				<LocalId>99102</LocalId>
 				<Name>Tai Tokerau</Name>
 				<ObjectType>EducationOrganisation</ObjectType>
-				<OrganisationType>16</OrganisationType>
+				<OrganisationType>102</OrganisationType>
 			</RelatedOrganisation>
 			<RelatedOrganisation RefId="ac0871d9-6562-4209-ae86-abdb3661842b">
 				<LocalId>99204</LocalId>
 				<Name>Masterton (Whakaoriori) Kāhui Ako</Name>
 				<ObjectType>EducationOrganisation</ObjectType>
-				<OrganisationType>15</OrganisationType>
+				<OrganisationType>101</OrganisationType>
 			</RelatedOrganisation>
 		</RelatedOrganisationList>
 	</xhtml:Example>
 </CommonElement> 
 
-<CommonElement name="ObjectReferenceType" type="true" dm="true">
-	<Item>
-		<Element>ObjectReferenceType</Element>
-		<Description>
-			<p>A reference to another SIF Data Object</p>
-		</Description>
-	</Item>
-	<Item>
-		<Attribute>RefId</Attribute>
-		<Characteristics>M</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description><p>The GUUID of the referenced object</p></Description>
-		<Type ref="CommonTypes" name="RefIdType"/>
-	</Item>
-	<Item>
-		<Element>LocalId</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-			<p>Local identifier representing the referenced object.</p>
-		</Description>
-		<Type ref="CommonTypes" name="LocalIdType"/>
-	</Item>
-	<Item>
-		<Element>Name</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description><p>The normal descriptive name of the referenced object.</p></Description>
-		<Type name="xs:string"/>
-	</Item>
-	<Item>
-		<Element>ObjectType</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-			<p>The type of the referenced object:</p>
-		</Description>
-		<Type ref="CodeSets" name="NZCodeSetsReferrableDataObjectsType"/>
-	</Item>
-</CommonElement>
 <CommonElement name="RelatedOrganisationType" type="true" dm="true">
 	<Item>
 		<Element>RelatedOrganisationType</Element>
@@ -2176,7 +2433,7 @@
 			<LocalId>99102</LocalId>
 			<Name>Tai Tokerau</Name>
 			<ObjectType>EducationOrganisation</ObjectType>
-			<OrganisationType>16</OrganisationType>
+			<OrganisationType>102</OrganisationType>
 		</RelatedOrganisation>
 	</xhtml:Example>
 	<xhtml:Example xmlns="" name="Kāhui Ako Related Organisation">
@@ -2184,7 +2441,7 @@
 			<LocalId>99204</LocalId>
 			<Name>Masterton (Whakaoriori) Kāhui Ako</Name>
 			<ObjectType>EducationOrganisation</ObjectType>
-			<OrganisationType>15</OrganisationType>
+			<OrganisationType>101</OrganisationType>
 		</RelatedOrganisation>
 	</xhtml:Example>
 </CommonElement>

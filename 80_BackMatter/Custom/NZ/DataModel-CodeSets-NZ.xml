@@ -25,44 +25,44 @@
 		<ID>Education Region</ID>
 		<Values>
 			<Value>
-				<Code>12007</Code>
-				<Text>Tai Tokerau</Text>
-			</Value>
-			<Value>
-				<Code>12008</Code>
+				<Code>1</Code>
 				<Text>Auckland</Text>
 			</Value>
 			<Value>
-				<Code>12009</Code>
-				<Text>Waikato</Text>
-			</Value>
-			<Value>
-				<Code>12010</Code>
+				<Code>2</Code>
 				<Text>Bay of Plenty, Waiariki</Text>
 			</Value>
 			<Value>
-				<Code>12012</Code>
-				<Text>Hawke's Bay, Tairāwhiti</Text>
-			</Value>
-			<Value>
-				<Code>12011</Code>
-				<Text>Taranaki, Whanganui &amp; Manawatū</Text>
-			</Value>
-			<Value>
-				<Code>12013</Code>
-				<Text>Wellington</Text>
-			</Value>
-			<Value>
-				<Code>12014</Code>
-				<Text>Nelson, Marlborough &amp; West Coast</Text>
-			</Value>
-			<Value>
-				<Code>12015</Code>
+				<Code>3</Code>
 				<Text>Canterbury &amp; Chatham Islands</Text>
 			</Value>
 			<Value>
-				<Code>12016</Code>
+				<Code>4</Code>
+				<Text>Hawke's Bay, Tairāwhiti</Text>
+			</Value>
+			<Value>
+				<Code>5</Code>
+				<Text>Nelson, Marlborough &amp; West Coast</Text>
+			</Value>
+			<Value>
+				<Code>6</Code>
 				<Text>Otago &amp; Southland</Text>
+			</Value>
+			<Value>
+				<Code>7</Code>
+				<Text>Tai Tokerau</Text>
+			</Value>
+			<Value>
+				<Code>8</Code>
+				<Text>Taranaki, Whanganui &amp; Manawatū</Text>
+			</Value>
+			<Value>
+				<Code>9</Code>
+				<Text>Waikato</Text>
+			</Value>
+			<Value>
+				<Code>10</Code>
+				<Text>Wellington</Text>
 			</Value>
 		</Values>
 	</CodeSet>    <!-- Education Region -->
@@ -125,17 +125,91 @@
 				<Code>13</Code>
 				<Text>Teen Parent Unit</Text>
 			</Value>
+			<Value>
+				<Code>14</Code>
+				<Text>Activity Centre</Text>
+			</Value>
 
 			<Value>
-				<Code>15</Code>
+				<Code>101</Code>
 				<Text>Community of Learning|Kāhui Ako</Text>
 			</Value>
 			<Value>
-				<Code>16</Code>
+				<Code>102</Code>
 				<Text>Ministry of Education Local Office</Text>
 			</Value>
 		</Values>
 	</CodeSet>    <!-- Organisation Type -->
+	<CodeSet>
+		<Intro>
+			Codes describing the nature of a person or organisation's communications channel.
+		</Intro>
+		<ID>Communication Channel Type</ID>
+		<Values>
+			<Value>
+				<Code>Website</Code>
+				<Text>Website</Text>
+				<Description>Typically refers to the home page for an entity</Description>
+			</Value>
+		</Values>
+	</CodeSet>    <!-- Communication Channel Type -->
+	<CodeSet>
+		<Intro>
+			Codes describing acceptable usage of a person or organisation's communication channel.
+		</Intro>
+		<ID>Communication Usage</ID>
+		<Values>
+			<Value>
+				<Code>Medical</Code>
+				<Text>Medical Incident</Text>
+				<Description>Allows the school to decide which of a caregiver's communication channels is to be used
+				when reporting a medical incident occuring to the learner.</Description>
+			</Value>
+			<Value>
+				<Code>SMS</Code>
+				<Text>SMS/TXT</Text>
+				<Description>Allows the school to decide which of a caregiver's communication channels is to be used
+				when sending an SMS (or TXT) message.</Description>
+			</Value>
+			<Value>
+				<Code>UnexplainedAbsence</Code>
+				<Text>Unexplained Absence</Text>
+				<Description>Allows the school to decide which of the caregiver's communication channels is to be used
+				when reporting a learner's unexplained absence.</Description>
+			</Value>
+			<Value>
+				<Code>IntendedAbsence</Code>
+				<Text>Intended Absence</Text>
+				<Description>Allows the caregiver to decide which of the school's communication channels is to be used
+				when notifying of a learner's intended absence.</Description>
+			</Value>
+		</Values>
+	</CodeSet>    <!-- Communication Usage -->
+	<CodeSet>
+		<Intro>
+			Codes describing a standardised role held by a contact within an organisation.
+		</Intro>
+		<ID>Organisation Contact Role</ID>
+		<Values>
+			<Value>
+				<Code>Principal</Code>
+				<Text>Principal</Text>
+			</Value>
+			<Value>
+				<Code>ActingPrincipal</Code>
+				<Text>Acting Principal</Text>
+			</Value>
+			<Value>
+				<Code>Director</Code>
+				<Text>Director</Text>
+			</Value>
+			<Value>
+				<Code>SupportStaff</Code>
+				<Text>Support Staff</Text>
+				<Description>Includes all non-teaching staff at schools</Description>
+			</Value>
+		</Values>
+	</CodeSet>    <!-- Contact Role -->
 	<CodeSet>
 		<Intro>
 			Codes describing state legislated policies that can be adopted by schools.
@@ -144,7 +218,8 @@
 		<Values>
 			<Value>
 				<Code>AgeEntry</Code>
-				<Text>New entrants policy choice whereby children may start school on or soon after their 5th birthday</Text>
+				<Text>New entrants policy choice whereby children may start
+				school on or soon after their 5th birthday</Text>
 			</Value>
 			<Value>
 				<Code>CohortEntry</Code>
@@ -243,7 +318,7 @@
 			</Value>
 			<Value>
 				<Code>205</Code>
-				<Text>School for Learing/Scoial Difficulties</Text>
+				<Text>School for Learning/Social Difficulties</Text>
 			</Value>
 			<Value>
 				<Code>206</Code>

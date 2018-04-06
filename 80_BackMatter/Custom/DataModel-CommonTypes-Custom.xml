@@ -690,27 +690,8 @@
 		</Union>
 	</Item>
 	</CommonElement>
-</if>
 
-
-<!-- Remaining genuine 'Common Types' -->
-<CommonElement name="LocalIdType" type="true" dm="true">
-	<Item>
-		<Element>LocalIdType</Element>
-		<Description>
-			<p>
-        This is a common element used to define the locally assigned identifier associated with an entity. 
-      </p>
-		</Description>
-		<Type name="xs:normalizedString"/>
-	</Item>
-	<xhtml:Example xmlns="" name="LocalId Example">
-		<LocalId>123321A</LocalId>
-	</xhtml:Example>
-</CommonElement>
-
-<if intl="au">
-<CommonElement name="GraduationDateType" type="true" dm="true">
+	<CommonElement name="GraduationDateType" type="true" dm="true">
 	<Item>
 		<Element>GraduationDateType</Element>
 		<Description>
@@ -721,8 +702,9 @@
 	<xhtml:Example xmlns="" name="Graduation Date Example">
 		<GraduationDate>2005-05-27</GraduationDate>
 	</xhtml:Example>
-</CommonElement>
-<CommonElement name="OtherCodeListType" type="true" dm="true">
+	</CommonElement>
+	
+	<CommonElement name="OtherCodeListType" type="true" dm="true">
 	<Item>
 		<Element>OtherCodeListType</Element>
 		<Description>
@@ -773,8 +755,8 @@
 			<OtherCode Codeset="Text">Semester</OtherCode>
 		</OtherCodeList>
 	</xhtml:Example>
-</CommonElement>
-<CommonElement name="SIF_ExtendedElementsType" type="true" dm="true">
+	</CommonElement>
+	<CommonElement name="SIF_ExtendedElementsType" type="true" dm="true">
 	<Intro>
 		<p>
       This element is supported at the end of all SIF objects.
@@ -845,5 +827,65 @@
 </CommonElement>
 </if>
 
+
+<if intl="nz">
+	<CommonElement name="ObjectReferenceType" type="true" dm="true">
+	<Item>
+		<Element>ObjectReferenceType</Element>
+		<Description>
+			<p>A reference to another SIF Data Object</p>
+		</Description>
+	</Item>
+	<Item>
+		<Attribute>RefId</Attribute>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description><p>The GUUID of the referenced object</p></Description>
+		<Type ref="CommonTypes" name="RefIdType"/>
+	</Item>
+	<Item>
+		<Element>LocalId</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>Local identifier representing the referenced object.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"/>
+	</Item>
+	<Item>
+		<Element>Name</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description><p>The normal descriptive name of the referenced object.</p></Description>
+		<Type name="xs:string"/>
+	</Item>
+	<Item>
+		<Element>ObjectType</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The type of the referenced object:</p>
+		</Description>
+		<Type ref="CodeSets" name="NZCodeSetsReferrableDataObjectsType"/>
+	</Item>
+</CommonElement>
+</if>
+
+
+<!-- Remaining genuine 'Common Types' -->
+<CommonElement name="LocalIdType" type="true" dm="true">
+	<Item>
+		<Element>LocalIdType</Element>
+		<Description>
+			<p>
+        This is a common element used to define the locally assigned identifier associated with an entity. 
+      </p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<xhtml:Example xmlns="" name="LocalId Example">
+		<LocalId>123321A</LocalId>
+	</xhtml:Example>
+</CommonElement>
 
 </IncludeGroup>

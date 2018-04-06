@@ -7,28 +7,94 @@
 	<CodeSet>
 		<Intro>
 			<p>
-				Describes three classes of address as recognised by NZ Post, plus Overseas address.
+				Describes classes of address as recognised by Land Information NZ.
 			</p>
 		</Intro>
 		<ID>Address Type</ID>
 		<Values>
 			<Value>
 				<Code>1</Code>
-				<Text>Urban</Text>
+				<Text>Thoroughfare</Text>
+				<Description>
+					<p>Also called 'Street' addresses, The most
+					general, and widely used type of address, and can
+					contain the widest variety of components.</p>
+					
+					<p>In general a thoroughfare address will include
+					components for a number, a roadname, and a
+					locality.</p>
+					
+					<p>They cannot contain any of the components
+					specific to a delivery service, rural post
+					delivery, or water address.</p>
+					
+					<p>These addresses are used to find a location.</p>
+					<p><em>Example:</em> 30 - 40 Lambton Quay, Wellington, 6165</p>
+				</Description>
 			</Value>
 			<Value>
 				<Code>2</Code>
 				<Text>Rural</Text>
+				<Description>
+					<p>Defined by New Zealand Post, these addresses
+					are assigned by NZ Post for customers who purchase
+					a rural delivery service (mail and also other
+					goods).</p>
+
+					<p>They will have the same number and roadname
+					components as the street address, and may have the
+					same region component.</p>
+					
+					<p>They do not have a component that identifies
+					the locality the address is within. The locality
+					and city or town components are replaced by
+					components that identify the rural delivery route
+					(RD number), and the town from which the rural
+					delivery route starts and finishes (the mail
+					town). Only addresses of this class can contain
+					these components.
+					</p>
+
+					<p><em>Example:</em> 121 Waitaha Road, RD 1, Ross, 7885</p>
+				</Description>
 			</Value>
 			
 			<!-- Includes P O Box, Pvt Bag, CMB, etc. -->
 			<Value>
 				<Code>3</Code>
 				<Text>Delivery Service</Text>
+				<Description>
+					<p>Defined by New Zealand Post, and used
+					exclusively for NZ Post services other than
+					standard mail delivery. Addresses in this class
+					include PO Box, Private Bag, and Counter Delivery
+					addresses.</p>
+
+					<p><em>Example:</em> Private Bag 2345, Auckland, 1142</p>
+				</Description>
 			</Value>
+
 			<Value>
 				<Code>4</Code>
+				<Text>Water</Text>
+				<Description>
+					<p>Where properties have no road access, but do
+					have access to water frontage (coastline or
+					riverbank or lakefront), a water address uses the
+					name of a water feature (for example, islands,
+					rivers, bays, or peninsulas).</p>
+
+					<p><em>Example:</em> 235 Lochmara Bay, Queen Charlotte Sound, Marlborough Sounds</p>
+				</Description>
+			</Value>
+			
+			<Value>
+				<Code>5</Code>
 				<Text>Foreign Addres</Text>
+				<Description>
+					<p>A foreign address identifies a location outside of New Zealand.</p>
+					<p><em>Example:</em> Rudolf-Diesel-Strasse 14, 54595 Prüm, Germany</p>
+				</Description>
 			</Value>
 		</Values>
 	</CodeSet>    <!-- NZ Address Type -->

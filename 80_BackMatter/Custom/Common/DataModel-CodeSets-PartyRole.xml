@@ -1,3 +1,4 @@
+
 <IncludeGroup
 	xmlns:xi="http://www.w3.org/2001/XInclude"
 	
@@ -1854,6 +1855,7 @@
 		</Intro>
 		<ID>Email Type</ID>
 		<Values>
+<if intl="nz">			
 			<Value>
 				<Code>01</Code>
 				<Text>Primary</Text>
@@ -1874,6 +1876,7 @@
 				<Code>05</Code>
 				<Text>Alternate 4</Text>
 			</Value>
+</if>			
 			<Value>
 				<Code>06</Code>
 				<Text>Work</Text>
@@ -1881,8 +1884,7 @@
 			<Value>
 				<Code>07</Code>
 				<Text>Personal</Text>
-			</Value>
-			 
+			</Value>			 
 		</Values>
 	</CodeSet>    <!-- Email Type -->
 	<CodeSet>
@@ -1895,6 +1897,7 @@
 				<Code>0096</Code>
 				<Text>Main telephone number</Text>
 			</Value>
+<if intl="au">			
 			<Value>
 				<Code>0350</Code>
 				<Text>Alternate telephone number</Text>
@@ -1931,10 +1934,12 @@
 				<Code>0486</Code>
 				<Text>Media conferencing number</Text>
 			</Value>
+</if>			
 			<Value>
 				<Code>2364</Code>
 				<Text>Facsimile number</Text>
 			</Value>
+<if intl="au">			
 			<Value>
 				<Code>0888</Code>
 				<Text>Mobile</Text>
@@ -1955,7 +1960,7 @@
 				<Code>0779</Code>
 				<Text>Home Mobile</Text>
 			</Value>
-			 
+</if>
 		</Values>
 	</CodeSet>    <!-- Telephone Number Type -->
 </IncludeGroup>
