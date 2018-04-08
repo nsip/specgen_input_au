@@ -1112,7 +1112,7 @@
 			<Description>
 				<p>Which genders are accepted for enrolment in this Year Level?</p>
 			</Description>
-			<Type ref="CodeSets" name="AUCodeSetsSchoolingGenderType"/>
+			<Type ref="CodeSets" name="NZCodeSetsSchoolingGenderType"/>
 		</Item>
 	</CommonElement>
 

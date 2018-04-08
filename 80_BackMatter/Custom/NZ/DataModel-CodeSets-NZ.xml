@@ -343,4 +343,25 @@
 					
 		</Values>
 	</CodeSet>	  <!-- School Definition -->
+	<CodeSet>
+		<Intro>
+			<p>A description of the gender of students that the school accepts for a certain
+			year level or other instructional grouping.</p>
+		</Intro>
+		<ID>Schooling Gender</ID>
+		<Values>
+			<Value>
+				<Code>C</Code>
+				<Text>Both Girls and Boys</Text>
+			</Value>
+			<Value>
+				<Code>F</Code>
+				<Text>Girls Only</Text>
+			</Value>
+			<Value>
+				<Code>M</Code>
+				<Text>Boys Only</Text>
+			</Value>
+		</Values>
+	</CodeSet>    <!-- Schooling Gender -->	
 </IncludeGroup>
