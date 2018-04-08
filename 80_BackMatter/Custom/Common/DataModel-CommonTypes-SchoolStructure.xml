@@ -977,11 +977,12 @@
 			<Characteristics>M</Characteristics>
 			<privacyRating>Low</privacyRating>
 			<Description>
-				<p>A description of the socio-economic profile of a school's
+				<p>A description of the socio-economic position of a school's
 				student community according to the MoE decile rating system.
 				</p>
 			</Description>
 			<Type name="xs:integer"/>
+			<ItemExample>5</ItemExample>
 			<Facets>
 				<xs:minInclusive value="1"/>
 				<xs:maxInclusive value="10"/>
@@ -992,7 +993,7 @@
 			<Characteristics>M</Characteristics>
 			<privacyRating>Low</privacyRating>
 			<Description>
-				<p>A summary of the co-ed status of the school</p>
+				<p>A summary of the genders accepted by the school</p>
 			</Description>
 			<Type ref="CodeSets" name="AUCodeSetsSchoolCoEdStatusType"/>
 		</Item>    <!-- CoEdStatus -->
@@ -1111,7 +1112,7 @@
 			<Description>
 				<p>Which genders are accepted for enrolment in this Year Level?</p>
 			</Description>
-			<Type ref="CodeSets" name="AUCodeSetsYearLevelCoEdStatusType"/>
+			<Type ref="CodeSets" name="AUCodeSetsSchoolingGenderType"/>
 		</Item>
 	</CommonElement>
 
