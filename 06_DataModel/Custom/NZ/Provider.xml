@@ -20,7 +20,7 @@
     <Characteristics>M</Characteristics>
 	<privacyRating>Low</privacyRating>
     <Description>
-      <p>The SIF GUID for the provider.</p>
+      <p>The SIF GUID used by systems to identify the provider.</p>
     </Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
   </Item> <!-- @RefId -->
@@ -29,7 +29,7 @@
     <Characteristics>O</Characteristics>
 	<privacyRating>Low</privacyRating>
     <Description>
-      <p>The Ministry of Education number used used by the education sector to identify the provider.</p>
+      <p>The Ministry of Education number used by the education sector to identify the provider.</p>
     </Description>
     <Type ref="CommonTypes" name="LocalIdType"></Type>
   </Item> <!-- LocalId -->
