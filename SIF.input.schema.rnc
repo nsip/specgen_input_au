@@ -37,7 +37,7 @@ xs.complexContent = element xs:complexContent {
 }
 
 #
-## embedded HTML (with includes)
+## embedded HTML (with includes and if)
 #
 sif.narrative = mixed { (
     text
@@ -69,10 +69,10 @@ html.a = element a {
 html.br = element br { empty }
 html.code = element code { text }
 
-html.dl = element dl { (
-  element dt { sif.narrative }?,
-  element dd { (attribute style { text })?, sif.narrative}
-)* }
+html.dl = element dl { (mixed { sif.If.defList | (html.dt, html.dd)* })* }
+html.dt = element dt { sif.narrative }
+html.dd = element dd { (attribute style { text })?, sif.narrative}
+
 html.em = element em { sif.narrative }
 html.h1 = element h1 { sif.narrative }
 html.h2 = element h2 { sif.narrative }
@@ -109,7 +109,7 @@ anything = ( element * { anything } | attribute * { text } | text )*
 
 attr.intl = attribute intl { "us" | "uk" | "au" | "nz" | "" }
 
-sif.If.narrative = element if { attr.intl, sif.narrative }
+sif.If.narrative = element if { attr.intl, sif.narrative+ }
 
 sif.If.includeGroup = element if { attr.intl,
    (mixed {
@@ -122,9 +122,9 @@ sif.If.includeGroup = element if { attr.intl,
 sif.If.Item = element if { attr.intl, sif.Item+ }
 sif.If.Value = element if { attr.intl, sif.Value+ }
 sif.If.Type = element if { attr.intl, sif.Type+ }
+sif.If.defList = element if { attr.intl, (html.dt?, html.dd)+ }
 
 sif.Intro = element Intro { sif.narrative }
-
 
 
 #
@@ -233,7 +233,7 @@ sif.CodeSet = element CodeSet {
      element Values {
 	   (mixed { sif.If.Value | sif.Value })* } }
 
-sif.Value = element Value { element Code { text }, element Text { text } }
+sif.Value = element Value { element Code { text }, element Text { text }, element Description { text }? }
 sif.Group = element Group {
    attribute name { text },
 
@@ -251,6 +251,8 @@ sif.CodeSets = element CodeSets {
 
 
 sif.Item = element Item {
+      attr.intl?,
+	  
       (element Attribute { text } | element Element { text }),
 
 	  element Characteristics { "M" | "O" | "C" | "MR" | "OR"}?,
@@ -282,7 +284,9 @@ sif.Choice = element Choice { sif.Item+ }
 sif.Values = element Values {
    element Value {
       element Code { text },
-	  element Text { text }?    ## Note - Description field doesn't end up as annotation in XSD, so use Text instead
+	  element Text { sif.narrative }?,
+	  element Description { sif.narrative }?
+	  
 }+ }
 
 xs.Facets = element xs:pattern { attribute value { text } }
