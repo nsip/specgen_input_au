@@ -85,6 +85,10 @@
 	        <dd><br/></dd>	
 			<dt>JSON Schemas</dt>
 			<dd>
+				JSON Schema definition <a href="JSON/jsonSchema.json"> (json)</a>
+				<a href="JSON/jsonSchema.yaml">(yaml)</a>
+			</dd>
+			<dd>
 				Swagger API definition <a href="JSON/swagger.json"> (json)</a>
 				<a href="JSON/swagger.yaml">(yaml)</a>
 			</dd>
