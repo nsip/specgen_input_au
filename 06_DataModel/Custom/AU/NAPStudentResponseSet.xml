@@ -18,70 +18,70 @@
   <Item>
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
-    <Type ref="CommonTypes" name="RefIdType"></Type>
     <Description>
       <p>The GUID that uniquely identifies an instance of the object.</p>
     </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
   </Item>
   
   <Item>
 		<Element>ReportExclusionFlag</Element>
 		<Characteristics>M</Characteristics>
 		<privacyRating>High</privacyRating>
-		<Type name="xs:boolean"></Type>
 		<Description>
 		  <p>Flag to exclude this student's responses from National Reporting. If absent, student response is assumed to be excluded.</p>
 		</Description>
+		<Type name="xs:boolean"></Type>
   </Item>  
   
   <Item>
 		<Element>CalibrationSampleFlag</Element>
 		<Characteristics>O</Characteristics>
 		<privacyRating>High</privacyRating>
-		<Type name="xs:token"></Type>
 		<Description>
 		  <p>Flags at student level that the test responses given are to be treated as part of the Calibration Sample.</p>
 		</Description>
+		<Type name="xs:token"></Type>
   </Item>  
   
   <Item>
 		<Element>EquatingSampleFlag</Element>
 		<Characteristics>O</Characteristics>
 		<privacyRating>High</privacyRating>
-		<Type name="xs:token"></Type>
 		<Description>
 		  <p>Flags at student level that the test responses given are to be treated as part of the Equating Sample.</p>
 		</Description>
+		<Type name="xs:token"></Type>
   </Item>  
   
   <Item>
 		<Element>PathTakenForDomain</Element>
 		<Characteristics>C</Characteristics>
 		<privacyRating>High</privacyRating>
-		<Type name="xs:normalizedString"></Type>
 		<Description>
 		  <p>Student’s trajectory through adaptive test for the domain. Expressed as a sequence of node identifiers.Not provided if test is not adaptive (e.g. Writing).</p>
 		</Description>
+		<Type name="xs:normalizedString"></Type>
   </Item>    
   
   <Item>
 		<Element>ParallelTest</Element>
 		<Characteristics>C</Characteristics>
 		<privacyRating>High</privacyRating>
-		<Type name="xs:normalizedString"></Type>
 		<Description>
 		  <p>Student’s trajectory through adaptive test for the domain. Expressed as a sequence of testlet identifiers.Not provided if test is not adaptive (e.g. Writing).</p>
 		</Description>
+		<Type name="xs:normalizedString"></Type>
   </Item>      
   
   <Item>
     <Element>StudentPersonalRefId</Element>
     <Characteristics>O</Characteristics>
 	<privacyRating>High</privacyRating>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
     <Description>
       <p>The student associated with the NAP event.</p>
     </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
   </Item>
   <Item>
 		<Element>PlatformStudentIdentifier</Element>
@@ -97,10 +97,10 @@
     <Element>NAPTestRefId</Element>
     <Characteristics>O</Characteristics>
 	<privacyRating>Low</privacyRating>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
     <Description>
       <p>The GUID for the test that the student is sitting. May be linking to prior codeframe download.</p>
     </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
   </Item>
   
   <Item>
@@ -117,7 +117,9 @@
 		<Element>DomainScore</Element>
 		<Characteristics>C</Characteristics>
 		<privacyRating>High</privacyRating>
-		<p>Overall score received in the NAP test.Overall score received in the test. Contents are not populated if this is an empty object (sanctioned abandonment or refusal).</p>
+		<Description>
+			<p>Overall score received in the NAP test.Overall score received in the test. Contents are not populated if this is an empty object (sanctioned abandonment or refusal).</p>
+		</Description>
 		<Type ref="CommonTypes" name="DomainScoreType"></Type>
   </Item>  
   
@@ -125,10 +127,10 @@
     <Element>TestletList</Element>
     <Characteristics>C</Characteristics>
 	<privacyRating>High</privacyRating>
-    <Type ref="CommonTypes" name="NAPStudentResponseTestletListType"></Type>
     <Description>
       <p>Conditional on Participation Code.</p>
     </Description>
+    <Type ref="CommonTypes" name="NAPStudentResponseTestletListType"></Type>
   </Item>
        
   <Item>

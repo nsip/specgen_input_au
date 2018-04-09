@@ -1,0 +1,193 @@
+﻿<IncludeGroup
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	
+	xmlns="http://sifassociation.org/SpecGen">
+
+	<!-- IncludeGroup is syntactic sugar that makes this a well-formed XML file that can
+		 be validated separately; and allows the xi:include to have parse="xml"  SpecGen tool ignores it. -->
+
+
+	<!-- Element types for the Curriculum domain -->
+
+<CommonElement name="StatementCodesType" type="true" dm="true">
+	<Item>
+		<Element>StatementCodesType</Element>
+		<Characteristics>O</Characteristics>
+		<List mode="List"/>
+	</Item>
+	<Item>
+		<Element>StatementCode</Element>
+		<Characteristics>OR</Characteristics>
+		<Description>
+			<p>An alphanumeric Id code as defined by the organization to identify the statement.</p>
+		</Description>
+		<Type name="xs:token"/>
+	</Item>
+</CommonElement>
+<CommonElement name="StatementsType" type="true" dm="true">
+	<Item>
+		<Element>StatementsType</Element>
+		<Characteristics>O</Characteristics>
+		<List mode="List"/>
+	</Item>
+	<Item>
+		<Element>Statement</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>The text of the "outcome", "standard", or other element within the structured curriculum document </p>
+		</Description>
+		<Type name="xs:string"/>
+	</Item>
+</CommonElement>
+<CommonElement name="AuthorsType" type="true" dm="true">
+	<Item>
+		<Element>AuthorsType</Element>
+		<Characteristics>O</Characteristics>
+		<List mode="List"/>
+	</Item>
+	<Item>
+		<Element>Author</Element>
+		<Characteristics>OR</Characteristics>
+		<Description>
+			<p>Name of the organization that authored the curriculum document, i.e. "ACARA". May be the same as "Organization" above.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+</CommonElement>
+<CommonElement name="OrganizationsType" type="true" dm="true">
+	<Item>
+		<Element>OrganizationsType</Element>
+		<Characteristics>M</Characteristics>
+		<List mode="List"/>
+	</Item>
+	<Item>
+		<Element>Organization</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>Name of organization represented by the document, i.e., "National Council of Teachers of Mathematics (NCTM)," "ACARA"," NSW DET". </p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+</CommonElement>
+<CommonElement name="LResourcesType" type="true" dm="true">
+	<Item>
+		<Element>LResourcesType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Learning resources that support this activity.</p>
+		</Description>
+		<List mode="List"/>
+	</Item>
+	<Item>
+		<Element>LearningResourceRefId</Element>
+		<Characteristics>OR</Characteristics>
+		<Description>
+			<p>A GUID reference to a SIF LearningResource object that supports this activity</p>
+		</Description>
+		<Type ref="CommonTypes" name="ResourcesType"/>
+	</Item>
+</CommonElement>
+<CommonElement name="ResourcesType" type="true" dm="true">
+	<Item>
+		<Element>ResourcesType</Element>
+		<Characteristics>OR</Characteristics>
+		<Description>
+			<p>A GUID reference to a SIF LearningResource object that supports this activity</p>
+		</Description>
+		<Type ref="CommonTypes" name="IdRefType"/>
+	</Item>
+	<Item>
+		<Attribute>ResourceType</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Type of Resource.</p>
+		</Description>
+		<Values>
+			<Value>
+				<Code>LearningResource</Code>
+			</Value>
+			<Value>
+				<Code>WorkSample</Code>
+			</Value>
+			<Value>
+				<Code>AnnotatedWorkSample </Code>
+			</Value>
+			<Value>
+				<Code>Other</Code>
+			</Value>
+		</Values>
+	</Item>
+</CommonElement>
+<CommonElement name="LearningStandardsDocumentType" type="true" dm="true">
+	<Item>
+		<Element>LearningStandardsDocumentType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>References to LearningStandard Documents.</p>
+		</Description>
+		<List mode="List"/>
+	</Item>
+	<Item>
+		<Element>LearningStandardDocumentRefId</Element>
+		<Characteristics>OR</Characteristics>
+		<Description>
+			<p>Reference to a LearningStandardItem Document.</p>
+		</Description>
+		<Type ref="CommonTypes" name="IdRefType"/>
+	</Item>
+</CommonElement>
+<CommonElement name="ACStrandAreaListType" type="true" dm="true">
+	<Item>
+		<Element>ACStrandAreaListType</Element>
+		<Description>
+			<p>A list of subject areas.</p>
+		</Description>
+		<List mode="List">
+    </List>
+	</Item>
+	<Item>
+		<Element>ACStrandSubjectArea</Element>
+		<Characteristics>MR</Characteristics>
+		<Type ref="CommonTypes" name="ACStrandSubjectAreaType"/>
+	</Item>
+</CommonElement>
+<CommonElement name="ACStrandSubjectAreaType" type="true" dm="true">
+	<Item>
+		<Element>ACStrandSubjectAreaType</Element>
+		<Description>
+			<p>Subject matter of a student's study as codified under the Australian Curriculum.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>ACStrand</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Subject matter.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsACStrandType"/>
+	</Item>
+	<Item>
+		<Element>SubjectArea</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Subject matter.</p>
+		</Description>
+		<Type ref="CommonTypes" name="SubjectAreaType"/>
+	</Item>
+	<xhtml:Example xmlns="" name="AC Strand Subject Area Example">
+		<ACStrandSubjectArea>
+			<ACStrand>M</ACStrand>
+			<SubjectArea>
+				<Code>Maths</Code>
+				<OtherCodeList>
+					<OtherCode Codeset="Text">Mathematics</OtherCode>
+				</OtherCodeList>
+			</SubjectArea>
+		</ACStrandSubjectArea>
+	</xhtml:Example>
+</CommonElement>
+
+</IncludeGroup>

@@ -1,7 +1,7 @@
 <SIFSpecification xmlns:xs="http://www.w3.org/2001/XMLSchema"
 				  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 				  xmlns:xi="http://www.w3.org/2001/XInclude"
-				  xmlns:xhtml="https://www.w3.org/1999/xhtml/"
+				  xmlns:xhtml="http://www.w3.org/1999/xhtml"
 				  
 				  xmlns="http://sifassociation.org/SpecGen">				  
 
@@ -42,7 +42,7 @@
 			<dd>
 				<xi:include parse="text"  href="90_Properties_DataModel/SIF-Specification-Navigation-Latest Version.xml"/>
 			</dd>
-			<dt>Schemas</dt>
+			<dt>XML Schemas</dt>
 			<dd>
 				<a href="XSD/SIF_MessageNoIncludes/SIF_Message.xsd">SIF_Message (single file, non-annotated)</a>
 				<a href="XSD/SIF_MessageNoIncludes.zip">(ZIP archive)</a>
@@ -81,6 +81,23 @@
 				<em>SIF_Message</em> schemas define every data object element as optional per SIF's Publish/Subscribe and SIF Request/Response Models; 
 				<em>DataModel</em> schemas maintain the cardinality of all data object elements.
 			</dd>
+<if intl="nz">
+	        <dd><br/></dd>	
+			<dt>JSON Schemas</dt>
+			<dd>
+				JSON Schema definition <a href="JSON/jsonSchema.json"> (json)</a>
+				<a href="JSON/jsonSchema.yaml">(yaml)</a>
+			</dd>
+			<dd>
+				Swagger API definition <a href="JSON/swagger.json"> (json)</a>
+				<a href="JSON/swagger.yaml">(yaml)</a>
+			</dd>
+			<dd>
+				Open API definition <a href="JSON/OpenAPI.json"> (json)</a>
+				<a href="JSON/OpenAPI.yaml">(yaml)</a>
+			</dd>
+
+</if>			
 		</dl>
 		<p>Please refer to the <a href="errata/">errata</a> for this document, which may include some normative corrections.</p>
 		<p>This document is also available in these non-normative formats: <a href="ImplementationSpecification.zip">ZIP archive</a>, <a href="ImplementationSpecification.pdf">PDF (for printing as a single file)</a>,
@@ -101,9 +118,7 @@
 	<!--Data Model-->
 	<Section name="Data Model">
 		<xi:include parse="text" href="06_DataModel/DataModel-Introduction.xml"/>
-		<!--<xi:include parse="xml" href="06_DataModel/DataModel-CommonElements.xml"/>-->
    		<xi:include parse="xml" href="06_DataModel/DataModel.xml"/>
-		
 	</Section>
 	
 	
@@ -113,20 +128,19 @@
 			<p>Common and supporting types referenced in this specification are included here as a reference.</p>
 		</Intro>
 			<!--Section A-->
-		<xi:include parse="text" href="80_BackMatter/Custom/DataModel-CommonTypes-Custom.xml"/>
-		<xi:include parse="text" href="80_BackMatter/Generic-CommonTypes.xml"/>
-		
+		<xi:include parse="xml" href="80_BackMatter/Custom/DataModel-CommonTypes-Custom.xml"/>
+		<xi:include parse="xml" href="80_BackMatter/Generic-CommonTypes.xml"/>
 	</Appendix>
 	
 		<!--Section B-->
 	<Appendix name="Code Sets">
 		<Intro>
 			<p>Select shared and named code sets defined in SIF are included here for reference.</p>
+			<p>AU code set enumerations are defined by NSIP primarily for use in the Australian SIF Data Model, but
+			some are re-used by the New Zealand SIF Data Model</p>
 		</Intro>
 		<CodeSets>
-		    
-			<xi:include parse="text" href="80_BackMatter/Custom/DataModel-CodeSets-Custom.xml"/>
-		  
+			<xi:include parse="xml" href="80_BackMatter/Custom/DataModel-CodeSets-Custom.xml"/>
 		  </CodeSets>
 		</Appendix>
 	

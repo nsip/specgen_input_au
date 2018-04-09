@@ -1,0 +1,751 @@
+<IncludeGroup
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	
+ 	xmlns="http://sifassociation.org/SpecGen">
+
+    <CodeSet>
+		<Intro>
+			<p/>
+		</Intro>
+		<ID>School Enrollment Type</ID>
+		<Values>
+			<Value>
+				<Code>01</Code>
+				<Text>Home School</Text>
+			</Value>
+			<Value>
+				<Code>02</Code>
+				<Text>Other School</Text>
+			</Value>
+			<Value>
+				<Code>03</Code>
+				<Text>Concurrent Enrolment</Text>
+			</Value>
+			 
+		</Values>
+	</CodeSet>    <!-- School Enrollment Type -->
+	<CodeSet>
+		<Intro>
+			<p/>
+		</Intro>
+		<ID>Enrollment Time Frame</ID>
+		<Values>
+			<Value>
+				<Code>C</Code>
+				<Text>Current</Text>
+			</Value>
+			<Value>
+				<Code>F</Code>
+				<Text>Future</Text>
+			</Value>
+			<Value>
+				<Code>H</Code>
+				<Text>Historical</Text>
+			</Value>
+			 
+		</Values>
+	</CodeSet>    <!-- Enrollment Time Frame -->
+	<CodeSet>
+		
+		<Intro>
+			<p/>
+		</Intro>
+		<ID>Entry Type</ID>
+		<Values>
+			<Value>
+				<Code>1821</Code>
+				<Text>Transfer from a public school in the same district</Text>
+			</Value>
+			<Value>
+				<Code>1822</Code>
+				<Text>Transfer from a public school in a different district in the same jurisdiction</Text>
+			</Value>
+			<Value>
+				<Code>1823</Code>
+				<Text>Transfer from a public school in a different jurisdiction</Text>
+			</Value>
+			<Value>
+				<Code>1824</Code>
+				<Text>Transfer from a private, non-religiously-affiliated school in the same district</Text>
+			</Value>
+			<Value>
+				<Code>1825</Code>
+				<Text>Transfer from a private, non-religiously-affiliated school in a different district</Text>
+			</Value>
+			<Value>
+				<Code>1826</Code>
+				<Text>Transfer from a private, non-religiously-affiliated school in a different jurisdiction</Text>
+			</Value>
+			<Value>
+				<Code>1827</Code>
+				<Text>Transfer from a private, religiously-affiliated school in the same district</Text>
+			</Value>
+			<Value>
+				<Code>1828</Code>
+				<Text>Transfer from a private, religiously-affiliated school in a different district in the same jurisdiction</Text>
+			</Value>
+			<Value>
+				<Code>1829</Code>
+				<Text>Transfer from a private, religiously-affiliated school in a different jurisdiction</Text>
+			</Value>
+			<Value>
+				<Code>1830</Code>
+				<Text>Transfer from a school outside of the country</Text>
+			</Value>
+			<Value>
+				<Code>1831</Code>
+				<Text>Transfer from an institution</Text>
+			</Value>
+			<Value>
+				<Code>1833</Code>
+				<Text>Transfer from home schooling</Text>
+			</Value>
+			<Value>
+				<Code>0997</Code>
+				<Text>Transfer from a different campus of the same school</Text>
+			</Value>
+			<Value>
+				<Code>1835</Code>
+				<Text>Re-entry from the same school with no interruption of schooling</Text>
+			</Value>
+			<Value>
+				<Code>1836</Code>
+				<Text>Re-entry after a voluntary withdrawal</Text>
+			</Value>
+			<Value>
+				<Code>1837</Code>
+				<Text>Re-entry after an involuntary withdrawal</Text>
+			</Value>
+			<Value>
+				<Code>1838</Code>
+				<Text>Original entry into an Australian school</Text>
+			</Value>
+			<Value>
+				<Code>1839</Code>
+				<Text>Original entry into an Australian school from a foreign country with no interruption in schooling</Text>
+			</Value>
+			<Value>
+				<Code>1840</Code>
+				<Text>Original entry into an Australian school from a foreign country with an interruption in schooling</Text>
+			</Value>
+			<Value>
+				<Code>1841</Code>
+				<Text>Entry into Intensive English Centre</Text>
+			</Value>
+			<Value>
+				<Code>0998</Code>
+				<Text>Temporary enrolment</Text>
+			</Value>
+			<Value>
+				<Code>9999</Code>
+				<Text>Other</Text>
+			</Value>
+			 
+		</Values>
+	</CodeSet>    <!-- Entry Type -->
+	<CodeSet>
+		<Intro>
+			<p/>
+		</Intro>
+		<ID>Exit/Withdrawal Status</ID>
+		<Values>
+			<Value>
+				<Code>1905</Code>
+				<Text>Permanent exit/withdrawal</Text>
+			</Value>
+			<Value>
+				<Code>1906</Code>
+				<Text>Temporary exit/withdrawal</Text>
+			</Value>
+			<Value>
+				<Code>9999</Code>
+				<Text>Unknown</Text>
+			</Value>
+			 
+		</Values>
+	</CodeSet>    <!-- Exit/Withdrawal Status -->
+	<CodeSet>
+		<Intro>
+			<p/>
+		</Intro>
+		<ID>Exit/Withdrawal Type</ID>
+		<Values>
+			<Value>
+				<Code>1907</Code>
+				<Text>Student is in a different public school in the same district</Text>
+			</Value>
+			<Value>
+				<Code>1908</Code>
+				<Text>Transferred to a public school in a different local education agency in the same jurisdiction</Text>
+			</Value>
+			<Value>
+				<Code>1909</Code>
+				<Text>Transferred to a public school in a different jurisdiction</Text>
+			</Value>
+			<Value>
+				<Code>1910</Code>
+				<Text>Transferred to a private, non-religiously-affiliated school in the district</Text>
+			</Value>
+			<Value>
+				<Code>1911</Code>
+				<Text>Transferred to a private, non-religiously-affiliated school in a different district in the same jurisdiction</Text>
+			</Value>
+			<Value>
+				<Code>1912</Code>
+				<Text>Transferred to a private, non-religiously-affiliated school in a different jurisdiction</Text>
+			</Value>
+			<Value>
+				<Code>1913</Code>
+				<Text>Transferred to a private, religiously-affiliated school in the same district</Text>
+			</Value>
+			<Value>
+				<Code>1914</Code>
+				<Text>Transferred to a private, religiously-affiliated school in a different district in the same jurisdiction</Text>
+			</Value>
+			<Value>
+				<Code>1915</Code>
+				<Text>Transferred to a private, religiously-affiliated school in a different jurisdiction</Text>
+			</Value>
+			<Value>
+				<Code>1916</Code>
+				<Text>Transferred to a school outside of the country</Text>
+			</Value>
+			<Value>
+				<Code>1917</Code>
+				<Text>Transferred to an institution</Text>
+			</Value>
+			<Value>
+				<Code>1918</Code>
+				<Text>Transferred to home schooling</Text>
+			</Value>
+			<Value>
+				<Code>1919</Code>
+				<Text>Transferred to a charter school</Text>
+			</Value>
+			<Value>
+				<Code>1921</Code>
+				<Text>Graduated with regular, advanced, International Baccalaureate, or other type of diploma</Text>
+			</Value>
+			<Value>
+				<Code>1922</Code>
+				<Text>Completed school with other credentials</Text>
+			</Value>
+			<Value>
+				<Code>1923</Code>
+				<Text>Died or is permanently incapacitated</Text>
+			</Value>
+			<Value>
+				<Code>1924</Code>
+				<Text>Withdrawn due to illness</Text>
+			</Value>
+			<Value>
+				<Code>1925</Code>
+				<Text>Expelled, Excluded or involuntarily withdrawn</Text>
+			</Value>
+			<Value>
+				<Code>1926</Code>
+				<Text>Reached maximum age for services</Text>
+			</Value>
+			<Value>
+				<Code>1927</Code>
+				<Text>Discontinued schooling</Text>
+			</Value>
+			<Value>
+				<Code>1928</Code>
+				<Text>Completed grade 12, but did not meet all graduation requirements</Text>
+			</Value>
+			<Value>
+				<Code>1930</Code>
+				<Text>Enrolled in a postsecondary early admission program, eligible to return</Text>
+			</Value>
+			<Value>
+				<Code>1931</Code>
+				<Text>Not enrolled, unknown status</Text>
+			</Value>
+			<Value>
+				<Code>3499</Code>
+				<Text>Student is in the same local education agency and receiving education services, but is not assigned </Text>
+			</Value>
+			<Value>
+				<Code>3500</Code>
+				<Text>Enrolled in an adult education or training program</Text>
+			</Value>
+			<Value>
+				<Code>3501</Code>
+				<Text>Completed a state-recognized vocational education program</Text>
+			</Value>
+			<Value>
+				<Code>3502</Code>
+				<Text>Not enrolled, eligible to return</Text>
+			</Value>
+			<Value>
+				<Code>3503</Code>
+				<Text>Enrolled in a foreign exchange program, eligible to return</Text>
+			</Value>
+			<Value>
+				<Code>3504</Code>
+				<Text>Withdrawn from school, under the age for compulsory attendance; eligible to return</Text>
+			</Value>
+			<Value>
+				<Code>3505</Code>
+				<Text>Exited</Text>
+			</Value>
+			<Value>
+				<Code>3509</Code>
+				<Text>Completed with a state-recognized equivalency certificate</Text>
+			</Value>
+			<Value>
+				<Code>9998</Code>
+				<Text>Transferred to a different campus of the same school</Text>
+			</Value>
+			
+			<Value>
+				<Code>9999</Code>
+				<Text>Other</Text>
+			</Value>
+			 
+		</Values>
+	</CodeSet>    <!-- Exit/Withdrawal Type -->
+	<CodeSet>
+		<Intro>
+			<p/>
+		</Intro>
+		<ID>FTPT Status Code</ID>
+		<Values>
+			<Value>
+				<Code>01</Code>
+				<Text>Full Time</Text>
+			</Value>
+			<Value>
+				<Code>02</Code>
+				<Text>Part Time</Text>
+			</Value>
+			 
+		</Values>
+	</CodeSet>    <!-- FTPT Status Code -->
+	<CodeSet>
+		<Intro>
+			<p/>
+		</Intro>
+		<ID>Public School Catchment Status</ID>
+		<Values>
+			<Value>
+				<Code>1652</Code>
+				<Text>Resident of usual school catchment area</Text>
+			</Value>
+			<Value>
+				<Code>1653</Code>
+				<Text>Resident of another school catchment area</Text>
+			</Value>
+			<Value>
+				<Code>9999</Code>
+				<Text>Unknown</Text>
+			</Value>
+			 
+		</Values>
+	</CodeSet>    <!-- Public School Catchment Status -->
+	<CodeSet>
+		<Intro>
+			<p>Source: US 2.6 0209 Medium Of Instruction</p>
+		</Intro>
+		<ID>Medium Of Instruction</ID>
+		<Values>
+			<Value>
+				<Code>0603</Code>
+				<Text>Technology-based instruction in classroom</Text>
+			</Value>
+			<Value>
+				<Code>0604</Code>
+				<Text>Correspondence instruction</Text>
+			</Value>
+			<Value>
+				<Code>0605</Code>
+				<Text>Face-to-face instruction</Text>
+			</Value>
+			<Value>
+				<Code>0608</Code>
+				<Text>Virtual/On-line Distance learning</Text>
+			</Value>
+			<Value>
+				<Code>0609</Code>
+				<Text>Center-based instruction</Text>
+			</Value>
+			<Value>
+				<Code>0610</Code>
+				<Text>Independent study</Text>
+			</Value>
+			<Value>
+				<Code>0611</Code>
+				<Text>Internship</Text>
+			</Value>
+			<Value>
+				<Code>9999</Code>
+				<Text>Other</Text>
+			</Value>
+			 
+		</Values>
+	</CodeSet>    <!-- Medium of Instruction -->
+	<CodeSet>
+		<Intro>
+			<p>Source: US 2.6 0171 Receiving Location Of Instruction/Service</p>
+		</Intro>
+		<ID>Receiving Location Of Instruction</ID>
+		<Values>
+			<Value>
+				<Code>0340</Code>
+				<Text>In school</Text>
+			</Value>
+			<Value>
+				<Code>0341</Code>
+				<Text>Other K-12 educational institution</Text>
+			</Value>
+			<Value>
+				<Code>0342</Code>
+				<Text>Postsecondary facility</Text>
+			</Value>
+			<Value>
+				<Code>0752</Code>
+				<Text>Community facility</Text>
+			</Value>
+			<Value>
+				<Code>0754</Code>
+				<Text>Hospital</Text>
+			</Value>
+			<Value>
+				<Code>0997</Code>
+				<Text>Business</Text>
+			</Value>
+			<Value>
+				<Code>2192</Code>
+				<Text>Home</Text>
+			</Value>
+			<Value>
+				<Code>3018</Code>
+				<Text>Library/media centre</Text>
+			</Value>
+			<Value>
+				<Code>3506</Code>
+				<Text>Mobile</Text>
+			</Value>
+			<Value>
+				<Code>9999</Code>
+				<Text>Other</Text>
+			</Value>
+			 
+		</Values>
+	</CodeSet>    <!-- Receiving Location of Instruction -->
+	<CodeSet>
+		<Intro>
+			<p/>
+		</Intro>
+		<ID>Student/Family Program Type</ID>
+		<Values>
+			<Value>
+				<Code>0100</Code>
+				<Text>Agricultural</Text>
+			</Value>
+			<Value>
+				<Code>0240</Code>
+				<Text>Regular prekindergarten program</Text>
+			</Value>
+			<Value>
+				<Code>0241</Code>
+				<Text>Infant and toddlers program</Text>
+			</Value>
+			<Value>
+				<Code>0242</Code>
+				<Text>Special education services for Birth-Age 2</Text>
+			</Value>
+			<Value>
+				<Code>0244</Code>
+				<Text>Special education services for preschoolers</Text>
+			</Value>
+			<Value>
+				<Code>0245</Code>
+				<Text>Migrant early childhood program</Text>
+			</Value>
+			<Value>
+				<Code>0246</Code>
+				<Text>Head Start</Text>
+			</Value>
+			<Value>
+				<Code>0247</Code>
+				<Text>Day care</Text>
+			</Value>
+			<Value>
+				<Code>0248</Code>
+				<Text>After school child care</Text>
+			</Value>
+			<Value>
+				<Code>0249</Code>
+				<Text>Alternative education program</Text>
+			</Value>
+			<Value>
+				<Code>0250</Code>
+				<Text>Before school child care</Text>
+			</Value>
+			<Value>
+				<Code>0251</Code>
+				<Text>Bilingual education</Text>
+			</Value>
+			<Value>
+				<Code>0252</Code>
+				<Text>Community service projects</Text>
+			</Value>
+			<Value>
+				<Code>0253</Code>
+				<Text>Compensatory education</Text>
+			</Value>
+			<Value>
+				<Code>0255</Code>
+				<Text>Counseling</Text>
+			</Value>
+			<Value>
+				<Code>0256</Code>
+				<Text>English as a second language</Text>
+			</Value>
+			<Value>
+				<Code>0257</Code>
+				<Text>Free and reduced price school meals programs</Text>
+			</Value>
+			<Value>
+				<Code>0260</Code>
+				<Text>Hearing or vision screening</Text>
+			</Value>
+			<Value>
+				<Code>0261</Code>
+				<Text>Higher order thinking skills</Text>
+			</Value>
+			<Value>
+				<Code>0262</Code>
+				<Text>Medical services</Text>
+			</Value>
+			<Value>
+				<Code>0263</Code>
+				<Text>Programs for migrants during the school year</Text>
+			</Value>
+			<Value>
+				<Code>0265</Code>
+				<Text>Programs for migrants during the summer</Text>
+			</Value>
+			<Value>
+				<Code>0267</Code>
+				<Text>Reading/literacy</Text>
+			</Value>
+			<Value>
+				<Code>0268</Code>
+				<Text>School supplies</Text>
+			</Value>
+			<Value>
+				<Code>0269</Code>
+				<Text>Services for out-of-school youth</Text>
+			</Value>
+			<Value>
+				<Code>0270</Code>
+				<Text>Special education program</Text>
+			</Value>
+			<Value>
+				<Code>0271</Code>
+				<Text>Special (one-time) events</Text>
+			</Value>
+			<Value>
+				<Code>0272</Code>
+				<Text>Student assistance programs such as counseling, mentoring, identification and referral</Text>
+			</Value>
+			<Value>
+				<Code>0273</Code>
+				<Text>Summer child care</Text>
+			</Value>
+			<Value>
+				<Code>0277</Code>
+				<Text>Transportation</Text>
+			</Value>
+			<Value>
+				<Code>0278</Code>
+				<Text>Tutoring/remedial instruction</Text>
+			</Value>
+			<Value>
+				<Code>0279</Code>
+				<Text>Academic/instructional program in regular education</Text>
+			</Value>
+			<Value>
+				<Code>0280</Code>
+				<Text>Adult basic education/remedial instruction</Text>
+			</Value>
+			<Value>
+				<Code>0281</Code>
+				<Text>Child care so that parents can attend school meetings</Text>
+			</Value>
+			<Value>
+				<Code>0282</Code>
+				<Text>Continuing professional education</Text>
+			</Value>
+			<Value>
+				<Code>0283</Code>
+				<Text>Health or social services</Text>
+			</Value>
+			<Value>
+				<Code>0284</Code>
+				<Text>Literacy</Text>
+			</Value>
+			<Value>
+				<Code>0285</Code>
+				<Text>Occupational education</Text>
+			</Value>
+			<Value>
+				<Code>0286</Code>
+				<Text>Orientation to school setting for new families</Text>
+			</Value>
+			<Value>
+				<Code>0287</Code>
+				<Text>Parent training/involvement</Text>
+			</Value>
+			<Value>
+				<Code>0288</Code>
+				<Text>Parenting education</Text>
+			</Value>
+			<Value>
+				<Code>0289</Code>
+				<Text>Recreational/advocational program</Text>
+			</Value>
+			<Value>
+				<Code>0342</Code>
+				<Text>Technology</Text>
+			</Value>
+			<Value>
+				<Code>0875</Code>
+				<Text>After school enrichment</Text>
+			</Value>
+			<Value>
+				<Code>0876</Code>
+				<Text>Before school enrichment</Text>
+			</Value>
+			<Value>
+				<Code>2381</Code>
+				<Text>Gifted and talented (Accelerated)</Text>
+			</Value>
+			<Value>
+				<Code>2389</Code>
+				<Text>Even Start</Text>
+			</Value>
+			<Value>
+				<Code>2393</Code>
+				<Text>Magnet program</Text>
+			</Value>
+			<Value>
+				<Code>9999</Code>
+				<Text>Other</Text>
+			</Value>
+			 
+		</Values>
+	</CodeSet>    <!-- Student/Family Program Type -->
+	<CodeSet>
+		<Intro>
+			<p/>
+		</Intro>
+		<ID>Program Funding Source Code</ID>
+		<Values>
+			<Value>
+				<Code>1</Code>
+				<Text>State/Jurisdiction</Text>
+			</Value>
+			<Value>
+				<Code>2</Code>
+				<Text>Commonwealth Initiative</Text>
+			</Value>
+			<Value>
+				<Code>3</Code>
+				<Text>School Source</Text>
+			</Value>
+			<Value>
+				<Code>4</Code>
+				<Text>Director's Discretion</Text>
+			</Value>
+			<Value>
+				<Code>5</Code>
+				<Text>Community Sponsored</Text>
+			</Value>
+			<Value>
+				<Code>9</Code>
+				<Text>Other</Text>
+			</Value>
+			 
+		</Values>
+	</CodeSet>    <!-- Programme Funding Source Code -->
+	<CodeSet>
+		<ID>0792 Identification Procedure</ID>
+		<Values>
+			<Value>
+				<Code>2147</Code>
+				<Text>Education assessment</Text>
+			</Value>
+			<Value>
+				<Code>2148</Code>
+				<Text>Health assessment/screening</Text>
+			</Value>
+			<Value>
+				<Code>9999</Code>
+				<Text>Other</Text>
+			</Value>
+			<Value>
+				<Code>2149</Code>
+				<Text>Parent/guardian referral</Text>
+			</Value>
+			<Value>
+				<Code>2151</Code>
+				<Text>Self-report/survey</Text>
+			</Value>
+			<Value>
+				<Code>2152</Code>
+				<Text>Special education assessment/evaluation</Text>
+			</Value>
+			<Value>
+				<Code>2153</Code>
+				<Text>Teacher referral</Text>
+			</Value>
+		 
+		</Values>
+	</CodeSet>    <!-- 0792 Identification Procedure -->
+	<CodeSet>
+		<ID>0211 Program Availability</ID>
+		<Values>
+			<Value>
+				<Code>0236</Code>
+				<Text>After school</Text>
+			</Value>
+			<Value>
+				<Code>0235</Code>
+				<Text>Before school</Text>
+			</Value>
+			<Value>
+				<Code>0231</Code>
+				<Text>During school</Text>
+			</Value>
+			<Value>
+				<Code>0239</Code>
+				<Text>Evenings</Text>
+			</Value>
+			<Value>
+				<Code>0238</Code>
+				<Text>In-school service day</Text>
+			</Value>
+			<Value>
+				<Code>9999</Code>
+				<Text>Other</Text>
+			</Value>
+			<Value>
+				<Code>9998</Code>
+				<Text>Other School Holidays</Text>
+			</Value>
+			<Value>
+				<Code>0237</Code>
+				<Text>Summer Holidays</Text>
+			</Value>
+			<Value>
+				<Code>0234</Code>
+				<Text>Weekend</Text>
+			</Value>
+		 
+		</Values>
+	</CodeSet>    <!-- 0211 Program Availability -->	
+</IncludeGroup>

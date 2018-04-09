@@ -9,61 +9,88 @@
 		<Intro>
 			<p></p>
 		</Intro>
-		<xi:include parse="text" href="Common/SchoolInfo.xml"/>
-		<xi:include parse="text" href="Common/SystemRole.xml"/>		
 		
-		<!-- Include data model here -->		
+		<!-- Include data model here -->
+		
+		<!-- School Statistics Reporting -->
 		<xi:include parse="text" href="Common/AggregateStatisticInfo.xml"/>
 		<xi:include parse="text" href="Common/AggregateCharacteristicInfo.xml"/>
 		<xi:include parse="text" href="Common/AggregateStatisticFact.xml"/>
-		<xi:include parse="text" href="Common/ResourceUsage.xml"/> 
-		<xi:include parse="text" href="Common/RoomInfo.xml"/>
-		<xi:include parse="text" href="Common/StaffAssignment.xml"/>
-		<xi:include parse="text" href="Common/StaffPersonal.xml"/>
-		<xi:include parse="text" href="Common/StudentPersonal.xml"/>
-		<xi:include parse="text" href="Common/StudentSchoolEnrollment.xml"/>
-		<xi:include parse="text" href="Common/StudentContactPersonal.xml"/>
-		<xi:include parse="text" href="Common/StudentParticipation.xml"/>
-		<xi:include parse="text" href="Common/PersonPicture.xml"/>
+
+		<!-- School Calendar Info -->
 		<xi:include parse="text" href="Common/CalendarDate.xml"/>
 		<xi:include parse="text" href="Common/CalendarSummary.xml"/>
+
+		<!-- School Master Data -
+			 - SchoolInfo
+			 - LEAInfo,
+			 - RoomInfo,
+			 - Terms,
+			 - Programmes,
+			 - Courses,
+			 - Sessions,
+			 - TeachingGroups,
+			 - StaffAssignment etc... -->
+
+		<xi:include parse="text" href="Common/SchoolInfo.xml"/>
+		<xi:include parse="text" href="Common/LEAInfo.xml"/>
+		<xi:include parse="text" href="Common/RoomInfo.xml"/>
+		<xi:include parse="text" href="Common/TermInfo.xml"/>
+		<xi:include parse="text" href="Common/SchoolPrograms.xml"/>
+		<xi:include parse="text" href="Common/SchoolCourseInfo.xml"/>
+        <xi:include parse="text" href="Common/SessionInfo.xml"/>
+		<xi:include parse="text" href="Common/TeachingGroup.xml"/>	
+		<xi:include parse="text" href="Common/StaffAssignment.xml"/>
+
+
+		<!-- IAM - Identity & Access Management -->
+		<xi:include parse="text" href="Common/Identity.xml"/>
+		<xi:include parse="text" href="Common/SystemRole.xml"/>		
+
+        <!-- Party & Role  -->
+		<xi:include parse="text" href="Common/PersonPicture.xml"/>
+		<xi:include parse="text" href="Common/StaffPersonal.xml"/>
+		<xi:include parse="text" href="Common/StudentPersonal.xml"/>
+		<xi:include parse="text" href="Common/StudentContactPersonal.xml"/>
+		<xi:include parse="text" href="Common/StudentContactRelationship.xml"/>
+
+		
+		<!-- Student SchoolEnrollment, Section Enrollment & Programme Participation -->
+		<xi:include parse="text" href="Common/StudentSchoolEnrollment.xml"/>
+		<xi:include parse="text" href="Common/SectionInfo.xml"/>
+		<xi:include parse="text" href="Common/StudentSectionEnrollment.xml"/> 
+		<xi:include parse="text" href="Common/StudentParticipation.xml"/>
+
+
+        <!-- Curriculum - Learning Standards etc... -->
+		<xi:include parse="text" href="Common/LearningStandardDocument.xml"/>
+		<xi:include parse="text" href="Common/LearningStandardItem.xml"/>
+
+		<!-- Student Attendance reporting summaries and granular  -->
 		<xi:include parse="text" href="Common/StudentAttendanceSummary.xml"/>
 		<xi:include parse="text" href="Common/StudentDailyAttendance.xml"/>
 		<xi:include parse="text" href="Common/StudentPeriodAttendance.xml"/>
-		<xi:include parse="text" href="Common/SessionInfo.xml"/>
-		
-		<xi:include parse="text" href="Common/LearningStandardDocument.xml"/>
-		<xi:include parse="text" href="Common/LearningStandardItem.xml"/>
+		<xi:include parse="text" href="Common/StudentAttendanceTimeList.xml"/>	
+
+
+		<!-- Learning Resource -->
 		<xi:include parse="text" href="Common/LearningResource.xml"/>
 		<xi:include parse="text" href="Common/LearningResourcePackage.xml"/>
+		<xi:include parse="text" href="Common/ResourceUsage.xml"/> 
+		<xi:include parse="text" href="Common/ResourceBooking.xml"/>		
 		
+		
+		<!-- Timetable, Activity and ScheduledActivity Objects -->
 		<xi:include parse="text" href="Common/TimeTableSubject.xml"/>
 		<xi:include parse="text" href="Common/TimeTable.xml"/>
-		<xi:include parse="text" href="Common/TeachingGroup.xml"/>	
 		<xi:include parse="text" href="Common/TimeTableCell.xml"/>
-		<xi:include parse="text" href="Common/SchoolCourseInfo.xml"/>
-		
-		<xi:include parse="text" href="Common/LEAInfo.xml"/>
-		<xi:include parse="text" href="Common/TermInfo.xml"/>
-		<xi:include parse="text" href="Common/StudentContactRelationship.xml"/>
+        <xi:include parse="text" href="Common/Activity.xml"/>
+		<xi:include parse="text" href="Common/ScheduledActivity.xml"/>		
+		<xi:include parse="text" href="Common/EquipmentInfo.xml"/>	
 		<xi:include parse="text" href="Common/StudentActivityInfo.xml"/>
 		<xi:include parse="text" href="Common/StudentActivityParticipation.xml"/>
-		<xi:include parse="text" href="Common/Identity.xml"/>
-		<xi:include parse="text" href="Common/SchoolPrograms.xml"/>
-		
-		<!-- Section Enrollment 1.3 -->
-		<xi:include parse="text" href="Common/SectionInfo.xml"/>
-		<xi:include parse="text" href="Common/StudentSectionEnrollment.xml"/> 
-		
-		<!-- Activity/Achievement Object-->
-		<xi:include parse="text" href="Common/Activity.xml"/>		
-		
-		<!-- ScheduledActivity Object-->
-		<xi:include parse="text" href="Common/ScheduledActivity.xml"/>		
-		<xi:include parse="text" href="Common/ResourceBooking.xml"/>		
-		<xi:include parse="text" href="Common/EquipmentInfo.xml"/>	
-		
-		<!-- Finance additions-->		
+
+		<!-- Finance additions-->
 		<xi:include parse="text" href="AU/Invoice.xml"/>
 		<xi:include parse="text" href="AU/FinancialAccount.xml"/>
 		<xi:include parse="text" href="AU/ChargedLocationInfo.xml"/>
@@ -72,16 +99,13 @@
 		<xi:include parse="text" href="AU/VendorInfo.xml"/>
 		<xi:include parse="text" href="AU/Journal.xml"/>
 		<xi:include parse="text" href="AU/Debtor.xml"/>
-				
-		<!-- Added for granular Attendance Reporting-->
-		<xi:include parse="text" href="Common/StudentAttendanceTimeList.xml"/>	
-		
-		<!-- Classroom assessment -->	
+
+        <!-- Classroom assessment -->
 		<xi:include parse="text" href="Common/GradingAssignment.xml"/>
 		<xi:include parse="text" href="Common/GradingAssignmentScore.xml"/>
 		<xi:include parse="text" href="Common/MarkValueInfo.xml"/>
 		<xi:include parse="text" href="Common/StudentGrade.xml"/>
-		
+
 		<!-- NAPLAN Additions -->
 		<xi:include parse="text" href="AU/NAPEventStudentLink.xml"/>
 		<xi:include parse="text" href="AU/NAPTest.xml"/>
@@ -90,6 +114,7 @@
 		<xi:include parse="text" href="AU/NAPTestItem.xml"/>
 		<xi:include parse="text" href="AU/NAPStudentResponseSet.xml"/>
 		<xi:include parse="text" href="AU/NAPCodeFrame.xml"/>
+
 
 		<!-- Wellbeing Additions-->
 		<xi:include parse="text" href="Common/WellbeingResponse.xml"/>

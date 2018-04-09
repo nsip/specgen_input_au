@@ -19,20 +19,20 @@
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
 	<privacyRating>Low</privacyRating>
-    <Type ref="CommonTypes" name="RefIdType"></Type>
     <Description>
       <p>The GUID that uniquely identifies an instance of the object.</p>
     </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
   </Item>
   
   <Item>
     <Element>NAPTestRefId</Element>
     <Characteristics>M</Characteristics>
 	<privacyRating>Low</privacyRating>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
     <Description>
       <p>The GUID that identifies the associated NAP test object.</p>
     </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
   </Item>
     
   
@@ -40,10 +40,10 @@
     <Element>TestContent</Element>
     <Characteristics>M</Characteristics>
 	<privacyRating>Low</privacyRating>
-    <Type ref="CommonTypes" name="NAPTestContentType"></Type>
     <Description>
       <p></p>
     </Description>
+    <Type ref="CommonTypes" name="NAPTestContentType"></Type>
   </Item>
   
  <!--Item>
@@ -52,7 +52,7 @@
 		<Description>
 			<p>Local identifier of NAP test.</p>
 		</Description>
-		<Type ref="CommonTypes" name="LocalId"/> 
+		<Type ref="CommonTypes" name="LocalIdType"/> 
   </Item>
   <Item>
 		<Element>TestName</Element>

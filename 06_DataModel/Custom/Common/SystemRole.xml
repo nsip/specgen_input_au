@@ -32,16 +32,16 @@
     </Item>
     <Item>
       <Attribute>RefId</Attribute>
-      <Description>The SIF RefId that uniquely identifies this object.</Description>
       <Characteristics>M</Characteristics>
 	  <privacyRating>Low</privacyRating>
+      <Description>The SIF RefId that uniquely identifies this object.</Description>
       <Type ref="CommonTypes" name="RefIdType"/>
     </Item>
     <Item>
       <Element>SIF_RefId</Element>
-      <Description>The SIF RefId that provides the source Object for this SystemRole Object.</Description>
       <Characteristics>M</Characteristics>
 	  <privacyRating>Low</privacyRating>
+      <Description>The SIF RefId that provides the source Object for this SystemRole Object.</Description>
       <Type ref="CommonTypes" name="IdRefType"/>
     </Item>
     <Item>

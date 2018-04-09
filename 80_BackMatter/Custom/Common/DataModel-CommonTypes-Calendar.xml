@@ -1,0 +1,152 @@
+﻿<IncludeGroup
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	
+	xmlns="http://sifassociation.org/SpecGen">
+
+	<!-- IncludeGroup is syntactic sugar that makes this a well-formed XML file that can
+		 be validated separately; and allows the xi:include to have parse="xml"  SpecGen tool ignores it. -->
+
+
+	<!-- Element types for the Calendar domain -->
+<CommonElement name="AttendanceInfoType" type="true" dm="true">
+ <Item>
+    <Element>AttendanceInfoType</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Information describing how the day relates to attendance.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>CountsTowardAttendance</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Designates whether this date should be counted toward student attendance.</p>
+    </Description>
+    <Values>
+      <Value>
+        <Code>Yes</Code>
+      </Value>
+      <Value>
+        <Code>No</Code>
+      </Value>
+    </Values>
+  </Item>
+  <Item>
+    <Element>AttendanceValue</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>
+        Amount of the school day in which the student should be in attendance (Format is x.x; a student who should be in attendance a full day would be represented as 1.0).  If <code>CountsTowardAttendance</code> equals <code>Yes</code> then <code>AttendanceValue</code> must be greater than zero.
+      </p>
+    </Description>
+    <Type name="xs:decimal"></Type>
+    <Facets>
+      <xs:minInclusive value="0"/>
+      <xs:maxInclusive value="1"/>
+      <xs:fractionDigits value="1"/>
+    </Facets>
+  </Item>
+</CommonElement>
+<CommonElement name="CalendarDateInfoType" type="true" dm="true">
+ <Item>
+    <Element>CalendarDateInfoType</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Calendar date type information.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>Code</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Code indicating the type of school day.</p>
+    </Description>
+    
+      <Type ref="CodeSets" name="AUCodeSetsCalendarEventType"></Type>
+    
+  </Item>
+  <Item>
+    <Element>OtherCodeList</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="OtherCodeListType"></Type>
+  </Item>
+</CommonElement>
+<CommonElement name="YearLevelsType" type="true" dm="true">
+	<Item>
+		<Element>YearLevelsType</Element>
+		<Description>
+			<p>
+        List of year levels.
+      </p>
+		</Description>
+		<List mode="List">
+    </List>
+	</Item>
+	<Item>
+		<Element>YearLevel</Element>
+		<Characteristics>MR</Characteristics>
+		<Type ref="CommonTypes" name="YearLevelType"/>
+	</Item>
+	<xhtml:Example xmlns="" name="Year Levels Example">
+		<YearLevels>
+			<YearLevel>
+				<Code>5</Code>
+			</YearLevel>
+			<YearLevel>
+				<Code>6</Code>
+			</YearLevel>
+			<YearLevel>
+				<Code>7</Code>
+			</YearLevel>
+			<YearLevel>
+				<Code>8</Code>
+			</YearLevel>
+		</YearLevels>
+	</xhtml:Example>
+</CommonElement>
+<CommonElement name="YearLevelType" type="true" dm="true">
+	<Intro>
+		<p>
+
+    </p>
+	</Intro>
+	<Item>
+		<Element>YearLevelType</Element>
+		<Description>
+			<p>Year or academic level.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>Code</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Code representing the year level.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsYearLevelCodeType"/>
+	</Item>
+	<xhtml:Example xmlns="" name="YearLevel Example">
+		<YearLevel>
+			<Code>8</Code>
+		</YearLevel>
+	</xhtml:Example>
+</CommonElement>
+<CommonElement name="SchoolYearType" type="true" dm="true">
+	<Intro>
+		<p>Common element used to designate the academic school year to which an object relates.</p>
+	</Intro>
+	<Item>
+		<Element>SchoolYearType</Element>
+		<Description>
+			<p>School year for which the information is applicable, expressed as the four-digit year in which the school year ends (e.g., "2009").</p>
+		</Description>
+		<Type name="xs:gYear"/>
+	</Item>
+	<xhtml:Example xmlns="" name="School Year Example">
+		<SchoolYear>2005</SchoolYear>
+	</xhtml:Example>
+</CommonElement>
+
+</IncludeGroup>

@@ -1,0 +1,68 @@
+<IncludeGroup
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	
+ 	xmlns="http://sifassociation.org/SpecGen">
+
+	<CodeSet>
+		<Intro>
+			<p>A code indicating the type of school day</p>
+		</Intro>
+		<ID>Calendar Event</ID>
+		<Values>
+			<Value>
+				<Code>0845</Code>
+				<Text>Teacher only day</Text>
+			</Value>
+			<Value>
+				<Code>0846</Code>
+				<Text>Holiday</Text>
+			</Value>
+			<Value>
+				<Code>0848</Code>
+				<Text>Student late arrival/early dismissal</Text>
+			</Value>
+			<Value>
+				<Code>0849</Code>
+				<Text>Emergency day</Text>
+			</Value>
+			<Value>
+				<Code>3421</Code>
+				<Text>Strike</Text>
+			</Value>
+			<Value>
+				<Code>9999</Code>
+				<Text>Other</Text>
+			</Value>
+			<Value>
+				<Code>INST</Code>
+				<Text>Instructional School Day</Text>
+			</Value>
+			<Value>
+				<Code>MKUP</Code>
+				<Text>Instructional day that is scheduled solely to make up for emergency days or early dismissal days.</Text>
+			</Value>
+						<Value>
+				<Code>WEAT</Code>
+				<Text>Weather Event</Text>
+			</Value>
+			<Value>
+				<Code>POUT</Code>
+				<Text>Power Outage</Text>
+			</Value>
+			<Value>
+				<Code>FDAM</Code>
+				<Text>Facility Damage</Text>
+			</Value>
+			<Value>
+				<Code>RELI</Code>
+				<Text>Religious Observance</Text>
+			</Value>
+			<Value>
+				<Code>INAW</Code>
+				<Text>Industrial Award</Text>
+			</Value>
+		 
+		</Values>
+	</CodeSet>   <!--  Calendar Event -->
+	
+</IncludeGroup>

@@ -1,0 +1,427 @@
+﻿<IncludeGroup
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	
+	xmlns="http://sifassociation.org/SpecGen">
+
+	<!-- IncludeGroup is syntactic sugar that makes this a well-formed XML file that can
+		 be validated separately; and allows the xi:include to have parse="xml"  SpecGen tool ignores it. -->
+
+
+	<!-- Element types for the Metadata domain -->
+<CommonElement name="SIF_MetadataType" type="true" dm="true">
+	<Intro>
+		<p>
+      Metadata is commonly referred to as data about data and includes information such as author, grade level, or keywords relating to a learning object, as examples.
+      Metadata can be used to structure and contain any of this kind of information in a consistent manner.
+      In the context of SIF, <code>SIF_Metadata</code> provides a consistent structure to appropriate SIF objects for the purpose of cataloguing and object discovery,
+      as well as other metadata functions and purposes.  One recurring use case within the SIF data model is the requirement for some form of temporal constraints and tagging
+      on objects (see <a href="#TimeElement">
+				<code>TimeElement</code>
+			</a>).  Other metadata elements are based on needs brought to the Data Model Task Force.
+    </p>
+		<p>
+			<strong>IMPORTANT NOTE ON PERSISTENCE</strong>
+		</p>
+		<p>
+      This data is not designed to be permanent.
+      It is designed to frame an object instance and could dissolve as soon as it leaves the SIF framework for the application space.
+      A data warehouse could be used to store metadata for later tracking.
+    </p>
+		<p>
+			<strong>IMPORTANT NOTE ON USAGE</strong>
+		</p>
+		<p>
+      Any usage of metadata is optional unless made a requirement
+      within individual SIF objects, or if a SIF or local profile or zone installation mandates it.  SIF_Metadata allows for the usage of metadata in agents and applications that choose to support it.
+    </p>
+		<p>This element is designed to operate much like SIF_ExtendedElements.  It is an approved common element that is part of any data object.</p>
+	</Intro>
+	<Item>
+		<Element>SIF_MetadataType</Element>
+		<Description>
+			<p>A commonly defined container for metadata elements defined within SIF.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>TimeElements</Element>
+		<Characteristics>O</Characteristics>
+		<List mode="List">
+  </List>
+	</Item>
+	<Item>
+		<Element>/TimeElement</Element>
+		<Characteristics>OR</Characteristics>
+		<Type ref="CommonTypes" name="TimeElementType"/>
+	</Item>
+	<Item>
+		<Element>LifeCycle</Element>
+		<Characteristics>O</Characteristics>
+		<Type ref="CommonTypes" name="LifeCycleType"/>
+	</Item>
+	<Item>
+		<Element>EducationFilter</Element>
+		<Characteristics>O</Characteristics>
+		<Type ref="CommonTypes" name="EducationFilterType"/>
+	</Item>
+</CommonElement>
+<CommonElement name="TimeElementType" type="true" dm="true">
+	<Item>
+		<Element>TimeElementType</Element>
+		<Description>
+			<p>A common metadata element designed to contain time data, both self-defined and by type.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>Type</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>
+        This element is designed to contain the time period attached to an object.
+        Very long periods (school year, quarter, etc.) and very small periods (second, millisecond, etc.) can be defined.
+        This element provides a scoping description of the time metadata enclosed.
+      </p>
+			<p>
+        Because the educational environment varies so greatly we are including here a suggested but not prescriptive list of values.
+        Although there may be unique needs for values not covered here&#x2014;and we may have missed a major one&#x2014;a best practice would be
+        to utilize the examples here to enhance interoperability.
+      </p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+		<ItemExample>
+      Full school year
+    </ItemExample>
+		<ItemExample>
+      Mini-term
+    </ItemExample>
+		<ItemExample>
+      Long session
+    </ItemExample>
+		<ItemExample>
+      Other
+    </ItemExample>
+		<ItemExample>
+      Semester
+    </ItemExample>
+		<ItemExample>
+      Trimester
+    </ItemExample>
+		<ItemExample>
+      Quarter
+    </ItemExample>
+		<ItemExample>
+      Spring Vacation
+    </ItemExample>
+		<ItemExample>
+      Summer Term
+    </ItemExample>
+		<ItemExample>
+      Intercession
+    </ItemExample>
+		<ItemExample>
+      Holiday
+    </ItemExample>
+	</Item>
+	<Item>
+		<Element>Code</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+      This element provides a place for the application to send structured data (code values, unique identifier, timestamps).
+      This code value can, depending upon the use case agreement between agents, be used to qualify the data in the <code>Value</code> element.
+    </Description>
+		<Type name="xs:token"/>
+		<ItemExample>2007SY</ItemExample>
+		<ItemExample>2006.FallConferences</ItemExample>
+	</Item>
+	<Item>
+		<Element>Name</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+      Contains a human-readable description of the value in <code>Value</code>.
+    </Description>
+		<Type name="xs:normalizedString"/>
+		<ItemExample>
+      Class of '07
+    </ItemExample>
+		<ItemExample>
+      Fall 2007 Parent-Teacher Conferences
+    </ItemExample>
+	</Item>
+	<Item>
+		<Element>Value</Element>
+		<Characteristics>M</Characteristics>
+		<Description>Contains the human-readable value.</Description>
+		<Type name="xs:normalizedString"/>
+		<ItemExample>
+      2007
+    </ItemExample>
+		<ItemExample>
+      Evening of 10/12/06
+    </ItemExample>
+	</Item>
+	<Item>
+		<Element>StartDateTime</Element>
+		<Characteristics>O</Characteristics>
+		<Type name="xs:dateTime"/>
+	</Item>
+	<Item>
+		<Element>EndDateTime</Element>
+		<Characteristics>O</Characteristics>
+		<Type name="xs:dateTime"/>
+	</Item>
+	<Item>
+		<Element>SpanGaps</Element>
+		<Characteristics>O</Characteristics>
+		<Description>A container element for holding multiple possible span gaps.</Description>
+		<List mode="List">
+		</List>
+	</Item>
+	<Item>
+		<Element>/SpanGap</Element>
+		<Characteristics>OR</Characteristics>
+		<Description>
+      This structure duplicates much of the structure of <code>TimeElement</code> and is designed to represent a gap in the parent time period
+      defined by <code>StartDateTime</code> and <code>EndDateTime</code> above.
+    </Description>
+	</Item>
+	<Item>
+		<Element>//Type</Element>
+		<Characteristics>M</Characteristics>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>//Code</Element>
+		<Characteristics>M</Characteristics>
+		<Type name="xs:token"/>
+	</Item>
+	<Item>
+		<Element>//Name</Element>
+		<Characteristics>M</Characteristics>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>//Value</Element>
+		<Characteristics>M</Characteristics>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>//StartDateTime</Element>
+		<Characteristics>O</Characteristics>
+		<Type name="xs:dateTime"/>
+	</Item>
+	<Item>
+		<Element>//EndDateTime</Element>
+		<Characteristics>O</Characteristics>
+		<Type name="xs:dateTime"/>
+	</Item>
+	<Item>
+		<Element>IsCurrent</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+      This element allows for the system to tag an object as being explicitly current.
+      Although the baseline assumption in SIF is that objects are always current (default value is typically <code>true</code>),
+      there are use cases when that is not the case.
+    </Description>
+		<Type name="xs:boolean"/>
+	</Item>
+	<xhtml:Example xmlns="" name="Time Element Example">
+		<TimeElement>
+			<Type>Full school year</Type>
+			<Code>01</Code>
+			<Name>2004/2005 School Year</Name>
+			<Value>2004-2005</Value>
+			<StartDateTime>2004-09-01T08:00:00-05:00</StartDateTime>
+			<EndDateTime>2005-06-30T15:00:00-05:00</EndDateTime>
+			<SpanGaps>
+				<SpanGap>
+					<Type>Holiday</Type>
+					<Code>02</Code>
+					<Name>2005 Winter Break</Name>
+					<Value>2005 Winter Break</Value>
+					<StartDateTime>2005-02-21T15:00:00-05:00</StartDateTime>
+					<EndDateTime>2005-02-25T08:00:00-05:00</EndDateTime>
+				</SpanGap>
+			</SpanGaps>
+			<IsCurrent>true</IsCurrent>
+		</TimeElement>
+	</xhtml:Example>
+</CommonElement>
+<CommonElement name="LifeCycleType" type="true" dm="true">
+	<Item>
+		<Element>LifeCycleType</Element>
+		<Description>
+			<p>
+        This common metadata element describes the life cycle of the object it represents, based on the IEEE LOM LifeCycle element <a href="References.html#LOM">[LOM]</a>.
+      </p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>Created</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+      When the object was created by whom.  This is a more persistent creation date than
+      the date/time in the object's <code>SIF_Header</code>.
+      Depending on the use case being implemented, this value could contain the date the data in the object first entered the zone or was actually created.
+    </Description>
+	</Item>
+	<Item>
+		<Element>/DateTime</Element>
+		<Characteristics>M</Characteristics>
+		<Type name="xs:dateTime"/>
+	</Item>
+	<Item>
+		<Element>/Creators</Element>
+		<Characteristics>O</Characteristics>
+		<List mode="List">
+    </List>
+	</Item>
+	<Item>
+		<Element>//Creator</Element>
+		<Characteristics>MR</Characteristics>
+	</Item>
+	<Item>
+		<Element>///Name</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+      Human-readable name of the data's creator. If the object contains system-generated data,
+      the name should identify the creating service or application.
+    </Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>///ID</Element>
+		<Characteristics>M</Characteristics>
+		<Description>Unique identifier of the creator.  An email address or URI could be used here.</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>ModificationHistory</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+      An ordered set of <code>Modified</code> elements describing which system modified the data, when
+      the modification took place, and a brief description of the modification.
+    </Description>
+		<List mode="List">
+		</List>
+	</Item>
+	<Item>
+		<Element>/Modified</Element>
+		<Characteristics>OR</Characteristics>
+		<Description>A single modification event.</Description>
+	</Item>
+	<Item>
+		<Element>//By</Element>
+		<Characteristics>M</Characteristics>
+		<Description>Identifier of the system or person that modified the data.</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>//DateTime</Element>
+		<Characteristics>M</Characteristics>
+		<Description>The date/time the modification occurred.</Description>
+		<Type name="xs:dateTime"/>
+	</Item>
+	<Item>
+		<Element>//Description</Element>
+		<Characteristics>O</Characteristics>
+		<Description>Human readable description of the data modifications.</Description>
+		<Type name="xs:string"/>
+	</Item>
+	<Item>
+		<Element>TimeElements</Element>
+		<Characteristics>O</Characteristics>
+		<List mode="List">
+    </List>
+	</Item>
+	<Item>
+		<Element>/TimeElement</Element>
+		<Characteristics>OR</Characteristics>
+		<Type ref="DataModelTaskForce" name="TimeElementType"/>
+	</Item>
+	<xhtml:Example xmlns="" name="Lifecycle Example">
+		<LifeCycle>
+			<Created>
+				<DateTime>2006-08-13T09:00:00-05:00</DateTime>
+				<Creators>
+					<Creator>
+						<Name>Alphonse Berdonosi</Name>
+						<ID>http://www.edugeeks.com/aberdonosi</ID>
+					</Creator>
+				</Creators>
+			</Created>
+			<ModificationHistory>
+				<Modified>
+					<By>http://www.edugeeks.com/aberdonosi</By>
+					<DateTime>2006-08-17T09:30:00-05:00</DateTime>
+				</Modified>
+			</ModificationHistory>
+		</LifeCycle>
+	</xhtml:Example>
+</CommonElement>
+<CommonElement name="EducationFilterType" type="true" dm="true">
+	<Intro>
+		<p>
+      Based on feedback from  publishers, instructional management and system integrator vendors,
+      <code>EducationFilter</code> was developed to provide the ability to tag objects with metadata that allows for categorization,
+      sorting, and filtering, to empower teaching and learning SIF usage.  There exist two main business cases:
+    </p>
+		<ul>
+			<li>
+        Content providers receiving a request for learning resources can tag content with applicable filters.
+        Upon receipt of SIF objects, receiving application can then read the metadata to categorize the content most appropriately.
+      </li>
+			<li>
+        When supported by providers, this metadata can then be utilized in queries to more precisely limit the type of content
+        returned to requesting applications.
+      </li>
+		</ul>
+		<p>
+      The use cases for <code>EducationFilter</code> require a contract and choreography to be understood between both sides of
+      the transaction as is the case with all <code>SIF_Metadata</code>.
+    </p>
+	</Intro>
+	<Item>
+		<Element>EducationFilterType</Element>
+	</Item>
+	<Item>
+		<Element>LearningStandardItems</Element>
+		<Characteristics>O</Characteristics>
+		<Description>Allows any SIF object to be correlated to learning standards.</Description>
+		<Type ref="CommonTypes" name="LearningStandardsType"/>
+	</Item>
+	<xhtml:Example name="EducationFilter - Example 1" xmlns="">
+		<EducationFilter>
+			<LearningStandardItems>
+				<LearningStandardItemRefId>3E34B351-9D75-101A-8C3D-00AA001A1652</LearningStandardItemRefId>
+				<LearningStandardItemRefId>4F34B352-9D75-101A-8C3D-00AA001A1652</LearningStandardItemRefId>
+				<LearningStandardItemRefId>F034B353-9D75-101A-8C3D-00AA001A9D75</LearningStandardItemRefId>
+				<LearningStandardItemRefId>2C34B354-1652-101A-8C3D-00AA001A1667</LearningStandardItemRefId>
+				<LearningStandardItemRefId>3E85F355-9D75-101A-8C3D-00AA001A2352</LearningStandardItemRefId>
+				<LearningStandardItemRefId>3E34B356-9D75-101A-8C3D-00AA001A1659</LearningStandardItemRefId>
+				<LearningStandardItemRefId>3E34B357-1652-101A-8C3D-00AA001A1652</LearningStandardItemRefId>
+			</LearningStandardItems>
+		</EducationFilter>
+	</xhtml:Example>
+</CommonElement>
+<CommonElement name="LearningStandardsType" type="true" dm="true">
+	<Item>
+		<Element>LearningStandardsType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>References to LearningStandardItems.</p>
+		</Description>
+		<List mode="List"/>
+	</Item>
+	<Item>
+		<Element>LearningStandardItemRefId</Element>
+		<Characteristics>OR</Characteristics>
+		<Description>
+			<p>Reference to a LearningStandardItem.</p>
+		</Description>
+		<Type ref="CommonTypes" name="IdRefType"/>
+	</Item>
+</CommonElement>
+
+</IncludeGroup>

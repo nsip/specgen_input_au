@@ -1,9 +1,10 @@
+<Grouping
+ 	xmlns="http://sifassociation.org/SpecGen"
+	code="ISO" name="International Standards Organization (ISO)">
 
-<Grouping code="ISO" name="International Standards Organization (ISO)">
-
-
+<if intl="au">
   <CodeSet>
-    <ID>4217 Currency names and code elements</ID>
+    <ID>4217 Currency Names And Code Elements</ID>
     <Values>
       <Value>
         <Code>AED</Code>
@@ -720,6 +721,7 @@
       </Value>
       
     </Values>
-  </CodeSet>
+</CodeSet>   <!-- ISO 4217 - International Currency Codes -->
+</if>
 
 </Grouping>

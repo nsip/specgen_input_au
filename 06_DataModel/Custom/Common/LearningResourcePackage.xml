@@ -28,7 +28,7 @@
 	</Item>
 	<xhtml:Example xmlns="" name="LearningResourcePackage">
 		<LearningResourcePackage RefId="C7DE8668-5968-459F-BF9F-ED22A0E1EA6E">
-			<BinaryData MIMEType="text/html;charset=utf-16">...</BinaryData>
+			<BinaryData MIMEType="text/html;charset=utf-16">SGVsbG8gU0lGIFdvcmxk</BinaryData>
 		</LearningResourcePackage>
 	</xhtml:Example>
 </DataObject>

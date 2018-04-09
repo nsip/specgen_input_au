@@ -1,0 +1,1465 @@
+﻿<IncludeGroup
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	
+	xmlns="http://sifassociation.org/SpecGen">
+
+	<!-- IncludeGroup is syntactic sugar that makes this a well-formed XML file that can
+		 be validated separately; and allows the xi:include to have parse="xml"  SpecGen tool ignores it. -->
+
+
+	<!-- Element types for the NAPLAN  Domain -->  
+<CommonElement name="NAPTestItemContentType" type="true" dm="true">
+ 	
+    <Item>
+		<Element>NAPTestItemContentType</Element>
+		<Characteristics>M</Characteristics>
+		 <Description>
+          <p>Contents of a Test Item in the context of NAP.</p>
+        </Description>
+  	</Item> 
+  	
+  	<Item>
+		<Element>NAPTestItemLocalId</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Local identifier of NAP test item.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"/> 
+  </Item>
+  <Item>
+		<Element>ItemName</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Name of NAP test item.</p>
+		</Description>
+		<Type name="xs:normalizedString"></Type>
+  </Item>
+    <Item>
+    <Element>ItemType</Element>
+    <Characteristics>M</Characteristics>
+	<Description>
+      <p>Response type for the test item.</p>
+    </Description>
+	<Type ref="CodeSets" name="AUCodeSetsNAPTestItemTypeType"/>
+  </Item>
+  <!--Item>
+		<Element>Domain</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Domain descriptor for the test item.</p>
+		</Description>
+	    <Type ref="CodeSets" name="AUCodeSetsNAPTestDomainType"/>
+	</Item-->
+	<Item>
+		<Element>Subdomain</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Subdomain descriptor for the test item.</p>
+		</Description>
+	    <!--Type ref="CodeSets" name="AUCodeSetsNAPTestSubDomainType"/-->
+	    <Type name="xs:normalizedString"></Type>
+	</Item>
+	<Item>
+		<Element>WritingGenre</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Genre of writing for the test item. Values: Narrative, Persuasive.</p>
+		</Description>
+	    <Type ref="CodeSets" name="AUCodeSetsNAPWritingGenreType"/>
+	</Item>
+	<Item>
+		<Element>ItemDescriptor</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+		  <p>Description of the test item.</p>
+		</Description>
+		<Type name="xs:normalizedString"></Type>
+	</Item>  
+	<Item>
+		<Element>ReleasedStatus</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+		  <p>Whether the test item has been publicly released.</p>
+		</Description>
+		<Type name="xs:boolean"></Type>
+	</Item>  
+	<Item>
+		<Element>MarkingType</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Method used to mark the test item. Values: AS Auto Scoring, MM Manual Marking, AES Auto Essay Scoring.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsNAPTestItemMarkingTypeType"/>
+	</Item>
+    <Item>
+		<Element>MultipleChoiceOptionCount</Element>
+		<Characteristics>C</Characteristics>
+		<Description>
+		  <p>For multiple choice and multiple choices questions, the number of questions.</p>
+		</Description>
+		<Type name="xs:int"></Type>
+	</Item>  
+  
+    <Item>
+		<Element>CorrectAnswer</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+		  <p>Τhe correct answer to the test item.</p>
+		</Description>
+		<Type name="xs:normalizedString"></Type>
+	</Item> 
+	
+	<Item>
+		<Element>MaximumScore</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Full marks allocated for correct response.</p>
+		</Description>
+		<Type name="xs:decimal"></Type>
+   </Item>
+   
+	<Item>
+		<Element>ItemDifficulty</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Item difficulty on same scale as Student Scaled Score.</p>
+		</Description>
+		<Type name="xs:decimal"></Type>
+   </Item> 
+   	<Item>
+		<Element>ItemDifficultyLogit5</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Item difficulty in logits at 0.5 probability.</p>
+		</Description>
+		<Type name="xs:decimal"></Type>
+   </Item> 
+    <Item>
+		<Element>ItemDifficultyLogit62</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Item difficulty in logits at 0.62 probability.</p>
+		</Description>
+		<Type name="xs:decimal"></Type>
+   </Item> 
+   <Item>
+		<Element>ItemDifficultyLogit5SE</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Standard Error for item difficulty in logits at 0.5 probability.</p>
+		</Description>
+		<Type name="xs:decimal"></Type>
+   </Item> 
+   <Item>
+		<Element>ItemDifficultyLogit62SE</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Standard Error for item difficulty in logits at 0.62 probability.</p>
+		</Description>
+		<Type name="xs:decimal"></Type>
+   </Item> 
+
+   	<Item>
+		<Element>ItemProficiencyBand</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The item proficiency band. Uses the same classification as Student Scaled Score.</p>
+		</Description>
+		<Type name="xs:integer"></Type>
+   </Item> 
+  	<Item>
+		<Element>ItemProficiencyLevel</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The item proficiency level. Uses the same classification as Student Scaled Score.</p>
+		</Description>
+		<Type name="xs:normalizedString"></Type>
+   </Item> 
+   
+  	<Item>
+		<Element>ExemplarURL</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The publicly accessible location of an exemplar for the test item. Used if the test item itself has not been published.</p>
+		</Description>
+		<Type name="xs:anyURI"></Type>
+   </Item> 
+ 
+   <Item>
+    <Element>ItemSubstitutedForList</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>List of the RefId of the main item(s) for which this is a Substitute item.</p>
+    </Description>
+    <Type ref="CommonTypes" name="SubstituteItemListType"></Type>
+  </Item>
+  
+  <Item>
+		<Element>ContentDescriptionList</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+		  <p></p>
+		</Description>
+		<Type ref="CommonTypes" name="ContentDescriptionListType"></Type>
+  </Item>
+  
+   <Item>
+		<Element>StimulusList</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+		  <p></p>
+		</Description>
+		<Type ref="CommonTypes" name="StimulusListType"></Type>
+  </Item>	
+    	
+	<Item>
+		<Element>NAPWritingRubricList</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+		  <p></p>
+		</Description>
+		<Type ref="CommonTypes" name="NAPWritingRubricListType"></Type>
+  </Item>		
+  	
+  	</CommonElement>
+<CommonElement name="NAPTestletContentType" type="true" dm="true">
+ 	
+    <Item>
+		<Element>NAPTestletContentType</Element>
+		<Characteristics>M</Characteristics>
+		 <Description>
+          <p>Contents of a Testlet in the context of NAP.</p>
+        </Description>
+  	</Item> 	
+  	
+    <Item>
+		<Element>NAPTestletLocalId</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Local identifier that identifies this NAP testlet.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"/>
+  </Item>
+  	
+  <Item>
+    <Element>TestletName</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Testlet name allocated at test construction.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>  
+    
+  <Item>
+    <Element>Node</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Label of testlet used for testlet sequencing. Values: A,B,C,D,E,F,G.</p>
+    </Description>
+    <Type name="xs:token"></Type>
+  </Item>  
+  
+  <Item>
+    <Element>LocationInStage</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Location of Testlet in stage.</p>
+    </Description>
+    <Type name="xs:integer"></Type>
+  </Item>  
+  
+   <Item>
+		<Element>TestletMaximumScore</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Weighted Maximum score that a student can achieve in this testlet.</p>
+		</Description>
+		<Type name="xs:decimal"></Type>
+  </Item>
+  
+     <!--Item>
+		<Element>BranchingScores</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>List of test items contained in the testlet.</p>
+		</Description>
+		<Type ref="CommonTypes" name="BranchingScoresType"/> 
+  </Item-->
+
+ </CommonElement>
+<CommonElement name="NAPTestContentType" type="true" dm="true">
+ 	
+    <Item>
+		<Element>NAPTestContentType</Element>
+		<Characteristics>M</Characteristics>
+		 <Description>
+          <p>Contents of an assessment assigned in the context of NAP, targeted at a particular domain and year level.</p>
+        </Description>
+  	</Item> 	
+  	
+
+  	<Item>
+		<Element>NAPTestLocalId</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Local identifier of NAP test.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"/>
+  </Item>
+  
+    <Item>
+    <Element>TestName</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Name of the NAP test.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>  
+  <Item>
+		<Element>TestLevel</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Values: 3,5,7,9. The test level that the student is registering for.</p>
+		</Description>
+		<Type ref="CommonTypes" name="YearLevelType"/>
+  </Item>  
+  <Item>
+    <Element>TestType</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Type of NAP Test assigned in the session</p>
+    </Description>
+	<Type ref="CodeSets" name="AUCodeSetsNAPTestTypeType"/>
+  </Item>
+   
+    <Item>
+		<Element>Domain</Element>
+		<Characteristics>M</Characteristics>
+		<Description>Domain of the NAP test. Values: Writing, Reading, Language Conventions - Spelling, Language Conventions - Grammar and Punctuation, Numeracy.</Description>
+		<Type ref="CodeSets" name="AUCodeSetsNAPTestDomainType"/>
+   </Item>
+ 
+    <Item>
+		<Element>TestYear</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Year that testing took place, e.g. 2017.</p>
+		</Description>
+	    <Type ref="CommonTypes" name="SchoolYearType"/>
+	</Item>
+	
+	<Item>
+		<Element>StagesCount</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Number of branching stages in the test; 1 for a flat test.</p>
+		</Description>
+	    <Type name="xs:int"/>
+	</Item>
+	
+    <Item>
+		<Element>DomainBands</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p></p>
+		</Description>
+	    <Type ref="CommonTypes" name="DomainBandsContainerType"/>
+	</Item>
+	 
+    <Item>
+		<Element>DomainProficiency</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p></p>
+		</Description>
+	    <Type ref="CommonTypes" name="DomainProficiencyContainerType"/>
+	</Item>
+ </CommonElement>
+<CommonElement name="PlausibleScaledValueListType" type="true" dm="true">
+	<Item>
+		<Element>PlausibleScaledValueListType</Element>
+		<Characteristics>M</Characteristics>
+		<List mode="List">
+    </List>
+	</Item>
+	<Item>
+    <Element>PlausibleScaledValue</Element>
+    <Characteristics>MR</Characteristics>
+    <Description>
+      <p>Plausible values used for reporting to determine cut points, there are 5 per student per domain.</p>
+    </Description>
+	<Type name="xs:decimal"/>
+  </Item>
+ </CommonElement>
+<CommonElement name="SubstituteItemListType" type="true" dm="true">
+	<Item>
+		<Element>SubstituteItemListType</Element>
+		<Characteristics>M</Characteristics>
+		<List mode="List">
+    </List>
+	</Item>
+	 <Item>
+    <Element>SubstituteItem</Element>
+    <Characteristics>MR</Characteristics>
+    <Description>
+      <p></p>
+    </Description>
+	<Type ref="CommonTypes" name="SubstituteItemType"/>
+  </Item>
+ </CommonElement>
+<CommonElement name="SubstituteItemType" type="true" dm="true">
+  	<Item>
+		<Element>SubstituteItemType</Element>
+		<Characteristics>MR</Characteristics>
+	    <Description></Description>
+	</Item>
+	<Item>
+    <Element>SubstituteItemRefId</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The GUID that identifies the test item.</p>
+    </Description>
+	<Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+    <Item>
+		<Element>SubstituteItemLocalId</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Local identifier of the test item.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"/> 
+  </Item>
+   <Item>
+		<Element>PNPCodeList</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Adjustment code for which the substitute item is applicable.</p>
+		</Description>
+		<Type ref="CommonTypes" name="PNPCodeListType"/> 
+    </Item>
+ </CommonElement>  
+<CommonElement name="CodeFrameTestItemListType" type="true" dm="true">
+	<Item>
+		<Element>CodeFrameTestItemListType</Element>
+		<Characteristics>M</Characteristics>
+		<List mode="List">
+        </List>
+    </Item>
+    <Item>
+      <Element>TestItem</Element>
+      <Characteristics>MR</Characteristics>
+      <Description></Description>
+	   <Type ref="CommonTypes" name="CodeFrameTestItemType"/>
+    </Item>
+   </CommonElement>
+<CommonElement name="CodeFrameTestItemType" type="true" dm="true">
+	<Item>
+		<Element>CodeFrameTestItemType</Element>
+		<Characteristics>MR</Characteristics>
+	</Item>
+    <Item>
+    <Element>TestItemRefId</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The GUID of Test item object.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  <Item>
+		<Element>SequenceNumber</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Location of test item in testlet, as an ordinal.</p>
+		</Description>
+		<Type name="xs:integer"></Type>
+    </Item>
+    <Item>
+		<Element>TestItemContent</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p></p>
+		</Description>
+		<Type ref = "CommonTypes" name="NAPTestItemContentType"></Type>
+  </Item>
+  
+   </CommonElement> 
+
+<!-- Not actually used anywhere -->
+<!--
+   <CommonElement name="StimulusLocalIdListType" type="true" dm="true">
+	<Item>
+		<Element>StimulusLocalIdListType</Element>
+		<Characteristics>M</Characteristics>
+		<List mode="List">
+    </List>
+	</Item>
+	 <Item>
+    <Element>StimulusLocalId</Element>
+    <Characteristics>MR</Characteristics>
+    <Description>
+      <p>LocalId of Stimulus</p>
+    </Description>
+	<Type ref="CommonTypes" name="LocalIdType"/>
+  </Item>
+ </CommonElement> 
+-->
+   
+<CommonElement name="DomainBandsContainerType" type="true" dm="true">
+	<Item>
+		<Element>DomainBandsContainerType</Element>
+		<Characteristics>M</Characteristics>
+		 <Description>
+          <p>Container for the NAP Domain Bands - Upper and Lower</p>
+        </Description>
+  	</Item>
+	 <Item>
+		<Element>Band1Lower</Element>
+		<Characteristics>M</Characteristics>
+		<Description>Lowest scaled score value for Band 1 in domain specified.</Description>
+		<Type name = "xs:decimal"/>
+	  </Item>
+	 <Item>
+		<Element>Band1Upper</Element>
+		<Characteristics>M</Characteristics>
+		<Description>Upper scaled score value for Band 1 in domain specified.</Description>
+		<Type name = "xs:decimal"/>
+	  </Item>
+	  <Item>
+		<Element>Band2Lower</Element>
+		<Characteristics>M</Characteristics>
+		<Description>Lowest scaled score value for Band 2 in domain specified.</Description>
+		<Type name = "xs:decimal"/>
+	  </Item>
+	 <Item>
+		<Element>Band2Upper</Element>
+		<Characteristics>M</Characteristics>
+		<Description>Upper scaled score value for Band 2 in domain specified.</Description>
+		<Type name = "xs:decimal"/>
+	  </Item>
+	 <Item>
+		<Element>Band3Lower</Element>
+		<Characteristics>M</Characteristics>
+		<Description>Lowest scaled score value for Band 3 in domain specified.</Description>
+		<Type name = "xs:decimal"/>
+	  </Item>
+	 <Item>
+		<Element>Band3Upper</Element>
+		<Characteristics>M</Characteristics>
+		<Description>Upper scaled score value for Band 3 in domain specified.</Description>
+		<Type name = "xs:decimal"/>
+	  </Item>
+	 <Item>
+		<Element>Band4Lower</Element>
+		<Characteristics>M</Characteristics>
+		<Description>Lowest scaled score value for Band 4 in domain specified.</Description>
+		<Type name = "xs:decimal"/>
+	  </Item>
+	 <Item>
+		<Element>Band4Upper</Element>
+		<Characteristics>M</Characteristics>
+		<Description>Upper scaled score value for Band 4 in domain specified.</Description>
+		<Type name = "xs:decimal"/>
+	  </Item>
+	 <Item>
+		<Element>Band5Lower</Element>
+		<Characteristics>M</Characteristics>
+		<Description>Lowest scaled score value for Band 5 in domain specified.</Description>
+		<Type name = "xs:decimal"/>
+	  </Item>
+	 <Item>
+		<Element>Band5Upper</Element>
+		<Characteristics>M</Characteristics>
+		<Description>Upper scaled score value for Band 5 in domain specified.</Description>
+		<Type name = "xs:decimal"/>
+	  </Item>
+	 <Item>
+		<Element>Band6Lower</Element>
+		<Characteristics>M</Characteristics>
+		<Description>Lowest scaled score value for Band 6 in domain specified.</Description>
+		<Type name = "xs:decimal"/>
+	  </Item>
+	 <Item>
+		<Element>Band6Upper</Element>
+		<Characteristics>M</Characteristics>
+		<Description>Upper scaled score value for Band 6 in domain specified.</Description>
+		<Type name = "xs:decimal"/>
+	  </Item>
+	 <Item>
+		<Element>Band7Lower</Element>
+		<Characteristics>M</Characteristics>
+		<Description>Lowest scaled score value for Band 7 in domain specified.</Description>
+		<Type name = "xs:decimal"/>
+	  </Item>
+	 <Item>
+		<Element>Band7Upper</Element>
+		<Characteristics>M</Characteristics>
+		<Description>Upper scaled score value for Band 7 in domain specified.</Description>
+		<Type name = "xs:decimal"/>
+	  </Item>
+	 <Item>
+		<Element>Band8Lower</Element>
+		<Characteristics>M</Characteristics>
+		<Description>Lowest scaled score value for Band 8 in domain specified.</Description>
+		<Type name = "xs:decimal"/>
+	  </Item>
+	 <Item>
+		<Element>Band8Upper</Element>
+		<Characteristics>M</Characteristics>
+		<Description>Upper scaled score value for Band 8 in domain specified.</Description>
+		<Type name = "xs:decimal"/>
+	  </Item>
+	 <Item>
+		<Element>Band9Lower</Element>
+		<Characteristics>M</Characteristics>
+		<Description>Lowest scaled score value for Band 9 in domain specified.</Description>
+		<Type name = "xs:decimal"/>
+	  </Item>
+	 <Item>
+		<Element>Band9Upper</Element>
+		<Characteristics>M</Characteristics>
+		<Description>Upper scaled score value for Band 9 in domain specified.</Description>
+		<Type name = "xs:decimal"/>
+	  </Item>
+	 <Item>
+		<Element>Band10Lower</Element>
+		<Characteristics>M</Characteristics>
+		<Description>Lowest scaled score value for Band 10 in domain specified.</Description>
+		<Type name = "xs:decimal"/>
+	  </Item>
+	 <Item>
+		<Element>Band10Upper</Element>
+		<Characteristics>M</Characteristics>
+		<Description>Upper scaled score value for Band 10 in domain specified.</Description>
+		<Type name = "xs:decimal"/>
+	  </Item>
+ </CommonElement>
+<CommonElement name="DomainProficiencyContainerType" type="true" dm="true">
+	<Item>
+		<Element>DomainProficiencyContainerType</Element>
+		<Characteristics>M</Characteristics>
+		 <Description>
+          <p>Container for the NAP Proficiency Levels</p>
+        </Description>
+  	</Item>
+	 <Item>
+		<Element>Level1Lower</Element>
+		<Characteristics>M</Characteristics>
+		<Description>Lowest scaled score value for Proficiency Level 1 in domain specified (place holder).</Description>
+		<Type name = "xs:decimal"/>
+	  </Item>
+	 <Item>
+		<Element>Level1Upper</Element>
+		<Characteristics>M</Characteristics>
+		<Description>Upper scaled score value for Proficiency Level 1 in domain specified (place holder).</Description>
+		<Type name = "xs:decimal"/>
+	  </Item>
+	  <Item>
+		<Element>Level2Lower</Element>
+		<Characteristics>M</Characteristics>
+		<Description>Lowest scaled score value for Proficiency Level 2 in domain specified (place holder).</Description>
+		<Type name = "xs:decimal"/>
+	  </Item>
+	 <Item>
+		<Element>Level2Upper</Element>
+		<Characteristics>M</Characteristics>
+		<Description>Upper scaled score value for Proficiency Level 2 in domain specified (place holder).</Description>
+		<Type name = "xs:decimal"/>
+	  </Item>
+	 <Item>
+		<Element>Level3Lower</Element>
+		<Characteristics>M</Characteristics>
+		<Description>Lowest scaled score value for Proficiency Level 3 in domain specified (place holder).</Description>
+		<Type name = "xs:decimal"/>
+	  </Item>
+	 <Item>
+		<Element>Level3Upper</Element>
+		<Characteristics>M</Characteristics>
+		<Description>Upper scaled score value for Proficiency Level 3 in domain specified (place holder).</Description>
+		<Type name = "xs:decimal"/>
+	  </Item>
+	 <Item>
+		<Element>Level4Lower</Element>
+		<Characteristics>M</Characteristics>
+		<Description>Lowest scaled score value for Proficiency Level 4 in doman specified (place holder).</Description>
+		<Type name = "xs:decimal"/>
+	  </Item>
+	 <Item>
+		<Element>Level4Upper</Element>
+		<Characteristics>M</Characteristics>
+		<Description>Upper scaled score value for Proficiency Level 4 in domain specified (place holder).</Description>
+		<Type name = "xs:decimal"/>
+	  </Item>
+  </CommonElement>
+  
+<!--Not actually used anywhere -->
+<!--
+	<CommonElement name="BranchingScoresType" type="true" dm="true">
+	<Item>
+		<Element>BranchingScoresType</Element>
+		<Characteristics>M</Characteristics>
+   	</Item>
+	<Item>
+		<Element>Stage1ScoreUp</Element>
+		<Characteristics>M</Characteristics>
+		<Type  name="xs:int"/>
+		<Description>
+		  <p>Testlet Score resulting in more difficult testlet presented at the end of stage 1</p>
+		</Description>
+	  </Item>
+	<Item>
+		<Element>Stage1ScoreDown</Element>
+		<Characteristics>M</Characteristics>
+		<Type  name="xs:int"/>
+		<Description>
+		  <p>Testlet Score resulting in less difficult testlet presented at the end of stage 1</p>
+		</Description>
+	  </Item>
+	<Item>
+		<Element>Stage1SameUpper</Element>
+		<Characteristics>M</Characteristics>
+		<Type  name="xs:int"/>
+		<Description>
+		  <p>Maximum Testlet Score resulting in same difficulty testlet presented at the end of stage 1</p>
+		</Description>
+	 </Item>
+	<Item>
+		<Element>Stage1SameLower</Element>
+		<Characteristics>M</Characteristics>
+		<Type  name="xs:int"/>
+		<Description>
+		  <p>Minimum Testlet Score resulting in same difficulty testlet presented at the end of stage 1</p>
+		</Description>
+	  </Item>
+	<Item>
+		<Element>Stage2ScoreUp</Element>
+		<Characteristics>M</Characteristics>
+		<Type  name="xs:int"/>
+		<Description>
+		  <p>Testlet Score resulting in more difficult testlet presented at the end of stage 2</p>
+		</Description>
+	  </Item>
+	<Item>
+		<Element>Stage2ScoreDown</Element>
+		<Characteristics>M</Characteristics>
+		<Type  name="xs:int"/>
+		<Description>
+		  <p>Testlet Score resulting in less difficult testlet presented at the end of stage 2</p>
+		</Description>
+	  </Item>
+	<Item>
+		<Element>Stage2SameUpper</Element>
+		<Characteristics>M</Characteristics>
+		<Type  name="xs:int"/>
+		<Description>
+		  <p>Maximum Testlet Score resulting in same difficulty testlet presented at the end of stage 2</p>
+		</Description>
+	 </Item>
+	<Item>
+		<Element>Stage2SameLower</Element>
+		<Characteristics>M</Characteristics>
+		<Type  name="xs:int"/>
+		<Description>
+		  <p>Minimum Testlet Score resulting in same difficulty testlet presented at the end of stage 2</p>
+		</Description>
+	  </Item>
+	  </CommonElement>
+-->
+   
+<CommonElement name="NAPTestItemListType" type="true" dm="true">
+	<Item>
+		<Element>NAPTestItemListType</Element>
+		<Characteristics>M</Characteristics>
+		<List mode="List">
+    </List>
+	</Item>
+	 <Item>
+    <Element>TestItem</Element>
+    <Characteristics>MR</Characteristics>
+    <Description>
+      <p></p>
+    </Description>
+	<Type ref="CommonTypes" name="NAPTestItem2Type"/>
+  </Item>
+ </CommonElement>
+<CommonElement name="NAPTestItem2Type" type="true" dm="true">
+	<Item>
+		<Element>NAPTestItem2Type</Element>
+		<Characteristics>MR</Characteristics>
+	    <Description></Description>
+	</Item>
+	 <Item>
+    <Element>TestItemRefId</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The GUID that identifies the test item.</p>
+    </Description>
+	<Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+    <Item>
+		<Element>TestItemLocalId</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Local identifier of the test item.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"/> 
+  </Item>
+   <Item>
+		<Element>SequenceNumber</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Location of test item in testlet, as an ordinal.</p>
+		</Description>
+		<Type name="xs:integer"></Type>
+    </Item>
+ </CommonElement>  
+<CommonElement name="NAPCodeFrameTestletListType" type="true" dm="true">
+	<Item>
+		<Element>NAPCodeFrameTestletListType</Element>
+		<Characteristics>M</Characteristics>
+		<List mode="List">
+    </List>
+	</Item>
+	<Item>
+		<Element>Testlet</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p></p>
+		</Description>
+		<Type ref="CommonTypes" name="NAPTestletCodeFrameType"/>
+	</Item>
+ </CommonElement>    
+<CommonElement name="NAPTestletCodeFrameType" type="true" dm="true">
+	<Item>
+		<Element>NAPTestletCodeFrameType</Element>
+		<Characteristics>MR</Characteristics>
+		<Description></Description>
+	</Item>
+	<Item>
+		<Element>NAPTestletRefId</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+		  <p>GUID of Testlet object.</p>
+		</Description>
+		<Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+   <Item>
+		<Element>TestletContent</Element>
+		<Characteristics>M</Characteristics>
+	    <Type ref="CommonTypes" name="NAPTestletContentType"/>
+   </Item>    
+    <Item>
+		<Element>TestItemList</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p> </p>
+		</Description>
+			<Type ref="CommonTypes" name="CodeFrameTestItemListType"/>
+   </Item>    
+	
+	</CommonElement>
+<CommonElement name="NAPStudentResponseTestletListType" type="true" dm="true">
+	<Item>
+		<Element>NAPStudentResponseTestletListType</Element>
+		<Characteristics>M</Characteristics>
+		<List mode="List">
+    </List>
+	</Item>
+	<Item>
+		<Element>Testlet</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>Scores received by the student for each testlet in the test.</p>
+		</Description>
+		<Type ref="CommonTypes" name="NAPTestletResponseType"/>
+	</Item>
+ </CommonElement>   
+<CommonElement name="NAPTestletResponseType" type="true" dm="true">
+	<Item>
+		<Element>NAPTestletResponseType</Element>
+		<Characteristics>MR</Characteristics>
+	</Item>
+	
+  <Item>
+    <Element>NAPTestletRefId</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The GUID for the testlet that the student is sitting. May be linking to prior codeframe download.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  
+  <Item>
+		<Element>NAPTestletLocalId</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Local identifier of NAP testlet.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"/> 
+  </Item>
+  <Item>
+		<Element>TestletSubScore</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Weighted Total score across all Marked Student Responses for the testlet.</p>
+		</Description>
+		<Type name="xs:decimal"></Type>
+   </Item>
+   
+    <Item>
+		<Element>ItemResponseList</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p></p>
+		</Description>
+		<Type ref="CommonTypes" name="NAPTestletItemResponseListType"/>
+   </Item>
+   
+ </CommonElement>      
+<CommonElement name="NAPTestletItemResponseListType" type="true" dm="true">
+	<Item>
+		<Element>NAPTestletItemResponseListType</Element>
+		<Characteristics>M</Characteristics>
+		<List mode="List">
+    </List>
+	</Item>
+	<Item>
+		<Element>ItemResponse</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p></p>
+		</Description>
+		<Type ref="CommonTypes" name="NAPTestletResponseItemType"/>
+	</Item>
+ </CommonElement>       
+<CommonElement name="NAPTestletResponseItemType" type="true" dm="true">
+	<Item>
+		<Element>NAPTestletResponseItemType</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>Scores received by the student for teach item in the testlet</p>
+		</Description>
+	</Item>
+	 <Item>
+    <Element>NAPTestItemRefId</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The GUID that identifies this NAPLAN test item.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+	<Item>
+       <Element>NAPTestItemLocalId</Element>
+       <Characteristics>M</Characteristics>
+       <Description>
+         <p>Local identifier for the test item.</p>
+       </Description>
+       <Type ref="CommonTypes" name="LocalIdType"></Type>
+     </Item>
+     
+    <Item>
+		<Element>Response</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Student's response to the test item; can include the HTML formatted original response for writing.</p>
+		</Description>
+		<Type name="xs:string"/>
+	</Item>
+	<Item>
+		<Element>ResponseCorrectness</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>After the test has been scored, this value will indicate the correctness of the response. This element will be missing if the response has not yet been scored. For open ended items that are scored using a rubric, this value will also likely be missing. These items do not fall nicely into the right/wrong category.  If the Student Response Set is empty (Sanctioned Abandonment or Refusal), set to NotAttempted.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsNAPResponseCorrectnessType"/>
+	</Item>
+    
+     <Item>
+		<Element>Score</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Score received by student for item.</p>
+		</Description>
+		<Type name="xs:decimal"></Type>
+    </Item>
+     <Item>
+		<Element>LapsedTimeItem</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Time taken for student to complete item.</p>
+		</Description>
+		<Type name="xs:duration"></Type>
+    </Item>
+   
+     <Item>
+		<Element>SequenceNumber</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Location of test item in testlet, as an ordinal.</p>
+		</Description>
+		<Type name="xs:integer"></Type>
+    </Item>
+    
+    <Item>
+		<Element>ItemWeight</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Weighting for item in calculation of raw scores for testlets, tests.</p>
+		</Description>
+		<Type name="xs:decimal"></Type>
+    </Item>
+    
+    <Item>
+		<Element>SubscoreList</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Subscores contributing to the total mark.</p>
+		</Description>
+		<Type ref="CommonTypes" name="NAPSubscoreListType"/> 
+   </Item>
+  
+ </CommonElement>       
+<CommonElement name="NAPSubscoreListType" type="true" dm="true">
+	<Item>
+		<Element>NAPSubscoreListType</Element>
+		<Characteristics>M</Characteristics>
+		<List mode="List">
+    </List>
+	</Item>
+	<Item>
+		<Element>Subscore</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p></p>
+		</Description>
+		<Type ref="CommonTypes" name="NAPSubscoreType"/>
+	</Item>
+ </CommonElement>  
+<CommonElement name="NAPSubscoreType" type="true" dm="true">
+	<Item>
+		<Element>NAPSubscoreType</Element>
+		<Characteristics>MR</Characteristics>
+	</Item>
+	
+	<Item>
+		<Element>SubscoreType</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Subscoring category, under which student receives a mark contributing to the total mark.</p>
+		</Description>
+		 <!--Type ref="CodeSets" name="AUCodeSetsNAPWritingRubricTypeType"/-->
+		 <Type name="xs:normalizedString"></Type>
+   </Item>
+    <Item>
+		<Element>SubscoreValue</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Student's mark received for this particular subscoring category.</p>
+		</Description>
+		<Type name="xs:decimal"></Type>
+   </Item>
+  
+ </CommonElement>         
+<CommonElement name="DomainScoreType" type="true" dm="true">
+	<Item>
+		<Element>DomainScoreType</Element>
+		<Characteristics>O</Characteristics>
+	</Item>
+	
+	<Item>
+		<Element>RawScore</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Raw Total score across all Marked Student Responses for the Domain.</p>
+		</Description>
+		<Type name="xs:decimal"></Type>
+   </Item>
+   <Item>
+		<Element>ScaledScoreValue</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Weighted Likelihood Estimate for Domain, commonly known as scaled score.</p>
+		</Description>
+		<Type name="xs:decimal"></Type>
+   </Item>
+       <Item>
+		<Element>ScaledScoreLogitValue</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Student ability for Domain in logits at 0.5 probability level.</p>
+		</Description>
+		<Type name="xs:decimal"></Type>
+   </Item>
+   
+   <Item>
+		<Element>ScaledScoreStandardError</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Standard Error for Domain Scaled Score for this student.</p>
+		</Description>
+		<Type name="xs:decimal"></Type>
+   </Item>
+   
+    <Item>
+		<Element>ScaledScoreLogitStandardError</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Standard Error for Domain Scaled Score for this student in logits.</p>
+		</Description>
+		<Type name="xs:decimal"></Type>
+   </Item>
+   
+    <Item>
+		<Element>StudentDomainBand</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The integer value of the performance band that the student’s score is in for the NAP test domain.</p>
+		</Description>
+		<Type name="xs:integer"></Type>
+   </Item>
+   
+   <Item>
+		<Element>StudentProficiency</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The Skill Progression Level that the student’s score is in for the NAP test domain.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	
+    <Item>
+		<Element>PlausibleScaledValueList</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p></p>
+		</Description>
+		<Type ref="CommonTypes" name="PlausibleScaledValueListType"/>
+	</Item>
+	
+ </CommonElement>      
+<CommonElement name="NAPWritingRubricListType" type="true" dm="true">
+	<Item>
+		<Element>NAPWritingRubricListType</Element>
+		<Characteristics>O</Characteristics>
+		<List mode="List">
+    </List>
+	</Item>
+	<Item>
+		<Element>NAPWritingRubric</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p></p>
+		</Description>
+		<Type ref="CommonTypes" name="NAPWritingRubricType"/>
+	</Item>
+ </CommonElement>  
+<CommonElement name="NAPWritingRubricType" type="true" dm="true">
+	<Item>
+		<Element>NAPWritingRubricType</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p></p>
+		</Description>
+	</Item>
+
+	<Item>
+		<Element>RubricType</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Category that rubric is scoring for.</p>
+		</Description>
+        <!--Type ref="CodeSets" name="AUCodeSetsNAPWritingRubricTypeType"/-->
+         <Type name="xs:normalizedString"></Type>
+	</Item>
+   
+   	<Item>
+		<Element>ScoreList</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Category that rubric is scoring for.</p>
+		</Description>
+	    <Type ref="CommonTypes" name="ScoreListType"/>
+	</Item>
+	
+ 	<Item>
+		<Element>Descriptor</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Descriptor of Score Point of Writing Rubric.</p>
+		</Description>
+	  <Type name="xs:normalizedString"></Type>
+	</Item>
+
+  </CommonElement>    
+<CommonElement name="ScoreListType" type="true" dm="true">
+	<Item>
+		<Element>ScoreListType</Element>
+		<Characteristics>O</Characteristics>
+		<List mode="List">
+    </List>
+	</Item>
+	<Item>
+		<Element>Score</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p></p>
+		</Description>
+		<Type ref="CommonTypes" name="ScoreType"/>
+	</Item>
+ </CommonElement>  
+<CommonElement name="ScoreType" type="true" dm="true">
+	<Item>
+		<Element>ScoreType</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>.</p>
+		</Description>
+	</Item>
+	   <Item>
+		<Element>MaxScoreValue</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Total maximum score value that a student can achieve under the current rubric.</p>
+		</Description>
+		<Type name="xs:decimal"></Type>
+   </Item>
+	<Item>
+		<Element>ScoreDescriptionList</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p></p>
+		</Description>
+	    <Type ref="CommonTypes" name="ScoreDescriptionListType"/>
+	</Item>
+   </CommonElement>      
+<CommonElement name="ScoreDescriptionListType" type="true" dm="true">
+	<Item>
+		<Element>ScoreDescriptionListType</Element>
+		<Characteristics>O</Characteristics>
+		<List mode="List">
+    </List>
+	</Item>
+	<Item>
+		<Element>ScoreDescription</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p></p>
+		</Description>
+		 <Type ref="CommonTypes" name="ScoreDescriptionType"/>
+	</Item>
+ </CommonElement>     
+<CommonElement name="ScoreDescriptionType" type="true" dm="true">
+	<Item>
+		<Element>ScoreDescriptionType</Element>
+		<Characteristics>MR</Characteristics>
+	</Item>
+	
+	   <Item>
+		<Element>ScoreValue</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Score point: Individual maximum score value that a student can achieve under the current rubric.</p>
+		</Description>
+		<Type name="xs:decimal"></Type>
+   </Item>
+   <Item>
+		<Element>Descriptor</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Descriptor of Writing Rubric</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+ </CommonElement>         
+<CommonElement name="StimulusListType" type="true" dm="true">
+	<Item>
+		<Element>StimulusListType</Element>
+		<Characteristics>O</Characteristics>
+		<List mode="List">
+    </List>
+	</Item>
+	<Item>
+		<Element>Stimulus</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p></p>
+		</Description>
+		<Type ref="CommonTypes" name="StimulusType"/>
+	</Item>
+ </CommonElement> 
+<CommonElement name="StimulusType" type="true" dm="true">
+	<Item>
+		<Element>StimulusType</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>Description of a trigger  for a response in a NAP test.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>StimulusLocalId</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Item Identifier for Stimulus.</p>
+		</Description>
+	    <Type ref="CommonTypes" name="LocalIdType"/>
+	</Item>
+	<Item>
+		<Element>TextGenre</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Genre for Reading Stimulus Text.</p>
+		</Description>
+		 <Type name="xs:normalizedString"/>
+	    <!--Type ref="CommonTypes" name="NAPTextGenreType"/-->
+	</Item>
+	<Item>
+		<Element>TextType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Genre for Reading Stimulus Text.</p>
+		</Description>
+		 <Type name="xs:normalizedString"/>
+	    <!--Type ref="CommonTypes" name="NAPTextTypeType"/-->
+	</Item>
+	<Item>
+		<Element>WordCount</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Word count for Reading Stimulus Text.</p>
+		</Description>
+		 <Type name="xs:integer"/>
+	</Item>
+	<Item>
+		<Element>TextDescriptor</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p></p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>Content</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Link to Stimulus.</p>
+		</Description>
+	  	<Type name="xs:anyURI"/>
+    </Item>
+  </CommonElement>         
+<CommonElement name="ContentDescriptionListType" type="true" dm="true">
+	<Item>
+		<Element>ContentDescriptionListType</Element>
+		<Characteristics>M</Characteristics>
+		<List mode="List">
+    </List>
+	</Item>
+	<Item>
+		<Element>ContentDescription</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>Content description in the Australian Curriculum that is relevant to the test item.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+ </CommonElement>      
+<CommonElement name="PNPCodeListType" type="true" dm="true">
+	<Item>
+		<Element>PNPCodeListType</Element>
+		<Characteristics>O</Characteristics>
+		<List mode="List">
+    </List>
+	</Item>
+	<Item>
+		<Element>PNPCode</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>Personal Needs and Preferences Code(s) applied to the domain.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsPNPCodeType"/>
+	</Item>
+ </CommonElement>
+<CommonElement name="AdjustmentContainerType" type="true" dm="true">
+	<Item>
+		<Element>AdjustmentContainerType</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p></p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>PNPCodeList</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Personal Needs and Preferences Code(s) applied.</p>
+		</Description>
+	    <Type ref="CommonTypes" name="PNPCodeListType"/>
+	</Item>
+	<Item>
+		<Element>BookletType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Booklet Type to be used for the NAP test as an adjustment. Values: Braille.</p>
+		</Description>
+	  <Values>
+	    <Value>
+		  <Code>Braille</Code>
+	 	</Value>
+	  </Values>
+	</Item>
+  </CommonElement>    
+<CommonElement name="TestDisruptionListType" type="true" dm="true">
+	<Item>
+		<Element>TestDisruptionListType</Element>
+		<Characteristics>O</Characteristics>
+		<List mode="List">
+    </List>
+	</Item>
+	<Item>
+		<Element>TestDisruption</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>An event disrupting a test session</p>
+		</Description>
+		<Type ref="CommonTypes" name="TestDisruptionType"/>
+	</Item>
+ </CommonElement>
+<CommonElement name="TestDisruptionType" type="true" dm="true">
+	<Item>
+		<Element>TestDisruptionType</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>This is an alert message that is associated with the student.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>Event</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>A description of a special event which disrupted the test session.</p>
+		</Description>
+	    <Type name="xs:normalizedString"/>
+	</Item>
+ </CommonElement>
+<CommonElement name="NAPLANClassListType" type="true" dm="true">
+	<Item>
+		<Element>NAPLANClassListType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>
+        Container for a list of classes a teacher may be responsible for with regard to NAPLAN only.</p>
+		</Description>
+		<List mode="List">
+		</List>
+	</Item>
+	<Item>
+		<Element>ClassCode</Element>
+		<Characteristics>OR</Characteristics>
+		<Description>
+			<p>The name of the class code the staff member administers, for the purposes of NAPLAN registration.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+</CommonElement>
+</IncludeGroup>

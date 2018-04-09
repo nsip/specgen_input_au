@@ -1,0 +1,258 @@
+<IncludeGroup
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	
+ 	xmlns="http://sifassociation.org/SpecGen">
+	  
+  <CodeSet>
+      <Intro>
+        <p></p>
+      </Intro>
+      <ID>NAP Response Correctness</ID>
+      <Values>
+		  <Value><Code>Correct</Code><Text>Correct</Text></Value>
+		  <Value><Code>Incorrect</Code><Text>Incorrect</Text></Value>
+		  <Value><Code>NotInPath</Code><Text>NotInPath</Text></Value>
+		  <Value><Code>NotAttempted</Code><Text>NotAttempted</Text></Value>
+      </Values>
+    </CodeSet>    <!-- NAP Response Correctness -->
+  <CodeSet>
+      <Intro>
+        <p></p>
+      </Intro>
+      <ID>NAP Jurisdiction</ID>
+      <Values>
+		  <Value><Code>1</Code><Text>New South Wales</Text></Value>
+		  <Value><Code>2</Code><Text>Victoria</Text></Value>
+		  <Value><Code>3</Code><Text>Queensland</Text></Value>
+		  <Value><Code>4</Code><Text>South Australia</Text></Value>
+ 		  <Value><Code>5</Code><Text>Western Australia</Text></Value>
+		  <Value><Code>6</Code><Text>Tasmania</Text></Value>
+   		  <Value><Code>7</Code><Text>Western Australia</Text></Value>
+		  <Value><Code>8</Code><Text>Australian Capital Territory</Text></Value>
+		  <Value><Code>9</Code><Text>Other Territories</Text></Value>
+      </Values>
+  </CodeSet>    <!-- NAP Jurisdiction -->
+
+<!-- Unused: NAP Writing Rubric -->
+<!--
+<CodeSet>
+      <Intro>
+        <p></p>
+      </Intro>
+      <ID>NAP Writing Rubric Type</ID>
+      <Values>
+		  <Value>
+			  <Code>Text Structure</Code>
+			  <Text>Text Structure</Text>
+		  </Value>
+		  <Value>
+			  <Code>Ideas</Code>
+			  <Text>Ideas</Text>
+		  </Value>
+		  <Value>
+			  <Code>Persuasive Devices</Code>
+			  <Text>Persuasive Devices</Text>
+		  </Value>
+		  <Value>
+			  <Code>Character and Setting</Code>
+			  <Text>Character and Setting</Text>
+		  </Value>
+		  <Value>
+			  <Code>Vocabulary</Code>
+			  <Text>Vocabulary</Text>
+		  </Value>
+		  <Value>
+			  <Code>Cohesion</Code>
+			  <Text>Cohesion</Text>
+		  </Value>
+		   <Value>
+			  <Code>Paragraphing</Code>
+			  <Text>Paragraphing</Text>
+		  </Value>
+		   <Value>
+			  <Code>Sentence Structure</Code>
+			  <Text>Sentence Structure</Text>
+		  </Value>
+		   <Value>
+			  <Code>Punctuation</Code>
+			  <Text> Punctuation</Text>
+		  </Value>
+		   <Value>
+			  <Code>Spelling</Code>
+			  <Text>Spelling</Text>
+		  </Value>
+      </Values>
+	  </CodeSet>
+-->
+    
+  <CodeSet>
+      <Intro>
+        <p></p>
+      </Intro>
+      <ID>NAP Writing Genre</ID>
+      <Values>
+		  <Value>
+			  <Code>Persuasive</Code>
+			  <Text>Persuasive</Text>
+		  </Value>
+		  <Value>
+			  <Code>Narrative</Code>
+			  <Text>Narrative</Text>
+		  </Value>
+      </Values>
+   </CodeSet>    <!-- NAP Writing Genre -->  
+  <CodeSet>
+      <Intro>
+        <p></p>
+      </Intro>
+      <ID>NAP Test Item Marking Type</ID>
+      <Values>
+		  <Value>
+			  <Code>AS</Code>
+			  <Text>Auto Scoring</Text>
+		  </Value>
+		  <Value>
+			  <Code>MM</Code>
+			  <Text>Manual Marking</Text>
+		  </Value>
+		  <Value>
+			  <Code>AES</Code>
+			  <Text>Auto Essay Scoring</Text>
+		  </Value>
+      </Values>
+   </CodeSet>    <!-- NAP Test Item Marking Type -->
+  <CodeSet>
+      <Intro>
+        <p></p>
+      </Intro>
+      <ID>NAP Test Item Type</ID>
+      
+     <Values><Value><Code>ET</Code><Text>Extended text</Text></Value>
+		<Value><Code>CO</Code><Text>Composite</Text></Value>
+		<Value><Code>HS</Code><Text>Hot spot</Text></Value>
+		<Value><Code>HT</Code><Text>Hot text</Text></Value>
+		<Value><Code>IA</Code><Text>Interactive associate</Text></Value>
+		<Value><Code>IC</Code><Text>Inline choice</Text></Value>
+		<Value><Code>IGA</Code><Text>Interactive graphic associate</Text></Value>
+		<Value><Code>IGGM</Code><Text>Interactive graphic gap match</Text></Value>
+		<Value><Code>IGM</Code><Text>Interactive gap match</Text></Value>
+		<Value><Code>IGO</Code><Text>Interactive graphic order</Text></Value>
+		<Value><Code>IM</Code><Text>Interactive match</Text></Value>
+		<Value><Code>IO</Code><Text>Order interaction</Text></Value>
+		<Value><Code>MC</Code><Text>Multiple choice</Text></Value>
+		<Value><Code>MCS</Code><Text>Multiple choices</Text></Value>
+		<Value><Code>PO</Code><Text>Position object</Text></Value>
+		<Value><Code>SL</Code><Text>Slider</Text></Value>
+		<Value><Code>SP</Code><Text>Select point</Text></Value>
+		<Value><Code>TE</Code><Text>Text entry</Text></Value>
+		<Value><Code>Unknown</Code><Text>Unknown</Text></Value>
+	</Values></CodeSet>    <!-- NAP Test Item Type -->
+  <CodeSet>
+      <Intro>
+        <p></p>
+      </Intro>
+      <ID>NAP Test Type</ID>
+      <Values>
+		  <Value>
+		      <Code>Normal</Code>
+		      <Text>Normal</Text>
+		  </Value>
+		  <Value>
+		      <Code>Equating</Code>
+		      <Text>Equating</Text>
+		  </Value>
+      </Values>
+    </CodeSet>    <!-- NAP Test Type -->
+  <CodeSet>
+      <Intro>
+        <p></p>
+      </Intro>
+      <ID>NAP Test Domain</ID>
+      <Values>
+		  <Value>
+		      <Code>Reading</Code>
+		      <Text>Reading</Text>
+		  </Value>
+		  <Value>
+		      <Code>Writing</Code>
+		      <Text>Writing</Text>
+		  </Value>
+		  <Value>
+		      <Code>Numeracy</Code>
+		      <Text>Numeracy</Text>
+		  </Value>
+		  <Value>
+		      <Code>Spelling</Code>
+		      <Text>Spelling</Text>
+		  </Value>
+		  <Value>
+		      <Code>Grammar and Punctuation</Code>
+		      <Text>Grammar and Punctuation</Text>
+		  </Value>
+      </Values>
+    </CodeSet>    <!-- NAP Test Domain -->
+  <CodeSet>
+      <Intro>
+        <p>This codeset has been compiled for the Personal Needs and Preferences for students sitting NAPLAN.  Source: ACARA</p>
+      </Intro>
+      <ID>PNP Code</ID>
+      <Values><Value><Code>AIA</Code><Text>Alternative items - audio</Text></Value>
+		<Value><Code>AIM</Code><Text>Alternative items - motor assistive</Text></Value>
+		<Value><Code>AIV</Code><Text>Alternative items - visual</Text></Value>
+		<Value><Code>AST</Code><Text>Assistive technology</Text></Value>
+		<Value><Code>AAM</Code><Text>Alternative Items: both audio and motor assistive</Text></Value>
+		<Value><Code>AVM</Code><Text>Alternative Items: both video and motor assistive</Text></Value>
+		<Value><Code>ALL</Code><Text>Alternative Items: audio, visual and motor assistive</Text></Value>
+		<Value><Code>COL</Code><Text>Colour contrast modification</Text></Value>
+		<Value><Code>OFF</Code><Text>Braille, large print, black and white, electronic test format</Text></Value>
+		<Value><Code>ETA</Code><Text>Extra Time - 5 mins per 30 min or part thereof</Text></Value>
+		<Value><Code>ETB</Code><Text>Extra Time - 10 mins per 30 min or part thereof</Text></Value>
+		<Value><Code>ETC</Code><Text>Extra Time - 15 mins per 30 min or part thereof</Text></Value>
+		<Value><Code>OSS</Code><Text>Oral sign/support</Text></Value>
+		<Value><Code>RBK</Code><Text>Rest break</Text></Value>
+		<Value><Code>SCR</Code><Text>Scribe</Text></Value>
+		<Value><Code>SUP</Code><Text>NAPLAN Support person</Text></Value>
+		<Value><Code>ETD</Code><Text>Extra Time – double total test time</Text></Value>		
+		</Values>
+   </CodeSet>    <!-- PNP Code -->
+  <CodeSet>
+      <Intro>
+        <p>This codeset has been introduced to enumerate the status of a student participating in a NAPLAN event.  Derived from valid values in the AD Assessment Delivery Platform.</p>
+      </Intro>
+      <ID>NAP Participation Code</ID>
+      <Values>
+		  <Value>
+		    <Code>P</Code>
+		    <Text>Present</Text>
+		  </Value>
+		 <Value>
+		    <Code>A</Code>
+		    <Text>Absent</Text>
+		</Value>
+		 <Value>
+		    <Code>C</Code>
+		    <Text>Cancelled</Text>
+		</Value>
+		<Value>
+		  <Code>E</Code>
+		  <Text>Exempt</Text>
+		</Value>
+	    <Value>
+		  <Code>W</Code>
+		  <Text>Withdrawn</Text>
+    	</Value>
+		<Value>
+		  <Code>S</Code>
+		  <Text>Sanctioned Abandonment</Text>
+		</Value>
+		<Value>
+		  <Code>R</Code>
+		  <Text>Refused</Text>
+		</Value>
+		<Value>
+		  <Code>X</Code>
+		  <Text>No Longer Enrolled</Text>
+		</Value>
+      </Values>
+   </CodeSet>    <!-- NAP Participation Code -->
+</IncludeGroup>

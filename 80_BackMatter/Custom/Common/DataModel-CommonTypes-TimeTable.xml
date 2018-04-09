@@ -1,0 +1,707 @@
+﻿<IncludeGroup
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	
+	xmlns="http://sifassociation.org/SpecGen">
+
+	<!-- IncludeGroup is syntactic sugar that makes this a well-formed XML file that can
+		 be validated separately; and allows the xi:include to have parse="xml"  SpecGen tool ignores it. -->
+
+
+	<!-- Element types for the TimeTable, Activity & Scheduled Activity domains -->
+
+
+	<!--  TimeTable domain -->
+<CommonElement name="TimeTableDayListType" type="true" dm="true">
+	<Item>
+		<Element>TimeTableDayListType</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Container for TimeTableDays in Schedule</p>
+		</Description>
+		<List mode="List"/>
+	</Item>
+	<Item>
+		<Element>TimeTableDay</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>This element identifies a ‘day’ in a TimeTable.</p>
+		</Description>
+		<Type ref="CommonTypes" name="TimeTableDayType"/>
+	</Item>
+</CommonElement>
+<CommonElement name="TimeTableDayType" type="true" dm="true">
+	<Item>
+		<Element>TimeTableDayType</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>This element identifies a ‘day’ in a TimeTable.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>DayId</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Local Time Table Identifier</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"/>
+	</Item>
+	<Item>
+		<Element>DayTitle</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p/>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>TimeTablePeriodList</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p></p>
+		</Description>
+		<Type ref="CommonTypes" name="TimeTablePeriodListType"/>
+	</Item>
+</CommonElement>
+<CommonElement name="TimeTablePeriodListType" type="true" dm="true">
+	<Item>
+		<Element>TimeTablePeriodListType</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p></p>
+		</Description>
+		<List mode="List"/>
+	</Item>
+	<Item>
+		<Element>TimeTablePeriod</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>Container for TimeTablePeriods in a Time Table Day</p>
+		</Description>
+		<Type ref="CommonTypes" name="TimeTablePeriodType"/>
+	</Item>
+</CommonElement>
+<CommonElement name="TimeTablePeriodType" type="true" dm="true">
+	<Item>
+		<Element>TimeTablePeriodType</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>Container for TimeTablePeriods in a Time Table Day</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>PeriodId</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Period in Day Identifier</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"/>
+	</Item>
+	<Item>
+		<Element>PeriodTitle</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Title of Period eg. Session 1 or Period 1</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>BellPeriod</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Indicates if this Period will require a 'bell', if 'yes' the following elements can be provided in the TimeTable Object.</p>
+		</Description>
+		<Values>
+			<Value>
+				<Code>Yes</Code>
+			</Value>
+			<Value>
+				<Code>No</Code>
+			</Value>
+		</Values>
+	</Item>
+	<Item>
+		<Element>StartTime</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The starting time for the bell period.</p>
+		</Description>
+		<Type name="xs:time"/>
+	</Item>
+	<Item>
+		<Element>EndTime</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The ending time for the bell period.</p>
+		</Description>
+		<Type name="xs:time"/>
+	</Item>
+	<Item>
+		<Element>RegularSchoolPeriod</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Indicates if the bell period is part of the regular school day (i.e. is not a before or after school or break period).</p>
+		</Description>
+		<Values>
+			<Value>
+				<Code>Yes</Code>
+			</Value>
+			<Value>
+				<Code>No</Code>
+			</Value>
+		</Values>
+	</Item>
+	<Item>
+		<Element>InstructionalMinutes</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The number of minutes to be counted for instruction for the bell period.</p>
+		</Description>
+		<Type name="xs:unsignedInt"/>
+	</Item>
+	<Item>
+		<Element>UseInAttendanceCalculations</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Indicates if the bell period should be included in attendance calculations.</p>
+		</Description>
+		<Values>
+			<Value>
+				<Code>Yes</Code>
+			</Value>
+			<Value>
+				<Code>No</Code>
+			</Value>
+		</Values>
+	</Item>
+</CommonElement>
+
+<CommonElement name="ActivityTimeType" type="true" dm="true">
+ 	<Item>
+		<Element>ActivityTimeType</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Time structures for the activity.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>CreationDate</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Creation date of the activity.</p>
+		</Description>
+		<Type name="xs:date"/>
+	</Item>
+	<Item>
+		<Element>Duration</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Time required to complete the activity.</p>
+		</Description>
+		<Type name="xs:unsignedInt"/>
+	</Item>
+		<Item>
+		<Attribute>Units</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Unit of time of the Duration value.&#160;</p>
+		</Description>
+		<Values>
+			<Value>
+				<Code>week</Code>
+			</Value>
+			<Value>
+				<Code>day</Code>
+			</Value>
+			<Value>
+				<Code>hour</Code>
+			</Value>
+			<Value>
+				<Code>minute</Code>
+			</Value>
+			<Value>
+				<Code>second</Code>
+			</Value>
+		</Values>
+	</Item>
+	
+	<Item>
+		<Element>StartDate</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Date activity is started.</p>
+		</Description>
+		<Type name="xs:date"/>
+	</Item>
+	<Item>
+	
+		<Element>FinishDate</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Date activity is finished.</p>
+		</Description>
+		<Type name="xs:date"/>
+	</Item>
+	
+	<Item>
+		<Element>DueDate</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Date activity is due.</p>
+		</Description>
+		<Type name="xs:date"/>
+	</Item>
+ </CommonElement>
+
+
+  <CommonElement name="YearRangeType" type="true" dm="true">
+   <Item>
+    <Element>YearRangeType</Element>
+
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>Year Span.</p>
+    </Description>
+  </Item>
+
+  <Item>
+    <Element>Start</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Lowest year in range.</p>
+    </Description>
+    <Type ref="CommonTypes" name="YearLevelType"></Type>
+  </Item>
+
+  <Item>
+    <Element>End</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Highest year in range</p>
+    </Description>
+    <Type ref="CommonTypes" name="YearLevelType"></Type>
+  </Item>
+
+ </CommonElement>
+
+
+ <!-- Activity - that is part of the TimeTable  -->
+ 
+<CommonElement name="ScheduledTeacherListType" type="true" dm="true">
+	<Item>
+		<Element>ScheduledTeacherListType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>A listing of the teachers assigned to the activity, and the type of supervision they are credited with. If no teachers are listed, the activity is assumed to be unsupervised.</p>
+		</Description>
+		<List mode="List"/>
+	</Item>
+	<Item>
+		<Element>TeacherCover</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>Substructure to allow representing instances where teachers only take subsets of an event. Most typically, this occurs with exam supervision, where each teacher gets a 1-period duty. It also happens with schools with e.g. 4 long periods per day: a period of 1hr20mins can be split into 2 halves of 40 minutes each.</p>
+		</Description>
+		<Type ref="CommonTypes" name="TeacherCoverType"/>
+	</Item>
+</CommonElement>
+<CommonElement name="TeacherCoverType" type="true" dm="true">
+	<Item>
+		<Element>TeacherCoverType</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>Substructure to allow representing instances where teachers only take subsets of an event. Most typically, this occurs with exam supervision, where each teacher gets a 1-period duty. It also happens with schools with e.g. 4 long periods per day: a period of 1hr20mins can be split into 2 halves of 40 minutes each.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>StaffPersonalRefId</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The Id (GUID) of the StaffPersonal record for the teacher supervising the event or event subset.</p>
+		</Description>
+		<Type ref="CommonTypes" relationship="" count="?:1" name="IdRefType"/>
+	</Item>
+	<Item>
+		<Element>StaffLocalId</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>LocalId of the StaffPersonal record for the teacher supervising the event or event subset.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"/>
+	</Item>
+	<Item>
+		<Element>StartTime</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Start time for the subset of the event which the teacher supervises. If not present then we assume this teacher will be on the event for the full duration.</p>
+		</Description>
+		<Type name="xs:time"/>
+	</Item>
+	<Item>
+		<Element>FinishTime</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Finish time for the subset of the event which the teacher supervises. If not present then we assume this teacher will be on the event for the full duration. Either both or neither StartTime and FinishTime should be provided.</p>
+		</Description>
+		<Type name="xs:time"/>
+	</Item>
+	<Item>
+		<Element>Credit</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>How the activity is credited, from the perspective of the teacher(s) supervising the event. If a teacher is substituting for the normal teacher supervising, the credit indicates how the substituting teacher is credited.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsTeacherCoverCreditType"/>
+	</Item>
+	<Item>
+		<Element>Supervision</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>How intensively the teacher supervises the activity.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsTeacherCoverSupervisionType"/>
+	</Item>
+	<Item>
+		<Element>Weighting</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Weighting of credit assigned to teacher for activity. Assumes default of 1.0 assigned for classroom duty.</p>
+		</Description>
+		<Type name="xs:decimal"/>
+	</Item>
+</CommonElement>
+<CommonElement name="RoomListType" type="true" dm="true">
+	<Item>
+		<Element>RoomListType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>List of rooms in which the scheduled activity is held. Used for onsite venues which are represented in the source system as rooms. Can include large venues (ovals, library, etc), if they have been represented as rooms; source system practice varies.</p>
+		</Description>
+		<List mode="List"/>
+	</Item>
+	<Item>
+		<Element>RoomInfoRefId</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>The Id (GUID) of the Room in which the scheduled activity is held.</p>
+		</Description>
+		<Type ref="CommonTypes" relationship="" count="?:1" name="IdRefType"/>
+	</Item>
+</CommonElement>
+<CommonElement name="LearningObjectivesType" type="true" dm="true">
+	<Item>
+		<Element>LearningObjectivesType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Educational objectives of the activity.</p>
+		</Description>
+		<List mode="List"/>
+	</Item>
+	<Item>
+		<Element>LearningObjective</Element>
+		<Characteristics>OR</Characteristics>
+		<Description>
+			<p>Description of an educational objective of the activity.</p>
+		</Description>
+		<Type name="xs:string"/>
+	</Item>
+</CommonElement>
+<CommonElement name="SourceObjectsType" type="true" dm="true">
+	<Item>
+		<Element>SourceObjectsType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Source objects assigned to students.</p>
+		</Description>
+		<List mode="List"/>
+	</Item>
+	<Item>
+		<Element>SourceObject</Element>
+		<Characteristics>OR</Characteristics>
+		<Description>
+			<p>GUID assigned to the source object.</p>
+		</Description>
+		<Type ref="CommonTypes" name="IdRefType"/>
+	</Item>
+	<Item>
+		<Attribute>SIF_RefObject</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The type of learning object the source object is.</p>
+		</Description>
+		<Values>
+			<Value>
+				<Code>Assessment</Code>
+			</Value>
+			<Value>
+				<Code>LearningResource</Code>
+			</Value>
+			<Value>
+				<Code>Activity</Code>
+			</Value>
+			<Value>
+				<Code>Lesson</Code>
+			</Value>
+		</Values>
+	</Item>
+</CommonElement>
+<CommonElement name="StudentsType" type="true" dm="true">
+	<Item>
+		<Element>StudentsType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>GUID from the StudentPersonal  Object that identifies the student.</p>
+		</Description>
+		<List mode="List"/>
+	</Item>
+	<Item>
+		<Element>StudentPersonalRefId</Element>
+		<Characteristics>OR</Characteristics>
+		<Description>
+			<p>Link to a student.</p>
+		</Description>
+		<Type ref="CommonTypes" name="IdRefType"/>
+	</Item>
+</CommonElement>
+<CommonElement name="PrerequisitesType" type="true" dm="true">
+	<Item>
+		<Element>PrerequisitesType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Skills or competencies the student must have to engage in activity.</p>
+		</Description>
+		<List mode="List"/>
+	</Item>
+	<Item>
+		<Element>Prerequisite</Element>
+		<Characteristics>OR</Characteristics>
+		<Description>
+			<p>Skill or competency the student must have to engage in activity.</p>
+		</Description>
+		<Type name="xs:string"/>
+	</Item>
+</CommonElement>
+<CommonElement name="EssentialMaterialsType" type="true" dm="true">
+	<Item>
+		<Element>EssentialMaterialsType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Essential materials required to engage in this activity.</p>
+		</Description>
+		<List mode="List"/>
+	</Item>
+	<Item>
+		<Element>EssentialMaterial</Element>
+		<Characteristics>OR</Characteristics>
+		<Description>
+			<p>Essential material required to engage in this activity.</p>
+		</Description>
+		<Type name="xs:string"/>
+	</Item>
+</CommonElement>
+<CommonElement name="TechnicalRequirementsType" type="true" dm="true">
+	<Item>
+		<Element>TechnicalRequirementsType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>List of Operating system, network, and other technical requirements for the activity, if applicable.</p>
+		</Description>
+		<List mode="List"/>
+	</Item>
+	<Item>
+		<Element>TechnicalRequirement</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>an operating system, network, or other technical requirement.</p>
+		</Description>
+		<Type name="xs:string"/>
+	</Item>
+</CommonElement>
+<CommonElement name="SoftwareRequirementListType" type="true" dm="true">
+	<Item>
+		<Element>SoftwareRequirementListType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Contains information about required software.</p>
+		</Description>
+		<List mode="List"/>
+	</Item>
+	<Item>
+		<Element>SoftwareRequirement</Element>
+		<Characteristics>OR</Characteristics>
+		<Description>
+			<p>Contains information about a specific required piece of software.</p>
+		</Description>
+		<Type ref="CommonTypes" name="SoftwareRequirementType"/>
+	</Item>
+</CommonElement>
+<CommonElement name="SoftwareRequirementType" type="true" dm="true">
+	<Item>
+		<Element>SoftwareRequirementType</Element>
+		<Characteristics>OR</Characteristics>
+		<Description>
+			<p>Contains information about a specific required piece of software.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>SoftwareTitle</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>This is the title of the specific software.  This does not include the vendor.  For example, Flash not Adobe.</p>
+		</Description>
+		<Type name="xs:string"/>
+	</Item>
+	<Item>
+		<Element>Version</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>This includes the version of the specific software.</p>
+		</Description>
+		<Type name="xs:string"/>
+	</Item>
+	<Item>
+		<Element>Vendor</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>This is the vendor of the specific software.  For example, Adobe.</p>
+		</Description>
+		<Type name="xs:string"/>
+	</Item>
+	<Item>
+		<Element>OS</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>This is the operating system and version.  For example, Macintosh OS X 1.4.</p>
+		</Description>
+		<Type name="xs:string"/>
+	</Item>
+</CommonElement>
+<CommonElement name="LearningResourcesType" type="true" dm="true">
+	<Item>
+		<Element>LearningResourcesType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Container for related resources.</p>
+		</Description>
+		<List mode="List"/>
+	</Item>
+	<Item>
+		<Element>LearningResourceRefId</Element>
+		<Characteristics>OR</Characteristics>
+		<Description>
+			<p>A relationship between the item and an attached resource (e.g. learning resource, work sample).</p>
+		</Description>
+		<Type ref="CommonTypes" name="IdRefType"/>
+	</Item>
+	<!--Item (Learning Resource Type in Activity>
+   <Attribute>ResourceType</Attribute>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Type of Resource.</p>
+       </Description>
+      <Values>
+        <Value>
+			<Code>LearningResource</Code>
+        </Value>
+        <Value>
+			<Code>WorkSample</Code>
+		</Value>
+        <Value>
+			<Code>AnnotatedWorkSample </Code>
+		</Value>
+        <Value>
+			<Code>Other</Code>
+		</Value>
+       </Values>
+   </Item-->
+</CommonElement>
+
+
+<!--   Scheduled Activity ie: not included in TimeTable -->
+<CommonElement name="ScheduledActivityOverrideType" type="true" dm="true">
+  <Item>
+    <Element>ScheduledActivityOverrideType</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>This flag should be used to indicate whether or not this ScheduledActivity overrides a previous ScheduledActivity. In any initial provisioning this element should NOT be provided.</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
+  </Item>
+     
+   <Item>
+    <Attribute>DateOfOverride</Attribute>
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>The date needs to be provided if Override=Yes.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item> 
+  </CommonElement>
+<CommonElement name="TeachingGroupListType" type="true" dm="true">
+	<Item>
+		<Element>TeachingGroupListType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Teaching groups which are scheduled to attend the event. Not required for cyclical events, as this would be expected to be provided from TimeTableCell/TeachingGroup instead.</p>
+		</Description>
+		<List mode="List"/>
+	</Item>
+	<Item>
+		<Element>TeachingGroupRefId</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>GUID from the TeachingGroup Object that identifies this TeachingGroup.</p>
+		</Description>
+		<Type ref="CommonTypes" relationship="" count="?:1" name="IdRefType"/>
+	</Item>
+</CommonElement>
+
+<!--  Student Activity -->
+<CommonElement name="StudentActivityType" type="true" dm="true">
+   <Item>
+    <Element>StudentActivityType</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Information regarding the co-curricular or extra-curricular activity. </p>
+    </Description>
+  </Item>
+
+  <Item>
+    <Element>Code</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Code identifying the co-curricular or extra-curricular activity. </p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsActivityInvolvementCodeType"></Type>
+  </Item>
+
+  <Item>
+    <Element>OtherCodeList</Element>
+    <Characteristics>O</Characteristics>
+    <Description></Description>
+    <Type ref="CommonTypes" name="OtherCodeListType"></Type>
+  </Item>
+</CommonElement> 
+<CommonElement name="RecognitionListType" type="true" dm="true">
+	<Item>
+		<Element>RecognitionListType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>List of awards and other types of recognition given to the student for this activity. </p>
+		</Description>
+		<List mode="List"/>
+	</Item>
+	<Item>
+		<Element>Recognition</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>The nature of recognition given to the student for the successful completion of work in a co-curricular or extra-curricular activity.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+</CommonElement>
+
+</IncludeGroup>

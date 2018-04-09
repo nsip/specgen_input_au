@@ -1,8 +1,5 @@
 # Created by Stuart McGrigor, New Zealand Ministry of Education, October 2017
-#
-#  compact Relax NG schema for SIF Specifications
-#  hand-crafted by Stuart to validate existing SIF Specification files
-#
+
 default namespace = "http://sifassociation.org/SpecGen"
 
 datatypes xs = "http://www.w3.org/2001/XMLSchema-datatypes"
@@ -15,16 +12,32 @@ namespace xs = "http://www.w3.org/2001/XMLSchema"
 namespace xsi = "http://www.w3.org/2001/XMLSchema-instance"
 namespace xi = "http://www.w3.org/2001/XInclude"
 
+
 #
-##  xi:include elements
+## embedded XML Schema definitions
 #
 xi.include = element xi:include {
    attribute parse { "text" | "xml" },
    attribute href { text }
 }
 
+xs.any = element xs:any {
+   attribute processContents { "lax" | "skip" | "strict" },
+   attribute minOccurs { xs:nonNegativeInteger }?,
+   attribute maxOccurs { xs:nonNegativeInteger | "unbounded"}?,
+   attribute namespace { "##any" | "##other" | "##local" | "##targetNamespace" }?,
+   
+   element * { anything }*
+}
+
+xs.sequence = element xs:sequence { xs.any+ }
+xs.complexContent = element xs:complexContent {
+   attribute mixed { "true" | "false" },
+   element xs:* { anything }*
+}
+
 #
-## a subset of HTML is embedded in content (with xi:includes)
+## embedded HTML (with includes and if)
 #
 sif.narrative = mixed { (
     text
@@ -41,21 +54,25 @@ sif.narrative = mixed { (
 	| html.img
 	| html.p
 	| html.span
-	| html.ul	
-	| sif.Example
+	| html.strong
+	| html.table
+	| html.ul
+	| sif.If.narrative
 )* }
 
 html.a = element a {
-   attribute href { text },
+   attribute href { text }?,
+   attribute name { text }?,
+   
    sif.narrative
 }
 html.br = element br { empty }
 html.code = element code { text }
 
-html.dl = element dl { (
-  element dt { sif.narrative }?,
-  element dd { (attribute style { text })?, sif.narrative}
-)* }
+html.dl = element dl { (mixed { sif.If.defList | (html.dt, html.dd)* })* }
+html.dt = element dt { sif.narrative }
+html.dd = element dd { (attribute style { text })?, sif.narrative}
+
 html.em = element em { sif.narrative }
 html.h1 = element h1 { sif.narrative }
 html.h2 = element h2 { sif.narrative }
@@ -72,113 +89,222 @@ html.span = element span {
    text
 }
 
+html.strong = element strong { sif.narrative }
+
+html.table = element table {
+  element thead { html.tr+ },
+  mixed { element tbody { html.tr+ } | html.tr+ } }
+
+html.tr = element tr { html.td+ }
+
+html.td = element td { attribute class { text }?, sif.narrative }
+
 html.ul = element ul { element li { sif.narrative }* }
 
-sif.section = (attribute name { text })?, (mixed {
-   sif.narrative
-   | sif.If
-   | element CodeSets {sif.narrative}
-   | element Intro { sif.narrative }
-   | element Section { sif.section }
-} )*
 
-  #
-  ##  Root Elements (Russian Doll model)
-  # 
+#
+##  repeated lego blocks
+#
+anything = ( element * { anything } | attribute * { text } | text )*
+
+attr.intl = attribute intl { "us" | "uk" | "au" | "nz" | "" }
+
+sif.If.narrative = element if { attr.intl, sif.narrative+ }
+
+sif.If.includeGroup = element if { attr.intl,
+   (mixed {
+      xi.include
+	    | sif.CommonElement
+	    | sif.DataObject
+		| sif.Grouping
+		| sif.CodeSet })+ }
+		
+sif.If.Item = element if { attr.intl, sif.Item+ }
+sif.If.Value = element if { attr.intl, sif.Value+ }
+sif.If.Type = element if { attr.intl, sif.Type+ }
+sif.If.defList = element if { attr.intl, (html.dt?, html.dd)+ }
+
+sif.Intro = element Intro { sif.narrative }
+
+
+#
+##  Root Elements (Russian Doll model)
+# 
 start |= sif.SIFSpecification
-      | sif.Section 
-      | sif.CommonElements 
-      | sif.DataObject 
-      | sif.DataObjects 
-      | sif.IncludeGroup
+      | sif.Section
+	  | sif.DataObject
+	  | sif.DataObjects
+	  | sif.IncludeGroup
+	  | sif.CodeSets
+	  | sif.Grouping
 
-
-
-#
-## Main root element
-#
 sif.SIFSpecification =
   element SIFSpecification {
-    attribute xsi:* { text } *,
+    attribute xsi:* { text }*,
 	
     element BuildComment { sif.narrative },
     element TitlePage { sif.narrative },
 	
 	(mixed {
 	   sif.narrative
-	   | element Section { sif.section }
-	   | element Appendix { sif.section} } )*
+	   | sif.Section
+	   | sif.Appendix })*
  }
 
-sif.CommonElements = element CommonElements { sif.section }
+
+sif.Section = element Section {
+   attribute xsi:* { text }*,
+   attribute name { text }?,
+   attribute xml:base { text }?,
+
+   (mixed {
+	  sif.Section
+        | sif.narrative
+	    | sif.DataObjects
+		| element Example { attribute name { text }, text }
+		| xhtml.Example } )* }
+
+sif.Appendix = element Appendix {
+   attribute name { text },
+   attribute xml:base { text }?,
+
+   (mixed {
+      sif.narrative
+      | sif.Intro
+	  | sif.IncludeGroup
+	  | sif.CodeSets })* }  
+
+
+xhtml.Example = element xhtml:Example {
+      attribute name { text },
+	  attribute skipValidate { "true" | "false" }?,
+	  attr.intl?,
+	  
+	  element * { anything }
+   }*
+
+
+sif.IncludeGroup = element IncludeGroup {
+   attribute xml:base { text }?,
+   (mixed {
+
+      sif.If.includeGroup
+	  | xi.include
+	  | sif.Intro
+      | sif.Group
+      | sif.CommonElement
+	  | sif.CodeSet
+	  | sif.Grouping} )* }
+
+
+sif.DataObjects = element DataObjects {
+   attribute xml:base { text }?,
+   (mixed  { sif.If.includeGroup | sif.IncludeGroup }* ) }
 
 sif.DataObject = element DataObject {
    attribute name { text },
+   
    (element Key { text } | element EventsReported { "true" | "false" })+,
    element Intro { sif.narrative }?,
-   element Item {
-      (element Attribute { text } | element Element { text }),
-	  
-	  element Characteristics { "M" | "O" | "C" | "MR" | "OR"}?,
-	  element privacyRating { "M" | "L" }?,
-	  element Description { sif.narrative }?,
-	  
-	  mixed { (  sif.Type | element Union { sif.Type+ } | (element ItemExample { text })+
-		  | element List { attribute mode { "List" } }
-                  | element Values { element Value { element Code { text } }+ }
-		  | element Facets { mixed { xs.Facets }+ } 
-      ) }*
-   }*,
-   element xhtml:Example {
-      attribute name { text },
-	  element * { anything }
-   }*
+   (mixed { sif.Item | sif.Choice })*,
+   xhtml.Example*
 }
 
-anything = ( element * { anything } | attribute * { text } | text )*
-
-sif.DataObjects = element DataObjects { sif.section }
-
-sif.If = element if { attribute intl { "us" | "uk" | "au" | "nz" }, sif.narrative }
-
-sif.IncludeGroup = element IncludeGroup {
-   element Group {
-      attribute name { text },
-
-      (mixed {
-         sif.narrative
-		 | sif.If
-         | element Intro { sif.narrative} } )*
-   }
-}
-
-sif.Section = element Section { attribute xsi:* { text } *, sif.section }
-
-sif.Example = element Example {
+sif.CommonElement = element CommonElement {
    attribute name { text },
-   text }
+   attribute type { "true" | "false"},
+   attribute dm { "true" | "false"}?,
+
+   sif.Intro?,
+   element Key { text }?,
+   (mixed { sif.If.Item | sif.Item | sif.Choice })*,
+   xhtml.Example*
+}
+
+sif.Grouping = element Grouping {
+   attribute code { text },
+   attribute name { text },
+
+   (mixed { sif.If.includeGroup | xi.include | sif.CodeSet}) * }
+
+sif.CodeSet = element CodeSet {
+     element Intro { sif.narrative }?,
+	 element ID { text },
+     element Values {
+	   (mixed { sif.If.Value | sif.Value })* } }
+
+sif.Value = element Value { element Code { text }, element Text { text }, element Description { text }? }
+sif.Group = element Group {
+   attribute name { text },
+
+   (mixed {
+      sif.narrative
+        | sif.If.includeGroup
+        | sif.Intro
+		| sif.DataObject } )* }
+
+sif.CodeSets = element CodeSets {
+  (mixed {
+     sif.If.includeGroup
+      | xi.include
+      | sif.Grouping} )* }
+
+
+sif.Item = element Item {
+      attr.intl?,
+	  
+      (element Attribute { text } | element Element { text }),
+
+	  element Characteristics { "M" | "O" | "C" | "MR" | "OR"}?,
+	  element privacyRating { "Low" | "Medium" | "High" | "Extreme"}?,
+	  element Description { (mixed { sif.If.narrative | sif.narrative})* }?,
+	  
+	  mixed { (
+	     sif.If.Type
+		 | sif.Type
+	     | element Union { sif.Type+ }
+	     | (element ItemExample { text })+
+		 | element List { attribute mode { "List" } }
+		 | sif.Values
+		 | element Facets { mixed { xs.Facets }+ }
+		 
+      ) }* }
 
 sif.Type = element Type {
    attribute ref { text }?,
    attribute name { text }?,
    attribute complex { "extension" }?,
-   (attribute relationship { text }, attribute count { "1:1" | "*:1" | "1:*" | "1:?" } )? }
+   (attribute relationship { text }, attribute count { "1:1" | "*:1" | "1:*" | "1:?" | "?:1"} )?,
 
+   (mixed { xs.any | xs.sequence | xs.complexContent })?
+}
 
-xs.Facets = element xs:pattern { text }
-	  | element xs:enumeration { xs.valueString, element annotation { element documentation { anything } }? }
-	  | element xs:whiteSpace { attribute value { "collapse" }? }
+sif.Choice = element Choice { sif.Item+ }
+
+sif.Values = element Values {
+   element Value {
+      element Code { text },
+	  element Text { sif.narrative }?,
+	  element Description { sif.narrative }?
+	  
+}+ }
+
+xs.Facets = element xs:pattern { attribute value { text } }
+		  | element xs:enumeration { xs.valueString, element annotation { element documentation { anything } }? }
+		  | element xs:whiteSpace { attribute value { "collapse" }? }
 		  	  
           | element xs:length { xs.valueInteger }
           | element xs:minLength { xs.valueInteger }
-	  | element xs:maxLength { xs.valueInteger }
+		  | element xs:maxLength { xs.valueInteger }
 		  
-	  | element xs:totalDigits { xs.valueInteger }
-	  | element xs:fractionDigits { xs.valueInteger }
-          | element xs:minInclusive {xs.valueInteger }
-          | element xs:maxInclusive { xs.valueInteger }
-          | element xs:minExclusive {xs.valueInteger }
-          | element xs:maxExclusive { xs.valueInteger }
+		  | element xs:totalDigits { xs.valueInteger }
+		  | element xs:fractionDigits { xs.valueInteger }
+		  
+          | element xs:minInclusive {xs.valueDecimal }
+          | element xs:maxInclusive { xs.valueDecimal }
+          | element xs:minExclusive {xs.valueDecimal }
+          | element xs:maxExclusive { xs.valueDecimal }
 
 xs.valueInteger = attribute value { xs:integer }
+xs.valueDecimal = attribute value { xs:decimal }
 xs.valueString = attribute value { xs:string }

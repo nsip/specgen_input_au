@@ -1,0 +1,310 @@
+﻿<IncludeGroup
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	
+	xmlns="http://sifassociation.org/SpecGen">
+
+	<!-- IncludeGroup is syntactic sugar that makes this a well-formed XML file that can
+		 be validated separately; and allows the xi:include to have parse="xml"  SpecGen tool ignores it. -->
+
+
+	<!-- Element types for the Resource domain 	-->
+
+<CommonElement name="ComponentsType" type="true" dm="true">
+	<Item>
+		<Element>ComponentsType</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Lesson or activity-sized portions of a resource.</p>
+		</Description>
+		<List mode="List"/>
+	</Item>
+	<Item>
+		<Element>Component</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>A lesson or activity-sized portion of a resource.</p>
+		</Description>
+		<Type ref="CommonTypes" name="ComponentType"/>
+	</Item>
+</CommonElement>
+<CommonElement name="ComponentType" type="true" dm="true">
+	<Item>
+		<Element>ComponentType</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>A lesson or activity-sized portion of a resource.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>Name</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Name of learning resource component within the resource, i.e. "Chapter 1, Section 4.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>Reference</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Description of where ResourceComponent is located within resource or in general, i.e. "Section 4, pages 32-38," or URL string, or whatever locator is appropriate for media.</p>
+		</Description>
+		<Type name="xs:string"/>
+	</Item>
+	<Item>
+		<Element>Description</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Description of ResourceComponent, i.e. "Discover how changing the scale of a map can either increase or decrease the level of detail you see."</p>
+		</Description>
+		<Type name="xs:string"/>
+	</Item>
+	<Item>
+		<Element>Strategies</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Teaching/learning strategies used in the learning resource.</p>
+		</Description>
+		<Type ref="CommonTypes" name="StrategiesType"/>
+	</Item>
+	<Item>
+		<Element>AssociatedObjects</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>References from component to associated elements within another SIF object.</p>
+		</Description>
+		<Type ref="CommonTypes" name="AssociatedObjectsType"/>
+	</Item>
+</CommonElement>
+<CommonElement name="EvaluationsType" type="true" dm="true">
+	<Item>
+		<Element>EvaluationsType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Evaluations/review of the resource.</p>
+		</Description>
+		<List mode="List"/>
+	</Item>
+	<Item>
+		<Element>Evaluation</Element>
+		<Characteristics>OR</Characteristics>
+		<Description>
+			<p>Evaluation/review of resource.</p>
+		</Description>
+		<Type ref="CommonTypes" name="EvaluationType"/>
+	</Item>
+</CommonElement>
+<CommonElement name="EvaluationType" type="true" dm="true">
+	<Item>
+		<Element>EvaluationType</Element>
+		<Characteristics>OR</Characteristics>
+		<Description>
+			<p>Evaluation/review of resource.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Attribute>RefId</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>GUID assigned to an evaluation.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RefIdType"/>
+	</Item>
+	<Item>
+		<Element>Description</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Description of evaluation of resource.</p>
+		</Description>
+		<Type name="xs:string"/>
+	</Item>
+	<Item>
+		<Element>Date</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Date evaluation was performed</p>
+		</Description>
+		<Type name="xs:date"/>
+	</Item>
+	<Item>
+		<Element>Name</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Name of individual who submitted evaluation.</p>
+		</Description>
+		<Type ref="CommonTypes" name="NameType"/>
+	</Item>
+</CommonElement>
+<CommonElement name="ApprovalsType" type="true" dm="true">
+	<Item>
+		<Element>ApprovalsType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Authorizations to use this resource. For example, this resource may be included as part of the district's standard curriculum model.</p>
+		</Description>
+		<List mode="List"/>
+	</Item>
+	<Item>
+		<Element>Approval</Element>
+		<Characteristics>OR</Characteristics>
+		<Description>
+			<p>A sub-element containing an authorization to use this resource. For example, this resource may be included as part of the district's standard curriculum model.</p>
+		</Description>
+		<Type ref="CommonTypes" name="ApprovalType"/>
+	</Item>
+</CommonElement>
+<CommonElement name="ApprovalType" type="true" dm="true">
+	<Item>
+		<Element>ApprovalType</Element>
+		<Characteristics>OR</Characteristics>
+		<Description>
+			<p>A sub-element containing an authorization to use this resource. For example, this resource may be included as part of the district's standard curriculum model.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>Organization</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Name of agency that approved use of resource.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>Date</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Date resource was approved.</p>
+		</Description>
+		<Type name="xs:date"/>
+	</Item>
+</CommonElement>
+<CommonElement name="MediaTypesType" type="true" dm="true">
+	<Item>
+		<Element>MediaTypesType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>
+        Resource media types.
+      </p>
+		</Description>
+		<List mode="List"/>
+	</Item>
+	<Item>
+		<Element>MediaType</Element>
+		<Characteristics>OR</Characteristics>
+		<Description>
+			<p>
+        MIME type <a href="References.html#MIME">[MIME]</a> based on IANA registration (see RFC2048) or 'non-digital'.
+      </p>
+		</Description>
+		<Type name="xs:token"/>
+	</Item>
+</CommonElement>
+<CommonElement name="ContactsType" type="true" dm="true">
+	<Item>
+		<Element>ContactsType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Contains contact information about resource authors.</p>
+		</Description>
+		<List mode="List"/>
+	</Item>
+	<Item>
+		<Element>Contact</Element>
+		<Characteristics>OR</Characteristics>
+		<Description>
+			<p>Contains contact information about a resource author.</p>
+		</Description>
+		<Type ref="CommonTypes" name="ContactType"/>
+	</Item>
+</CommonElement>
+<CommonElement name="ContactType" type="true" dm="true">
+	<Item>
+		<Element>ContactType</Element>
+		<Characteristics>OR</Characteristics>
+		<Description>
+			<p>Contains contact information about a resource author.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>Name</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Name of contact person. Use the generic element Name.</p>
+		</Description>
+		<Type ref="CommonTypes" name="NameType"/>
+	</Item>
+	<Item>
+		<Element>Address</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Address of organization or company.</p>
+		</Description>
+		<Type ref="CommonTypes" name="AddressType"/>
+	</Item>
+	<Item>
+		<Element>PhoneNumber</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Phone number of organization or company.</p>
+		</Description>
+		<Type ref="CommonTypes" name="PhoneNumberType"/>
+	</Item>
+	<Item>
+		<Element>Email</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The email of the organization or company.</p>
+		</Description>
+		<Type ref="CommonTypes" name="EmailType"/>
+	</Item>
+</CommonElement>
+<CommonElement name="StrategiesType" type="true" dm="true">
+	<Item>
+		<Element>StrategiesType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Teaching/learning strategies used in the learning resource.</p>
+		</Description>
+		<List mode="List"/>
+	</Item>
+	<Item>
+		<Element>Strategy</Element>
+		<Characteristics>OR</Characteristics>
+		<Description>
+			<p>Teaching/learning strategy used in the learning resource. One per element.</p>
+		</Description>
+		<Type name="xs:string"/>
+	</Item>
+</CommonElement>
+<CommonElement name="AssociatedObjectsType" type="true" dm="true">
+	<Item>
+		<Element>AssociatedObjectsType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>References from component to associated elements within another SIF object.</p>
+		</Description>
+		<List mode="List"/>
+	</Item>
+	<Item>
+		<Element>AssociatedObject</Element>
+		<Characteristics>OR</Characteristics>
+		<Description>
+			<p>Reference from component to associated elements within another SIF object.</p>
+		</Description>
+		<Type ref="CommonTypes" name="IdRefType"/>
+	</Item>
+	<Item>
+		<Attribute>SIF_RefObject</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Attribute that identifies the type of SIF object being referenced.</p>
+		</Description>
+		<Type ref="CommonTypes" name="ObjectNameType"/>
+	</Item>
+</CommonElement>
+	
+</IncludeGroup>

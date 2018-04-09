@@ -1,0 +1,1365 @@
+<IncludeGroup
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	
+ 	xmlns="http://sifassociation.org/SpecGen">
+
+	<CodeSet>
+		<Intro>
+			<p>Source: SIF-AU (Scheduled Activity)</p>
+		</Intro>
+		<ID>Scheduled Activity Type</ID>
+		<Values>
+			<Value>
+				<Code>Duty</Code>
+				<Text>Yard duty (cyclical)</Text>
+			</Value>
+			<Value>
+				<Code>TeachingClass</Code>
+				<Text>Classroom teaching (cyclical)</Text>
+			</Value>
+			<Value>
+				<Code>Study</Code>
+				<Text>Supervised study for students with gaps in their timetables (cyclical)</Text>
+			</Value>
+			<Value>
+				<Code>RollClass</Code>
+				<Text>Morning roll-call (cyclical)</Text>
+			</Value>
+			<Value>
+				<Code>RosteredTimeOff</Code>
+				<Text>Rostered Time Off (cyclical)</Text>
+			</Value>
+			<Value>
+				<Code>StaffMeeting</Code>
+				<Text>Staff Meeting (cyclical)</Text>
+			</Value>
+			<Value>
+				<Code>ExtraCurricular</Code>
+				<Text>Music, sport, chess club etc (cyclical)</Text>
+			</Value>
+			<Value>
+				<Code>Excursion</Code>
+				<Text>Excursion (one-off)</Text>
+			</Value>
+			<Value>
+				<Code>Incursion</Code>
+				<Text>Excursion held on campus (one-off)</Text>
+			</Value>
+			<Value>
+				<Code>Exam</Code>
+				<Text>Exam (one-off)</Text>
+			</Value>
+			<Value>
+				<Code>Event</Code>
+				<Text>Anything else (one-off)</Text>
+			</Value>
+			 
+		</Values>
+	</CodeSet>    <!-- Scheduled Activity Type -->
+	<CodeSet>
+		<Intro>
+			<p>Source: SIF-AU (EquipmentInfo)</p>
+		</Intro>
+		<ID>Equipment Type</ID>
+		<Values>
+			<Value>
+				<Code>DesktopComputer</Code>
+				<Text>Desktop Computer</Text>
+			</Value>
+			<Value>
+				<Code>LaptopComputer</Code>
+				<Text>Laptop Computer</Text>
+			</Value>
+			<Value>
+				<Code>Tablet</Code>
+				<Text>Tablet</Text>
+			</Value>
+			<Value>
+				<Code>OverheadProjector</Code>
+				<Text>Overhead Projector</Text>
+			</Value>
+			<Value>
+				<Code>SlideProjector</Code>
+				<Text>Slide Projector</Text>
+			</Value>
+			<Value>
+				<Code>Vehicle</Code>
+				<Text>Vehicle</Text>
+			</Value>
+			<Value>
+				<Code>Other</Code>
+				<Text>Other</Text>
+			</Value>
+			 
+		</Values>
+	</CodeSet>	  <!-- Equipment Type -->
+	<CodeSet>
+		<Intro>
+			<p>Source: SIF-AU (Scheduled Activity)</p>
+		</Intro>
+		<ID>Teacher Cover Credit</ID>
+		<Values>
+			<Value>
+				<Code>In-Lieu</Code>
+				<Text>The cover is taken as replacement for a cancelled class</Text>
+			</Value>
+			<Value>
+				<Code>Extra</Code>
+				<Text>The cover counts towards the teacher's extras quota</Text>
+			</Value>
+			<Value>
+				<Code>Underload</Code>
+				<Text>The cover is not counted as an extra because the teacher is underloaded on the cyclical timetable</Text>
+			</Value>
+			<Value>
+				<Code>Casual</Code>
+				<Text>The event is supervised by a casual teacher</Text>
+			</Value>
+			 
+		</Values>
+	</CodeSet>    <!-- Teacher Cover Credit -->
+	<CodeSet>
+		<Intro>
+			<p>Source: SIF-AU (Scheduled Activity)</p>
+		</Intro>
+		<ID>Teacher Cover Supervision</ID>
+		<Values>
+			<Value>
+				<Code>Normal</Code>
+				<Text>Normal supervision</Text>
+			</Value>
+			<Value>
+				<Code>MinimalSupervision</Code>
+				<Text>Minimal supervision</Text>
+			</Value>
+			<Value>
+				<Code>MergedClass</Code>
+				<Text>The event is a merged class</Text>
+			</Value>
+			 
+		</Values>
+	</CodeSet>    <!-- Teacher Cover Supervision -->
+	<CodeSet>
+		<Intro>
+			<p/>
+		</Intro>
+		<ID>Activity Involvement Code</ID>
+		<Values>
+			<Value>
+				<Code>1010</Code>
+				<Text>Exercise, n.f.d</Text>
+			</Value>
+			<Value>
+				<Code>1011</Code>
+				<Text>Exercise biking</Text>
+			</Value>
+			<Value>
+				<Code>1012</Code>
+				<Text>Fitness centre activities</Text>
+			</Value>
+			<Value>
+				<Code>1013</Code>
+				<Text>Gymnasium workouts</Text>
+			</Value>
+			<Value>
+				<Code>1014</Code>
+				<Text>Aerobics/exercising (other)</Text>
+			</Value>
+			<Value>
+				<Code>1015</Code>
+				<Text>Circuits</Text>
+			</Value>
+			<Value>
+				<Code>1016</Code>
+				<Text>Boot camp</Text>
+			</Value>
+			<Value>
+				<Code>1017</Code>
+				<Text>Boxercise (at a gym)</Text>
+			</Value>
+			<Value>
+				<Code>1018</Code>
+				<Text>RPM</Text>
+			</Value>
+			<Value>
+				<Code>1019</Code>
+				<Text>Spin Cycling</Text>
+			</Value>
+			<Value>
+				<Code>101A</Code>
+				<Text>Treadmill Activities</Text>
+			</Value>
+			<Value>
+				<Code>101B</Code>
+				<Text>Weight Training</Text>
+			</Value>
+			<Value>
+				<Code>101C</Code>
+				<Text>Zumba</Text>
+			</Value>
+			<Value>
+				<Code>101D</Code>
+				<Text>Kickboxing (at a gym)</Text>
+			</Value>
+			<Value>
+				<Code>101E</Code>
+				<Text>Rope skipping</Text>
+			</Value>
+			<Value>
+				<Code>1020</Code>
+				<Text>Air sports, n.f.d.</Text>
+			</Value>
+			<Value>
+				<Code>1021</Code>
+				<Text>Aerobatics</Text>
+			</Value>
+			<Value>
+				<Code>1022</Code>
+				<Text>Ballooning</Text>
+			</Value>
+			<Value>
+				<Code>1023</Code>
+				<Text>Gliding</Text>
+			</Value>
+			<Value>
+				<Code>1024</Code>
+				<Text>Gyroplane flying</Text>
+			</Value>
+			<Value>
+				<Code>1025</Code>
+				<Text>Hang gliding</Text>
+			</Value>
+			<Value>
+				<Code>1026</Code>
+				<Text>Ultralight flying</Text>
+			</Value>
+			<Value>
+				<Code>1027</Code>
+				<Text>Air sport ( other )</Text>
+			</Value>
+			<Value>
+				<Code>1028</Code>
+				<Text>Bungee jumping</Text>
+			</Value>
+			<Value>
+				<Code>1029</Code>
+				<Text>Parachuting</Text>
+			</Value>
+			<Value>
+				<Code>102A</Code>
+				<Text>Skydiving</Text>
+			</Value>
+			<Value>
+				<Code>102B</Code>
+				<Text>Paragliding</Text>
+			</Value>
+			<Value>
+				<Code>1031</Code>
+				<Text>Aquareobics</Text>
+			</Value>
+			<Value>
+				<Code>1041</Code>
+				<Text>Archery</Text>
+			</Value>
+			<Value>
+				<Code>1042</Code>
+				<Text>Bow hunting</Text>
+			</Value>
+			<Value>
+				<Code>1051</Code>
+				<Text>Athletics, track &amp; field</Text>
+			</Value>
+			<Value>
+				<Code>1061</Code>
+				<Text>Australian rules football</Text>
+			</Value>
+			<Value>
+				<Code>1071</Code>
+				<Text>Badminton</Text>
+			</Value>
+			<Value>
+				<Code>1081</Code>
+				<Text>Baseball</Text>
+			</Value>
+			<Value>
+				<Code>1091</Code>
+				<Text>Basketball (indoor &amp; outdoor)</Text>
+			</Value>
+			<Value>
+				<Code>1101</Code>
+				<Text>Beach volleyball</Text>
+			</Value>
+			<Value>
+				<Code>1110</Code>
+				<Text>Cue Sports, n.f.d.</Text>
+			</Value>
+			<Value>
+				<Code>1111</Code>
+				<Text>Billiards</Text>
+			</Value>
+			<Value>
+				<Code>1112</Code>
+				<Text>Pool</Text>
+			</Value>
+			<Value>
+				<Code>1113</Code>
+				<Text>Snooker</Text>
+			</Value>
+			<Value>
+				<Code>1121</Code>
+				<Text>Bocce</Text>
+			</Value>
+			<Value>
+				<Code>1122</Code>
+				<Text>Boules</Text>
+			</Value>
+			<Value>
+				<Code>1123</Code>
+				<Text>Petanque</Text>
+			</Value>
+			<Value>
+				<Code>1131</Code>
+				<Text>Boxing</Text>
+			</Value>
+			<Value>
+				<Code>1141</Code>
+				<Text>Bush walking</Text>
+			</Value>
+			<Value>
+				<Code>1151</Code>
+				<Text>Canoeing</Text>
+			</Value>
+			<Value>
+				<Code>1152</Code>
+				<Text>Kayaking</Text>
+			</Value>
+			<Value>
+				<Code>1153</Code>
+				<Text>Outrigger canoe</Text>
+			</Value>
+			<Value>
+				<Code>1161</Code>
+				<Text>Carpet bowls</Text>
+			</Value>
+			<Value>
+				<Code>1171</Code>
+				<Text>Cricket (Indoor)</Text>
+			</Value>
+			<Value>
+				<Code>1181</Code>
+				<Text>Cricket (Outdoor)</Text>
+			</Value>
+			<Value>
+				<Code>1191</Code>
+				<Text>Croquet</Text>
+			</Value>
+			<Value>
+				<Code>1201</Code>
+				<Text>Cross country running</Text>
+			</Value>
+			<Value>
+				<Code>1210</Code>
+				<Text>Bike sports, n.f.d.</Text>
+			</Value>
+			<Value>
+				<Code>1211</Code>
+				<Text>Bike riding</Text>
+			</Value>
+			<Value>
+				<Code>1212</Code>
+				<Text>Cycling</Text>
+			</Value>
+			<Value>
+				<Code>1213</Code>
+				<Text>BMXing</Text>
+			</Value>
+			<Value>
+				<Code>1214</Code>
+				<Text>Mountain biking</Text>
+			</Value>
+			<Value>
+				<Code>1220</Code>
+				<Text>Dance Sports, n.f.d.</Text>
+			</Value>
+			<Value>
+				<Code>1221</Code>
+				<Text>Boot scooting</Text>
+			</Value>
+			<Value>
+				<Code>1222</Code>
+				<Text>Classical Ballet</Text>
+			</Value>
+			<Value>
+				<Code>1223</Code>
+				<Text>Jazz Ballet</Text>
+			</Value>
+			<Value>
+				<Code>1224</Code>
+				<Text>Ballroom Dancing</Text>
+			</Value>
+			<Value>
+				<Code>1225</Code>
+				<Text>Dance team</Text>
+			</Value>
+			<Value>
+				<Code>1226</Code>
+				<Text>Bellydancing</Text>
+			</Value>
+			<Value>
+				<Code>1227</Code>
+				<Text>Folk dancing</Text>
+			</Value>
+			<Value>
+				<Code>1228</Code>
+				<Text>Latin dancing</Text>
+			</Value>
+			<Value>
+				<Code>1229</Code>
+				<Text>Dancing (other)</Text>
+			</Value>
+			<Value>
+				<Code>122A</Code>
+				<Text>Line dancing</Text>
+			</Value>
+			<Value>
+				<Code>122B</Code>
+				<Text>Salsa</Text>
+			</Value>
+			<Value>
+				<Code>122C</Code>
+				<Text>Swing dancing</Text>
+			</Value>
+			<Value>
+				<Code>1231</Code>
+				<Text>Darts</Text>
+			</Value>
+			<Value>
+				<Code>1241</Code>
+				<Text>Dog racing</Text>
+			</Value>
+			<Value>
+				<Code>1250</Code>
+				<Text>Dog competitions, n.f.d.</Text>
+			</Value>
+			<Value>
+				<Code>1251</Code>
+				<Text>Dog shows</Text>
+			</Value>
+			<Value>
+				<Code>1252</Code>
+				<Text>Sheepdog trials</Text>
+			</Value>
+			<Value>
+				<Code>1261</Code>
+				<Text>Fencing</Text>
+			</Value>
+			<Value>
+				<Code>1271</Code>
+				<Text>Angling</Text>
+			</Value>
+			<Value>
+				<Code>1272</Code>
+				<Text>Fishing</Text>
+			</Value>
+			<Value>
+				<Code>1280</Code>
+				<Text>Throwing, n.f.d.</Text>
+			</Value>
+			<Value>
+				<Code>1281</Code>
+				<Text>Ultimate frisbee</Text>
+			</Value>
+			<Value>
+				<Code>1282</Code>
+				<Text>Boomerang throwing</Text>
+			</Value>
+			<Value>
+				<Code>1289</Code>
+				<Text>Flying disc games</Text>
+			</Value>
+			<Value>
+				<Code>1291</Code>
+				<Text>Gaelic football</Text>
+			</Value>
+			<Value>
+				<Code>1301</Code>
+				<Text>Golf</Text>
+			</Value>
+			<Value>
+				<Code>1311</Code>
+				<Text>Gridiron (USA football )</Text>
+			</Value>
+			<Value>
+				<Code>1321</Code>
+				<Text>Gymnastics</Text>
+			</Value>
+			<Value>
+				<Code>1322</Code>
+				<Text>Circus acrobatics</Text>
+			</Value>
+			<Value>
+				<Code>1323</Code>
+				<Text>Callisthenics</Text>
+			</Value>
+			<Value>
+				<Code>1324</Code>
+				<Text>Trampolining</Text>
+			</Value>
+			<Value>
+				<Code>1331</Code>
+				<Text>Handball</Text>
+			</Value>
+			<Value>
+				<Code>1341</Code>
+				<Text>Harness racing/Trotting</Text>
+			</Value>
+			<Value>
+				<Code>1351</Code>
+				<Text>Hockey (Indoor)</Text>
+			</Value>
+			<Value>
+				<Code>1352</Code>
+				<Text>Hockey (Outdoor)</Text>
+			</Value>
+			<Value>
+				<Code>1353</Code>
+				<Text>Broomball</Text>
+			</Value>
+			<Value>
+				<Code>1362</Code>
+				<Text>Horse racing</Text>
+			</Value>
+			<Value>
+				<Code>1363</Code>
+				<Text>Dressage</Text>
+			</Value>
+			<Value>
+				<Code>1371</Code>
+				<Text>Horse riding/Equestrian activities</Text>
+			</Value>
+			<Value>
+				<Code>1372</Code>
+				<Text>Polo</Text>
+			</Value>
+			<Value>
+				<Code>1373</Code>
+				<Text>Polo cross</Text>
+			</Value>
+			<Value>
+				<Code>1374</Code>
+				<Text>Show jumping</Text>
+			</Value>
+			<Value>
+				<Code>1380</Code>
+				<Text>Ice/Snow Sports, n.f.d.</Text>
+			</Value>
+			<Value>
+				<Code>1381</Code>
+				<Text>Ice hockey</Text>
+			</Value>
+			<Value>
+				<Code>1383</Code>
+				<Text>Ice/Snow sport (other)</Text>
+			</Value>
+			<Value>
+				<Code>1384</Code>
+				<Text>Snow skiing</Text>
+			</Value>
+			<Value>
+				<Code>1385</Code>
+				<Text>Snow boarding</Text>
+			</Value>
+			<Value>
+				<Code>1386</Code>
+				<Text>Bobsledding</Text>
+			</Value>
+			<Value>
+				<Code>1387</Code>
+				<Text>Skeleton</Text>
+			</Value>
+			<Value>
+				<Code>1391</Code>
+				<Text>Korfball</Text>
+			</Value>
+			<Value>
+				<Code>1392</Code>
+				<Text>Ice skating</Text>
+			</Value>
+			<Value>
+				<Code>1393</Code>
+				<Text>Ice racing/speed skating</Text>
+			</Value>
+			<Value>
+				<Code>1401</Code>
+				<Text>Lacrosse</Text>
+			</Value>
+			<Value>
+				<Code>1402</Code>
+				<Text>Softcrosse</Text>
+			</Value>
+			<Value>
+				<Code>1411</Code>
+				<Text>Lawn bowls</Text>
+			</Value>
+			<Value>
+				<Code>1421</Code>
+				<Text>Marching</Text>
+			</Value>
+			<Value>
+				<Code>1430</Code>
+				<Text>Martial arts, n.f.d.</Text>
+			</Value>
+			<Value>
+				<Code>1431</Code>
+				<Text>Chi Kung</Text>
+			</Value>
+			<Value>
+				<Code>1432</Code>
+				<Text>Judo/Jujitsu</Text>
+			</Value>
+			<Value>
+				<Code>1433</Code>
+				<Text>Karate</Text>
+			</Value>
+			<Value>
+				<Code>1434</Code>
+				<Text>Kickboxing</Text>
+			</Value>
+			<Value>
+				<Code>1435</Code>
+				<Text>Taekwondo</Text>
+			</Value>
+			<Value>
+				<Code>1436</Code>
+				<Text>Tai Chi</Text>
+			</Value>
+			<Value>
+				<Code>1437</Code>
+				<Text>Aikido</Text>
+			</Value>
+			<Value>
+				<Code>1438</Code>
+				<Text>Kendo</Text>
+			</Value>
+			<Value>
+				<Code>1439</Code>
+				<Text>Martial arts (other)</Text>
+			</Value>
+			<Value>
+				<Code>143A</Code>
+				<Text>Ninjitsu</Text>
+			</Value>
+			<Value>
+				<Code>1441</Code>
+				<Text>Minigolf</Text>
+			</Value>
+			<Value>
+				<Code>1442</Code>
+				<Text>Putt-putt golf</Text>
+			</Value>
+			<Value>
+				<Code>1450</Code>
+				<Text>Motor sports, n.f.d.</Text>
+			</Value>
+			<Value>
+				<Code>1451</Code>
+				<Text>Go-Karting (motor sports)</Text>
+			</Value>
+			<Value>
+				<Code>1452</Code>
+				<Text>Track motor sport</Text>
+			</Value>
+			<Value>
+				<Code>1453</Code>
+				<Text>Car racing</Text>
+			</Value>
+			<Value>
+				<Code>1454</Code>
+				<Text>Drag racing</Text>
+			</Value>
+			<Value>
+				<Code>1455</Code>
+				<Text>Motorbike racing</Text>
+			</Value>
+			<Value>
+				<Code>1456</Code>
+				<Text>Speedway</Text>
+			</Value>
+			<Value>
+				<Code>1459</Code>
+				<Text>Motor sport (other)</Text>
+			</Value>
+			<Value>
+				<Code>1461</Code>
+				<Text>Netball (Indoor and outdoor)</Text>
+			</Value>
+			<Value>
+				<Code>1471</Code>
+				<Text>Orienteering</Text>
+			</Value>
+			<Value>
+				<Code>1472</Code>
+				<Text>Rogaining</Text>
+			</Value>
+			<Value>
+				<Code>1473</Code>
+				<Text>Racewalking</Text>
+			</Value>
+			<Value>
+				<Code>1481</Code>
+				<Text>Pilates</Text>
+			</Value>
+			<Value>
+				<Code>1490</Code>
+				<Text>Outdoor rock activities, n.f.d.</Text>
+			</Value>
+			<Value>
+				<Code>1491</Code>
+				<Text>Abseiling</Text>
+			</Value>
+			<Value>
+				<Code>1492</Code>
+				<Text>Caving</Text>
+			</Value>
+			<Value>
+				<Code>1493</Code>
+				<Text>Rock climbing</Text>
+			</Value>
+			<Value>
+				<Code>1501</Code>
+				<Text>Rodeos</Text>
+			</Value>
+			<Value>
+				<Code>1510</Code>
+				<Text>Roller sports, n.f.d.</Text>
+			</Value>
+			<Value>
+				<Code>1511</Code>
+				<Text>Roller-blading</Text>
+			</Value>
+			<Value>
+				<Code>1512</Code>
+				<Text>Skateboarding</Text>
+			</Value>
+			<Value>
+				<Code>1513</Code>
+				<Text>Inline hockey</Text>
+			</Value>
+			<Value>
+				<Code>1514</Code>
+				<Text>Roller sport (other)</Text>
+			</Value>
+			<Value>
+				<Code>1515</Code>
+				<Text>Rollerskating</Text>
+			</Value>
+			<Value>
+				<Code>1516</Code>
+				<Text>Roller derby</Text>
+			</Value>
+			<Value>
+				<Code>1521</Code>
+				<Text>Rowing</Text>
+			</Value>
+			<Value>
+				<Code>1531</Code>
+				<Text>Royal Tennis</Text>
+			</Value>
+			<Value>
+				<Code>1541</Code>
+				<Text>Rugby league (football)</Text>
+			</Value>
+			<Value>
+				<Code>1542</Code>
+				<Text>Oztag</Text>
+			</Value>
+			<Value>
+				<Code>1543</Code>
+				<Text>Rugby league sevens</Text>
+			</Value>
+			<Value>
+				<Code>1544</Code>
+				<Text>Rugby sevens</Text>
+			</Value>
+			<Value>
+				<Code>1551</Code>
+				<Text>Rugby union (football)</Text>
+			</Value>
+			<Value>
+				<Code>1561</Code>
+				<Text>Jogging</Text>
+			</Value>
+			<Value>
+				<Code>1562</Code>
+				<Text>Running</Text>
+			</Value>
+			<Value>
+				<Code>1571</Code>
+				<Text>Sailing</Text>
+			</Value>
+			<Value>
+				<Code>1581</Code>
+				<Text>Scuba diving</Text>
+			</Value>
+			<Value>
+				<Code>1582</Code>
+				<Text>Snorkelling</Text>
+			</Value>
+			<Value>
+				<Code>1590</Code>
+				<Text>Shooting sports, n.f.d.</Text>
+			</Value>
+			<Value>
+				<Code>1591</Code>
+				<Text>Hunting</Text>
+			</Value>
+			<Value>
+				<Code>1592</Code>
+				<Text>Paintball shooting</Text>
+			</Value>
+			<Value>
+				<Code>1593</Code>
+				<Text>Pistol shooting</Text>
+			</Value>
+			<Value>
+				<Code>1594</Code>
+				<Text>Shooting sport (other)</Text>
+			</Value>
+			<Value>
+				<Code>1595</Code>
+				<Text>Target shooting</Text>
+			</Value>
+			<Value>
+				<Code>1596</Code>
+				<Text>Bird shooting</Text>
+			</Value>
+			<Value>
+				<Code>1597</Code>
+				<Text>Clay shooting</Text>
+			</Value>
+			<Value>
+				<Code>1598</Code>
+				<Text>Duck shooting</Text>
+			</Value>
+			<Value>
+				<Code>1599</Code>
+				<Text>Rifle shooting</Text>
+			</Value>
+			<Value>
+				<Code>159A</Code>
+				<Text>Running target shooting</Text>
+			</Value>
+			<Value>
+				<Code>159B</Code>
+				<Text>Shotgun shooting</Text>
+			</Value>
+			<Value>
+				<Code>159C</Code>
+				<Text>Skirmish</Text>
+			</Value>
+			<Value>
+				<Code>159D</Code>
+				<Text>Trap shooting</Text>
+			</Value>
+			<Value>
+				<Code>1601</Code>
+				<Text>Soccer (Indoor)</Text>
+			</Value>
+			<Value>
+				<Code>1602</Code>
+				<Text>Futsal</Text>
+			</Value>
+			<Value>
+				<Code>1612</Code>
+				<Text>Soccer (Outdoor)</Text>
+			</Value>
+			<Value>
+				<Code>1621</Code>
+				<Text>Softball</Text>
+			</Value>
+			<Value>
+				<Code>1622</Code>
+				<Text>Tee ball (T ball)</Text>
+			</Value>
+			<Value>
+				<Code>1631</Code>
+				<Text>Squash</Text>
+			</Value>
+			<Value>
+				<Code>1632</Code>
+				<Text>Racquet ball</Text>
+			</Value>
+			<Value>
+				<Code>1641</Code>
+				<Text>Surf Lifesaving/Royal Lifesaving</Text>
+			</Value>
+			<Value>
+				<Code>1651</Code>
+				<Text>Surfing</Text>
+			</Value>
+			<Value>
+				<Code>1652</Code>
+				<Text>Surf sport (other)</Text>
+			</Value>
+			<Value>
+				<Code>1653</Code>
+				<Text>Bodyboarding</Text>
+			</Value>
+			<Value>
+				<Code>1654</Code>
+				<Text>Standup paddleboarding</Text>
+			</Value>
+			<Value>
+				<Code>1660</Code>
+				<Text>Indoor water sports, n.f.d.</Text>
+			</Value>
+			<Value>
+				<Code>1661</Code>
+				<Text>Diving (board)</Text>
+			</Value>
+			<Value>
+				<Code>1662</Code>
+				<Text>Swimming</Text>
+			</Value>
+			<Value>
+				<Code>1663</Code>
+				<Text>Synchronized Swimming</Text>
+			</Value>
+			<Value>
+				<Code>1671</Code>
+				<Text>Table tennis</Text>
+			</Value>
+			<Value>
+				<Code>1681</Code>
+				<Text>Tennis (Indoor and outdoor)</Text>
+			</Value>
+			<Value>
+				<Code>1691</Code>
+				<Text>Tenpin bowling</Text>
+			</Value>
+			<Value>
+				<Code>1701</Code>
+				<Text>Touch football</Text>
+			</Value>
+			<Value>
+				<Code>1709</Code>
+				<Text>Football (other)</Text>
+			</Value>
+			<Value>
+				<Code>1711</Code>
+				<Text>Trail biking (motor sports)</Text>
+			</Value>
+			<Value>
+				<Code>1712</Code>
+				<Text>Dirt bike riding (motor sports)</Text>
+			</Value>
+			<Value>
+				<Code>1721</Code>
+				<Text>Triathlons</Text>
+			</Value>
+			<Value>
+				<Code>1731</Code>
+				<Text>Volleyball (Indoor and outdoor)</Text>
+			</Value>
+			<Value>
+				<Code>1732</Code>
+				<Text>Newcombe ball</Text>
+			</Value>
+			<Value>
+				<Code>1741</Code>
+				<Text>Walking for exercise</Text>
+			</Value>
+			<Value>
+				<Code>1751</Code>
+				<Text>Water polo</Text>
+			</Value>
+			<Value>
+				<Code>1760</Code>
+				<Text>Motorised water sports, n.f.d.</Text>
+			</Value>
+			<Value>
+				<Code>1761</Code>
+				<Text>Jet skiing</Text>
+			</Value>
+			<Value>
+				<Code>1762</Code>
+				<Text>Powerboating</Text>
+			</Value>
+			<Value>
+				<Code>1763</Code>
+				<Text>Water-skiing</Text>
+			</Value>
+			<Value>
+				<Code>1764</Code>
+				<Text>Wakeboarding</Text>
+			</Value>
+			<Value>
+				<Code>1770</Code>
+				<Text>Non-motorised outdoor water sports, n.f.d.</Text>
+			</Value>
+			<Value>
+				<Code>1771</Code>
+				<Text>Canoe polo</Text>
+			</Value>
+			<Value>
+				<Code>1772</Code>
+				<Text>Water volleyball</Text>
+			</Value>
+			<Value>
+				<Code>1773</Code>
+				<Text>Underwater hockey</Text>
+			</Value>
+			<Value>
+				<Code>1774</Code>
+				<Text>White water rafting</Text>
+			</Value>
+			<Value>
+				<Code>1775</Code>
+				<Text>Dragon boat racing</Text>
+			</Value>
+			<Value>
+				<Code>1781</Code>
+				<Text>Competition weight-lifting</Text>
+			</Value>
+			<Value>
+				<Code>1782</Code>
+				<Text>Powerlifting</Text>
+			</Value>
+			<Value>
+				<Code>1791</Code>
+				<Text>Bodybuilding</Text>
+			</Value>
+			<Value>
+				<Code>1792</Code>
+				<Text>Weight training (for fitness - other)</Text>
+			</Value>
+			<Value>
+				<Code>1800</Code>
+				<Text>Board sports, n.f.d.</Text>
+			</Value>
+			<Value>
+				<Code>1801</Code>
+				<Text>Wind surfing</Text>
+			</Value>
+			<Value>
+				<Code>1802</Code>
+				<Text>Sailboarding</Text>
+			</Value>
+			<Value>
+				<Code>1803</Code>
+				<Text>Kite surfing</Text>
+			</Value>
+			<Value>
+				<Code>1811</Code>
+				<Text>Wood chopping</Text>
+			</Value>
+			<Value>
+				<Code>1821</Code>
+				<Text>Wrestling</Text>
+			</Value>
+			<Value>
+				<Code>1831</Code>
+				<Text>Yoga</Text>
+			</Value>
+			<Value>
+				<Code>1840</Code>
+				<Text>Other sporting activities, n.f.d.</Text>
+			</Value>
+			<Value>
+				<Code>1841</Code>
+				<Text>Pigeon racing</Text>
+			</Value>
+			<Value>
+				<Code>1842</Code>
+				<Text>Playing</Text>
+			</Value>
+			<Value>
+				<Code>1843</Code>
+				<Text>Multidisciplinary events</Text>
+			</Value>
+			<Value>
+				<Code>1844</Code>
+				<Text>Radio controlled model car/boat/plane racing</Text>
+			</Value>
+			<Value>
+				<Code>1845</Code>
+				<Text>Cheerleading</Text>
+			</Value>
+			<Value>
+				<Code>1846</Code>
+				<Text>Modern pentathlon</Text>
+			</Value>
+			<Value>
+				<Code>1847</Code>
+				<Text>Campdrafting</Text>
+			</Value>
+			<Value>
+				<Code>1848</Code>
+				<Text>Biathlon</Text>
+			</Value>
+			<Value>
+				<Code>1849</Code>
+				<Text>Other sporting activities</Text>
+			</Value>
+			<Value>
+				<Code>2010</Code>
+				<Text>Leadership Activities</Text>
+			</Value>
+			<Value>
+				<Code>2011</Code>
+				<Text>Team captain</Text>
+			</Value>
+			<Value>
+				<Code>2012</Code>
+				<Text>Student representative council president</Text>
+			</Value>
+			<Value>
+				<Code>2013</Code>
+				<Text>Class captain</Text>
+			</Value>
+			<Value>
+				<Code>2014</Code>
+				<Text>Class officer</Text>
+			</Value>
+			<Value>
+				<Code>2015</Code>
+				<Text>Student representative council officer</Text>
+			</Value>
+			<Value>
+				<Code>2016</Code>
+				<Text>School captain</Text>
+			</Value>
+			<Value>
+				<Code>2017</Code>
+				<Text>Duke of Edinburgh Award</Text>
+			</Value>
+			<Value>
+				<Code>2019</Code>
+				<Text>Other student leadership</Text>
+			</Value>
+			<Value>
+				<Code>3010</Code>
+				<Text>Youth Development, n.f.d.</Text>
+			</Value>
+			<Value>
+				<Code>3011</Code>
+				<Text>Army Cadets</Text>
+			</Value>
+			<Value>
+				<Code>3012</Code>
+				<Text>Airforce Cadets</Text>
+			</Value>
+			<Value>
+				<Code>3013</Code>
+				<Text>Other Cadets</Text>
+			</Value>
+			<Value>
+				<Code>3014</Code>
+				<Text>Boy Scouts</Text>
+			</Value>
+			<Value>
+				<Code>3015</Code>
+				<Text>Girl Scouts</Text>
+			</Value>
+			<Value>
+				<Code>3019</Code>
+				<Text>Other youth development group</Text>
+			</Value>
+			<Value>
+				<Code>4011</Code>
+				<Text>Music - vocal</Text>
+			</Value>
+			<Value>
+				<Code>4012</Code>
+				<Text>Choir</Text>
+			</Value>
+			<Value>
+				<Code>4019</Code>
+				<Text>Other vocal ensemble</Text>
+			</Value>
+			<Value>
+				<Code>4021</Code>
+				<Text>Music - instrumental</Text>
+			</Value>
+			<Value>
+				<Code>4022</Code>
+				<Text>Concert Band</Text>
+			</Value>
+			<Value>
+				<Code>4023</Code>
+				<Text>Orchestra</Text>
+			</Value>
+			<Value>
+				<Code>4024</Code>
+				<Text>Jazz ensemble</Text>
+			</Value>
+			<Value>
+				<Code>4025</Code>
+				<Text>Chamber ensemble</Text>
+			</Value>
+			<Value>
+				<Code>4029</Code>
+				<Text>Other instrumental ensemble</Text>
+			</Value>
+			<Value>
+				<Code>4031</Code>
+				<Text>Music - theory and composition</Text>
+			</Value>
+			<Value>
+				<Code>4039</Code>
+				<Text>Other Music</Text>
+			</Value>
+			<Value>
+				<Code>4041</Code>
+				<Text>Theatre/drama</Text>
+			</Value>
+			<Value>
+				<Code>4042</Code>
+				<Text>Eisteddfod</Text>
+			</Value>
+			<Value>
+				<Code>4043</Code>
+				<Text>Annual music production</Text>
+			</Value>
+			<Value>
+				<Code>4044</Code>
+				<Text>Other performing arts</Text>
+			</Value>
+			<Value>
+				<Code>5010</Code>
+				<Text>Arts activities, n.f.d.</Text>
+			</Value>
+			<Value>
+				<Code>5011</Code>
+				<Text>Art and graphic design</Text>
+			</Value>
+			<Value>
+				<Code>5012</Code>
+				<Text>Painting</Text>
+			</Value>
+			<Value>
+				<Code>5013</Code>
+				<Text>Embroidery</Text>
+			</Value>
+			<Value>
+				<Code>5019</Code>
+				<Text>Other arts activity</Text>
+			</Value>
+			<Value>
+				<Code>5020</Code>
+				<Text>Communications, n.f.d.</Text>
+			</Value>
+			<Value>
+				<Code>5021</Code>
+				<Text>Journalism</Text>
+			</Value>
+			<Value>
+				<Code>5022</Code>
+				<Text>Broadcasting</Text>
+			</Value>
+			<Value>
+				<Code>5023</Code>
+				<Text>School Year book</Text>
+			</Value>
+			<Value>
+				<Code>5024</Code>
+				<Text>Literary publications</Text>
+			</Value>
+			<Value>
+				<Code>5025</Code>
+				<Text>Speech/debate</Text>
+			</Value>
+			<Value>
+				<Code>5029</Code>
+				<Text>Other communications</Text>
+			</Value>
+			<Value>
+				<Code>6011</Code>
+				<Text>Book Club</Text>
+			</Value>
+			<Value>
+				<Code>6012</Code>
+				<Text>Drama club</Text>
+			</Value>
+			<Value>
+				<Code>6013</Code>
+				<Text>Language club</Text>
+			</Value>
+			<Value>
+				<Code>6014</Code>
+				<Text>Art club</Text>
+			</Value>
+			<Value>
+				<Code>6019</Code>
+				<Text>Other Cultural club</Text>
+			</Value>
+			<Value>
+				<Code>6021</Code>
+				<Text>Technology Students</Text>
+			</Value>
+			<Value>
+				<Code>6022</Code>
+				<Text>Computer club</Text>
+			</Value>
+			<Value>
+				<Code>6023</Code>
+				<Text>Science Club</Text>
+			</Value>
+			<Value>
+				<Code>6029</Code>
+				<Text>Other Technology Club</Text>
+			</Value>
+			<Value>
+				<Code>6031</Code>
+				<Text>Health Occupations Students</Text>
+			</Value>
+			<Value>
+				<Code>6032</Code>
+				<Text>Chess club</Text>
+			</Value>
+			<Value>
+				<Code>6039</Code>
+				<Text>Other club or organization</Text>
+			</Value>
+			<Value>
+				<Code>7011</Code>
+				<Text>Peer counseling</Text>
+			</Value>
+			<Value>
+				<Code>7012</Code>
+				<Text>Tutoring</Text>
+			</Value>
+			<Value>
+				<Code>7013</Code>
+				<Text>Formal/Social/Debutante Ball</Text>
+			</Value>
+			<Value>
+				<Code>7019</Code>
+				<Text>Other general activity</Text>
+			</Value>			 
+		</Values>
+	</CodeSet>    <!-- Activity Involvement Code -->
+	<CodeSet>
+		<Intro>
+			<p/>
+		</Intro>
+		<ID>Activity Type</ID>
+		<Values>
+			<Value>
+				<Code>0750</Code>
+				<Text>Co-curricular activity</Text>
+			</Value>
+			<Value>
+				<Code>0751</Code>
+				<Text>Extra-curricular Activity</Text>
+			</Value>
+			<Value>
+				<Code>9999</Code>
+				<Text>Other</Text>
+			</Value>
+			 
+		</Values>
+	</CodeSet>    <!-- Activity Type -->
+	
+</IncludeGroup>
+

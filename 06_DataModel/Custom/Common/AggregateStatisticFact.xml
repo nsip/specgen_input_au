@@ -46,8 +46,8 @@
 
   <Item>
     <Element>Excluded</Element>
-    <privacyRating>Low</privacyRating>
     <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
     <Description></Description>
     <Values>
       <Value>

@@ -16,9 +16,9 @@
   </Item>
   <Item>
     <Attribute>RefId</Attribute>
-    <Description>The ID (GUID) that uniquely identifies the instance of the object.</Description>
     <Characteristics>M</Characteristics>
 	 <privacyRating>Low</privacyRating>
+    <Description>The ID (GUID) that uniquely identifies the instance of the object.</Description>
     <Type ref='CommonTypes' name='RefIdType'/>
   </Item>
 

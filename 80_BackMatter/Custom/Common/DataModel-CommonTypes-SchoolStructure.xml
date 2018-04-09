@@ -1,0 +1,1210 @@
+<IncludeGroup
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	
+	xmlns="http://sifassociation.org/SpecGen">
+
+	<!-- IncludeGroup is syntactic sugar that makes this a well-formed XML file that can
+		 be validated separately; and allows the xi:include to have parse="xml"  SpecGen tool ignores it. -->
+
+
+	<!-- CommonElement types for the School Structure domains:
+		 - SchooLInfo
+		 - LEAInfo
+		 - RoomInfo
+		 - TermInfo
+		 - SchoolPrograms
+		 - SchoolCourseInfo
+		 - SessionInfo
+		 - TeachingGroup
+		 - StaffAssignment -->
+	
+<if intl="au">
+<CommonElement name="CalendarSummaryListType" type="true" dm="true">
+		  <Item>
+			<Element>CalendarSummaryListType</Element>
+			<Characteristics>O</Characteristics>
+			<List mode="List">
+		</List>
+		</Item>
+		 <Item>
+			<Element>CalendarSummaryRefId</Element>
+			<Characteristics>OR</Characteristics>
+			<Description>
+			  <p>The ID (GUID) of a calendar summary to which this Staff Member is associated with.</p>
+			</Description>
+			<Type ref="CommonTypes" name="IdRefType"></Type>
+		  </Item>
+      </CommonElement>  
+<CommonElement name="StaffActivityExtensionType" type="true" dm="true">
+	<Item>
+		<Element>StaffActivityExtensionType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The purpose of the Teacher's role as related to students. Equivalent to 'JobFunction' in US Object.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>Code</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Code representing the type of staff activity undertaken.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsStaffActivityType"/>
+	</Item>
+	<Item>
+		<Element>OtherCodeList</Element>
+		<Characteristics>O</Characteristics>
+		<Type ref="CommonTypes" name="OtherCodeListType"/>
+	</Item>
+</CommonElement>
+<CommonElement name="TotalEnrollmentsType" type="true" dm="true">
+	<Item>
+		<Element>TotalEnrollmentsType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Optional School/Campus enrolments.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>Girls</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Number of enrolled Female students.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>Boys</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Number of enrolled Male students.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>TotalStudents</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Total number of enrolled students.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+</CommonElement>
+<CommonElement name="CampusContainerType" type="true" dm="true">
+	<Item>
+		<Element>CampusContainerType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Optional campus details.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>ParentSchoolId</Element>
+		<Characteristics>C</Characteristics>
+		<Description>
+			<p>Parent School Id needs to be supplied if this Campus is not the Admin Campus.  This number should be the state-assigned identifier for this school or the locally-assigned identifier for this school.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>SchoolCampusId</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Specific Campus Id  - This may be the same as the School Local Id.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>CampusType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Type of campus.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsSchoolLevelType"/>
+	</Item>
+	<Item>
+		<Element>AdminStatus</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Is this campus the Admin Campus?</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"/>
+	</Item>
+</CommonElement>
+<CommonElement name="StaffSubjectListType" type="true" dm="true">
+	<Item>
+		<Element>StaffSubjectListType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Subject(s) Staff member is eligible to teach.</p>
+		</Description>
+		<List mode="List">
+    </List>
+	</Item>
+	<Item>
+		<Element>StaffSubject</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>This element contains Staff subjects they are eligible to teach together with the teaching preference.</p>
+		</Description>
+		<Type ref="CommonTypes" name="StaffSubjectType"/>
+	</Item>
+</CommonElement>
+<CommonElement name="StaffSubjectType" type="true" dm="true">
+	<Item>
+		<Element>StaffSubjectType</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>This element contains Staff subjects they are eligible to teach together with the teaching preference.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>PreferenceNumber</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Priority of Subject to Teach.</p>
+		</Description>
+		<Type name="xs:unsignedInt"/>
+	</Item>
+	<Item>
+		<Element>SubjectLocalId</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Local Subject Id</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"/>
+	</Item>
+	<Item>
+		<Element>TimeTableSubjectRefId</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>RefId of TimeTableSubject</p>
+		</Description>
+		<Type ref="CommonTypes" name="RefIdType"/>
+	</Item>
+</CommonElement>
+<CommonElement name="StaffListType" type="true" dm="true">
+	<Item>
+		<Element>StaffListType</Element>
+		<Characteristics>O</Characteristics>
+		<List mode="List">
+    </List>
+	</Item>
+	<Item>
+		<Element>StaffPersonalRefId</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>GUID that identifies the staff person assigned to this room (e.g. the homeroom teacher).</p>
+		</Description>
+		<Type ref="CommonTypes" name="IdRefType"/>
+	</Item>
+</CommonElement>
+<CommonElement name="SchoolProgramListType" type="true" dm="true">
+	<Item>
+		<Element>SchoolProgramListType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>List of School Programs</p>
+		</Description>
+		<List mode="List"/>
+	</Item>
+	<Item>
+		<Element>Program</Element>
+		<Characteristics>OR</Characteristics>
+		<Description>
+			<p/>
+		</Description>
+		<Type ref="CommonTypes" name="SchoolProgramType"/>
+	</Item>
+</CommonElement>
+<CommonElement name="SchoolProgramType" type="true" dm="true">
+	<Item>
+		<Element>SchoolProgramType</Element>
+		<Characteristics>OR</Characteristics>
+		<Description>
+			<p/>
+		</Description>
+	</Item>
+	<Item>
+		<Element>Category</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Program Category</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>Type</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Program Type</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>OtherCodeList</Element>
+		<Characteristics>O</Characteristics>
+		<Type ref="CommonTypes" name="OtherCodeListType"/>
+	</Item>
+</CommonElement>
+<CommonElement name="TeachingGroupPeriodListType" type="true" dm="true">
+	<Item>
+		<Element>TeachingGroupPeriodListType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>A List of schedule information that can be published by an SIS which is a subset of information available in the TimeTableCell object.</p>
+			<p>PeriodId or StartTime must be provided.</p>
+		</Description>
+		<List mode="List"/>
+	</Item>
+	<Item>
+		<Element>TeachingGroupPeriod</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>Timeslot information that can be published by an SIS which is a subset of information available in the TimeTableCell object.</p>
+		</Description>
+		<Type ref="CommonTypes" name="TeachingGroupPeriodType"/>
+	</Item>
+</CommonElement>
+<CommonElement name="TeachingGroupPeriodType" type="true" dm="true">
+	<Item>
+		<Element>TeachingGroupPeriodType</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>Timeslot information that can be published by an SIS which is a subset of information available in the TimeTableCell object.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>TimeTableCellRefId</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>If the TimeTableCell has been previously published, this reference can be provided as a connection to more detailed schedule information.</p>
+		</Description>
+		<Type ref="CommonTypes" name="IdRefType"/>
+	</Item>
+	<Item>
+		<Element>RoomNumber</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Room number as presented to the user/application.</p>
+		</Description>
+		<Type ref="CommonTypes" name="HomeroomNumberType"/>
+	</Item>
+	<Item>
+		<Element>StaffLocalId</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Local Id of Staff member scheduled to take this class.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"/>
+	</Item>
+	<Item>
+		<Element>DayId</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Day Id </p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"/>
+	</Item>
+	<Item>
+		<Element>PeriodId</Element>
+		<Characteristics>C</Characteristics>
+		<Description>
+			<p>Period Id within the Day Id. Either Period Id or starting time must be provided.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"/>
+	</Item>
+	<Item>
+		<Element>StartTime</Element>
+		<Characteristics>C</Characteristics>
+		<Description>
+			<p>Starting time of class within the Day Id. Either Period Id or starting time must be provided.</p>
+		</Description>
+		<Type name="xs:time"/>
+	</Item>
+	<Item>
+		<Element>CellType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Type of Lesson/Session  eg Teaching, Lunch etc</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+</CommonElement>
+<CommonElement name="TeacherListType" type="true" dm="true">
+	<Item>
+		<Element>TeacherListType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>A List of teachers associated with the group –  may or may not include the teacher timetabled in the schedule.</p>
+		</Description>
+		<List mode="List"/>
+	</Item>
+	<Item>
+		<Element>TeachingGroupTeacher</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>Teacher associated with the Teaching group –  may or may not be the teacher timetabled in the schedule</p>
+		</Description>
+		<Type ref="CommonTypes" name="TeachingGroupTeacherType"/>
+	</Item>
+</CommonElement>
+<CommonElement name="TeachingGroupTeacherType" type="true" dm="true">
+	<Item>
+		<Element>TeachingGroupTeacherType</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>Teacher associated with the Teaching group –  may or may not be the teacher timetabled in the schedule</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>StaffPersonalRefId</Element>
+		<Characteristics>C</Characteristics>
+		<Description>
+			<p>GUID from the StaffPersonal Object that identifies the Staff member.  Either StaffPersonalRefidId or StaffLocalId should be supplied.</p>
+		</Description>
+		<Type ref="CommonTypes" relationship="" count="?:1" name="IdRefType"/>
+	</Item>
+	<Item>
+		<Element>StaffLocalId</Element>
+		<Characteristics>C</Characteristics>
+		<Description>
+			<p>LocalId of the Staff member. Either StaffPersonalRefidId or StaffLocalId should be supplied.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"/>
+	</Item>
+	<Item>
+		<Element>Name</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Name of Staff Member.</p>
+		</Description>
+		<Type ref="CommonTypes" name="NameOfRecordType"/>
+	</Item>
+	<Item>
+		<Element>Association</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Association with the Teaching Group (free format for this release)</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+</CommonElement>
+<CommonElement name="StudentListType" type="true" dm="true">
+	<Item>
+		<Element>StudentListType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>List of Students in this Teaching Group</p>
+		</Description>
+		<List mode="List"/>
+	</Item>
+	<Item>
+		<Element>TeachingGroupStudent</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>Students who belong to the TeachingGroup</p>
+		</Description>
+		<Type ref="CommonTypes" name="TeachingGroupStudentType"/>
+	</Item>
+</CommonElement>
+<CommonElement name="TeachingGroupStudentType" type="true" dm="true">
+	<Item>
+		<Element>TeachingGroupStudentType</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>Students who belong to the TeachingGroup</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>StudentPersonalRefId</Element>
+		<Characteristics>C</Characteristics>
+		<Description>
+			<p>GUID from the StudentPersonal that identifies the student. Either StudentPersonalRefidId or StudentLocalId should be supplied.</p>
+		</Description>
+		<Type ref="CommonTypes" relationship="" count="?:1" name="IdRefType"/>
+	</Item>
+	<Item>
+		<Element>StudentLocalId</Element>
+		<Characteristics>C</Characteristics>
+		<Description>
+			<p>Local Id of the Student. Either StudentPersonalRefidId or StudentLocalId should be supplied.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"/>
+	</Item>
+	<Item>
+		<Element>Name</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Name of student</p>
+		</Description>
+		<Type ref="CommonTypes" name="NameOfRecordType"/>
+	</Item>
+</CommonElement>
+<CommonElement name="SchoolGroupListType" type="true" dm="true">
+	<Item>
+		<Element>SchoolGroupListType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p/>
+		</Description>
+		<List mode="List"/>
+	</Item>
+	<Item>
+		<Element>SchoolGroup</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>Repeatable element containing a local identifier to identify a loosely connected group of schools. eg. YarraValley Cluster</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"/>
+	</Item>
+</CommonElement>
+<CommonElement name="YearLevelEnrollmentListType" type="true" dm="true">
+	<Item>
+		<Element>YearLevelEnrollmentListType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>List of number of students enrolled per year level.</p>
+		</Description>
+		<List mode="List">
+    </List>
+	</Item>
+	<Item>
+		<Element>YearLevelEnrollment</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>Container for Year Level of Enrolments.</p>
+		</Description>
+		<Type ref="CommonTypes" name="YearLevelEnrollmentType"/>
+	</Item>
+</CommonElement>
+<CommonElement name="YearLevelEnrollmentType" type="true" dm="true">
+	<Item>
+		<Element>YearLevelEnrollmentType</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>Container for Year Level of Enrolments.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>Year</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Year level for which students are counted.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsYearLevelCodeType"/>
+	</Item>
+	<Item>
+		<Element>Enrollment</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Number of students enrolled in the year level.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+</CommonElement>
+<CommonElement name="SchoolFocusListType" type="true" dm="true">
+	<Item>
+		<Element>SchoolFocusListType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>List containing the education focus codes of the campus/school.</p>
+		</Description>
+		<List mode="List">
+    </List>
+	</Item>
+	<Item>
+		<Element>SchoolFocus</Element>
+		<Characteristics>MR</Characteristics>
+		<!--xs:maxOccurs value="6"/-->
+		<Description>
+			<p>The type of educational institution as classified by its focus.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsSchoolFocusCodeType"/>
+	</Item>
+</CommonElement>
+<CommonElement name="OperationalStatusType" type="true" dm="true">
+	<Intro>
+		<p>This common element contains status information for an institution.</p>
+	</Intro>
+	<Item>
+		<Element>OperationalStatusType</Element>
+		<Description>
+			<p>Operational condition of an institution.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsOperationalStatusType"/>
+	</Item>
+	<xhtml:Example xmlns="" name="Operational Status Example">
+		<OperationalStatus>O</OperationalStatus>
+	</xhtml:Example>
+</CommonElement>
+<CommonElement name="OtherIdListType" type="true" dm="true">
+	<Item>
+		<Element>OtherIdListType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Lists all "other" identifiers associated with the entity.</p>
+		</Description>
+		<List mode="List">
+        </List>
+	</Item>
+	<Item>
+		<Element>OtherId</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>Lists an "other" identifier associated with the entity.</p>
+		</Description>
+		<Type ref="CommonTypes" name="OtherIdType"/>
+	</Item>
+</CommonElement>
+<CommonElement name="OtherIdType" type="true" dm="true">
+	<Item>
+		<Element>OtherIdType</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>Lists an "other" identifier associated with the entity.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Attribute>Type</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Code that defines the type of this other ID.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+</CommonElement>
+<CommonElement name="SchoolURLType" type="true" dm="true">
+	<Item>
+		<Element>SchoolURLType</Element>
+		<Description>
+			<p>URL for a school.</p>
+		</Description>
+		<Type name="xs:anyURI"/>
+	</Item>
+	<xhtml:Example xmlns="" name="School URL Example">
+		<SchoolURL>http://www.lincolnhs.edu</SchoolURL>
+	</xhtml:Example>
+</CommonElement>
+<CommonElement name="PrincipalInfoType" type="true" dm="true">
+	<Item>
+		<Element>PrincipalInfoType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Information about the campus or school principal.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>ContactName</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The name of the principal.</p>
+		</Description>
+		<Type ref="CommonTypes" name="NameOfRecordType"/>
+	</Item>
+	<Item>
+		<Element>ContactTitle</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The principal's title.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>PhoneNumberList</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The principal's phone number(s).</p>
+		</Description>
+		<Type ref="CommonTypes" name="PhoneNumberListType"/>
+	</Item>
+	<Item>
+		<Element>EmailList</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The principal's e-mail address(es).</p>
+		</Description>
+		<Type ref="CommonTypes" name="EmailListType"/>
+	</Item>
+	<xhtml:Example xmlns="" name="Principal Info Example">
+		<PrincipalInfo>
+			<ContactName Type="LGL">
+				<Title>Mr</Title>
+				<FamilyName>Miller</FamilyName>
+				<GivenName>James</GivenName>
+				<MiddleName>Frank</MiddleName>
+				<Suffix>Jr.</Suffix>
+				<FullName>Mr James Frank Miller Jr.</FullName>
+			</ContactName>
+			<ContactTitle>School Principal</ContactTitle>
+			<PhoneNumberList>
+				<PhoneNumber Type="0096">
+					<Number>03 9637-2000</Number>
+					<Extension>72345</Extension>
+					<ListedStatus>Y</ListedStatus>
+				</PhoneNumber>
+			</PhoneNumberList>
+			<EmailList>
+				<Email Type="01">jmiller@lsc.vic.edu.au</Email>
+				<Email Type="02">jmiller@yahoo.com.au</Email>
+			</EmailList>
+		</PrincipalInfo>
+	</xhtml:Example>
+</CommonElement>
+<CommonElement name="SchoolContactType" type="true" dm="true">
+<Item>
+		<Element>SchoolContactType</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>Information on contact persons for this school.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>PublishInDirectory</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Indicates whether or not this school contact's information should be published in a directory of school information.</p>
+		</Description>
+		<Type ref="CommonTypes" name="PublishInDirectoryType"/>
+	</Item>
+	<Item>
+		<Element>ContactInfo</Element>
+		<Characteristics>M</Characteristics>
+		<Type ref="CommonTypes" name="ContactInfoType"/>
+	</Item>
+</CommonElement>
+<CommonElement name="SchoolContactListType" type="true" dm="true">
+	<Item>
+		<Element>SchoolContactListType</Element>
+		<Description>
+			<p>A list of contact persons associated with a school.</p>
+		</Description>
+		<List mode="List">
+    </List>
+	</Item>
+	<Item>
+		<Element>SchoolContact</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>Information on contact persons for this school.</p>
+		</Description>
+		<Type ref="CommonTypes" name="SchoolContactType"/>
+	</Item>
+	
+	<xhtml:Example xmlns="" name="School Contact List Example">
+		<SchoolContactList>
+			<SchoolContact>
+				<PublishInDirectory>Y</PublishInDirectory>
+				<ContactInfo>
+					<Name Type="LGL">
+						<FamilyName>Woodall</FamilyName>
+						<GivenName>Charles</GivenName>
+						<MiddleName>William</MiddleName>
+					</Name>
+					<PositionTitle>Superintendent</PositionTitle>
+					<EmailList>
+						<Email Type="01">drseuss@whoville.k12.state.us</Email>
+					</EmailList>
+					<PhoneNumberList>
+						<PhoneNumber Type="0096">
+							<Number>(08) 8555-0102</Number>
+						</PhoneNumber>
+					</PhoneNumberList>
+				</ContactInfo>
+			</SchoolContact>
+		</SchoolContactList>
+	</xhtml:Example>
+</CommonElement>
+<CommonElement name="SubjectAreaListType" type="true" dm="true">
+	<Item>
+		<Element>SubjectAreaListType</Element>
+		<Description>
+			<p>A list of subject areas.</p>
+		</Description>
+		<List mode="List">
+    </List>
+	</Item>
+	<Item>
+		<Element>SubjectArea</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>Subject matter of a student's study.</p>
+		</Description>
+		<Type ref="CommonTypes" name="SubjectAreaType"/>
+	</Item>
+	<xhtml:Example xmlns="" name="Subject Area List Example">
+		<SubjectAreaList>
+			<SubjectArea>
+				<Code>05</Code>
+				<OtherCodeList>
+					<OtherCode Codeset="Text">Graphic Arts</OtherCode>
+					<OtherCode Codeset="Local">GRA</OtherCode>
+				</OtherCodeList>
+			</SubjectArea>
+			<SubjectArea>
+				<Code>06</Code>
+				<OtherCodeList>
+					<OtherCode Codeset="Text">Visual Arts</OtherCode>
+				</OtherCodeList>
+			</SubjectArea>
+		</SubjectAreaList>
+	</xhtml:Example>
+</CommonElement>
+<CommonElement name="SubjectAreaType" type="true" dm="true">
+	<Item>
+		<Element>SubjectAreaType</Element>
+		<Description>
+			<p>Subject matter.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>Code</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The subject area details</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>OtherCodeList</Element>
+		<Characteristics>O</Characteristics>
+		<Type ref="CommonTypes" name="OtherCodeListType"/>
+	</Item>
+	<xhtml:Example xmlns="" name="Subject Area Example">
+		<SubjectArea>
+			<Code>05</Code>
+			<OtherCodeList>
+				<OtherCode Codeset="Text">Graphic Arts</OtherCode>
+			</OtherCodeList>
+		</SubjectArea>
+	</xhtml:Example>
+</CommonElement>
+<CommonElement name="HomeroomNumberType" type="true" dm="true">
+	<Item>
+		<Element>HomeroomNumberType</Element>
+		<Description>
+			<p>
+        Common element used to specify the locally-defined number or identifier for a homeroom. It is used in objects such
+        as RoomInfo and StudentSnapshot.
+      </p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<xhtml:Example xmlns="" name="Home Room Number Example">
+		<HomeroomNumber>A-204</HomeroomNumber>
+	</xhtml:Example>
+</CommonElement>
+
+<!-- LEA Info  - Local Educational Authority  -->
+<CommonElement name="AgencyType" type="true" dm="true">
+  <Item>
+    <Element>AgencyType</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The classification of the education agency within the geographic boundaries of a state according to the level of administrative and operational control.</p>
+    </Description>
+  </Item>
+  <Item>
+
+    <Element>Code</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Code indicating the operational/administrative level.</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsEducationAgencyTypeType"></Type>
+  </Item>
+  <Item>
+    <Element>OtherCodeList</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="OtherCodeListType"></Type>
+  </Item>
+ </CommonElement>
+<CommonElement name="LEAContactListType" type="true" dm="true">
+	<Item>
+		<Element>LEAContactListType</Element>
+		<Characteristics>O</Characteristics>
+		<List mode="List">
+    </List>
+	</Item>
+	<Item>
+		<Element>LEAContact</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>Information on contact persons for this LEA.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LEAContactType"/>
+	</Item>
+</CommonElement>
+<CommonElement name="LEAContactType" type="true" dm="true">
+	<Item>
+		<Element>LEAContactType</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>Information on contact persons for this LEA.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>PublishInDirectory</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Indicates whether or not this LEA contact's information should be published in a directory of LEA information.</p>
+		</Description>
+		<Type ref="CommonTypes" name="PublishInDirectoryType"/>
+	</Item>
+	<Item>
+		<Element>ContactInfo</Element>
+		<Characteristics>M</Characteristics>
+		<Type ref="CommonTypes" name="ContactInfoType"/>
+	</Item>
+</CommonElement>
+<CommonElement name="PublishInDirectoryType" type="true" dm="true">
+	<Intro>
+		<p>
+      This is a common element used to specify whether or not information (e.g., contact information) should be
+      published in a directory. 
+    </p>
+	</Intro>
+	<Item>
+		<Element>PublishInDirectoryType</Element>
+		<Description>
+			<p>Indicates whether or not information should be published in a directory.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"/>
+	</Item>
+	<xhtml:Example xmlns="" name="Publish In Directory Example">
+		<PublishInDirectory>Y</PublishInDirectory>
+	</xhtml:Example>
+</CommonElement>
+<CommonElement name="ContactInfoType" type="true" dm="true">
+	<Item>
+		<Element>ContactInfoType</Element>
+		<Description>
+			<p>Common element used to supply information for a contact person at a school, LEA, or other institution.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>Name</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>
+        
+      </p>
+		</Description>
+		<Type ref="CommonTypes" name="NameType"/>
+	</Item>
+	<Item>
+		<Element>PositionTitle</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The contact person's position title.</p>
+		</Description>
+		<ItemExample>Superintendent</ItemExample>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>Role</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Role played by this contact in this instance.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+		<ItemExample>Report Contact</ItemExample>
+		<ItemExample>Primary Contact</ItemExample>
+		<ItemExample>Alternate Contact</ItemExample>
+	</Item>
+	<Item>
+		<Element>Address</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Address of the contact.</p>
+		</Description>
+		<Type ref="CommonTypes" name="AddressType"/>
+	</Item>
+	<Item>
+		<Element>EmailList</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>List of Email elements.</p>
+		</Description>
+		<Type ref="CommonTypes" name="EmailListType"/>
+	</Item>
+	<Item>
+		<Element>PhoneNumberList</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>List of PhoneNumber elements.</p>
+		</Description>
+		<Type ref="CommonTypes" name="PhoneNumberListType"/>
+	</Item>
+	<xhtml:Example xmlns=""  name="Contact Info Example">
+		<ContactInfo>
+			<Name Type="LGL">
+				<FamilyName>Woodall</FamilyName>
+				<GivenName>Charles</GivenName>
+				<MiddleName>William</MiddleName>
+			</Name>
+			<PositionTitle>Superintendent</PositionTitle>
+			<EmailList>
+				<Email Type="01">drseuss@whoville.k12.state.us</Email>
+			</EmailList>
+			<PhoneNumberList>
+				<PhoneNumber Type="0096">
+					<Number>(02) 9555-0102</Number>
+				</PhoneNumber>
+			</PhoneNumberList>
+		</ContactInfo>
+	</xhtml:Example>
+</CommonElement>
+</if>
+
+<if intl="nz">
+	<CommonElement name="SchoolServiceType" type="true" dm="true">
+		<Item>
+			<Element>SchoolServiceType</Element>
+			<Description>
+				<p>Contains Organisation properties that are specific to Organisations
+				that are Providers of School education services.
+				</p>
+			</Description>
+		</Item>
+		<Item>
+			<Element>Decile</Element>
+			<Characteristics>M</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+				<p>A description of the socio-economic position of a school's
+				student community according to the MoE decile rating system.
+				</p>
+			</Description>
+			<Type name="xs:integer"/>
+			<ItemExample>5</ItemExample>
+			<Facets>
+				<xs:minInclusive value="1"/>
+				<xs:maxInclusive value="10"/>
+			</Facets>
+		</Item>    <!-- Decile -->
+		<Item>
+			<Element>CoEdStatus</Element>
+			<Characteristics>M</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+				<p>A summary of the genders accepted by the school</p>
+			</Description>
+			<Type ref="CodeSets" name="AUCodeSetsSchoolCoEdStatusType"/>
+		</Item>    <!-- CoEdStatus -->
+		<Item>
+			<Element>SchoolYearList</Element>
+			<Characteristics>M</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+				<p>A list of <code>SchoolYear</code> elements describing
+				the genders of students accepted for enrolment at each year
+				level.</p>
+			</Description>
+			<Type ref="CommonTypes" name="SchoolYearLevelListType"/>
+		</Item>    <!-- SchoolYearList-->
+		<Item>
+			<Element>NewEntrantPolicyList</Element>
+			<Characteristics>M</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+				<p>A list of recognised policy choices adopted by the School.</p>
+			</Description>
+			<Type ref="CommonTypes" name="EnactedPolicyListType"/>
+		</Item>    <!-- NewEntrantPolicyList -->
+		<Item>
+			<Element>DefinitionList</Element>
+			<Characteristics>M</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+				<p>A list of School definition descriptors that further describe the nature of a school</p>
+			</Description>
+			<Type ref="CommonTypes" name="SchoolDefinitionListType"/>
+		</Item>    <!-- DefinitionList -->
+		
+		<xhtml:Example xmlns="" name="NZ School Service Example">
+			<School>
+				<Decile>5</Decile>
+				<CoEdStatus>C2</CoEdStatus>
+				<NewEntrantPolicyList>
+					<EnactedPolicy>
+						<EffectiveTo>2018-12-31</EffectiveTo>
+						<Policy>AgeEntry</Policy>
+					</EnactedPolicy>
+					<EnactedPolicy>
+						<EffectiveFrom>2019-01-01</EffectiveFrom>
+						<Policy>CohortEntry</Policy>
+					</EnactedPolicy>
+				</NewEntrantPolicyList>
+			</School>
+		</xhtml:Example>
+	</CommonElement>
+	
+	<CommonElement name="SchoolYearLevelListType" type="true" dm="true">
+		<Item>
+			<Element>SchoolYearLevelListType</Element>
+			<Description>
+				<p>A list of <code>NZSchoolYearLevel</code> elements, describing the Year Levels
+				taught by the School, and the Co-Ed Status of each year level.
+				</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>SchoolYear</Element>
+			<Characteristics>OR</Characteristics>
+			<Description/>
+			<Type ref="CommonTypes" name="SchoolYearLevelType"/>
+		</Item>
+		<xhtml:Example xmlns="" name="NZ Year Level List Example">
+			<SchoolYearList>
+				<SchoolYear>
+					<YearLevel>9</YearLevel>
+					<Gender>M</Gender>
+				</SchoolYear>
+				<SchoolYear>
+					<YearLevel>10</YearLevel>
+					<Gender>M</Gender>
+				</SchoolYear>
+				<SchoolYear>
+					<YearLevel>11</YearLevel>
+					<Gender>C</Gender>
+				</SchoolYear>
+				<SchoolYear>
+					<YearLevel>12</YearLevel>
+					<Gender>C</Gender>
+				</SchoolYear>
+				<SchoolYear>
+					<YearLevel>13</YearLevel>
+					<Gender>C</Gender>
+					</SchoolYear>
+			</SchoolYearList>
+		</xhtml:Example>
+	</CommonElement>
+	<CommonElement name="SchoolYearLevelType" type="true" dm="true">
+		<Item>
+			<Element>SchoolYearLevelType</Element>
+			<Description>
+				<p>A descriptor for a particular Year Level offered by the school, including
+				detail of the gender of students that are accepted for enrolment in this year level.
+				</p>
+			</Description>
+		</Item>
+		<Item>
+			<Element>YearLevel</Element>			
+			<Characteristics>M</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+				<p>Which year level are we describing?</p>
+			</Description>
+			<Type ref="CodeSets" name="AUCodeSetsYearLevelCodeType"/>
+		</Item>
+		<Item>
+			<Element>Gender</Element>			
+			<Characteristics>M</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+				<p>Which genders are accepted for enrolment in this Year Level?</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsSchoolingGenderType"/>
+		</Item>
+	</CommonElement>
+
+	<CommonElement name="EnactedPolicyListType" type="true" dm="true">
+		<Item>
+			<Element>EnactedPolicyListType</Element>
+			<Description>
+				<p>A list of <code>PolicyChoice</code> elements, describing the
+				state legislated policy choices the school has adopted, and the
+				time-period of that adoption.
+				</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>EnactedPolicy</Element>
+			<Characteristics>OR</Characteristics>
+			<Description/>
+			<Type ref="CommonTypes" name="EnactedPolicyType"/>
+		</Item>
+		<xhtml:Example xmlns="" name="NZ Policy Choice List Example">
+			<NewEntrantPolicyList>
+				<EnactedPolicy>
+					<EffectiveTo>2018-12-31</EffectiveTo>
+					<Policy>AgeEntry</Policy>
+				</EnactedPolicy>
+				<EnactedPolicy>
+					<EffectiveFrom>2019-01-01</EffectiveFrom>
+					<Policy>CohortEntry</Policy>
+				</EnactedPolicy>
+			</NewEntrantPolicyList>
+		</xhtml:Example>
+	</CommonElement>
+	<CommonElement name="EnactedPolicyType" type="true" dm="true">
+		
+		<Item>
+			<Element>EnactedPolicyType</Element>
+			<Description>
+				<p>A descriptor for a particular enacted policy that has been adopted by a school.</p>
+			</Description>
+		</Item>
+		<Item>
+			<Element>EffectiveFrom</Element>			
+			<Characteristics>O</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+				<p>The date from which the school adopted the policy.  If not populated
+				then this is the current/original policy of the school.</p>
+			</Description>
+			<Type name="xs:date"/>
+		</Item>
+		<Item>
+			<Element>EffectiveTo</Element>			
+			<Characteristics>O</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+				<p>The date after which the school has no longer adopted the policy.  If not populated
+				then the school has no planned date to end the policy.</p>
+			</Description>
+			<Type name="xs:date"/>
+		</Item>
+		<Item>
+			<Element>Policy</Element>			
+			<Characteristics>M</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+				<p>Which recognised policy has been chosen?</p>
+			</Description>
+			<Type ref="CodeSets" name="NZCodeSetsPolicyChoiceType"/>
+		</Item>
+	</CommonElement>			
+
+	<CommonElement name="SchoolDefinitionListType" type="true" dm="true">
+		<Item>
+			<Element>SchoolDefinitionListType</Element>
+			<Description>
+				<p>A list of <code>Definition</code> elements, further describing the
+				nature of the school.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>Definition</Element>
+			<Characteristics>OR</Characteristics>
+			<Description/>
+			<Type ref="CodeSets" name="NZCodeSetsSchoolDefinitionType"/>
+		</Item>
+		<xhtml:Example xmlns="" name="NZ School Definition List Example">
+			<SchoolDefinitionList>
+				<Definition>103</Definition>
+				<Definition>108</Definition>
+			</SchoolDefinitionList>
+		</xhtml:Example>
+	</CommonElement>
+</if>
+</IncludeGroup>

@@ -10,8 +10,6 @@
   <Intro>
     This object contains information about Programs offered by a school.
   </Intro>
-  <EventsReported>true</EventsReported>
-  <Key>@RefId</Key>
   <Item>
     <Element>SchoolPrograms</Element>
 	<privacyRating>Low</privacyRating>
@@ -21,9 +19,9 @@
   </Item>
   <Item>
     <Attribute>RefId</Attribute>
-    <Description>GUID that uniquely identifies this instance of the object.</Description>
     <Characteristics>M</Characteristics>
 	<privacyRating>Low</privacyRating>
+    <Description>GUID that uniquely identifies this instance of the object.</Description>
     <Type ref='CommonTypes' name='RefIdType'/>
   </Item>
 

@@ -19,20 +19,20 @@
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
 	<privacyRating>Low</privacyRating>
-    <Type ref="CommonTypes" name="RefIdType"></Type>
     <Description>
       <p>The GUID that uniquely identifies an instance of the object.</p>
     </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
   </Item>
  
    <Item>
   <Element>TestItemContent</Element>
     <Characteristics>M</Characteristics>
 	<privacyRating>Low</privacyRating>
-    <Type ref="CommonTypes" name="NAPTestItemContentType"></Type>
     <Description>
       <p></p>
     </Description>
+    <Type ref="CommonTypes" name="NAPTestItemContentType"></Type>
   </Item>
 
   <Item>

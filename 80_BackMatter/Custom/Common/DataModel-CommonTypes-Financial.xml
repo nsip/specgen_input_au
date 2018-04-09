@@ -1,0 +1,226 @@
+﻿<IncludeGroup
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	
+	xmlns="http://sifassociation.org/SpecGen">
+
+	<!-- IncludeGroup is syntactic sugar that makes this a well-formed XML file that can
+		 be validated separately; and allows the xi:include to have parse="xml"  SpecGen tool ignores it. -->
+
+
+	<!-- Element types for the Financial domain includes:
+
+         PurchaseOrder
+         Invoice
+		 PaymentReceipt
+		 Journal
+		 ExpenseAccount
+         etc.
+	-->
+	
+  <CommonElement name="DebitOrCreditAmountType" type="true" dm="true">
+  <Item>
+    <Element>DebitOrCreditAmountType</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Gross amount to be billed, including any tax. Can be credit (e.g. for family credit notes, reimbursements, rebates).</p>
+    </Description>
+    <Type ref="CommonTypes" name="MonetaryAmountType"></Type>
+  </Item>
+  
+  <Item>
+    <Attribute>Type</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description></Description>
+    <Values>
+      <Value>
+        <Code>Debit</Code>
+      </Value>
+      <Value>
+        <Code>Credit</Code>
+      </Value>
+    </Values>
+  </Item>
+  </CommonElement>
+
+
+<CommonElement name="PurchasingItemsType" type="true" dm="true">
+	<Item>
+		<Element>PurchasingItemsType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Listing of line items from original purchase order. Included to indicate any variation between the items, item cost, or item quantity ordered, and what has been delivered.</p>
+		</Description>
+		<List mode="List"/>
+	</Item>
+	<Item>
+		<Element>PurchasingItem</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>Contains information about the item delivered.</p>
+		</Description>
+		<Type ref="CommonTypes" name="PurchasingItemType"/>
+	</Item>
+</CommonElement>
+<CommonElement name="PurchasingItemType" type="true" dm="true">
+	<Item>
+		<Element>PurchasingItemType</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>Contains information about the item delivered.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>ItemNumber</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Vendor item number.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>ItemDescription</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Description of the item.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>Quantity</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Quantity delivered.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>UnitCost</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Unit cost of the item.</p>
+		</Description>
+		<Type ref="CommonTypes" name="MonetaryAmountType"/>
+	</Item>
+	<Item>
+		<Element>TotalCost</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Total cost of the item.</p>
+		</Description>
+		<Type ref="CommonTypes" name="MonetaryAmountType"/>
+	</Item>
+	<Item>
+		<Element>QuantityDelivered</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Quantity delivered to date.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>CancelledOrder</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Indicates that the line item in the purchase order is a cancellation of a previous order, to prevent it from remaining outstanding. For example, if 10 widgets have been ordered, and only 7 widgets have been delivered, a new purchase order can be issued for 3 widgets; enabling this flag indicates that the order for the remaining 3 widgets is to be cancelled.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"/>
+	</Item>
+	<Item>
+		<Element>TaxRate</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Rate of tax included in the billed amount for the item.</p>
+		</Description>
+		<Type name="xs:decimal"/>
+	</Item>
+	<Item>
+		<Element>ExpenseAccounts</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p/>
+		</Description>
+		<Type ref="CommonTypes" name="ExpenseAccountsType"/>
+	</Item>
+</CommonElement>
+<CommonElement name="ExpenseAccountsType" type="true" dm="true">
+	<Item>
+		<Element>ExpenseAccountsType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p/>
+		</Description>
+		<List mode="List"/>
+	</Item>
+	<Item>
+		<Element>ExpenseAccount</Element>
+		<Characteristics>OR</Characteristics>
+		<Description>
+			<p>Account that is to be charged for the item.</p>
+		</Description>
+		<Type ref="CommonTypes" name="ExpenseAccountType"/>
+	</Item>
+</CommonElement>
+<CommonElement name="ExpenseAccountType" type="true" dm="true">
+	<Item>
+		<Element>ExpenseAccountType</Element>
+		<Characteristics>OR</Characteristics>
+		<Description>
+			<p>Account that is to be charged for the item.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>AccountCode</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Account code charged to this item.</p>
+		</Description>
+		<Type name="xs:token"/>
+	</Item>
+	<Item>
+		<Element>Amount</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Amount charged to this account.</p>
+		</Description>
+		<Type ref="CommonTypes" name="MonetaryAmountType"/>
+	</Item>
+	<Item>
+		<Element>FinancialAccountRefId</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Account being charged.</p>
+		</Description>
+		<Type ref="CommonTypes" name="IdRefType"/>
+	</Item>
+	<Item>
+		<Element>AccountingPeriod</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Accounting period for the charge.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"/>
+	</Item>
+</CommonElement>
+<CommonElement name="FinancialAccountRefIdListType" type="true" dm="true">
+	<Item>
+		<Element>FinancialAccountRefIdListType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>List of RefIds of financial account codes.</p>
+		</Description>
+		<List mode="List"/>
+	</Item>
+	<Item>
+		<Element>FinancialAccountRefId</Element>
+		<Characteristics>OR</Characteristics>
+		<Description>
+			<p>The chart of account codes associated with the invoice.</p>
+		</Description>
+		<Type ref="CommonTypes" name="IdRefType"/>
+	</Item>
+</CommonElement>
+
+</IncludeGroup>

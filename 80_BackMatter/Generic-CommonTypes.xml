@@ -1,8 +1,20 @@
+<IncludeGroup
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	
+	xmlns="http://sifassociation.org/SpecGen">
 
+	<!-- IncludeGroup is syntactic sugar that makes this a well-formed XML file that can
+		 be validated separately; and allows the xi:include to have parse="xml"  SpecGen tool ignores it. -->
+
+
+	<!-- Unused: ReportReportPackageType -->
+	<!--
 <CommonElement name="ReportPackageType" type="true">
   <Item>
     <Element>ReportPackageType</Element>
-    <Type ref="CommonTypes" complex="extension" name="AbstractContentPackageType"></Type>
     <Description>
       This package has exactly the same structure as <code>AbstractContentPackageType</code>.  <code>ReportPackage</code>
       can be used in addition to SIF objects specifically in reporting situations within <code>SIF_ReportObject</code>.
@@ -10,10 +22,15 @@
       in a <code>ReportManifest</code>.  It may be included in <code>SIF_ReportObject</code> as part of an external report
       definition.
     </Description>
+    <Type ref="CommonTypes" complex="extension" name="AbstractContentPackageType"></Type>
   </Item>
 </CommonElement>
+	-->
 
-<CommonElement type="true" name="AbstractContentPackageType">
+
+<if intl="au">	
+	<!-- Generic types not used by NZ (yet) -->	
+	<CommonElement type="true" name="AbstractContentPackageType">
   <Key>@RefId</Key>
   <Item>
     <Element>AbstractContentPackageType</Element>
@@ -29,33 +46,33 @@
   <Item>
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
-    <Type name="RefIdType"/>
     <Description>
       <p>The GUID that uniquely identifies an instance of the package.</p>
     </Description>
+    <Type name="RefIdType"/>
   </Item>
   <Choice>
   
     <Item>
       <Element>XMLData</Element>
       <Characteristics>C</Characteristics>
-      <Type>
-        <xs:any processContents="lax"/>
-      </Type>
       <Description>
         <p>Contains an arbitrary XML element, encoded in UTF-8.</p>
       </Description>
+      <Type>
+        <xs:any processContents="lax"/>
+      </Type>
     </Item>
     <Item>
       <Attribute>Description</Attribute>
       <Characteristics>O</Characteristics>
-      <Type name="xs:token"/>
       <Description>
         <p>
           Contains an optional description of the content or a processing hint with regard to its structure (e.g. named standard, file layout or XSD).
           Contents may be mandated in instances of this type, or types that follow the <code>AbstractContentPackageType</code> pattern.
         </p>
       </Description>
+      <Type name="xs:token"/>
     </Item>
     
     <Item>
@@ -89,22 +106,22 @@
     <Item>
       <Attribute>Description</Attribute>
       <Characteristics>O</Characteristics>
-      <Type name="xs:token"/>
       <Description>
         <p>
           Contains an optional description of the content or a processing hint with regard to its structure (e.g. named standard, file layout or XSD).
           Contents may be mandated in instances of this type, or types that follow the <code>AbstractContentPackageType</code> pattern.
         </p>
       </Description>
+      <Type name="xs:token"/>
     </Item>
     
     <Item>
       <Element>BinaryData</Element>
       <Characteristics>C</Characteristics>
-      <Type name="xs:base64Binary"/>
       <Description>
         <p>Contains the base64Binary encoding of binary or text data not encoded in UTF-8.</p>
       </Description>
+      <Type name="xs:base64Binary"/>
     </Item>
     <Item>
       <Attribute>MIMEType</Attribute>
@@ -129,13 +146,13 @@
     <Item>
       <Attribute>Description</Attribute>
       <Characteristics>O</Characteristics>
-      <Type name="xs:token"/>
       <Description>
         <p>
           Contains an optional description of the content or a processing hint with regard to its structure (e.g. named standard, file layout or XSD).
           Contents may be mandated in instances of this type, or types that follow the <code>AbstractContentPackageType</code> pattern.
         </p>
       </Description>
+      <Type name="xs:token"/>
     </Item>
     
     <Item>
@@ -158,27 +175,26 @@
     <Item>
       <Attribute>Description</Attribute>
       <Characteristics>O</Characteristics>
-      <Type name="xs:token"/>
       <Description>
         <p>
           Contains an optional description of the content or a processing hint with regard to its structure (e.g. named standard, file layout or XSD).
           Contents may be mandated in instances of this type, or types that follow the <code>AbstractContentPackageType</code> pattern.
         </p>
       </Description>
+      <Type name="xs:token"/>
     </Item>
 	<Item>
       <Element>/URL</Element>
       <Characteristics>M</Characteristics>
-      <Type name="xs:anyURI"/>
       <Description>
         <p>Location of external content.</p>
       </Description>
+      <Type name="xs:anyURI"/>
     </Item>
   </Choice>
   
 </CommonElement>
-
-<CommonElement type="true" name="AbstractContentElementType">
+    <CommonElement type="true" name="AbstractContentElementType">
 		  <Item>
 			<Element>AbstractContentElementType</Element>
 			<Description>
@@ -191,23 +207,23 @@
 			<Item>
 			  <Element>XMLData</Element>
 			  <Characteristics>C</Characteristics>
-			  <Type>
-				<xs:any processContents="lax"/>
-			  </Type>
 			  <Description>
 				<p>Contains an arbitrary XML element, encoded in UTF-8.</p>
 			  </Description>
+			  <Type>
+				<xs:any processContents="lax"/>
+			  </Type>
 			</Item>
 			<Item>
 			  <Attribute>Description</Attribute>
 			  <Characteristics>O</Characteristics>
-			  <Type name="xs:token"/>
 			  <Description>
 				<p>
 				  Contains an optional description of the content or a processing hint with regard to its structure (e.g. named standard, file layout or XSD).
 				  Contents may be mandated in instances of this type, or types that follow the <code>AbstractContentPackageType</code> pattern.
 				</p>
 			  </Description>
+			  <Type name="xs:token"/>
 			</Item>
 			<Item>
 			  <Element>TextData</Element>
@@ -240,21 +256,21 @@
 			<Item>
 			  <Attribute>Description</Attribute>
 			  <Characteristics>O</Characteristics>
-			  <Type name="xs:token"/>
 			  <Description>
 				<p>
 				  Contains an optional description of the content or a processing hint with regard to its structure (e.g. named standard, file layout or XSD).
 				  Contents may be mandated in instances of this type, or types that follow the <code>AbstractContentPackageType</code> pattern.
 				</p>
 			  </Description>
+			  <Type name="xs:token"/>
 			</Item>
 			<Item>
 			  <Element>BinaryData</Element>
 			  <Characteristics>C</Characteristics>
-			  <Type name="xs:base64Binary"/>
 			  <Description>
 				<p>Contains the base64Binary encoding of binary or text data not encoded in UTF-8.</p>
 			  </Description>
+			  <Type name="xs:base64Binary"/>
 			</Item>
 			<Item>
 			  <Attribute>MIMEType</Attribute>
@@ -279,13 +295,13 @@
 			<Item>
 			  <Attribute>Description</Attribute>
 			  <Characteristics>O</Characteristics>
-			  <Type name="xs:token"/>
 			  <Description>
 				<p>
 				  Contains an optional description of the content or a processing hint with regard to its structure (e.g. named standard, file layout or XSD).
 				  Contents may be mandated in instances of this type, or types that follow the <code>AbstractContentPackageType</code> pattern.
 				</p>
 			  </Description>
+			  <Type name="xs:token"/>
 			</Item>
 			<Item>
 			  <Element>Reference</Element>
@@ -307,32 +323,32 @@
 			<Item>
 			  <Attribute>Description</Attribute>
 			  <Characteristics>O</Characteristics>
-			  <Type name="xs:token"/>
 			  <Description>
 				<p>
 				  Contains an optional description of the content or a processing hint with regard to its structure (e.g. named standard, file layout or XSD).
 				  Contents may be mandated in instances of this type, or types that follow the <code>AbstractContentPackageType</code> pattern.
 				</p>
 			  </Description>
+			  <Type name="xs:token"/>
 			</Item>
 			<Item>
 			  <Element>/URL</Element>
 			  <Characteristics>M</Characteristics>
-			  <Type name="xs:anyURI"/>
 			  <Description>
 				<p>Location of external content.</p>
 			  </Description>
+			  <Type name="xs:anyURI"/>
 			</Item>
 		  </Choice>
-		</CommonElement>
+		  </CommonElement>
 
-	<CommonElement type="true" name="MonetaryAmountType">
+    <CommonElement type="true" name="MonetaryAmountType">
 			<Item>
 				<Element>MonetaryAmountType</Element>
-				<Type name="xs:decimal"/>
 				<Description>
 					<p>A monetary amount.</p>
 				</Description>
+				<Type name="xs:decimal"/>
 			</Item>
 			<Item>
 				<Attribute>Currency</Attribute>
@@ -340,10 +356,8 @@
 				<Description>Currency code.  Where omitted, defaults to implementation-defined local currency, typically <code>USD</code> in the United States.</Description>
 				<Type ref="ExternalCodeSets" name="ISO4217CurrencyNamesAndCodeElementsType"/>
 			</Item>
-		</CommonElement>
-
-
-<CommonElement type="true" name="ObjectNameType" >
+	</CommonElement>
+	<CommonElement type="true" name="ObjectNameType" >
 	<Item>
 		<Element>ObjectNameType</Element>
 		<Description>
@@ -355,7 +369,11 @@
 		</Facets>
 	</Item>
 </CommonElement>
+</if>
 
+
+<!-- Unused: ServiceNameType -->
+<!--
 <CommonElement type="true" name="ServiceNameType" >
 	<Item>
 		<Element>ServiceNameType</Element>
@@ -365,7 +383,10 @@
 		<Type name="xs:NCName"></Type>
 	</Item>
 </CommonElement>
+-->
 
+<!-- Unused: ObjectType -->
+<!--
 <CommonElement type="true" name="ObjectType" >
 	<Item>
 		<Element>ObjectType</Element>
@@ -379,7 +400,10 @@
 		</Type>
 	</Item>
 </CommonElement>
+-->
 
+<!-- Unused: ReportDataObjectType -->
+<!--
 <CommonElement type="true" name="ReportDataObjectType" >
 	<Item>
 		<Element>ReportDataObjectType</Element>
@@ -393,8 +417,11 @@
 		</Type>
 	</Item>
 </CommonElement>
+-->
 
-<!--<CommonElement type="true" name="SIF_ExampleObjectType" >
+<!-- Unused: SIF_ExampleObjectType -->
+<!--
+<CommonElement type="true" name="SIF_ExampleObjectType" >
 	<Item>
 		<Element>SIF_ExampleObjectType</Element>
 		<Type>
@@ -403,86 +430,104 @@
 		</xs:choice>
 		</Type>
 	</Item>
-</CommonElement>-->
+</CommonElement>
+-->
 
 
 
 
-
-		<CommonElement type="true" name="URIOrBinaryType">
+<if intl="au">
+	<CommonElement type="true" name="URIOrBinaryType">
 			<Item>
 				<Element>URIOrBinaryType</Element>
+				<Description>Allows for a URL or a Base-64 encoding.</Description>
 				<Union>
 					<Type name="xs:anyURI"/>
 					<Type name="xs:base64Binary"/>
 				</Union>
-<Description>Allows for a URL or a Base-64 encoding.</Description>
 			</Item>
 		</CommonElement>
-		
-			<CommonElement type="true" name='GUIDType'>
-			<Item>
+</if>
+
+    <CommonElement type="true" name='GUIDType'>
+		<Item>
 				<Element>GUIDType</Element>
+				<Description>SIF format for a GUID. This is different for 2.x Infrastructure  and 3.x Infrastructure - 2.x xs:pattern value='[0-9A-F]{32}'  3.x - xs:pattern value="[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}" ></Description>
 				<Type name='xs:token'/>
 				<Facets>
 				<xs:pattern value="[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}"/>
 				<!--<xs:pattern value='[0-9A-F]{32}'/>-->
 				</Facets>
-<Description>SIF format for a GUID. This is different for 2.x Infrastructure  and 3.x Infrastructure - 2.x xs:pattern value='[0-9A-F]{32}'  3.x - xs:pattern value="[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}" ></Description>
 			</Item>
 		</CommonElement>
 
+<!-- Unused: MsgIdType -->
+<!--
 		<CommonElement type="true" name='MsgIdType'>
 			<Item>
 				<Element>MsgIdType</Element>
+				<Description>A message identifier.</Description>
 				<Type name='GUIDType'/>
-<Description>A message identifier.</Description>
 			</Item>
 		</CommonElement>
+-->
+
 
 		<CommonElement type="true" name='RefIdType'>
 			<Item>
 				<Element>RefIdType</Element>
+				<Description>An object or element identifier.</Description>
 				<Type name='GUIDType'/>
-<Description>An object or element identifier.</Description>
 			</Item>
 		</CommonElement>
 
+<if intl="au">		
 		<CommonElement type="true" name='IdRefType'>
 			<Item>
 				<Element>IdRefType</Element>
+				<Description>A reference to a RefId.</Description>
 				<Type name='RefIdType'/>
-<Description>A reference to a RefId.</Description>
 			</Item>
 		</CommonElement>
+</if>
 
+
+<!-- Unused: VersionType -->
+<!--
 		<CommonElement type="true" name='VersionType'>
 			<Item>
 				<Element>VersionType</Element>
+				<Description>A SIF version number.</Description>
 				<Type name='xs:token'/>
 				<Facets>
 				<xs:maxLength value='12'/>
 				<xs:pattern value='[0-9]+[.][0-9]+(r[0-9]+)?'/>
 				</Facets>
-<Description>A SIF version number.</Description>
 			</Item>
 		</CommonElement>
+-->
 
+<!-- Unused: VersionWithWildcardsType -->
+<!--
 		<CommonElement type="true" name='VersionWithWildcardsType'>
 			<Item>
 				<Element>VersionWithWildcardsType</Element>
+				<Description>A SIF version number, with wildcards for matching multiple versions.</Description>
 				<Type name='xs:token'/>
 				<Facets>
 					<xs:maxLength value='12'/>
 					<xs:pattern value='\*|([0-9]+[.]\*)|([0-9]+[.][0-9]+r\*)|([0-9]+[.][0-9]+(r[0-9]+)?)'/>
 				</Facets>
-<Description>A SIF version number, with wildcards for matching multiple versions.</Description>
 			</Item>
 		</CommonElement>
+-->
 
+<!-- Unused: DefinedProtocolsType -->
+<!--
 		<CommonElement type="true" name='DefinedProtocolsType'>
 			<Item>
 				<Element>DefinedProtocolsType</Element>
+				<Description>The transport protocols defined in SIF.</Description>
 				<Values>
 					<Value>
 						<Code>HTTPS</Code>
@@ -491,13 +536,15 @@
 						<Code>HTTP</Code>
 					</Value>
 				</Values>
-<Description>The transport protocols defined in SIF.</Description>
 			</Item>
 		</CommonElement>
+-->
 
-		<CommonElement name='ExtendedContentType' type='true'>
+<if intl="au">
+	<CommonElement name='ExtendedContentType' type='true'>
 			<Item>
 				<Element>ExtendedContentType</Element>
+				<Description>Allows for any mixed XML in an element.</Description>
 				<Type>
 					<xs:complexContent mixed="true">
 						<xs:restriction base="xs:anyType">
@@ -507,13 +554,17 @@
 						</xs:restriction>
 					</xs:complexContent>
 				</Type>
-			<Description>Allows for any mixed XML in an element.</Description>
 			</Item>
 		</CommonElement>
+</if>
 
+
+<!-- Unused: Selected Content Type -->
+<!--
 		<CommonElement name='SelectedContentType' type='true'>
 			<Item>
 				<Element>SelectedContentType</Element>
+				<Description>Allows an XML fragment selected from an object to be used in an element with XML validation skipped.</Description>
 				<Type>
 					<xs:complexContent mixed="true">
 						<xs:restriction base="xs:anyType">
@@ -523,12 +574,8 @@
 						</xs:restriction>
 					</xs:complexContent>
 				</Type>
-			<Description>Allows an XML fragment selected from an object to be used in an element with XML validation skipped.</Description>
-			</Item>
-		</CommonElement>
-		
-			
-		
- 
-  
 
+			</Item>
+			</CommonElement>
+-->			
+</IncludeGroup>

@@ -1,0 +1,322 @@
+<IncludeGroup
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	
+ 	xmlns="http://sifassociation.org/SpecGen">
+
+	<CodeSet>
+		<Intro>
+			<p/>
+		</Intro>
+		<ID>Attendance Code</ID>
+		<Values>
+			<Value>
+				<Code>0</Code>
+				<Text>Not Marked</Text>
+			</Value>
+			<Value>
+				<Code>100</Code>
+				<Text>Present</Text>
+			</Value>
+			<Value>
+				<Code>101</Code>
+				<Text>Absent - General</Text>
+			</Value>
+			<Value>
+				<Code>102</Code>
+				<Text>Absent - Unjustified</Text>
+			</Value>
+			<Value>
+				<Code>111</Code>
+				<Text>Late arrival at School</Text>
+			</Value>
+			<Value>
+				<Code>112</Code>
+				<Text>Early departure from School</Text>
+			</Value>
+			<Value>
+				<Code>113</Code>
+				<Text>Late arrival unexplained</Text>
+			</Value>
+			<Value>
+				<Code>114</Code>
+				<Text>Early departure unexplained</Text>
+			</Value>
+			<Value>
+				<Code>116</Code>
+				<Text>Late arrival to Class</Text>
+			</Value>
+			<Value>
+				<Code>117</Code>
+				<Text>Early leaver from Class</Text>
+			</Value>
+			<Value>
+				<Code>118</Code>
+				<Text>Late Class Unexplained </Text>
+			</Value>
+			<Value>
+				<Code>119</Code>
+				<Text>Early Class Unexplained</Text>
+			</Value>
+			<Value>
+				<Code>200</Code>
+				<Text>Medical</Text>
+			</Value>
+			<Value>
+				<Code>201</Code>
+				<Text>Illness</Text>
+			</Value>
+			<Value>
+				<Code>202</Code>
+				<Text>Accident</Text>
+			</Value>
+			<Value>
+				<Code>203</Code>
+				<Text>Counselling</Text>
+			</Value>
+			<Value>
+				<Code>204</Code>
+				<Text>Sick Bay</Text>
+			</Value>
+			<Value>
+				<Code>205</Code>
+				<Text>Medical Appointment</Text>
+			</Value>
+			<Value>
+				<Code>206</Code>
+				<Text>Hospitalised</Text>
+			</Value>
+			<Value>
+				<Code>207</Code>
+				<Text>Quarantine</Text>
+			</Value>
+			<Value>
+				<Code>208</Code>
+				<Text>Refusal</Text>
+			</Value>
+			<Value>
+				<Code>209</Code>
+				<Text>Dentist </Text>
+			</Value>
+			<Value>
+				<Code>210</Code>
+				<Text>Medical/Welfare</Text>
+			</Value>
+			<Value>
+				<Code>211</Code>
+				<Text>Bereavement</Text>
+			</Value>
+			<Value>
+				<Code>300</Code>
+				<Text>Truancy</Text>
+			</Value>
+			<Value>
+				<Code>400</Code>
+				<Text>Suspension</Text>
+			</Value>
+			<Value>
+				<Code>401</Code>
+				<Text>Suspension - External</Text>
+			</Value>
+			<Value>
+				<Code>500</Code>
+				<Text>Unexplained</Text>
+			</Value>
+			<Value>
+				<Code>600</Code>
+				<Text>Educational</Text>
+			</Value>
+			<Value>
+				<Code>601</Code>
+				<Text>Group Activity</Text>
+			</Value>
+			<Value>
+				<Code>602</Code>
+				<Text>Community Service</Text>
+			</Value>
+			<Value>
+				<Code>603</Code>
+				<Text>Duty Student</Text>
+			</Value>
+			<Value>
+				<Code>604</Code>
+				<Text>Excursion</Text>
+			</Value>
+
+			<Value>
+				<Code>605</Code>
+				<Text>Special Event</Text>
+			</Value>
+			<Value>
+				<Code>606</Code>
+				<Text>Camp</Text>
+			</Value>
+			<Value>
+				<Code>607</Code>
+				<Text>Other Educational Activity</Text>
+			</Value>
+			<Value>
+				<Code>608</Code>
+				<Text>Off-Site Learning Program (eg. TAFE)</Text>
+			</Value>
+			<Value>
+				<Code>609</Code>
+				<Text>Work Experience</Text>
+			</Value>
+			<Value>
+				<Code>610</Code>
+				<Text>School Production</Text>
+			</Value>
+			<Value>
+				<Code>611</Code>
+				<Text>Sports</Text>
+			</Value>
+			<Value>
+				<Code>612</Code>
+				<Text>Study Leave</Text>
+			</Value>
+			<Value>
+				<Code>613</Code>
+				<Text>Shared enrolment</Text>
+			</Value>
+			<Value>
+				<Code>614</Code>
+				<Text>Incursion</Text>
+			</Value>
+			<Value>
+				<Code>615</Code>
+				<Text>Specialist Placement</Text>
+			</Value>
+			<Value>
+				<Code>616</Code>
+				<Text>Internal School Appointment</Text>
+			</Value>
+			<Value>
+				<Code>617</Code>
+				<Text>School Examination/Testing</Text>
+			</Value>
+			<Value>
+				<Code>618</Code>
+				<Text>Temporary Employment</Text>
+			</Value>
+			<Value>
+				<Code>700</Code>
+				<Text>Flags</Text>
+			</Value>
+			<Value>
+				<Code>701</Code>
+				<Text>Exit</Text>
+			</Value>
+			<Value>
+				<Code>702</Code>
+				<Text>Transferred</Text>
+			</Value>
+			<Value>
+				<Code>800</Code>
+				<Text>Parent Choice</Text>
+			</Value>
+			<Value>
+				<Code>801</Code>
+				<Text>Parental Arrangement</Text>
+			</Value>
+			<Value>
+				<Code>802</Code>
+				<Text>Exempt</Text>
+			</Value>
+			<Value>
+				<Code>803</Code>
+				<Text>Parental Acknowledgement</Text>
+			</Value>
+			<Value>
+				<Code>804</Code>
+				<Text>Extended Family Holidays</Text>
+			</Value>
+			<Value>
+				<Code>805</Code>
+				<Text>Religious/Cultural Observance</Text>
+			</Value>
+			<Value>
+				<Code>900</Code>
+				<Text>School Choice</Text>
+			</Value>
+			<Value>
+				<Code>901</Code>
+				<Text>Industrial Action</Text>
+			</Value>
+			<Value>
+				<Code>902</Code>
+				<Text>Facility Damage</Text>
+			</Value>
+			<Value>
+				<Code>903</Code>
+				<Text>Weather</Text>
+			</Value>
+			<Value>
+				<Code>904</Code>
+				<Text>Staff Meeting</Text>
+			</Value>
+			<Value>
+				<Code>905</Code>
+				<Text>Pandemic</Text>
+			</Value>
+			<Value>
+				<Code>999</Code>
+				<Text>Other</Text>
+			</Value>
+		 </Values>
+	</CodeSet>    <!-- Attendance Code -->
+	<CodeSet>
+		<Intro>
+			<p/>
+		</Intro>
+		<ID>Day Value Code</ID>
+		<Values>
+			<Value>
+				<Code>AM</Code>
+				<Text>Morning</Text>
+			</Value>
+			<Value>
+				<Code>Full</Code>
+				<Text>All Day</Text>
+			</Value>
+			<Value>
+				<Code>N/A</Code>
+				<Text>Not Applicable</Text>
+			</Value>
+			<Value>
+				<Code>Partial</Code>
+				<Text>Partial Day</Text>
+			</Value>
+			<Value>
+				<Code>PM</Code>
+				<Text>Afternoon</Text>
+			</Value>
+			 
+		</Values>
+	</CodeSet>    <!-- Day Value Code -->
+	<CodeSet>
+		<Intro>
+			<p/>
+		</Intro>
+		<ID>Attendance Status</ID>
+		<Values>
+			<Value>
+				<Code>01</Code>
+				<Text>Excused</Text>
+			</Value>
+			<Value>
+				<Code>02</Code>
+				<Text>Unexcused</Text>
+			</Value>
+			<Value>
+				<Code>99</Code>
+				<Text>Unknown</Text>
+			</Value>
+			<Value>
+				<Code>NA</Code>
+				<Text>Not Applicable</Text>
+			</Value>
+			 
+		</Values>
+	</CodeSet>    <!-- Attendance Status -->
+	
+</IncludeGroup>

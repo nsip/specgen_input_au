@@ -1,0 +1,2679 @@
+
+<IncludeGroup
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	
+ 	xmlns="http://sifassociation.org/SpecGen">
+
+	<CodeSet>
+		<Intro>
+			<p>1216.0 - Australian Standard Geographical Classification (ASGC), July 2011   </p>
+			<p>Statistical Local Area (from ASGC) Latest ISSUE Released at 11:30 AM (CANBERRA TIME) 05/10/2011  Final</p>
+			<p>The ASGS has been released concurrently with the ASGC to ensure a smooth transition to the new statistical geography. The ASGS and the ASGC will both be current for 2011 however, from 1 July 2012 the ASGS will replace the ASGC.</p>
+		<p>http://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1216.0July%202011?OpenDocument</p>
+		</Intro>
+		<ID>Australian Standard Geographical Classification (ASGC)</ID>
+<Values>
+<Value><Code>155050050</Code><Text>Albury (C)</Text></Value>
+<Value><Code>130150111</Code><Text>Armidale Dumaresq (A) - City</Text></Value>
+<Value><Code>130150112</Code><Text>Armidale Dumaresq (A) Bal</Text></Value>
+<Value><Code>105350150</Code><Text>Ashfield (A)</Text></Value>
+<Value><Code>105400200</Code><Text>Auburn (C)</Text></Value>
+<Value><Code>120100250</Code><Text>Ballina (A)</Text></Value>
+<Value><Code>155200300</Code><Text>Balranald (A)</Text></Value>
+<Value><Code>105200351</Code><Text>Bankstown (C) - North-East</Text></Value>
+<Value><Code>105200353</Code><Text>Bankstown (C) - North-West</Text></Value>
+<Value><Code>105200355</Code><Text>Bankstown (C) - South</Text></Value>
+<Value><Code>140030471</Code><Text>Bathurst Regional (A) - Pt A</Text></Value>
+<Value><Code>140070473</Code><Text>Bathurst Regional (A) - Pt B</Text></Value>
+<Value><Code>145150550</Code><Text>Bega Valley (A)</Text></Value>
+<Value><Code>125050600</Code><Text>Bellingen (A)</Text></Value>
+<Value><Code>155150650</Code><Text>Berrigan (A)</Text></Value>
+<Value><Code>105530751</Code><Text>Blacktown (C) - North</Text></Value>
+<Value><Code>105530752</Code><Text>Blacktown (C) - South-East</Text></Value>
+<Value><Code>105530753</Code><Text>Blacktown (C) - South-West</Text></Value>
+<Value><Code>140150800</Code><Text>Bland (A)</Text></Value>
+<Value><Code>140070850</Code><Text>Blayney (A)</Text></Value>
+<Value><Code>105450900</Code><Text>Blue Mountains (C)</Text></Value>
+<Value><Code>135100950</Code><Text>Bogan (A)</Text></Value>
+<Value><Code>145201000</Code><Text>Bombala (A)</Text></Value>
+<Value><Code>145101050</Code><Text>Boorowa (A)</Text></Value>
+<Value><Code>105051100</Code><Text>Botany Bay (C)</Text></Value>
+<Value><Code>135151150</Code><Text>Bourke (A)</Text></Value>
+<Value><Code>135151200</Code><Text>Brewarrina (A)</Text></Value>
+<Value><Code>160101250</Code><Text>Broken Hill (C)</Text></Value>
+<Value><Code>105351300</Code><Text>Burwood (A)</Text></Value>
+<Value><Code>120101350</Code><Text>Byron (A)</Text></Value>
+<Value><Code>140071400</Code><Text>Cabonne (A)</Text></Value>
+<Value><Code>105301450</Code><Text>Camden (A)</Text></Value>
+<Value><Code>105301501</Code><Text>Campbelltown (C) - North</Text></Value>
+<Value><Code>105301504</Code><Text>Campbelltown (C) - South</Text></Value>
+<Value><Code>105351521</Code><Text>Canada Bay (A) - Concord</Text></Value>
+<Value><Code>105351524</Code><Text>Canada Bay (A) - Drummoyne</Text></Value>
+<Value><Code>105201550</Code><Text>Canterbury (C)</Text></Value>
+<Value><Code>150151600</Code><Text>Carrathool (A)</Text></Value>
+<Value><Code>160101700</Code><Text>Central Darling (A)</Text></Value>
+<Value><Code>110051720</Code><Text>Cessnock (C)</Text></Value>
+<Value><Code>125051736</Code><Text>Clarence Valley (A) - Coast</Text></Value>
+<Value><Code>125051737</Code><Text>Clarence Valley (A) - Grafton</Text></Value>
+<Value><Code>125051738</Code><Text>Clarence Valley (A) Bal</Text></Value>
+<Value><Code>135151750</Code><Text>Cobar (A)</Text></Value>
+<Value><Code>125011801</Code><Text>Coffs Harbour (C) - Pt A</Text></Value>
+<Value><Code>125051804</Code><Text>Coffs Harbour (C) - Pt B</Text></Value>
+<Value><Code>155151860</Code><Text>Conargo (A)</Text></Value>
+<Value><Code>150102000</Code><Text>Coolamon (A)</Text></Value>
+<Value><Code>145202050</Code><Text>Cooma-Monaro (A)</Text></Value>
+<Value><Code>135102150</Code><Text>Coonamble (A)</Text></Value>
+<Value><Code>150102200</Code><Text>Cootamundra (A)</Text></Value>
+<Value><Code>155102300</Code><Text>Corowa Shire (A)</Text></Value>
+<Value><Code>140152350</Code><Text>Cowra (A)</Text></Value>
+<Value><Code>155152500</Code><Text>Deniliquin (A)</Text></Value>
+<Value><Code>135012601</Code><Text>Dubbo (C) - Pt A</Text></Value>
+<Value><Code>135052604</Code><Text>Dubbo (C) - Pt B</Text></Value>
+<Value><Code>110102700</Code><Text>Dungog (A)</Text></Value>
+<Value><Code>145152750</Code><Text>Eurobodalla (A)</Text></Value>
+<Value><Code>105252851</Code><Text>Fairfield (C) - East</Text></Value>
+<Value><Code>105252854</Code><Text>Fairfield (C) - West</Text></Value>
+<Value><Code>140152900</Code><Text>Forbes (A)</Text></Value>
+<Value><Code>135052950</Code><Text>Gilgandra (A)</Text></Value>
+<Value><Code>130153010</Code><Text>Glen Innes Severn (A)</Text></Value>
+<Value><Code>110103050</Code><Text>Gloucester (A)</Text></Value>
+<Value><Code>105703101</Code><Text>Gosford (C) - East</Text></Value>
+<Value><Code>105703104</Code><Text>Gosford (C) - West</Text></Value>
+<Value><Code>145103311</Code><Text>Goulburn Mulwaree (A) - Goulburn</Text></Value>
+<Value><Code>145103314</Code><Text>Goulburn Mulwaree (A) Bal</Text></Value>
+<Value><Code>110103320</Code><Text>Great Lakes (A)</Text></Value>
+<Value><Code>155053341</Code><Text>Greater Hume Shire (A) - Pt A</Text></Value>
+<Value><Code>155103342</Code><Text>Greater Hume Shire (A) - Pt B</Text></Value>
+<Value><Code>125103380</Code><Text>Greater Taree (C)</Text></Value>
+<Value><Code>150153450</Code><Text>Griffith (C)</Text></Value>
+<Value><Code>150103500</Code><Text>Gundagai (A)</Text></Value>
+<Value><Code>130103550</Code><Text>Gunnedah (A)</Text></Value>
+<Value><Code>130153650</Code><Text>Guyra (A)</Text></Value>
+<Value><Code>130103660</Code><Text>Gwydir (A)</Text></Value>
+<Value><Code>145103700</Code><Text>Harden (A)</Text></Value>
+<Value><Code>105453800</Code><Text>Hawkesbury (C)</Text></Value>
+<Value><Code>150153850</Code><Text>Hay (A)</Text></Value>
+<Value><Code>105403950</Code><Text>Holroyd (C)</Text></Value>
+<Value><Code>105604001</Code><Text>Hornsby (A) - North</Text></Value>
+<Value><Code>105604004</Code><Text>Hornsby (A) - South</Text></Value>
+<Value><Code>105554100</Code><Text>Hunters Hill (A)</Text></Value>
+<Value><Code>105154150</Code><Text>Hurstville (C)</Text></Value>
+<Value><Code>130104201</Code><Text>Inverell (A) - Pt A</Text></Value>
+<Value><Code>130154202</Code><Text>Inverell (A) - Pt B</Text></Value>
+<Value><Code>155154250</Code><Text>Jerilderie (A)</Text></Value>
+<Value><Code>150104300</Code><Text>Junee (A)</Text></Value>
+<Value><Code>125104350</Code><Text>Kempsey (A)</Text></Value>
+<Value><Code>115054400</Code><Text>Kiama (A)</Text></Value>
+<Value><Code>105154450</Code><Text>Kogarah (C)</Text></Value>
+<Value><Code>105604500</Code><Text>Ku-ring-gai (A)</Text></Value>
+<Value><Code>120104550</Code><Text>Kyogle (A)</Text></Value>
+<Value><Code>140154600</Code><Text>Lachlan (A)</Text></Value>
+<Value><Code>110054651</Code><Text>Lake Macquarie (C) - East</Text></Value>
+<Value><Code>110054653</Code><Text>Lake Macquarie (C) - North</Text></Value>
+<Value><Code>110054655</Code><Text>Lake Macquarie (C) - West</Text></Value>
+<Value><Code>105554700</Code><Text>Lane Cove (A)</Text></Value>
+<Value><Code>150154750</Code><Text>Leeton (A)</Text></Value>
+<Value><Code>105054800</Code><Text>Leichhardt (A)</Text></Value>
+<Value><Code>120074851</Code><Text>Lismore (C) - Pt A</Text></Value>
+<Value><Code>120104854</Code><Text>Lismore (C) - Pt B</Text></Value>
+<Value><Code>140074870</Code><Text>Lithgow (C)</Text></Value>
+<Value><Code>105254901</Code><Text>Liverpool (C) - East</Text></Value>
+<Value><Code>105254904</Code><Text>Liverpool (C) - West</Text></Value>
+<Value><Code>130104920</Code><Text>Liverpool Plains (A)</Text></Value>
+<Value><Code>150104950</Code><Text>Lockhart (A)</Text></Value>
+<Value><Code>110055050</Code><Text>Maitland (C)</Text></Value>
+<Value><Code>105655150</Code><Text>Manly (A)</Text></Value>
+<Value><Code>105055200</Code><Text>Marrickville (A)</Text></Value>
+<Value><Code>135055271</Code><Text>Mid-Western Regional (A) - Pt A</Text></Value>
+<Value><Code>140075274</Code><Text>Mid-Western Regional (A) - Pt B</Text></Value>
+<Value><Code>130205300</Code><Text>Moree Plains (A)</Text></Value>
+<Value><Code>105555350</Code><Text>Mosman (A)</Text></Value>
+<Value><Code>155155500</Code><Text>Murray (A)</Text></Value>
+<Value><Code>150155550</Code><Text>Murrumbidgee (A)</Text></Value>
+<Value><Code>110105650</Code><Text>Muswellbrook (A)</Text></Value>
+<Value><Code>125055700</Code><Text>Nambucca (A)</Text></Value>
+<Value><Code>130205750</Code><Text>Narrabri (A)</Text></Value>
+<Value><Code>150105800</Code><Text>Narrandera (A)</Text></Value>
+<Value><Code>135055850</Code><Text>Narromine (A)</Text></Value>
+<Value><Code>110055903</Code><Text>Newcastle (C) - Inner City</Text></Value>
+<Value><Code>110055904</Code><Text>Newcastle (C) - Outer West</Text></Value>
+<Value><Code>110055905</Code><Text>Newcastle (C) - Throsby</Text></Value>
+<Value><Code>105555950</Code><Text>North Sydney (A)</Text></Value>
+<Value><Code>140076100</Code><Text>Oberon (A)</Text></Value>
+<Value><Code>140206150</Code><Text>Orange (C)</Text></Value>
+<Value><Code>145056181</Code><Text>Palerang (A) - Pt A</Text></Value>
+<Value><Code>145106184</Code><Text>Palerang (A) - Pt B</Text></Value>
+<Value><Code>140156200</Code><Text>Parkes (A)</Text></Value>
+<Value><Code>105406251</Code><Text>Parramatta (C) - Inner</Text></Value>
+<Value><Code>105406252</Code><Text>Parramatta (C) - North-East</Text></Value>
+<Value><Code>105406253</Code><Text>Parramatta (C) - North-West</Text></Value>
+<Value><Code>105406254</Code><Text>Parramatta (C) - South</Text></Value>
+<Value><Code>105456351</Code><Text>Penrith (C) - East</Text></Value>
+<Value><Code>105456354</Code><Text>Penrith (C) - West</Text></Value>
+<Value><Code>105656370</Code><Text>Pittwater (A)</Text></Value>
+<Value><Code>125036381</Code><Text>Port Macquarie-Hastings (A) - Pt A</Text></Value>
+<Value><Code>125106385</Code><Text>Port Macquarie-Hastings (A) - Pt B</Text></Value>
+<Value><Code>110056400</Code><Text>Port Stephens (A)</Text></Value>
+<Value><Code>145056470</Code><Text>Queanbeyan (C)</Text></Value>
+<Value><Code>105106550</Code><Text>Randwick (C)</Text></Value>
+<Value><Code>120106611</Code><Text>Richmond Valley (A) - Casino</Text></Value>
+<Value><Code>120106612</Code><Text>Richmond Valley (A) Bal</Text></Value>
+<Value><Code>105156650</Code><Text>Rockdale (C)</Text></Value>
+<Value><Code>105556700</Code><Text>Ryde (C)</Text></Value>
+<Value><Code>115056900</Code><Text>Shellharbour (C)</Text></Value>
+<Value><Code>115076951</Code><Text>Shoalhaven (C) - Pt A</Text></Value>
+<Value><Code>115106952</Code><Text>Shoalhaven (C) - Pt B</Text></Value>
+<Value><Code>110107000</Code><Text>Singleton (A)</Text></Value>
+<Value><Code>145207050</Code><Text>Snowy River (A)</Text></Value>
+<Value><Code>105357100</Code><Text>Strathfield (A)</Text></Value>
+<Value><Code>105157151</Code><Text>Sutherland Shire (A) - East</Text></Value>
+<Value><Code>105157152</Code><Text>Sutherland Shire (A) - West</Text></Value>
+<Value><Code>105057204</Code><Text>Sydney (C) - East</Text></Value>
+<Value><Code>105057201</Code><Text>Sydney (C) - Inner</Text></Value>
+<Value><Code>105057205</Code><Text>Sydney (C) - South</Text></Value>
+<Value><Code>105057206</Code><Text>Sydney (C) - West</Text></Value>
+<Value><Code>130057311</Code><Text>Tamworth Regional (A) - Pt A</Text></Value>
+<Value><Code>130107314</Code><Text>Tamworth Regional (A) - Pt B</Text></Value>
+<Value><Code>150107350</Code><Text>Temora (A)</Text></Value>
+<Value><Code>130157400</Code><Text>Tenterfield (A)</Text></Value>
+<Value><Code>105607421</Code><Text>The Hills Shire (A) - Central</Text></Value>
+<Value><Code>105607423</Code><Text>The Hills Shire (A) - North</Text></Value>
+<Value><Code>105607425</Code><Text>The Hills Shire (A) - South</Text></Value>
+<Value><Code>155107450</Code><Text>Tumbarumba (A)</Text></Value>
+<Value><Code>150107500</Code><Text>Tumut Shire (A)</Text></Value>
+<Value><Code>120107558</Code><Text>Tweed (A) - Pt B</Text></Value>
+<Value><Code>120057556</Code><Text>Tweed (A) - Tweed Coast</Text></Value>
+<Value><Code>120057554</Code><Text>Tweed (A) - Tweed-Heads</Text></Value>
+<Value><Code>110107620</Code><Text>Upper Hunter Shire (A)</Text></Value>
+<Value><Code>145107640</Code><Text>Upper Lachlan Shire (A)</Text></Value>
+<Value><Code>130157650</Code><Text>Uralla (A)</Text></Value>
+<Value><Code>155107700</Code><Text>Urana (A)</Text></Value>
+<Value><Code>150057751</Code><Text>Wagga Wagga (C) - Pt A</Text></Value>
+<Value><Code>150107754</Code><Text>Wagga Wagga (C) - Pt B</Text></Value>
+<Value><Code>155157800</Code><Text>Wakool (A)</Text></Value>
+<Value><Code>130157850</Code><Text>Walcha (A)</Text></Value>
+<Value><Code>135107900</Code><Text>Walgett (A)</Text></Value>
+<Value><Code>135107950</Code><Text>Warren (A)</Text></Value>
+<Value><Code>105658000</Code><Text>Warringah (A)</Text></Value>
+<Value><Code>135058020</Code><Text>Warrumbungle Shire (A)</Text></Value>
+<Value><Code>105108050</Code><Text>Waverley (A)</Text></Value>
+<Value><Code>140158100</Code><Text>Weddin (A)</Text></Value>
+<Value><Code>135058150</Code><Text>Wellington (A)</Text></Value>
+<Value><Code>155208200</Code><Text>Wentworth (A)</Text></Value>
+<Value><Code>105558250</Code><Text>Willoughby (C)</Text></Value>
+<Value><Code>115108350</Code><Text>Wingecarribee (A)</Text></Value>
+<Value><Code>105308400</Code><Text>Wollondilly (A)</Text></Value>
+<Value><Code>115058451</Code><Text>Wollongong (C) - Inner</Text></Value>
+<Value><Code>115058454</Code><Text>Wollongong (C) Bal</Text></Value>
+<Value><Code>105108500</Code><Text>Woollahra (A)</Text></Value>
+<Value><Code>105708551</Code><Text>Wyong (A) - North-East</Text></Value>
+<Value><Code>105708554</Code><Text>Wyong (A) - South and West</Text></Value>
+<Value><Code>145108710</Code><Text>Yass Valley (A)</Text></Value>
+<Value><Code>145108750</Code><Text>Young (A)</Text></Value>
+<Value><Code>125108859</Code><Text>Lord Howe Island</Text></Value>
+<Value><Code>185019779</Code><Text>Migratory - Offshore - Shipping (NSW)</Text></Value>
+<Value><Code>160108809</Code><Text>Unincorp. Far West</Text></Value>
+<Value><Code>245150111</Code><Text>Alpine (S) - East</Text></Value>
+<Value><Code>245150112</Code><Text>Alpine (S) - West</Text></Value>
+<Value><Code>220150260</Code><Text>Ararat (RC)</Text></Value>
+<Value><Code>220050571</Code><Text>Ballarat (C) - Central</Text></Value>
+<Value><Code>220050572</Code><Text>Ballarat (C) - Inner North</Text></Value>
+<Value><Code>220050573</Code><Text>Ballarat (C) - North</Text></Value>
+<Value><Code>220050574</Code><Text>Ballarat (C) - South</Text></Value>
+<Value><Code>205300661</Code><Text>Banyule (C) - Heidelberg</Text></Value>
+<Value><Code>205300662</Code><Text>Banyule (C) - North</Text></Value>
+<Value><Code>255200741</Code><Text>Bass Coast (S) - Phillip Is.</Text></Value>
+<Value><Code>255200744</Code><Text>Bass Coast (S) Bal</Text></Value>
+<Value><Code>255050831</Code><Text>Baw Baw (S) - Pt A</Text></Value>
+<Value><Code>255100834</Code><Text>Baw Baw (S) - Pt B East</Text></Value>
+<Value><Code>255100835</Code><Text>Baw Baw (S) - Pt B West</Text></Value>
+<Value><Code>205650911</Code><Text>Bayside (C) - Brighton</Text></Value>
+<Value><Code>205650912</Code><Text>Bayside (C) - South</Text></Value>
+<Value><Code>240151011</Code><Text>Benalla (RC) - Benalla</Text></Value>
+<Value><Code>240151014</Code><Text>Benalla (RC) Bal</Text></Value>
+<Value><Code>205451111</Code><Text>Boroondara (C) - Camberwell N.</Text></Value>
+<Value><Code>205451112</Code><Text>Boroondara (C) - Camberwell S.</Text></Value>
+<Value><Code>205451113</Code><Text>Boroondara (C) - Hawthorn</Text></Value>
+<Value><Code>205451114</Code><Text>Boroondara (C) - Kew</Text></Value>
+<Value><Code>205101181</Code><Text>Brimbank (C) - Keilor</Text></Value>
+<Value><Code>205101182</Code><Text>Brimbank (C) - Sunshine</Text></Value>
+<Value><Code>230101271</Code><Text>Buloke (S) - North</Text></Value>
+<Value><Code>230101272</Code><Text>Buloke (S) - South</Text></Value>
+<Value><Code>240101371</Code><Text>Campaspe (S) - Echuca</Text></Value>
+<Value><Code>240101374</Code><Text>Campaspe (S) - Kyabram</Text></Value>
+<Value><Code>240101375</Code><Text>Campaspe (S) - Rochester</Text></Value>
+<Value><Code>240101376</Code><Text>Campaspe (S) - South</Text></Value>
+<Value><Code>205801452</Code><Text>Cardinia (S) - North</Text></Value>
+<Value><Code>205801453</Code><Text>Cardinia (S) - Pakenham</Text></Value>
+<Value><Code>205801454</Code><Text>Cardinia (S) - South</Text></Value>
+<Value><Code>205801612</Code><Text>Casey (C) - Berwick</Text></Value>
+<Value><Code>205801613</Code><Text>Casey (C) - Cranbourne</Text></Value>
+<Value><Code>205801616</Code><Text>Casey (C) - Hallam</Text></Value>
+<Value><Code>205801618</Code><Text>Casey (C) - South</Text></Value>
+<Value><Code>235101671</Code><Text>C. Goldfields (S) - M'borough</Text></Value>
+<Value><Code>235101674</Code><Text>C. Goldfields (S) Bal</Text></Value>
+<Value><Code>210151751</Code><Text>Colac-Otway (S) - Colac</Text></Value>
+<Value><Code>210151754</Code><Text>Colac-Otway (S) - North</Text></Value>
+<Value><Code>210151755</Code><Text>Colac-Otway (S) - South</Text></Value>
+<Value><Code>215051831</Code><Text>Corangamite (S) - North</Text></Value>
+<Value><Code>215051832</Code><Text>Corangamite (S) - South</Text></Value>
+<Value><Code>205301891</Code><Text>Darebin (C) - Northcote</Text></Value>
+<Value><Code>205301892</Code><Text>Darebin (C) - Preston</Text></Value>
+<Value><Code>250052111</Code><Text>E. Gippsland (S) - Bairnsdale</Text></Value>
+<Value><Code>250052113</Code><Text>E. Gippsland (S) - Orbost</Text></Value>
+<Value><Code>250052115</Code><Text>E. Gippsland (S) - South-West</Text></Value>
+<Value><Code>250052117</Code><Text>E. Gippsland (S) Bal</Text></Value>
+<Value><Code>205852171</Code><Text>Frankston (C) - East</Text></Value>
+<Value><Code>205852174</Code><Text>Frankston (C) - West</Text></Value>
+<Value><Code>230152250</Code><Text>Gannawarra (S)</Text></Value>
+<Value><Code>205652311</Code><Text>Glen Eira (C) - Caulfield</Text></Value>
+<Value><Code>205652314</Code><Text>Glen Eira (C) - South</Text></Value>
+<Value><Code>215102411</Code><Text>Glenelg (S) - Heywood</Text></Value>
+<Value><Code>215102412</Code><Text>Glenelg (S) - North</Text></Value>
+<Value><Code>215102413</Code><Text>Glenelg (S) - Portland</Text></Value>
+<Value><Code>210152491</Code><Text>Golden Plains (S) - North-West</Text></Value>
+<Value><Code>210152492</Code><Text>Golden Plains (S) - South-East</Text></Value>
+<Value><Code>235052621</Code><Text>Gr. Bendigo (C) - Central</Text></Value>
+<Value><Code>235052622</Code><Text>Gr. Bendigo (C) - Eaglehawk</Text></Value>
+<Value><Code>235052623</Code><Text>Gr. Bendigo (C) - Inner East</Text></Value>
+<Value><Code>235052624</Code><Text>Gr. Bendigo (C) - Inner North</Text></Value>
+<Value><Code>235052625</Code><Text>Gr. Bendigo (C) - Inner West</Text></Value>
+<Value><Code>235102628</Code><Text>Gr. Bendigo (C) - Pt B</Text></Value>
+<Value><Code>235052626</Code><Text>Gr. Bendigo (C) - S'saye</Text></Value>
+<Value><Code>205752671</Code><Text>Gr. Dandenong (C) - Dandenong</Text></Value>
+<Value><Code>205752674</Code><Text>Gr. Dandenong (C) Bal</Text></Value>
+<Value><Code>210052751</Code><Text>Bellarine - Inner</Text></Value>
+<Value><Code>210052752</Code><Text>Corio - Inner</Text></Value>
+<Value><Code>210052753</Code><Text>Geelong</Text></Value>
+<Value><Code>210052754</Code><Text>Geelong West</Text></Value>
+<Value><Code>210102757</Code><Text>Greater Geelong (C) - Pt B</Text></Value>
+<Value><Code>210152758</Code><Text>Greater Geelong (C) - Pt C</Text></Value>
+<Value><Code>210052755</Code><Text>Newtown</Text></Value>
+<Value><Code>210052756</Code><Text>South Barwon - Inner</Text></Value>
+<Value><Code>240052831</Code><Text>Gr. Shepparton (C) - Pt A</Text></Value>
+<Value><Code>240102834</Code><Text>Gr. Shepparton (C) - Pt B East</Text></Value>
+<Value><Code>240102835</Code><Text>Gr. Shepparton (C) - Pt B West</Text></Value>
+<Value><Code>220102911</Code><Text>Hepburn (S) - East</Text></Value>
+<Value><Code>220102912</Code><Text>Hepburn (S) - West</Text></Value>
+<Value><Code>225102980</Code><Text>Hindmarsh (S)</Text></Value>
+<Value><Code>205103111</Code><Text>Hobsons Bay (C) - Altona</Text></Value>
+<Value><Code>205103112</Code><Text>Hobsons Bay (C) - Williamstown</Text></Value>
+<Value><Code>225053191</Code><Text>Horsham (RC) - Central</Text></Value>
+<Value><Code>225053194</Code><Text>Horsham (RC) Bal</Text></Value>
+<Value><Code>205353271</Code><Text>Hume (C) - Broadmeadows</Text></Value>
+<Value><Code>205353274</Code><Text>Hume (C) - Craigieburn</Text></Value>
+<Value><Code>205353275</Code><Text>Hume (C) - Sunbury</Text></Value>
+<Value><Code>245053351</Code><Text>Indigo (S) - Pt A</Text></Value>
+<Value><Code>245103352</Code><Text>Indigo (S) - Pt B</Text></Value>
+<Value><Code>205653431</Code><Text>Kingston (C) - North</Text></Value>
+<Value><Code>205653434</Code><Text>Kingston (C) - South</Text></Value>
+<Value><Code>205553672</Code><Text>Knox (C) - North-East</Text></Value>
+<Value><Code>205553673</Code><Text>Knox (C) - North-West</Text></Value>
+<Value><Code>205553674</Code><Text>Knox (C) - South</Text></Value>
+<Value><Code>255053811</Code><Text>Latrobe (C) - Moe</Text></Value>
+<Value><Code>255053814</Code><Text>Latrobe (C) - Morwell</Text></Value>
+<Value><Code>255053815</Code><Text>Latrobe (C) - Traralgon</Text></Value>
+<Value><Code>255053818</Code><Text>Latrobe (C) Bal</Text></Value>
+<Value><Code>235103943</Code><Text>Loddon (S) - North</Text></Value>
+<Value><Code>235103945</Code><Text>Loddon (S) - South</Text></Value>
+<Value><Code>235204131</Code><Text>Macedon Ranges (S) - Kyneton</Text></Value>
+<Value><Code>235204134</Code><Text>Macedon Ranges (S) - Romsey</Text></Value>
+<Value><Code>235204135</Code><Text>Macedon Ranges (S) Bal</Text></Value>
+<Value><Code>205504211</Code><Text>Manningham (C) - East</Text></Value>
+<Value><Code>205504214</Code><Text>Manningham (C) - West</Text></Value>
+<Value><Code>240154250</Code><Text>Mansfield (S)</Text></Value>
+<Value><Code>205104330</Code><Text>Maribyrnong (C)</Text></Value>
+<Value><Code>205554411</Code><Text>Maroondah (C) - Croydon</Text></Value>
+<Value><Code>205554412</Code><Text>Maroondah (C) - Ringwood</Text></Value>
+<Value><Code>205054601</Code><Text>Melbourne (C) - Inner</Text></Value>
+<Value><Code>205054608</Code><Text>Melbourne (C) - Remainder</Text></Value>
+<Value><Code>205054605</Code><Text>Melbourne (C) - S'bank-D'lands</Text></Value>
+<Value><Code>205204651</Code><Text>Melton (S) - East</Text></Value>
+<Value><Code>205204654</Code><Text>Melton (S) Bal</Text></Value>
+<Value><Code>230054781</Code><Text>Mildura (RC) - Pt A</Text></Value>
+<Value><Code>230104782</Code><Text>Mildura (RC) - Pt B</Text></Value>
+<Value><Code>240204851</Code><Text>Mitchell (S) - North</Text></Value>
+<Value><Code>240204854</Code><Text>Mitchell (S) - South</Text></Value>
+<Value><Code>240104901</Code><Text>Moira (S) - East</Text></Value>
+<Value><Code>240104904</Code><Text>Moira (S) - West</Text></Value>
+<Value><Code>205504971</Code><Text>Monash (C) - South-West</Text></Value>
+<Value><Code>205504974</Code><Text>Monash (C) - Waverley East</Text></Value>
+<Value><Code>205504975</Code><Text>Monash (C) - Waverley West</Text></Value>
+<Value><Code>205105063</Code><Text>Moonee Valley (C) - Essendon</Text></Value>
+<Value><Code>205105065</Code><Text>Moonee Valley (C) - West</Text></Value>
+<Value><Code>220105151</Code><Text>Moorabool (S) - Bacchus Marsh</Text></Value>
+<Value><Code>220105154</Code><Text>Moorabool (S) - Ballan</Text></Value>
+<Value><Code>220105155</Code><Text>Moorabool (S) - West</Text></Value>
+<Value><Code>205255251</Code><Text>Moreland (C) - Brunswick</Text></Value>
+<Value><Code>205255252</Code><Text>Moreland (C) - Coburg</Text></Value>
+<Value><Code>205255253</Code><Text>Moreland (C) - North</Text></Value>
+<Value><Code>205905341</Code><Text>Mornington P'sula (S) - East</Text></Value>
+<Value><Code>205905344</Code><Text>Mornington P'sula (S) - South</Text></Value>
+<Value><Code>205905345</Code><Text>Mornington P'sula (S) - West</Text></Value>
+<Value><Code>235105431</Code><Text>Mount Alexander (S) - C'maine</Text></Value>
+<Value><Code>235105434</Code><Text>Mount Alexander (S) Bal</Text></Value>
+<Value><Code>215055491</Code><Text>Moyne (S) - North-East</Text></Value>
+<Value><Code>215055493</Code><Text>Moyne (S) - North-West</Text></Value>
+<Value><Code>215055496</Code><Text>Moyne (S) - South</Text></Value>
+<Value><Code>240205621</Code><Text>Murrindindi (S) - East</Text></Value>
+<Value><Code>240205622</Code><Text>Murrindindi (S) - West</Text></Value>
+<Value><Code>205405713</Code><Text>Nillumbik (S) - South</Text></Value>
+<Value><Code>205405715</Code><Text>Nillumbik (S) - South-West</Text></Value>
+<Value><Code>205405718</Code><Text>Nillumbik (S) Bal</Text></Value>
+<Value><Code>225055811</Code><Text>N. Grampians (S) - St Arnaud</Text></Value>
+<Value><Code>225055814</Code><Text>N. Grampians (S) - Stawell</Text></Value>
+<Value><Code>205055901</Code><Text>Port Phillip (C) - St Kilda</Text></Value>
+<Value><Code>205055902</Code><Text>Port Phillip (C) - West</Text></Value>
+<Value><Code>220155991</Code><Text>Pyrenees (S) - North</Text></Value>
+<Value><Code>220155994</Code><Text>Pyrenees (S) - South</Text></Value>
+<Value><Code>210106080</Code><Text>Queenscliffe (B)</Text></Value>
+<Value><Code>255206171</Code><Text>South Gippsland (S) - Central</Text></Value>
+<Value><Code>255206174</Code><Text>South Gippsland (S) - East</Text></Value>
+<Value><Code>255206175</Code><Text>South Gippsland (S) - West</Text></Value>
+<Value><Code>215106261</Code><Text>S. Grampians (S) - Hamilton</Text></Value>
+<Value><Code>215106264</Code><Text>S. Grampians (S) - Wannon</Text></Value>
+<Value><Code>215106265</Code><Text>S. Grampians (S) Bal</Text></Value>
+<Value><Code>205656352</Code><Text>Stonnington (C) - Malvern</Text></Value>
+<Value><Code>205056351</Code><Text>Stonnington (C) - Prahran</Text></Value>
+<Value><Code>240156430</Code><Text>Strathbogie (S)</Text></Value>
+<Value><Code>210106493</Code><Text>Surf Coast (S) - East</Text></Value>
+<Value><Code>210106495</Code><Text>Surf Coast (S) - West</Text></Value>
+<Value><Code>230156611</Code><Text>Swan Hill (RC) - Central</Text></Value>
+<Value><Code>230156614</Code><Text>Swan Hill (RC) - Robinvale</Text></Value>
+<Value><Code>230156616</Code><Text>Swan Hill (RC) Bal</Text></Value>
+<Value><Code>245056671</Code><Text>Towong (S) - Pt A</Text></Value>
+<Value><Code>245156672</Code><Text>Towong (S) - Pt B</Text></Value>
+<Value><Code>245106701</Code><Text>Wangaratta (RC) - Central</Text></Value>
+<Value><Code>245106704</Code><Text>Wangaratta (RC) - North</Text></Value>
+<Value><Code>245106705</Code><Text>Wangaratta (RC) - South</Text></Value>
+<Value><Code>215016730</Code><Text>Warrnambool (C)</Text></Value>
+<Value><Code>250156811</Code><Text>Wellington (S) - Alberton</Text></Value>
+<Value><Code>250156812</Code><Text>Wellington (S) - Avon</Text></Value>
+<Value><Code>250156813</Code><Text>Wellington (S) - Maffra</Text></Value>
+<Value><Code>250156814</Code><Text>Wellington (S) - Rosedale</Text></Value>
+<Value><Code>250156815</Code><Text>Wellington (S) - Sale</Text></Value>
+<Value><Code>225056890</Code><Text>West Wimmera (S)</Text></Value>
+<Value><Code>205506981</Code><Text>Whitehorse (C) - Box Hill</Text></Value>
+<Value><Code>205506984</Code><Text>Whitehorse (C) - Nunawading E.</Text></Value>
+<Value><Code>205506985</Code><Text>Whitehorse (C) - Nunawading W.</Text></Value>
+<Value><Code>205407071</Code><Text>Whittlesea (C) - North</Text></Value>
+<Value><Code>205407075</Code><Text>Whittlesea (C) - South-East</Text></Value>
+<Value><Code>205407076</Code><Text>Whittlesea (C) - South-West</Text></Value>
+<Value><Code>245057170</Code><Text>Wodonga (RC)</Text></Value>
+<Value><Code>205207261</Code><Text>Wyndham (C) - North</Text></Value>
+<Value><Code>205207264</Code><Text>Wyndham (C) - South</Text></Value>
+<Value><Code>205207267</Code><Text>Wyndham (C) - West</Text></Value>
+<Value><Code>205057351</Code><Text>Yarra (C) - North</Text></Value>
+<Value><Code>205057352</Code><Text>Yarra (C) - Richmond</Text></Value>
+<Value><Code>205607451</Code><Text>Yarra Ranges (S) - Central</Text></Value>
+<Value><Code>205607452</Code><Text>Yarra Ranges (S) - Dandenongs</Text></Value>
+<Value><Code>205607453</Code><Text>Yarra Ranges (S) - Lilydale</Text></Value>
+<Value><Code>205607454</Code><Text>Yarra Ranges (S) - North</Text></Value>
+<Value><Code>255107458</Code><Text>Yarra Ranges (S) - Pt B</Text></Value>
+<Value><Code>205607456</Code><Text>Yarra Ranges (S) - Seville</Text></Value>
+<Value><Code>225107631</Code><Text>Yarriambiack (S) - North</Text></Value>
+<Value><Code>225107632</Code><Text>Yarriambiack (S) - South</Text></Value>
+<Value><Code>255208649</Code><Text>Bass Strait Islands</Text></Value>
+<Value><Code>245158109</Code><Text>Falls Creek Alpine Resort</Text></Value>
+<Value><Code>255208529</Code><Text>French Island</Text></Value>
+<Value><Code>215058469</Code><Text>Lady Julia Percy Island</Text></Value>
+<Value><Code>240208149</Code><Text>Lake Mountain Alpine Resort</Text></Value>
+<Value><Code>285019779</Code><Text>Migratory - Offshore - Shipping (Vic.)</Text></Value>
+<Value><Code>255108209</Code><Text>Mount Baw Baw Alpine Resort</Text></Value>
+<Value><Code>240158249</Code><Text>Mount Buller Alpine Resort</Text></Value>
+<Value><Code>245158309</Code><Text>Mount Hotham Alpine Resort</Text></Value>
+<Value><Code>240158349</Code><Text>Mount Stirling Alpine Resort</Text></Value>
+<Value><Code>350100250</Code><Text>Aurukun (S)</Text></Value>
+<Value><Code>325050300</Code><Text>Balonne (S)</Text></Value>
+<Value><Code>330150370</Code><Text>Banana (S)</Text></Value>
+<Value><Code>335050412</Code><Text>Barcaldine (R) - Aramac</Text></Value>
+<Value><Code>335050416</Code><Text>Barcaldine (R) - Barcaldine</Text></Value>
+<Value><Code>335050418</Code><Text>Barcaldine (R) - Jericho</Text></Value>
+<Value><Code>335050450</Code><Text>Barcoo (S)</Text></Value>
+<Value><Code>335050762</Code><Text>Blackall Tambo (R) - Blackall</Text></Value>
+<Value><Code>335050765</Code><Text>Blackall Tambo (R) - Tambo</Text></Value>
+<Value><Code>335050900</Code><Text>Boulia (S)</Text></Value>
+<Value><Code>305111001</Code><Text>Acacia Ridge</Text></Value>
+<Value><Code>305031004</Code><Text>Albion</Text></Value>
+<Value><Code>305031007</Code><Text>Alderley</Text></Value>
+<Value><Code>305111012</Code><Text>Algester</Text></Value>
+<Value><Code>305091015</Code><Text>Annerley</Text></Value>
+<Value><Code>305071018</Code><Text>Anstead</Text></Value>
+<Value><Code>305111023</Code><Text>Archerfield</Text></Value>
+<Value><Code>305031026</Code><Text>Ascot</Text></Value>
+<Value><Code>305031031</Code><Text>Ashgrove</Text></Value>
+<Value><Code>305071034</Code><Text>Aspley</Text></Value>
+<Value><Code>305071037</Code><Text>Bald Hills</Text></Value>
+<Value><Code>305091042</Code><Text>Balmoral</Text></Value>
+<Value><Code>305071045</Code><Text>Banyo</Text></Value>
+<Value><Code>305031048</Code><Text>Bardon</Text></Value>
+<Value><Code>305071053</Code><Text>Bellbowrie</Text></Value>
+<Value><Code>305111057</Code><Text>Belmont-Mackenzie</Text></Value>
+<Value><Code>305071064</Code><Text>Boondall</Text></Value>
+<Value><Code>305011067</Code><Text>Bowen Hills</Text></Value>
+<Value><Code>305071072</Code><Text>Bracken Ridge</Text></Value>
+<Value><Code>305071075</Code><Text>Bridgeman Downs</Text></Value>
+<Value><Code>305071078</Code><Text>Brighton</Text></Value>
+<Value><Code>305071084</Code><Text>Brookfield (incl. Brisbane Forest Park)</Text></Value>
+<Value><Code>305091086</Code><Text>Bulimba</Text></Value>
+<Value><Code>305111091</Code><Text>Burbank</Text></Value>
+<Value><Code>305111094</Code><Text>Calamvale</Text></Value>
+<Value><Code>305091097</Code><Text>Camp Hill</Text></Value>
+<Value><Code>305091102</Code><Text>Cannon Hill</Text></Value>
+<Value><Code>305091113</Code><Text>Carina</Text></Value>
+<Value><Code>305091116</Code><Text>Carina Heights</Text></Value>
+<Value><Code>305091108</Code><Text>Carindale</Text></Value>
+<Value><Code>305071121</Code><Text>Carseldine</Text></Value>
+<Value><Code>305111123</Code><Text>Chandler-Capalaba West</Text></Value>
+<Value><Code>305071127</Code><Text>Chapel Hill</Text></Value>
+<Value><Code>305031132</Code><Text>Chelmer</Text></Value>
+<Value><Code>305071135</Code><Text>Chermside</Text></Value>
+<Value><Code>305071138</Code><Text>Chermside West</Text></Value>
+<Value><Code>305011143</Code><Text>City - Inner</Text></Value>
+<Value><Code>305011146</Code><Text>City - Remainder</Text></Value>
+<Value><Code>305031151</Code><Text>Clayfield</Text></Value>
+<Value><Code>305111154</Code><Text>Coopers Plains</Text></Value>
+<Value><Code>305091157</Code><Text>Coorparoo</Text></Value>
+<Value><Code>305031162</Code><Text>Corinda</Text></Value>
+<Value><Code>305071167</Code><Text>Darra-Sumner</Text></Value>
+<Value><Code>305071173</Code><Text>Deagon</Text></Value>
+<Value><Code>305071176</Code><Text>Doolandella-Forest Lake</Text></Value>
+<Value><Code>305071184</Code><Text>Durack</Text></Value>
+<Value><Code>305011187</Code><Text>Dutton Park</Text></Value>
+<Value><Code>305091195</Code><Text>East Brisbane</Text></Value>
+<Value><Code>305111198</Code><Text>Eight Mile Plains</Text></Value>
+<Value><Code>305071203</Code><Text>Ellen Grove</Text></Value>
+<Value><Code>305031206</Code><Text>Enoggera</Text></Value>
+<Value><Code>305071211</Code><Text>Everton Park</Text></Value>
+<Value><Code>305091214</Code><Text>Fairfield</Text></Value>
+<Value><Code>305071217</Code><Text>Ferny Grove</Text></Value>
+<Value><Code>305071222</Code><Text>Fig Tree Pocket</Text></Value>
+<Value><Code>305011227</Code><Text>Fortitude Valley</Text></Value>
+<Value><Code>305071236</Code><Text>Geebung</Text></Value>
+<Value><Code>305031241</Code><Text>Graceville</Text></Value>
+<Value><Code>305031244</Code><Text>Grange</Text></Value>
+<Value><Code>305091247</Code><Text>Greenslopes</Text></Value>
+<Value><Code>305111251</Code><Text>Gumdale-Ransome</Text></Value>
+<Value><Code>305031255</Code><Text>Hamilton</Text></Value>
+<Value><Code>305091258</Code><Text>Hawthorne</Text></Value>
+<Value><Code>305111265</Code><Text>Hemmant-Lytton</Text></Value>
+<Value><Code>305031271</Code><Text>Hendra</Text></Value>
+<Value><Code>305011274</Code><Text>Herston</Text></Value>
+<Value><Code>305011277</Code><Text>Highgate Hill</Text></Value>
+<Value><Code>305091282</Code><Text>Holland Park</Text></Value>
+<Value><Code>305091285</Code><Text>Holland Park West</Text></Value>
+<Value><Code>305071288</Code><Text>Inala</Text></Value>
+<Value><Code>305031293</Code><Text>Indooroopilly</Text></Value>
+<Value><Code>305071296</Code><Text>Jamboree Heights</Text></Value>
+<Value><Code>305071301</Code><Text>Jindalee</Text></Value>
+<Value><Code>305011304</Code><Text>Kangaroo Point</Text></Value>
+<Value><Code>305071306</Code><Text>Karana Downs-Lake Manchester</Text></Value>
+<Value><Code>305031312</Code><Text>Kedron</Text></Value>
+<Value><Code>305011315</Code><Text>Kelvin Grove</Text></Value>
+<Value><Code>305071318</Code><Text>Kenmore</Text></Value>
+<Value><Code>305071323</Code><Text>Kenmore Hills</Text></Value>
+<Value><Code>305071326</Code><Text>Keperra</Text></Value>
+<Value><Code>305111331</Code><Text>Kuraby</Text></Value>
+<Value><Code>305111337</Code><Text>Lota</Text></Value>
+<Value><Code>305031345</Code><Text>Lutwyche</Text></Value>
+<Value><Code>305111356</Code><Text>MacGregor</Text></Value>
+<Value><Code>305111364</Code><Text>Manly</Text></Value>
+<Value><Code>305111367</Code><Text>Manly West</Text></Value>
+<Value><Code>305111372</Code><Text>Mansfield</Text></Value>
+<Value><Code>305071353</Code><Text>McDowall</Text></Value>
+<Value><Code>305071375</Code><Text>Middle Park</Text></Value>
+<Value><Code>305011378</Code><Text>Milton</Text></Value>
+<Value><Code>305071383</Code><Text>Mitchelton</Text></Value>
+<Value><Code>305071386</Code><Text>Moggill</Text></Value>
+<Value><Code>305091391</Code><Text>Moorooka</Text></Value>
+<Value><Code>305111394</Code><Text>Moreton Island</Text></Value>
+<Value><Code>305091397</Code><Text>Morningside</Text></Value>
+<Value><Code>305111402</Code><Text>Mount Gravatt</Text></Value>
+<Value><Code>305111405</Code><Text>Mount Gravatt East</Text></Value>
+<Value><Code>305071408</Code><Text>Mount Ommaney</Text></Value>
+<Value><Code>305111413</Code><Text>Murarrie</Text></Value>
+<Value><Code>305111416</Code><Text>Nathan</Text></Value>
+<Value><Code>305011421</Code><Text>New Farm</Text></Value>
+<Value><Code>305031424</Code><Text>Newmarket</Text></Value>
+<Value><Code>305011427</Code><Text>Newstead</Text></Value>
+<Value><Code>305091432</Code><Text>Norman Park</Text></Value>
+<Value><Code>305071435</Code><Text>Northgate</Text></Value>
+<Value><Code>305071442</Code><Text>Nudgee</Text></Value>
+<Value><Code>305031446</Code><Text>Nundah</Text></Value>
+<Value><Code>305071451</Code><Text>Oxley</Text></Value>
+<Value><Code>305011454</Code><Text>Paddington</Text></Value>
+<Value><Code>305111456</Code><Text>Pallara-Heathwood-Larapinta</Text></Value>
+<Value><Code>305111463</Code><Text>Parkinson-Drewvale</Text></Value>
+<Value><Code>305071465</Code><Text>Pinjarra Hills</Text></Value>
+<Value><Code>305071467</Code><Text>Pinkenba-Eagle Farm</Text></Value>
+<Value><Code>305071473</Code><Text>Pullenvale</Text></Value>
+<Value><Code>305011481</Code><Text>Red Hill</Text></Value>
+<Value><Code>305071484</Code><Text>Richlands</Text></Value>
+<Value><Code>305071487</Code><Text>Riverhills</Text></Value>
+<Value><Code>305111492</Code><Text>Robertson</Text></Value>
+<Value><Code>305111495</Code><Text>Rochedale</Text></Value>
+<Value><Code>305111498</Code><Text>Rocklea</Text></Value>
+<Value><Code>305111503</Code><Text>Runcorn</Text></Value>
+<Value><Code>305111511</Code><Text>Salisbury</Text></Value>
+<Value><Code>305071514</Code><Text>Sandgate</Text></Value>
+<Value><Code>305071517</Code><Text>Seventeen Mile Rocks</Text></Value>
+<Value><Code>305031522</Code><Text>Sherwood</Text></Value>
+<Value><Code>305011525</Code><Text>South Brisbane</Text></Value>
+<Value><Code>305011528</Code><Text>Spring Hill</Text></Value>
+<Value><Code>305031506</Code><Text>St Lucia</Text></Value>
+<Value><Code>305031533</Code><Text>Stafford</Text></Value>
+<Value><Code>305031536</Code><Text>Stafford Heights</Text></Value>
+<Value><Code>305111541</Code><Text>Stretton-Karawatha</Text></Value>
+<Value><Code>305111547</Code><Text>Sunnybank</Text></Value>
+<Value><Code>305111552</Code><Text>Sunnybank Hills</Text></Value>
+<Value><Code>305071556</Code><Text>Taigum-Fitzgibbon</Text></Value>
+<Value><Code>305031558</Code><Text>Taringa</Text></Value>
+<Value><Code>305091563</Code><Text>Tarragindi</Text></Value>
+<Value><Code>305071567</Code><Text>The Gap</Text></Value>
+<Value><Code>305111571</Code><Text>Tingalpa</Text></Value>
+<Value><Code>305031574</Code><Text>Toowong</Text></Value>
+<Value><Code>305071585</Code><Text>Upper Kedron</Text></Value>
+<Value><Code>305111588</Code><Text>Upper Mount Gravatt</Text></Value>
+<Value><Code>305071593</Code><Text>Virginia</Text></Value>
+<Value><Code>305071596</Code><Text>Wacol</Text></Value>
+<Value><Code>305111601</Code><Text>Wakerley</Text></Value>
+<Value><Code>305071604</Code><Text>Wavell Heights</Text></Value>
+<Value><Code>305011607</Code><Text>West End</Text></Value>
+<Value><Code>305071612</Code><Text>Westlake</Text></Value>
+<Value><Code>305111615</Code><Text>Willawong</Text></Value>
+<Value><Code>305031618</Code><Text>Wilston</Text></Value>
+<Value><Code>305031623</Code><Text>Windsor</Text></Value>
+<Value><Code>305111626</Code><Text>Wishart</Text></Value>
+<Value><Code>305011631</Code><Text>Woolloongabba</Text></Value>
+<Value><Code>305031634</Code><Text>Wooloowin</Text></Value>
+<Value><Code>305111637</Code><Text>Wynnum</Text></Value>
+<Value><Code>305111642</Code><Text>Wynnum West</Text></Value>
+<Value><Code>305091645</Code><Text>Yeerongpilly</Text></Value>
+<Value><Code>305091648</Code><Text>Yeronga</Text></Value>
+<Value><Code>305071653</Code><Text>Zillmere</Text></Value>
+<Value><Code>325051750</Code><Text>Bulloo (S)</Text></Value>
+<Value><Code>315051822</Code><Text>Bundaberg (R) - Bundaberg</Text></Value>
+<Value><Code>315051824</Code><Text>Bundaberg (R) - Burnett Pt A</Text></Value>
+<Value><Code>315101825</Code><Text>Bundaberg (R) - Burnett Pt B</Text></Value>
+<Value><Code>315101827</Code><Text>Bundaberg (R) - Isis</Text></Value>
+<Value><Code>315101828</Code><Text>Bundaberg (R) - Kolan</Text></Value>
+<Value><Code>345151900</Code><Text>Burdekin (S)</Text></Value>
+<Value><Code>355051950</Code><Text>Burke (S)</Text></Value>
+<Value><Code>350052062</Code><Text>Cairns (R) - Barron</Text></Value>
+<Value><Code>350052065</Code><Text>Cairns (R) - Central Suburbs</Text></Value>
+<Value><Code>350052066</Code><Text>Cairns (R) - City</Text></Value>
+<Value><Code>350102067</Code><Text>Cairns (R) - Douglas</Text></Value>
+<Value><Code>350052068</Code><Text>Cairns (R) - Mt Whitfield</Text></Value>
+<Value><Code>350052072</Code><Text>Cairns (R) - Northern Suburbs</Text></Value>
+<Value><Code>350102078</Code><Text>Cairns (R) - Pt B</Text></Value>
+<Value><Code>350052074</Code><Text>Cairns (R) - Trinity</Text></Value>
+<Value><Code>350052076</Code><Text>Cairns (R) - Western Suburbs</Text></Value>
+<Value><Code>355052250</Code><Text>Carpentaria (S)</Text></Value>
+<Value><Code>350102262</Code><Text>Cassowary Coast (R) - Cardwell</Text></Value>
+<Value><Code>350102264</Code><Text>Cassowary Coast (R) - Johnstone</Text></Value>
+<Value><Code>330152272</Code><Text>Central Highlands (R) - Bauhinia</Text></Value>
+<Value><Code>330152274</Code><Text>Central Highlands (R) - Duaringa</Text></Value>
+<Value><Code>330152276</Code><Text>Central Highlands (R) - Emerald</Text></Value>
+<Value><Code>330152278</Code><Text>Central Highlands (R) - Peak Downs</Text></Value>
+<Value><Code>345152312</Code><Text>Charters Towers (R) - Charters Towers</Text></Value>
+<Value><Code>345152314</Code><Text>Charters Towers (R) - Dalrymple</Text></Value>
+<Value><Code>315102330</Code><Text>Cherbourg (S)</Text></Value>
+<Value><Code>355052450</Code><Text>Cloncurry (S)</Text></Value>
+<Value><Code>350102500</Code><Text>Cook (S)</Text></Value>
+<Value><Code>350102600</Code><Text>Croydon (S)</Text></Value>
+<Value><Code>335052750</Code><Text>Diamantina (S)</Text></Value>
+<Value><Code>355052770</Code><Text>Doomadgee (S)</Text></Value>
+<Value><Code>350103100</Code><Text>Etheridge (S)</Text></Value>
+<Value><Code>355053200</Code><Text>Flinders (S)</Text></Value>
+<Value><Code>315073222</Code><Text>Fraser Coast (R) - Hervey Bay Pt A</Text></Value>
+<Value><Code>315103223</Code><Text>Fraser Coast (R) - Hervey Bay Pt B</Text></Value>
+<Value><Code>315103225</Code><Text>Fraser Coast (R) - Maryborough</Text></Value>
+<Value><Code>315103227</Code><Text>Fraser Coast (R) - Woocoo-Tiaro</Text></Value>
+<Value><Code>330103362</Code><Text>Gladstone (R) - Calliope Pt A</Text></Value>
+<Value><Code>330153364</Code><Text>Gladstone (R) - Calliope Pt B</Text></Value>
+<Value><Code>330103366</Code><Text>Gladstone (R) - Gladstone</Text></Value>
+<Value><Code>330153368</Code><Text>Gladstone (R) - Miriam Vale</Text></Value>
+<Value><Code>307153502</Code><Text>Ashmore-Benowa</Text></Value>
+<Value><Code>307103508</Code><Text>Biggera Waters-Labrador</Text></Value>
+<Value><Code>307103511</Code><Text>Bilinga-Tugun</Text></Value>
+<Value><Code>307103515</Code><Text>Broadbeach Waters</Text></Value>
+<Value><Code>307103514</Code><Text>Broadbeach-Mermaid Beach</Text></Value>
+<Value><Code>307103517</Code><Text>Bundall</Text></Value>
+<Value><Code>307103521</Code><Text>Burleigh Heads</Text></Value>
+<Value><Code>307103523</Code><Text>Burleigh Waters</Text></Value>
+<Value><Code>307153525</Code><Text>Carrara-Merrimac</Text></Value>
+<Value><Code>307103527</Code><Text>Coolangatta</Text></Value>
+<Value><Code>307153531</Code><Text>Coombabah</Text></Value>
+<Value><Code>307103533</Code><Text>Currumbin</Text></Value>
+<Value><Code>307153534</Code><Text>Currumbin Valley-Tallebudgera</Text></Value>
+<Value><Code>307153535</Code><Text>Currumbin Waters</Text></Value>
+<Value><Code>307153537</Code><Text>Elanora</Text></Value>
+<Value><Code>307203538</Code><Text>Guanaba-Springbrook</Text></Value>
+<Value><Code>307153543</Code><Text>Helensvale</Text></Value>
+<Value><Code>307153547</Code><Text>Hope Island</Text></Value>
+<Value><Code>307153552</Code><Text>Jacobs Well-Alberton</Text></Value>
+<Value><Code>307153556</Code><Text>Kingsholme-Upper Coomera</Text></Value>
+<Value><Code>307103555</Code><Text>Main Beach-South Stradbroke</Text></Value>
+<Value><Code>307103562</Code><Text>Mermaid Wtrs-Clear Is. Wtrs</Text></Value>
+<Value><Code>307103563</Code><Text>Miami</Text></Value>
+<Value><Code>307153564</Code><Text>Molendinar</Text></Value>
+<Value><Code>307153566</Code><Text>Mudgeeraba-Reedy Creek</Text></Value>
+<Value><Code>307153567</Code><Text>Nerang</Text></Value>
+<Value><Code>307153574</Code><Text>Ormeau-Yatala</Text></Value>
+<Value><Code>307153568</Code><Text>Oxenford-Maudsland</Text></Value>
+<Value><Code>307153572</Code><Text>Pacific Pines-Gaven</Text></Value>
+<Value><Code>307103573</Code><Text>Palm Beach</Text></Value>
+<Value><Code>307103576</Code><Text>Paradise Point-Runaway Bay</Text></Value>
+<Value><Code>307153578</Code><Text>Parkwood-Arundel</Text></Value>
+<Value><Code>307153581</Code><Text>Pimpama-Coomera</Text></Value>
+<Value><Code>307153582</Code><Text>Robina</Text></Value>
+<Value><Code>307103585</Code><Text>Southport</Text></Value>
+<Value><Code>307103587</Code><Text>Surfers Paradise</Text></Value>
+<Value><Code>307153592</Code><Text>Varsity Lakes</Text></Value>
+<Value><Code>307153593</Code><Text>Worongary-Tallai</Text></Value>
+<Value><Code>320053612</Code><Text>Goondiwindi (R) - Goondiwindi</Text></Value>
+<Value><Code>320053614</Code><Text>Goondiwindi (R) - Inglewood</Text></Value>
+<Value><Code>320053616</Code><Text>Goondiwindi (R) - Waggamba</Text></Value>
+<Value><Code>315103622</Code><Text>Gympie (R) - Cooloola</Text></Value>
+<Value><Code>315103624</Code><Text>Gympie (R) - Gympie</Text></Value>
+<Value><Code>315103626</Code><Text>Gympie (R) - Kilkivan</Text></Value>
+<Value><Code>345153800</Code><Text>Hinchinbrook (S)</Text></Value>
+<Value><Code>350103830</Code><Text>Hope Vale (S)</Text></Value>
+<Value><Code>305253962</Code><Text>Ipswich (C) - Central</Text></Value>
+<Value><Code>305253965</Code><Text>Ipswich (C) - East</Text></Value>
+<Value><Code>305253966</Code><Text>Ipswich (C) - North</Text></Value>
+<Value><Code>305253971</Code><Text>Ipswich (C) - South-West</Text></Value>
+<Value><Code>305253976</Code><Text>Ipswich (C) - West</Text></Value>
+<Value><Code>340103982</Code><Text>Isaac (R) - Belyando</Text></Value>
+<Value><Code>340103984</Code><Text>Isaac (R) - Broadsound</Text></Value>
+<Value><Code>340103986</Code><Text>Isaac (R) - Nebo</Text></Value>
+<Value><Code>350104420</Code><Text>Kowanyama (S)</Text></Value>
+<Value><Code>350104570</Code><Text>Lockhart River (S)</Text></Value>
+<Value><Code>312104582</Code><Text>Lockyer Valley (R) - Gatton</Text></Value>
+<Value><Code>312104584</Code><Text>Lockyer Valley (R) - Laidley</Text></Value>
+<Value><Code>305304595</Code><Text>Beenleigh</Text></Value>
+<Value><Code>305304597</Code><Text>Bethania-Waterford</Text></Value>
+<Value><Code>305304601</Code><Text>Browns Plains</Text></Value>
+<Value><Code>305304603</Code><Text>Carbrook-Cornubia</Text></Value>
+<Value><Code>305304605</Code><Text>Daisy Hill-Priestdale</Text></Value>
+<Value><Code>305304606</Code><Text>Eagleby</Text></Value>
+<Value><Code>305304607</Code><Text>Edens Landing-Holmview</Text></Value>
+<Value><Code>305304608</Code><Text>Greenbank-Boronia Heights</Text></Value>
+<Value><Code>305304611</Code><Text>Jimboomba-Logan Village</Text></Value>
+<Value><Code>305304612</Code><Text>Kingston</Text></Value>
+<Value><Code>305304615</Code><Text>Loganholme</Text></Value>
+<Value><Code>305304618</Code><Text>Loganlea</Text></Value>
+<Value><Code>305304623</Code><Text>Marsden</Text></Value>
+<Value><Code>305304626</Code><Text>Mt Warren Park</Text></Value>
+<Value><Code>305304627</Code><Text>Park Ridge-Logan Reserve</Text></Value>
+<Value><Code>305304631</Code><Text>Rochedale South</Text></Value>
+<Value><Code>305304634</Code><Text>Shailer Park</Text></Value>
+<Value><Code>305304637</Code><Text>Slacks Creek</Text></Value>
+<Value><Code>305304642</Code><Text>Springwood</Text></Value>
+<Value><Code>305304645</Code><Text>Tanah Merah</Text></Value>
+<Value><Code>305304651</Code><Text>Underwood</Text></Value>
+<Value><Code>305304654</Code><Text>Waterford West</Text></Value>
+<Value><Code>305304655</Code><Text>Wolffdene-Bahrs Scrub</Text></Value>
+<Value><Code>305304656</Code><Text>Woodridge</Text></Value>
+<Value><Code>335054712</Code><Text>Longreach (R) - Ilfracombe</Text></Value>
+<Value><Code>335054714</Code><Text>Longreach (R) - Isisford</Text></Value>
+<Value><Code>335054716</Code><Text>Longreach (R) - Longreach</Text></Value>
+<Value><Code>340054772</Code><Text>Mackay (R) - Mackay Pt A</Text></Value>
+<Value><Code>340104773</Code><Text>Mackay (R) - Mackay Pt B</Text></Value>
+<Value><Code>340104775</Code><Text>Mackay (R) - Mirani</Text></Value>
+<Value><Code>340104777</Code><Text>Mackay (R) - Sarina</Text></Value>
+<Value><Code>355054800</Code><Text>McKinlay (S)</Text></Value>
+<Value><Code>350104830</Code><Text>Mapoon (S)</Text></Value>
+<Value><Code>325054862</Code><Text>Maranoa (R) - Bendemere</Text></Value>
+<Value><Code>325054864</Code><Text>Maranoa (R) - Booringa</Text></Value>
+<Value><Code>325054865</Code><Text>Maranoa (R) - Bungil</Text></Value>
+<Value><Code>325054867</Code><Text>Maranoa (R) - Roma</Text></Value>
+<Value><Code>325054868</Code><Text>Maranoa (R) - Warroo</Text></Value>
+<Value><Code>305405013</Code><Text>Albany Creek</Text></Value>
+<Value><Code>305405016</Code><Text>Bray Park</Text></Value>
+<Value><Code>305205019</Code><Text>Bribie Island</Text></Value>
+<Value><Code>305205021</Code><Text>Burpengary-Narangba</Text></Value>
+<Value><Code>305205023</Code><Text>Caboolture Central</Text></Value>
+<Value><Code>305205025</Code><Text>Caboolture East</Text></Value>
+<Value><Code>305205027</Code><Text>Caboolture Hinterland</Text></Value>
+<Value><Code>305205028</Code><Text>Caboolture Midwest</Text></Value>
+<Value><Code>305405033</Code><Text>Central Pine West</Text></Value>
+<Value><Code>305455035</Code><Text>Clontarf</Text></Value>
+<Value><Code>305405037</Code><Text>Dakabin-Kallangur-M. Downs</Text></Value>
+<Value><Code>305205039</Code><Text>Deception Bay</Text></Value>
+<Value><Code>305405043</Code><Text>Griffin-Mango Hill</Text></Value>
+<Value><Code>305405047</Code><Text>Hills District</Text></Value>
+<Value><Code>305405051</Code><Text>Lawnton</Text></Value>
+<Value><Code>305455053</Code><Text>Margate-Woody Point</Text></Value>
+<Value><Code>305205056</Code><Text>Morayfield</Text></Value>
+<Value><Code>305405068</Code><Text>Moreton Bay (R) Bal</Text></Value>
+<Value><Code>305405058</Code><Text>Petrie</Text></Value>
+<Value><Code>305455063</Code><Text>Redcliffe-Scarborough</Text></Value>
+<Value><Code>305455065</Code><Text>Rothwell-Kippa-Ring</Text></Value>
+<Value><Code>305405067</Code><Text>Strathpine-Brendale</Text></Value>
+<Value><Code>355055250</Code><Text>Mornington (S)</Text></Value>
+<Value><Code>355055300</Code><Text>Mount Isa (C)</Text></Value>
+<Value><Code>325055600</Code><Text>Murweh (S)</Text></Value>
+<Value><Code>350105670</Code><Text>Napranum (S)</Text></Value>
+<Value><Code>315105761</Code><Text>North Burnett (R) - Biggenden</Text></Value>
+<Value><Code>315105762</Code><Text>North Burnett (R) - Eidsvold</Text></Value>
+<Value><Code>315105763</Code><Text>North Burnett (R) - Gayndah</Text></Value>
+<Value><Code>315105764</Code><Text>North Burnett (R) - Monto</Text></Value>
+<Value><Code>315105765</Code><Text>North Burnett (R) - Mundubbera</Text></Value>
+<Value><Code>315105766</Code><Text>North Burnett (R) - Perry</Text></Value>
+<Value><Code>350105781</Code><Text>Northern Peninsula Area (R) - Bamaga</Text></Value>
+<Value><Code>350105783</Code><Text>Northern Peninsula Area (R) - Injinoo</Text></Value>
+<Value><Code>350105784</Code><Text>Northern Peninsula Area (R) - New Mapoon</Text></Value>
+<Value><Code>350105786</Code><Text>Northern Peninsula Area (R) - Seisia</Text></Value>
+<Value><Code>350105788</Code><Text>Northern Peninsula Area (R) - Umagico</Text></Value>
+<Value><Code>345155790</Code><Text>Palm Island (S)</Text></Value>
+<Value><Code>325055800</Code><Text>Paroo (S)</Text></Value>
+<Value><Code>350106070</Code><Text>Pormpuraaw (S)</Text></Value>
+<Value><Code>325056150</Code><Text>Quilpie (S)</Text></Value>
+<Value><Code>305506251</Code><Text>Alexandra Hills</Text></Value>
+<Value><Code>305506254</Code><Text>Birkdale</Text></Value>
+<Value><Code>305506257</Code><Text>Capalaba</Text></Value>
+<Value><Code>305506262</Code><Text>Cleveland</Text></Value>
+<Value><Code>305506264</Code><Text>Ormiston</Text></Value>
+<Value><Code>305506283</Code><Text>Redland (C) Bal</Text></Value>
+<Value><Code>305506265</Code><Text>Redland Bay</Text></Value>
+<Value><Code>305506267</Code><Text>Sheldon-Mt Cotton</Text></Value>
+<Value><Code>305506268</Code><Text>Thorneside</Text></Value>
+<Value><Code>305506271</Code><Text>Thornlands</Text></Value>
+<Value><Code>305506273</Code><Text>Victoria Point</Text></Value>
+<Value><Code>305506276</Code><Text>Wellington Point</Text></Value>
+<Value><Code>355056300</Code><Text>Richmond (S)</Text></Value>
+<Value><Code>330056362</Code><Text>Rockhampton (R) - Fitzroy Pt A</Text></Value>
+<Value><Code>330156363</Code><Text>Rockhampton (R) - Fitzroy Pt B</Text></Value>
+<Value><Code>330056365</Code><Text>Rockhampton (R) - Livingstone Pt A</Text></Value>
+<Value><Code>330156366</Code><Text>Rockhampton (R) - Livingstone Pt B</Text></Value>
+<Value><Code>330156367</Code><Text>Rockhampton (R) - Mount Morgan</Text></Value>
+<Value><Code>330056368</Code><Text>Rockhampton (R) - Rockhampton</Text></Value>
+<Value><Code>312106512</Code><Text>Scenic Rim (R) - Beaudesert</Text></Value>
+<Value><Code>312106514</Code><Text>Scenic Rim (R) - Boonah</Text></Value>
+<Value><Code>312106516</Code><Text>Scenic Rim (R) - Tamborine-Canungra</Text></Value>
+<Value><Code>312056582</Code><Text>Somerset (R) - Esk</Text></Value>
+<Value><Code>312056584</Code><Text>Somerset (R) - Kilcoy</Text></Value>
+<Value><Code>315106632</Code><Text>South Burnett (R) - Kingaroy</Text></Value>
+<Value><Code>315106634</Code><Text>South Burnett (R) - Murgon</Text></Value>
+<Value><Code>315106636</Code><Text>South Burnett (R) - Nanango</Text></Value>
+<Value><Code>315106638</Code><Text>South Burnett (R) - Wondai</Text></Value>
+<Value><Code>320056662</Code><Text>Southern Downs (R) - Allora</Text></Value>
+<Value><Code>320056665</Code><Text>Southern Downs (R) - Killarney</Text></Value>
+<Value><Code>320056666</Code><Text>Southern Downs (R) - Stanthorpe</Text></Value>
+<Value><Code>320056667</Code><Text>Southern Downs (R) - Warwick</Text></Value>
+<Value><Code>320056668</Code><Text>Southern Downs (R) - West</Text></Value>
+<Value><Code>309056713</Code><Text>Buderim</Text></Value>
+<Value><Code>309106716</Code><Text>Caloundra Hinterland</Text></Value>
+<Value><Code>309056718</Code><Text>Caloundra North</Text></Value>
+<Value><Code>309056721</Code><Text>Caloundra South</Text></Value>
+<Value><Code>309056723</Code><Text>Coolum-Mudjimba</Text></Value>
+<Value><Code>309106725</Code><Text>Glass House Country</Text></Value>
+<Value><Code>309056728</Code><Text>Kawana</Text></Value>
+<Value><Code>309106733</Code><Text>Maroochy Hinterland</Text></Value>
+<Value><Code>309056738</Code><Text>Maroochydore</Text></Value>
+<Value><Code>309056744</Code><Text>Mooloolaba</Text></Value>
+<Value><Code>309056748</Code><Text>Nambour</Text></Value>
+<Value><Code>309106753</Code><Text>Noosa Hinterland</Text></Value>
+<Value><Code>309056755</Code><Text>Noosa-Noosaville</Text></Value>
+<Value><Code>309056761</Code><Text>Paynter-Petrie Creek</Text></Value>
+<Value><Code>309056763</Code><Text>Sunshine-Peregian</Text></Value>
+<Value><Code>309056772</Code><Text>Tewantin</Text></Value>
+<Value><Code>350106812</Code><Text>Tablelands (R) - Atherton</Text></Value>
+<Value><Code>350106814</Code><Text>Tablelands (R) - Eacham</Text></Value>
+<Value><Code>350106816</Code><Text>Tablelands (R) - Herberton</Text></Value>
+<Value><Code>350106818</Code><Text>Tablelands (R) - Mareeba</Text></Value>
+<Value><Code>320016912</Code><Text>Cambooya</Text></Value>
+<Value><Code>320056914</Code><Text>Clifton</Text></Value>
+<Value><Code>320056916</Code><Text>Crow's Nest</Text></Value>
+<Value><Code>320016921</Code><Text>Gowrie</Text></Value>
+<Value><Code>320056923</Code><Text>Greenmount</Text></Value>
+<Value><Code>320016926</Code><Text>Highfields</Text></Value>
+<Value><Code>320056928</Code><Text>Jondaryan</Text></Value>
+<Value><Code>320056931</Code><Text>Millmerran</Text></Value>
+<Value><Code>320056933</Code><Text>Pittsworth</Text></Value>
+<Value><Code>320056935</Code><Text>Rosalie</Text></Value>
+<Value><Code>320016937</Code><Text>Toowoomba Central</Text></Value>
+<Value><Code>320016941</Code><Text>Toowoomba North-East</Text></Value>
+<Value><Code>320016943</Code><Text>Toowoomba North-West</Text></Value>
+<Value><Code>320016945</Code><Text>Toowoomba South-East</Text></Value>
+<Value><Code>320016946</Code><Text>Toowoomba West</Text></Value>
+<Value><Code>320016947</Code><Text>Westbrook</Text></Value>
+<Value><Code>350106950</Code><Text>Torres (S)</Text></Value>
+<Value><Code>350106963</Code><Text>Torres Strait Island (R) - Badu</Text></Value>
+<Value><Code>350106965</Code><Text>Torres Strait Island (R) - Boigu</Text></Value>
+<Value><Code>350106968</Code><Text>Torres Strait Island (R) - Dauan</Text></Value>
+<Value><Code>350106972</Code><Text>Torres Strait Island (R) - Erub</Text></Value>
+<Value><Code>350106974</Code><Text>Torres Strait Island (R) - Hammond</Text></Value>
+<Value><Code>350106976</Code><Text>Torres Strait Island (R) - Iama</Text></Value>
+<Value><Code>350106978</Code><Text>Torres Strait Island (R) - Kubin</Text></Value>
+<Value><Code>350106982</Code><Text>Torres Strait Island (R) - Mabuiag</Text></Value>
+<Value><Code>350106984</Code><Text>Torres Strait Island (R) - Mer</Text></Value>
+<Value><Code>350106986</Code><Text>Torres Strait Island (R) - Poruma</Text></Value>
+<Value><Code>350106992</Code><Text>Torres Strait Island (R) - Saibai</Text></Value>
+<Value><Code>350106993</Code><Text>Torres Strait Island (R) - St Pauls</Text></Value>
+<Value><Code>350106995</Code><Text>Torres Strait Island (R) - Ugar</Text></Value>
+<Value><Code>350106996</Code><Text>Torres Strait Island (R) - Warraber</Text></Value>
+<Value><Code>350106998</Code><Text>Torres Strait Island (R) - Yorke</Text></Value>
+<Value><Code>345057001</Code><Text>Aitkenvale</Text></Value>
+<Value><Code>345057003</Code><Text>City</Text></Value>
+<Value><Code>345107005</Code><Text>Condon-Rasmussen-Bohle Basin</Text></Value>
+<Value><Code>345057007</Code><Text>Cranbrook</Text></Value>
+<Value><Code>345057012</Code><Text>Currajong</Text></Value>
+<Value><Code>345057014</Code><Text>Douglas</Text></Value>
+<Value><Code>345057015</Code><Text>Garbutt</Text></Value>
+<Value><Code>345057018</Code><Text>Gulliver</Text></Value>
+<Value><Code>345057023</Code><Text>Heatley</Text></Value>
+<Value><Code>345057026</Code><Text>Hermit Park</Text></Value>
+<Value><Code>345057027</Code><Text>Hyde Park-Mysterton</Text></Value>
+<Value><Code>345107028</Code><Text>Kelso</Text></Value>
+<Value><Code>345107030</Code><Text>Kirwan</Text></Value>
+<Value><Code>345057031</Code><Text>Magnetic Island</Text></Value>
+<Value><Code>345057033</Code><Text>Mt Louisa-Mt St John-Bohle</Text></Value>
+<Value><Code>345057034</Code><Text>Mundingburra</Text></Value>
+<Value><Code>345057038</Code><Text>Murray</Text></Value>
+<Value><Code>345057041</Code><Text>North Ward-Castle Hill</Text></Value>
+<Value><Code>345157043</Code><Text>Northern Beaches-Pinnacles</Text></Value>
+<Value><Code>345057044</Code><Text>Oonoonba-Idalia-Cluden</Text></Value>
+<Value><Code>345057047</Code><Text>Pallarenda-Shelley Beach</Text></Value>
+<Value><Code>345057051</Code><Text>Pimlico</Text></Value>
+<Value><Code>345057054</Code><Text>Railway Estate</Text></Value>
+<Value><Code>345057058</Code><Text>Rosslea</Text></Value>
+<Value><Code>345057062</Code><Text>Rowes Bay-Belgian Gardens</Text></Value>
+<Value><Code>345057065</Code><Text>South Townsville</Text></Value>
+<Value><Code>345057068</Code><Text>Stuart-Roseneath</Text></Value>
+<Value><Code>345057071</Code><Text>Vincent</Text></Value>
+<Value><Code>345057074</Code><Text>West End</Text></Value>
+<Value><Code>345157076</Code><Text>Woodstock-Cleveland-Ross</Text></Value>
+<Value><Code>345057078</Code><Text>Wulguru</Text></Value>
+<Value><Code>350107300</Code><Text>Weipa (T)</Text></Value>
+<Value><Code>320057312</Code><Text>Western Downs (R) - Chinchilla</Text></Value>
+<Value><Code>320057313</Code><Text>Western Downs (R) - Dalby</Text></Value>
+<Value><Code>320057315</Code><Text>Western Downs (R) - Murilla-Wandoan</Text></Value>
+<Value><Code>320057316</Code><Text>Western Downs (R) - Tara</Text></Value>
+<Value><Code>320057318</Code><Text>Western Downs (R) - Wambo</Text></Value>
+<Value><Code>340107342</Code><Text>Whitsunday (R) - Bowen</Text></Value>
+<Value><Code>340107345</Code><Text>Whitsunday (R) - Whitsunday</Text></Value>
+<Value><Code>335057400</Code><Text>Winton (S)</Text></Value>
+<Value><Code>330157550</Code><Text>Woorabinda (S)</Text></Value>
+<Value><Code>350107570</Code><Text>Wujal Wujal (S)</Text></Value>
+<Value><Code>350107600</Code><Text>Yarrabah (S)</Text></Value>
+<Value><Code>385019779</Code><Text>Migratory - Offshore - Shipping (Qld)</Text></Value>
+<Value><Code>405150070</Code><Text>Adelaide (C)</Text></Value>
+<Value><Code>405150121</Code><Text>Adelaide Hills (DC) - Central</Text></Value>
+<Value><Code>410150125</Code><Text>Adelaide Hills (DC) - North</Text></Value>
+<Value><Code>405150124</Code><Text>Adelaide Hills (DC) - Ranges</Text></Value>
+<Value><Code>410150128</Code><Text>Adelaide Hills (DC) Bal</Text></Value>
+<Value><Code>410200221</Code><Text>Alexandrina (DC) - Coastal</Text></Value>
+<Value><Code>410200224</Code><Text>Alexandrina (DC) - Strathalbyn</Text></Value>
+<Value><Code>435250250</Code><Text>Anangu Pitjantjatjara (AC)</Text></Value>
+<Value><Code>410050311</Code><Text>Barossa (DC) - Angaston</Text></Value>
+<Value><Code>410050314</Code><Text>Barossa (DC) - Barossa</Text></Value>
+<Value><Code>410050315</Code><Text>Barossa (DC) - Tanunda</Text></Value>
+<Value><Code>415050430</Code><Text>Barunga West (DC)</Text></Value>
+<Value><Code>420050521</Code><Text>Berri and Barmera (DC) - Barmera</Text></Value>
+<Value><Code>420050524</Code><Text>Berri and Barmera (DC) - Berri</Text></Value>
+<Value><Code>405150701</Code><Text>Burnside (C) - North-East</Text></Value>
+<Value><Code>405150704</Code><Text>Burnside (C) - South-West</Text></Value>
+<Value><Code>405150911</Code><Text>Campbelltown (C) - East</Text></Value>
+<Value><Code>405150914</Code><Text>Campbelltown (C) - West</Text></Value>
+<Value><Code>430101010</Code><Text>Ceduna (DC)</Text></Value>
+<Value><Code>405101061</Code><Text>Charles Sturt (C) - Coastal</Text></Value>
+<Value><Code>405101064</Code><Text>Charles Sturt (C) - Inner East</Text></Value>
+<Value><Code>405101065</Code><Text>Charles Sturt (C) - Inner West</Text></Value>
+<Value><Code>405101068</Code><Text>Charles Sturt (C) - North-East</Text></Value>
+<Value><Code>415101140</Code><Text>Clare and Gilbert Valleys (DC)</Text></Value>
+<Value><Code>430051190</Code><Text>Cleve (DC)</Text></Value>
+<Value><Code>435251330</Code><Text>Coober Pedy (DC)</Text></Value>
+<Value><Code>415051560</Code><Text>Copper Coast (DC)</Text></Value>
+<Value><Code>430051750</Code><Text>Elliston (DC)</Text></Value>
+<Value><Code>435201830</Code><Text>Flinders Ranges (DC)</Text></Value>
+<Value><Code>430051960</Code><Text>Franklin Harbour (DC)</Text></Value>
+<Value><Code>405052030</Code><Text>Gawler (T)</Text></Value>
+<Value><Code>415102110</Code><Text>Goyder (DC)</Text></Value>
+<Value><Code>425102250</Code><Text>Grant (DC)</Text></Value>
+<Value><Code>405202601</Code><Text>Holdfast Bay (C) - North</Text></Value>
+<Value><Code>405202604</Code><Text>Holdfast Bay (C) - South</Text></Value>
+<Value><Code>410102750</Code><Text>Kangaroo Island (DC)</Text></Value>
+<Value><Code>420103080</Code><Text>Karoonda East Murray (DC)</Text></Value>
+<Value><Code>430053220</Code><Text>Kimba (DC)</Text></Value>
+<Value><Code>425053360</Code><Text>Kingston (DC)</Text></Value>
+<Value><Code>410053650</Code><Text>Light (RegC)</Text></Value>
+<Value><Code>430053710</Code><Text>Lower Eyre Peninsula (DC)</Text></Value>
+<Value><Code>420053791</Code><Text>Loxton Waikerie (DC) - East</Text></Value>
+<Value><Code>420053794</Code><Text>Loxton Waikerie (DC) - West</Text></Value>
+<Value><Code>410053920</Code><Text>Mallala (DC)</Text></Value>
+<Value><Code>435254000</Code><Text>Maralinga Tjarutja (AC)</Text></Value>
+<Value><Code>405204061</Code><Text>Marion (C) - Central</Text></Value>
+<Value><Code>405204064</Code><Text>Marion (C) - North</Text></Value>
+<Value><Code>405204065</Code><Text>Marion (C) - South</Text></Value>
+<Value><Code>420054210</Code><Text>Mid Murray (DC)</Text></Value>
+<Value><Code>405204341</Code><Text>Mitcham (C) - Hills</Text></Value>
+<Value><Code>405204344</Code><Text>Mitcham (C) - North-East</Text></Value>
+<Value><Code>405204345</Code><Text>Mitcham (C) - West</Text></Value>
+<Value><Code>410154551</Code><Text>Mount Barker (DC) - Central</Text></Value>
+<Value><Code>410154554</Code><Text>Mount Barker (DC) Bal</Text></Value>
+<Value><Code>425104620</Code><Text>Mount Gambier (C)</Text></Value>
+<Value><Code>435204830</Code><Text>Mount Remarkable (DC)</Text></Value>
+<Value><Code>420105040</Code><Text>Murray Bridge (RC)</Text></Value>
+<Value><Code>425055090</Code><Text>Naracoorte and Lucindale (DC)</Text></Value>
+<Value><Code>435155120</Code><Text>Northern Areas (DC)</Text></Value>
+<Value><Code>405155291</Code><Text>Norw. P'ham St Ptrs (C) - East</Text></Value>
+<Value><Code>405155294</Code><Text>Norw. P'ham St Ptrs (C) - West</Text></Value>
+<Value><Code>405205341</Code><Text>Onkaparinga (C) - Hackham</Text></Value>
+<Value><Code>405205342</Code><Text>Onkaparinga (C) - Hills</Text></Value>
+<Value><Code>405205343</Code><Text>Onkaparinga (C) - Morphett</Text></Value>
+<Value><Code>405205344</Code><Text>Onkaparinga (C) - North Coast</Text></Value>
+<Value><Code>405205345</Code><Text>Onkaparinga (C) - Reservoir</Text></Value>
+<Value><Code>405205346</Code><Text>Onkaparinga (C) - South Coast</Text></Value>
+<Value><Code>405205347</Code><Text>Onkaparinga (C) - Woodcroft</Text></Value>
+<Value><Code>435155400</Code><Text>Orroroo/Carrieton (DC)</Text></Value>
+<Value><Code>435155540</Code><Text>Peterborough (DC)</Text></Value>
+<Value><Code>405055681</Code><Text>Playford (C) - East Central</Text></Value>
+<Value><Code>405055683</Code><Text>Playford (C) - Elizabeth</Text></Value>
+<Value><Code>405055684</Code><Text>Playford (C) - Hills</Text></Value>
+<Value><Code>405055686</Code><Text>Playford (C) - West</Text></Value>
+<Value><Code>405055688</Code><Text>Playford (C) - West Central</Text></Value>
+<Value><Code>405105895</Code><Text>Port Adel. Enfield (C) - Coast</Text></Value>
+<Value><Code>405055891</Code><Text>Port Adel. Enfield (C) - East</Text></Value>
+<Value><Code>405055894</Code><Text>Port Adel. Enfield (C) - Inner</Text></Value>
+<Value><Code>405105896</Code><Text>Port Adel. Enfield (C) - Park</Text></Value>
+<Value><Code>405105897</Code><Text>Port Adel. Enfield (C) - Port</Text></Value>
+<Value><Code>435206090</Code><Text>Port Augusta (C)</Text></Value>
+<Value><Code>430056300</Code><Text>Port Lincoln (C)</Text></Value>
+<Value><Code>435156451</Code><Text>Port Pirie C Dists (M) - City</Text></Value>
+<Value><Code>435156454</Code><Text>Port Pirie C Dists (M) Bal</Text></Value>
+<Value><Code>405156510</Code><Text>Prospect (C)</Text></Value>
+<Value><Code>420056671</Code><Text>Renmark Paringa (DC) - Paringa</Text></Value>
+<Value><Code>420056674</Code><Text>Renmark Paringa (DC) - Renmark</Text></Value>
+<Value><Code>425056860</Code><Text>Robe (DC)</Text></Value>
+<Value><Code>435256970</Code><Text>Roxby Downs (M)</Text></Value>
+<Value><Code>405057141</Code><Text>Salisbury (C) - Central</Text></Value>
+<Value><Code>405057143</Code><Text>Salisbury (C) - Inner North</Text></Value>
+<Value><Code>405057144</Code><Text>Salisbury (C) - North-East</Text></Value>
+<Value><Code>405057146</Code><Text>Salisbury (C) - South-East</Text></Value>
+<Value><Code>405057148</Code><Text>Salisbury (C) Bal</Text></Value>
+<Value><Code>420107290</Code><Text>Southern Mallee (DC)</Text></Value>
+<Value><Code>430107490</Code><Text>Streaky Bay (DC)</Text></Value>
+<Value><Code>425057630</Code><Text>Tatiara (DC)</Text></Value>
+<Value><Code>405057701</Code><Text>Tea Tree Gully (C) - Central</Text></Value>
+<Value><Code>405057704</Code><Text>Tea Tree Gully (C) - Hills</Text></Value>
+<Value><Code>405057705</Code><Text>Tea Tree Gully (C) - North</Text></Value>
+<Value><Code>405057708</Code><Text>Tea Tree Gully (C) - South</Text></Value>
+<Value><Code>420107800</Code><Text>The Coorong (DC)</Text></Value>
+<Value><Code>430057910</Code><Text>Tumby Bay (DC)</Text></Value>
+<Value><Code>405157981</Code><Text>Unley (C) - East</Text></Value>
+<Value><Code>405157984</Code><Text>Unley (C) - West</Text></Value>
+<Value><Code>410208050</Code><Text>Victor Harbor (C)</Text></Value>
+<Value><Code>415108130</Code><Text>Wakefield (DC)</Text></Value>
+<Value><Code>405158260</Code><Text>Walkerville (M)</Text></Value>
+<Value><Code>425108341</Code><Text>Wattle Range (DC) - East</Text></Value>
+<Value><Code>425108344</Code><Text>Wattle Range (DC) - West</Text></Value>
+<Value><Code>405108411</Code><Text>West Torrens (C) - East</Text></Value>
+<Value><Code>405108414</Code><Text>West Torrens (C) - West</Text></Value>
+<Value><Code>435058540</Code><Text>Whyalla (C)</Text></Value>
+<Value><Code>430058640</Code><Text>Wudinna (DC)</Text></Value>
+<Value><Code>410208750</Code><Text>Yankalilla (DC)</Text></Value>
+<Value><Code>415058831</Code><Text>Yorke Peninsula (DC) - North</Text></Value>
+<Value><Code>415058834</Code><Text>Yorke Peninsula (DC) - South</Text></Value>
+<Value><Code>485019779</Code><Text>Migratory - Offshore - Shipping (SA)</Text></Value>
+<Value><Code>435259589</Code><Text>Unincorp. Far North</Text></Value>
+<Value><Code>435209529</Code><Text>Unincorp. Flinders Ranges</Text></Value>
+<Value><Code>430059179</Code><Text>Unincorp. Lincoln</Text></Value>
+<Value><Code>420109109</Code><Text>Unincorp. Murray Mallee</Text></Value>
+<Value><Code>435159459</Code><Text>Unincorp. Pirie</Text></Value>
+<Value><Code>420059039</Code><Text>Unincorp. Riverland</Text></Value>
+<Value><Code>430109249</Code><Text>Unincorp. West Coast</Text></Value>
+<Value><Code>405108899</Code><Text>Unincorp. Western</Text></Value>
+<Value><Code>435059389</Code><Text>Unincorp. Whyalla</Text></Value>
+<Value><Code>415058969</Code><Text>Unincorp. Yorke</Text></Value>
+<Value><Code>515100081</Code><Text>Albany (C) - Central</Text></Value>
+<Value><Code>515100084</Code><Text>Albany (C) Bal</Text></Value>
+<Value><Code>505250210</Code><Text>Armadale (C)</Text></Value>
+<Value><Code>540100250</Code><Text>Ashburton (S)</Text></Value>
+<Value><Code>510150280</Code><Text>Augusta-Margaret River (S)</Text></Value>
+<Value><Code>505100350</Code><Text>Bassendean (T)</Text></Value>
+<Value><Code>505100420</Code><Text>Bayswater (C)</Text></Value>
+<Value><Code>505250490</Code><Text>Belmont (C)</Text></Value>
+<Value><Code>525100560</Code><Text>Beverley (S)</Text></Value>
+<Value><Code>510100630</Code><Text>Boddington (S)</Text></Value>
+<Value><Code>510200770</Code><Text>Boyup Brook (S)</Text></Value>
+<Value><Code>510200840</Code><Text>Bridgetown-Greenbushes (S)</Text></Value>
+<Value><Code>520050910</Code><Text>Brookton (S)</Text></Value>
+<Value><Code>545100980</Code><Text>Broome (S)</Text></Value>
+<Value><Code>515051080</Code><Text>Broomehill-Tambellup (S)</Text></Value>
+<Value><Code>525151120</Code><Text>Bruce Rock (S)</Text></Value>
+<Value><Code>510031190</Code><Text>Bunbury (C)</Text></Value>
+<Value><Code>510151260</Code><Text>Busselton (S)</Text></Value>
+<Value><Code>505051310</Code><Text>Cambridge (T)</Text></Value>
+<Value><Code>505251330</Code><Text>Canning (C)</Text></Value>
+<Value><Code>510031401</Code><Text>Capel (S) - Pt A</Text></Value>
+<Value><Code>510101404</Code><Text>Capel (S) - Pt B</Text></Value>
+<Value><Code>535151470</Code><Text>Carnamah (S)</Text></Value>
+<Value><Code>535051540</Code><Text>Carnarvon (S)</Text></Value>
+<Value><Code>535151610</Code><Text>Chapman Valley (S)</Text></Value>
+<Value><Code>525051680</Code><Text>Chittering (S)</Text></Value>
+<Value><Code>505051750</Code><Text>Claremont (T)</Text></Value>
+<Value><Code>505201820</Code><Text>Cockburn (C)</Text></Value>
+<Value><Code>510101890</Code><Text>Collie (S)</Text></Value>
+<Value><Code>530051960</Code><Text>Coolgardie (S)</Text></Value>
+<Value><Code>535152030</Code><Text>Coorow (S)</Text></Value>
+<Value><Code>520102100</Code><Text>Corrigin (S)</Text></Value>
+<Value><Code>505052170</Code><Text>Cottesloe (T)</Text></Value>
+<Value><Code>515102240</Code><Text>Cranbrook (S)</Text></Value>
+<Value><Code>520052310</Code><Text>Cuballing (S)</Text></Value>
+<Value><Code>535102380</Code><Text>Cue (S)</Text></Value>
+<Value><Code>525102450</Code><Text>Cunderdin (S)</Text></Value>
+<Value><Code>525102520</Code><Text>Dalwallinu (S)</Text></Value>
+<Value><Code>525052590</Code><Text>Dandaragan (S)</Text></Value>
+<Value><Code>510032661</Code><Text>Dardanup (S) - Pt A</Text></Value>
+<Value><Code>510102664</Code><Text>Dardanup (S) - Pt B</Text></Value>
+<Value><Code>515102730</Code><Text>Denmark (S)</Text></Value>
+<Value><Code>545102800</Code><Text>Derby-West Kimberley (S)</Text></Value>
+<Value><Code>510102870</Code><Text>Donnybrook-Balingup (S)</Text></Value>
+<Value><Code>525102940</Code><Text>Dowerin (S)</Text></Value>
+<Value><Code>520053010</Code><Text>Dumbleyung (S)</Text></Value>
+<Value><Code>530103080</Code><Text>Dundas (S)</Text></Value>
+<Value><Code>505203150</Code><Text>East Fremantle (T)</Text></Value>
+<Value><Code>540053220</Code><Text>East Pilbara (S)</Text></Value>
+<Value><Code>530103290</Code><Text>Esperance (S)</Text></Value>
+<Value><Code>535053360</Code><Text>Exmouth (S)</Text></Value>
+<Value><Code>505203431</Code><Text>Fremantle (C) - Inner</Text></Value>
+<Value><Code>505203432</Code><Text>Fremantle (C) - Remainder</Text></Value>
+<Value><Code>535033522</Code><Text>Geraldton</Text></Value>
+<Value><Code>535033524</Code><Text>Greenough - Pt A</Text></Value>
+<Value><Code>535153526</Code><Text>Greenough - Pt B</Text></Value>
+<Value><Code>525053570</Code><Text>Gingin (S)</Text></Value>
+<Value><Code>515053640</Code><Text>Gnowangerup (S)</Text></Value>
+<Value><Code>525103710</Code><Text>Goomalling (S)</Text></Value>
+<Value><Code>505253780</Code><Text>Gosnells (C)</Text></Value>
+<Value><Code>545053920</Code><Text>Halls Creek (S)</Text></Value>
+<Value><Code>510033991</Code><Text>Harvey (S) - Pt A</Text></Value>
+<Value><Code>510103994</Code><Text>Harvey (S) - Pt B</Text></Value>
+<Value><Code>535154060</Code><Text>Irwin (S)</Text></Value>
+<Value><Code>515054130</Code><Text>Jerramungup (S)</Text></Value>
+<Value><Code>505154171</Code><Text>Joondalup (C) - North</Text></Value>
+<Value><Code>505154174</Code><Text>Joondalup (C) - South</Text></Value>
+<Value><Code>505104200</Code><Text>Kalamunda (S)</Text></Value>
+<Value><Code>530014281</Code><Text>Kalgoorlie/Boulder (C) - Pt A</Text></Value>
+<Value><Code>530054284</Code><Text>Kalgoorlie/Boulder (C) - Pt B</Text></Value>
+<Value><Code>515054340</Code><Text>Katanning (S)</Text></Value>
+<Value><Code>525154410</Code><Text>Kellerberrin (S)</Text></Value>
+<Value><Code>515054480</Code><Text>Kent (S)</Text></Value>
+<Value><Code>515054550</Code><Text>Kojonup (S)</Text></Value>
+<Value><Code>520104620</Code><Text>Kondinin (S)</Text></Value>
+<Value><Code>525104690</Code><Text>Koorda (S)</Text></Value>
+<Value><Code>520104760</Code><Text>Kulin (S)</Text></Value>
+<Value><Code>505204830</Code><Text>Kwinana (T)</Text></Value>
+<Value><Code>520104900</Code><Text>Lake Grace (S)</Text></Value>
+<Value><Code>530054970</Code><Text>Laverton (S)</Text></Value>
+<Value><Code>530055040</Code><Text>Leonora (S)</Text></Value>
+<Value><Code>510015110</Code><Text>Mandurah (C)</Text></Value>
+<Value><Code>510205180</Code><Text>Manjimup (S)</Text></Value>
+<Value><Code>535105250</Code><Text>Meekatharra (S)</Text></Value>
+<Value><Code>505205320</Code><Text>Melville (C)</Text></Value>
+<Value><Code>530055390</Code><Text>Menzies (S)</Text></Value>
+<Value><Code>525155460</Code><Text>Merredin (S)</Text></Value>
+<Value><Code>535155530</Code><Text>Mingenew (S)</Text></Value>
+<Value><Code>525055600</Code><Text>Moora (S)</Text></Value>
+<Value><Code>535155670</Code><Text>Morawa (S)</Text></Value>
+<Value><Code>505055740</Code><Text>Mosman Park (T)</Text></Value>
+<Value><Code>535105810</Code><Text>Mount Magnet (S)</Text></Value>
+<Value><Code>525155880</Code><Text>Mount Marshall (S)</Text></Value>
+<Value><Code>525155950</Code><Text>Mukinbudin (S)</Text></Value>
+<Value><Code>535156020</Code><Text>Mullewa (S)</Text></Value>
+<Value><Code>505106090</Code><Text>Mundaring (S)</Text></Value>
+<Value><Code>535106160</Code><Text>Murchison (S)</Text></Value>
+<Value><Code>510016230</Code><Text>Murray (S)</Text></Value>
+<Value><Code>510206300</Code><Text>Nannup (S)</Text></Value>
+<Value><Code>525156370</Code><Text>Narembeen (S)</Text></Value>
+<Value><Code>520056450</Code><Text>Narrogin (S)</Text></Value>
+<Value><Code>520056520</Code><Text>Narrogin (T)</Text></Value>
+<Value><Code>505056580</Code><Text>Nedlands (C)</Text></Value>
+<Value><Code>530056620</Code><Text>Ngaanyatjarraku (S)</Text></Value>
+<Value><Code>525106732</Code><Text>Northam</Text></Value>
+<Value><Code>525106735</Code><Text>Northam Town</Text></Value>
+<Value><Code>535156790</Code><Text>Northampton (S)</Text></Value>
+<Value><Code>525156860</Code><Text>Nungarin (S)</Text></Value>
+<Value><Code>505056930</Code><Text>Peppermint Grove (S)</Text></Value>
+<Value><Code>535157000</Code><Text>Perenjori (S)</Text></Value>
+<Value><Code>505057081</Code><Text>Perth (C) - Inner</Text></Value>
+<Value><Code>505057082</Code><Text>Perth (C) - Remainder</Text></Value>
+<Value><Code>520057140</Code><Text>Pingelly (S)</Text></Value>
+<Value><Code>515107210</Code><Text>Plantagenet (S)</Text></Value>
+<Value><Code>540057280</Code><Text>Port Hedland (T)</Text></Value>
+<Value><Code>525107350</Code><Text>Quairading (S)</Text></Value>
+<Value><Code>530107420</Code><Text>Ravensthorpe (S)</Text></Value>
+<Value><Code>505207490</Code><Text>Rockingham (C)</Text></Value>
+<Value><Code>540107560</Code><Text>Roebourne (S)</Text></Value>
+<Value><Code>535107630</Code><Text>Sandstone (S)</Text></Value>
+<Value><Code>505257700</Code><Text>Serpentine-Jarrahdale (S)</Text></Value>
+<Value><Code>535057770</Code><Text>Shark Bay (S)</Text></Value>
+<Value><Code>505257840</Code><Text>South Perth (C)</Text></Value>
+<Value><Code>505157914</Code><Text>Stirling (C) - Central</Text></Value>
+<Value><Code>505157915</Code><Text>Stirling (C) - Coastal</Text></Value>
+<Value><Code>505157916</Code><Text>Stirling (C) - South-Eastern</Text></Value>
+<Value><Code>505057980</Code><Text>Subiaco (C)</Text></Value>
+<Value><Code>505108050</Code><Text>Swan (C)</Text></Value>
+<Value><Code>525108190</Code><Text>Tammin (S)</Text></Value>
+<Value><Code>535158260</Code><Text>Three Springs (S)</Text></Value>
+<Value><Code>525108330</Code><Text>Toodyay (S)</Text></Value>
+<Value><Code>525158400</Code><Text>Trayning (S)</Text></Value>
+<Value><Code>535058470</Code><Text>Upper Gascoyne (S)</Text></Value>
+<Value><Code>505258510</Code><Text>Victoria Park (T)</Text></Value>
+<Value><Code>525058540</Code><Text>Victoria Plains (S)</Text></Value>
+<Value><Code>505058570</Code><Text>Vincent (T)</Text></Value>
+<Value><Code>520058610</Code><Text>Wagin (S)</Text></Value>
+<Value><Code>520058680</Code><Text>Wandering (S)</Text></Value>
+<Value><Code>505158761</Code><Text>Wanneroo (C) - North-East</Text></Value>
+<Value><Code>505158764</Code><Text>Wanneroo (C) - North-West</Text></Value>
+<Value><Code>505158767</Code><Text>Wanneroo (C) - South</Text></Value>
+<Value><Code>510108820</Code><Text>Waroona (S)</Text></Value>
+<Value><Code>520058890</Code><Text>West Arthur (S)</Text></Value>
+<Value><Code>525159030</Code><Text>Westonia (S)</Text></Value>
+<Value><Code>520059100</Code><Text>Wickepin (S)</Text></Value>
+<Value><Code>520059170</Code><Text>Williams (S)</Text></Value>
+<Value><Code>535109250</Code><Text>Wiluna (S)</Text></Value>
+<Value><Code>525109310</Code><Text>Wongan-Ballidu (S)</Text></Value>
+<Value><Code>515059320</Code><Text>Woodanilling (S)</Text></Value>
+<Value><Code>525109330</Code><Text>Wyalkatchem (S)</Text></Value>
+<Value><Code>545059340</Code><Text>Wyndham-East Kimberley (S)</Text></Value>
+<Value><Code>535109350</Code><Text>Yalgoo (S)</Text></Value>
+<Value><Code>525159360</Code><Text>Yilgarn (S)</Text></Value>
+<Value><Code>525109370</Code><Text>York (S)</Text></Value>
+<Value><Code>585019779</Code><Text>Migratory - Offshore - Shipping (WA)</Text></Value>
+<Value><Code>615150210</Code><Text>Break O'Day (M)</Text></Value>
+<Value><Code>605050410</Code><Text>Brighton (M)</Text></Value>
+<Value><Code>620050611</Code><Text>Burnie (C) - Pt A</Text></Value>
+<Value><Code>620100612</Code><Text>Burnie (C) - Pt B</Text></Value>
+<Value><Code>620050811</Code><Text>Central Coast (M) - Pt A</Text></Value>
+<Value><Code>620100812</Code><Text>Central Coast (M) - Pt B</Text></Value>
+<Value><Code>610051010</Code><Text>Central Highlands (M)</Text></Value>
+<Value><Code>620101210</Code><Text>Circular Head (M)</Text></Value>
+<Value><Code>605051410</Code><Text>Clarence (C)</Text></Value>
+<Value><Code>605051511</Code><Text>Derwent Valley (M) - Pt A</Text></Value>
+<Value><Code>610051512</Code><Text>Derwent Valley (M) - Pt B</Text></Value>
+<Value><Code>620051610</Code><Text>Devonport (C)</Text></Value>
+<Value><Code>615151810</Code><Text>Dorset (M)</Text></Value>
+<Value><Code>615152010</Code><Text>Flinders (M)</Text></Value>
+<Value><Code>615052211</Code><Text>George Town (M) - Pt A</Text></Value>
+<Value><Code>615102212</Code><Text>George Town (M) - Pt B</Text></Value>
+<Value><Code>610052410</Code><Text>Glamorgan/Spring Bay (M)</Text></Value>
+<Value><Code>605052610</Code><Text>Glenorchy (C)</Text></Value>
+<Value><Code>605052811</Code><Text>Hobart (C) - Inner</Text></Value>
+<Value><Code>605052812</Code><Text>Hobart (C) - Remainder</Text></Value>
+<Value><Code>610053010</Code><Text>Huon Valley (M)</Text></Value>
+<Value><Code>620103210</Code><Text>Kentish (M)</Text></Value>
+<Value><Code>620103410</Code><Text>King Island (M)</Text></Value>
+<Value><Code>605053611</Code><Text>Kingborough (M) - Pt A</Text></Value>
+<Value><Code>610053612</Code><Text>Kingborough (M) - Pt B</Text></Value>
+<Value><Code>620053811</Code><Text>Latrobe (M) - Pt A</Text></Value>
+<Value><Code>620103812</Code><Text>Latrobe (M) - Pt B</Text></Value>
+<Value><Code>615054011</Code><Text>Launceston (C) - Inner</Text></Value>
+<Value><Code>615054012</Code><Text>Launceston (C) - Pt B</Text></Value>
+<Value><Code>615104013</Code><Text>Launceston (C) - Pt C</Text></Value>
+<Value><Code>615054211</Code><Text>Meander Valley (M) - Pt A</Text></Value>
+<Value><Code>615104212</Code><Text>Meander Valley (M) - Pt B</Text></Value>
+<Value><Code>615054611</Code><Text>Northern Midlands (M) - Pt A</Text></Value>
+<Value><Code>615104612</Code><Text>Northern Midlands (M) - Pt B</Text></Value>
+<Value><Code>605054811</Code><Text>Sorell (M) - Pt A</Text></Value>
+<Value><Code>610054812</Code><Text>Sorell (M) - Pt B</Text></Value>
+<Value><Code>610055010</Code><Text>Southern Midlands (M)</Text></Value>
+<Value><Code>610055210</Code><Text>Tasman (M)</Text></Value>
+<Value><Code>620055411</Code><Text>Waratah/Wynyard (M) - Pt A</Text></Value>
+<Value><Code>620105412</Code><Text>Waratah/Wynyard (M) - Pt B</Text></Value>
+<Value><Code>620155610</Code><Text>West Coast (M)</Text></Value>
+<Value><Code>615055811</Code><Text>West Tamar (M) - Pt A</Text></Value>
+<Value><Code>615105812</Code><Text>West Tamar (M) - Pt B</Text></Value>
+<Value><Code>685019779</Code><Text>Migratory - Offshore - Shipping (Tas.)</Text></Value>
+<Value><Code>710400201</Code><Text>Alice Springs (T) - Charles</Text></Value>
+<Value><Code>710400203</Code><Text>Alice Springs (T) - Heavitree</Text></Value>
+<Value><Code>710400205</Code><Text>Alice Springs (T) - Larapinta</Text></Value>
+<Value><Code>710400207</Code><Text>Alice Springs (T) - Ross</Text></Value>
+<Value><Code>710400208</Code><Text>Alice Springs (T) - Stuart</Text></Value>
+<Value><Code>710350422</Code><Text>Barkly (S) - Tennant Creek</Text></Value>
+<Value><Code>710350425</Code><Text>Barkly (S) Bal</Text></Value>
+<Value><Code>710050540</Code><Text>Belyuen (S)</Text></Value>
+<Value><Code>710400620</Code><Text>Central Desert (S)</Text></Value>
+<Value><Code>710050700</Code><Text>Coomalie (S)</Text></Value>
+<Value><Code>705051004</Code><Text>Alawa</Text></Value>
+<Value><Code>705051008</Code><Text>Anula</Text></Value>
+<Value><Code>705051011</Code><Text>Bayview-Woolner</Text></Value>
+<Value><Code>705051014</Code><Text>Brinkin</Text></Value>
+<Value><Code>705051018</Code><Text>City - Inner</Text></Value>
+<Value><Code>705051138</Code><Text>City - Remainder</Text></Value>
+<Value><Code>705051024</Code><Text>Coconut Grove</Text></Value>
+<Value><Code>705051028</Code><Text>Fannie Bay</Text></Value>
+<Value><Code>705051034</Code><Text>Jingili</Text></Value>
+<Value><Code>705051038</Code><Text>Karama</Text></Value>
+<Value><Code>705051044</Code><Text>Larrakeyah</Text></Value>
+<Value><Code>705051048</Code><Text>Leanyer</Text></Value>
+<Value><Code>705051052</Code><Text>Lee Point-Leanyer Swamp</Text></Value>
+<Value><Code>705051054</Code><Text>Ludmilla</Text></Value>
+<Value><Code>705051058</Code><Text>Malak</Text></Value>
+<Value><Code>705051064</Code><Text>Marrara</Text></Value>
+<Value><Code>705051068</Code><Text>Millner</Text></Value>
+<Value><Code>705051074</Code><Text>Moil</Text></Value>
+<Value><Code>705051078</Code><Text>Nakara</Text></Value>
+<Value><Code>705051084</Code><Text>Narrows</Text></Value>
+<Value><Code>705051088</Code><Text>Nightcliff</Text></Value>
+<Value><Code>705051094</Code><Text>Parap</Text></Value>
+<Value><Code>705051098</Code><Text>Rapid Creek</Text></Value>
+<Value><Code>705051104</Code><Text>Stuart Park</Text></Value>
+<Value><Code>705051108</Code><Text>The Gardens</Text></Value>
+<Value><Code>705051114</Code><Text>Tiwi</Text></Value>
+<Value><Code>705051118</Code><Text>Wagaman</Text></Value>
+<Value><Code>705051124</Code><Text>Wanguri</Text></Value>
+<Value><Code>705051128</Code><Text>Winnellie</Text></Value>
+<Value><Code>705051134</Code><Text>Wulagi</Text></Value>
+<Value><Code>710251300</Code><Text>East Arnhem (S)</Text></Value>
+<Value><Code>710302200</Code><Text>Katherine (T)</Text></Value>
+<Value><Code>705202304</Code><Text>Litchfield (M) - Pt A</Text></Value>
+<Value><Code>705202308</Code><Text>Litchfield (M) - Pt B</Text></Value>
+<Value><Code>710402330</Code><Text>MacDonnell (S)</Text></Value>
+<Value><Code>705102802</Code><Text>Bakewell</Text></Value>
+<Value><Code>705102804</Code><Text>Driver</Text></Value>
+<Value><Code>705102806</Code><Text>Durack</Text></Value>
+<Value><Code>705102808</Code><Text>Gray</Text></Value>
+<Value><Code>705102811</Code><Text>Gunn-Palmerston City</Text></Value>
+<Value><Code>705102814</Code><Text>Moulden</Text></Value>
+<Value><Code>705102824</Code><Text>Palmerston (C) Bal</Text></Value>
+<Value><Code>705102818</Code><Text>Woodroffe</Text></Value>
+<Value><Code>710303600</Code><Text>Roper Gulf (S)</Text></Value>
+<Value><Code>710104050</Code><Text>Tiwi Islands (S)</Text></Value>
+<Value><Code>710304505</Code><Text>Victoria-Daly (S) - Wadeye and OS</Text></Value>
+<Value><Code>710304508</Code><Text>Victoria-Daly (S) Bal</Text></Value>
+<Value><Code>710054560</Code><Text>Wagait (S)</Text></Value>
+<Value><Code>710154663</Code><Text>West Arnhem (S) - Jabiru</Text></Value>
+<Value><Code>710154666</Code><Text>West Arnhem (S) Bal</Text></Value>
+<Value><Code>710250419</Code><Text>Alyangula</Text></Value>
+<Value><Code>705051026</Code><Text>Darwin Waterfront</Text></Value>
+<Value><Code>705101169</Code><Text>East Arm</Text></Value>
+<Value><Code>710051509</Code><Text>Finniss-Mary</Text></Value>
+<Value><Code>785019779</Code><Text>Migratory - Offshore - Shipping (NT)</Text></Value>
+<Value><Code>710252409</Code><Text>Nhulunbuy</Text></Value>
+<Value><Code>710406059</Code><Text>Yulara</Text></Value>
+<Value><Code>805050089</Code><Text>Acton</Text></Value>
+<Value><Code>805050189</Code><Text>Ainslie</Text></Value>
+<Value><Code>805400239</Code><Text>Amaroo</Text></Value>
+<Value><Code>805100279</Code><Text>Aranda</Text></Value>
+<Value><Code>805250339</Code><Text>Banks</Text></Value>
+<Value><Code>805350369</Code><Text>Barton</Text></Value>
+<Value><Code>805100549</Code><Text>Belconnen - SSD Bal</Text></Value>
+<Value><Code>805100459</Code><Text>Belconnen Town Centre</Text></Value>
+<Value><Code>805400589</Code><Text>Bonner</Text></Value>
+<Value><Code>805250609</Code><Text>Bonython</Text></Value>
+<Value><Code>805050639</Code><Text>Braddon</Text></Value>
+<Value><Code>805100729</Code><Text>Bruce</Text></Value>
+<Value><Code>805250819</Code><Text>Calwell</Text></Value>
+<Value><Code>805050909</Code><Text>Campbell</Text></Value>
+<Value><Code>805400939</Code><Text>Casey</Text></Value>
+<Value><Code>805201089</Code><Text>Chapman</Text></Value>
+<Value><Code>805101179</Code><Text>Charnwood</Text></Value>
+<Value><Code>805151269</Code><Text>Chifley</Text></Value>
+<Value><Code>805251359</Code><Text>Chisholm</Text></Value>
+<Value><Code>805051449</Code><Text>City</Text></Value>
+<Value><Code>805251549</Code><Text>Conder</Text></Value>
+<Value><Code>805101629</Code><Text>Cook</Text></Value>
+<Value><Code>805401649</Code><Text>Crace</Text></Value>
+<Value><Code>805151719</Code><Text>Curtin</Text></Value>
+<Value><Code>805351809</Code><Text>Deakin</Text></Value>
+<Value><Code>805051889</Code><Text>Dickson</Text></Value>
+<Value><Code>805051989</Code><Text>Downer</Text></Value>
+<Value><Code>805202079</Code><Text>Duffy</Text></Value>
+<Value><Code>805102139</Code><Text>Dunlop</Text></Value>
+<Value><Code>805052169</Code><Text>Duntroon</Text></Value>
+<Value><Code>805102259</Code><Text>Evatt</Text></Value>
+<Value><Code>805252349</Code><Text>Fadden</Text></Value>
+<Value><Code>805152439</Code><Text>Farrer</Text></Value>
+<Value><Code>805202529</Code><Text>Fisher</Text></Value>
+<Value><Code>805102619</Code><Text>Florey</Text></Value>
+<Value><Code>805102709</Code><Text>Flynn</Text></Value>
+<Value><Code>805402779</Code><Text>Forde</Text></Value>
+<Value><Code>805352789</Code><Text>Forrest</Text></Value>
+<Value><Code>805402849</Code><Text>Franklin</Text></Value>
+<Value><Code>805102889</Code><Text>Fraser</Text></Value>
+<Value><Code>805352979</Code><Text>Fyshwick</Text></Value>
+<Value><Code>805153069</Code><Text>Garran</Text></Value>
+<Value><Code>805253159</Code><Text>Gilmore</Text></Value>
+<Value><Code>805103249</Code><Text>Giralang</Text></Value>
+<Value><Code>805253289</Code><Text>Gordon</Text></Value>
+<Value><Code>805253339</Code><Text>Gowrie</Text></Value>
+<Value><Code>805253379</Code><Text>Greenway</Text></Value>
+<Value><Code>805353429</Code><Text>Griffith</Text></Value>
+<Value><Code>805403519</Code><Text>Gungahlin</Text></Value>
+<Value><Code>805403529</Code><Text>Gungahlin-Hall - SSD Bal</Text></Value>
+<Value><Code>805053609</Code><Text>Hackett</Text></Value>
+<Value><Code>805403689</Code><Text>Hall</Text></Value>
+<Value><Code>805353789</Code><Text>Harman</Text></Value>
+<Value><Code>805403819</Code><Text>Harrison</Text></Value>
+<Value><Code>805103879</Code><Text>Hawker</Text></Value>
+<Value><Code>805103969</Code><Text>Higgins</Text></Value>
+<Value><Code>805204059</Code><Text>Holder</Text></Value>
+<Value><Code>805104149</Code><Text>Holt</Text></Value>
+<Value><Code>805154239</Code><Text>Hughes</Text></Value>
+<Value><Code>805354329</Code><Text>Hume</Text></Value>
+<Value><Code>805154419</Code><Text>Isaacs</Text></Value>
+<Value><Code>805254509</Code><Text>Isabella Plains</Text></Value>
+<Value><Code>805354589</Code><Text>Jerrabomberra</Text></Value>
+<Value><Code>805104779</Code><Text>Kaleen</Text></Value>
+<Value><Code>805254869</Code><Text>Kambah</Text></Value>
+<Value><Code>805354959</Code><Text>Kingston</Text></Value>
+<Value><Code>805055049</Code><Text>Kowen</Text></Value>
+<Value><Code>805105139</Code><Text>Latham</Text></Value>
+<Value><Code>805055229</Code><Text>Lyneham</Text></Value>
+<Value><Code>805155319</Code><Text>Lyons</Text></Value>
+<Value><Code>805255489</Code><Text>Macarthur</Text></Value>
+<Value><Code>805105589</Code><Text>Macgregor</Text></Value>
+<Value><Code>805105679</Code><Text>Macquarie</Text></Value>
+<Value><Code>805055769</Code><Text>Majura</Text></Value>
+<Value><Code>805155859</Code><Text>Mawson</Text></Value>
+<Value><Code>805105409</Code><Text>McKellar</Text></Value>
+<Value><Code>805105949</Code><Text>Melba</Text></Value>
+<Value><Code>885019779</Code><Text>Migratory - Offshore - Shipping (ACT)</Text></Value>
+<Value><Code>805406039</Code><Text>Mitchell</Text></Value>
+<Value><Code>805256129</Code><Text>Monash</Text></Value>
+<Value><Code>805356219</Code><Text>Narrabundah</Text></Value>
+<Value><Code>805406249</Code><Text>Ngunnawal</Text></Value>
+<Value><Code>805406279</Code><Text>Nicholls</Text></Value>
+<Value><Code>805356309</Code><Text>Oaks Estate</Text></Value>
+<Value><Code>805056389</Code><Text>O'Connor</Text></Value>
+<Value><Code>805156489</Code><Text>O'Malley</Text></Value>
+<Value><Code>805256579</Code><Text>Oxley</Text></Value>
+<Value><Code>805106669</Code><Text>Page</Text></Value>
+<Value><Code>805406719</Code><Text>Palmerston</Text></Value>
+<Value><Code>805356759</Code><Text>Parkes</Text></Value>
+<Value><Code>805156849</Code><Text>Pearce</Text></Value>
+<Value><Code>805156939</Code><Text>Phillip</Text></Value>
+<Value><Code>805357029</Code><Text>Pialligo</Text></Value>
+<Value><Code>805357119</Code><Text>Red Hill</Text></Value>
+<Value><Code>805057209</Code><Text>Reid</Text></Value>
+<Value><Code>810059009</Code><Text>Remainder of ACT</Text></Value>
+<Value><Code>805257289</Code><Text>Richardson</Text></Value>
+<Value><Code>805207389</Code><Text>Rivett</Text></Value>
+<Value><Code>805057479</Code><Text>Russell</Text></Value>
+<Value><Code>805107569</Code><Text>Scullin</Text></Value>
+<Value><Code>805107659</Code><Text>Spence</Text></Value>
+<Value><Code>805207749</Code><Text>Stirling</Text></Value>
+<Value><Code>805207839</Code><Text>Stromlo</Text></Value>
+<Value><Code>805357929</Code><Text>Symonston</Text></Value>
+<Value><Code>805258019</Code><Text>Theodore</Text></Value>
+<Value><Code>805158109</Code><Text>Torrens</Text></Value>
+<Value><Code>805258189</Code><Text>Tuggeranong - SSD Bal</Text></Value>
+<Value><Code>805058289</Code><Text>Turner</Text></Value>
+<Value><Code>805258379</Code><Text>Wanniassa</Text></Value>
+<Value><Code>805208469</Code><Text>Waramanga</Text></Value>
+<Value><Code>805058559</Code><Text>Watson</Text></Value>
+<Value><Code>805108649</Code><Text>Weetangera</Text></Value>
+<Value><Code>805208739</Code><Text>Weston</Text></Value>
+<Value><Code>805208829</Code><Text>Weston Creek-Stromlo - SSD Bal</Text></Value>
+<Value><Code>805358919</Code><Text>Yarralumla</Text></Value>
+<Value><Code>910051009</Code><Text>Jervis Bay Territory</Text></Value>
+<Value><Code>985019779</Code><Text>Migratory - Offshore - Shipping (OT)</Text></Value>
+<Value><Code>910052009</Code><Text>Territory of Christmas Island</Text></Value>
+<Value><Code>910053009</Code><Text>Territory of Cocos (Keeling) Islands</Text></Value>
+</Values>
+	</CodeSet>    <!-- AU Standard Geographical Classification -->	
+	<CodeSet>
+		<Intro>
+			<p>This Code Set is union between the Australian Statistical Geography Standard (ASGS):  http://www.abs.gov.au/ausstats/abs@.nsf/PrimaryMainFeatures/1270.0.55.001?OpenDocument</p>
+			<p>In previous versions the ARIA definition of Remoteness has been used for this validation. For the publication of ACARA's  Australian Schools List (ASL)  the ASGS validation is also supported.</p>
+		</Intro>
+		<ID>School Location</ID>
+		    <Values><Value><Code>10</Code><Text>Major Cities of Australia - New South Wales</Text></Value>
+<Value><Code>11</Code><Text>Inner Regional Australia - New South Wales</Text></Value>
+<Value><Code>12</Code><Text>Outer Regional Australia - New South Wales</Text></Value>
+<Value><Code>13</Code><Text>Remote Australia - New South Wales</Text></Value>
+<Value><Code>14</Code><Text>Very Remote Australia - New South Wales</Text></Value>
+<Value><Code>15</Code><Text>Migratory - Offshore - Shipping (NSW)</Text></Value>
+<Value><Code>19</Code><Text>No usual address (NSW)</Text></Value>
+<Value><Code>20</Code><Text>Major Cities of Australia - Victoria</Text></Value>
+<Value><Code>21</Code><Text>Inner Regional Australia - Victoria</Text></Value>
+<Value><Code>22</Code><Text>Outer Regional Australia - Victoria</Text></Value>
+<Value><Code>23</Code><Text>Remote Australia - Victoria</Text></Value>
+<Value><Code>25</Code><Text>Migratory - Offshore - Shipping (Vic.)</Text></Value>
+<Value><Code>29</Code><Text>No usual address (Vic.)</Text></Value>
+<Value><Code>30</Code><Text>Major Cities of Australia - Queensland</Text></Value>
+<Value><Code>31</Code><Text>Inner Regional Australia - Queensland</Text></Value>
+<Value><Code>32</Code><Text>Outer Regional Australia - Queensland</Text></Value>
+<Value><Code>33</Code><Text>Remote Australia - Queensland</Text></Value>
+<Value><Code>34</Code><Text>Very Remote Australia - Queensland</Text></Value>
+<Value><Code>35</Code><Text>Migratory - Offshore - Shipping (Qld)</Text></Value>
+<Value><Code>39</Code><Text>No usual address (Qld)</Text></Value>
+<Value><Code>40</Code><Text>Major Cities of Australia - South Australia</Text></Value>
+<Value><Code>41</Code><Text>Inner Regional Australia - South Australia</Text></Value>
+<Value><Code>42</Code><Text>Outer Regional Australia - South Australia</Text></Value>
+<Value><Code>43</Code><Text>Remote Australia - South Australia</Text></Value>
+<Value><Code>44</Code><Text>Very Remote Australia - South Australia</Text></Value>
+<Value><Code>45</Code><Text>Migratory - Offshore - Shipping (SA)</Text></Value>
+<Value><Code>49</Code><Text>No usual address (SA)</Text></Value>
+<Value><Code>50</Code><Text>Major Cities of Australia - Western Australia</Text></Value>
+<Value><Code>51</Code><Text>Inner Regional Australia - Western Australia</Text></Value>
+<Value><Code>52</Code><Text>Outer Regional Australia - Western Australia</Text></Value>
+<Value><Code>53</Code><Text>Remote Australia - Western Australia</Text></Value>
+<Value><Code>54</Code><Text>Very Remote Australia - Western Australia</Text></Value>
+<Value><Code>55</Code><Text>Migratory - Offshore - Shipping (WA)</Text></Value>
+<Value><Code>59</Code><Text>No usual address (WA)</Text></Value>
+<Value><Code>61</Code><Text>Inner Regional Australia - Tasmania</Text></Value>
+<Value><Code>62</Code><Text>Outer Regional Australia - Tasmania</Text></Value>
+<Value><Code>63</Code><Text>Remote Australia - Tasmania</Text></Value>
+<Value><Code>64</Code><Text>Very Remote Australia - Tasmania</Text></Value>
+<Value><Code>65</Code><Text>Migratory - Offshore - Shipping (Tas.)</Text></Value>
+<Value><Code>69</Code><Text>No usual address (Tas.)</Text></Value>
+<Value><Code>72</Code><Text>Outer Regional Australia - Northern Territory</Text></Value>
+<Value><Code>73</Code><Text>Remote Australia - Northern Territory</Text></Value>
+<Value><Code>74</Code><Text>Very Remote Australia - Northern Territory</Text></Value>
+<Value><Code>75</Code><Text>Migratory - Offshore - Shipping (NT)</Text></Value>
+<Value><Code>79</Code><Text>No usual address (NT)</Text></Value>
+<Value><Code>80</Code><Text>Major Cities of Australia - Australian Capital Territory</Text></Value>
+<Value><Code>81</Code><Text>Inner Regional Australia - Australian Capital Territory</Text></Value>
+<Value><Code>85</Code><Text>Migratory - Offshore - Shipping (ACT)</Text></Value>
+<Value><Code>89</Code><Text>No usual address (ACT)</Text></Value>
+<Value><Code>91</Code><Text>Inner Regional Australia</Text></Value>
+<Value><Code>94</Code><Text>Very Remote Australia</Text></Value>
+<Value><Code>95</Code><Text>Migratory - Offshore - Shipping (OT) Other Territories</Text></Value>
+<Value><Code>99</Code><Text>No usual address (OT) Other Territories</Text></Value>
+ 
+			<Value>
+				<Code>1</Code>
+				<Text>Metropolitan Zone</Text>
+			</Value>
+			<Value>
+				<Code>1.1</Code>
+				<Text>State Capital regions - State Capitals (except Hobart, Darwin)</Text>
+			</Value>
+			<Value>
+				<Code>1.2</Code>
+				<Text>Major urban Statistical Districts (Pop >=100 000)</Text>
+			</Value>
+			<Value>
+				<Code>2</Code>
+				<Text>Provincial Zone</Text>
+			</Value>
+			<Value>
+				<Code>2.1.1</Code>
+				<Text>Provincial City Statistical Districts (Pop 50 000 - 99 999)</Text>
+			</Value>
+			<Value>
+				<Code>2.1.2</Code>
+				<Text>Provincial City Statistical Districts (Pop 25 000 - 49 999)</Text>
+			</Value>
+			<Value>
+				<Code>2.2.1</Code>
+				<Text>Inner Provincial areas (CD ARIA Plus score &lt;= 2.4)</Text>
+			</Value>
+			<Value>
+				<Code>2.2.2</Code>
+				<Text>Outer Provincial areas (CD ARIA Plus score > 2.4 and &lt;= 5.92)</Text>
+			</Value>
+			<Value>
+				<Code>3</Code>
+				<Text>Remote Zone</Text>
+			</Value>
+			<Value>
+				<Code>3.1</Code>
+				<Text>Remote areas (CD ARIA Plus score > 5.92 and &lt;= 10.53)</Text>
+			</Value>
+			<Value>
+				<Code>3.2</Code>
+				<Text>Very Remote areas (CD ARIA Plus score > 10.53)</Text>
+			</Value>
+			<Value>
+				<Code>REDACTED</Code>
+				<Text>Redacted for privacy</Text>
+			</Value>
+		 
+</Values>
+</CodeSet>    <!-- AU School Location -->	
+	<CodeSet>
+		<Intro>
+			<p>Federal Electorates from the Australian Electoral Commission</p>
+		</Intro>
+		<ID>Federal Electorate</ID>
+		<Values>
+			<Value>
+				<Code>101</Code>
+				<Text>Banks</Text>
+			</Value>
+			<Value>
+				<Code>102</Code>
+				<Text>Barton</Text>
+			</Value>
+			<Value>
+				<Code>103</Code>
+				<Text>Bennelong</Text>
+			</Value>
+			<Value>
+				<Code>104</Code>
+				<Text>Berowra</Text>
+			</Value>
+			<Value>
+				<Code>105</Code>
+				<Text>Blaxland</Text>
+			</Value>
+			<Value>
+				<Code>106</Code>
+				<Text>Bradfield</Text>
+			</Value>
+			<Value>
+				<Code>107</Code>
+				<Text>Calare</Text>
+			</Value>
+			<Value>
+				<Code>108</Code>
+				<Text>Charlton</Text>
+			</Value>
+			<Value>
+				<Code>109</Code>
+				<Text>Chifley</Text>
+			</Value>
+			<Value>
+				<Code>110</Code>
+				<Text>Cook</Text>
+			</Value>
+			<Value>
+				<Code>111</Code>
+				<Text>Cowper</Text>
+			</Value>
+			<Value>
+				<Code>112</Code>
+				<Text>Cunningham</Text>
+			</Value>
+			<Value>
+				<Code>113</Code>
+				<Text>Dobell</Text>
+			</Value>
+			<Value>
+				<Code>114</Code>
+				<Text>Eden-Monaro</Text>
+			</Value>
+			<Value>
+				<Code>115</Code>
+				<Text>Farrer</Text>
+			</Value>
+			<Value>
+				<Code>116</Code>
+				<Text>Fowler</Text>
+			</Value>
+			<Value>
+				<Code>117</Code>
+				<Text>Gilmore</Text>
+			</Value>
+			<Value>
+				<Code>118</Code>
+				<Text>Grayndler</Text>
+			</Value>
+			<Value>
+				<Code>119</Code>
+				<Text>Greenway</Text>
+			</Value>
+			<Value>
+				<Code>120</Code>
+				<Text>Gwydir (deprecated)</Text>
+			</Value>
+			<Value>
+				<Code>121</Code>
+				<Text>Hughes</Text>
+			</Value>
+			<Value>
+				<Code>122</Code>
+				<Text>Hume</Text>
+			</Value>
+			<Value>
+				<Code>123</Code>
+				<Text>Hunter</Text>
+			</Value>
+			<Value>
+				<Code>124</Code>
+				<Text>Kingsford Smith</Text>
+			</Value>
+			<Value>
+				<Code>125</Code>
+				<Text>Lindsay</Text>
+			</Value>
+			<Value>
+				<Code>126</Code>
+				<Text>Lowe (deprecated)</Text>
+			</Value>
+			<Value>
+				<Code>127</Code>
+				<Text>Lyne</Text>
+			</Value>
+			<Value>
+				<Code>128</Code>
+				<Text>Macarthur</Text>
+			</Value>
+			<Value>
+				<Code>129</Code>
+				<Text>Mackellar</Text>
+			</Value>
+			<Value>
+				<Code>130</Code>
+				<Text>Macquarie</Text>
+			</Value>
+			<Value>
+				<Code>130a</Code>
+				<Text>McMahon</Text>
+			</Value>
+			<Value>
+				<Code>131</Code>
+				<Text>Mitchell</Text>
+			</Value>
+			<Value>
+				<Code>132</Code>
+				<Text>New England</Text>
+			</Value>
+			<Value>
+				<Code>133</Code>
+				<Text>Newcastle</Text>
+			</Value>
+			<Value>
+				<Code>134</Code>
+				<Text>North Sydney</Text>
+			</Value>
+			<Value>
+				<Code>135</Code>
+				<Text>Page</Text>
+			</Value>
+			<Value>
+				<Code>136</Code>
+				<Text>Parkes</Text>
+			</Value>
+			<Value>
+				<Code>137</Code>
+				<Text>Parramatta</Text>
+			</Value>
+			<Value>
+				<Code>138</Code>
+				<Text>Paterson</Text>
+			</Value>
+			<Value>
+				<Code>139</Code>
+				<Text>Prospect (deprecated)</Text>
+			</Value>
+			<Value>
+				<Code>140</Code>
+				<Text>Reid</Text>
+			</Value>
+			<Value>
+				<Code>141</Code>
+				<Text>Richmond</Text>
+			</Value>
+			<Value>
+				<Code>142</Code>
+				<Text>Riverina</Text>
+			</Value>
+			<Value>
+				<Code>143</Code>
+				<Text>Robertson</Text>
+			</Value>
+			<Value>
+				<Code>144</Code>
+				<Text>Shortland</Text>
+			</Value>
+			<Value>
+				<Code>145</Code>
+				<Text>Sydney</Text>
+			</Value>
+			<Value>
+				<Code>146</Code>
+				<Text>Throsby</Text>
+			</Value>
+			<Value>
+				<Code>147</Code>
+				<Text>Warringah</Text>
+			</Value>
+			<Value>
+				<Code>148</Code>
+				<Text>Watson</Text>
+			</Value>
+			<Value>
+				<Code>149</Code>
+				<Text>Wentworth</Text>
+			</Value>
+			<Value>
+				<Code>150</Code>
+				<Text>Werriwa</Text>
+			</Value>
+			<Value>
+				<Code>199</Code>
+				<Text>Not Applicable (NSW)</Text>
+			</Value>
+			<Value>
+				<Code>201</Code>
+				<Text>Aston</Text>
+			</Value>
+			<Value>
+				<Code>202</Code>
+				<Text>Ballarat</Text>
+			</Value>
+			<Value>
+				<Code>203</Code>
+				<Text>Batman</Text>
+			</Value>
+			<Value>
+				<Code>204</Code>
+				<Text>Bendigo</Text>
+			</Value>
+			<Value>
+				<Code>205</Code>
+				<Text>Bruce</Text>
+			</Value>
+			<Value>
+				<Code>206</Code>
+				<Text>Calwell</Text>
+			</Value>
+			<Value>
+				<Code>207</Code>
+				<Text>Casey</Text>
+			</Value>
+			<Value>
+				<Code>208</Code>
+				<Text>Chisholm</Text>
+			</Value>
+			<Value>
+				<Code>209</Code>
+				<Text>Corangamite</Text>
+			</Value>
+			<Value>
+				<Code>210</Code>
+				<Text>Corio</Text>
+			</Value>
+			<Value>
+				<Code>211</Code>
+				<Text>Deakin</Text>
+			</Value>
+			<Value>
+				<Code>212</Code>
+				<Text>Dunkley</Text>
+			</Value>
+			<Value>
+				<Code>213</Code>
+				<Text>Flinders</Text>
+			</Value>
+			<Value>
+				<Code>214</Code>
+				<Text>Gellibrand</Text>
+			</Value>
+			<Value>
+				<Code>215</Code>
+				<Text>Gippsland</Text>
+			</Value>
+			<Value>
+				<Code>216</Code>
+				<Text>Goldstein</Text>
+			</Value>
+			<Value>
+				<Code>217</Code>
+				<Text>Gorton</Text>
+			</Value>
+			<Value>
+				<Code>218</Code>
+				<Text>Higgins</Text>
+			</Value>
+			<Value>
+				<Code>219</Code>
+				<Text>Holt</Text>
+			</Value>
+			<Value>
+				<Code>220</Code>
+				<Text>Hotham</Text>
+			</Value>
+			<Value>
+				<Code>221</Code>
+				<Text>Indi</Text>
+			</Value>
+			<Value>
+				<Code>222</Code>
+				<Text>Isaacs</Text>
+			</Value>
+			<Value>
+				<Code>223</Code>
+				<Text>Jagajaga</Text>
+			</Value>
+			<Value>
+				<Code>224</Code>
+				<Text>Kooyong</Text>
+			</Value>
+			<Value>
+				<Code>225</Code>
+				<Text>La Trobe</Text>
+			</Value>
+			<Value>
+				<Code>226</Code>
+				<Text>Lalor</Text>
+			</Value>
+			<Value>
+				<Code>227</Code>
+				<Text>Mallee</Text>
+			</Value>
+			<Value>
+				<Code>228</Code>
+				<Text>Maribyrnong</Text>
+			</Value>
+			<Value>
+				<Code>229</Code>
+				<Text>McEwen</Text>
+			</Value>
+			<Value>
+				<Code>230</Code>
+				<Text>McMillan</Text>
+			</Value>
+			<Value>
+				<Code>231</Code>
+				<Text>Melbourne</Text>
+			</Value>
+			<Value>
+				<Code>232</Code>
+				<Text>Melbourne Ports</Text>
+			</Value>
+			<Value>
+				<Code>233</Code>
+				<Text>Menzies</Text>
+			</Value>
+			<Value>
+				<Code>234</Code>
+				<Text>Murray</Text>
+			</Value>
+			<Value>
+				<Code>235</Code>
+				<Text>Scullin</Text>
+			</Value>
+			<Value>
+				<Code>236</Code>
+				<Text>Wannon</Text>
+			</Value>
+			<Value>
+				<Code>237</Code>
+				<Text>Wills</Text>
+			</Value>
+			<Value>
+				<Code>299</Code>
+				<Text>Not Applicable (VIC)</Text>
+			</Value>
+			<Value>
+				<Code>301</Code>
+				<Text>Blair</Text>
+			</Value>
+			<Value>
+				<Code>302</Code>
+				<Text>Bonner</Text>
+			</Value>
+			<Value>
+				<Code>303</Code>
+				<Text>Bowman</Text>
+			</Value>
+			<Value>
+				<Code>304</Code>
+				<Text>Brisbane</Text>
+			</Value>
+			<Value>
+				<Code>305</Code>
+				<Text>Capricornia</Text>
+			</Value>
+			<Value>
+				<Code>306</Code>
+				<Text>Dawson</Text>
+			</Value>
+			<Value>
+				<Code>307</Code>
+				<Text>Dickson</Text>
+			</Value>
+			<Value>
+				<Code>308</Code>
+				<Text>Fadden</Text>
+			</Value>
+			<Value>
+				<Code>309</Code>
+				<Text>Fairfax</Text>
+			</Value>
+			<Value>
+				<Code>310</Code>
+				<Text>Fisher</Text>
+			</Value>
+			<Value>
+				<Code>310a</Code>
+				<Text>Flynn</Text>
+			</Value>
+			<Value>
+				<Code>311</Code>
+				<Text>Forde</Text>
+			</Value>
+			<Value>
+				<Code>312</Code>
+				<Text>Griffith</Text>
+			</Value>
+			<Value>
+				<Code>313</Code>
+				<Text>Groom</Text>
+			</Value>
+			<Value>
+				<Code>314</Code>
+				<Text>Herbert</Text>
+			</Value>
+			<Value>
+				<Code>315</Code>
+				<Text>Hinkler</Text>
+			</Value>
+			<Value>
+				<Code>316</Code>
+				<Text>Kennedy</Text>
+			</Value>
+			<Value>
+				<Code>317</Code>
+				<Text>Leichhardt</Text>
+			</Value>
+			<Value>
+				<Code>318</Code>
+				<Text>Lilley</Text>
+			</Value>
+			<Value>
+				<Code>319</Code>
+				<Text>Longman</Text>
+			</Value>
+			<Value>
+				<Code>320</Code>
+				<Text>Maranoa</Text>
+			</Value>
+			<Value>
+				<Code>321</Code>
+				<Text>McPherson</Text>
+			</Value>
+			<Value>
+				<Code>322</Code>
+				<Text>Moncrieff</Text>
+			</Value>
+			<Value>
+				<Code>323</Code>
+				<Text>Moreton</Text>
+			</Value>
+			<Value>
+				<Code>324</Code>
+				<Text>Oxley</Text>
+			</Value>
+			<Value>
+				<Code>325</Code>
+				<Text>Petrie</Text>
+			</Value>
+			<Value>
+				<Code>326</Code>
+				<Text>Rankin</Text>
+			</Value>
+			<Value>
+				<Code>327</Code>
+				<Text>Ryan</Text>
+			</Value>
+			<Value>
+				<Code>328</Code>
+				<Text>Wide Bay</Text>
+			</Value>
+			<Value>
+				<Code>328a</Code>
+				<Text>Wright</Text>
+			</Value>
+			<Value>
+				<Code>399</Code>
+				<Text>Not Applicable (QLD)</Text>
+			</Value>
+			<Value>
+				<Code>401</Code>
+				<Text>Adelaide</Text>
+			</Value>
+			<Value>
+				<Code>402</Code>
+				<Text>Barker</Text>
+			</Value>
+			<Value>
+				<Code>403</Code>
+				<Text>Boothby</Text>
+			</Value>
+			<Value>
+				<Code>404</Code>
+				<Text>Grey</Text>
+			</Value>
+			<Value>
+				<Code>405</Code>
+				<Text>Hindmarsh</Text>
+			</Value>
+			<Value>
+				<Code>406</Code>
+				<Text>Kingston</Text>
+			</Value>
+			<Value>
+				<Code>407</Code>
+				<Text>Makin</Text>
+			</Value>
+			<Value>
+				<Code>408</Code>
+				<Text>Mayo</Text>
+			</Value>
+			<Value>
+				<Code>409</Code>
+				<Text>Port Adelaide</Text>
+			</Value>
+			<Value>
+				<Code>410</Code>
+				<Text>Sturt</Text>
+			</Value>
+			<Value>
+				<Code>411</Code>
+				<Text>Wakefield</Text>
+			</Value>
+			<Value>
+				<Code>499</Code>
+				<Text>Not Applicable (SA)</Text>
+			</Value>
+			<Value>
+				<Code>501</Code>
+				<Text>Brand</Text>
+			</Value>
+			<Value>
+				<Code>502</Code>
+				<Text>Canning</Text>
+			</Value>
+			<Value>
+				<Code>503</Code>
+				<Text>Cowan</Text>
+			</Value>
+			<Value>
+				<Code>504</Code>
+				<Text>Curtin</Text>
+			</Value>
+			<Value>
+				<Code>504a</Code>
+				<Text>Durack</Text>
+			</Value>
+			<Value>
+				<Code>505</Code>
+				<Text>Forrest</Text>
+			</Value>
+			<Value>
+				<Code>506</Code>
+				<Text>Fremantle</Text>
+			</Value>
+			<Value>
+				<Code>507</Code>
+				<Text>Hasluck</Text>
+			</Value>
+			<Value>
+				<Code>508</Code>
+				<Text>Kalgoorlie (deprecated)</Text>
+			</Value>
+			<Value>
+				<Code>509</Code>
+				<Text>Moore</Text>
+			</Value>
+			<Value>
+				<Code>510</Code>
+				<Text>O'Connor</Text>
+			</Value>
+			<Value>
+				<Code>511</Code>
+				<Text>Pearce</Text>
+			</Value>
+			<Value>
+				<Code>512</Code>
+				<Text>Perth</Text>
+			</Value>
+			<Value>
+				<Code>513</Code>
+				<Text>Stirling</Text>
+			</Value>
+			<Value>
+				<Code>514</Code>
+				<Text>Swan</Text>
+			</Value>
+			<Value>
+				<Code>515</Code>
+				<Text>Tangney</Text>
+			</Value>
+			<Value>
+				<Code>599</Code>
+				<Text>Not Applicable (WA)</Text>
+			</Value>
+			<Value>
+				<Code>601</Code>
+				<Text>Bass</Text>
+			</Value>
+			<Value>
+				<Code>602</Code>
+				<Text>Braddon</Text>
+			</Value>
+			<Value>
+				<Code>603</Code>
+				<Text>Denison</Text>
+			</Value>
+			<Value>
+				<Code>604</Code>
+				<Text>Franklin</Text>
+			</Value>
+			<Value>
+				<Code>605</Code>
+				<Text>Lyons</Text>
+			</Value>
+			<Value>
+				<Code>699</Code>
+				<Text>Not Applicable (TAS)</Text>
+			</Value>
+			<Value>
+				<Code>701</Code>
+				<Text>Lingiari</Text>
+			</Value>
+			<Value>
+				<Code>702</Code>
+				<Text>Solomon</Text>
+			</Value>
+			<Value>
+				<Code>799</Code>
+				<Text>Not Applicable (NT)</Text>
+			</Value>
+			<Value>
+				<Code>801</Code>
+				<Text>Canberra</Text>
+			</Value>
+			<Value>
+				<Code>802</Code>
+				<Text>Fraser</Text>
+			</Value>
+			<Value>
+				<Code>899</Code>
+				<Text>Not Applicable (ACT)</Text>
+			</Value>
+			<Value>
+				<Code>999</Code>
+				<Text>Not Applicable</Text>
+			</Value>
+		 
+		</Values>
+	</CodeSet>    <!-- AU Federal Electorates -->
+	<CodeSet>
+		<Intro>
+			<p/>
+		</Intro>
+		<ID>State Territory Code</ID>
+		<Values>
+			<Value>
+				<Code>ACT</Code>
+				<Text>Australian Capital Territory</Text>
+			</Value>
+			<Value>
+				<Code>NSW</Code>
+				<Text>New South Wales</Text>
+			</Value>
+			<Value>
+				<Code>NT</Code>
+				<Text>Northern Territory</Text>
+			</Value>
+			<Value>
+				<Code>QLD</Code>
+				<Text>Queensland</Text>
+			</Value>
+			<Value>
+				<Code>SA</Code>
+				<Text>South Australia</Text>
+			</Value>
+			<Value>
+				<Code>TAS</Code>
+				<Text>Tasmania</Text>
+			</Value>
+			<Value>
+				<Code>VIC</Code>
+				<Text>Victoria</Text>
+			</Value>
+			<Value>
+				<Code>WA</Code>
+				<Text>Western Australia</Text>
+			</Value>
+			<Value>
+				<Code>XXX</Code>
+				<Text>Not Provided</Text>
+			</Value>
+			<Value>
+				<Code>OTH</Code>
+				<Text>Other Territories</Text>
+			</Value>
+		 
+		</Values>
+	</CodeSet>    <!-- AU State or Territory -->
+	<CodeSet>
+		<Intro>
+			<p>1269.0 Standard Australian Classification of Countries (SACC), 2016</p>
+			<p>Source Data ABS: http://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1269.02016?OpenDocument</p>
+		</Intro>
+		<ID>Standard Australian Classification Of Countries (SACC)</ID>
+	       <Values><Value><Code>1101</Code><Text>Australia</Text></Value>
+<Value><Code>1102</Code><Text>Norfolk Island</Text></Value>
+<Value><Code>1199</Code><Text>Australian External Territories, nec</Text></Value>
+<Value><Code>1201</Code><Text>New Zealand</Text></Value>
+<Value><Code>1301</Code><Text>New Caledonia</Text></Value>
+<Value><Code>1302</Code><Text>Papua New Guinea</Text></Value>
+<Value><Code>1303</Code><Text>Solomon Islands</Text></Value>
+<Value><Code>1304</Code><Text>Vanuatu</Text></Value>
+<Value><Code>1401</Code><Text>Guam</Text></Value>
+<Value><Code>1402</Code><Text>Kiribati</Text></Value>
+<Value><Code>1403</Code><Text>Marshall Islands</Text></Value>
+<Value><Code>1404</Code><Text>Micronesia, Federated States of</Text></Value>
+<Value><Code>1405</Code><Text>Nauru</Text></Value>
+<Value><Code>1406</Code><Text>Northern Mariana Islands</Text></Value>
+<Value><Code>1407</Code><Text>Palau</Text></Value>
+<Value><Code>1501</Code><Text>Cook Islands</Text></Value>
+<Value><Code>1502</Code><Text>Fiji</Text></Value>
+<Value><Code>1503</Code><Text>French Polynesia</Text></Value>
+<Value><Code>1504</Code><Text>Niue</Text></Value>
+<Value><Code>1505</Code><Text>Samoa</Text></Value>
+<Value><Code>1506</Code><Text>Samoa, American</Text></Value>
+<Value><Code>1507</Code><Text>Tokelau</Text></Value>
+<Value><Code>1508</Code><Text>Tonga</Text></Value>
+<Value><Code>1511</Code><Text>Tuvalu</Text></Value>
+<Value><Code>1512</Code><Text>Wallis and Futuna</Text></Value>
+<Value><Code>1513</Code><Text>Pitcairn Islands</Text></Value>
+<Value><Code>1599</Code><Text>Polynesia (excludes Hawaii), nec</Text></Value>
+<Value><Code>1601</Code><Text>Adelie Land (France)</Text></Value>
+<Value><Code>1602</Code><Text>Argentinian Antarctic Territory</Text></Value>
+<Value><Code>1603</Code><Text>Australian Antarctic Territory</Text></Value>
+<Value><Code>1604</Code><Text>British Antarctic Territory</Text></Value>
+<Value><Code>1605</Code><Text>Chilean Antarctic Territory</Text></Value>
+<Value><Code>1606</Code><Text>Queen Maud Land (Norway)</Text></Value>
+<Value><Code>1607</Code><Text>Ross Dependency (New Zealand)</Text></Value>
+<Value><Code>2102</Code><Text>England</Text></Value>
+<Value><Code>2103</Code><Text>Isle of Man</Text></Value>
+<Value><Code>2104</Code><Text>Northern Ireland</Text></Value>
+<Value><Code>2105</Code><Text>Scotland</Text></Value>
+<Value><Code>2106</Code><Text>Wales</Text></Value>
+<Value><Code>2107</Code><Text>Guernsey</Text></Value>
+<Value><Code>2108</Code><Text>Jersey</Text></Value>
+<Value><Code>2201</Code><Text>Ireland</Text></Value>
+<Value><Code>2301</Code><Text>Austria</Text></Value>
+<Value><Code>2302</Code><Text>Belgium</Text></Value>
+<Value><Code>2303</Code><Text>France</Text></Value>
+<Value><Code>2304</Code><Text>Germany</Text></Value>
+<Value><Code>2305</Code><Text>Liechtenstein</Text></Value>
+<Value><Code>2306</Code><Text>Luxembourg</Text></Value>
+<Value><Code>2307</Code><Text>Monaco</Text></Value>
+<Value><Code>2308</Code><Text>Netherlands</Text></Value>
+<Value><Code>2311</Code><Text>Switzerland</Text></Value>
+<Value><Code>2401</Code><Text>Denmark</Text></Value>
+<Value><Code>2402</Code><Text>Faroe Islands</Text></Value>
+<Value><Code>2403</Code><Text>Finland</Text></Value>
+<Value><Code>2404</Code><Text>Greenland</Text></Value>
+<Value><Code>2405</Code><Text>Iceland</Text></Value>
+<Value><Code>2406</Code><Text>Norway</Text></Value>
+<Value><Code>2407</Code><Text>Sweden</Text></Value>
+<Value><Code>2408</Code><Text>Aland Islands</Text></Value>
+<Value><Code>3101</Code><Text>Andorra</Text></Value>
+<Value><Code>3102</Code><Text>Gibraltar</Text></Value>
+<Value><Code>3103</Code><Text>Holy See</Text></Value>
+<Value><Code>3104</Code><Text>Italy</Text></Value>
+<Value><Code>3105</Code><Text>Malta</Text></Value>
+<Value><Code>3106</Code><Text>Portugal</Text></Value>
+<Value><Code>3107</Code><Text>San Marino</Text></Value>
+<Value><Code>3108</Code><Text>Spain</Text></Value>
+<Value><Code>3201</Code><Text>Albania</Text></Value>
+<Value><Code>3202</Code><Text>Bosnia and Herzegovina</Text></Value>
+<Value><Code>3203</Code><Text>Bulgaria</Text></Value>
+<Value><Code>3204</Code><Text>Croatia</Text></Value>
+<Value><Code>3205</Code><Text>Cyprus</Text></Value>
+<Value><Code>3206</Code><Text>The former Yugoslav Republic of Macedonia</Text></Value>
+<Value><Code>3207</Code><Text>Greece</Text></Value>
+<Value><Code>3208</Code><Text>Moldova</Text></Value>
+<Value><Code>3211</Code><Text>Romania</Text></Value>
+<Value><Code>3212</Code><Text>Slovenia</Text></Value>
+<Value><Code>3214</Code><Text>Montenegro</Text></Value>
+<Value><Code>3215</Code><Text>Serbia</Text></Value>
+<Value><Code>3216</Code><Text>Kosovo</Text></Value>
+<Value><Code>3301</Code><Text>Belarus</Text></Value>
+<Value><Code>3302</Code><Text>Czech Republic</Text></Value>
+<Value><Code>3303</Code><Text>Estonia</Text></Value>
+<Value><Code>3304</Code><Text>Hungary</Text></Value>
+<Value><Code>3305</Code><Text>Latvia</Text></Value>
+<Value><Code>3306</Code><Text>Lithuania</Text></Value>
+<Value><Code>3307</Code><Text>Poland</Text></Value>
+<Value><Code>3308</Code><Text>Russian Federation</Text></Value>
+<Value><Code>3311</Code><Text>Slovakia</Text></Value>
+<Value><Code>3312</Code><Text>Ukraine</Text></Value>
+<Value><Code>4101</Code><Text>Algeria</Text></Value>
+<Value><Code>4102</Code><Text>Egypt</Text></Value>
+<Value><Code>4103</Code><Text>Libya</Text></Value>
+<Value><Code>4104</Code><Text>Morocco</Text></Value>
+<Value><Code>4105</Code><Text>Sudan</Text></Value>
+<Value><Code>4106</Code><Text>Tunisia</Text></Value>
+<Value><Code>4107</Code><Text>Western Sahara</Text></Value>
+<Value><Code>4108</Code><Text>Spanish North Africa</Text></Value>
+<Value><Code>4111</Code><Text>South Sudan</Text></Value>
+<Value><Code>4201</Code><Text>Bahrain</Text></Value>
+<Value><Code>4202</Code><Text>Gaza Strip and West Bank</Text></Value>
+<Value><Code>4203</Code><Text>Iran</Text></Value>
+<Value><Code>4204</Code><Text>Iraq</Text></Value>
+<Value><Code>4205</Code><Text>Israel</Text></Value>
+<Value><Code>4206</Code><Text>Jordan</Text></Value>
+<Value><Code>4207</Code><Text>Kuwait</Text></Value>
+<Value><Code>4208</Code><Text>Lebanon</Text></Value>
+<Value><Code>4211</Code><Text>Oman</Text></Value>
+<Value><Code>4212</Code><Text>Qatar</Text></Value>
+<Value><Code>4213</Code><Text>Saudi Arabia</Text></Value>
+<Value><Code>4214</Code><Text>Syria</Text></Value>
+<Value><Code>4215</Code><Text>Turkey</Text></Value>
+<Value><Code>4216</Code><Text>United Arab Emirates</Text></Value>
+<Value><Code>4217</Code><Text>Yemen</Text></Value>
+<Value><Code>5101</Code><Text>Myanmar</Text></Value>
+<Value><Code>5102</Code><Text>Cambodia</Text></Value>
+<Value><Code>5103</Code><Text>Laos</Text></Value>
+<Value><Code>5104</Code><Text>Thailand</Text></Value>
+<Value><Code>5105</Code><Text>Vietnam</Text></Value>
+<Value><Code>5201</Code><Text>Brunei Darussalam</Text></Value>
+<Value><Code>5202</Code><Text>Indonesia</Text></Value>
+<Value><Code>5203</Code><Text>Malaysia</Text></Value>
+<Value><Code>5204</Code><Text>Philippines</Text></Value>
+<Value><Code>5205</Code><Text>Singapore</Text></Value>
+<Value><Code>5206</Code><Text>Timor-Leste</Text></Value>
+<Value><Code>6101</Code><Text>China (excludes SARs and Taiwan)</Text></Value>
+<Value><Code>6102</Code><Text>Hong Kong (SAR of China)</Text></Value>
+<Value><Code>6103</Code><Text>Macau (SAR of China)</Text></Value>
+<Value><Code>6104</Code><Text>Mongolia</Text></Value>
+<Value><Code>6105</Code><Text>Taiwan</Text></Value>
+<Value><Code>6201</Code><Text>Japan</Text></Value>
+<Value><Code>6202</Code><Text>Korea, Democratic People's Republic of (North)</Text></Value>
+<Value><Code>6203</Code><Text>Korea, Republic of (South)</Text></Value>
+<Value><Code>7101</Code><Text>Bangladesh</Text></Value>
+<Value><Code>7102</Code><Text>Bhutan</Text></Value>
+<Value><Code>7103</Code><Text>India</Text></Value>
+<Value><Code>7104</Code><Text>Maldives</Text></Value>
+<Value><Code>7105</Code><Text>Nepal</Text></Value>
+<Value><Code>7106</Code><Text>Pakistan</Text></Value>
+<Value><Code>7107</Code><Text>Sri Lanka</Text></Value>
+<Value><Code>7201</Code><Text>Afghanistan</Text></Value>
+<Value><Code>7202</Code><Text>Armenia</Text></Value>
+<Value><Code>7203</Code><Text>Azerbaijan</Text></Value>
+<Value><Code>7204</Code><Text>Georgia</Text></Value>
+<Value><Code>7205</Code><Text>Kazakhstan</Text></Value>
+<Value><Code>7206</Code><Text>Kyrgyzstan</Text></Value>
+<Value><Code>7207</Code><Text>Tajikistan</Text></Value>
+<Value><Code>7208</Code><Text>Turkmenistan</Text></Value>
+<Value><Code>7211</Code><Text>Uzbekistan</Text></Value>
+<Value><Code>8101</Code><Text>Bermuda</Text></Value>
+<Value><Code>8102</Code><Text>Canada</Text></Value>
+<Value><Code>8103</Code><Text>St Pierre and Miquelon</Text></Value>
+<Value><Code>8104</Code><Text>United States of America</Text></Value>
+<Value><Code>8201</Code><Text>Argentina</Text></Value>
+<Value><Code>8202</Code><Text>Bolivia</Text></Value>
+<Value><Code>8203</Code><Text>Brazil</Text></Value>
+<Value><Code>8204</Code><Text>Chile</Text></Value>
+<Value><Code>8205</Code><Text>Colombia</Text></Value>
+<Value><Code>8206</Code><Text>Ecuador</Text></Value>
+<Value><Code>8207</Code><Text>Falkland Islands</Text></Value>
+<Value><Code>8208</Code><Text>French Guiana</Text></Value>
+<Value><Code>8211</Code><Text>Guyana</Text></Value>
+<Value><Code>8212</Code><Text>Paraguay</Text></Value>
+<Value><Code>8213</Code><Text>Peru</Text></Value>
+<Value><Code>8214</Code><Text>Suriname</Text></Value>
+<Value><Code>8215</Code><Text>Uruguay</Text></Value>
+<Value><Code>8216</Code><Text>Venezuela</Text></Value>
+<Value><Code>8299</Code><Text>South America, nec</Text></Value>
+<Value><Code>8301</Code><Text>Belize</Text></Value>
+<Value><Code>8302</Code><Text>Costa Rica</Text></Value>
+<Value><Code>8303</Code><Text>El Salvador</Text></Value>
+<Value><Code>8304</Code><Text>Guatemala</Text></Value>
+<Value><Code>8305</Code><Text>Honduras</Text></Value>
+<Value><Code>8306</Code><Text>Mexico</Text></Value>
+<Value><Code>8307</Code><Text>Nicaragua</Text></Value>
+<Value><Code>8308</Code><Text>Panama</Text></Value>
+<Value><Code>8401</Code><Text>Anguilla</Text></Value>
+<Value><Code>8402</Code><Text>Antigua and Barbuda</Text></Value>
+<Value><Code>8403</Code><Text>Aruba</Text></Value>
+<Value><Code>8404</Code><Text>Bahamas</Text></Value>
+<Value><Code>8405</Code><Text>Barbados</Text></Value>
+<Value><Code>8406</Code><Text>Cayman Islands</Text></Value>
+<Value><Code>8407</Code><Text>Cuba</Text></Value>
+<Value><Code>8408</Code><Text>Dominica</Text></Value>
+<Value><Code>8411</Code><Text>Dominican Republic</Text></Value>
+<Value><Code>8412</Code><Text>Grenada</Text></Value>
+<Value><Code>8413</Code><Text>Guadeloupe</Text></Value>
+<Value><Code>8414</Code><Text>Haiti</Text></Value>
+<Value><Code>8415</Code><Text>Jamaica</Text></Value>
+<Value><Code>8416</Code><Text>Martinique</Text></Value>
+<Value><Code>8417</Code><Text>Montserrat</Text></Value>
+<Value><Code>8421</Code><Text>Puerto Rico</Text></Value>
+<Value><Code>8422</Code><Text>St Kitts and Nevis</Text></Value>
+<Value><Code>8423</Code><Text>St Lucia</Text></Value>
+<Value><Code>8424</Code><Text>St Vincent and the Grenadines</Text></Value>
+<Value><Code>8425</Code><Text>Trinidad and Tobago</Text></Value>
+<Value><Code>8426</Code><Text>Turks and Caicos Islands</Text></Value>
+<Value><Code>8427</Code><Text>Virgin Islands, British</Text></Value>
+<Value><Code>8428</Code><Text>Virgin Islands, United States</Text></Value>
+<Value><Code>8431</Code><Text>St Barthelemy</Text></Value>
+<Value><Code>8432</Code><Text>St Martin (French part)</Text></Value>
+<Value><Code>8433</Code><Text>Bonaire, Sint Eustatius and Saba</Text></Value>
+<Value><Code>8434</Code><Text>Curacao</Text></Value>
+<Value><Code>8435</Code><Text>Sint Maarten (Dutch part)</Text></Value>
+<Value><Code>9101</Code><Text>Benin</Text></Value>
+<Value><Code>9102</Code><Text>Burkina Faso</Text></Value>
+<Value><Code>9103</Code><Text>Cameroon</Text></Value>
+<Value><Code>9104</Code><Text>Cabo Verde</Text></Value>
+<Value><Code>9105</Code><Text>Central African Republic</Text></Value>
+<Value><Code>9106</Code><Text>Chad</Text></Value>
+<Value><Code>9107</Code><Text>Congo, Republic of</Text></Value>
+<Value><Code>9108</Code><Text>Congo, Democratic Republic of</Text></Value>
+<Value><Code>9111</Code><Text>Cote d'Ivoire</Text></Value>
+<Value><Code>9112</Code><Text>Equatorial Guinea</Text></Value>
+<Value><Code>9113</Code><Text>Gabon</Text></Value>
+<Value><Code>9114</Code><Text>Gambia</Text></Value>
+<Value><Code>9115</Code><Text>Ghana</Text></Value>
+<Value><Code>9116</Code><Text>Guinea</Text></Value>
+<Value><Code>9117</Code><Text>Guinea-Bissau</Text></Value>
+<Value><Code>9118</Code><Text>Liberia</Text></Value>
+<Value><Code>9121</Code><Text>Mali</Text></Value>
+<Value><Code>9122</Code><Text>Mauritania</Text></Value>
+<Value><Code>9123</Code><Text>Niger</Text></Value>
+<Value><Code>9124</Code><Text>Nigeria</Text></Value>
+<Value><Code>9125</Code><Text>Sao Tome and Principe</Text></Value>
+<Value><Code>9126</Code><Text>Senegal</Text></Value>
+<Value><Code>9127</Code><Text>Sierra Leone</Text></Value>
+<Value><Code>9128</Code><Text>Togo</Text></Value>
+<Value><Code>9201</Code><Text>Angola</Text></Value>
+<Value><Code>9202</Code><Text>Botswana</Text></Value>
+<Value><Code>9203</Code><Text>Burundi</Text></Value>
+<Value><Code>9204</Code><Text>Comoros</Text></Value>
+<Value><Code>9205</Code><Text>Djibouti</Text></Value>
+<Value><Code>9206</Code><Text>Eritrea</Text></Value>
+<Value><Code>9207</Code><Text>Ethiopia</Text></Value>
+<Value><Code>9208</Code><Text>Kenya</Text></Value>
+<Value><Code>9211</Code><Text>Lesotho</Text></Value>
+<Value><Code>9212</Code><Text>Madagascar</Text></Value>
+<Value><Code>9213</Code><Text>Malawi</Text></Value>
+<Value><Code>9214</Code><Text>Mauritius</Text></Value>
+<Value><Code>9215</Code><Text>Mayotte</Text></Value>
+<Value><Code>9216</Code><Text>Mozambique</Text></Value>
+<Value><Code>9217</Code><Text>Namibia</Text></Value>
+<Value><Code>9218</Code><Text>Reunion</Text></Value>
+<Value><Code>9221</Code><Text>Rwanda</Text></Value>
+<Value><Code>9222</Code><Text>St Helena</Text></Value>
+<Value><Code>9223</Code><Text>Seychelles</Text></Value>
+<Value><Code>9224</Code><Text>Somalia</Text></Value>
+<Value><Code>9225</Code><Text>South Africa</Text></Value>
+<Value><Code>9226</Code><Text>Swaziland</Text></Value>
+<Value><Code>9227</Code><Text>Tanzania</Text></Value>
+<Value><Code>9228</Code><Text>Uganda</Text></Value>
+<Value><Code>9231</Code><Text>Zambia</Text></Value>
+<Value><Code>9232</Code><Text>Zimbabwe</Text></Value>
+<Value><Code>9299</Code><Text>Southern and East Africa, nec</Text></Value>
+<Value><Code>1000</Code><Text>Oceania and Antarctica, nfd</Text></Value>
+<Value><Code>1100</Code><Text>Australia (includes External Territories, nfd)</Text></Value>
+<Value><Code>1300</Code><Text>Melanesia, nfd</Text></Value>
+<Value><Code>1400</Code><Text>Micronesia, nfd</Text></Value>
+<Value><Code>1500</Code><Text>Polynesia (excludes Hawaii), nfd</Text></Value>
+<Value><Code>1600</Code><Text>Antarctica, nfd</Text></Value>
+<Value><Code>2000</Code><Text>North-West Europe, nfd</Text></Value>
+<Value><Code>2100</Code><Text>United Kingdom, Channels Islands and Isle of Man, nfd</Text></Value>
+<Value><Code>2300</Code><Text>Western Europe, nfd</Text></Value>
+<Value><Code>2400</Code><Text>Northern Europe, nfd</Text></Value>
+<Value><Code>3000</Code><Text>Southern and Eastern Europe, nfd</Text></Value>
+<Value><Code>3100</Code><Text>Southern Europe, nfd</Text></Value>
+<Value><Code>3200</Code><Text>South Eastern Europe, nfd</Text></Value>
+<Value><Code>3300</Code><Text>Eastern Europe, nfd</Text></Value>
+<Value><Code>4000</Code><Text>North Africa and the Middle East, nfd</Text></Value>
+<Value><Code>4100</Code><Text>North Africa, nfd</Text></Value>
+<Value><Code>4200</Code><Text>Middle East, nfd</Text></Value>
+<Value><Code>5000</Code><Text>South-East Asia, nfd</Text></Value>
+<Value><Code>5100</Code><Text>Mainland South-East Asia, nfd</Text></Value>
+<Value><Code>5200</Code><Text>Maritime South-East Asia, nfd</Text></Value>
+<Value><Code>6000</Code><Text>North-East Asia, nfd</Text></Value>
+<Value><Code>6100</Code><Text>Chinese Asia (includes Mongolia), nfd</Text></Value>
+<Value><Code>6200</Code><Text>Japan and the Koreas, nfd</Text></Value>
+<Value><Code>7000</Code><Text>Southern and Central Asia, nfd</Text></Value>
+<Value><Code>7100</Code><Text>Southern Asia, nfd</Text></Value>
+<Value><Code>7200</Code><Text>Central Asia, nfd</Text></Value>
+<Value><Code>8000</Code><Text>Americas, nfd</Text></Value>
+<Value><Code>8100</Code><Text>Northern America, nfd</Text></Value>
+<Value><Code>8200</Code><Text>South America, nfd</Text></Value>
+<Value><Code>8300</Code><Text>Central America, nfd</Text></Value>
+<Value><Code>8400</Code><Text>Caribbean, nfd</Text></Value>
+<Value><Code>9000</Code><Text>Sub-Saharan Africa, nfd</Text></Value>
+<Value><Code>9100</Code><Text>Central and West Africa, nfd</Text></Value>
+<Value><Code>9200</Code><Text>Southern and East Africa, nfd</Text></Value>
+<Value><Code>0000</Code><Text>Inadequately Described</Text></Value>
+<Value><Code>0001</Code><Text>At Sea</Text></Value>
+<Value><Code>0003</Code><Text>Not Stated</Text></Value>
+<Value><Code>0004</Code><Text>Unknown (for use in economic statistics: the destination or origin of the goods is unknown)</Text></Value>
+<Value><Code>0005</Code><Text>Unidentified (for use in economic statistics: the country reported on import/export documentation is not recognised)</Text></Value>
+<Value><Code>0911</Code><Text>Europe, nfd</Text></Value>
+<Value><Code>0912</Code><Text>Former USSR, nfd</Text></Value>
+<Value><Code>0913</Code><Text>Former Yugoslavia, nfd</Text></Value>
+<Value><Code>0914</Code><Text>Czechoslovakia, nfd</Text></Value>
+<Value><Code>0915</Code><Text>Kurdistan, nfd</Text></Value>
+<Value><Code>0916</Code><Text>East Asia, nfd</Text></Value>
+<Value><Code>0917</Code><Text>Asia, nfd</Text></Value>
+<Value><Code>0918</Code><Text>Africa, nfd</Text></Value>
+<Value><Code>0921</Code><Text>Serbia and Montenegro, nfd</Text></Value>
+<Value><Code>0922</Code><Text>Channel Islands, nfd</Text></Value>
+<Value><Code>0924</Code><Text>Netherlands Antilles, nfd</Text></Value>
+<Value><Code>0611</Code><Text>Europe</Text></Value>
+<Value><Code>0612</Code><Text>Europe and the former USSR</Text></Value>
+<Value><Code>0613</Code><Text>Former USSR</Text></Value>
+<Value><Code>0614</Code><Text>Asia</Text></Value>
+<Value><Code>0615</Code><Text>East Asia</Text></Value>
+<Value><Code>0616</Code><Text>Africa</Text></Value>
+<Value><Code>0701</Code><Text>Africa, nec</Text></Value>
+<Value><Code>0702</Code><Text>Americas, nec</Text></Value>
+<Value><Code>0703</Code><Text>Asia, nec</Text></Value>
+<Value><Code>0704</Code><Text>Belgium and Luxembourg</Text></Value>
+<Value><Code>0705</Code><Text>Central America and the Caribbean (excludes Mexico)</Text></Value>
+<Value><Code>0706</Code><Text>Christmas Island</Text></Value>
+<Value><Code>0707</Code><Text>Cocos (Keeling) Islands</Text></Value>
+<Value><Code>0708</Code><Text>Country Conf. Alumina (a secondary (International Trade specific) confidentiality restriction for exports of alumina to specific countries)</Text></Value>
+<Value><Code>0711</Code><Text>Denmark (includes Greenland and Faroe Islands)</Text></Value>
+<Value><Code>0712</Code><Text>Eurodollar Market</Text></Value>
+<Value><Code>0713</Code><Text>Europe, nec</Text></Value>
+<Value><Code>0714</Code><Text>Falkland Islands (includes South Georgia and South Sandwich Islands)</Text></Value>
+<Value><Code>0715</Code><Text>France (includes Andorra and Monaco)</Text></Value>
+<Value><Code>0716</Code><Text>French Antilles (Guadeloupe and Martinique)</Text></Value>
+<Value><Code>0717</Code><Text>French Southern Territories</Text></Value>
+<Value><Code>0718</Code><Text>International Capital Markets</Text></Value>
+<Value><Code>0721</Code><Text>International Institutions</Text></Value>
+<Value><Code>0722</Code><Text>International Waters (goods placed in the ocean outside any territorial waters or exclusive economic zone)</Text></Value>
+<Value><Code>0723</Code><Text>Italy (includes Holy See and San Marino)</Text></Value>
+<Value><Code>0724</Code><Text>Johnston and Sand Islands</Text></Value>
+<Value><Code>0725</Code><Text>Midway Islands</Text></Value>
+<Value><Code>0726</Code><Text>Morocco (includes places under Spanish sovereignty)</Text></Value>
+<Value><Code>0727</Code><Text>No Country Details (overseas country detail for exports not available due to a confidentiality restriction)</Text></Value>
+<Value><Code>0728</Code><Text>Oceania, nec</Text></Value>
+<Value><Code>0741</Code><Text>Reserve Bank Gold (gold, held by the Reserve Bank of Australia as part of reserve assets, that cannot be allocated by country)</Text></Value>
+<Value><Code>0742</Code><Text>Ships' and Aircraft Stores (stores, including fuel, loaded onto foreign registered ships and aircraft)</Text></Value>
+<Value><Code>0743</Code><Text>Switzerland (includes Liechtenstein)</Text></Value>
+<Value><Code>0744</Code><Text>United States Miscellaneous Islands</Text></Value>
+<Value><Code>0745</Code><Text>Wake Island</Text></Value>
+<Value><Code>0746</Code><Text>Australia (includes External Territories, Australian Antarctic Territory and Norfolk Island)</Text></Value>
+<Value><Code>0747</Code><Text>JPDA (Joint Petroleum Development Area - administered by Australia and Timor-Leste)</Text></Value>
+</Values>
+	</CodeSet>    <!-- AU Standard Country Classification -->
+	<CodeSet>
+		<Intro>
+			<p/>
+		</Intro>
+		<ID>Address Type</ID>
+		<Values>
+			<Value>
+				<Code>0123</Code>
+				<Text>Mailing address</Text>
+			</Value>
+			<Value>
+				<Code>0123A</Code>
+				<Text>Alternate Mailing address</Text>
+			</Value>
+			<Value>
+				<Code>0124</Code>
+				<Text>Shipping address</Text>
+			</Value>
+			<Value>
+				<Code>0124A</Code>
+				<Text>Alternate Shipping address</Text>
+			</Value>
+			<!-- Addition for finance -->
+			<Value>
+				<Code>0125</Code>
+				<Text>Billing address</Text>
+			</Value>
+			<Value>
+				<Code>0765</Code>
+				<Text>Physical location address</Text>
+			</Value>
+			<Value>
+				<Code>0765A</Code>
+				<Text>Alternate Physical location address</Text>
+			</Value>
+			<Value>
+				<Code>9999</Code>
+				<Text>Other</Text>
+			</Value>
+			<Value>
+				<Code>9999A</Code>
+				<Text>Alternate Other address</Text>
+			</Value>
+			 
+		</Values>
+	</CodeSet>    <!-- AU Address Type -->
+	<CodeSet>
+		<Intro>
+			<p/>
+		</Intro>
+		<ID>Address Role</ID>
+		<Values>
+			<Value>
+				<Code>012A</Code>
+				<Text>Term Address</Text>
+			</Value>
+			<Value>
+				<Code>012B</Code>
+				<Text>Home Address</Text>
+			</Value>
+			<Value>
+				<Code>012C</Code>
+				<Text>Home Stay Address</Text>
+			</Value>
+			<Value>
+				<Code>013A</Code>
+				<Text>Overseas Address</Text>
+			</Value>
+			<Value>
+				<Code>1073</Code>
+				<Text>Other home address</Text>
+			</Value>
+			<Value>
+				<Code>1074</Code>
+				<Text>Employer's address</Text>
+			</Value>
+			<Value>
+				<Code>1075</Code>
+				<Text>Employment address</Text>
+			</Value>
+			<Value>
+				<Code>2382</Code>
+				<Text>Other organisation address</Text>
+			</Value>
+			<Value>
+				<Code>9999</Code>
+				<Text>Other Address</Text>
+			</Value>
+		 
+		</Values>
+	</CodeSet>    <!-- AU Address Role -->
+</IncludeGroup>

@@ -18,20 +18,20 @@
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
 	<privacyRating>Low</privacyRating>
-    <Type ref="CommonTypes" name="RefIdType"></Type>
     <Description>
       <p>The GUID that uniquely identifies an instance of the object.</p>
     </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
   </Item>
   
    <Item>
     <Element>NAPTestRefId</Element>
     <Characteristics>O</Characteristics>
 	<privacyRating>Low</privacyRating>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
     <Description>
       <p>The GUID for the test that the student is sitting. May be linking to prior codeframe download.</p>
     </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
   </Item>
   
     <Item>

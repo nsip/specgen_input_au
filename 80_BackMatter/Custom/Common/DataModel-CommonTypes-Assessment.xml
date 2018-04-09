@@ -1,0 +1,90 @@
+﻿<IncludeGroup
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	
+	xmlns="http://sifassociation.org/SpecGen">
+
+	<!-- IncludeGroup is syntactic sugar that makes this a well-formed XML file that can
+		 be validated separately; and allows the xi:include to have parse="xml"  SpecGen tool ignores it. -->
+
+
+	<!-- Element types for the Assessment Domain includes:
+   		 Grading Assignment
+		 Attainment
+		 etc.
+
+         (Not currently in use - but soon)
+	-->
+<!--CommonElement name ="ScoresType" type="true" dm="true"> 
+<Item>
+    <Element>ScoresType</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Container for score elements. </p>
+    </Description>
+    <List mode="List">
+    </List>
+  </Item>
+  <Item>
+    <Element>Score</Element>
+    <Characteristics>OR</Characteristics>
+    <Description>
+      <p>The score with other information related to the score.</p>
+    </Description>
+    <Type ref="CommonTypes" name="ScoreType"></Type>
+  </Item>
+ </CommonElement>
+ 
+<CommonElement name ="ScoreType" type="true" dm="true">    <Item>
+    <Element>ScoreType</Element>
+    <Characteristics>OR</Characteristics>
+    <Description>
+      <p>The score with other information related to the score.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>AssessmentSubTestRefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Description>
+      <p>References the AssessmentSubTest that defines the score.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>ScoreValue</Element>
+    <Type name="xs:normalizedString"></Type>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The value of the score.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>DiagnosticStatement</Element>
+    <Characteristics>O</Characteristics>
+    <Type name="xs:string"></Type>
+    <Description>
+      <p>Comment created by any logical analysis of this score.</p>
+    </Description>
+  </Item>
+
+  <Item>
+    <Element>Description</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>This is further qualification of a Student Score.</p>
+    </Description>
+    <Type name='xs:string'/>
+  </Item>
+
+  <Item>
+    <Element>NumberOfResponses</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>This is the number of responses that are included with the StudentScoreSet.</p>
+    </Description>
+    <Type name='xs:unsignedInt'/>
+  </Item>
+  </CommonElement-->
+</IncludeGroup>

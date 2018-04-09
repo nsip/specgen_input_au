@@ -1,0 +1,103 @@
+<IncludeGroup
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	
+ 	xmlns="http://sifassociation.org/SpecGen">
+	
+	<CodeSet>
+		<Intro>
+			<p/>
+		</Intro>
+		<ID>LearningStandardItem Relationship Types</ID>
+		<Values>
+			<Value>
+				<Code>Content</Code>
+				<Text>A link to another state or school content standard.</Text>
+			</Value>
+			<Value>
+				<Code>Other</Code>
+				<Text>Any other type of relationship between the current standard and the target standard item.</Text>
+			</Value>
+			<Value>
+				<Code>PD</Code>
+				<Text>Personal Development</Text>
+			</Value>
+			<Value>
+				<Code>State</Code>
+				<Text>A link to a standard from another state. The purpose of this is to express relationships between state standards.</Text>
+			</Value>
+			 
+		</Values>
+	</CodeSet>   <!-- LearningStandardItem Relationship Types -->
+	<CodeSet>
+		<Intro>
+			<p>Australian education vocabularies</p>
+			<p>This vocabulary describes a curriculum framework organised into structural units.</p>
+			<p>Source: http://vocabulary.esa.edu.au/framework/ </p>
+		</Intro>
+		<ID>ACStrand</ID>
+		<Values>
+			<Value>
+				<Code>A</Code>
+				<Text>The arts</Text>
+			</Value>
+			<Value>
+				<Code>B</Code>
+				<Text>Economics and business</Text>
+			</Value>
+			<Value>
+				<Code>C</Code>
+				<Text>Civics and citizenship</Text>
+			</Value>
+			<Value>
+				<Code>D</Code>
+				<Text>Design and technologies</Text>
+			</Value>
+			<Value>
+				<Code>E</Code>
+				<Text>English</Text>
+			</Value>
+			<Value>
+				<Code>G</Code>
+				<Text>Geography</Text>
+			</Value>
+			<Value>
+				<Code>H</Code>
+				<Text>History</Text>
+			</Value>
+			<Value>
+				<Code>I</Code>
+				<Text>Digital technologies</Text>
+			</Value>
+			<Value>
+				<Code>L</Code>
+				<Text>Languages</Text>
+			</Value>
+			<Value>
+				<Code>M</Code>
+				<Text>Mathematics</Text>
+			</Value>
+			<Value>
+				<Code>P</Code>
+				<Text>Health and physical education</Text>
+			</Value>
+			<Value>
+				<Code>S</Code>
+				<Text>Science</Text>
+			</Value>
+			<Value>
+				<Code>U</Code>
+				<Text>Humanities and social sciences</Text>
+			</Value>
+			<Value>
+				<Code>T</Code>
+				<Text>Technology</Text>
+			</Value>
+			<Value>
+				<Code>W</Code>
+				<Text>Work Studies</Text>
+			</Value>
+		 
+		</Values>
+	</CodeSet>   <!-- AC Strand -->
+	
+</IncludeGroup>

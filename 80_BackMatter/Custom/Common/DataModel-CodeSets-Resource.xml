@@ -1,0 +1,24 @@
+<IncludeGroup
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	
+ 	xmlns="http://sifassociation.org/SpecGen">
+
+	<CodeSet>
+		<Intro>
+			<p>Set of the types of resource to be tracked by the ResourceUsage Object</p>
+		</Intro>
+		<ID>Resource Usage Content Type</ID>
+		<Values>
+			<Value>
+				<Code>01</Code>
+				<Text>Internet Usage</Text>
+			</Value>
+			<Value>
+				<Code>09</Code>
+				<Text>Other Usage</Text>
+			</Value>
+			 
+		</Values>
+	</CodeSet>  <!-- Resource Usage Content Type -->
+	
+</IncludeGroup>

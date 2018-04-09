@@ -1,0 +1,161 @@
+﻿<IncludeGroup
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	
+	xmlns="http://sifassociation.org/SpecGen">
+
+	<!-- IncludeGroup is syntactic sugar that makes this a well-formed XML file that can
+		 be validated separately; and allows the xi:include to have parse="xml"  SpecGen tool ignores it. -->
+
+
+	<!-- Element types for the Statistics domain -->
+<CommonElement name="ExclusionRulesType" type="true" dm="true">
+	<Item>
+		<Element>ExclusionRulesType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Rules for which statistic may not be reported.</p>
+		</Description>
+		<List mode="List">
+    </List>
+	</Item>
+	<Item>
+		<Element>ExclusionRule</Element>
+		<Characteristics>OR</Characteristics>
+		<Description>
+			<p>Rule for which statistic may not be reported</p>
+		</Description>
+		<Type ref="CommonTypes" name="ExclusionRuleType"/>
+	</Item>
+</CommonElement>
+<CommonElement name="ExclusionRuleType" type="true" dm="true">
+	<Item>
+		<Element>ExclusionRuleType</Element>
+		<Characteristics>OR</Characteristics>
+		<Description>
+			<p>Rule for which statistic may not be reported</p>
+		</Description>
+		<Type name="xs:string"/>
+	</Item>
+	<Item>
+		<Attribute>Type</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description/>
+		<Values>
+			<Value>
+				<Code>SampleSize</Code>
+			</Value>
+			<Value>
+				<Code>Description</Code>
+			</Value>
+		</Values>
+	</Item>
+</CommonElement>
+<CommonElement name="CharacteristicsType" type="true" dm="true">
+	<Item>
+		<Element>CharacteristicsType</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>
+        Reference to one or more <code>AggregateCharacteristicInfo</code> objects.
+      </p>
+		</Description>
+		<List mode="List">
+    </List>
+	</Item>
+	<Item>
+		<Element>AggregateCharacteristicInfoRefId</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>
+        Reference to an <code>AggregateCharacteristicInfo</code> object.
+      </p>
+		</Description>
+		<Type ref="CommonTypes" name="IdRefType"/>
+	</Item>
+</CommonElement>
+<CommonElement name="LocationType" type="true" dm="true">
+	<Intro>
+		<p>
+      This common element initially supports core data elements describing specific physical locations.
+    </p>
+	</Intro>
+	<Item>
+		<Element>LocationType</Element>
+	</Item>
+	<Item>
+		<Attribute>Type</Attribute>
+		<Characteristics>O</Characteristics>
+		<Values>
+			<Value>
+				<Code>Classroom</Code>
+			</Value>
+			<Value>
+				<Code>School</Code>
+			</Value>
+			<Value>
+				<Code>District</Code>
+			</Value>
+			<Value>
+				<Code>Campus</Code>
+			</Value>
+			<Value>
+				<Code>IntermediateUnit</Code>
+			</Value>
+			<Value>
+				<Code>StateEducationAgency</Code>
+			</Value>
+			<Value>
+				<Code>NonInstructionalSpace</Code>
+			</Value>
+			<Value>
+				<Code>AthleticVenue</Code>
+			</Value>
+			<Value>
+				<Code>Other</Code>
+			</Value>
+		</Values>
+	</Item>
+	<Item>
+		<Element>LocationName</Element>
+		<Characteristics>O</Characteristics>
+		<Description>Name of the location.</Description>
+		<Type name="xs:token"/>
+	</Item>
+	<Item>
+		<Element>LocationRefId</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+      RefId of the location object if the location is a SIF Object such as <code>SchoolInfo</code>.
+    </Description>
+		<Type ref="CommonTypes" name="IdRefType"/>
+	</Item>
+	<Item>
+		<Attribute>SIF_RefObject</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+      Type of SIF Object <code>Location</code> points to.
+    </Description>
+		<Values>
+			<Value>
+				<Code>SchoolInfo</Code>
+			</Value>
+			<Value>
+				<Code>LEAInfo</Code>
+			</Value>
+			<Value>
+				<Code>RoomInfo</Code>
+			</Value>
+		</Values>
+	</Item>
+	<xhtml:Example xmlns="" name="Location Example">
+		<Location Type="Classroom">
+			<LocationName>Beaconhills Middle School Library</LocationName>
+			<LocationRefId SIF_RefObject="RoomInfo">3E34B353-9D75-101A-8C3D-00AA001A1652</LocationRefId>
+		</Location>
+	</xhtml:Example>
+</CommonElement>
+	
+</IncludeGroup>

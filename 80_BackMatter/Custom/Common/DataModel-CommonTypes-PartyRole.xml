@@ -1,0 +1,2449 @@
+﻿<IncludeGroup
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	xmlns:json="http://james.newtonking.com/projects/json"
+	
+	xmlns="http://sifassociation.org/SpecGen">
+
+	<!-- IncludeGroup is syntactic sugar that makes this a well-formed XML file that can
+		 be validated separately; and allows the xi:include to have parse="xml"  SpecGen tool ignores it. -->
+
+
+	<!-- Element types for the Party & Role domains -->
+<if intl="au">
+<CommonElement name="PersonInfoType" type="true" dm="true">
+	<Item>
+		<Element>PersonInfoType</Element>
+		<Description>
+			<p/>
+		</Description>
+	</Item>
+	<Item>
+		<Element>Name</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The name of the person. Note: Type attribute value of LGL must be used here.</p>
+		</Description>
+		<Type ref="CommonTypes" name="NameOfRecordType"/>
+	</Item>
+	<Item>
+		<Element>OtherNames</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Previous, alternate or other names or aliases associated with the person.</p>
+		</Description>
+		<Type ref="CommonTypes" name="OtherNamesType"/>
+	</Item>
+	<Item>
+		<Element>Demographics</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Demographic information about the person.</p>
+		</Description>
+		<Type ref="CommonTypes" name="DemographicsType"/>
+	</Item>
+	<Item>
+		<Element>AddressList</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The person's address(es).</p>
+		</Description>
+		<Type ref="CommonTypes" name="AddressListType"/>
+	</Item>
+	<Item>
+		<Element>PhoneNumberList</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The person's phone number(s).</p>
+		</Description>
+		<Type ref="CommonTypes" name="PhoneNumberListType"/>
+	</Item>
+	<Item>
+		<Element>EmailList</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The person's e-mail address(es).</p>
+		</Description>
+		<Type ref="CommonTypes" name="EmailListType"/>
+	</Item>
+	<Item>
+		<Element>HouseholdContactInfoList</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The person's household/s contact information.</p>
+		</Description>
+		<Type ref="CommonTypes" name="HouseholdContactInfoListType"/>
+	</Item>
+	<xhtml:Example xmlns="" name="PersonInfo Example">
+		<PersonInfo>
+			<Name Type="LGL">
+				<FamilyName>Smith</FamilyName>
+				<GivenName>Fred</GivenName>
+				<FullName>Fred Smith</FullName>
+			</Name>
+			<OtherNames>
+				<Name Type="AKA">
+					<FamilyName>Anderson</FamilyName>
+					<GivenName>Samuel</GivenName>
+					<FullName>Samuel Anderson</FullName>
+				</Name>
+				<Name Type="PRF">
+					<FamilyName>Rowinski</FamilyName>
+					<GivenName>Sam</GivenName>
+					<FullName>Sam Rowinski </FullName>
+				</Name>
+			</OtherNames>
+			<Demographics>
+				<IndigenousStatus>3</IndigenousStatus>
+				<Sex>1</Sex>
+				<BirthDate>1990-09-26</BirthDate>
+				<BirthDateVerification>1004</BirthDateVerification>
+				<PlaceOfBirth>Clayton</PlaceOfBirth>
+				<StateOfBirth>VIC</StateOfBirth>
+				<CountryOfBirth>1101</CountryOfBirth>
+				<CountriesOfCitizenship>
+					<CountryOfCitizenship>8104</CountryOfCitizenship>
+					<CountryOfCitizenship>1101</CountryOfCitizenship>
+				</CountriesOfCitizenship>
+				<CountriesOfResidency>
+					<CountryOfResidency>8104</CountryOfResidency>
+					<CountryOfResidency>1101</CountryOfResidency>
+				</CountriesOfResidency>
+				<CountryArrivalDate>1990-09-26</CountryArrivalDate>
+				<AustralianCitizenshipStatus>1</AustralianCitizenshipStatus>
+				<EnglishProficiency>
+					<Code>1</Code>
+				</EnglishProficiency>
+				<LanguageList>
+					<Language>
+						<Code>0001</Code>
+						<LanguageType>1</LanguageType>
+					</Language>
+				</LanguageList>
+				<DwellingArrangement>
+					<Code>1671</Code>
+				</DwellingArrangement>
+				<Religion>
+					<Code>2013</Code>
+				</Religion>
+				<ReligiousEventList>
+					<ReligiousEvent>
+						<Type>Baptism</Type>
+						<Date>2000-09-01</Date>
+					</ReligiousEvent>
+					<ReligiousEvent>
+						<Type>Christmas</Type>
+						<Date>2009-12-24</Date>
+					</ReligiousEvent>
+				</ReligiousEventList>
+				<ReligiousRegion>The Religion Region</ReligiousRegion>
+				<PermanentResident>P</PermanentResident>
+				<VisaSubClass>101</VisaSubClass>
+				<VisaStatisticalCode>05</VisaStatisticalCode>
+			</Demographics>
+			<AddressList>
+				<Address Type="0123" Role="2382">
+					<Street>
+						<Line1>Unit1/10</Line1>
+						<Line2>Barkley Street</Line2>
+					</Street>
+					<City>Yarra Glenn</City>
+					<StateProvince>VIC</StateProvince>
+					<Country>1101</Country>
+					<PostalCode>9999</PostalCode>
+				</Address>
+				<Address Type="0123A" Role="013A">
+					<Street>
+						<Line1>34 Term Address Street</Line1>
+					</Street>
+					<City>Home Town</City>
+					<StateProvince>WA</StateProvince>
+					<Country>1101</Country>
+					<PostalCode>9999</PostalCode>
+				</Address>
+			</AddressList>
+			<PhoneNumberList>
+				<PhoneNumber Type="0096">
+					<Number>03 9637-2289</Number>
+					<Extension>72289</Extension>
+					<ListedStatus>Y</ListedStatus>
+				</PhoneNumber>
+				<PhoneNumber Type="2364">
+					<Number>0437-765-234</Number>
+					<ListedStatus>N</ListedStatus>
+				</PhoneNumber>
+			</PhoneNumberList>
+			<EmailList>
+				<Email Type="01">fsmith@yahoo.com</Email>
+				<Email Type="02">freddy@gmail.com</Email>
+			</EmailList>
+		</PersonInfo>
+	</xhtml:Example>
+</CommonElement>
+</if>
+
+<if intl="nz">
+<CommonElement name="BaseCommunicationChannelType" type="true" dm="true">
+	<Item>
+		<Element>BaseCommunicationChannelType</Element>
+		<Description>
+			<p>A set of attributes common to multiple kinds of communication channel</p>
+		</Description>
+	</Item>	
+	<Item>
+		<Element>Notes</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Notes on when / how to use the communication channel. eg: Phone after 4pm</p>
+		</Description>
+		<Type name="xs:string"/>
+	</Item>
+	<Item>
+		<Element>Preference</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Preference number indicating an order in which communication channels should be used
+			when contacting person or organisation.</p>
+		</Description>
+		<Type name="xs:unsignedInt"/>
+	</Item>
+	<Item>
+		<Element>Usage</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>A code describing the acceptable usage of a person or organisation's communication channel</p>
+		</Description>
+		<Type ref="CodeSets" name="NZCodeSetsCommunicationUsageType"/>
+	</Item>
+</CommonElement>
+</if>
+
+<CommonElement name="BaseNameType" type="true" dm="true">
+	<Item>
+		<Element>BaseNameType</Element>
+		<Description>
+			<p>
+        Base type, without attributes, for <code>Name</code> elements, primarily to allow structure to be leveraged with different <code>Type</code> attribute values.
+      </p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>Title</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>A title or prefix associated with the name. If any of: Mr, Mrs, Ms, Miss, Rev, Fr, Dr, Prof, Hon, Sir, Lord, Lady - these must be as shown, otherwise free text. Note that title is not applicable to learners. </p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>FamilyName</Element>
+		<Characteristics>C</Characteristics>
+		<Description>
+			<p>Family name. That part of the person's name which is used to describe family, clan, tribal group, or marital association. Note that this element is required when known. However, it may not be possible to know the family name in which case you should add the available information to the FullName element. </p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>GivenName</Element>
+		<Characteristics>C</Characteristics>
+		<Description>
+			<p>Given name of the person. Note that this element is required if known. However, it may not be possible to know the given name in which case you should add the available information to the FullName element. </p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>MiddleName</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>All other given or middle names, each separated with a single space character. </p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>FamilyNameFirst</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>An indicator used to identify the naming conventions used by some predominantly non-European, ethnic or language groups and related to the display nature of a name. </p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"/>
+	</Item>
+	<Item>
+		<Element>PreferredFamilyName</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The family name preferred most by the person (as written). </p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>PreferredFamilyNameFirst</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>An indicator used to identify the naming conventions used by some predominantly non-European, ethnic or language groups and related to the display nature of a name. </p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"/>
+	</Item>
+	<Item>
+		<Element>PreferredGivenName</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The given name preferred most by the person (as written). </p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>Suffix</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Textual suffix like PHD, JP, BSc. </p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>FullName</Element>
+		<Characteristics>C</Characteristics>
+		<Description>
+			<p>A free text field for the complete name for display purposes. If this is associated with a StudentPersonal,StaffPersonal or StudentContactPersonal record and the FamilyName and GivenName are not both specified, then this becomes mandatory. </p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<xhtml:Example xmlns="" name="Base Name Example">
+		<BaseName>
+			<FamilyName>Wesson</FamilyName>
+			<GivenName>Melanie</GivenName>
+			<MiddleName>Joan</MiddleName>
+			<FamilyNameFirst>N</FamilyNameFirst>
+			<PreferredFamilyName>Wesson</PreferredFamilyName>
+			<PreferredFamilyNameFirst>N</PreferredFamilyNameFirst>
+			<PreferredGivenName>Mel</PreferredGivenName>
+		</BaseName>
+	</xhtml:Example>
+</CommonElement>
+
+<if intl="au">
+<CommonElement name="NameType" type="true" dm="true">
+	<Item>
+		<Element>NameType</Element>
+		<Description>
+			<p>The Name element, which could belong to a Student, Staff Member, Contact, etc.
+			This element or a form of this element with a subset of Type values occurs within
+			objects such as StudentPersonal, StudentContactPersonal, StaffPersonal, etc.
+		</p>
+    </Description>
+		<Type ref="CommonTypes" complex="extension" name="BaseNameType"/>
+	</Item>
+	<Item>
+		<Attribute>Type</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>
+        Code that specifies what type of name this is.  If unsure, use <code>LGL</code>.
+      </p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsNameUsageTypeType"/>
+	</Item>
+	<xhtml:Example xmlns="" name="Name Example">
+		<Name Type="LGL">
+			<FamilyName>Woodall</FamilyName>
+			<GivenName>Charles</GivenName>
+			<MiddleName>William</MiddleName>
+		</Name>
+	</xhtml:Example>
+</CommonElement>
+<CommonElement name="NameOfRecordType" type="true" dm="true">
+	<Item>
+		<Element>NameOfRecordType</Element>
+		<Description>
+			<p>
+        Extends <code>BaseNameType</code> to allow for one <code>Type</code> attribute value, indicating the name is the name of record;
+        serves as the primary name in some SIF objects, including <code>StudentPersonal</code>.
+      </p>
+		</Description>
+		<Type complex="extension" name="BaseNameType"/>
+	</Item>
+	<Item>
+		<Attribute>Type</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>
+        Code that specifies what type of name this is. Note that type "LGL" must be used here.
+      </p>
+		</Description>
+		<Values>
+			<Value>
+				<Code>LGL</Code>
+				<Text>Name of Record</Text>
+			</Value>
+		</Values>
+	</Item>
+	<xhtml:Example xmlns="" name="Legal Name Example">
+		<BaseName Type="LGL">
+			<FamilyName>Wesson</FamilyName>
+			<GivenName>Melanie</GivenName>
+			<MiddleName>Joan</MiddleName>
+			<FamilyNameFirst>N</FamilyNameFirst>
+			<PreferredFamilyName>Wesson</PreferredFamilyName>
+			<PreferredFamilyNameFirst>N</PreferredFamilyNameFirst>
+			<PreferredGivenName>Mel</PreferredGivenName>
+		</BaseName>
+	</xhtml:Example>
+</CommonElement>
+<CommonElement name="OtherNamesType" type="true" dm="true">
+	<Item>
+		<Element>OtherNamesType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Previous, alternate or other names or aliases associated with a person.</p>
+		</Description>
+		<List mode="List"/>
+	</Item>
+	<Item>
+		<Element>Name</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>
+        Name of the person.  Note: Type value of <code>LGL</code> may not occur here.
+      </p>
+		</Description>
+		<Type ref="CommonTypes" complex="extension" name="OtherNameType"/>
+	</Item>
+	<xhtml:Example xmlns="" name="Other Names Example">
+		<OtherNames>
+			<Name Type="AKA">
+				<FamilyName>Anderson</FamilyName>
+				<GivenName>Samuel</GivenName>
+				<FullName>Samuel Anderson</FullName>
+			</Name>
+			<Name Type="PRF">
+				<FamilyName>Rowinski</FamilyName>
+				<GivenName>Sam</GivenName>
+				<FullName>Sam Rowinski </FullName>
+			</Name>
+		</OtherNames>
+	</xhtml:Example>
+</CommonElement>
+<CommonElement name="OtherNameType" type="true" dm="true">
+	<Item>
+		<Element>OtherNameType</Element>
+		<Description>
+			<p>
+        Extends <code>BaseNameType</code> to allow for <code>Type</code> attribute values excluding "name of record."  Used for other names to
+        be included in addition to the name of record in objects.
+      </p>
+		</Description>
+		<Type complex="extension" name="BaseNameType"/>
+	</Item>
+	<Item>
+		<Attribute>Type</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>
+        Code that specifies what type of name this is. Note that type "LGL" is NOT to be used here.
+      </p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsNameUsageTypeType"/>
+	</Item>
+</CommonElement>
+
+<CommonElement name="DemographicsType" type="true" dm="true">
+	<Item>
+		<Element>DemographicsType</Element>
+		<Description>
+			<p>
+        Demographics information about the student, contact, staff member, etc. 
+      </p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>IndigenousStatus</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Whether or not the person identifies themselves as being of Aboriginal and/or Torres Strait Islander descent.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsIndigenousStatusType"/>
+	</Item>
+	<Item>
+		<Element>Sex</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>'Sex' is the distinction 'male'/'female'/'intersex', as reported by the person</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsSexCodeType"/>
+	</Item>
+	<Item>
+		<Element>BirthDate</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The person's date of birth.</p>
+		</Description>
+		<Type ref="CommonTypes" name="BirthDateType"/>
+	</Item>
+	<Item>
+		<Element>DateOfDeath</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The person's date of death.</p>
+		</Description>
+		<Type name="xs:date"/>
+	</Item>
+	<Item>
+		<Element>BirthDateVerification</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Means by which the person's birth date was validated.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsBirthdateVerificationType"/>
+	</Item>
+	<Item>
+		<Element>PlaceOfBirth</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The person's place of birth - like village, town, city etc.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>StateOfBirth</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The person's state of birth.</p>
+		</Description>
+		<Type ref="CommonTypes" name="StateProvinceType"/>
+	</Item>
+	<Item>
+		<Element>CountryOfBirth</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The person's country of birth.</p>
+		</Description>
+		<Type ref="CommonTypes" name="CountryType"/>
+	</Item>
+	
+	<Item>
+		<Element>CountriesOfCitizenship</Element>
+		<Characteristics>O</Characteristics>
+		<Description/>
+		<Type ref="CommonTypes" name="CountryListType"/>
+	</Item>
+
+	<Item>
+		<Element>CountriesOfResidency</Element>
+		<Characteristics>O</Characteristics>
+		<Description/>
+		<Type ref="CommonTypes" name="CountryList2Type"/>
+	</Item>
+	
+	<Item>
+		<Element>CountryArrivalDate</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Date the person first arrived in the country.</p>
+		</Description>
+		<Type name="xs:date"/>
+	</Item>
+	<Item>
+		<Element>AustralianCitizenshipStatus</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The person's citizenship status.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsAustralianCitizenshipStatusType"/>
+	</Item>
+	<Item>
+		<Element>EnglishProficiency</Element>
+		<Characteristics>O</Characteristics>
+		<Description>Person's proficiency in English.</Description>
+		<Type ref="CommonTypes" name="EnglishProficiencyType"/>
+	</Item>
+	<Item>
+		<Element>LanguageList</Element>
+		<Characteristics>O</Characteristics>
+		<Description>List of languages an individual uses to communicate.</Description>
+		<Type ref="CommonTypes" name="LanguageListType"/>
+	</Item>
+	
+	<Item>
+		<Element>DwellingArrangement</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Setting/environment in which the person resides.</p>
+		</Description>
+		<Type ref="CommonTypes" name="DwellingArrangementType"/>
+	</Item>
+	
+	<Item>
+		<Element>Religion</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Type of Religion if any</p>
+		</Description>
+		<Type ref="CommonTypes" name="ReligionType"/>
+	</Item>
+
+	
+	<Item>
+		<Element>ReligiousEventList</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>List of Religious events</p>
+		</Description>
+		<Type ref="CommonTypes" name="ReligiousEventListType"/>
+	</Item>
+	
+	
+	<Item>
+		<Element>ReligiousRegion</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Belong to Religious Region - Currently Free Text.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>PermanentResident</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Australian Residency Status (Mandatory for Student)</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsPermanentResidentStatusType"/>
+	</Item>
+	<!-- For NSW 3.4 - a list is being added.  Where there is more than one VISA applicable, there will be a VisaSubClassList-->
+	<Item>
+		<Element>VisaSubClass</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Visa Sub-Class - Can be free text - not necessary to validate</p>
+		</Description>
+		<Type ref="CommonTypes" name="VisaSubClassCodeType"/>
+	</Item>
+	<Item>
+		<Element>VisaStatisticalCode</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Visa Statistical Code - Can be free text - not necessary to validate</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>VisaExpiryDate</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Expiry Date of Visa if one exists</p>
+		</Description>
+		<Type name="xs:date"/>
+	</Item>
+	<Item>
+		<Element>VisaSubClassList</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>List of Visa details if more than one exists.</p>
+		</Description>
+		<Type ref="CommonTypes" name="VisaSubClassListType"/>
+	</Item>
+	<Item>
+		<Element>LBOTE</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Language Background is Other Than English. (http://www.acara.edu.au/verve/_resources/DSM_1.pdf), the LBOTE metric is under review. Currently it can be derived from Student and Parents Language Background.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"/>
+	</Item>
+	<Item>
+		<Element>ImmunisationCertificateStatus</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Status of Immunisation Certificate</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsImmunisationCertificateStatusType"/>
+	</Item>
+	<Item>
+		<Element>CulturalBackground</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Used to indicate cultural background. </p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsAustralianStandardClassificationOfCulturalAndEthnicGroupsASCCEGType"/>
+	</Item>
+	<Item>
+		<Element>MaritalStatus</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The person's marital status.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsMaritalStatusAIHWType"/>
+	</Item>
+	<Item>
+		<Element>MedicareNumber</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Person's Medicare number. Exchange only with permission to do so.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>	
+	<xhtml:Example name="Demographics Example" xmlns="">
+		<Demographics>
+			<IndigenousStatus>3</IndigenousStatus>
+			<Sex>1</Sex>
+			<BirthDate>1990-09-26</BirthDate>
+			<BirthDateVerification>1004</BirthDateVerification>
+			<PlaceOfBirth>Clayton</PlaceOfBirth>
+			<StateOfBirth>VIC</StateOfBirth>
+			<CountryOfBirth>1101</CountryOfBirth>
+			<CountriesOfCitizenship>
+				<CountryOfCitizenship>8104</CountryOfCitizenship>
+				<CountryOfCitizenship>1101</CountryOfCitizenship>
+			</CountriesOfCitizenship>
+			<CountriesOfResidency>
+				<CountryOfResidency>8104</CountryOfResidency>
+				<CountryOfResidency>1101</CountryOfResidency>
+			</CountriesOfResidency>
+			<CountryArrivalDate>1990-09-26</CountryArrivalDate>
+			<AustralianCitizenshipStatus>1</AustralianCitizenshipStatus>
+			<EnglishProficiency>
+				<Code>1</Code>
+			</EnglishProficiency>
+			<LanguageList>
+				<Language>
+					<Code>0001</Code>
+					<LanguageType>1</LanguageType>
+				</Language>
+			</LanguageList>
+			<DwellingArrangement>
+				<Code>1671</Code>
+			</DwellingArrangement>
+			<Religion>
+				<Code>2013</Code>
+			</Religion>
+			<ReligiousEventList>
+				<ReligiousEvent>
+					<Type>Baptism</Type>
+					<Date>2000-09-01</Date>
+				</ReligiousEvent>
+				<ReligiousEvent>
+					<Type>Christmas</Type>
+					<Date>2009-12-24</Date>
+				</ReligiousEvent>
+			</ReligiousEventList>
+			<ReligiousRegion>The Religion Region</ReligiousRegion>
+			<PermanentResident>P</PermanentResident>
+			<VisaSubClass>101</VisaSubClass>
+			<VisaStatisticalCode>05</VisaStatisticalCode>
+		</Demographics>
+	</xhtml:Example>
+</CommonElement>
+
+<!-- VisaSubClassList added for NSW 3.4-->   
+<CommonElement name="VisaSubClassListType" type="true" dm="true">
+  	<Item>
+		<Element>VisaSubClassListType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>List of Visas</p>
+		</Description>
+		<List mode="List"/>
+	</Item>
+	<Item>
+		<Element>VisaSubClass</Element>
+		<Characteristics>OR</Characteristics>
+		<Description>
+			<p/>
+		</Description>
+		<Type ref="CommonTypes" name="VisaSubClassType"/>
+	</Item>	
+  
+	</CommonElement>
+<CommonElement name="VisaSubClassType" type="true" dm="true">
+ 	<Item>
+		<Element>VisaSubClassType</Element>
+		<Characteristics>OR</Characteristics>
+		<Description>
+			<p/>
+		</Description>
+	</Item>
+	<Item>
+		<Element>Code</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p> </p>
+		</Description>
+		<Type ref="CommonTypes" name="VisaSubClassCodeType"/>
+	</Item>
+	<Item>
+		<Element>VisaExpiryDate</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Expiry Date of Visa if one exists</p>
+		</Description>
+		<Type name="xs:date"/>
+	</Item>
+    <Item>
+		<Element>ATEExpiryDate</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Authority to Enroll Expiry Date if one exists. Authority to Enroll Expiry date is also required to ensure the validity of a  student’s enrolment.</p>
+		</Description>
+		<Type name="xs:date"/>
+	</Item>	
+	<Item>
+		<Element>ATEStartDate</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Authority to Enroll Start Date if one exists. Authority to Enroll Start is also required to ensure the validity of a  student’s enrolment.</p>
+		</Description>
+		<Type name="xs:date"/>
+	</Item>	
+	<Item>
+		<Element>VisaStatisticalCode</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Visa Statistical Code - Can be free text - not necessary to validate</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+</CommonElement>
+<CommonElement name="VisaSubClassCodeType" type="true" dm="true">
+    <Item>
+		<Element>VisaSubClassCodeType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Visa Sub-Class - Can be free text - not necessary to validate</p>
+		</Description>
+		<Union>
+			<Type ref="CodeSets" name="AUCodeSetsVisaSubClassType"/>
+			<Type name="xs:string"/>
+		</Union>
+	</Item>
+	</CommonElement>
+
+<CommonElement name="EnglishProficiencyType" type="true" dm="true">
+	<Item>
+		<Element>EnglishProficiencyType</Element>
+		<Characteristics>O</Characteristics>
+	</Item>
+	<Item>
+		<Element>Code</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Person's proficiency in English.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsEnglishProficiencyType"/>
+	</Item>
+	<Item>
+		<Element>OtherCodeList</Element>
+		<Characteristics>O</Characteristics>
+		<Type ref="CommonTypes" name="OtherCodeListType"/>
+	</Item>
+	<xhtml:Example xmlns="" name="English Proficiency Example">
+		<EnglishProficiency>
+			<Code>9</Code>
+		</EnglishProficiency>
+	</xhtml:Example>
+</CommonElement>
+<CommonElement name="LanguageListType" type="true" dm="true">
+	<Item>
+		<Element>LanguageListType</Element>
+		<Characteristics>O</Characteristics>
+		<List mode="List"/>
+	</Item>
+	<Item>
+		<Element>Language</Element>
+		<Characteristics>MR</Characteristics>
+		<Type ref="CommonTypes" name="LanguageBaseType"/>
+	</Item>
+	<xhtml:Example xmlns="" name="Language List Example">
+		<LanguageList>
+			<Language>
+				<Code>1201</Code>
+				<LanguageType>1</LanguageType>
+			</Language>
+			<Language>
+				<Code>1301</Code>
+				<LanguageType>9</LanguageType>
+			</Language>
+		</LanguageList>
+	</xhtml:Example>
+</CommonElement>
+<CommonElement name="LanguageBaseType" type="true" dm="true">
+ 	<Item>
+		<Element>LanguageBaseType</Element>
+		<Characteristics>MR</Characteristics>
+	</Item>
+	<Item>
+		<Element>Code</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The code representing the specific language that an individual uses to communicate.�</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsAustralianStandardClassificationOfLanguagesASCLType"/>
+	</Item>
+	<Item>
+		<Element>OtherCodeList</Element>
+		<Characteristics>O</Characteristics>
+		<Type ref="CommonTypes" name="OtherCodeListType"/>
+	</Item>
+	<Item>
+		<Element>LanguageType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>An indication of the function and context in which an individual uses a language to communicate.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsLanguageTypeType"/>
+	</Item>
+	<Item>
+		<Element>Dialect</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Specific dialect of a person's language.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+</CommonElement>
+</if>
+
+<CommonElement name="EmailListType" type="true" dm="true">
+	<Item>
+		<Element>EmailListType</Element>
+		<Description>
+			<p>A list of e-mail addresses associated with an individual or organization.</p>
+		</Description>
+		<List mode="List"/>
+	</Item>
+	<Item>
+		<Element>Email</Element>
+		<Characteristics>MR</Characteristics>
+		<Type ref="CommonTypes" name="EmailType"/>
+	</Item>
+	<xhtml:Example xmlns="" name="NZ Email List Example" intl="au">
+		<EmailList>
+			<Email Type="01">contact@sifinfo.org</Email>
+			<Email Type="02">info@sifinfo.org</Email>
+		</EmailList>
+	</xhtml:Example>
+	<xhtml:Example xmlns="" name="NZ Email List Example" intl="nz">
+		<EmailList>
+			<Email>
+				<Notes>Not on Thursdays</Notes>
+				<Preference>1</Preference>
+				<Usage>UnexplainedAbsence</Usage>
+				<Type>01</Type>
+				<Address>contact@sifinfo.org</Address>
+			</Email>
+			<Email>
+				<Notes>Only on Thursdays</Notes>
+				<Preference>1</Preference>
+				<Usage>UnexplainedAbsence</Usage>
+				<Type>02</Type>
+				<Address>info@sifinfo.org</Address>
+			</Email>
+		</EmailList>
+	</xhtml:Example>
+</CommonElement>
+<CommonElement name="PhoneNumberListType" type="true" dm="true">
+	<Item>
+		<Element>PhoneNumberListType</Element>
+		<Description>
+			<p>Lists phone numbers associated with an entity.</p>
+		</Description>
+		<List mode="List"/>
+	</Item>
+	<Item>
+		<Element>PhoneNumber</Element>
+		<Characteristics>MR</Characteristics>
+		<Type ref="CommonTypes" name="PhoneNumberType"/>
+	</Item>
+	<xhtml:Example xmlns="" name="AU Phone Number List Example" intl="au">
+		<PhoneNumberList>
+			<PhoneNumber Type="0096">
+				<Number>(03) 9543 2000</Number>
+			</PhoneNumber>
+		</PhoneNumberList>
+	</xhtml:Example>
+	<xhtml:Example xmlns="" name="NZ Phone Number List Example" intl="nz">
+		<PhoneNumberList>
+			<PhoneNumber>
+				<Notes>Not on Thursdays</Notes>
+				<Preference>1</Preference>
+				<Usage>UnexplainedAbsence</Usage>
+				<Type>0096</Type>
+				<Number>(03) 273 2000</Number>
+			</PhoneNumber>
+			<PhoneNumber>
+				<Notes>Only on Thursdays</Notes>
+				<Preference>1</Preference>
+				<Usage>SMS</Usage>
+				<Type>0096</Type>
+				<Number>(0274) 273 2000</Number>
+			</PhoneNumber>
+		</PhoneNumberList>
+	</xhtml:Example>
+</CommonElement>
+
+<if intl="au">
+<CommonElement name="EmailType" type="true" dm="true">
+	<Item>
+		<Element>EmailType</Element>
+		<Description>
+			<p>
+				This element represents an e-mail address of one of a number of types and
+				occurs in objects such as StudentPersonal, StaffPersonal, StudentContactPersonal, etc.
+			</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+	    <Attribute>Type</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>This attribute specifies the type of e-mail address.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsEmailTypeType"/>
+	</Item>
+	<xhtml:Example xmlns="" name="AU Email Type Example">
+		<Email Type="01">contact@sifinfo.org</Email>
+	</xhtml:Example>
+</CommonElement>
+<CommonElement name="PhoneNumberType" type="true" dm="true">
+	<Item>
+		<Element>PhoneNumberType</Element>
+		<Description>
+			<p>This element represents a phone number and occurs within objects such as StudentPersonal, StaffPersonal, etc.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Attribute>Type</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Code that specifies what type of phone number this is.  Note: A subset of valid values may be specified in data objects.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsTelephoneNumberTypeType"/>
+	</Item>
+	<Item>
+		<Element>Number</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Phone number.  Free-form, but typical Australian formats include:</p>
+			<ul>
+				<li>(###) ####-####</li>
+				<li>####-####</li>
+				<li>+##### ### ###</li>
+			</ul>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>Extension</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Phone number extension.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>ListedStatus</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Indicates whether or not the phone number is available to the public.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"/>
+	</Item>
+	<Item>
+		<Element>Preference</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Preference number indicating an order in which phone numbers should be used when contacting person.</p>
+		</Description>
+	    <Type name="xs:unsignedInt"/>
+	</Item>
+	<xhtml:Example xmlns="" name="Phone Number Example">
+		<PhoneNumber Type="0096">
+			<Number>(03) 9543 2000</Number>
+			<Extension>245</Extension>
+		</PhoneNumber>
+	</xhtml:Example>
+</CommonElement>
+</if>
+
+<if intl="nz">
+<CommonElement name="EmailType" type="true" dm="true">
+	<Item>
+		<Element>EmailType</Element>
+		<Description>
+			<p>
+				This element represents an e-mail address of one of a
+				number of types and occurs in objects such as
+				StudentPersonal, StaffPersonal,
+				StudentContactPersonal, etc.
+			</p>
+		</Description>
+		<Type complex="extension" name="BaseCommunicationChannelType"/>
+	</Item>
+	<Item>
+	    <Element>Type</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+			<p>A Code denoting how the owner of the e-mail address describes it.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsEmailTypeType"/>
+	</Item>
+	 <Item>
+		<Element>Address</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The actual email address.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	 </Item>
+	<xhtml:Example xmlns="" name="NZ Email Type Example">
+		<Email>
+			<Notes>Not on Thursdays</Notes>
+			<Preference>1</Preference>
+			<Usage>UnexplainedAbsence</Usage>
+			<Type>01</Type>
+			<Address>contact@sifinfo.org</Address>
+		</Email>
+	</xhtml:Example>
+</CommonElement>
+<CommonElement name="PhoneNumberType" type="true" dm="true">
+	<Item>
+		<Element>PhoneNumberType</Element>
+		<Description>
+			<p>This element represents a phone number and occurs within objects such as StudentPersonal, StaffPersonal, etc.</p>
+		</Description>
+		<Type complex="extension" name="BaseCommunicationChannelType"/>
+	</Item>
+	<Item>
+		<Element>Type</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+			<p>Code that specifies what type of phone number this is.  Note: A subset of valid values may be specified in data objects.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsTelephoneNumberTypeType"/>
+	</Item>
+	<Item>
+		<Element>Number</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Phone number.  Free-form, but typical New Zealand formats include:</p>
+			<ul>
+				<li>(0##) ###-####</li>
+				<li>###-####</li>
+				<li>+##### ### ####</li>
+			</ul>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+
+	<Item>
+		<Element>Extension</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Phone number extension.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>ListedStatus</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Indicates whether or not the phone number is available to the public.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"/>
+	</Item>
+	<xhtml:Example xmlns="" name="Phone Number Example">
+		<PhoneNumber>
+			<Notes>Not on Thursdays</Notes>
+			<Preference>1</Preference>
+			<Usage>UnexplainedAbsence</Usage>
+			<Type>0096</Type>
+			<Number>(03) 9543 2000</Number>
+			<Extension>245</Extension>
+			<ListedStatus>Y</ListedStatus>
+		</PhoneNumber>
+	</xhtml:Example>
+</CommonElement>
+</if>
+
+<if intl="au">
+<CommonElement name="BirthDateType" type="true" dm="true">
+	<Item>
+		<Element>BirthDateType</Element>
+		<Description>
+			<p>A person's date of birth.</p>
+		</Description>
+		<Type name="xs:date"/>
+	</Item>
+	<xhtml:Example xmlns="" name="Birth Date Example">
+		<BirthDate>1970-08-11</BirthDate>
+	</xhtml:Example>
+</CommonElement>
+
+<CommonElement name="ElectronicIdListType" type="true" dm="true">
+	<Item>
+		<Element>ElectronicIdListType</Element>
+		<Description>
+			<p>A list of electronic identifiers associated with an entity.</p>
+		</Description>
+		<List mode="List">
+    </List>
+	</Item>
+	<Item>
+		<Element>ElectronicId</Element>
+		<Characteristics>MR</Characteristics>
+		<Type ref="CommonTypes" name="ElectronicIdType"/>
+	</Item>
+	<xhtml:Example xmlns="" name="Electronic Id List Example">
+		<ElectronicIdList>
+			<ElectronicId Type="01">206654</ElectronicId>
+			<ElectronicId Type="03">1234</ElectronicId>
+		</ElectronicIdList>
+	</xhtml:Example>
+</CommonElement>
+<CommonElement name="ElectronicIdType" type="true" dm="true">
+	<Item>
+		<Element>ElectronicIdType</Element>
+		<Description>
+			<p>
+        Common element used to specify entity identifiers that are read by electronic equipment. 
+      </p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Attribute>Type</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Electronic ID type.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsElectronicIdTypeType"/>
+	</Item>
+	<xhtml:Example xmlns="" name="Electronic Id Example">
+		<ElectronicId Type="01">206654</ElectronicId>
+	</xhtml:Example>
+</CommonElement>
+
+<CommonElement name="ProjectedGraduationYearType" type="true" dm="true">
+	<Intro>
+		<p>Currently projected graduation year.</p>
+	</Intro>
+	<Item>
+		<Element>ProjectedGraduationYearType</Element>
+		<Description>
+			<p>Currently projected graduation year (CCYY).</p>
+		</Description>
+		<Type name="xs:gYear"/>
+	</Item>
+	<xhtml:Example xmlns="" name="Projected Graduation Year Example">
+		<ProjectedGraduationYear>2006</ProjectedGraduationYear>
+	</xhtml:Example>
+</CommonElement>
+<CommonElement name="OnTimeGraduationYearType" type="true" dm="true">
+	<Intro>
+		<p>First projected graduation year, usually determined when student is accepted into 9th grade (CCYY).</p>
+	</Intro>
+	<Item>
+		<Element>OnTimeGraduationYearType</Element>
+		<Description>
+			<p>First projected graduation year, usually determined when student is accepted into 9th grade (CCYY).</p>
+		</Description>
+		<Type name="xs:gYear"/>
+	</Item>
+	<xhtml:Example xmlns="" name="On Time Graduation Year Example">
+		<OnTimeGraduationYear>2006</OnTimeGraduationYear>
+	</xhtml:Example>
+</CommonElement>
+
+<CommonElement name="RelationshipType" type="true" dm="true">
+	<Item>
+		<Element>RelationshipType</Element>
+		<Description>
+			<p>Code that defines the relationship of one person to another.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>Code</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Code representing the relationship.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsRelationshipToStudentType"/>
+	</Item>
+	<Item>
+		<Element>OtherCodeList</Element>
+		<Characteristics>O</Characteristics>
+		<Type ref="CommonTypes" name="OtherCodeListType"/>
+	</Item>
+	<xhtml:Example xmlns="" name="Relationship Example">
+		<Relationship>
+			<Code>01</Code>
+		</Relationship>
+	</xhtml:Example>
+</CommonElement>
+
+<CommonElement name="HouseholdContactInfoListType" type="true" dm="true">
+	<Item>
+		<Element>HouseholdContactInfoListType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>List of Households this Person is associated with</Description>
+		<List mode="List">
+		</List>
+	</Item>
+	<Item>
+		<Element>HouseholdContactInfo</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>Common element used to supply information about a particular household a person is a member of.</Description>
+		<Type ref="CommonTypes" name="HouseholdContactInfoType"/>
+	</Item>
+</CommonElement>
+<CommonElement name="HouseholdContactInfoType" type="true" dm="true">
+	<Item>
+		<Element>HouseholdContactInfoType</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>Common element used to supply information about a particular household a person is a member of.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>PreferenceNumber</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Priority of Household Contact in relation to this Person.</p>
+		</Description>
+		<Type name="xs:unsignedInt"/>
+	</Item>
+	<Item>
+		<Element>HouseholdContactId</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Local Household Id</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"/>
+	</Item>
+	<Item>
+		<Element>HouseholdSalutation</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Salutation to be used in addressing this household.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>AddressList</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p/>
+		</Description>
+		<Type ref="CommonTypes" name="AddressListType"/>
+	</Item>
+	<Item>
+		<Element>EmailList</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>List of Email elements.</p>
+		</Description>
+		<Type ref="CommonTypes" name="EmailListType"/>
+	</Item>
+	<Item>
+		<Element>PhoneNumberList</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>List of PhoneNumber elements.</p>
+		</Description>
+		<Type ref="CommonTypes" name="PhoneNumberListType"/>
+	</Item>
+</CommonElement>
+
+<CommonElement name="ReligiousEventListType" type="true" dm="true">
+ 	<Item>
+		<Element>ReligiousEventListType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>List of Religious events</p>
+		</Description>
+		<List mode="List"/>
+	</Item>
+	<Item>
+		<Element>ReligiousEvent</Element>
+		<Characteristics>OR</Characteristics>
+		<Description>
+			<p/>
+		</Description>
+		<Type ref="CommonTypes" name="ReligiousEventType"/>
+	</Item>	
+ </CommonElement>
+<CommonElement name="ReligiousEventType" type="true" dm="true">
+ 	<Item>
+		<Element>ReligiousEventType</Element>
+		<Characteristics>OR</Characteristics>
+		<Description>
+			<p/>
+		</Description>
+	</Item>
+	<Item>
+		<Element>Type</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Religious Event - Currently Free Text</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>Date</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Date of Religious Event</p>
+		</Description>
+		<Type name="xs:date"/>
+	</Item>
+ </CommonElement>    
+<CommonElement name="ReligionType" type="true" dm="true">
+    	<Item>
+		<Element>ReligionType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Type of Religion if any</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>Code</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Religion Code</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsAustralianStandardClassificationOfReligiousGroupsASCRGType"/>
+	</Item>
+	<Item>
+		<Element>OtherCodeList</Element>
+		<Characteristics>O</Characteristics>
+		<Type ref="CommonTypes" name="OtherCodeListType"/>
+	</Item>
+</CommonElement>
+
+<CommonElement name="DwellingArrangementType" type="true" dm="true">
+	<Item>
+		<Element>DwellingArrangementType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Setting/environment in which the person resides.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>Code</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Code representing the setting/environment in which the person resides</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsDwellingArrangementType"/>
+	</Item>
+	<Item>
+		<Element>OtherCodeList</Element>
+		<Characteristics>O</Characteristics>
+		<Type ref="CommonTypes" name="OtherCodeListType"/>
+	</Item>  
+</CommonElement>
+
+<CommonElement name="CountryListType" type="true" dm="true">
+     <Item>
+		<Element>CountryListType</Element>
+		<Characteristics>O</Characteristics>
+		<List mode="List">
+    </List>
+	</Item>
+	<Item>
+		<Element>CountryOfCitizenship</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>A person's country of citizenship.</p>
+		</Description>
+		<Type ref="CommonTypes" name="CountryType"/>
+	</Item>  
+  </CommonElement>
+<CommonElement name="CountryList2Type" type="true" dm="true">
+ 
+<Item>
+		<Element>CountryList2Type</Element>
+		<Characteristics>O</Characteristics>
+		<Description/>
+		<List mode="List">
+    </List>
+	</Item>
+	<Item>
+		<Element>CountryOfResidency</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>A person's country of residency.</p>
+		</Description>
+		<Type ref="CommonTypes" name="CountryType"/>
+	</Item>  
+  </CommonElement>
+
+<CommonElement name="EducationalLevelType" type="true" dm="true">
+	<Item>
+		<Element>EducationalLevelType</Element>
+		<Description>
+			<p>A code representing the highest level of education completed by a person.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsSchoolEducationLevelTypeType"/>
+	</Item>
+	<xhtml:Example xmlns="" name="Education Level Example">
+		<EducationalLevel>3</EducationalLevel>
+	</xhtml:Example>
+</CommonElement>
+
+<CommonElement name="ContactFlagsType" type="true" dm="true">
+   <Item>
+      <Element>ContactFlagsType</Element>
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>
+        Contains Yes/No characteristics of the contact person's role.  Provide a <code>Yes</code> value for all that apply.
+        At least one of the child elements of <code>ContactFlags</code> must have a <code>Yes</code> value.
+        Do not publish the <code>StudentContactRelationship</code> instance if one of the child elements does not have a <code>Yes</code> value.
+      </p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>ParentLegalGuardian</Element>
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>Does the individual have parental or legal guardianship responsibility for the student?</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
+  </Item>
+  <Item>
+    <Element>PickupRights</Element>
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>This element tells whether or not the contact has pickup rights.</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
+  </Item>
+  <Item>
+    <Element>LivesWith</Element>
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>Does the student live with this contact?</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
+  </Item>
+  <Item>
+    <Element>AccessToRecords</Element>
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>Does this contact have access to the student's records?</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
+  </Item>
+  <Item>
+    <Element>ReceivesAssessmentReport</Element>
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>In particular, should this contact receive a copy of the student report? </p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
+  </Item>
+  <Item>
+    <Element>EmergencyContact</Element>
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>Should this contact be notified in case of emergency?</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
+  </Item>
+  <Item>
+    <Element>HasCustody</Element>
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>Does this contact have or share custody of the student?</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
+  </Item>
+  <Item>
+    <Element>DisciplinaryContact</Element>
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>Is this person to be contacted in case of disciplinary action?</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
+  </Item>
+   <Item>
+    <Element>AttendanceContact</Element>
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>Should this contact be notified in case of an attendance issue?</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
+  </Item>
+  <Item>
+    <Element>PrimaryCareProvider</Element>
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>Does this person provide daily living or personal assistance to the student?</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
+  </Item>
+  <Item>
+    <Element>FeesBilling</Element>
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>Is this the contact responsible for Payment of Fees?</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
+  </Item>
+    <Item>
+    <Element>FeesAccess</Element>
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>Does this contact have access to fees information?</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
+  </Item>
+  <Item>
+    <Element>FamilyMail</Element>
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>Does this person receive family mail?</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
+  </Item>
+  <Item>
+    <Element>InterventionOrder</Element>
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>Is there an Intervention Order against this Contact?</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
+  </Item>
+  
+</CommonElement>
+<CommonElement name="StudentMostRecentContainerType" type="true" dm="true">
+	<Item>
+		<Element>StudentMostRecentContainerType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>
+        Container for elements reflecting the most recent enrollment of a student.  If the student is
+        currently enrolled in the district, the elements contain current information.
+      </p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>SchoolLocalId</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Local identifier representing the school in which the student is or was most recently enrolled in the district.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"/>
+	</Item>
+	<Item>
+		<Element>HomeroomLocalId</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>
+        Local identifier representing the current or most recent homeroom in which the student is or was most recently assigned in the district.  Use the value from <code>RoomInfo/HomeroomNumber</code> if supported.  If not supported, use the value from <code>RoomInfo/RoomNumber</code>.  If neither is supported, use the most appropriate value from the agent's application.
+      </p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"/>
+	</Item>
+	<Item>
+		<Element>YearLevel</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The current or most recent year level of the student.</p>
+		</Description>
+		<Type ref="CommonTypes" name="YearLevelType"/>
+	</Item>
+	<Item>
+		<Element>FTE</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Full-time equivalent numeric value of the student's course load during this enrollment, expressed in decimal form, where 1.00 represents a full-time enrollment.</p>
+		</Description>
+		<Type name="xs:decimal"/>
+		<Facets>
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="1"/>
+			<xs:fractionDigits value="2"/>
+		</Facets>
+	</Item>
+	<Item>
+		<Element>Parent1Language</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Main language spoken by parent 1 at home, other than English.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsAustralianStandardClassificationOfLanguagesASCLType"/>
+	</Item>
+	<Item>
+		<Element>Parent2Language</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Main language spoken by parent 2 at home, other than English.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsAustralianStandardClassificationOfLanguagesASCLType"/>
+	</Item>
+	<Item>
+		<Element>Parent1EmploymentType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Code that defines employment type of Parent1. This is compulsory if being used for MCEECDYA reporting.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsEmploymentTypeType"/>
+	</Item>
+	<Item>
+		<Element>Parent2EmploymentType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Code that defines employment type of Parent2. This is compulsory if being used for MCEECDYA reporting.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsEmploymentTypeType"/>
+	</Item>
+	<Item>
+		<Element>Parent1SchoolEducationLevel</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The highest level of education completed by Parent1.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsSchoolEducationLevelTypeType"/>
+	</Item>
+	<Item>
+		<Element>Parent2SchoolEducationLevel</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The highest level of education completed by Parent2.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsSchoolEducationLevelTypeType"/>
+	</Item>
+	<Item>
+		<Element>Parent1NonSchoolEducation</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>This reflects the level of Parent1's Non-School Education.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsNonSchoolEducationType"/>
+	</Item>
+	<Item>
+		<Element>Parent2NonSchoolEducation</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>This reflects the level of Parent2's Non-School Education.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsNonSchoolEducationType"/>
+	</Item>
+	<Item>
+		<Element>LocalCampusId</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Local identifier for a specific campus Id. This may be the same as the school local Id, but is expected to be supplied only if the school does in fact have distinct campuses.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"/>
+	</Item>
+	<Item>
+		<Element>SchoolACARAId</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Identifier of the school in which the student is or was most recently enrolled in the district, as assigned in the Australian School List.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"/>
+	</Item>
+	<Item>
+		<Element>TestLevel</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Values: 3,5,7,9. The test level that the student is registering for.</p>
+		</Description>
+		<Type ref="CommonTypes" name="YearLevelType"/>
+	</Item>
+	<Item>
+		<Element>Homegroup</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The name of the homegroup the student enrollment belongs to.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>ClassCode</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The name of the class code the student belongs to, for the purposes of NAPLAN registration.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>MembershipType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The type of this enrollment as it relates to the school identified in SchoolInfoRefId.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsSchoolEnrollmentTypeType"/>
+	</Item>
+	<Item>
+		<Element>FFPOS</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Enrolled Full-fee Paying Overseas Student (FFPOS) Status.  Enrolment Frame Element 10 NSCC Collection.</p>
+			<p>The status of an enrolment in a CRICOS course and whether the person is liable for a fee which reflects the imputed full average cost of the person's education at the school (including both recurrent and capital costs) irrespective of the actual arrangements to meet the fee.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsFFPOSStatusCodeType"/>
+	</Item>
+	<Item>
+		<Element>ReportingSchoolId</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>This is the school ACARAId to which student's report is to be made available.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"/>
+	</Item>
+	<Item>
+		<Element>OtherEnrollmentSchoolACARAId</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>ACARAId of other school that student is enrolled in, if known, as assigned in the Australian School List.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"/>
+	</Item>
+</CommonElement>
+<CommonElement name="StaffMostRecentContainerType" type="true" dm="true">
+	<Item>
+		<Element>StaffMostRecentContainerType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Container for elements reflecting the most recent assignment of a staff member. If the staff member is currently assigned, the elements contain current information.
+      </p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>SchoolLocalId</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Local identifier representing the school in which the staff is or was most recently teaching in.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"/>
+	</Item>
+	<Item>
+		<Element>SchoolACARAId</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Identifier of the school in which the staff member is or was most recently assigned, as listed in the Australian  School List.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"/>
+	</Item>
+	<Item>
+		<Element>LocalCampusId</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Local identifier for a specific campus Id. This may be the same as the school local Id, but is expected to be supplied only if the school does in fact have distinct campuses.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"/>
+	</Item>
+<if intl="au">	
+	<Item>
+		<Element>NAPLANClassList</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>
+        Container for a list of classes a teacher may be responsible for with regard to NAPLAN only.</p>
+		</Description>
+		<Type ref="CommonTypes" name="NAPLANClassListType"/>
+	</Item>
+</if>	
+	<Item>
+		<Element>HomeGroup</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The current home group (if any) that the staff member is responsible for.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+</CommonElement>
+<CommonElement name="HouseholdListType" type="true" dm="true">
+	<Item>
+		<Element>HouseholdListType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p/>
+		</Description>
+		<List mode="List"/>
+	</Item>
+	<Item>
+		<Element>Household</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>Repeatable element containing the ID of a household.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"/>
+	</Item>
+</CommonElement>
+
+<CommonElement name="AlertMessagesType" type="true" dm="true">
+	<Item>
+		<Element>AlertMessagesType</Element>
+		<Characteristics>O</Characteristics>
+		<List mode="List">
+    </List>
+	</Item>
+	<Item>
+		<Element>AlertMessage</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>This is an alert message that is associated with the student.</p>
+		</Description>
+		<Type ref="CommonTypes" name="AlertMessageType"/>
+	</Item>
+</CommonElement>
+<CommonElement name="AlertMessageType" type="true" dm="true">
+	<Item>
+		<Element>AlertMessageType</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>This is an alert message that is associated with the student.</p>
+		</Description>
+		<Type name="xs:string"/>
+	</Item>
+	<Item>
+		<Attribute>Type</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>This attribute specifies what type of alert message this is.</p>
+		</Description>
+		<Values>
+			<Value>
+				<Code>Legal</Code>
+				<Text>Custody, guardian, court orders (e.g. must attend school), lawsuits, etc.</Text>
+			</Value>
+			<Value>
+				<Code>Discipline</Code>
+				<Text>Student is suspended, expelled, on probation, etc.</Text>
+			</Value>
+			<Value>
+				<Code>Educational</Code>
+				<Text>academic probation, etc.</Text>
+			</Value>
+			<Value>
+				<Code>Other</Code>
+			</Value>
+		</Values>
+	</Item>
+</CommonElement>
+<CommonElement name="MedicalAlertMessagesType" type="true" dm="true">
+	<Item>
+		<Element>MedicalAlertMessagesType</Element>
+		<Characteristics>O</Characteristics>
+		<List mode="List">
+    </List>
+	</Item>
+	<Item>
+		<Element>MedicalAlertMessage</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>Medical alert associated with the student.</p>
+		</Description>
+		<Type ref="CommonTypes" name="MedicalAlertMessageType"/>
+	</Item>
+</CommonElement>
+<CommonElement name="MedicalAlertMessageType" type="true" dm="true">
+	<Item>
+		<Element>MedicalAlertMessageType</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>Medical alert associated with the student.</p>
+		</Description>
+		<Type name="xs:string"/>
+	</Item>
+	<Item>
+		<Attribute>Severity</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The level of severity of this medical alert.</p>
+		</Description>
+		<Values>
+			<Value>
+				<Code>Low</Code>
+			</Value>
+			<Value>
+				<Code>Moderate</Code>
+			</Value>
+			<Value>
+				<Code>High</Code>
+			</Value>
+			<Value>
+				<Code>Severe</Code>
+			</Value>
+			<Value>
+				<Code>Unknown</Code>
+			</Value>
+		</Values>
+	</Item>
+</CommonElement>
+</if>
+
+<!-- EducationOrganisation & Provider -->
+<if intl="nz">
+<CommonElement name="OrganisationType" type="true" dm="true">
+	<Item>
+		<Element>OrganisationType</Element>
+		<Description>
+			<p>
+				Generic organisation that operates within the education sector.
+				e.g. Providers, Communities of Learning, Ministry local offices, etc.
+			</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>AddressList</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+			<p>The set of postal and other addresses that the Organisation uses</p>
+		</Description>
+		<Type ref="CommonTypes" name="AddressListType"/>
+	</Item>   <!-- AddressList -->
+	<Item>
+		<Element>EmailList</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+			<p>The set of contact email addresses that the Organisation uses</p>
+		</Description>
+		<Type ref="CommonTypes" name="EmailListType"/>
+	</Item>   <!-- EmailList -->
+	<Item>
+		<Element>PhoneNumberList</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+			<p>The set of contact phone numbers that the Organisation uses</p>
+		</Description>
+		<Type ref="CommonTypes" name="PhoneNumberListType"/>
+	</Item>   <!-- PhoneNumberList -->
+	<Item>
+		<Element>CommunicationChannelList</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>A list of one or more methods of communication with the organisation</p>
+		</Description>
+		<Type ref="CommonTypes" name="CommunicationChannelListType"/>
+	</Item>   <!-- CommunicationChannelList -->
+	<Item>
+		<Element>ContactList</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>A list of one or more cotact persons related to the organisation</p>
+		</Description>
+		<Type ref="CommonTypes" name="ContactListType"/>
+	</Item>   <!-- ContactList -->
+	<Item>
+		<Element>EducationRegion</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>A region of New Zealand defined by the Ministry of Education for adminstrative purposes</p>
+		</Description>
+		<Type ref="CodeSets" name="NZCodeSetsEducationRegionType"/>
+	</Item>   <!-- EducationRegion -->
+	<Item>
+		<Element>Name</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The normal business name of the Organisation</p>
+		</Description>
+		<Type name="xs:string"/>
+	</Item>   <!-- Name -->
+	<Item>
+		<Element>RelatedOrganisationList</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>A list of other organisations that are related to the Provider</p>
+		</Description>
+		<Type ref="CommonTypes" name="RelatedOrganisationListType"/>
+	</Item>   <!-- RelatedOrganisationList -->
+	<Item>
+		<Element>OperationalStatus</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>Current status of the Provider</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsOperationalStatusType"/>
+	</Item>   <!-- OperationalStatus-->
+	<Item>h
+		<Element>Type</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>Describes the nature of the Organisation;  for Schools this indicate
+			the schooling levels offered.
+			</p>
+		</Description>
+		<Type ref="CodeSets" name="NZCodeSetsOrganisationTypeType"/>
+	</Item>   <!-- Type -->
+	<xhtml:Example xmlns="" name="Organisation Example">
+		<Organisation>
+			<AddressList>
+				<Address json:Array="true">
+					<Type>2</Type>
+					<Role>2</Role>
+					<Street>
+						<Line1>1175 Lake Ferry Rd</Line1>
+					</Street>
+					<Suburb>RD 1</Suburb>
+					<City>Martinborough</City>
+				</Address>
+			</AddressList>
+			<EmailList>
+				<Email>
+					<Notes>School Secretary</Notes>
+					<Type>01</Type>
+					<Address>stuart@gmail.com</Address>
+				</Email>
+			</EmailList>
+			<PhoneNumberList>
+				<PhoneNumber>
+					<Notes>School Secretary DDI</Notes>
+					<Type>0096</Type>
+					<Number>(021) 300 999</Number>
+				</PhoneNumber>
+				<PhoneNumber>
+					<Notes>Attendance Office (Automated)</Notes>
+					<Usage>SMS</Usage>
+					<Type>0096</Type>
+					<Number>(021) 300 999</Number>
+				</PhoneNumber>
+			</PhoneNumberList>
+			<CommunicationChannelList>
+				<Channel>
+					<Notes>School Attendance System (Self Service)</Notes>
+					<Type>Website</Type>
+					<Value>http://att.hogwarts.school.nz</Value>
+				</Channel>
+				<Channel>
+					<Notes>School Website</Notes>
+					<Type>Website</Type>
+					<Value>http://www.hogwarts.school.nz/</Value>
+				</Channel>
+			</CommunicationChannelList>
+			<ContactList>
+				<Contact>
+					<Name>
+						<FamilyName>Dumbledore</FamilyName>
+						<GivenName>Albus</GivenName>
+						<FullName>Albus Dumbledore</FullName>
+					</Name>
+					<PositionTitle>Head Cattle Wrangler</PositionTitle>
+					<Role>Principal</Role>
+					<AddressList>
+						<Address>
+							<Type>1</Type>
+							<Role>1</Role>
+							<Street>
+								<Line1>533 Hogwart's Way</Line1>
+							</Street>
+							<City>Hogsmead</City>
+							<PostalCode>7733</PostalCode>
+						</Address>
+					</AddressList>
+					<EmailList/>
+					<PhoneNumberList/>
+				</Contact>
+			</ContactList>
+			<EducationRegion>7</EducationRegion>
+			<Name>Stuart's Cattle School</Name>
+			<RelatedOrganisationList>
+				<RelatedOrganisation RefId="0951bacf-fc88-4ed6-8113-11a6d6335c07">
+					<LocalId>99102</LocalId>
+					<Name>Tai Tokerau</Name>
+					<ObjectType>EducationOrganisation</ObjectType>
+					<OrganisationType>102</OrganisationType>
+				</RelatedOrganisation>
+				<RelatedOrganisation RefId="ac0871d9-6562-4209-ae86-abdb3661842b">
+					<LocalId>99204</LocalId>
+					<Name>Masterton (Whakaoriori) Kāhui Ako</Name>
+					<ObjectType>EducationOrganisation</ObjectType>
+					<OrganisationType>101</OrganisationType>
+				</RelatedOrganisation>
+			</RelatedOrganisationList>
+			<OperationalStatus>O</OperationalStatus>
+			<Type>12</Type>
+		</Organisation>
+	</xhtml:Example>
+</CommonElement>
+<CommonElement name="ContactListType" type="true" dm="true">
+	<Item>
+		<Element>ContactListType</Element>
+		<Description>
+			<p>A list of people's contact details</p>
+		</Description>
+		<List mode="List"/>
+	</Item>
+	<Item>
+		<Element>Contact</Element>
+		<Characteristics>MR</Characteristics>
+		<Description/>
+		<Type ref="CommonTypes" name="ContactType"/>
+	</Item>
+	<xhtml:Example xmlns="" name="Contact List Example">
+		<ContactList>
+			<Contact>
+				<Name>
+					<FamilyName>Dumbledore</FamilyName>
+					<GivenName>Albus</GivenName>
+					<FullName>Albus Dumbledore</FullName>
+				</Name>
+				<PositionTitle>Headmaster</PositionTitle>
+				<Role>Principal</Role>
+				<AddressList>
+					<Address>
+						<Type>1</Type>
+						<Role>1</Role>
+						<Street>
+							<Line1>533 Hogwart's Way</Line1>
+						</Street>
+						<City>Hogsmead</City>
+						<PostalCode>7733</PostalCode>
+					</Address>
+				</AddressList>
+				<EmailList/>
+				<PhoneNumberList/>
+			</Contact>
+			<Contact>
+				<Name>
+					<FamilyName>Rubeus</FamilyName>
+					<GivenName>Hagrid</GivenName>
+					<FullName>Rubeud Hagrid</FullName>
+				</Name>
+				<PositionTitle>Gamekeeper</PositionTitle>
+				<Role>SupportStaff</Role>
+				<AddressList>
+					<Address>
+						<Type>1</Type>
+						<Role>1</Role>
+						<Street>
+							<Line1>The Enchanted Wood</Line1>
+							<Line2>533 Hogwart's Way</Line2>
+						</Street>
+						<City>Hogsmead</City>
+						<PostalCode>7733</PostalCode>
+					</Address>
+				</AddressList>
+				<EmailList/>
+				<PhoneNumberList/>
+			</Contact>
+		</ContactList>
+	</xhtml:Example>	
+</CommonElement>
+<CommonElement name="ContactType" type="true" dm="true">
+	<Item>
+		<Element>ContactType</Element>
+		<Description>
+			<p>A particular person's contact details</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>Name</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+			<p>The contact's name</p>
+		</Description>
+		<Type ref="CommonTypes" name="BaseNameType"/>
+		</Item>		<!-- Name -->
+	<Item>
+		<Element>PositionTitle</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The title the contact has within the Organisation being contacted</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>   <!-- PositionTitle -->
+	<Item>
+		<Element>Role</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The role the contact plays within the Organisation being contacted</p>
+		</Description>
+		<Type ref="CodeSets" name="NZCodeSetsOrganisationContactRoleType"/>
+	</Item>   <!-- Role -->
+	<Item>
+		<Element>AddressList</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p/>
+		</Description>
+		<Type ref="CommonTypes" name="AddressListType"/>
+	</Item>   <!-- AddressList -->
+	<Item>
+		<Element>EmailList</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>List of Email elements.</p>
+		</Description>
+		<Type ref="CommonTypes" name="EmailListType"/>
+	</Item>   <!-- EmailList -->
+	<Item>
+		<Element>PhoneNumberList</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>List of PhoneNumber elements.</p>
+		</Description>
+		<Type ref="CommonTypes" name="PhoneNumberListType"/>
+	</Item>   <!-- PhoneNumberList -->
+	<xhtml:Example xmlns="" name="Contact Example">
+		<Contact>
+			<Name>
+				<FamilyName>Dumbledore</FamilyName>
+				<GivenName>Albus</GivenName>
+				<FullName>Albus Dumbledore</FullName>
+			</Name>
+			<PositionTitle>Head Cattle Wrangler</PositionTitle>
+			<Role>Principal</Role>
+			<AddressList>
+				<Address>
+					<Type>1</Type>
+					<Role>1</Role>
+					<Street>
+						<Line1>533 Hogwart's Way</Line1>
+					</Street>
+					<City>Hogsmead</City>
+					<PostalCode>7733</PostalCode>
+				</Address>
+			</AddressList>
+			<EmailList/>
+			<PhoneNumberList/>
+		</Contact>
+	</xhtml:Example>
+</CommonElement>
+
+<CommonElement name="CommunicationChannelListType" type="true" dm="true">
+	<Item>
+		<Element>CommunicationChannelListType</Element>
+		<Description>
+			<p>A list of people/organisation's ccommunications channels</p>
+		</Description>
+		<List mode="List"/>
+	</Item>
+	<Item>
+		<Element>Channel</Element>
+		<Characteristics>MR</Characteristics>
+		<Description/>
+		<Type ref="CommonTypes" name="CommunicationChannelType"/>
+	</Item>
+</CommonElement>
+<CommonElement name="CommunicationChannelType" type="true" dm="true">
+	<Item>
+		<Element>CommunicationChannelType</Element>
+		<Description>
+			<p>A particular person or organisation's communications method</p>
+		</Description>
+		<Type complex="extension" name="BaseCommunicationChannelType"/>
+	</Item>	
+	<Item>
+		<Element>Type</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>A code classifying the Communication's method</p>
+		</Description>
+		<Type ref="CodeSets" name="NZCodeSetsCommunicationChannelTypeType"/>
+	</Item>
+	<Item>
+		<Element>Value</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The unique value that provides access to the channel. eg: URL for a website;
+			Facebook page addess, Twitter handle.</p>
+		</Description>
+		<Type name="xs:string"/>
+	</Item>
+	<xhtml:Example xmlns="" name="Communication Channel Example">
+		<CommunicationChannel>
+			<Notes>School Attendance System (Self Service)</Notes>
+			<Type>Website</Type>
+			<Value>http://www.hogwarts.school.nz/Attendance</Value>
+		</CommunicationChannel>
+	</xhtml:Example>
+</CommonElement>
+
+<CommonElement name="RelatedOrganisationListType" type="true" dm="true">
+	<Item>
+		<Element>RelatedOrganisationListType</Element>
+		<Description>
+			<p>A list of an Organisation's related organisations</p>
+		</Description>
+		<List mode="List"/>
+	</Item>
+	<Item>
+		<Element>RelatedOrganisation</Element>
+		<Characteristics>MR</Characteristics>
+		<Description/>
+		<Type ref="CommonTypes" name="RelatedOrganisationType"/>
+	</Item>
+	<xhtml:Example xmlns="" name="Related Organisation List Example">
+		<RelatedOrganisationList>
+			<RelatedOrganisation RefId="0951bacf-fc88-4ed6-8113-11a6d6335c07">
+				<LocalId>99102</LocalId>
+				<Name>Tai Tokerau</Name>
+				<ObjectType>EducationOrganisation</ObjectType>
+				<OrganisationType>102</OrganisationType>
+			</RelatedOrganisation>
+			<RelatedOrganisation RefId="ac0871d9-6562-4209-ae86-abdb3661842b">
+				<LocalId>99204</LocalId>
+				<Name>Masterton (Whakaoriori) Kāhui Ako</Name>
+				<ObjectType>EducationOrganisation</ObjectType>
+				<OrganisationType>101</OrganisationType>
+			</RelatedOrganisation>
+		</RelatedOrganisationList>
+	</xhtml:Example>
+</CommonElement> 
+
+<CommonElement name="RelatedOrganisationType" type="true" dm="true">
+	<Item>
+		<Element>RelatedOrganisationType</Element>
+		<Description>
+			<p>Extends <code>ObjectReferenceType</code> to add an extra element, <code>OrganisationType</code>,
+			describing the nature of the related organisation.</p>
+		</Description>
+		<Type complex="extension" name="ObjectReferenceType"/>
+	</Item>
+	<Item>
+		<Element>OrganisationType</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>Describes the nature of the related Education Organisation.</p>
+		</Description>
+		<Type ref="CodeSets" name="NZCodeSetsOrganisationTypeType"/>
+	</Item>
+	<xhtml:Example xmlns="" name="Secondary School Related Organisation">
+		<RelatedOrganisation RefId="a2f8c526-4e39-42b7-a7a6-0c7188ea5cf3">
+			<LocalId>275</LocalId>
+			<Name>Hogwart's High School</Name>
+			<ObjectType>Provider</ObjectType>
+			<OrganisationType>11</OrganisationType>
+		</RelatedOrganisation>
+	</xhtml:Example>
+	<xhtml:Example xmlns="" name="MoE Region Related Organisation">
+		<RelatedOrganisation RefId="0951bacf-fc88-4ed6-8113-11a6d6335c07">
+			<LocalId>99102</LocalId>
+			<Name>Tai Tokerau</Name>
+			<ObjectType>EducationOrganisation</ObjectType>
+			<OrganisationType>102</OrganisationType>
+		</RelatedOrganisation>
+	</xhtml:Example>
+	<xhtml:Example xmlns="" name="Kāhui Ako Related Organisation">
+		<RelatedOrganisation RefId="ac0871d9-6562-4209-ae86-abdb3661842b">
+			<LocalId>99204</LocalId>
+			<Name>Masterton (Whakaoriori) Kāhui Ako</Name>
+			<ObjectType>EducationOrganisation</ObjectType>
+			<OrganisationType>101</OrganisationType>
+		</RelatedOrganisation>
+	</xhtml:Example>
+</CommonElement>
+</if>
+</IncludeGroup>
