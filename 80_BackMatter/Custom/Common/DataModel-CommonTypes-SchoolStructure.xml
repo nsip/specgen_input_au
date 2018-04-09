@@ -1032,19 +1032,18 @@
 				<Decile>5</Decile>
 				<CoEdStatus>C2</CoEdStatus>
 				<NewEntrantPolicyList>
-					<PolicyChoice>
+					<EnactedPolicy>
 						<EffectiveTo>2018-12-31</EffectiveTo>
-						<Choice>AgeEntry</Choice>
-					</PolicyChoice>
-					<PolicyChoice>
+						<Policy>AgeEntry</Policy>
+					</EnactedPolicy>
+					<EnactedPolicy>
 						<EffectiveFrom>2019-01-01</EffectiveFrom>
-						<Choice>CohortEntry</Choice>
-					</PolicyChoice>
+						<Policy>CohortEntry</Policy>
+					</EnactedPolicy>
 				</NewEntrantPolicyList>
 			</School>
 		</xhtml:Example>
 	</CommonElement>
-
 	
 	<CommonElement name="SchoolYearLevelListType" type="true" dm="true">
 		<Item>
@@ -1058,7 +1057,7 @@
 		</Item>
 		<Item>
 			<Element>SchoolYear</Element>
-			<Characteristics>MR</Characteristics>
+			<Characteristics>OR</Characteristics>
 			<Description/>
 			<Type ref="CommonTypes" name="SchoolYearLevelType"/>
 		</Item>
@@ -1116,7 +1115,6 @@
 		</Item>
 	</CommonElement>
 
-
 	<CommonElement name="EnactedPolicyListType" type="true" dm="true">
 		<Item>
 			<Element>EnactedPolicyListType</Element>
@@ -1129,35 +1127,35 @@
 			<List mode="List"/>
 		</Item>
 		<Item>
-			<Element>PolicyChoice</Element>
-			<Characteristics>MR</Characteristics>
+			<Element>EnactedPolicy</Element>
+			<Characteristics>OR</Characteristics>
 			<Description/>
-			<Type ref="CommonTypes" name="PolicyChoiceType"/>
+			<Type ref="CommonTypes" name="EnactedPolicyType"/>
 		</Item>
 		<xhtml:Example xmlns="" name="NZ Policy Choice List Example">
 			<NewEntrantPolicyList>
-				<PolicyChoice>
+				<EnactedPolicy>
 					<EffectiveTo>2018-12-31</EffectiveTo>
-					<Choice>AgeEntry</Choice>
-				</PolicyChoice>
-				<PolicyChoice>
+					<Policy>AgeEntry</Policy>
+				</EnactedPolicy>
+				<EnactedPolicy>
 					<EffectiveFrom>2019-01-01</EffectiveFrom>
-					<Choice>CohortEntry</Choice>
-					</PolicyChoice>
+					<Policy>CohortEntry</Policy>
+				</EnactedPolicy>
 			</NewEntrantPolicyList>
 		</xhtml:Example>
 	</CommonElement>
-	<CommonElement name="PolicyChoiceType" type="true" dm="true">
+	<CommonElement name="EnactedPolicyType" type="true" dm="true">
 		
 		<Item>
-			<Element>PolicyChoiceType</Element>
+			<Element>EnactedPolicyType</Element>
 			<Description>
-				<p>A descriptor for a particular policy choice that has been adopted by a school.</p>
+				<p>A descriptor for a particular enacted policy that has been adopted by a school.</p>
 			</Description>
 		</Item>
 		<Item>
 			<Element>EffectiveFrom</Element>			
-			<Characteristics>M</Characteristics>
+			<Characteristics>O</Characteristics>
 			<privacyRating>Low</privacyRating>
 			<Description>
 				<p>The date from which the school adopted the policy.  If not populated
@@ -1167,7 +1165,7 @@
 		</Item>
 		<Item>
 			<Element>EffectiveTo</Element>			
-			<Characteristics>M</Characteristics>
+			<Characteristics>O</Characteristics>
 			<privacyRating>Low</privacyRating>
 			<Description>
 				<p>The date after which the school has no longer adopted the policy.  If not populated
@@ -1197,7 +1195,7 @@
 		</Item>
 		<Item>
 			<Element>Definition</Element>
-			<Characteristics>MR</Characteristics>
+			<Characteristics>OR</Characteristics>
 			<Description/>
 			<Type ref="CodeSets" name="NZCodeSetsSchoolDefinitionType"/>
 		</Item>

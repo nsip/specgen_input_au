@@ -66,7 +66,7 @@
   <xhtml:Example xmlns="" name="School Provider Example">
     <Provider RefId="D3E34B35-9D75-101A-8C3D-00AA001A1652">
 		<LocalId>01011234</LocalId>
-		<Authority>42000</Authority>
+		<Authority>1</Authority>
 		<Organisation>
 			<AddressList>
 				<Address json:Array="true">
@@ -240,14 +240,14 @@
 					</SchoolYear>
 			</SchoolYearList>
 			<NewEntrantPolicyList>
-				<PolicyChoice>
+				<EnactedPolicy>
 					<EffectiveTo>2018-12-31</EffectiveTo>
-					<Choice>AgeEntry</Choice>
-				</PolicyChoice>
-				<PolicyChoice>
+					<Policy>AgeEntry</Policy>
+				</EnactedPolicy>
+				<EnactedPolicy>
 					<EffectiveFrom>2019-01-01</EffectiveFrom>
-					<Choice>CohortEntry</Choice>
-				</PolicyChoice>
+					<Policy>CohortEntry</Policy>
+				</EnactedPolicy>
 			</NewEntrantPolicyList>
 			<DefinitionList>
 				<Definition>101</Definition>
