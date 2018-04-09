@@ -236,23 +236,28 @@
 		<ID>Provider Authority</ID>
 		<Values>
 			<Value>
-				<Code>42000</Code>
+				<Code>1</Code>
 				<Text>State</Text>
 			</Value>
 			<Value>
-				<Code>42001</Code>
+				<Code>2</Code>
 				<Text>State: Integrated</Text>
 			</Value>
 			<Value>
-				<Code>42002</Code>
+				<Code>3</Code>
 				<Text>Private: Fully Registered</Text>
 			</Value>
 			<Value>
-				<Code>42003</Code>
+				<Code>4</Code>
 				<Text>Private: Provisionally Registered</Text>
 			</Value>
 			<Value>
-				<Code>42012</Code>
+				<Code>5</Code>
+				<Text>Other: Vote Education</Text>
+				<Description> Owned by another organisation, funded from Vote Education.</Description>
+			</Value>
+			<Value>
+				<Code>6</Code>
 				<Text>Partnership School</Text>
 			</Value>
 		</Values>

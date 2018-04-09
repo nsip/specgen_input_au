@@ -963,9 +963,9 @@
 </if>
 
 <if intl="nz">
-	<CommonElement name="NZSchoolServiceType" type="true" dm="true">
+	<CommonElement name="SchoolServiceType" type="true" dm="true">
 		<Item>
-			<Element>NZSchoolServiceType</Element>
+			<Element>SchoolServiceType</Element>
 			<Description>
 				<p>Contains Organisation properties that are specific to Organisations
 				that are Providers of School education services.
@@ -1006,7 +1006,7 @@
 				the genders of students accepted for enrolment at each year
 				level.</p>
 			</Description>
-			<Type ref="CommonTypes" name="NZSchoolYearLevelListType"/>
+			<Type ref="CommonTypes" name="SchoolYearLevelListType"/>
 		</Item>    <!-- SchoolYearList-->
 		<Item>
 			<Element>NewEntrantPolicyList</Element>
@@ -1015,7 +1015,7 @@
 			<Description>
 				<p>A list of recognised policy choices adopted by the School.</p>
 			</Description>
-			<Type ref="CommonTypes" name="NZEnactedPolicyListType"/>
+			<Type ref="CommonTypes" name="EnactedPolicyListType"/>
 		</Item>    <!-- NewEntrantPolicyList -->
 		<Item>
 			<Element>DefinitionList</Element>
@@ -1024,7 +1024,7 @@
 			<Description>
 				<p>A list of School definition descriptors that further describe the nature of a school</p>
 			</Description>
-			<Type ref="CommonTypes" name="NZSchoolDefinitionListType"/>
+			<Type ref="CommonTypes" name="SchoolDefinitionListType"/>
 		</Item>    <!-- DefinitionList -->
 		
 		<xhtml:Example xmlns="" name="NZ School Service Example">
@@ -1046,9 +1046,9 @@
 	</CommonElement>
 
 	
-	<CommonElement name="NZSchoolYearLevelListType" type="true" dm="true">
+	<CommonElement name="SchoolYearLevelListType" type="true" dm="true">
 		<Item>
-			<Element>NZSchoolYearLevelListType</Element>
+			<Element>SchoolYearLevelListType</Element>
 			<Description>
 				<p>A list of <code>NZSchoolYearLevel</code> elements, describing the Year Levels
 				taught by the School, and the Co-Ed Status of each year level.
@@ -1060,7 +1060,7 @@
 			<Element>SchoolYear</Element>
 			<Characteristics>MR</Characteristics>
 			<Description/>
-			<Type ref="CommonTypes" name="NZSchoolYearLevelType"/>
+			<Type ref="CommonTypes" name="SchoolYearLevelType"/>
 		</Item>
 		<xhtml:Example xmlns="" name="NZ Year Level List Example">
 			<SchoolYearList>
@@ -1087,9 +1087,9 @@
 			</SchoolYearList>
 		</xhtml:Example>
 	</CommonElement>
-	<CommonElement name="NZSchoolYearLevelType" type="true" dm="true">
+	<CommonElement name="SchoolYearLevelType" type="true" dm="true">
 		<Item>
-			<Element>NZSchoolYearLevelType</Element>
+			<Element>SchoolYearLevelType</Element>
 			<Description>
 				<p>A descriptor for a particular Year Level offered by the school, including
 				detail of the gender of students that are accepted for enrolment in this year level.
@@ -1117,9 +1117,9 @@
 	</CommonElement>
 
 
-	<CommonElement name="NZEnactedPolicyListType" type="true" dm="true">
+	<CommonElement name="EnactedPolicyListType" type="true" dm="true">
 		<Item>
-			<Element>NZEnactedPolicyListType</Element>
+			<Element>EnactedPolicyListType</Element>
 			<Description>
 				<p>A list of <code>PolicyChoice</code> elements, describing the
 				state legislated policy choices the school has adopted, and the
@@ -1132,7 +1132,7 @@
 			<Element>PolicyChoice</Element>
 			<Characteristics>MR</Characteristics>
 			<Description/>
-			<Type ref="CommonTypes" name="NZPolicyChoiceType"/>
+			<Type ref="CommonTypes" name="PolicyChoiceType"/>
 		</Item>
 		<xhtml:Example xmlns="" name="NZ Policy Choice List Example">
 			<NewEntrantPolicyList>
@@ -1147,9 +1147,10 @@
 			</NewEntrantPolicyList>
 		</xhtml:Example>
 	</CommonElement>
-	<CommonElement name="NZPolicyChoiceType" type="true" dm="true">
+	<CommonElement name="PolicyChoiceType" type="true" dm="true">
+		
 		<Item>
-			<Element>NZPolicyChoiceType</Element>
+			<Element>PolicyChoiceType</Element>
 			<Description>
 				<p>A descriptor for a particular policy choice that has been adopted by a school.</p>
 			</Description>
@@ -1175,7 +1176,7 @@
 			<Type name="xs:date"/>
 		</Item>
 		<Item>
-			<Element>Choice</Element>			
+			<Element>Policy</Element>			
 			<Characteristics>M</Characteristics>
 			<privacyRating>Low</privacyRating>
 			<Description>
@@ -1185,9 +1186,9 @@
 		</Item>
 	</CommonElement>			
 
-	<CommonElement name="NZSchoolDefinitionListType" type="true" dm="true">
+	<CommonElement name="SchoolDefinitionListType" type="true" dm="true">
 		<Item>
-			<Element>NZSchoolDefinitionListType</Element>
+			<Element>SchoolDefinitionListType</Element>
 			<Description>
 				<p>A list of <code>Definition</code> elements, further describing the
 				nature of the school.</p>

@@ -60,7 +60,7 @@
 		  <p>Only present if the Provider is a provider of school education services.
 		  Contains properties that are school-specific. </p>
 	  </Description>
-	  <Type ref="CommonTypes" name="NZSchoolServiceType"/>
+	  <Type ref="CommonTypes" name="SchoolServiceType"/>
   </Item> <!-- SchoolService -->
     
   <xhtml:Example xmlns="" name="School Provider Example">
