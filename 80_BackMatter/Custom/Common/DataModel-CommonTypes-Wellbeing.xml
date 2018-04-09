@@ -18,7 +18,7 @@
 		<Element>MedicationListType</Element>
          <Characteristics>O</Characteristics>
 		 <Description>
-          <p></p>
+          <p>A list of Medications</p>
         </Description>
   		<List mode="List">
         </List>
@@ -217,7 +217,7 @@
     <Element>WellbeingResponseRefId</Element>
     <Characteristics>O</Characteristics>
     <Description>
-      <p>The RefId of a WellbeingResponse Object if it exists..</p>
+      <p>The RefId of a WellbeingResponse Object if it exists.</p>
     </Description>
 	<Type ref="CommonTypes" name="IdRefType"></Type>
   </Item>
@@ -309,7 +309,7 @@
   	   	<Element>HowInvolved</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
-		  <p>Optional free text detailing involvement..</p>
+		  <p>Optional free text detailing involvement.</p>
 		</Description>
 		<Type name="xs:string"></Type>  
   	</Item>
@@ -519,7 +519,7 @@
     <Item>
 		<Element>PlanRequiredContainerType</Element>
 		 <Description>
-          <p>Container for Information outling details of a possible Plan.  A Personalised Plan will be referenced by a separate Object.</p>
+          <p>Container for Information outlining details of a possible Plan.  A Personalised Plan will be referenced by a separate Object.</p>
         </Description>
   	</Item> 
     <Item>
@@ -588,7 +588,7 @@
     <Item>
 		<Element>AwardContainerType</Element>
 		 <Description>
-          <p>Container for details of an Award, where this response was in relation to a particular Award..</p>
+          <p>Container for details of an Award, where this response was in relation to a particular Award.</p>
         </Description>
   	</Item> 
   	<Item>
@@ -636,7 +636,7 @@
     <Item>
 		<Element>OtherWellbeingResponseContainerType</Element>
 		 <Description>
-          <p>Container for details of any other response that can not be classifed by previous types.</p>
+          <p>Container for details of any other response that can not be classified by previous types.</p>
         </Description>
   	</Item> 
   	<Item>

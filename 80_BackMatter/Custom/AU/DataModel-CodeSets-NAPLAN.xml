@@ -204,7 +204,7 @@
 		<Value><Code>AVM</Code><Text>Alternative Items: both video and motor assistive</Text></Value>
 		<Value><Code>ALL</Code><Text>Alternative Items: audio, visual and motor assistive</Text></Value>
 		<Value><Code>COL</Code><Text>Colour contrast modification</Text></Value>
-		<Value><Code>BRA</Code><Text>Braille hardcopy</Text></Value>
+		<Value><Code>OFF</Code><Text>Braille, large print, black and white, electronic test format</Text></Value>
 		<Value><Code>ETA</Code><Text>Extra Time - 5 mins per 30 min or part thereof</Text></Value>
 		<Value><Code>ETB</Code><Text>Extra Time - 10 mins per 30 min or part thereof</Text></Value>
 		<Value><Code>ETC</Code><Text>Extra Time - 15 mins per 30 min or part thereof</Text></Value>
@@ -212,6 +212,7 @@
 		<Value><Code>RBK</Code><Text>Rest break</Text></Value>
 		<Value><Code>SCR</Code><Text>Scribe</Text></Value>
 		<Value><Code>SUP</Code><Text>NAPLAN Support person</Text></Value>
+		<Value><Code>ETD</Code><Text>Extra Time – double total test time</Text></Value>		
 		</Values>
    </CodeSet>    <!-- PNP Code -->
   <CodeSet>

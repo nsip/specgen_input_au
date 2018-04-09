@@ -10,7 +10,7 @@
   <EventsReported>true</EventsReported>
   <Item>
     <Element>GradingAssignmentScore</Element>
-	<privacyRating>Medium</privacyRating>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>
         This object provides score information about a particular assignment. 
@@ -190,13 +190,13 @@
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <privacyRating>Low</privacyRating>
+    <privacyRating>High</privacyRating>
     <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <privacyRating>Low</privacyRating>
+    <privacyRating>High</privacyRating>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
   </Item>
   <xhtml:Example xmlns="" name="GradingAssignmentScore">

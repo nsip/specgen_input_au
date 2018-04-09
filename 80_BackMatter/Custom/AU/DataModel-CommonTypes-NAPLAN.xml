@@ -231,7 +231,7 @@
 		<Element>NAPTestletContentType</Element>
 		<Characteristics>M</Characteristics>
 		 <Description>
-          <p>Contents of a Teslet in the context of NAP.</p>
+          <p>Contents of a Testlet in the context of NAP.</p>
         </Description>
   	</Item> 	
   	
@@ -647,37 +647,37 @@
 	 <Item>
 		<Element>Level1Lower</Element>
 		<Characteristics>M</Characteristics>
-		<Description>Lowest scaled score value for Proficiency Level 1 in doman specified (place holder).</Description>
+		<Description>Lowest scaled score value for Proficiency Level 1 in domain specified (place holder).</Description>
 		<Type name = "xs:decimal"/>
 	  </Item>
 	 <Item>
 		<Element>Level1Upper</Element>
 		<Characteristics>M</Characteristics>
-		<Description>Upper scaled score value for Proficiency Level 1 in doman specified (place holder).</Description>
+		<Description>Upper scaled score value for Proficiency Level 1 in domain specified (place holder).</Description>
 		<Type name = "xs:decimal"/>
 	  </Item>
 	  <Item>
 		<Element>Level2Lower</Element>
 		<Characteristics>M</Characteristics>
-		<Description>Lowest scaled score value for Proficiency Level 2 in doman specified (place holder).</Description>
+		<Description>Lowest scaled score value for Proficiency Level 2 in domain specified (place holder).</Description>
 		<Type name = "xs:decimal"/>
 	  </Item>
 	 <Item>
 		<Element>Level2Upper</Element>
 		<Characteristics>M</Characteristics>
-		<Description>Upper scaled score value for Proficiency Level 2 in doman specified (place holder).</Description>
+		<Description>Upper scaled score value for Proficiency Level 2 in domain specified (place holder).</Description>
 		<Type name = "xs:decimal"/>
 	  </Item>
 	 <Item>
 		<Element>Level3Lower</Element>
 		<Characteristics>M</Characteristics>
-		<Description>Lowest scaled score value for Proficiency Level 3 in doman specified (place holder).</Description>
+		<Description>Lowest scaled score value for Proficiency Level 3 in domain specified (place holder).</Description>
 		<Type name = "xs:decimal"/>
 	  </Item>
 	 <Item>
 		<Element>Level3Upper</Element>
 		<Characteristics>M</Characteristics>
-		<Description>Upper scaled score value for Proficiency Level 3 in doman specified (place holder).</Description>
+		<Description>Upper scaled score value for Proficiency Level 3 in domain specified (place holder).</Description>
 		<Type name = "xs:decimal"/>
 	  </Item>
 	 <Item>
@@ -689,7 +689,7 @@
 	 <Item>
 		<Element>Level4Upper</Element>
 		<Characteristics>M</Characteristics>
-		<Description>Upper scaled score value for Proficiency Level 4 in doman specified (place holder).</Description>
+		<Description>Upper scaled score value for Proficiency Level 4 in domain specified (place holder).</Description>
 		<Type name = "xs:decimal"/>
 	  </Item>
   </CommonElement>

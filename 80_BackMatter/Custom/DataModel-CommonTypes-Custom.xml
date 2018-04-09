@@ -443,7 +443,7 @@
 			<Element>MarkerType</Element>
 			<Characteristics>OR</Characteristics>
 			 <Description>
-			  <p>A staff members who was involved with the grading of the student, or who was responsible for any associated teacher judgement and their associated role.  Must be a current member of staff.</p>
+			  <p>A staff member, (or members), who were involved with the grading of the student, or who was responsible for any associated teacher judgement and their associated role.  Must be a current member of staff.</p>
 			</Description>
 		</Item> 
 		<Item>
@@ -887,5 +887,4 @@
 		<LocalId>123321A</LocalId>
 	</xhtml:Example>
 </CommonElement>
-
 </IncludeGroup>

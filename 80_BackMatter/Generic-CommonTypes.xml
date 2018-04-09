@@ -57,7 +57,7 @@
       <Element>XMLData</Element>
       <Characteristics>C</Characteristics>
       <Description>
-        <p>Contains an arbitary XML element, encoded in UTF-8.</p>
+        <p>Contains an arbitrary XML element, encoded in UTF-8.</p>
       </Description>
       <Type>
         <xs:any processContents="lax"/>
@@ -208,7 +208,7 @@
 			  <Element>XMLData</Element>
 			  <Characteristics>C</Characteristics>
 			  <Description>
-				<p>Contains an arbitary XML element, encoded in UTF-8.</p>
+				<p>Contains an arbitrary XML element, encoded in UTF-8.</p>
 			  </Description>
 			  <Type>
 				<xs:any processContents="lax"/>

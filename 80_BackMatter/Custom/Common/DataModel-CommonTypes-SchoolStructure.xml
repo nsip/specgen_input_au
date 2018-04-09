@@ -476,7 +476,7 @@
 		<Element>YearLevelEnrollment</Element>
 		<Characteristics>MR</Characteristics>
 		<Description>
-			<p>Containter for Year Level of Enrolments.</p>
+			<p>Container for Year Level of Enrolments.</p>
 		</Description>
 		<Type ref="CommonTypes" name="YearLevelEnrollmentType"/>
 	</Item>
@@ -486,7 +486,7 @@
 		<Element>YearLevelEnrollmentType</Element>
 		<Characteristics>MR</Characteristics>
 		<Description>
-			<p>Containter for Year Level of Enrolments.</p>
+			<p>Container for Year Level of Enrolments.</p>
 		</Description>
 	</Item>
 	<Item>
