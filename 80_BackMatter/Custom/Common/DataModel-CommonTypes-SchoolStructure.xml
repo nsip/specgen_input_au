@@ -1119,7 +1119,7 @@
 		<Item>
 			<Element>EnactedPolicyListType</Element>
 			<Description>
-				<p>A list of <code>PolicyChoice</code> elements, describing the
+				<p>A list of <code>EnactedPolicy</code> elements, describing the
 				state legislated policy choices the school has adopted, and the
 				time-period of that adoption.
 				</p>
@@ -1180,7 +1180,7 @@
 			<Description>
 				<p>Which recognised policy has been chosen?</p>
 			</Description>
-			<Type ref="CodeSets" name="NZCodeSetsPolicyChoiceType"/>
+			<Type ref="CodeSets" name="NZCodeSetsEnactedPolicyType"/>
 		</Item>
 	</CommonElement>			
 

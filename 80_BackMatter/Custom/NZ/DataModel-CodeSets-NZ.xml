@@ -147,7 +147,7 @@
 		<ID>Communication Channel Type</ID>
 		<Values>
 			<Value>
-				<Code>Website</Code>
+				<Code>1</Code>
 				<Text>Website</Text>
 				<Description>Typically refers to the home page for an entity</Description>
 			</Value>
@@ -160,25 +160,25 @@
 		<ID>Communication Usage</ID>
 		<Values>
 			<Value>
-				<Code>Medical</Code>
+				<Code>1</Code>
 				<Text>Medical Incident</Text>
 				<Description>Allows the school to decide which of a caregiver's communication channels is to be used
 				when reporting a medical incident occuring to the learner.</Description>
 			</Value>
 			<Value>
-				<Code>SMS</Code>
+				<Code>2</Code>
 				<Text>SMS/TXT</Text>
 				<Description>Allows the school to decide which of a caregiver's communication channels is to be used
 				when sending an SMS (or TXT) message.</Description>
 			</Value>
 			<Value>
-				<Code>UnexplainedAbsence</Code>
+				<Code>3</Code>
 				<Text>Unexplained Absence</Text>
 				<Description>Allows the school to decide which of the caregiver's communication channels is to be used
 				when reporting a learner's unexplained absence.</Description>
 			</Value>
 			<Value>
-				<Code>IntendedAbsence</Code>
+				<Code>4</Code>
 				<Text>Intended Absence</Text>
 				<Description>Allows the caregiver to decide which of the school's communication channels is to be used
 				when notifying of a learner's intended absence.</Description>
@@ -192,21 +192,16 @@
 		<ID>Organisation Contact Role</ID>
 		<Values>
 			<Value>
-				<Code>Principal</Code>
+				<Code>1</Code>
 				<Text>Principal</Text>
 			</Value>
 			<Value>
-				<Code>ActingPrincipal</Code>
+				<Code>2</Code>
 				<Text>Acting Principal</Text>
 			</Value>
 			<Value>
-				<Code>Director</Code>
+				<Code>3</Code>
 				<Text>Director</Text>
-			</Value>
-			<Value>
-				<Code>SupportStaff</Code>
-				<Text>Support Staff</Text>
-				<Description>Includes all non-teaching staff at schools</Description>
 			</Value>
 		</Values>
 	</CodeSet>    <!-- Contact Role -->
@@ -214,7 +209,7 @@
 		<Intro>
 			Codes describing state legislated policies that can be adopted by schools.
 		</Intro>
-		<ID>Policy Choice</ID>
+		<ID>Enacted Policy</ID>
 		<Values>
 			<Value>
 				<Code>AgeEntry</Code>
@@ -228,7 +223,7 @@
 				their 5th birthday.</Text>
 			</Value>
 		</Values>
-	</CodeSet>	  <!-- Policy Choice -->
+	</CodeSet>	  <!-- Enacted Policy -->
 	<CodeSet>
 		<Intro>
 			The authority by which a Provider is authorised to provide education services.

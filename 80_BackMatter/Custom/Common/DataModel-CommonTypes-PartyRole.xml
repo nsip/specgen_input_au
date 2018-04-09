@@ -926,14 +926,14 @@
 			<Email>
 				<Notes>Not on Thursdays</Notes>
 				<Preference>1</Preference>
-				<Usage>UnexplainedAbsence</Usage>
+				<Usage>3</Usage>
 				<Type>01</Type>
 				<Address>contact@sifinfo.org</Address>
 			</Email>
 			<Email>
 				<Notes>Only on Thursdays</Notes>
 				<Preference>1</Preference>
-				<Usage>UnexplainedAbsence</Usage>
+				<Usage>3</Usage>
 				<Type>02</Type>
 				<Address>info@sifinfo.org</Address>
 			</Email>
@@ -965,14 +965,14 @@
 			<PhoneNumber>
 				<Notes>Not on Thursdays</Notes>
 				<Preference>1</Preference>
-				<Usage>UnexplainedAbsence</Usage>
+				<Usage>3</Usage>
 				<Type>0096</Type>
 				<Number>(03) 273 2000</Number>
 			</PhoneNumber>
 			<PhoneNumber>
 				<Notes>Only on Thursdays</Notes>
 				<Preference>1</Preference>
-				<Usage>SMS</Usage>
+				<Usage>2</Usage>
 				<Type>0096</Type>
 				<Number>(0274) 273 2000</Number>
 			</PhoneNumber>
@@ -1100,7 +1100,7 @@
 		<Email>
 			<Notes>Not on Thursdays</Notes>
 			<Preference>1</Preference>
-			<Usage>UnexplainedAbsence</Usage>
+			<Usage>3</Usage>
 			<Type>01</Type>
 			<Address>contact@sifinfo.org</Address>
 		</Email>
@@ -1157,7 +1157,7 @@
 		<PhoneNumber>
 			<Notes>Not on Thursdays</Notes>
 			<Preference>1</Preference>
-			<Usage>UnexplainedAbsence</Usage>
+			<Usage>3</Usage>
 			<Type>0096</Type>
 			<Number>(03) 9543 2000</Number>
 			<Extension>245</Extension>
@@ -2074,7 +2074,7 @@
 		</Description>
 		<Type ref="CodeSets" name="AUCodeSetsOperationalStatusType"/>
 	</Item>   <!-- OperationalStatus-->
-	<Item>h
+	<Item>
 		<Element>Type</Element>
 		<Characteristics>M</Characteristics>
 		<privacyRating>Low</privacyRating>
@@ -2113,7 +2113,7 @@
 				</PhoneNumber>
 				<PhoneNumber>
 					<Notes>Attendance Office (Automated)</Notes>
-					<Usage>SMS</Usage>
+					<Usage>2</Usage>
 					<Type>0096</Type>
 					<Number>(021) 300 999</Number>
 				</PhoneNumber>
@@ -2121,12 +2121,12 @@
 			<CommunicationChannelList>
 				<Channel>
 					<Notes>School Attendance System (Self Service)</Notes>
-					<Type>Website</Type>
+					<Type>1</Type>
 					<Value>http://att.hogwarts.school.nz</Value>
 				</Channel>
 				<Channel>
 					<Notes>School Website</Notes>
-					<Type>Website</Type>
+					<Type>1</Type>
 					<Value>http://www.hogwarts.school.nz/</Value>
 				</Channel>
 			</CommunicationChannelList>
@@ -2138,7 +2138,7 @@
 						<FullName>Albus Dumbledore</FullName>
 					</Name>
 					<PositionTitle>Head Cattle Wrangler</PositionTitle>
-					<Role>Principal</Role>
+					<Role>1</Role>
 					<AddressList>
 						<Address>
 							<Type>1</Type>
@@ -2198,7 +2198,7 @@
 					<FullName>Albus Dumbledore</FullName>
 				</Name>
 				<PositionTitle>Headmaster</PositionTitle>
-				<Role>Principal</Role>
+				<Role>1</Role>
 				<AddressList>
 					<Address>
 						<Type>1</Type>
@@ -2220,7 +2220,7 @@
 					<FullName>Rubeud Hagrid</FullName>
 				</Name>
 				<PositionTitle>Gamekeeper</PositionTitle>
-				<Role>SupportStaff</Role>
+				<Role>3</Role>
 				<AddressList>
 					<Address>
 						<Type>1</Type>
@@ -2303,7 +2303,7 @@
 				<FullName>Albus Dumbledore</FullName>
 			</Name>
 			<PositionTitle>Head Cattle Wrangler</PositionTitle>
-			<Role>Principal</Role>
+			<Role>1</Role>
 			<AddressList>
 				<Address>
 					<Type>1</Type>
@@ -2364,7 +2364,7 @@
 	<xhtml:Example xmlns="" name="Communication Channel Example">
 		<CommunicationChannel>
 			<Notes>School Attendance System (Self Service)</Notes>
-			<Type>Website</Type>
+			<Type>1</Type>
 			<Value>http://www.hogwarts.school.nz/Attendance</Value>
 		</CommunicationChannel>
 	</xhtml:Example>

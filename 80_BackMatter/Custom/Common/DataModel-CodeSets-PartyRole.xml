@@ -1305,7 +1305,7 @@
 
     <!-- SIF defined code sets ... -->
 
-<if intl="au">	
+<if intl="au">
     <CodeSet>
 		<Intro>
 			<p/>

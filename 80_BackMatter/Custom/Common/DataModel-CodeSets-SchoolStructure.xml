@@ -567,7 +567,7 @@
 </if>
 
     <!-- NSIP defined codesets for AU only -->
-<if intl="au">	
+<if intl="au">
     <CodeSet>
       <Intro>
         <p>Australian Time Zone Abbreviations - https://www.timeanddate.com/time/zones/au</p>
