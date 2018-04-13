@@ -114,4 +114,127 @@
 			</Value>
 		</Values>
 	</CodeSet>    <!-- NZ Address Role -->
+	<CodeSet>
+		<Intro>
+			<p>Describes a spatial unit defined by Stats NZ.</p>
+		</Intro>
+		<ID>Spatial Unit Type</ID>
+		<Values>
+			<Value>
+				<Code>AE</Code>
+				<Text>Area Unit</Text>
+				<Description>
+					<p> Area units are aggregations of
+					meshblocks. They are non–administrative areas that
+					are in between meshblocks and territorial
+					authorities in size. Area units must either define
+					or aggregate to define, regional councils,
+					territorial authorities and urban areas.</p>
+				</Description>
+			</Value>
+			<Value>
+				<Code>GE</Code>
+				<Text>General Electoral Distric</Text>
+				<Description>
+					<p>The general electoral districts as constituted under the Electoral Act 1993.</p>
+				</Description>
+			</Value>
+			<Value>
+				<Code>CB</Code>
+				<Text>Community Board</Text>
+				<Description>
+					<p>(aka Local Board within Auckland) Local boards
+					provide governance at the local level within
+					Auckland Council. They enable democratic decision
+					making by, and on behalf of communities within the
+					local board area.</p>
+				</Description>
+			</Value>
+			<Value>
+				<Code>ME</Code>
+				<Text>Māori Electoral District</Text>
+				<Description>
+					<p>Māori electoral districts are the voting
+					districts for parliamentary elections for people
+					who choose to be on the Māori Electoral Roll.</p>
+				</Description>
+			</Value>
+			<Value>
+				<Code>MB</Code>
+				<Text>Mesh Block</Text>
+				<Description>
+					<p>A meshblock is the smallest geographic unit for
+					which statistical data is collected and processed
+					by Statistics New Zealand.</p>
+					<p>A meshblock is defined by a geographic area,
+					which can vary in size from part of a city block
+					to a large area of rural land. Each meshblock
+					borders on another to form a network covering all
+					of New Zealand, including coasts and inlets and
+					extending out to the 200-mile economic zone.</p>
+				</Description>
+			</Value>
+			<Value>
+				<Code>RC</Code>
+				<Text>Regional Council</Text>
+				<Description>
+					<p>The top tier of local government in New Zealand, defined
+					by the Local Government Act 2002, which requires the
+					boundaries of regions to conform as far as
+					possible to one or more water catchments. When
+					determining regional boundaries, the Local
+					Government Commission gave consideration to
+					regional communities of interest when selecting
+					water catchments to be included in a region. It
+					also considered factors such as natural resource
+					management, land use planning and environmental
+					matters.</p>
+				</Description>
+			</Value>
+			<Value>
+				<Code>TA</Code>
+				<Text>Territorial Authority</Text>
+				<Description>
+					<p>The second tier of local government in New
+					Zealand, defined under the Local Government Act
+					2002 as a city council or district council. There
+					are 67 territorial authorities consisting of 12
+					city councils, 53 districts, Auckland Council, and
+					Chatham Islands Council.</p>
+				</Description>
+			</Value>
+			<Value>
+				<Code>UA</Code>
+				<Text>Urban Area</Text>
+				<Description>
+					<p>Urban Areas are statistically defined areas
+					with no administrative or legal basis. There is a
+					three part hierarchical sub-division of urban
+					areas into: main urban areas, secondary urban
+					areas, minor urban areas.  Together the
+					populations in main, secondary and minor urban
+					areas comprise the statistically defined urban
+					population of New Zealand. The urban area
+					classification is designed to identify
+					concentrated urban or semi-urban settlements
+					without the distortions of administrative
+					boundaries.</p>
+				</Description>
+			</Value>
+			<Value>
+				<Code>WA</Code>
+				<Text>Ward</Text>
+				<Description>
+					<p>Wards are defined under the Local Electoral Act
+					2001 and result from the division, for electoral
+					purposes, of the district of a territorial
+					authority.  The ward system was designed to allow
+					for the recognition of communities within a
+					district and to increase community involvement in
+					the local government system.</p>
+				</Description>
+			</Value>
+		</Values>
+	</CodeSet>    <!-- NZ Spatial Unit Type -->
+	
 </IncludeGroup>

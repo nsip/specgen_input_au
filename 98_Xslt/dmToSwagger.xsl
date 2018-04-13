@@ -106,7 +106,7 @@
 			                         '    type: object&#x0a;',
 			                         '    description: &gt;-&#x0a;      A List of ', @name, ' objects&#x0a;')"/>
 		<xsl:text>    properties:&#x0a;</xsl:text>
-		<xsl:value-of select="concat('      ', @name, 's:&#x0a;')"/>
+		<xsl:value-of select="concat('      ', @name, ':&#x0a;')"/>
 		<xsl:text>        type: array&#x0a;</xsl:text>
 		<xsl:text>        items:&#x0a;</xsl:text>
 		<xsl:value-of select="concat('          $ref: ''#/definitions/', @name, '''&#x0a;&#x0a;')"/>
@@ -263,10 +263,10 @@
 	
 	<!--  Type is an extension of a base type -->
 	<xsl:template match="specgen:Type[@complex = 'extension']">
-		<xsl:text>      allOf:&#x0a;</xsl:text>
-		<xsl:value-of select="concat('        - $ref: ''#/definitions/', xfn:chopType(@name), '''&#x0a;')"/>
-		<xsl:text>        - type: object&#x0a;</xsl:text>
-		<xsl:text>          properties:&#x0a;</xsl:text>
+		<xsl:text>    allOf:&#x0a;</xsl:text>
+		<xsl:value-of select="concat('      - $ref: ''#/definitions/', xfn:chopType(@name), '''&#x0a;')"/>
+		<xsl:text>      - type: object&#x0a;</xsl:text>
+		<xsl:text>        properties:&#x0a;</xsl:text>
 	</xsl:template>
 
 

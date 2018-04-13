@@ -1856,7 +1856,7 @@
 		</Intro>
 		<ID>Email Type</ID>
 		<Values>
-<if intl="nz">			
+<if intl="au">			
 			<Value>
 				<Code>01</Code>
 				<Text>Primary</Text>

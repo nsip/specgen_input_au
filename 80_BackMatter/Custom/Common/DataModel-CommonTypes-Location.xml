@@ -3,6 +3,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:xi="http://www.w3.org/2001/XInclude"
 	xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:json="http://json.org/"
 	
 	xmlns="http://sifassociation.org/SpecGen">
 
@@ -51,24 +52,24 @@
 		<AddressList>
 			<!-- Postal P O Box Address -->
 			<Address>
-				<Type>3</Type>
-				<Role>2</Role>
+				<Type json:force-string="true">3</Type>
+				<Role json:force-string="true">2</Role>
 				<Street>
 					<Line1>P O Box 81</Line1>
 				</Street>
 				<City>Martinborough</City>
-				<PostalCode>5741</PostalCode>
+				<PostalCode json:force-string="true">5741</PostalCode>
 			</Address>
 			<!-- Residential Rural Address -->
 			<Address>
-				<Type>2</Type>
-				<Role>1</Role>
+				<Type json:force-string="true">2</Type>
+				<Role json:force-string="true">1</Role>
 				<Street>
 					<Line1>1175 Lake Ferry Rd</Line1>
 				</Street>
 				<Suburb>RD 1</Suburb>
 				<City>Martinborough</City>
-				<PostalCode>5781</PostalCode>
+				<PostalCode json:force-string="true">5781</PostalCode>
 			</Address>
 		</AddressList>
 	</xhtml:Example>
@@ -95,7 +96,7 @@
 			valid values for each instance in a data object may be listed in that object.</p>
 		</Description>
 		<Type ref="CodeSets" name="AUCodeSetsAddressTypeType"/>
-	</Item>
+	</Item>     <!-- @Type -->
 	<Item>
 		<Attribute>Role</Attribute>
 		<Characteristics>M</Characteristics>
@@ -103,7 +104,7 @@
 			<p>A facet of Address</p>
 		</Description>
 		<Type ref="CodeSets" name="AUCodeSetsAddressRoleType"/>
-	</Item>
+	</Item>     <!-- @Role -->
 </if>	
 <if intl="nz">
 	<Item>
@@ -113,7 +114,7 @@
 			<p>Code defining the class of the address: Urban, Rural, Delivery Service or Foreign.</p>
 		</Description>
 		<Type ref="CodeSets" name="NZCodeSetsAddressTypeType"/>
-	</Item>
+	</Item>     <!-- Type -->
 	<Item>
 		<Element>Role</Element>
 		<Characteristics>O</Characteristics>
@@ -121,7 +122,7 @@
 			<p>Describes how the Person/Organisation uses the Address</p>
 		</Description>
 		<Type ref="CodeSets" name="NZCodeSetsAddressRoleType"/>
-	</Item>
+	</Item>     <!-- Role -->
 </if>
 <if intl="au">
 	<Item>
@@ -131,7 +132,7 @@
 			<p>Date the address became active.</p>
 		</Description>
 		<Type name="xs:date"/>
-	</Item>
+	</Item>     <!-- EffectiveFromDate -->
     <Item>
 		<Element>EffectiveToDate</Element>
 		<Characteristics>O</Characteristics>
@@ -139,7 +140,7 @@
 			<p>Date the address ceases to be active.</p>
 		</Description>
 		<Type name="xs:date"/>
-	</Item>
+	</Item>     <!-- EffectiveToDate -->
 </if>	
 	<Item>
 		<Element>Street</Element>
@@ -148,7 +149,7 @@
 			<p>The street element is a complex element and breaks the street down into several parts. (Allow for PO Box here)</p>
 		</Description>
 		<Type ref="CommonTypes" name="AddressStreetType"/>
-	</Item>
+	</Item>     <!-- Street -->
 	
 <if intl="nz">	
 	<Item>
@@ -158,7 +159,7 @@
 			<p>The suburb part of urban addresses, or the 'RD No' part of rural addresses</p>
 		</Description>
 		<Type name="xs:normalizedString"/>
-	</Item>
+	</Item>     <!-- Suburb -->
 </if>
 
 	<Item>
@@ -168,7 +169,7 @@
 			<p>The city part of the address.</p>
 		</Description>
 		<Type name="xs:normalizedString"/>
-	</Item>
+	</Item>     <!-- City -->
 	<Item>
 		<Element>StateProvince</Element>
 		<Characteristics>C</Characteristics>
@@ -186,7 +187,7 @@
 		<if intl="nz">
 			<Type name="xs:string"/>
 		</if>
-	</Item>
+	</Item>     <!-- StateProvince -->
 
 	<Item>
 		<Element>Country</Element>
@@ -200,7 +201,7 @@
 		<if intl="nz">
 			<Type name="xs:string"/>
 		</if>
-	</Item>
+	</Item>     <!-- Country -->
 	<Item>
 		<Element>PostalCode</Element>
 		<Characteristics>M</Characteristics>
@@ -208,7 +209,7 @@
 			<p>The ZIP/postal code.</p>
 		</Description>
 		<Type name="xs:normalizedString"/>
-	</Item>
+	</Item>     <!-- PostalCode -->
 <if intl="au">	
 	<Item>
 		<Element>GridLocation</Element>
@@ -217,7 +218,7 @@
 			<p>The location of the address.</p>
 		</Description>
 		<Type ref="CommonTypes" name="GridLocationType"/>
-	</Item>
+	</Item>     <!-- GridLocation -->
 	<Item>
 		<Element>MapReference</Element>
 		<Characteristics>O</Characteristics>
@@ -225,7 +226,7 @@
 			<p>A Map Reference in x-y co-ordinates.</p>
 		</Description>
 		<Type ref="CommonTypes" name="MapReferenceType"/>
-	</Item>
+	</Item>     <!-- MapReference -->
 	<Item>
 		<Element>RadioContact</Element>
 		<Characteristics>O</Characteristics>
@@ -233,7 +234,7 @@
 			<p>UHF Radio frequency or channel used for contact eg: 477MHz or CH60</p>
 		</Description>
 		<Type name="xs:string"/>
-	</Item>
+	</Item>     <!-- RadioContact -->
 	<Item>
 		<Element>Community</Element>
 		<Characteristics>O</Characteristics>
@@ -241,7 +242,7 @@
 			<p>This element is used to describe a Community that is associated with the instance of the address.</p>
 		</Description>
 		<Type name="xs:normalizedString"/>
-	</Item>
+	</Item>     <!-- Community -->
 	<Item>
 		<Element>LocalId</Element>
 		<Characteristics>O</Characteristics>
@@ -249,7 +250,7 @@
 			<p>This is the LocalId of the specific address if it can be provided.</p>
 		</Description>
 		<Type ref="CommonTypes" name="LocalIdType"/>
-	</Item>
+	</Item>     <!-- LocalId -->
 	<Item>
 		<Element>AddressGlobalUID</Element>
 		<Characteristics>O</Characteristics>
@@ -262,7 +263,7 @@
       </p>
 		</Description>
 		<Type ref="CommonTypes" name="GUIDType"/>
-	</Item>
+	</Item>     <!-- AddressGlobalUUID -->
 	<Item>
 		<Element>StatisticalAreas</Element>
 		<Characteristics>O</Characteristics>
@@ -270,7 +271,7 @@
 			<p>A list of Statistical Areas associated with an address that will be referenced back to ABS 1270.  Only applicable to a physical address, e.g. not relevant for a Post Office Box.</p>
 		</Description>
 		<Type ref="CommonTypes" name="StatisticalAreasType"/>
-	</Item>
+	</Item>     <!-- StatisticalAreas -->
 </if>
 	<xhtml:Example xmlns="" name="Address Example" intl="au">
 		<Address Type="0123" Role="012B">
@@ -301,40 +302,40 @@
 	</xhtml:Example>
 	<xhtml:Example name="NZ Street Postal Address Example" intl="nz" xmlns="">
 		<Address>
-			<Type>1</Type>
-			<Role>2</Role>
+			<Type json:force-string="true">1</Type>
+			<Role json:force-string="true">2</Role>
 			<Street>
 				<Line1>84 Washington Ave</Line1>
 			</Street>
 			<Suburb>Brooklyn</Suburb>
 			<City>Wellington</City>
 			<Country>New Zealand</Country>
-			<PostalCode>6002</PostalCode>
+			<PostalCode json:force-string="true">6002</PostalCode>
 		</Address>
 	</xhtml:Example>
 	<xhtml:Example name="NZ P O Box Postal Address Example" intl="nz" xmlns="">
 		<Address>
-			<Type>3</Type>
-			<Role>2</Role>
+			<Type json:force-string="true">3</Type>
+			<Role json:force-string="true">2</Role>
 			<Street>
 				<Line1>P O Box 81</Line1>
 			</Street>
 			<City>Martinborough</City>
 			<Country>New Zealand</Country>
-			<PostalCode>5741</PostalCode>
+			<PostalCode json:force-string="true">5741</PostalCode>
 		</Address>
 	</xhtml:Example>
 	<xhtml:Example name="NZ Rural Residential Address Example" intl="nz" xmlns="">
 		<Address>
-			<Type>2</Type>
-			<Role>1</Role>
+			<Type json:force-string="true">2</Type>
+			<Role json:force-string="true">1</Role>
 			<Street>
 				<Line1>1175 Lake Ferry Rd</Line1>
 			</Street>
 			<Suburb>RD 1</Suburb>
 			<City>Martinborough</City>
 			<Country>New Zealand</Country>
-			<PostalCode>5781</PostalCode>
+			<PostalCode json:force-string="true">5781</PostalCode>
 		</Address>
 	</xhtml:Example>
 </CommonElement>
@@ -454,52 +455,6 @@
 	</Item>
 </if>	
 </CommonElement>
-
-<if intl="au">
-<CommonElement name="StateProvinceType" type="true" dm="true">
-	<Item>
-		<Element>StateProvinceType</Element>
-		<Description>
-			<p>A state or province code. Note: When dealing with countries other than Australia, state/province codes/values other than those referenced here can be used.</p>
-		</Description>
-		<Union>
-			<Type ref="CodeSets" name="AUCodeSetsStateTerritoryCodeType"/>
-			<Type name="xs:token"/>
-		</Union>
-	</Item>
-	<xhtml:Example xmlns="" name="State or Province Example">
-		<StateProvince>ACT</StateProvince>
-	</xhtml:Example>
-</CommonElement>
-<CommonElement name="StateProvinceIdType" type="true" dm="true">
-	<Intro>
-		<p>
-      This is a common element used to define the state or province assigned identifier associated with an entity. 
-    </p>
-	</Intro>
-	<Item>
-		<Element>StateProvinceIdType</Element>
-		<Description>
-			<p>The identifier for this entity as assigned by the state or province.</p>
-		</Description>
-		<Type name="xs:normalizedString"/>
-	</Item>
-	<xhtml:Example xmlns="" name="StateProvinceId Example">
-		<StateProvinceId>L65432765</StateProvinceId>
-	</xhtml:Example>
-</CommonElement>
-<CommonElement name="CountryType" type="true" dm="true">
-	<Item>
-		<Element>CountryType</Element>
-		<Description>
-			<p>A country code.</p>
-		</Description>
-		<Type ref="CodeSets" name="AUCodeSetsStandardAustralianClassificationOfCountriesSACCType"/>
-	</Item>
-	<xhtml:Example xmlns="" name="Country Type Example">
-		<Country>1101</Country>
-	</xhtml:Example>
-</CommonElement>
 <CommonElement name="GridLocationType" type="true" dm="true">
 	<Item>
 		<Element>GridLocationType</Element>
@@ -544,6 +499,52 @@
 			<Latitude>41.850000</Latitude>
 			<Longitude>-87.650000</Longitude>
 		</GridLocation>
+	</xhtml:Example>
+</CommonElement>
+
+<if intl="au">
+<CommonElement name="StateProvinceType" type="true" dm="true">
+	<Item>
+		<Element>StateProvinceType</Element>
+		<Description>
+			<p>A state or province code. Note: When dealing with countries other than Australia, state/province codes/values other than those referenced here can be used.</p>
+		</Description>
+		<Union>
+			<Type ref="CodeSets" name="AUCodeSetsStateTerritoryCodeType"/>
+			<Type name="xs:token"/>
+		</Union>
+	</Item>
+	<xhtml:Example xmlns="" name="State or Province Example">
+		<StateProvince>ACT</StateProvince>
+	</xhtml:Example>
+</CommonElement>
+<CommonElement name="StateProvinceIdType" type="true" dm="true">
+	<Intro>
+		<p>
+      This is a common element used to define the state or province assigned identifier associated with an entity. 
+    </p>
+	</Intro>
+	<Item>
+		<Element>StateProvinceIdType</Element>
+		<Description>
+			<p>The identifier for this entity as assigned by the state or province.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<xhtml:Example xmlns="" name="StateProvinceId Example">
+		<StateProvinceId>L65432765</StateProvinceId>
+	</xhtml:Example>
+</CommonElement>
+<CommonElement name="CountryType" type="true" dm="true">
+	<Item>
+		<Element>CountryType</Element>
+		<Description>
+			<p>A country code.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsStandardAustralianClassificationOfCountriesSACCType"/>
+	</Item>
+	<xhtml:Example xmlns="" name="Country Type Example">
+		<Country>1101</Country>
 	</xhtml:Example>
 </CommonElement>
 <CommonElement name="MapReferenceType" type="true" dm="true">
@@ -684,4 +685,260 @@
 </CommonElement>
 </if>
 
+<if intl="nz">
+<CommonElement name="LocationListType" type="true" dm="true">
+	<Item>
+		<Element>LocationListType</Element>
+		<Description>
+			<p>A list of Location elements.</p>
+		</Description>
+		<List mode="List"/>
+	</Item>
+	<Item>
+		<Element>Location</Element>
+		<Characteristics>MR</Characteristics>
+		<Type ref="CommonTypes" name="LocationType"/>
+	</Item>
+	<xhtml:Example xmlns="" name="Location List Example" intl="nz">
+		<LocationList>
+			<Location>
+				<Description>Junior Campus</Description>
+				<Address>
+					<Type json:force-string="true">2</Type>
+					<Role json:force-string="true">1</Role>
+					<Street>
+						<Line1>1175 Lake Ferry Rd</Line1>
+					</Street>
+					<Suburb>RD 1</Suburb>
+					<City>Martinborough</City>
+					<PostalCode json:force-string="true">5781</PostalCode>
+				</Address>
+				<GridLocation>
+					<Latitude>-41.2814719</Latitude>
+					<Longitude>175.3458472</Longitude>
+				</GridLocation>
+				<StatisticalAreaList>
+					<StatisticalArea>
+						<SpatialUnitType>GE</SpatialUnitType>
+						<Code>058</Code>
+					</StatisticalArea>
+					<StatisticalArea>
+						<SpatialUnitType>TA</SpatialUnitType>
+						<Code>050</Code>
+					</StatisticalArea>
+					<StatisticalArea>
+						<SpatialUnitType>WA</SpatialUnitType>
+						<Code>05003</Code>
+					</StatisticalArea>
+				</StatisticalAreaList>
+			</Location>
+		</LocationList>
+	</xhtml:Example>
+</CommonElement>
+<CommonElement name="LocationType" type="true" dm="true">
+	<Intro>
+		<p>This element contains data about a geographical location</p>
+	</Intro>
+	<Item>
+		<Element>LocationType</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>This element contains data about a geographical location.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>Description</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>A description for the Location.</p>
+		</Description>
+		<Type name="xs:string"/>
+	</Item>     <!-- Description -->
+	<Item>
+		<Element>Address</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The physical address of the Location</p>
+		</Description>
+		<Type ref="CommonTypes" name="AddressType"/>
+	</Item>     <!-- Address -->
+	<Item>
+		<Element>GridLocation</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The latitude &amp; longitude of the location. Grid location values
+			are derived from New Zealand Map Grid x,y coordinates and converted
+			to Latitude and Longitude values per the World Geodetic System 1984 (G1762)
+			</p>
+		</Description>
+		<Type ref="CommonTypes" name="GridLocationType"/>
+	</Item>     <!-- GridLocation -->
+	<Item>
+		<Element>StatisticalAreaList</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>A list of Statistical Areas containing the location.</p>
+			<p>The list may contain exactly one StatisticalArea
+			element for each of the following spatial unit types:</p>
+			<ul>
+				<li>Ward</li>
+				<li>Urban Area</li>
+				<li>Census Area Unit</li>
+				<li>Māori Electorate</li>
+				<li>Mesh Block</li>
+				<li>General Electorate</li>
+				<li>Territorial Authority</li>
+				<li>Local Board (Auckland Only)</li>
+				<li>Regional Council</li>
+			</ul>
+		</Description>
+		<Type ref="CommonTypes" name="StatisticalAreaListType"/>
+	</Item>     <!-- StatisticalAreaList -->
+	<xhtml:Example xmlns="" name="Location Example">
+		<Location>
+			<Description>Junior Campus</Description>
+			<Address>
+				<Type json:force-string="true">2</Type>
+				<Role json:force-string="true">1</Role>
+				<Street>
+					<Line1>1175 Lake Ferry Rd</Line1>
+				</Street>
+				<Suburb>RD 1</Suburb>
+				<City>Martinborough</City>
+				<Country>New Zealand</Country>
+				<PostalCode json:force-string="true">5781</PostalCode>
+			</Address>
+			<GridLocation>
+				<Latitude>41.850000</Latitude>
+				<Longitude>-87.650000</Longitude>
+			</GridLocation>
+			<StatisticalAreaList>
+				<StatisticalArea>
+					<SpatialUnitType>GE</SpatialUnitType>
+					<Code>058</Code>
+				</StatisticalArea>
+				<StatisticalArea>
+					<SpatialUnitType>TA</SpatialUnitType>
+					<Code>050</Code>
+				</StatisticalArea>
+				<StatisticalArea>
+					<SpatialUnitType>WA</SpatialUnitType>
+					<Code>05003</Code>
+				</StatisticalArea>
+			</StatisticalAreaList>
+		</Location>
+	</xhtml:Example>		
+</CommonElement>
+
+<CommonElement name="StatisticalAreaListType" type="true" dm="true">
+  <Item>
+	  <Element>StatisticalAreaListType</Element>
+	  <Characteristics>O</Characteristics>
+	  <Description>
+		  <p>A list of Statistical Areas. It may contain
+		  a StatisticalArea element for each of the
+		  following spatial unit types:</p>
+		  <ul>
+			  <li>Ward</li>
+			  <li>Urban Area</li>
+			  <li>Census Area Unit</li>
+			  <li>Māori Electorate</li>
+			  <li>Mesh Block</li>
+			  <li>General Electorate</li>
+			  <li>Territorial Authority</li>
+			  <li>Local Board (Auckland Only)</li>
+			  <li>Regional Council</li>
+		  </ul>
+	  </Description>
+	  <List mode="List"/>
+  </Item>
+  <Item>
+	  <Element>StatisticalArea</Element>
+	  <Characteristics>OR</Characteristics>
+	  <Description>
+		  <p>A code denoting one of the following spacial unit types:</p>
+		</Description>
+		<Type ref="CommonTypes" name="StatisticalAreaType"/>
+	</Item>     <!-- StatisticalArea -->
+	<xhtml:Example xmlns="" name="NZ Statistical Area List Example">
+		<StatisticalAreaList>
+			<StatisticalArea>
+				<SpatialUnitType>GE</SpatialUnitType>
+				<Code>058</Code>
+			</StatisticalArea>
+			<StatisticalArea>
+				<SpatialUnitType>TA</SpatialUnitType>
+				<Code>050</Code>
+			</StatisticalArea>
+			<StatisticalArea>
+				<SpatialUnitType>WA</SpatialUnitType>
+				<Code>05003</Code>
+			</StatisticalArea>
+		</StatisticalAreaList>
+	</xhtml:Example>	
+</CommonElement>
+<CommonElement name="StatisticalAreaType" type="true" dm="true">
+	<Item>
+		<Element>StatisticalAreaType</Element>
+		<Characteristics>OR</Characteristics>
+		<Description>
+			<p>A particular statistical area defined by Statistics New Zealand.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>SpatialUnitType</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Denotes the type of Spatial Unit that the
+			StatisticalArea code refers to. (eg: Teritorial Authority,
+			General Electoral District, etc.)</p>
+		</Description>
+		<Type ref="CodeSets" name="NZCodeSetsSpatialUnitTypeType"/>
+	</Item>
+	<Item>
+		<Element>Code</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>A valid value defined by the nominated spatial unit
+			type, defined by Statistics New Zealand in one of the
+			following statistical area defintion standards:</p>
+			<dl>
+				<dt>Area Unit</dt>
+				<dd><a href="http://aria.stats.govt.nz/aria/#ClassificationView:uri=http://stats.govt.nz/cms/ClassificationVersion/cVYnMpeILgJRAY7E">Statistics NZ Classification of Area Unit 2017 v1.0.0</a></dd>
+
+				<dt>General Electoral District</dt>
+				<dd><a href="http://aria.stats.govt.nz/aria/#ClassificationView:uri=http://stats.govt.nz/cms/ClassificationVersion/jtyxBHBzNNas41gu">Statistics NZ General Electoral District 2014 v1.0.0</a></dd>
+
+				<dt>Community Board</dt>
+				<dd><a href="http://aria.stats.govt.nz/aria/#ClassificationView:uri=http://stats.govt.nz/cms/ClassificationVersion/IoSA6qKYt1tonN2h">Statistics NZ Community Board (codes 07601 - 07621) 2018 v1.0.0</a></dd>
+
+				<dt>Māori Electoral District</dt>
+				<dd><a href="http://aria.stats.govt.nz/aria/#ClassificationView:uri=http://stats.govt.nz/cms/ClassificationVersion/pW9dZ6VeAMFKkHbQ">Statistics NZ Māori Electoral District 2014 v1.0.0</a></dd>
+
+				<dt>Mesh Block</dt>
+				<dd><a href="http://aria.stats.govt.nz/aria/#ClassificationView:uri=http://stats.govt.nz/cms/ClassificationVersion/MtGwQIpeKPkp2Iy5">Statistics NZ Statistical Standard for Meshblock 2018 v1.0.0</a></dd>
+
+				<dt>Regional Council</dt>
+				<dd><a href="http://aria.stats.govt.nz/aria/#ClassificationView:uri=http://stats.govt.nz/cms/ClassificationVersion/PomAzzidKosHC6ib">Statistics NZ Regional Council 2018 v1.0.0</a></dd>
+
+				<dt>Territorial Authority</dt>
+				<dd><a href="http://aria.stats.govt.nz/aria/#ClassificationView:uri=http://stats.govt.nz/cms/ClassificationVersion/lhXw8b14jnn1tdCz">Statistics NZ Territorial Authority 2018 v1.0.0</a></dd>
+
+				<dt>Urban Area</dt>
+				<dd><a href="http://aria.stats.govt.nz/aria/#ClassificationView:uri=http://stats.govt.nz/cms/ClassificationVersion/WBFcO5U1E6jCBdNL">Statistics NZ Urban Area 2018 v1.0.0</a></dd>
+
+				<dt>Ward</dt>
+				<dd><a href="http://aria.stats.govt.nz/aria/#ClassificationView:uri=http://stats.govt.nz/cms/ClassificationVersion/hsU75p8R7OK435p7">Statistics NZ Ward 2018 v1.0.0</a></dd>
+			</dl>
+		</Description>
+		<Type name="xs:string"/>
+	</Item>    <!-- Code -->
+	<xhtml:Example xmlns="" name="NZ Statistical Area Example">
+		<StatisticalArea>
+			<SpatialUnitType>GE</SpatialUnitType>
+			<Code>058</Code>
+		</StatisticalArea>
+	</xhtml:Example>
+</CommonElement>
+</if>
 </IncludeGroup>

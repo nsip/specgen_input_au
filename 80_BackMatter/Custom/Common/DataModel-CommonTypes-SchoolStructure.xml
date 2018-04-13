@@ -3,6 +3,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:xi="http://www.w3.org/2001/XInclude"
 	xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:json="http://json.org/"
 	
 	xmlns="http://sifassociation.org/SpecGen">
 
@@ -973,6 +974,15 @@
 			</Description>
 		</Item>
 		<Item>
+			<Element>CoEdStatus</Element>
+			<Characteristics>M</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+				<p>A summary of the genders accepted by the school</p>
+			</Description>
+			<Type ref="CodeSets" name="AUCodeSetsSchoolCoEdStatusType"/>
+		</Item>    <!-- CoEdStatus -->
+		<Item>
 			<Element>Decile</Element>
 			<Characteristics>M</Characteristics>
 			<privacyRating>Low</privacyRating>
@@ -988,26 +998,6 @@
 				<xs:maxInclusive value="10"/>
 			</Facets>
 		</Item>    <!-- Decile -->
-		<Item>
-			<Element>CoEdStatus</Element>
-			<Characteristics>M</Characteristics>
-			<privacyRating>Low</privacyRating>
-			<Description>
-				<p>A summary of the genders accepted by the school</p>
-			</Description>
-			<Type ref="CodeSets" name="AUCodeSetsSchoolCoEdStatusType"/>
-		</Item>    <!-- CoEdStatus -->
-		<Item>
-			<Element>SchoolYearList</Element>
-			<Characteristics>M</Characteristics>
-			<privacyRating>Low</privacyRating>
-			<Description>
-				<p>A list of <code>SchoolYear</code> elements describing
-				the genders of students accepted for enrolment at each year
-				level.</p>
-			</Description>
-			<Type ref="CommonTypes" name="SchoolYearLevelListType"/>
-		</Item>    <!-- SchoolYearList-->
 		<Item>
 			<Element>NewEntrantPolicyList</Element>
 			<Characteristics>M</Characteristics>
@@ -1026,11 +1016,22 @@
 			</Description>
 			<Type ref="CommonTypes" name="SchoolDefinitionListType"/>
 		</Item>    <!-- DefinitionList -->
+		<Item>
+			<Element>SchoolYearList</Element>
+			<Characteristics>M</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+				<p>A list of <code>SchoolYear</code> elements describing
+				the genders of students accepted for enrolment at each year
+				level.</p>
+			</Description>
+			<Type ref="CommonTypes" name="SchoolYearLevelListType"/>
+		</Item>    <!-- SchoolYearList-->
 		
 		<xhtml:Example xmlns="" name="NZ School Service Example">
-			<School>
-				<Decile>5</Decile>
+			<SchoolService>
 				<CoEdStatus>C2</CoEdStatus>
+				<Decile>5</Decile>
 				<NewEntrantPolicyList>
 					<EnactedPolicy>
 						<EffectiveTo>2018-12-31</EffectiveTo>
@@ -1041,7 +1042,66 @@
 						<Policy>CohortEntry</Policy>
 					</EnactedPolicy>
 				</NewEntrantPolicyList>
-			</School>
+				<DefinitionList>
+					<Definition json:force-string="true">101</Definition>
+					<Definition json:force-string="true">103</Definition>
+					<Definition json:force-string="true">108</Definition>
+				</DefinitionList>			
+				<SchoolYearList>
+					<SchoolYear>
+						<YearLevel json:force-string="true">1</YearLevel>
+						<Gender>C</Gender>
+					</SchoolYear>
+					<SchoolYear>
+						<YearLevel json:force-string="true">2</YearLevel>
+						<Gender>C</Gender>
+					</SchoolYear>
+					<SchoolYear>
+						<YearLevel json:force-string="true">3</YearLevel>
+						<Gender>C</Gender>
+					</SchoolYear>
+					<SchoolYear>
+						<YearLevel json:force-string="true">4</YearLevel>
+						<Gender>C</Gender>
+					</SchoolYear>
+					<SchoolYear>
+						<YearLevel json:force-string="true">5</YearLevel>
+						<Gender>C</Gender>
+					</SchoolYear>
+					<SchoolYear>
+						<YearLevel json:force-string="true">6</YearLevel>
+						<Gender>C</Gender>
+					</SchoolYear>
+					<SchoolYear>
+						<YearLevel json:force-string="true">7</YearLevel>
+						<Gender>C</Gender>
+					</SchoolYear>
+					<SchoolYear>
+						<YearLevel json:force-string="true">8</YearLevel>
+						<Gender>C</Gender>
+					</SchoolYear>
+					<SchoolYear>
+						<YearLevel json:force-string="true">9</YearLevel>
+						<Gender>F</Gender>
+					</SchoolYear>
+					<SchoolYear>
+						<YearLevel json:force-string="true">10</YearLevel>
+						<Gender>F</Gender>
+					</SchoolYear>
+					<SchoolYear>
+						<YearLevel json:force-string="true">11</YearLevel>
+						<Gender>F</Gender>
+					</SchoolYear>
+					<SchoolYear>
+						<YearLevel json:force-string="true">12</YearLevel>
+						<Gender>F</Gender>
+					</SchoolYear>
+					<SchoolYear>
+						<YearLevel json:force-string="true">13</YearLevel>
+						<Gender>F</Gender>
+					</SchoolYear>
+				</SchoolYearList>
+			</SchoolService>
 		</xhtml:Example>
 	</CommonElement>
 	
@@ -1064,23 +1124,23 @@
 		<xhtml:Example xmlns="" name="NZ Year Level List Example">
 			<SchoolYearList>
 				<SchoolYear>
-					<YearLevel>9</YearLevel>
+					<YearLevel json:force-string="true">9</YearLevel>
 					<Gender>M</Gender>
 				</SchoolYear>
 				<SchoolYear>
-					<YearLevel>10</YearLevel>
+					<YearLevel json:force-string="true">10</YearLevel>
 					<Gender>M</Gender>
 				</SchoolYear>
 				<SchoolYear>
-					<YearLevel>11</YearLevel>
+					<YearLevel json:force-string="true">11</YearLevel>
 					<Gender>C</Gender>
 				</SchoolYear>
 				<SchoolYear>
-					<YearLevel>12</YearLevel>
+					<YearLevel json:force-string="true">12</YearLevel>
 					<Gender>C</Gender>
 				</SchoolYear>
 				<SchoolYear>
-					<YearLevel>13</YearLevel>
+					<YearLevel json:force-string="true">13</YearLevel>
 					<Gender>C</Gender>
 					</SchoolYear>
 			</SchoolYearList>
@@ -1201,8 +1261,8 @@
 		</Item>
 		<xhtml:Example xmlns="" name="NZ School Definition List Example">
 			<SchoolDefinitionList>
-				<Definition>103</Definition>
-				<Definition>108</Definition>
+				<Definition json:force-string="true">103</Definition>
+				<Definition json:force-string="true">108</Definition>
 			</SchoolDefinitionList>
 		</xhtml:Example>
 	</CommonElement>
