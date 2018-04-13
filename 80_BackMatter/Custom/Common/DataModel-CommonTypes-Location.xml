@@ -50,7 +50,6 @@
 	</xhtml:Example>
 	<xhtml:Example xmlns="" name="NZ Address List Example" intl="nz">
 		<AddressList>
-			<!-- Postal P O Box Address -->
 			<Address>
 				<Type json:force-string="true">3</Type>
 				<Role json:force-string="true">2</Role>
@@ -60,7 +59,6 @@
 				<City>Martinborough</City>
 				<PostalCode json:force-string="true">5741</PostalCode>
 			</Address>
-			<!-- Residential Rural Address -->
 			<Address>
 				<Type json:force-string="true">2</Type>
 				<Role json:force-string="true">1</Role>

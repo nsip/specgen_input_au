@@ -58,3 +58,12 @@ div.example {
 [type=radio]:checked ~ label ~ .content {
   z-index: 1;
 }
+
+label img {
+	width:20px;
+	border:1px solid red;
+}
+
+[type=radio]:checked ~ label img {
+	border:none;
+}
