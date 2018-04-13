@@ -60,8 +60,9 @@ div.example {
 }
 
 label img {
+	position:relative;
+	top:4px;
 	width:20px;
-	border:1px solid red;
 }
 
 [type=radio]:checked ~ label img {
