@@ -338,20 +338,24 @@
 							         '    title: ', specgen:ID, '&#x0a;',
 			                         '    description: &gt;-&#x0a;      ')"/>
 		<xsl:apply-templates select="specgen:Intro"/><xsl:text>&#x0a;</xsl:text>
-		<xsl:apply-templates select="specgen:Values/specgen:Value" mode="descr">
-			<xsl:with-param name="indent" select="'    '"/>
+		<xsl:apply-templates select="specgen:Values" mode="descr">
+			<xsl:with-param name="indent" select="'      '"/>
 		</xsl:apply-templates>
 		
-		<xsl:apply-templates select="specgen:Values">
+		<xsl:apply-templates select="specgen:Values" mode="enum">
 			<xsl:with-param name="indent" select="'    '"/>
 		</xsl:apply-templates>
 	</xsl:template>
 
-	<xsl:template match="specgen:Values">
+
+	
+	<xsl:template match="specgen:Values" mode="descr">
 		<xsl:param name="indent"/>
-		<xsl:value-of select="concat($indent, 'enum: [')"/>
-		<xsl:apply-templates select="specgen:Value" mode="enum"/>
-		<xsl:text>]&#x0a;</xsl:text>
+		<xsl:value-of select="concat($indent, '&lt;dl&gt;&#x0a;')"/>
+		<xsl:apply-templates select="specgen:Value" mode="descr">
+			<xsl:with-param name="indent" select="$indent"/>
+		</xsl:apply-templates>
+		<xsl:value-of select="concat($indent, '&lt;/dl&gt;&#x0a;')"/>
 	</xsl:template>
 	
 	<xsl:template match="specgen:Value" mode="descr">
@@ -361,9 +365,20 @@
 			<xsl:apply-templates select="specgen:Text"/>
 		</xsl:variable>
 
-		<xsl:value-of select="concat($indent, '    * ''', specgen:Code, ''' - ', $valDesc, '&#x0a;')"/>
+		<xsl:value-of select="concat($indent,  '&lt;dt&gt;''', specgen:Code, '''&lt;/dt&gt;',
+							                   '&lt;dd&gt;''', $valDesc, '''&lt;/dd&gt;&lt;br/&gt;&#x0a;')"/>
 	</xsl:template>
 
+
+
+	
+	<xsl:template match="specgen:Values" mode="enum">
+		<xsl:param name="indent"/>
+		<xsl:value-of select="concat($indent, 'enum: [')"/>
+		<xsl:apply-templates select="specgen:Value" mode="enum"/>
+		<xsl:text>]&#x0a;</xsl:text>
+	</xsl:template>
+	
 	<xsl:template match="specgen:Value[position() gt 1]" mode="enum">
 		<xsl:param name="indent"/>
 		<xsl:value-of select="concat(', ''', specgen:Code, '''')"/>
