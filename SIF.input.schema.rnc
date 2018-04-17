@@ -81,7 +81,9 @@ html.h4 = element h4 { sif.narrative }
 html.img = element img {
    attribute src { text },
    attribute alt { text }?,
-   attribute title { text }?
+   attribute title { text }?,
+   attribute width { text }?,
+   attribute style { text }?
 }
 html.p = element p  { sif.narrative}
 html.span = element span {
@@ -233,7 +235,7 @@ sif.CodeSet = element CodeSet {
      element Values {
 	   (mixed { sif.If.Value | sif.Value })* } }
 
-sif.Value = element Value { element Code { text }, element Text { text }, element Description { text }? }
+sif.Value = element Value { element Code { text }, element Text { text }, element Description { sif.narrative }? }
 sif.Group = element Group {
    attribute name { text },
 

@@ -25,7 +25,12 @@
 		<br/>
 		<br/>
 		<p>
-			<img src="images/zone.jpg" alt=""/>
+			<if intl="au">
+				<img src="images/zone.jpg"/>
+   			</if>
+			<if intl="nz">
+				<img src="images/zone.png" alt="" style="width:512;"/>
+   			</if>
 		</p>
 		<br/>
 		<br/>
