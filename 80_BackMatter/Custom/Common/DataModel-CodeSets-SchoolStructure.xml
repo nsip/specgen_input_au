@@ -1694,11 +1694,11 @@
 			</Value>
 			<Value>
 				<Code>F</Code>
-				<Text>Female</Text>
+				<Text>Girls School</Text>
 			</Value>
 			<Value>
 				<Code>M</Code>
-				<Text>Male</Text>
+				<Text>Boys School</Text>
 			</Value>
 			<if intl="nz">
 				<Value>
@@ -1707,10 +1707,9 @@
 				</Value>
 				<Value>
 					<Code>C2</Code>
-					<Text>Junior Boys &amp; Senior Co-Ed</Text>
+					<Text>Junior Boys, Senior Co-Ed</Text>
 				</Value>
 			</if>
 		</Values>
 	</CodeSet>    <!-- School Co-Ed Status -->
-
 </IncludeGroup>
