@@ -11,6 +11,7 @@
 		<schemaVersion>3.0.1</schemaVersion>
 		<jsonExamplesXslt>98_Xslt/xmlToJson.xsl</jsonExamplesXslt>
 		<resolveExtensions>true</resolveExtensions>
+		<isDraft>true</isDraft>
 	</globalSettings>
 	
 	<htmlDocuments>
