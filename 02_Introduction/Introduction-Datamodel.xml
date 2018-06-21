@@ -55,7 +55,7 @@
       <p>
         The key words <span class="rfc2119">MUST</span>, <span class="rfc2119">MUST NOT</span>, <span class="rfc2119">REQUIRED</span>, <span class="rfc2119">SHALL</span>,
         <span class="rfc2119">SHALL NOT</span>, <span class="rfc2119">SHOULD</span>, <span class="rfc2119">SHOULD NOT</span>, <span class="rfc2119">RECOMMENDED</span>,
-        <span class="rfc2119">MAY</span>, <span class="rfc2119">OPTIONAL</span>, when <span class="rfc2119">EMPHASIZED</span>, are to be interpreted as described in <a href="References.html#RFC2119">[RFC 2119]</a>.
+        <span class="rfc2119">MAY</span>, <span class="rfc2119">OPTIONAL</span>, when <span class="rfc2119">EMPHASIZED</span>, are to be interpreted as described in <a href="https://www.ietf.org/rfc/rfc2119.txt">[RFC 2119]</a>.
       </p>
     </Section>
     <Section name="XML Diagrams">
@@ -91,35 +91,59 @@
       <em>major version</em>
       <code>.</code>
       <em>minor version</em>
-      <code>r</code>
+      <code>.</code>
       <em>revision number</em>
+      <Code>(X.Y.Z)</Code>
     </p>
+    <p>Once a versioned specification (Specification Release) has been released, the contents of that version MUST NOT be modified. Any modifications MUST be released under a new Specification Version Number unless the modification is the correction of an error or update of documentation. Each Specification Release has an associated errata section in which modifications and corrections of the release are listed.</p>
+    <p>A Specification Version Number for a Specification Release uses conventions as follows:  
 
-    <p>
-      Major versions typically introduce additions/changes to the SIF infrastructure and/or data model changes that impact a significant
-      percentage of SIF-enabled applications (e.g. making previously optional elements mandatory, removal of deprecated objects, elements or values).
-      The first release of a major version has a minor version of <code>0</code> (<code>2.0</code>);
-      major version numbers start at <code>1</code> and are incremented as major versions are released (<code>1.0</code>, <code>2.0</code>, <code>3.0</code>, ...).
+	<ul>
+	<li>A Specification Version Number MAY take the form <Code>X.Y.Z</Code> where <Code>X</Code>, <Code>Y</Code>, and <Code>Z</Code> are nonnegative integers (whole numbers), and MUST NOT contain leading zeroes. <Code>X</Code> represents the <em>Major version</em>, <Code>Y</Code>  represents the <em>Minor version</em>, and <Code>Z</Code> represents the <em>Revision version</em>.</li>
+	<li>Each version number element MUST increase sequentially based on the guidelines defined within this document; for instance, <Code>1.9.1</Code> to <Code>1.10</Code> to <Code>1.11</Code> to <Code>1.11.1</Code> .</li>
+	<li>Precedence refers to how versions are compared to each other when ordered. Precedence MUST be calculated by separating the version into major, minor, revision identifiers in that order. Precedence is determined by the first difference when comparing each of these identifiers from left to right as follows: Major, Minor, and Revision versions are always compared numerically; for example, <Code>1.0.0</Code> &lt; <Code>2.0.0</Code> &lt; <Code>2.1.0</Code> &lt; <Code>2.1.1</Code> .</li>
+	</ul>
+
+</p>
+<p>An instance of a Specification Version Number is the canonical identifier for a Specification Release. The manner in which the Specification Version Number increments after a given Specification Release depends on the type and relative magnitude of changes being proposed in the new release as follows:
+</p>
+<p>
+1.	The Revision version number ( <Code>Z</Code> in <em>x.y.</em><Code>Z</Code>, where <Code>x</Code> &gt;= 0) MUST be incremented when specification changes are limited to backward compatible changes. If <Code>Z</Code>=0 then the convention is to drop the Revision number: for example, <Code>3.1</Code> instead of <Code>3.1.0</Code>. Backward compatible changes include the following:
+</p>
+<ul>
+    <li>New data object.</li>
+    <li>New optional data object element.</li>
+	<li>New optional utility service object element.</li>
+</ul>
+    <p>2.	The Minor version number ( <Code>Y</Code> in <em>x.</em><Code>Y</Code><em>.z</em>, where <Code>x</Code> &gt; 0 ) MUST be incremented if new functionality is added to the specification. It MUST be incremented if any aspect of the specification is marked as deprecated. It MUST be incremented if any aspect of the specification is not backward compatible. (Backward compatible means any change that can be implemented by one participant (consumer, Environment or service provider) without requiring changes by other participants to maintaining the same level of interoperability.)  It MAY be incremented if substantial new functionality or improvements are introduced. It MAY include changes that are categorized as ”Revision” level magnitude. The Revision version MUST be reset to 0 when the Minor version is incremented. Changes requiring a Minor version increment include the following:  
     </p>
+   <ul>
+<li>New mandatory data object element.</li>	 
+<li>New mandatory utility service object element.</li> 
+<li>Deprecate data object element.</li> 
+<li>Deprecate data object.</li> 
+<li>Deprecate utility service object element.</li> 
+<li>Deprecate utility service object.</li>
+<li>Remove deprecated data object element.</li> 
+<li>Remove deprecated data object.</li>
+<li>Remove deprecated utility service object element.</li> 
+<li>Remove deprecated utility service object.</li>
+<li>Add support for additional authentication methods.</li> 
+<li>Add support for additional TLS version. </li>
+<li>Any changes concerning security.</li> 
+<li>Any optional to mandatory change.</li> 
+<li>Add support for additional payload representations.</li> 
+</ul>
 
-    <p>
-      Minor releases typically introduce new data objects, or optional additions to data objects, to the marketplace, and may include minor
-      infrastructure additions/changes that do not impact existing SIF-enabled applications and that and that broker vendors and software framework providers have agreed to implement.
-      The first minor version released subsequent
-      to and within a major release has a minor version of <code>1</code> and is incremented as new minor versions are released
-      (<code>2.1</code>, <code>2.2</code>, ...).  If a significant number of minor release features is introduced in a specification,
-      the SIF Association may decide to increment the minor version number by more than <code>1</code> (e.g. <code>1.1</code> to <code>1.5</code>),
-      though a number like <code>1.5</code> is not an indication of being halfway to a major release, as minor version numbers may be incremented
-      significantly past <code>10</code> (<code>2.10</code>, <code>2.11</code>, ...) as data objects and other minor version features are released.
-    </p>
+    <p>3.	The Major version number ( <Code>X</Code> in <Code>X</Code><em>.y.z</em>, where <Code>X</Code> &gt; 0 ) MUST be incremented if a significant change is introduced to the specification. It MAY include changes categorized as Minor and Revision level changes. The Revision and Minor version numbers MUST be reset to 0 when the Major version is incremented. Changes requiring a Major version increment include the following:
+    <ul> 
+<li>Deprecate payload representation.</li>	 
+<li>Remove deprecated payload representation.</li> 
+<li>Add support for a distinct data model namespace.</li> 
+<li>Replace (deprecate and remove) a locale data model.</li> 
+<li>Any significant change that requires the Major version to be incremented as deemed by the A4L Association Board for global specifications and Management Boards for locale data models.</li> 
+</ul>
 
-    <p>
-      Corrections resulting from identified errata, as well as textual changes, may be incorporated into a revision release.
-      These typically include minor corrections to messages or data objects, corrections of typographical errors, or corrected/expanded documentation.
-      If major errors in any release are identified, a revision release may incorporate changes more typical of a major or minor release.
-      First major and minor releases have a revision number of <code>0</code>, which is omitted from the version number (<code>2.0</code>, not <code>2.0r0</code>);
-      subsequent revision numbers start at <code>1</code> and are incremented as new revisions are released (<code>2.0r1</code>, <code>2.0r2</code>,
-      ...).
     </p>
   </Section>
   <xi:include parse="text" href="custom/ChangeLog-Datamodel.xml"/>
