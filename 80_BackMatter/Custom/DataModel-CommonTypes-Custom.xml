@@ -1,3 +1,12 @@
+<IncludeGroup
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xmlns:xhtml="http://www.w3.org/1999/xhtml"
+
+	xmlns="http://sifassociation.org/SpecGen">	
+
+
 <!--CommonElement name ="ScoresType" type="true" dm="true"> 
 <Item>
     <Element>ScoresType</Element>
@@ -4831,7 +4840,7 @@
 		<Type ref="CommonTypes" name="IdRefType"/>
 	</Item>
 </CommonElement>
-<CommonElement name="AlternateIdentificationCodesType" type="true" dm="true">
+<!-- <CommonElement name="AlternateIdentificationCodesType" type="true" dm="true">
 	<Item>
 		<Element>AlternateIdentificationCodes</Element>
 		<Characteristics>O</Characteristics>
@@ -4848,7 +4857,9 @@
 		</Description>
 		<Type name="xs:normalizedString"/>
 	</Item>
-</CommonElement>
+</CommonElement>  -->
+
+
 <CommonElement name="AuthorsType" type="true" dm="true">
 	<Item>
 		<Element>AuthorsType</Element>
@@ -9290,3 +9301,5 @@
 		<Type ref="CommonTypes" name="EducationFilterType"/>
 	</Item>
 </CommonElement>
+
+</IncludeGroup>
