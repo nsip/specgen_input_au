@@ -6689,7 +6689,7 @@
 		<Type name="xs:normalizedString"/>
 	</Item>
 	<xhtml:Example xmlns="" name="Legal Name">
-		<BaseName Type="LGL">
+		<BaseName>
 			<FamilyName>Wesson</FamilyName>
 			<GivenName>Melanie</GivenName>
 			<MiddleName>Joan</MiddleName>
@@ -6853,7 +6853,7 @@
 	<xhtml:Example xmlns="" name="Location Example">
 		<Location Type="Classroom">
 			<LocationName>Beaconhills Middle School Library</LocationName>
-			<LocationRefId SIF_RefObject="RoomInfo">3E34B35-9D75-101A-8C3D-00AA001A1652</LocationRefId>
+			<LocationRefId SIF_RefObject="RoomInfo">23E34B35-9D75-101A-8C3D-00AA001A1652</LocationRefId>
 		</Location>
 	</xhtml:Example>
 </CommonElement>
@@ -7642,7 +7642,7 @@
 		<Type ref="CommonTypes" complex="extension" name="StatisticalAreasType"/>
 	</Item>
 	
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="Address Example">
 		<Address Type="0123" Role="012B">
 			<Street>
 				<Line1>1 IBM Plaza</Line1>
@@ -7663,7 +7663,7 @@
 			</GridLocation>
 			<Community>Bidyadanga Community</Community>
 			<LocalId>A1530</LocalId>
-			<AddressGlobalUID>4286194F43ED43C18EE2F0A27C4BEF87</AddressGlobalUID>
+			<AddressGlobalUID>4286194F-43ED-43C1-8EE2-F0A27C4BEF87</AddressGlobalUID>
 			<StatisticalAreas>
 				<StatisticalArea SpatialUnitType="SA2">502011021</StatisticalArea>
 			</StatisticalAreas>
@@ -7821,7 +7821,7 @@
 		<Characteristics>MR</Characteristics>
 		<Type ref="CommonTypes" complex="extension" name="AddressType"/>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="AddressList Example">
 		<AddressList>
 			<Address Type="0123" Role="012B">
 				<Street>
@@ -9162,16 +9162,16 @@
 		<Description>Allows any SIF object to be correlated to learning standards.</Description>
 		<Type ref="CommonTypes" name="LearningStandardsType"/>
 	</Item>
-	<xhtml:Example name="EducationFilter - Example 1" xmlns="">
+	<xhtml:Example name="EducationFilter Example" xmlns="">
 		<EducationFilter>
 			<LearningStandardItems>
-				<LearningStandardItemRefId>3E34B35-9D75-101A-8C3D-00AA001A1652</LearningStandardItemRefId>
-				<LearningStandardItemRefId>4F34B35-9D75-101A-8C3D-00AA001A1652</LearningStandardItemRefId>
-				<LearningStandardItemRefId>PO34B35-9D75-101A-8C3D-00AA001A9D75</LearningStandardItemRefId>
-				<LearningStandardItemRefId>2Z34B35-1652-101A-8C3D-00AA001A1667</LearningStandardItemRefId>
-				<LearningStandardItemRefId>3E85F35-9D75-101A-8C3D-00AA001A2352</LearningStandardItemRefId>
-				<LearningStandardItemRefId>3E34B35-9D75-101A-8C3D-00AA001A1659</LearningStandardItemRefId>
-				<LearningStandardItemRefId>3E34B35-1652-101A-8C3D-00AA001A1652</LearningStandardItemRefId>
+				<LearningStandardItemRefId>23E34B35-9D75-101A-8C3D-00AA001A1652</LearningStandardItemRefId>
+				<LearningStandardItemRefId>34F34B35-9D75-101A-8C3D-00AA001A1652</LearningStandardItemRefId>
+				<LearningStandardItemRefId>4F034B35-9D75-101A-8C3D-00AA001A9D75</LearningStandardItemRefId>
+				<LearningStandardItemRefId>52E34B35-1652-101A-8C3D-00AA001A1667</LearningStandardItemRefId>
+				<LearningStandardItemRefId>63E85F35-9D75-101A-8C3D-00AA001A2352</LearningStandardItemRefId>
+				<LearningStandardItemRefId>73E34B35-9D75-101A-8C3D-00AA001A1659</LearningStandardItemRefId>
+				<LearningStandardItemRefId>83E34B35-1652-101A-8C3D-00AA001A1652</LearningStandardItemRefId>
 			</LearningStandardItems>
 		</EducationFilter>
 	</xhtml:Example>
