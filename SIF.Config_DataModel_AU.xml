@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<sifSpecificationGeneratorConfig xmlns="http://www.sifassociation.org/sifSpecificationGenerator/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sifassociation.org/sifSpecificationGenerator/1.0  sifSpecificationGeneratorConfig.xsd">
+<sifSpecificationGeneratorConfig 
+	xmlns="http://www.sifassociation.org/sifSpecificationGenerator/1.0" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.sifassociation.org/sifSpecificationGenerator/1.0  
+	sifSpecificationGeneratorConfig.xsd">	
 	
 	<globalSettings>
 		<inputDocument>SIF_DataModel.xml</inputDocument>
 		<sifNamespace>http://www.sifassociation.org/datamodel/au/3.4</sifNamespace>
 		<localizationCode>au</localizationCode>
 		<schemaVersion>3.4.3</schemaVersion>
+		<!-- <jsonExamplesXslt>98_Xslt/xmlToJson.xsl</jsonExamplesXslt> -->
+		<!-- <resolveExtensions>true</resolveExtensions> -->
+		<isDraft>false</isDraft>
 	</globalSettings>
 	
 	<htmlDocuments>
@@ -110,8 +117,32 @@
 			<listWithKeyConstraints>false</listWithKeyConstraints>
 			<isSifMessage2Xsd>false</isSifMessage2Xsd>
 		</xsdDocument>
-		
-
-		
 	</xsdDocuments>
+	
+	<!-- Other outputs built using XSLT -->
+	<!-- <xsltTransformations>
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchema.xsl</xsltInputFile>
+
+			<xsltOutputDir>JSON</xsltOutputDir>
+			<xsltOutputFile>jsonSchema.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>		
+
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToSwagger.xsl</xsltInputFile>
+
+			<xsltOutputDir>JSON</xsltOutputDir>
+			<xsltOutputFile>swagger.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>		
+
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToOpenAPI.xsl</xsltInputFile>
+
+			<xsltOutputDir>JSON</xsltOutputDir>
+			<xsltOutputFile>OpenAPI.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>		
+	</xsltTransformations> -->
 </sifSpecificationGeneratorConfig>
