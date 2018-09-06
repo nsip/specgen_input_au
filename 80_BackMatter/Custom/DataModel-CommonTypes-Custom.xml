@@ -226,6 +226,53 @@
    	</CommonElement>
         
   <!-- Added for 3.4.4 FQ Object -->
+ 
+  <CommonElement name="FQContextualQuestionListType" type="true" dm="true">
+		<Item>
+			<Element>FQContextualQuestionListType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>A list of Contextual Questions.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>FQContextualQuestion</Element>
+			<Characteristics>OR</Characteristics>
+			<Description>
+				<p>The FQItem being reported on.</p>
+			</Description>
+			<Type ref="CommonTypes" name="FQContextualQuestionType"/>
+		</Item>
+	</CommonElement>
+	<CommonElement name="FQContextualQuestionType" type="true" dm="true">
+
+		<Item>
+			<Element>FQContextualQuestionType</Element>
+			<Characteristics/>
+			<Description>
+				<p>The FQItem contextual question.</p>
+			</Description>
+		</Item>
+		<Item>
+		   <Element>FQType</Element>
+		   <Characteristics>M</Characteristics>
+		   <Description>
+			 <p></p>
+		   </Description>
+		   <Type name="xs:string"></Type>
+  		</Item>  
+		<Item>
+			<Element>FQAnswer</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+			 <p></p>
+			</Description>
+		    <Type name="xs:string"></Type>
+		</Item>
+   	</CommonElement>
+
+	
   	<CommonElement name="FQItemListType" type="true" dm="true">
 		<Item>
 			<Element>FQItemListType</Element>
