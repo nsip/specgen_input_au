@@ -100,6 +100,267 @@
                 
       </CommonElement-->
       
+  <!-- Added for PPOD - PersonPrivacyObligation -->
+    <CommonElement name="DataDomainObligationListType" type="true" dm="true">
+		<Item>
+			<Element>DataDomainObligationListType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p></p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>DataDomainObligation</Element>
+			<Characteristics>OR</Characteristics>
+			<Description>
+				<p></p>
+			</Description>
+			<Type ref="CommonTypes" name="DataDomainObligationType"/>
+		</Item>
+	</CommonElement>
+	
+	<CommonElement name="DataDomainObligationType" type="true" dm="true">
+			<Item>
+			<Element>DataDomainObligationType</Element>
+			<Characteristics/>
+			<Description>
+				<p>.</p>
+			</Description>
+		</Item>
+		<Item>
+		   <Element>DataDomain</Element>
+		   <Characteristics>M</Characteristics>
+		   <Description>
+			 <p></p>
+		   </Description>
+		   <Type name="xs:string"></Type>
+  		</Item>  
+
+		<Item>
+		   <Element>DomainComments</Element>
+		   <Characteristics>M</Characteristics>
+		   <Description>
+			 <p>Comments associated with data obligation.</p>
+		   </Description>
+		   <Type name="xs:string"></Type>
+		</Item>
+		<Item>
+			<Element>ShareWithList</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+			 <p></p>
+			</Description>
+		    <Type ref="CommonTypes" name="ShareWithListType"/>
+		</Item>
+	</CommonElement>
+	<CommonElement name="ShareWithListType" type="true" dm="true">
+		<Item>
+			<Element>ShareWithListType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>A list of parties and data sharing permissions.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>ShareWith</Element>
+			<Characteristics>OR</Characteristics>
+			<Description>
+				<p>The FQItem being reported on.</p>
+			</Description>
+			<Type ref="CommonTypes" name="ShareWithType"/>
+		</Item>
+	</CommonElement>
+	
+	<CommonElement name="ShareWithType" type="true" dm="true">
+		<Item>
+			<Element>ShareWithType</Element>
+			<Characteristics/>
+			<Description>
+				<p>Information about data sharing.</p>
+			</Description>
+		</Item>
+		<Item>
+		   <Element>ShareWithParty</Element>
+		   <Characteristics>M</Characteristics>
+		   <Description>
+			 <p>Who data could be shared with?</p>
+		   </Description>
+		   <Type name="xs:string"></Type>
+  		</Item>  
+		<Item>
+			<Element>Purpose</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+			 <p>Why is this information to be shared?</p>
+			</Description>
+		    <Type name="xs:string"></Type>
+		</Item>
+		<Item>
+		   <Element>ShareWithComments</Element>
+		   <Characteristics>M</Characteristics>
+		   <Description>
+			 <p>Comments associated with Sharing arrangement</p>
+		   </Description>
+		   <Type name="xs:string"></Type>
+		</Item>
+		<Item>
+		   <Element>PermissionToOnShare</Element>
+		   <Characteristics>M</Characteristics>
+		   <Description>
+			 <p>Can this information be shared with other parties?</p>
+		   </Description>
+		   <Type ref="CommonTypes" name="AUCodeSetsYesOrNoCategoryType"/>
+		</Item>
+		
+		<Item>
+		   <Element>ShareWithURL</Element>
+		   <Characteristics>M</Characteristics>
+		   <Description>
+			 <p>URL Associated with Share</p>
+		   </Description>
+		   <Type name="xs:anyURI"></Type>
+		</Item>
+		   	
+   	</CommonElement>
+        
+  <!-- Added for 3.4.4 FQ Object -->
+  	<CommonElement name="FQItemListType" type="true" dm="true">
+		<Item>
+			<Element>FQItemListType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>A list of FQ Items reported on.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>FQItem</Element>
+			<Characteristics>OR</Characteristics>
+			<Description>
+				<p>The FQItem being reported on.</p>
+			</Description>
+			<Type ref="CommonTypes" name="FQItemType"/>
+		</Item>
+	</CommonElement>
+	
+	<CommonElement name="FQItemType" type="true" dm="true">
+
+		<Item>
+			<Element>FQItemType</Element>
+			<Characteristics/>
+			<Description>
+				<p>The FQItem being reported on.</p>
+			</Description>
+		</Item>
+		<Item>
+		   <Element>FQItemCode</Element>
+		   <Characteristics>M</Characteristics>
+		   <Description>
+			 <p></p>
+		   </Description>
+		   <Type name="xs:string"></Type>
+  		</Item>  
+		<Item>
+			<Element>FQItemTotalAmount</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+			 <p></p>
+			</Description>
+		    <Type name="xs:decimal"></Type>
+		</Item>
+		<Item>
+		   <Element>FQItemComments</Element>
+		   <Characteristics>M</Characteristics>
+		   <Description>
+			 <p>Comments associated with a FQ Item</p>
+		   </Description>
+		   <Type name="xs:string"></Type>
+		</Item>
+		<Item>
+			<Element>ComponentList</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+			 <p></p>
+			</Description>
+		    <Type ref="CommonTypes" name="FQComponentListType"/>
+		</Item>
+   	</CommonElement>
+   	
+	<CommonElement name="FQComponentListType" type="true" dm="true">
+		<Item>
+			<Element>FQComponentListType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>A list of Components making up the Financial Item.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>Component</Element>
+			<Characteristics>OR</Characteristics>
+			<Description>
+				<p>The Component making up the Financial Item.</p>
+			</Description>
+			<Type ref="CommonTypes" name="FQComponentType"/>
+		</Item>
+	</CommonElement>
+	<CommonElement name="FQComponentType" type="true" dm="true">
+		<Item>
+			<Element>FQComponentType</Element>
+			<Characteristics/>
+			<Description>
+				<p>Component.</p>
+			</Description>
+		</Item>
+		<Item>
+			<Element>FQType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+			  <p>Financial Data Type</p>
+			</Description>
+			<Values>
+			  <Value>
+				<Code>Tuition</Code>
+			  </Value>
+			  <Value>
+				<Code>Boarding</Code>
+			  </Value>			  
+			  <Value>
+				<Code>Diocese</Code>
+			  </Value>
+			  <Value>
+				<Code>System</Code>
+			  </Value>
+			</Values>
+		</Item>
+		<Item>
+			<Element>Proportion</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+			  <p>Proportion of the Financial Data Type, if known.</p>
+			</Description>
+			<Type name="xs:decimal"></Type> 
+		</Item>  
+		<Item>
+			<Element>Amount</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+			  <p></p>
+			</Description>
+			<Type name="xs:decimal"></Type> 
+		</Item> 
+		<Item>
+		   <Element>ComponentComments</Element>
+		   <Characteristics>M</Characteristics>
+		   <Description>
+			 <p>Comments associated with a component</p>
+		   </Description>
+		   <Type name="xs:string"></Type>
+		</Item>
+   	</CommonElement>
+      
   <!-- Added for 3.4.3 -->
 	<CommonElement name="CopyRightContainerType" type="true" dm="true">
 		<Item>

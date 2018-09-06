@@ -1,0 +1,460 @@
+<DataObject name="FQReportingObject"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xmlns:xi="http://www.w3.org/2001/XInclude"
+			xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	
+            xmlns="http://sifassociation.org/SpecGen">
+
+  <Key>@RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>FQReportingObject</Element>
+	<privacyRating>High</privacyRating>
+    <Description>
+      <p></p>
+     </Description>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+	<privacyRating>High</privacyRating>
+    <Description>
+      <p>GUID for this Report. The application that owns this object is responsible for generating this unique Id.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+  
+  <Item>
+    <Element>SchoolInfoRefId</Element>    
+    <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
+    <Description>
+      <p>A pointer back to the SchoolObject underlying this Report if it exists.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  
+   <Item>
+    <Element>LocalId</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>The locally-assigned identifier for this school.</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>
+  <Item>
+    <Element>StateProvinceId</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>The state-assigned identifier for this school.</p>
+    </Description>
+    <Type ref="CommonTypes" name="StateProvinceIdType"></Type>
+  </Item>
+  <Item>
+    <Element>CommonwealthId</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Commonwealth identifier for this school/campus.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+   <Item>
+    <Element>ACARAId</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>ACARA identifier for this school/campus.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  <Item> 
+   <Element>SchoolName</Element>
+    <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Name of school/campus.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  
+   <Item>
+    <Element>SchoolType</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>An indication of the level of the educational institution.</p>
+    </Description>
+    <Type ref='CodeSets' name='AUCodeSetsSchoolLevelType'/>
+  </Item>
+  
+  <Item>
+    <Element>PrincipalInfo</Element>
+
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Information about the campus or school principal.</p>
+    </Description>
+    <Type ref="CommonTypes" name="PrincipalInfoType"></Type>
+  </Item>
+  
+  <Item>
+    <Element>SchoolContactList</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>A list of contact persons associated with a school.</p>
+    </Description>
+    <Type ref="CommonTypes" name="SchoolContactListType"></Type>
+  </Item>
+  <Item>
+    <Element>AddressList</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Type ref="CommonTypes" name="AddressListType"></Type>
+    <Description>
+      <p>The school's addresses.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>PhoneNumberList</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Type ref="CommonTypes" name="PhoneNumberListType"></Type>
+    <Description>
+      <p>The school's phone numbers.</p>
+    </Description>
+  </Item>
+  
+  <Item>
+    <Element>SchoolSector</Element>
+    <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>(Government, or Non-Government).</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsSchoolSectorCodeType"></Type>
+  </Item>
+  <Item>
+    <Element>IndependentSchool</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Indicator as to whether school is an independent school (as opposed to government or catholic school).</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
+  </Item>
+  <Item>
+    <Element>NonGovSystemicStatus</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Used to clarify a non-government school's systemic status. Either Systemic or Non-Systemic.</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsSystemicStatusType"></Type>
+  </Item>
+  
+  <Item>
+    <Element>YearLevels</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>List of year levels offered by the school.</p>
+    </Description>
+    <Type ref="CommonTypes" name="YearLevelsType"></Type>
+  </Item>
+  
+   
+   <Item>
+    <Element>YearLevelEnrollmentList</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Container for number of students enrolled per year level.</p>
+    </Description>
+  <Type ref="CommonTypes" name="YearLevelEnrollmentListType"></Type>
+  </Item>
+
+   <Item>
+    <Element>TotalEnrollments</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Optional School/Campus enrolments.</p>
+    </Description>
+    <Type ref="CommonTypes" name="TotalEnrollmentsType"></Type>
+  </Item>
+   
+  
+  <Item>
+    <Element>FQItemList</Element>    
+    <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
+    <Description>
+      <p>A list of Financial Items being reported on for the AG Collection.</p>
+    </Description>
+	<Type ref="CommonTypes" name="FQItemListType"></Type>
+  </Item>
+
+  <Item>   
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+  
+  <xhtml:Example xmlns="" name="FQReportingObject">
+    <FQReportingObject RefId="D3E34B35-9D75-101A-8C3D-00AA001A1652">
+      <SchooInfoRefId>C4D54B35-9D75-101A-8C3D-00AA001A1689</SchooInfoRefId> 
+      <LocalId>01011234</LocalId>
+      <StateProvinceId>01011234</StateProvinceId>
+      <CommonwealthId>012345</CommonwealthId>
+	  <ACARAId>1234</ACARAId> 	  
+      <SchoolName>XXX Secondary College</SchoolName>
+
+      <PrincipalInfo>
+        <ContactName Type="LGL">
+            <Title>Mr</Title>
+            <FamilyName>Mason</FamilyName>
+            <GivenName>Francis</GivenName>
+            <MiddleName>Frank</MiddleName>
+            <Suffix>Jr.</Suffix>
+            <FullName>Mr Frank Mason Jr.</FullName>
+        </ContactName>
+        <ContactTitle>Senior School Principal</ContactTitle>
+      </PrincipalInfo>
+      <SchoolContactList>
+        <SchoolContact>
+          <PublishInDirectory>Y</PublishInDirectory>
+          <ContactInfo>
+            <Name Type="LGL">
+              <Title>Mr</Title>
+              <FamilyName>Miller</FamilyName>
+              <GivenName>James</GivenName>
+              <MiddleName>Mark</MiddleName>
+              <Suffix>Jr.</Suffix>
+                <FullName>Mr James Mark Miller Jr.</FullName>
+              </Name>
+            <PositionTitle>Auditor</PositionTitle>
+            <Role>School Auditor</Role>
+            <RegistrationDetails>CPA-12345566</RegistrationDetails>
+            <Qualifications>CPA</Qualifications>
+            <Address Type="0123" Role="012B">
+              <Street>
+                <Line1>23 Nicholson Street</Line1>
+                </Street>
+                  <City>xxxxx</City>
+                  <StateProvince>VIC</StateProvince>
+                  <Country>1101</Country>
+                  <PostalCode>3004</PostalCode>
+               </Address>
+            <EmailList>
+              <Email Type="01">jmiller@lsc.vic.edu.au</Email>
+              <Email Type="02">jmiller@yahoo.com.au</Email>
+            </EmailList>
+            <PhoneNumberList>
+              <PhoneNumber Type="0096">
+                <Number>03 9637-2000</Number>
+                <Extension>72345</Extension>
+                <ListedStatus>Y</ListedStatus>
+              </PhoneNumber>
+            </PhoneNumberList>
+          </ContactInfo>
+        </SchoolContact>
+      </SchoolContactList>
+
+      <SchoolSector>NG</SchoolSector>
+      <IndependentSchool>Y</IndependentSchool>
+      <NonGovSystemicStatus>S</NonGovSystemicStatus>
+      <FQItemList>
+		<FQItem>
+			<FQItemCode>RI.010</FQItemCode>
+			<FQItemTotalAmount>8,604,314</FQItemTotalAmount>
+			<FQItemComments>RI.010 has components</FQItemComments>
+			<ComponentList>
+				<FQComponent>
+					<FQType>Tuition</FQType>
+					<Amount>8,000,000</Amount>
+					<ComponentComments>Approved</ComponentComments>
+				</FQComponent>
+				<FQComponent>
+					<FQType>Boarding</FQType>
+					<Amount>604,314</Amount>
+					<ComponentComments>Approved</ComponentComments>
+				</FQComponent>			
+			</ComponentList>
+		</FQItem>	
+		<FQItem>
+			<FQItemCode>RI.020</FQItemCode>
+			<FQItemTotalAmount>639,026</FQItemTotalAmount>
+		</FQItem>
+		<FQItem>
+			<FQItemCode>RI.030</FQItemCode>
+			<FQItemTotalAmount>682,909</FQItemTotalAmount>
+		</FQItem>
+		<FQItem>
+			<FQItemCode>RI.060</FQItemCode>
+			<FQItemTotalAmount>501,541</FQItemTotalAmount>
+		</FQItem>
+		<FQItem>
+			<FQItemCode>RI.070</FQItemCode>
+			<FQItemAmount>3,059,205</FQItemAmount>
+		</FQItem>
+		<FQItem>
+			<FQItemCode>RI.090</FQItemCode>
+			<FQItemTotalAmount>51,780</FQItemTotalAmount>
+		</FQItem>
+		<FQItem>
+			<FQItemCode>RI.100</FQItemCode>
+			<FQItemTotalAmount>9,447,352</FQItemTotalAmount>
+		</FQItem>
+		<FQItem>
+			<FQItemCode>RI.120</FQItemCode>
+			<FQItemTotalAmount>353,287</FQItemTotalAmount>
+		</FQItem>
+		<FQItem>
+			<FQItemCode>RI.130</FQItemCode>
+			<FQItemTotalAmount>23,339,414</FQItemTotalAmount>
+		</FQItem>
+		<FQItem>
+			<FQItemCode>CI.030</FQItemCode>
+			<FQItemTotalAmount>2,868,104</FQItemTotalAmount>
+		</FQItem>
+		<FQItem>
+			<FQItemCode>CI.050</FQItemCode>
+			<FQItemTotalAmount>239,897</FQItemTotalAmount>
+		</FQItem>
+		<FQItem>
+			<FQItemCode>CI.060</FQItemCode>
+			<FQItemTotalAmount>3,108,001</FQItemTotalAmount>
+		</FQItem>
+		<FQItem>
+			<FQItemCode>RE.030</FQItemCode>
+			<FQItemTotalAmount>12,052,751</FQItemTotalAmount>
+		</FQItem>
+		<FQItem>
+			<FQItemCode>RE.040</FQItemCode>
+			<FQItemTotalAmount>2,893,005</FQItemTotalAmount>
+		</FQItem>
+		<FQItem>
+			<FQItemCode>RE.040</FQItemCode>
+			<FQItemTotalAmount>2,893,005</FQItemTotalAmount>
+		</FQItem>
+		<FQItem>
+			<FQItemCode>RE.050</FQItemCode>
+			<FQItemTotalAmount>410,161</FQItemTotalAmount>
+		</FQItem>
+		<FQItem>
+			<FQItemCode>RE.060</FQItemCode>
+			<FQItemTotalAmount>$1,463,981</FQItemTotalAmount>
+		</FQItem>
+		<FQItem>
+			<FQItemCode>RE.070</FQItemCode>
+			<FQItemTotalAmount>211,625</FQItemTotalAmount>
+		</FQItem>
+		<FQItem>
+			<FQItemCode>RE.080</FQItemCode>
+			<FQItemTotalAmount>3,590,929</FQItemTotalAmount>
+		</FQItem>
+		<FQItem>
+			<FQItemCode>RE.090</FQItemCode>
+			<FQItemTotalAmount>1,413,508</FQItemTotalAmount>
+		</FQItem>
+		<FQItem>
+			<FQItemCode>RE.100</FQItemCode>
+			<FQItemTotalAmount>323</FQItemTotalAmount>
+		</FQItem>
+		<FQItem>
+			<FQItemCode>RE.110</FQItemCode>
+			<FQItemTotalAmount>1,579,253</FQItemTotalAmount>
+		</FQItem>
+		<FQItem>
+			<FQItemCode>RE.130</FQItemCode>
+			<FQItemTotalAmount>1,573,168</FQItemTotalAmount>
+		</FQItem>
+		<FQItem>
+			<FQItemCode>RE.140</FQItemCode>
+			<FQItemTotalAmount>401</FQItemTotalAmount>
+		</FQItem>
+		<FQItem>
+			<FQItemCode>RE.150</FQItemCode>
+			<FQItemTotalAmount>25,189,105</FQItemTotalAmount>
+		</FQItem>
+		<FQItem>
+			<FQItemCode>CE.010</FQItemCode>
+			<FQItemTotalAmount>1,052,853</FQItemTotalAmount>
+		</FQItem>
+		<FQItem>
+			<FQItemCode>CE.020</FQItemCode>
+			<FQItemTotalAmount>667,913</FQItemTotalAmount>
+		</FQItem>
+		<FQItem>
+			<FQItemCode>CE.030</FQItemCode>
+			<FQItemTotalAmount>1,720,766</FQItemTotalAmount>
+		</FQItem>
+		<FQItem>
+			<FQItemCode>TA.010</FQItemCode>
+			<FQItemTotalAmount>1,860,895</FQItemTotalAmount>
+		</FQItem><FQItem>
+			<FQItemCode>TA.020</FQItemCode>
+			<FQItemTotalAmount>1,593,533</FQItemTotalAmount>
+		</FQItem>
+		<FQItem>
+			<FQItemCode>LN.050</FQItemCode>
+			<FQItemTotalAmount>23,797,939</FQItemTotalAmount>
+		</FQItem> 
+		<FQItem> 
+			<FQItemCode>LN.060</FQItemCode>
+			<FQItemTotalAmount>1,274,802</FQItemTotalAmount>
+		</FQItem>
+		<FQItem>  
+			<FQItemCode>LN.080</FQItemCode>
+			<FQItemTotalAmount>22,523,137</FQItemTotalAmount>
+		</FQItem> 
+		<FQItem> 
+			<FQItemCode>GF.010</FQItemCode>
+			<FQItemTotalAmount>3,604,413</FQItemTotalAmount>
+		</FQItem>
+		<FQItem> 
+			<FQItemCode>GF.020</FQItemCode>
+			<FQItemTotalAmount>4,125,502</FQItemTotalAmount>
+		</FQItem>
+		<FQItem>  
+			<FQItemCode>GF.030</FQItemCode>
+			<FQItemTotalAmount>4,659,306</FQItemTotalAmount>
+		</FQItem>
+		<FQItem>
+			<FQItemCode>GF.040</FQItemCode>
+			<FQItemTotalAmount>37,017,348</FQItemTotalAmount>
+		</FQItem>	
+		<FQItem>
+			<FQItemCode>GF.050</FQItemCode>
+			<FQItemTotalAmount>21,780,341</FQItemTotalAmount>
+		</FQItem>	
+		<FQItem>
+			<FQItemCode>MS.050</FQItemCode>
+			<FQItemTotalAmount>1,720,766</FQItemTotalAmount>
+		</FQItem>	
+		<FQItem>
+			<FQItemCode>MS.060</FQItemCode>
+			<FQItemTotalAmount>112,433</FQItemTotalAmount>
+		</FQItem>	
+		<FQItem>
+			<FQItemCode>MS.070</FQItemCode>
+			<FQItemTotalAmount>1,274,802</FQItemTotalAmount>
+		</FQItem>	
+		<FQItem>
+			<FQItemCode>MS.110</FQItemCode>
+			<FQItemTotalAmount>1,720,766</FQItemTotalAmount>
+		</FQItem>	
+	</FQItemList>	
+  </FQReportingObject>
+  </xhtml:Example></DataObject>

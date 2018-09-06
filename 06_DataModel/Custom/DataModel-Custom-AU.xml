@@ -98,5 +98,12 @@
 		<xi:include parse="text" href="Common/WellbeingEvent.xml"/>
 		<xi:include parse="text" href="Common/PersonalisedPlan.xml"/>
 		<xi:include parse="text" href="Common/WellbeingCharacteristic.xml"/>
+		
+		<!--FQ Reporting -->
+		<xi:include parse="text" href="AU/FQReportingObject.xml"/>
+		
+		<!--P POD -->
+		<xi:include parse="text" href="Common/PersonPrivacyObligation.xml"/>
+		
 	</Group>
 </IncludeGroup>
