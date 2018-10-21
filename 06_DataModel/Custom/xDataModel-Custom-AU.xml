@@ -100,10 +100,10 @@
 		<xi:include parse="text" href="Common/WellbeingCharacteristic.xml"/>
 		
 		<!--FQ Reporting -->
-		<xi:include parse="text" href="AU/FQReporting.xml"/>
+		<xi:include parse="text" href="AU/FQReportingObject.xml"/>
 		
-		<!--P POD 
-		<xi:include parse="text" href="Common/PersonPrivacyObligation.xml"/> -->
+		<!--P POD -->
+		<xi:include parse="text" href="Common/PersonPrivacyObligation.xml"/>
 		
 	</Group>
 </IncludeGroup>

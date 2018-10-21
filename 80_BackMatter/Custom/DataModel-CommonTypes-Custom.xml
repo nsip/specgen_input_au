@@ -99,8 +99,9 @@
           </Item>      
                 
       </CommonElement-->
-      
+   
   <!-- Added for PPOD - PersonPrivacyObligation -->
+   
     <CommonElement name="DataDomainObligationListType" type="true" dm="true">
 		<Item>
 			<Element>DataDomainObligationListType</Element>
@@ -226,7 +227,7 @@
    	</CommonElement>
         
   <!-- Added for 3.4.4 FQ Object -->
- 
+  
   <CommonElement name="FQContextualQuestionListType" type="true" dm="true">
 		<Item>
 			<Element>FQContextualQuestionListType</Element>
@@ -255,7 +256,7 @@
 			</Description>
 		</Item>
 		<Item>
-		   <Element>FQType</Element>
+		   <Element>FQContext</Element>
 		   <Characteristics>M</Characteristics>
 		   <Description>
 			 <p></p>
@@ -310,103 +311,204 @@
 		   <Type name="xs:string"></Type>
   		</Item>  
 		<Item>
-			<Element>FQItemTotalAmount</Element>
-			<Characteristics>M</Characteristics>
+			<Element>TuitionAmount</Element>
+			<Characteristics>O</Characteristics>
 			<Description>
-			 <p></p>
+			 <p>Amount associated with Tuition.</p>
 			</Description>
 		    <Type name="xs:decimal"></Type>
 		</Item>
 		<Item>
-		   <Element>FQItemComments</Element>
+			<Element>BoardingAmount</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+			 <p>Amount associated with Boarding.</p>
+			</Description>
+		    <Type name="xs:decimal"></Type>
+		</Item>        
+		<Item>
+			<Element>SystemAmount</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+			 <p>Amount associated with the System.</p>
+			</Description>
+		    <Type name="xs:decimal"></Type>
+		</Item>                
+		<Item>
+			<Element>DioceseAmount</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+			 <p>Amount associated with the Diocese.</p>
+			</Description>
+		    <Type name="xs:decimal"></Type>
+		</Item>                
+		<Item>
+		   <Element>FQComments</Element>
 		   <Characteristics>M</Characteristics>
 		   <Description>
 			 <p>Comments associated with a FQ Item</p>
 		   </Description>
 		   <Type name="xs:string"></Type>
 		</Item>
-		<Item>
-			<Element>ComponentList</Element>
-			<Characteristics>O</Characteristics>
-			<Description>
-			 <p></p>
-			</Description>
-		    <Type ref="CommonTypes" name="FQComponentListType"/>
-		</Item>
+		
    	</CommonElement>
    	
-	<CommonElement name="FQComponentListType" type="true" dm="true">
+	<CommonElement name="FQRuleListType" type="true" dm="true">
 		<Item>
-			<Element>FQComponentListType</Element>
+			<Element>FQRuleListType</Element>
 			<Characteristics>O</Characteristics>
 			<Description>
-				<p>A list of Components making up the Financial Item.</p>
+				<p>A list of Rules associated with the Item.</p>
 			</Description>
 			<List mode="List"/>
 		</Item>
 		<Item>
-			<Element>Component</Element>
+			<Element>FQRule</Element>
 			<Characteristics>OR</Characteristics>
 			<Description>
-				<p>The Component making up the Financial Item.</p>
+				<p>Rule associated with the Financial Item.</p>
 			</Description>
-			<Type ref="CommonTypes" name="FQComponentType"/>
+			<Type ref="CommonTypes" name="FQRuleType"/>
 		</Item>
 	</CommonElement>
-	<CommonElement name="FQComponentType" type="true" dm="true">
+	<CommonElement name="FQRuleType" type="true" dm="true">
 		<Item>
-			<Element>FQComponentType</Element>
+			<Element>FQRuleType</Element>
 			<Characteristics/>
 			<Description>
-				<p>Component.</p>
+				<p>Rule.</p>
 			</Description>
 		</Item>
 		<Item>
-			<Element>FQType</Element>
+			<Element>FQRuleCode</Element>
 			<Characteristics>O</Characteristics>
 			<Description>
-			  <p>Financial Data Type</p>
+			  <p>Financial Data Rule Code.</p>
 			</Description>
-			<Values>
-			  <Value>
-				<Code>Tuition</Code>
-			  </Value>
-			  <Value>
-				<Code>Boarding</Code>
-			  </Value>			  
-			  <Value>
-				<Code>Diocese</Code>
-			  </Value>
-			  <Value>
-				<Code>System</Code>
-			  </Value>
-			</Values>
+			<Type name="xs:normalizedString"></Type>
 		</Item>
 		<Item>
-			<Element>Proportion</Element>
-			<Characteristics>O</Characteristics>
-			<Description>
-			  <p>Proportion of the Financial Data Type, if known.</p>
-			</Description>
-			<Type name="xs:decimal"></Type> 
-		</Item>  
-		<Item>
-			<Element>Amount</Element>
-			<Characteristics>O</Characteristics>
-			<Description>
-			  <p></p>
-			</Description>
-			<Type name="xs:decimal"></Type> 
-		</Item> 
-		<Item>
-		   <Element>ComponentComments</Element>
-		   <Characteristics>M</Characteristics>
+		   <Element>FQRuleComment</Element>
+		   <Characteristics>O</Characteristics>
 		   <Description>
-			 <p>Comments associated with a component</p>
+			 <p>Comment associated with a Rule.</p>
 		   </Description>
 		   <Type name="xs:string"></Type>
 		</Item>
    	</CommonElement>
+   	
+   	<CommonElement name="SoftwareVendorInfoContainerType" type="true" dm="true">
+		<Item>
+			<Element>SoftwareVendorInfoContainerType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>Container for elements containing information on the Software Product and Vendor.</p>
+			</Description>
+		</Item>
+		<Item>
+			<Element>SoftwareProduct</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>Product used to create the Submission.</p>
+			</Description>
+			<Type name="xs:normalizedString"/>
+		</Item>
+		<Item>
+			<Element>SoftwareVersion</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>Version of the sofware used to create the Submission.</p>
+			</Description>
+			<Type name="xs:normalizedString"/>
+		</Item>
+	</CommonElement>
+  
+  <CommonElement name="EntityContactInfoType" type="true" dm="true">
+	<Item>
+		<Element>EntityContactInfoType</Element>
+		<Description>
+			<p>Common element used to supply information for a contact person at a school, LEA, or other institution.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>Name</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p></p>
+		</Description>
+		<Type ref="CommonTypes" name="NameType"/>
+	</Item>
+	<Item>
+		<Element>PositionTitle</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The contact person's position title.</p>
+		</Description>
+		<ItemExample>Superintendent</ItemExample>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>Role</Element>
+		<Characteristics>O</Characteristics>
+		<Type name="xs:normalizedString"/>
+		<Description>
+			<p>Role played by this contact in this instance.</p>
+		</Description>
+		<ItemExample>Report Contact</ItemExample>
+		<ItemExample>Primary Contact</ItemExample>
+		<ItemExample>Alternate Contact</ItemExample>
+	</Item>
+	<Item>
+		<Element>RegistrationDetails</Element>
+		<Characteristics>O</Characteristics>
+		<Type name="xs:normalizedString"/>
+		<Description>Registration Details of the Contact.</Description>
+	</Item>
+	<Item>
+		<Element>Qualifications</Element>
+		<Characteristics>O</Characteristics>
+		<Type name="xs:normalizedString"/>
+		<Description>Qualifications of the Contact.</Description>
+	</Item>	
+	<Item>
+		<Element>Address</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Address of the contact.</p>
+		</Description>
+		<Type ref="CommonTypes" name="AddressType"/>
+	</Item>
+	<Item>
+		<Element>Email</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>List of Email elements.</p>
+		</Description>
+		<Type ref="CommonTypes" name="EmailType"/>
+	</Item>
+	<Item>
+		<Element>PhoneNumber</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>List of PhoneNumber elements.</p>
+		</Description>
+		<Type ref="CommonTypes" name="PhoneNumberType"/>
+	</Item>
+	<xhtml:Example xmlns="">
+		<EntityContactInfo>
+			<Name Type="LGL">
+				<FamilyName>Woodall</FamilyName>
+				<GivenName>Charles</GivenName>
+				<MiddleName>William</MiddleName>
+			</Name>
+			<PositionTitle>Superintendent</PositionTitle>
+			<Email Type="01">drseuss@whoville.k12.state.us</Email>
+			<PhoneNumber Type="0096">
+				<Number>(02) 9555-0102</Number>
+			</PhoneNumber>
+		</EntityContactInfo>
+	</xhtml:Example>
+</CommonElement>
       
   <!-- Added for 3.4.3 -->
 	<CommonElement name="CopyRightContainerType" type="true" dm="true">
@@ -1126,7 +1228,7 @@
 	  <Item>
 		<Element>FollowUpActionListType</Element>
 		 <Description>
-          <p>List of Actions where an action resulted and is known – maybe just a link to a WellbeingResponse Object</p>
+          <p>List of Actions where an action resulted and is known - maybe just a link to a WellbeingResponse Object</p>
         </Description>
          <Characteristics>O</Characteristics>
   		<List mode="List">
@@ -1342,7 +1444,7 @@
 		<Characteristics>M</Characteristics>
 		<Type ref="CodeSets" name="AUCodeSetsSuspensionCategoryType"/>
 		<Description>
-		  <p>Categorisation of a Suspension record to fall into, In School, Withdrawal, Expulsion/Exclusion etc.  In School is usually NOT formally recognised by a jurisdiction but managed at a school level where the student is temporarily withdrawn from normal classes. Expulsion/Exclusion may mean the student’s attendance at a school is terminated.
+		  <p>Categorisation of a Suspension record to fall into, In School, Withdrawal, Expulsion/Exclusion etc.  In School is usually NOT formally recognised by a jurisdiction but managed at a school level where the student is temporarily withdrawn from normal classes. Expulsion/Exclusion may mean the student's attendance at a school is terminated.
 		  </p>
 		</Description>
 	  </Item>
@@ -1358,7 +1460,7 @@
 		<Element>Duration</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
-			<p>The duration of a Suspension in days 0.00 – X.xx.  (Half Day = 0.5, Full Day = 1.0 or the percentage of any day.)  Must be provided for a Suspension when known.</p>
+			<p>The duration of a Suspension in days 0.00 - X.xx.  (Half Day = 0.5, Full Day = 1.0 or the percentage of any day.)  Must be provided for a Suspension when known.</p>
 		</Description>
 		<Type name="xs:decimal"></Type>
     </Item>
@@ -1374,7 +1476,7 @@
   	   	<Element>ResolutionMeetingTime</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
-		  <p>The date and time at which a meeting with the student’s parents/carers was held to resolve the Suspension.</p>
+		  <p>The date and time at which a meeting with the student's parents/carers was held to resolve the Suspension.</p>
 		</Description>
 		<Type name="xs:dateTime"></Type>  
   	</Item>
@@ -1673,7 +1775,7 @@
   	   	<Element>DocumentType</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
-		  <p>Type of Document – could be a ‘Plan’.</p>
+		  <p>Type of Document - could be a 'Plan'.</p>
 		</Description>
 		<Type name="xs:normalizedString"></Type>  
   	</Item>
@@ -1933,7 +2035,7 @@
   	
   <Item>
     <Element>TestletName</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
     <Type name="xs:normalizedString"></Type>
     <Description>
       <p>Testlet name allocated at test construction.</p>
@@ -2628,7 +2730,7 @@
 	</Item>
 	<Item>
 		<Element>ItemResponse</Element>
-		<Characteristics>MR</Characteristics>
+		<Characteristics>OR</Characteristics>
 		<Description>
 			<p></p>
 		</Description>
@@ -2733,7 +2835,7 @@
 	</Item>
 	<Item>
 		<Element>Subscore</Element>
-		<Characteristics>MR</Characteristics>
+		<Characteristics>OR</Characteristics>
 		<Description>
 			<p></p>
 		</Description>
@@ -2820,7 +2922,7 @@
 		<Element>StudentDomainBand</Element>
 		<Characteristics>M</Characteristics>
 		<Description>
-			<p>The integer value of the performance band that the student’s score is in for the NAP test domain.</p>
+			<p>The integer value of the performance band that the student's score is in for the NAP test domain.</p>
 		</Description>
 		<Type name="xs:integer"></Type>
    </Item>
@@ -2829,7 +2931,7 @@
 		<Element>StudentProficiency</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
-			<p>The Skill Progression Level that the student’s score is in for the NAP test domain.</p>
+			<p>The Skill Progression Level that the student's score is in for the NAP test domain.</p>
 		</Description>
 		<Type name="xs:normalizedString"/>
 	</Item>
@@ -2979,7 +3081,7 @@
    </Item>
    <Item>
 		<Element>Descriptor</Element>
-		<Characteristics>M</Characteristics>
+		<Characteristics>O</Characteristics>
 		<Description>
 			<p>Descriptor of Writing Rubric</p>
 		</Description>
@@ -3050,7 +3152,7 @@
 	</Item>
 	<Item>
 		<Element>TextDescriptor</Element>
-		<Characteristics>M</Characteristics>
+		<Characteristics>O</Characteristics>
 		<Description>
 			<p></p>
 		</Description>
@@ -3211,7 +3313,7 @@
 		<Element>ATEExpiryDate</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
-			<p>Authority to Enroll Expiry Date if one exists. Authority to Enroll Expiry date is also required to ensure the validity of a  student’s enrolment.</p>
+			<p>Authority to Enroll Expiry Date if one exists. Authority to Enroll Expiry date is also required to ensure the validity of a  student's enrolment.</p>
 		</Description>
 		<Type name="xs:date"/>
 	</Item>	
@@ -3219,7 +3321,7 @@
 		<Element>ATEStartDate</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
-			<p>Authority to Enroll Start Date if one exists. Authority to Enroll Start is also required to ensure the validity of a  student’s enrolment.</p>
+			<p>Authority to Enroll Start Date if one exists. Authority to Enroll Start is also required to ensure the validity of a  student's enrolment.</p>
 		</Description>
 		<Type name="xs:date"/>
 	</Item>	
@@ -6400,7 +6502,7 @@
 		<Element>TeacherListType</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
-			<p>A List of teachers associated with the group –  may or may not include the teacher timetabled in the schedule.</p>
+			<p>A List of teachers associated with the group - may or may not include the teacher timetabled in the schedule.</p>
 		</Description>
 		<List mode="List"/>
 	</Item>
@@ -6408,7 +6510,7 @@
 		<Element>TeachingGroupTeacher</Element>
 		<Characteristics>MR</Characteristics>
 		<Description>
-			<p>Teacher associated with the Teaching group –  may or may not be the teacher timetabled in the schedule</p>
+			<p>Teacher associated with the Teaching group - may or may not be the teacher timetabled in the schedule</p>
 		</Description>
 		<Type ref="CommonTypes" name="TeachingGroupTeacherType"/>
 	</Item>
@@ -6418,7 +6520,7 @@
 		<Element>TeachingGroupTeacherType</Element>
 		<Characteristics>MR</Characteristics>
 		<Description>
-			<p>Teacher associated with the Teaching group –  may or may not be the teacher timetabled in the schedule</p>
+			<p>Teacher associated with the Teaching group -  may or may not be the teacher timetabled in the schedule</p>
 		</Description>
 	</Item>
 	<Item>
@@ -6518,7 +6620,7 @@
 		<Element>TimeTableDay</Element>
 		<Characteristics>MR</Characteristics>
 		<Description>
-			<p>This element identifies a ‘day’ in a TimeTable.</p>
+			<p>This element identifies a 'day' in a TimeTable.</p>
 		</Description>
 		<Type ref="CommonTypes" name="TimeTableDayType"/>
 	</Item>
@@ -6528,7 +6630,7 @@
 		<Element>TimeTableDayType</Element>
 		<Characteristics>MR</Characteristics>
 		<Description>
-			<p>This element identifies a ‘day’ in a TimeTable.</p>
+			<p>This element identifies a 'day' in a TimeTable.</p>
 		</Description>
 	</Item>
 	<Item>
@@ -7620,9 +7722,7 @@
 		<Element>Name</Element>
 		<Characteristics>M</Characteristics>
 		<Description>
-			<p>
-        
-      </p>
+			<p></p>
 		</Description>
 		<Type ref="CommonTypes" name="NameType"/>
 	</Item>
@@ -7646,6 +7746,18 @@
 		<ItemExample>Primary Contact</ItemExample>
 		<ItemExample>Alternate Contact</ItemExample>
 	</Item>
+	<Item>
+		<Element>RegistrationDetails</Element>
+		<Characteristics>O</Characteristics>
+		<Type name="xs:normalizedString"/>
+		<Description>Registration Details of the Contact.</Description>
+	</Item>
+	<Item>
+		<Element>Qualifications</Element>
+		<Characteristics>O</Characteristics>
+		<Type name="xs:normalizedString"/>
+		<Description>Qualifications of the Contact.</Description>
+	</Item>	
 	<Item>
 		<Element>Address</Element>
 		<Characteristics>O</Characteristics>

@@ -11,9 +11,9 @@
 				The introduction for the NAPLAN only edition of the SIF AU data model.
 			</p>
 		</Intro>
-		<xi:include parse="text" href="AU/SchoolInfo.xml"/>
+		<xi:include parse="text" href="Common/SchoolInfo.xml"/>
 	
-		<xi:include parse="text" href="AU/StudentPersonal.xml"/>
+		<xi:include parse="text" href="Common/StudentPersonal.xml"/>
 		
 	
 		

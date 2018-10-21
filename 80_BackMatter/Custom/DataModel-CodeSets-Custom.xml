@@ -20,7 +20,7 @@
 <Value><Code>MH-14</Code><Text>Reactive Attachment Disorder</Text></Value>
 <Value><Code>MH-15</Code><Text>Social Anxiety Disorder</Text></Value>
 <Value><Code>MH-16</Code><Text>Tic Disorder</Text></Value>
-<Value><Code>MH-17</Code><Text>Tourette’s Syndrome</Text></Value>
+<Value><Code>MH-17</Code><Text>Tourette's Syndrome</Text></Value>
 <Value><Code>MH-18</Code><Text>Conduct Disorder</Text></Value>
 <Value><Code>MS-1</Code><Text>Absence seizures epilepsy</Text></Value>
 <Value><Code>MS-2</Code><Text>Tonic Clonic epilepsy</Text></Value>
@@ -100,10 +100,10 @@
 <Value><Code>MRD</Code><Text>Respiratory Disorder</Text></Value>
 <Value><Code>MB</Code><Text>Blood disorder</Text></Value>
 <Value><Code>MMD</Code><Text>Heart Disease/ Disorder</Text></Value>
-<Value><Code>MMS</Code><Text>Musculo – skeletal conditions</Text></Value>
+<Value><Code>MMS</Code><Text>Musculo - skeletal conditions</Text></Value>
 <Value><Code>MEM</Code><Text>Endocrine and Metabolic Disorders</Text></Value>
 <Value><Code>MC</Code><Text>Childhood cancer</Text></Value>
-<Value><Code>MAA</Code><Text>Allergy – Anaphylaxis</Text></Value>
+<Value><Code>MAA</Code><Text>Allergy - Anaphylaxis</Text></Value>
 <Value><Code>MH</Code><Text>Mental and behavioural disorders</Text></Value>
 <Value><Code>MN</Code><Text>Diseases/conditions of the nervous system</Text></Value>
 <Value><Code>MS</Code><Text>Seizure disorders</Text></Value>
@@ -196,7 +196,7 @@
 			<Value><Code>B3e</Code><Text>Accepts difference</Text></Value>
 			<Value><Code>B3f</Code><Text>Acknowledges the rights of others</Text></Value>
 			<Value><Code>B3g</Code><Text>Uses appropriate language/tone</Text></Value>
-			<Value><Code>B3h</Code><Text>Gives value to others’ opinions</Text></Value>
+			<Value><Code>B3h</Code><Text>Gives value to others' opinions</Text></Value>
 			<Value><Code>B3i</Code><Text>Maintains appropriate personal space</Text></Value>
 			<Value><Code>B3j</Code><Text>Shows consideration of impact of actions on others</Text></Value>
 			<Value><Code>B4a</Code><Text>Is honest</Text></Value>
@@ -236,7 +236,7 @@
 			<Value><Code>B7a</Code><Text>Promotes justice</Text></Value>
 			<Value><Code>B7b</Code><Text>Follows rules and laws</Text></Value>
 			<Value><Code>B7c</Code><Text>Stands up for others appropriately</Text></Value>
-			<Value><Code>B7d</Code><Text>Puts others’ needs before own</Text></Value>
+			<Value><Code>B7d</Code><Text>Puts others' needs before own</Text></Value>
 			<Value><Code>B7e</Code><Text>Contributes to the school/class</Text></Value>
 			<Value><Code>B7f</Code><Text>Contributes to the community</Text></Value>
 			<Value><Code>B7g</Code><Text>Is involved</Text></Value>
@@ -251,7 +251,7 @@
 			<Value><Code>B8b</Code><Text>Shows mutuality (sharing a feeling, action or relationship)</Text></Value>
 			<Value><Code>B8c</Code><Text>Shows reciprocity (“I scratch your back, you scratch mine)</Text></Value>
 			<Value><Code>B8d</Code><Text>Shows goodwill</Text></Value>
-			<Value><Code>B8e</Code><Text>Is attentive to others’ reactions</Text></Value>
+			<Value><Code>B8e</Code><Text>Is attentive to others' reactions</Text></Value>
 			<Value><Code>B8f</Code><Text>Is open to dialogue/discussion</Text></Value>
 			<Value><Code>B8g</Code><Text>Works to be a valued member of a team</Text></Value>
 			<Value><Code>B8h</Code><Text>Offers others choices</Text></Value>
@@ -704,12 +704,17 @@
       </Intro>
       <ID>PNP Code</ID>
       <Values><Value><Code>AIA</Code><Text>Alternative items - audio</Text></Value>
-		<Value><Code>AIM</Code><Text>Alternative items - motor assistive</Text></Value>
+		<Value><Code>AIM</Code><Text>Not In Use 2019</Text></Value>
 		<Value><Code>AIV</Code><Text>Alternative items - visual</Text></Value>
 		<Value><Code>AST</Code><Text>Assistive technology</Text></Value>
-		<Value><Code>AAM</Code><Text>Alternative Items: both audio and motor assistive</Text></Value>
-		<Value><Code>AVM</Code><Text>Alternative Items: both video and motor assistive</Text></Value>
-		<Value><Code>ALL</Code><Text>Alternative Items: audio, visual and motor assistive</Text></Value>
+		<Value><Code>AAM</Code><Text>Not in Use 2019</Text></Value>
+		<Value><Code>AVM</Code><Text>Not in Use 2019</Text></Value>
+		<Value><Code>ALL</Code><Text>Not in Use 2019</Text></Value>
+		<Value><Code>BNB</Code><Text>Colour contrast Black with Blue background</Text></Value>
+		<Value><Code>BNG</Code><Text>Colour contrast Black with Green background</Text></Value>
+		<Value><Code>BNL</Code><Text>Colour contrast Black with Lilac background</Text></Value>
+		<Value><Code>BNW</Code><Text>Colour contrast Black with White background</Text></Value>
+		<Value><Code>BNY</Code><Text>Colour contrast Black with Yellow background</Text></Value>
 		<Value><Code>COL</Code><Text>Colour contrast modification</Text></Value>
 		<Value><Code>OFF</Code><Text>Braille, large print, black and white, electronic test format</Text></Value>
 		<Value><Code>ETA</Code><Text>Extra Time - 5 mins per 30 min or part thereof</Text></Value>
@@ -719,7 +724,14 @@
 		<Value><Code>RBK</Code><Text>Rest break</Text></Value>
 		<Value><Code>SCR</Code><Text>Scribe</Text></Value>
 		<Value><Code>SUP</Code><Text>NAPLAN Support person</Text></Value>
-		<Value><Code>ETD</Code><Text>Extra Time – double total test time</Text></Value>
+		<Value><Code>ETD</Code><Text>Extra Time - double total test time</Text></Value>
+		<Value><Code>CAL</Code><Text>Calculator Fit to Screen</Text></Value>
+		<Value><Code>ENZ</Code><Text>Enable Zoom</Text></Value>
+		<Value><Code>EST</Code><Text>Editor Sticky Toolbar</Text></Value>
+		<Value><Code>LFS</Code><Text>Larger Font Sizes</Text></Value>
+		<Value><Code>RZL</Code><Text>Remember Zoom Level</Text></Value>
+		<Value><Code>ZOF</Code><Text>Zoomed Optimised Features</Text></Value>
+		<Value><Code>ZTFAO</Code><Text>Zoom to Always On</Text></Value>
 		</Values>
    </CodeSet>
    <CodeSet>

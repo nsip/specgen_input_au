@@ -186,7 +186,7 @@
     <Characteristics>O</Characteristics>
 	<privacyRating>High</privacyRating>
     <Description>
-      <p>Flag indicating if the characteristic is confidential or not.  If ‘Y’ should not be shared with any other system/school.</p>
+      <p>Flag indicating if the characteristic is confidential or not.  If 'Y' should not be shared with any other system/school.</p>
     </Description>
     <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
   </Item>    

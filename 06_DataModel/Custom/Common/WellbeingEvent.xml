@@ -13,7 +13,7 @@
     <Element>WellbeingEvent</Element>
 	<privacyRating>High</privacyRating>
     <Description>
-      <p>Event that impacts on a student’s duty of care.  This has been modelled by Sentral as an Incident, by CEOM as a behaviour support incident and by WA previously as an "Incident Report" but looking to move to terminology such as a “Wellbeing Event”.  There is an emphasis that this ‘event’ was needed to track both ‘positive’ and ‘negative’ behaviours and it not just the recording of a discipline incident or an accident.  This event is specific to a student, and is not global (e.g. a pandemic). Where an event involves more than one student, they can be listed in the person’s involved.  Where the event has an impact on a student’s wellbeing an individual record for each student should be generated.  E.g. where a student is reporting that another student fell off his bike, then the reporting student is listed as a person involved.</p>
+      <p>Event that impacts on a student's duty of care.  This has been modelled by Sentral as an Incident, by CEOM as a behaviour support incident and by WA previously as an "Incident Report" but looking to move to terminology such as a “Wellbeing Event”.  There is an emphasis that this 'event' was needed to track both 'positive' and 'negative' behaviours and it not just the recording of a discipline incident or an accident.  This event is specific to a student, and is not global (e.g. a pandemic). Where an event involves more than one student, they can be listed in the person's involved.  Where the event has an impact on a student's wellbeing an individual record for each student should be generated.  E.g. where a student is reporting that another student fell off his bike, then the reporting student is listed as a person involved.</p>
     </Description>
   </Item>
 
@@ -165,7 +165,7 @@
     <Characteristics>O</Characteristics>
 	<privacyRating>High</privacyRating>
     <Description>
-      <p>Flag indicating if the incident is confidential or not.  If ‘Y’ should not be shared with any other system/school.</p>
+      <p>Flag indicating if the incident is confidential or not.  If 'Y' should not be shared with any other system/school.</p>
     </Description>
     <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
   </Item>  
@@ -185,7 +185,7 @@
     <Characteristics>O</Characteristics>
 	<privacyRating>High</privacyRating>
     <Description>
-      <p>List of Actions where an action resulted and is known – maybe just a link to a WellbeingResponse Object</p>
+      <p>List of Actions where an action resulted and is known - maybe just a link to a WellbeingResponse Object</p>
     </Description>
      <Type ref="CommonTypes" name="FollowUpActionListType"></Type>
   </Item>
@@ -231,4 +231,25 @@
     </WellbeingEvent>
 
   </xhtml:Example>
+  
+  <xhtml:Example xmlns="" name="WellbeingEvent2">
+	  <WellbeingEvent RefId="2FFB63B4-CFEF-4820-8501-E7D1E54555CB">
+	  <StudentPersonalRefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</StudentPersonalRefId>
+	  <SchoolInfoRefId>CA285746-359D-7510-1A8C-36432A901A16</SchoolInfoRefId>
+	  <EventId>Yard-10</EventId>
+	  <WellbeingEventNotes>Incident relates to School Yard accident.</WellbeingEventNotes>
+	  <WellbeingEventCategoryClass>D</WellbeingEventCategoryClass>
+	  <WellbeingEventCategoryList>
+		  <WellbeingEventCategory>
+			  <EventCategory>M5</EventCategory>
+			  <WellbeingEventSubCategoryList>
+				  <WellbeingEventSubCategory>M5-a</WellbeingEventSubCategory>
+			  </WellbeingEventSubCategoryList>
+		  </WellbeingEventCategory>
+	  </WellbeingEventCategoryList>
+	  <ReportingStaffRefId>3FFB63B4-CFEF-4820-8501-E7D1E54555CB</ReportingStaffRefId>
+	  <WellbeingEventDate>2017-11-01</WellbeingEventDate>
+	  <WellbeingEventTimePeriod>AM</WellbeingEventTimePeriod>
+	</WellbeingEvent>
+</xhtml:Example>
 </DataObject>
