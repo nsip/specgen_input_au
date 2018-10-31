@@ -228,6 +228,99 @@
         
   <!-- Added for 3.4.4 FQ Object -->
   
+    <CommonElement name="AGReportingObjectResponseListType" type="true" dm="true">
+		<Item>
+			<Element>AGReportingObjectResponseListType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>A list of the Reporting Objects being responsed to.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>AGReportingObjectResponse</Element>
+			<Characteristics>OR</Characteristics>
+			<Description>
+				<p>The AG Reporting Object's response.</p>
+			</Description>
+			<Type ref="CommonTypes" name="AGReportingObjectResponseType"/>
+		</Item>
+	</CommonElement>
+	<CommonElement name="AGReportingObjectResponseType" type="true" dm="true">
+
+		<Item>
+			<Element>AGReportingObjectResponseType</Element>
+			<Characteristics/>
+			<Description>
+				<p>The AG Reporting Object's response.</p>
+			</Description>
+		</Item>
+		<Item>
+		   <Element>SubmittedRefId</Element>
+		   <Characteristics>M</Characteristics>
+		   <Description>
+			 <p>Original Reporting RefId of the submission.</p>
+		   </Description>
+		   <Type ref="CommonTypes" name="IdRefType"></Type>
+  		</Item>  
+		<Item>
+		   <Element>SIFRefId</Element>
+		   <Characteristics>O</Characteristics>
+		   <Description>
+			 <p>AG assigned for a submission (they can be the same as the original submission but at the discretion of the AG). Only required to be sent if different from the initial RefId submitted.</p>
+		   </Description>
+		   <Type ref="CommonTypes" name="IdRefType"></Type>
+  		</Item>  
+		<Item>
+			<Element>HTTPStatusCode</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+			 <p>HTTP Status Code of the original submission.</p>
+			</Description>
+		    <Type name="xs:string"></Type>
+		</Item>
+		<Item>
+		   <Element>ErrorText</Element>
+		   <Characteristics>O</Characteristics>
+		   <Description>
+			 <p>Text associated with an error status.</p>
+		   </Description>
+		   <Type name="xs:normalizedString"></Type>
+		</Item>
+		<Item>
+			<Element>CommonwealthId</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+			  <p>Commonwealth identifier for this school/campus or entity being reported on.</p>
+			</Description>
+			<Type name="xs:normalizedString"></Type>
+	    </Item>
+		<Item>
+			<Element>EntityName</Element>
+		    <Characteristics>O</Characteristics>
+	        <privacyRating>Medium</privacyRating>
+	        <Description>Name of the Entity who this submission is for, if a School, it will be the SchoolName.</Description>
+	        <Type name="xs:normalizedString"></Type>
+	    </Item>   
+	    <Item>
+		  <Element>AGSubmissionStatusCode</Element>
+		  <Characteristics>O</Characteristics>
+		  <privacyRating>Low</privacyRating>
+		  <Description>AG Status Code of the entity's submission.</Description>
+		  <Type name="xs:normalizedString"></Type> 
+	    </Item>
+	    <Item>
+		  <Element>AGRuleList</Element>    
+	      <Characteristics>O</Characteristics>
+		  <privacyRating>High</privacyRating>
+          <Description>
+			  <p>A list of Rules associated with this submission.</p>
+		  </Description>
+		<Type ref="CommonTypes" name="AGRuleListType"></Type>
+  </Item>
+  	</CommonElement>
+  
   <CommonElement name="FQContextualQuestionListType" type="true" dm="true">
 		<Item>
 			<Element>FQContextualQuestionListType</Element>
@@ -353,9 +446,9 @@
 		
    	</CommonElement>
    	
-	<CommonElement name="FQRuleListType" type="true" dm="true">
+	<CommonElement name="AGRuleListType" type="true" dm="true">
 		<Item>
-			<Element>FQRuleListType</Element>
+			<Element>AGRuleListType</Element>
 			<Characteristics>O</Characteristics>
 			<Description>
 				<p>A list of Rules associated with the Item.</p>
@@ -363,38 +456,54 @@
 			<List mode="List"/>
 		</Item>
 		<Item>
-			<Element>FQRule</Element>
+			<Element>AGRule</Element>
 			<Characteristics>OR</Characteristics>
 			<Description>
-				<p>Rule associated with the Financial Item.</p>
+				<p>Rule associated with the Collection Item.</p>
 			</Description>
-			<Type ref="CommonTypes" name="FQRuleType"/>
+			<Type ref="CommonTypes" name="AGRuleType"/>
 		</Item>
 	</CommonElement>
-	<CommonElement name="FQRuleType" type="true" dm="true">
+	<CommonElement name="AGRuleType" type="true" dm="true">
 		<Item>
-			<Element>FQRuleType</Element>
+			<Element>AGRuleType</Element>
 			<Characteristics/>
 			<Description>
 				<p>Rule.</p>
 			</Description>
 		</Item>
 		<Item>
-			<Element>FQRuleCode</Element>
+			<Element>AGRuleCode</Element>
 			<Characteristics>O</Characteristics>
 			<Description>
-			  <p>Financial Data Rule Code.</p>
+			  <p>Collection Data Rule Code.</p>
 			</Description>
 			<Type name="xs:normalizedString"></Type>
 		</Item>
 		<Item>
-		   <Element>FQRuleComment</Element>
+		   <Element>AGRuleComment</Element>
 		   <Characteristics>O</Characteristics>
 		   <Description>
 			 <p>Comment associated with a Rule.</p>
 		   </Description>
-		   <Type name="xs:string"></Type>
+		   <Type name="xs:normalizedString"></Type>
 		</Item>
+		<Item>
+		   <Element>AGRuleResponse</Element>
+		   <Characteristics>O</Characteristics>
+		   <Description>
+			 <p>Response associated with a Rule comment on response to a submission.</p>
+		   </Description>
+		   <Type name="xs:normalizedString"></Type>
+		</Item>   
+		<Item>
+		   <Element>AGRuleStatus</Element>
+		   <Characteristics>O</Characteristics>
+		   <Description>
+			 <p>Status associated with a particular Rule, if there is one.</p>
+		   </Description>
+		   <Type name="xs:normalizedString"></Type>
+		</Item>	
    	</CommonElement>
    	
    	<CommonElement name="SoftwareVendorInfoContainerType" type="true" dm="true">

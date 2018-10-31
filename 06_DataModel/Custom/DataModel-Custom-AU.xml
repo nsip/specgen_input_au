@@ -99,8 +99,9 @@
 		<xi:include parse="text" href="Common/PersonalisedPlan.xml"/>
 		<xi:include parse="text" href="Common/WellbeingCharacteristic.xml"/>
 		
-		<!--FQ Reporting -->
+		<!--AG Collections -->
 		<xi:include parse="text" href="AU/FQReporting.xml"/>
+		<xi:include parse="text" href="AU/AGStatusReport.xml"/>
 		
 		<!--P POD 
 		<xi:include parse="text" href="Common/PersonPrivacyObligation.xml"/> -->

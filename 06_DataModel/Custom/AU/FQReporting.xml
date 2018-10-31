@@ -173,13 +173,13 @@
   </Item>
   
   <Item>
-    <Element>FQRuleList</Element>    
+    <Element>AGRuleList</Element>    
     <Characteristics>O</Characteristics>
 	<privacyRating>High</privacyRating>
     <Description>
       <p>A list of Rules associated with this submission.</p>
     </Description>
-	<Type ref="CommonTypes" name="FQRuleListType"></Type>
+	<Type ref="CommonTypes" name="AGRuleListType"></Type>
   </Item>
   
   <Item>   
@@ -254,12 +254,12 @@
         <DioceseAmount>76543</DioceseAmount>
       </FQItem>
     </FQItemList>
-    <FQRuleList>
-      <FQRule>
-        <FQRuleCode>WR-076</FQRuleCode>
-        <FQRuleComment>I ignored this rule because</FQRuleComment>
-      </FQRule>
-    </FQRuleList>
+    <AGRuleList>
+      <AGRule>
+        <AGRuleCode>WR-076</AGRuleCode>
+        <AGRuleComment>I ignored this rule because</AGRuleComment>
+      </AGRule>
+    </AGRuleList>
   </FQReporting>
 	</xhtml:Example>
 	
@@ -320,12 +320,12 @@
         <DioceseAmount>76543</DioceseAmount>
       </FQItem>
     </FQItemList>
-    <FQRuleList>
-      <FQRule>
-        <FQRuleCode>WR-076</FQRuleCode>
-        <FQRuleComment>I ignored this rule because</FQRuleComment>
-      </FQRule>
-    </FQRuleList>
+    <AGRuleList>
+      <AGRule>
+        <AGRuleCode>WR-076</AGRuleCode>
+        <AGRuleComment>I ignored this rule because</AGRuleComment>
+      </AGRule>
+    </AGRuleList>
   </FQReporting>
   </xhtml:Example>
   	<xhtml:Example xmlns="" name="FQReporting3">
@@ -383,11 +383,11 @@
         <DioceseAmount>76543</DioceseAmount>
       </FQItem>
     </FQItemList>
-    <FQRuleList>
-      <FQRule>
-        <FQRuleCode>WR-076</FQRuleCode>
-        <FQRuleComment>I ignored this rule because</FQRuleComment>
-      </FQRule>
-    </FQRuleList>
+    <AGRuleList>
+      <AGRule>
+        <AGRuleCode>WR-076</AGRuleCode>
+        <AGRuleComment>I ignored this rule because</AGRuleComment>
+      </AGRule>
+    </AGRuleList>
   </FQReporting>
   </xhtml:Example></DataObject>
