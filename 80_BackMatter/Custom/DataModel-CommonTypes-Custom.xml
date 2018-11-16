@@ -1073,7 +1073,7 @@
 	</Item>
 	<Item>
 		<Element>LearningStandardItemRefId</Element>
-		<Characteristics>OR</Characteristics>
+		<Characteristics>O</Characteristics>
 		<Description>
 			<p>GUID of a LearningStandardItem object, presenting the learning standard as part of a well-defined hierarchy (which a client would need to recover and reconstruct).</p>
 		</Description>
