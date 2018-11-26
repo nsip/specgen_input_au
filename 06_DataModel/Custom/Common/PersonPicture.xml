@@ -98,6 +98,16 @@
     </Description>
     <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
   </Item>
+   <Item>
+    <Element>PhotoPermissionList</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Medium</privacyRating>
+    <Description>
+      <p>List of Permissions Applicable.</p>
+    </Description>
+    <Type ref="CommonTypes" name="PhotoPermissionListType"></Type>
+  </Item>
+  
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
@@ -116,6 +126,21 @@
       <SchoolYear>2007</SchoolYear>
       <PictureSource Type="01">http://www.schoolsite.com/pictures/2007/1234.jpg </PictureSource>
       <OKToPublish>Y</OKToPublish>
+        <PhotoPermissionList>
+           <PhotoPermission>
+               <PermissionCategory>OKPrintedMaterial</PermissionCategory>       <!-- Permission to publish to Printed material e.g. NameTag -->
+               <PermissionValue>Y</PermissionValue>
+         </PhotoPermission>
+         <PhotoPermission>
+               <PermissionCategory>OKOnlineMaterial</PermissionCategory> <!-- Permission to publish online material e.g. School's Website -->
+               <PermissionValue>Y</PermissionValue>
+         </PhotoPermission>        
+         <PhotoPermission>
+               <PermissionCategory>OKMediaRelease</PermissionCategory>          <!-- Permission to release to the Media e.g. for school related activities -->
+               <PermissionValue>U</PermissionValue>
+         </PhotoPermission>               
+  </PhotoPermissionList>
+
     </PersonPicture>
 
   </xhtml:Example>

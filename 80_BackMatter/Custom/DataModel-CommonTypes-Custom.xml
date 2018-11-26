@@ -99,7 +99,53 @@
           </Item>      
                 
       </CommonElement-->
+      
+    <CommonElement name="PhotoPermissionListType" type="true" dm="true">
+		<Item>
+			<Element>PhotoPermissionListType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p></p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>PhotoPermission</Element>
+			<Characteristics>OR</Characteristics>
+			<Description>
+				<p></p>
+			</Description>
+			<Type ref="CommonTypes" name="PhotoPermissionType"/>
+		</Item>
+	</CommonElement>
    
+   	<CommonElement name="PhotoPermissionType" type="true" dm="true">
+		<Item>
+			<Element>PhotoPermissionType</Element>
+			<Characteristics/>
+			<Description>
+				<p>.</p>
+			</Description>
+		</Item>
+		<Item>
+		   <Element>PermissionCategory</Element>
+		   <Characteristics>M</Characteristics>
+		   <Description>
+			 <p>What the category of the permission is?  Code set driven so permissions can increase as required.</p>
+		   </Description>
+		   <Type ref="CodeSets" name="AUCodeSetsPermissionCategoryCodeType"/>
+  		</Item>  
+
+		<Item>
+		   <Element>PermissionValue</Element>
+		   <Characteristics>M</Characteristics>
+		   <Description>
+			 <p>Actual value of the Permission.</p>
+		   </Description>
+		   <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"/>
+		</Item>
+	
+	</CommonElement>
   <!-- Added for PPOD - PersonPrivacyObligation -->
    
     <CommonElement name="DataDomainObligationListType" type="true" dm="true">
@@ -212,7 +258,7 @@
 		   <Description>
 			 <p>Can this information be shared with other parties?</p>
 		   </Description>
-		   <Type ref="CommonTypes" name="AUCodeSetsYesOrNoCategoryType"/>
+		   <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"/>
 		</Item>
 		
 		<Item>

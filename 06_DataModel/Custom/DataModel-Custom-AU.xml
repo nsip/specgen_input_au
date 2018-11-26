@@ -103,8 +103,8 @@
 		<xi:include parse="text" href="AU/FQReporting.xml"/>
 		<xi:include parse="text" href="AU/AGStatusReport.xml"/>
 		
-		<!--P POD 
-		<xi:include parse="text" href="Common/PersonPrivacyObligation.xml"/> -->
+		<!--P POD -->
+		<xi:include parse="text" href="Common/PersonPrivacyObligation.xml"/> 
 		
 	</Group>
 </IncludeGroup>

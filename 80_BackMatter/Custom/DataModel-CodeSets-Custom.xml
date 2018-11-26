@@ -9985,4 +9985,32 @@
 			 
 		</Values>
 	</CodeSet>
+	<CodeSet>
+		<Intro>
+			<p>A set of permissions available for photo useage</p>
+		</Intro>
+		<ID>Permission Category Code</ID>
+		<Values>
+			<Value>
+				<Code>OKPrintedMaterial</Code>
+				<Text>OKPrintedMaterial</Text>
+			</Value>
+			<Value>
+				<Code>OKOnlineMaterial</Code>
+				<Text>OKOnlineMaterial</Text>
+			</Value>
+			<Value>
+				<Code>OKMediaRelease</Code>
+				<Text>OKMediaRelease</Text>
+			</Value>
+			<Value>
+				<Code>School/College Newsletter</Code>
+				<Text>School/College Newsletter</Text>
+			</Value>
+			<Value>
+				<Code>School/College Yearbook</Code>
+				<Text>School/College Yearbook</Text>
+			</Value>
+		</Values>
+	</CodeSet>
 </Grouping>

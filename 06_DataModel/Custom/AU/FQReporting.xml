@@ -152,13 +152,7 @@
 	  <Type ref="CommonTypes" name="EntityContactInfoType"></Type>
   </Item>
   
-  <Item>
-	  <Element>FQReportComments</Element>
-	  <Characteristics>O</Characteristics>
-	  <privacyRating>High</privacyRating>
-	  <Description>General comments on this submission.</Description>
-	  <Type name="xs:normalizedString"></Type>
-  </Item>
+
   
   <Item>
     <Element>FQContextualQuestionList</Element>    
@@ -168,6 +162,14 @@
       <p>A list of Financial questions to set the context for the AG Collection.</p>
     </Description>
 	<Type ref="CommonTypes" name="FQContextualQuestionListType"></Type>
+  </Item>
+  
+    <Item>
+	  <Element>FQReportComments</Element>
+	  <Characteristics>O</Characteristics>
+	  <privacyRating>High</privacyRating>
+	  <Description>General comments on this submission.</Description>
+	  <Type name="xs:normalizedString"></Type>
   </Item>
   
   <Item>
