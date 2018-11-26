@@ -7067,7 +7067,7 @@
 	</CodeSet>
 	<CodeSet>
 		<Intro>
-			<p>From http://www.border.gov.au/ Australian Government - Department of Immigration and Border Protection: Updated from Source Data on 28 February, 2017 - Refer to: http://www.border.gov.au/Trav/Visa-1/Visa-listing</p>
+			<p>From http://www.border.gov.au/ Australian Government - Department of Immigration and Border Protection: Updated from Source Data on 28 February, 2017 - Refer to: https://www.homeaffairs.gov.au/Trav/Visa-1/Visa-listing</p>
 		</Intro>
 		<ID>Visa Sub Class</ID>
      <Values><Value><Code>10</Code><Text>Bridging Visa A - BVA</Text></Value>

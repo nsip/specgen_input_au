@@ -196,7 +196,7 @@
     <Characteristics>O</Characteristics>
 	<privacyRating>Low</privacyRating>
     <Description>
-      <p>Allows free-text information, e.g. for excursions. Comment should not be used to identify the location of the venue, since the contents of Comment are open-ended..</p>
+      <p>Allows free-text information, e.g. for excursions. Comment should not be used to identify the location of the venue, since the contents of Comment are open-ended.</p>
     </Description>
     <Type name="xs:normalizedString"></Type>
   </Item>

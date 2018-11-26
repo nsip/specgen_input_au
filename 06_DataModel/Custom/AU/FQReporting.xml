@@ -50,7 +50,7 @@
   </Item>
   <Item>
     <Element>ReportingAuthorityCommonwealthId</Element>
-    <Characteristics>O</Characteristics>
+    <Characteristics>M</Characteristics>
 	<privacyRating>Low</privacyRating>
     <Description>
       <p>Commonwealth identifier for the submitting entity.</p>
@@ -79,7 +79,7 @@
   
   <Item>
 	  <Element>EntityLevel</Element>
-	  <Characteristics>O</Characteristics>
+	  <Characteristics>M</Characteristics>
 	  <privacyRating>Medium</privacyRating>
 	  <Description>Level of the Submission, current valid values "School", "Diocese", "System".</Description>
 	  <!-- Do we need to restrict the level in enumeration of the type? -->
@@ -118,7 +118,7 @@
   
   <Item>
     <Element>CommonwealthId</Element>
-    <Characteristics>O</Characteristics>
+    <Characteristics>M</Characteristics>
 	<privacyRating>Low</privacyRating>
     <Description>
       <p>Commonwealth identifier for this school/campus or entity being reported on.</p>
@@ -146,12 +146,20 @@
    
   <Item>
 	  <Element>EntityContact</Element>
-	  <Characteristics>O</Characteristics>
+	  <Characteristics>M</Characteristics>
 	  <privacyRating>High</privacyRating>
 	  <Description>Information on the Contact for the submission.</Description>
 	  <Type ref="CommonTypes" name="EntityContactInfoType"></Type>
   </Item>
- 
+  
+  <Item>
+	  <Element>FQReportComments</Element>
+	  <Characteristics>O</Characteristics>
+	  <privacyRating>High</privacyRating>
+	  <Description>General comments on this submission.</Description>
+	  <Type name="xs:normalizedString"></Type>
+  </Item>
+  
   <Item>
     <Element>FQContextualQuestionList</Element>    
     <Characteristics>O</Characteristics>
@@ -164,7 +172,7 @@
   
   <Item>
     <Element>FQItemList</Element>    
-    <Characteristics>O</Characteristics>
+    <Characteristics>M</Characteristics>
 	<privacyRating>High</privacyRating>
     <Description>
       <p>A list of Financial Items being reported on for the AG Collection.</p>
@@ -231,6 +239,7 @@
         <FQAnswer>No</FQAnswer>
       </FQContextualQuestion>
     </FQContextualQuestionList>
+    <FQReportComments>This comment is for the FQ Submission.</FQReportComments>
     <FQItemList>
       <FQItem>
         <FQItemCode>RI.010</FQItemCode>

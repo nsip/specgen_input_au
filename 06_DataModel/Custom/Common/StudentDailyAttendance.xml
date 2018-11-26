@@ -113,7 +113,7 @@
     <Characteristics>C</Characteristics>
 	<privacyRating>Low</privacyRating>
     <Description>
-      <p>The time the student left school.  Must be provided if 'Partial' chosen for DayValue..</p>
+      <p>The time the student left school.  Must be provided if 'Partial' chosen for DayValue.</p>
     </Description>
     <Type name="xs:time"></Type>
   </Item>

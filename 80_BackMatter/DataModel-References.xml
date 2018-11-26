@@ -39,7 +39,7 @@
       <p>
         USDA
         (United States Department of Agriculture). Child Nutrition Database
-        (CNDB). 6&#160;July&#160;2006&#160;&lt;<a href="http://riley.nal.usda.gov/nal_display/index.php?info_center=14&amp;tax_level=2&amp;tax_subject=234&amp;topic_id=1210">http://riley.nal.usda.gov/nal_display/index.php?info_center=14&amp;tax_level=2&amp;tax_subject=234&amp;topic_id=1210</a>&gt;
+        (CNDB). 6&#160;July&#160;2006&#160;&lt;<a href="https://healthymeals.fns.usda.gov/menu-planning/software-approved-usda-administrative-reviews/child-nutrition-database">hhttps://healthymeals.fns.usda.gov/menu-planning/software-approved-usda-administrative-reviews/child-nutrition-database</a>&gt;
       </p>
     </td>
   </tr>
@@ -54,6 +54,7 @@
       </p>
     </td>
   </tr>
+  <!--
   <tr>
     <td>
       <a name="EDEN" />EDEN
@@ -64,6 +65,7 @@
       </p>
     </td>
   </tr>
+  -->
   <tr>
     <td>
       <a name="FAVICON" />FAVICON
@@ -91,7 +93,7 @@
       <p>
         IRS
         (Internal Revenue Service) ITIN and ATIN definitions. Publication 1915:
-        Understanding Your IRS Individual Taxpayer Identification Number (Rev. 2-2004). 2004 February. 6&#160;July&#160;2006&#160;&lt;<a href="http://www.irs.gov/pub/irs-pdf/p1915.pdf">http://www.irs.gov/pub/irs-pdf/p1915.pdf</a>&gt;
+        Understanding Your IRS Individual Taxpayer Identification Number (Rev. 1-2018). &lt;<a href="http://www.irs.gov/pub/irs-pdf/p1915.pdf">http://www.irs.gov/pub/irs-pdf/p1915.pdf</a>&gt;
       </p>
     </td>
   </tr>
@@ -113,7 +115,7 @@
     <td class="citation">
       <p>
         IJG
-        (Independent JPEG Group). JPEG File Interchange Format Version&#160;1.02. 6&#160;July&#160;2006&#160;&lt;<a href="http://www.w3.org/Graphics/JPEG/jfif3.pdf">http://www.w3.org/Graphics/JPEG/jfif3.pdf</a>&gt;.
+        (Independent JPEG Group).  &lt;<a href="http://ijg.org/">http://ijg.org/</a>&gt;  JPEG File Interchange Format Version&#160;1.02. &lt;<a href="http://www.w3.org/Graphics/JPEG/jfif3.pdf">http://www.w3.org/Graphics/JPEG/jfif3.pdf</a>&gt;.
       </p>
     </td>
   </tr>
@@ -214,8 +216,7 @@
     <td class="citation">
       <p>
         FIPS
-        (Federal Information Processing Standards). Publication 180-1: Secure Hash Standard (SHS). 17&#160;April&#160;1995.
-        6&#160;July&#160;2006&#160;&lt;<a href="http://www.itl.nist.gov/fipspubs/fip180-1.htm">http://www.itl.nist.gov/fipspubs/fip180-1.htm</a>&gt;.
+        (Federal Information Processing Standards). Publication 180-1: Secure Hash Standard (SHS). ;&lt;<a href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf">https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf</a>&gt;.
       </p>
     </td>
   </tr>
@@ -226,8 +227,8 @@
     <td class="citation">
       <p>
         Australian Bureau of Statistics - 
-        1269.0 Standard Australian Classification of Countries, Second Edition, Revision 1, 2011.
-        &lt;<a href="http://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1269.02011">http://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1269.02011</a>&gt;.
+        1269.0 Standard Australian Classification of Countries, Second Edition, 2016.
+        &lt;<a href="http://www.abs.gov.au/AUSSTATS/abs@.nsf/Lookup/1269.0Main+Features202016">http://www.abs.gov.au/AUSSTATS/abs@.nsf/Lookup/1269.0Main+Features202016</a>&gt;.
       </p>
     </td>
   </tr>
@@ -238,8 +239,8 @@
     <td class="citation">
       <p>
         Australian Bureau of Statistics -
-        1249.0 Australian Standard Classification of Cultural and Ethnic Groups (ASCCEG), Second Edition, 2011
-        &lt;<a href=" http://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1249.02011"> http://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1249.02011</a>&gt;.
+        1249.0 Australian Standard Classification of Cultural and Ethnic Groups (ASCCEG), Second Edition, 2016
+        &lt;<a href=" http://www.abs.gov.au/AUSSTATS/abs@.nsf/allprimarymainfeatures/EA62034F32E23CFACA2570AF00437695"> http://www.abs.gov.au/AUSSTATS/abs@.nsf/allprimarymainfeatures/EA62034F32E23CFACA2570AF00437695</a>&gt;.
       </p>
     </td>
   </tr>
@@ -250,8 +251,8 @@
     <td class="citation">
       <p>
         Australian Bureau of Statistics -
-        1267.0 - Australian Standard Classification of Languages (ASCL), 2005-06.
-        &lt;<a href="http://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1267.02005-06?OpenDocument">http://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1267.02005-06?OpenDocument</a>&gt;.
+        1267.0 - Australian Standard Classification of Languages (ASCL), 2016.
+        &lt;<a href="http://www.abs.gov.au/AUSSTATS/abs@.nsf/allprimarymainfeatures/4293E19B52AC5377CA25703E00045C2E">http://www.abs.gov.au/AUSSTATS/abs@.nsf/allprimarymainfeatures/4293E19B52AC5377CA25703E00045C2E</a>&gt;.
       </p>
     </td>
   </tr>
@@ -262,8 +263,8 @@
     <td class="citation">
       <p>
         Australian Bureau of Statistics -
-        1266.0 Australian Standard Classification of Religious Groups, Second Edition, 2011
-        &lt;<a href="http://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1266.02011">http://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1266.02011</a>&gt;.
+        1266.0 Australian Standard Classification of Religious Groups, 2016
+        &lt;<a href="http://www.abs.gov.au/AUSSTATS/abs@.nsf/allprimarymainfeatures/08D67CE7C3A715C5CA2570D700130F04?opendocument">http://www.abs.gov.au/AUSSTATS/abs@.nsf/allprimarymainfeatures/08D67CE7C3A715C5CA2570D700130F04?opendocument</a>&gt;.
       </p>
     </td>
   </tr>
@@ -274,8 +275,8 @@
     <td class="citation">
       <p>
         Australian Bureau of Statistics -
-        1216.0 - Australian Standard Geographical Classification (ASGC), Jul 2008.
-        &lt;<a href="http://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1216.0Jul%202008?OpenDocument">http://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1216.0Jul%202008?OpenDocument</a>&gt;.
+        1216.0 - Australian Standard Geographical Classification (ASGC), 2011.
+        &lt;<a href="http://www.abs.gov.au/AUSSTATS/abs@.nsf/Lookup/1216.0Main+Features1July%202011?OpenDocument">http://www.abs.gov.au/AUSSTATS/abs@.nsf/Lookup/1216.0Main+Features1July%202011?OpenDocument</a>&gt;.
       </p>
     </td>
   </tr>
