@@ -200,6 +200,16 @@
   </Item>
   
   <Item>
+    <Element>PreviousSchoolName</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>If the staff member has previously been enrolled at a school, the previous school name.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>  
+  
+  <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
 	<privacyRating>Low</privacyRating>

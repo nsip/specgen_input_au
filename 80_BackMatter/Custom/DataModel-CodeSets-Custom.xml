@@ -7488,6 +7488,10 @@
 				<Text>Guardian</Text>
 			</Value>
 			<Value>
+				<Code>40</Code>
+				<Text>Medical Contact</Text>
+			</Value>			
+			<Value>
 				<Code>99</Code>
 				<Text>Not provided</Text>
 			</Value>
@@ -10010,6 +10014,34 @@
 			<Value>
 				<Code>School/College Yearbook</Code>
 				<Text>School/College Yearbook</Text>
+			</Value>
+		</Values>
+	</CodeSet>
+<CodeSet>
+		<Intro>
+			<p>A set of possible school groupings</p>
+		</Intro>
+		<ID>Group Category Code</ID>
+		<Values>
+			<Value>
+				<Code>PastoralGroup</Code>
+				<Text>Pastoral Group</Text>
+			</Value>
+			<Value>
+				<Code>MentorGroup</Code>
+				<Text>Mentor Group</Text>
+			</Value>
+			<Value>
+				<Code>RollGroup</Code>
+				<Text>Roll Group</Text>
+			</Value>
+			<Value>
+				<Code>AfterSchoolGroup</Code>
+				<Text>After School Group</Text>
+			</Value>
+			<Value>
+				<Code>OtherGroup</Code>
+				<Text>Other Group</Text>
 			</Value>
 		</Values>
 	</CodeSet>

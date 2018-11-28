@@ -100,6 +100,60 @@
                 
       </CommonElement-->
       
+    <CommonElement name="StudentGroupListType" type="true" dm="true">
+		<Item>
+			<Element>StudentGroupListType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p></p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>StudentGroup</Element>
+			<Characteristics>OR</Characteristics>
+			<Description>
+				<p></p>
+			</Description>
+			<Type ref="CommonTypes" name="StudentGroupType"/>
+		</Item>
+	</CommonElement>
+   
+   	<CommonElement name="StudentGroupType" type="true" dm="true">
+		<Item>
+			<Element>StudentGroupType</Element>
+			<Characteristics/>
+			<Description>
+				<p>.</p>
+			</Description>
+		</Item>
+		<Item>
+		   <Element>GroupCategory</Element>
+		   <Characteristics>M</Characteristics>
+		   <Description>
+			 <p>The category or type of group being described.  Code set driven so permissions can increase as required.</p>
+		   </Description>
+		   <Type ref="CodeSets" name="AUCodeSetsGroupCategoryCodeType"/>
+  		</Item>  
+
+		<Item>
+		   <Element>GroupLocalId</Element>
+		   <Characteristics>M</Characteristics>
+		   <Description>
+			 <p>LocalId of the Group.</p>
+		   </Description>
+		   <Type ref="CommonTypes" name="LocalIdType"/>
+		</Item>
+		<Item>
+		   <Element>GroupDescription</Element>
+		   <Characteristics>O</Characteristics>
+		   <Description>
+			 <p>Local Description of the Group.</p>
+		   </Description>
+		   <Type name="xs:normalizedString"></Type>
+		</Item>	
+	</CommonElement>
+      
     <CommonElement name="PhotoPermissionListType" type="true" dm="true">
 		<Item>
 			<Element>PhotoPermissionListType</Element>
@@ -131,7 +185,7 @@
 		   <Element>PermissionCategory</Element>
 		   <Characteristics>M</Characteristics>
 		   <Description>
-			 <p>What the category of the permission is?  Code set driven so permissions can increase as required.</p>
+			 <p>What is the category of the permission is?  Code set driven so permissions can increase as required.</p>
 		   </Description>
 		   <Type ref="CodeSets" name="AUCodeSetsPermissionCategoryCodeType"/>
   		</Item>  
@@ -146,7 +200,7 @@
 		</Item>
 	
 	</CommonElement>
-  <!-- Added for PPOD - PersonPrivacyObligation -->
+  <!-- Added for PPOD - PersonPrivacyObligation 
    
     <CommonElement name="DataDomainObligationListType" type="true" dm="true">
 		<Item>
@@ -234,7 +288,7 @@
 		   <Description>
 			 <p>Who data could be shared with?</p>
 		   </Description>
-		   <Type name="xs:string"></Type>
+		   <Type name="xs:normalizedString"></Type>
   		</Item>  
 		<Item>
 			<Element>Purpose</Element>
@@ -271,6 +325,7 @@
 		</Item>
 		   	
    	</CommonElement>
+    -->
         
   <!-- Added for 3.4.4 FQ Object -->
   
@@ -8925,6 +8980,14 @@
 		</Description>
 		<Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"/>
 	</Item>
+    	<Item>
+		<Element>InterpreterRequired</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Is an interpreter required for the school to communicate with this person?</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"/>
+	</Item>	
 	<Item>
 		<Element>ImmunisationCertificateStatus</Element>
 		<Characteristics>O</Characteristics>

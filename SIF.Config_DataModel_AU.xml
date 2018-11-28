@@ -6,7 +6,8 @@
 		<sifNamespace>http://www.sifassociation.org/datamodel/au/3.4</sifNamespace>
 		<localizationCode>au</localizationCode>
 		<schemaVersion>3.4.4</schemaVersion>
-	    <jsonExamplesXslt>98_Xslt/sif2JsonLM.xsl</jsonExamplesXslt>
+		<!--
+	    <jsonExamplesXslt>98_Xslt/sif2JsonLM.xsl</jsonExamplesXslt> -->
 		<resolveExtensions>true</resolveExtensions>
 		<isDraft>true</isDraft>
 	</globalSettings>
@@ -17,7 +18,7 @@
 		<htmlDocument>
 			<singleDocument>false</singleDocument>
 			<rootDocumentFileName>index.html</rootDocumentFileName>
-			<rootTitle>SIF Implementation Specification (Australia) 3.4.4 (Draft)- NAPLAN 2019 </rootTitle>
+			<rootTitle>SIF Implementation Specification (Australia) 3.4.4 (Initial Draft)- FQ 2018 </rootTitle>
 			<documentType>DataModel</documentType>
 		</htmlDocument>
 		
@@ -25,7 +26,7 @@
 		<htmlDocument>
 			<singleDocument>true</singleDocument>
 			<rootDocumentFileName>ImplementationSpecification.html</rootDocumentFileName>
-			<rootTitle>SIF Implementation Specification (Australia) 3.4.4 (Draft)- NAPLAN 2019</rootTitle>
+			<rootTitle>SIF Implementation Specification (Australia) 3.4.4 ((Initial Draft)- FQ 2018</rootTitle>
 			<documentType>DataModel</documentType>
 		</htmlDocument>
 		

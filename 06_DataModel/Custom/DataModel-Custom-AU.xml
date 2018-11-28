@@ -82,6 +82,9 @@
 		<xi:include parse="text" href="Common/MarkValueInfo.xml"/>
 		<xi:include parse="text" href="Common/StudentGrade.xml"/>
 		
+		<!-- Teacher Judgement Against Standards -->
+		<xi:include parse="text" href="Common/StudentScoreJudgementAgainstStandard.xml"/>
+		
 		<!-- NAPLAN Additions -->
 		<xi:include parse="text" href="AU/NAPEventStudentLink.xml"/>
 		<xi:include parse="text" href="AU/NAPTest.xml"/>
@@ -103,8 +106,8 @@
 		<xi:include parse="text" href="AU/FQReporting.xml"/>
 		<xi:include parse="text" href="AU/AGStatusReport.xml"/>
 		
-		<!--P POD -->
-		<xi:include parse="text" href="Common/PersonPrivacyObligation.xml"/> 
+		<!--P POD 
+		<xi:include parse="text" href="Common/PersonPrivacyObligation.xml"/> -->
 		
 	</Group>
 </IncludeGroup>
