@@ -103,7 +103,6 @@
     <CommonElement name="StudentGroupListType" type="true" dm="true">
 		<Item>
 			<Element>StudentGroupListType</Element>
-			<Characteristics>O</Characteristics>
 			<Description>
 				<p></p>
 			</Description>
@@ -157,7 +156,6 @@
     <CommonElement name="PhotoPermissionListType" type="true" dm="true">
 		<Item>
 			<Element>PhotoPermissionListType</Element>
-			<Characteristics>O</Characteristics>
 			<Description>
 				<p></p>
 			</Description>
@@ -332,7 +330,6 @@
     <CommonElement name="AGReportingObjectResponseListType" type="true" dm="true">
 		<Item>
 			<Element>AGReportingObjectResponseListType</Element>
-			<Characteristics>O</Characteristics>
 			<Description>
 				<p>A list of the Reporting Objects being responsed to.</p>
 			</Description>
@@ -358,7 +355,7 @@
 		</Item>
 		<Item>
 		   <Element>SubmittedRefId</Element>
-		   <Characteristics>M</Characteristics>
+		   <Characteristics>O</Characteristics>
 		   <Description>
 			 <p>Original Reporting RefId of the submission.</p>
 		   </Description>
@@ -390,7 +387,7 @@
 		</Item>
 		<Item>
 			<Element>CommonwealthId</Element>
-			<Characteristics>O</Characteristics>
+			<Characteristics>M</Characteristics>
 			<privacyRating>Low</privacyRating>
 			<Description>
 			  <p>Commonwealth identifier for this school/campus or entity being reported on.</p>
@@ -425,7 +422,6 @@
   <CommonElement name="FQContextualQuestionListType" type="true" dm="true">
 		<Item>
 			<Element>FQContextualQuestionListType</Element>
-			<Characteristics>O</Characteristics>
 			<Description>
 				<p>A list of Contextual Questions.</p>
 			</Description>
@@ -471,7 +467,6 @@
   	<CommonElement name="FQItemListType" type="true" dm="true">
 		<Item>
 			<Element>FQItemListType</Element>
-			<Characteristics>O</Characteristics>
 			<Description>
 				<p>A list of FQ Items reported on.</p>
 			</Description>
@@ -550,7 +545,6 @@
 	<CommonElement name="AGRuleListType" type="true" dm="true">
 		<Item>
 			<Element>AGRuleListType</Element>
-			<Characteristics>O</Characteristics>
 			<Description>
 				<p>A list of Rules associated with the Item.</p>
 			</Description>
@@ -1006,8 +1000,7 @@
 		 <Description>
           <p>A list of staff members who were involved with the grading of the student, or who were responsible for any associated teacher judgement/s.</p>
         </Description>
-         <Characteristics>O</Characteristics>
-  		<List mode="List">
+        <List mode="List">
         </List>
         </Item>
         <Item>
@@ -1048,9 +1041,8 @@
 	<CommonElement name="GradingScoreListType" type="true" dm="true">
 		<Item>
 			<Element>GradingScoreListType</Element>
-			<Characteristics>O</Characteristics>
 			<Description>
-				<p>Assignments that the student went through to achieve this summative assessment.</p>
+			<p>Assignments that the student went through to achieve this summative assessment.</p>
 			</Description>
 			<List mode="List"/>
 		</Item>
@@ -1148,7 +1140,6 @@
   <CommonElement name="LearningStandardListType" type="true" dm="true">
 	<Item>
 		<Element>LearningStandardListType</Element>
-		<Characteristics>O</Characteristics>
 		<Description>
 			<p>References to LearningStandardItems.</p>
 		</Description>
@@ -1205,9 +1196,8 @@
 <CommonElement name="AssignmentListType" type="true" dm="true">
 	<Item>
 		<Element>AssignmentListType</Element>
-		<Characteristics>O</Characteristics>
 		<List mode="List">
-    </List>
+		</List>
 	</Item>
 	<Item>
 		<Element>GradingAssignmentRefId</Element>
@@ -1265,8 +1255,7 @@
 		 <Description>
           <p>A list of Medications.</p>
         </Description>
-         <Characteristics>O</Characteristics>
-  		<List mode="List">
+        <List mode="List">
         </List>
     </Item>
     <Item>
@@ -1330,7 +1319,6 @@
   <CommonElement name="WellbeingEventCategoryListType" type="true" dm="true">
     <Item>
 		<Element>WellbeingEventCategoryListType</Element>
-		<Characteristics>O</Characteristics>
 		<Description>
 		  <p>List of Categories of WellbeingEvent.</p>
 		</Description>
@@ -1383,8 +1371,7 @@
 		 <Description>
           <p>List of SubTypes associated with a Category.</p>
         </Description>
-         <Characteristics>O</Characteristics>
-  		<List mode="List">
+       	<List mode="List">
         </List>
     </Item>
     <Item>
@@ -1440,8 +1427,7 @@
 		 <Description>
           <p>List of Actions where an action resulted and is known - maybe just a link to a WellbeingResponse Object</p>
         </Description>
-         <Characteristics>O</Characteristics>
-  		<List mode="List">
+    	<List mode="List">
         </List>
     </Item>
     <Item>
@@ -1497,8 +1483,7 @@
 		 <Description>
           <p>List of People involved in the Wellbeing event/response.  Mandatory if more people than the student to which this event/response occurs is involved.</p>
         </Description>
-         <Characteristics>O</Characteristics>
-  		<List mode="List">
+      	<List mode="List">
         </List>
     </Item>
     <Item>
@@ -1572,8 +1557,7 @@
 		 <Description>
           <p>Where a student is to be removed or withdrawn partially for particular times in a week within the Start and End dates of the Response.</p>
         </Description>
-         <Characteristics>O</Characteristics>
-  		<List mode="List">
+   		<List mode="List">
         </List>
     </Item>
     <Item>
@@ -1796,8 +1780,7 @@
 		 <Description>
           <p>List to contain information of any plans that may eventuate.</p>
         </Description>
-         <Characteristics>O</Characteristics>
-  		<List mode="List">
+     	<List mode="List">
         </List>
     </Item>
     <Item>
@@ -1937,8 +1920,7 @@
 		 <Description>
           <p>List which describes the Location of any associated documents kept in relation. These include evidentiary documents, and action plans.</p>
         </Description>
-         <Characteristics>O</Characteristics>
-  		<List mode="List">
+      	<List mode="List">
         </List>
     </Item>
     <Item>
@@ -2384,13 +2366,12 @@
    <CommonElement name="PlausibleScaledValueListType" type="true" dm="true">
 	<Item>
 		<Element>PlausibleScaledValueListType</Element>
-		<Characteristics>M</Characteristics>
 		<List mode="List">
-    </List>
+		</List>
 	</Item>
 	<Item>
     <Element>PlausibleScaledValue</Element>
-    <Characteristics>MR</Characteristics>
+    <Characteristics>OR</Characteristics>
 	<Type name="xs:decimal"/>
     <Description>
       <p>Plausible values used for reporting to determine cut points, there are 5 per student per domain.</p>
@@ -2401,13 +2382,12 @@
   <CommonElement name="SubstituteItemListType" type="true" dm="true">
 	<Item>
 		<Element>SubstituteItemListType</Element>
-		<Characteristics>M</Characteristics>
 		<List mode="List">
-    </List>
+		</List>
 	</Item>
 	 <Item>
     <Element>SubstituteItem</Element>
-    <Characteristics>MR</Characteristics>
+    <Characteristics>OR</Characteristics>
 	<Type ref="CommonTypes" name="SubstituteItemType"/>
     <Description>
       <p></p>
@@ -2418,7 +2398,7 @@
  <CommonElement name="SubstituteItemType" type="true" dm="true">
   	<Item>
 		<Element>SubstituteItemType</Element>
-		<Characteristics>MR</Characteristics>
+		<Characteristics>OR</Characteristics>
 	    <Description></Description>
 	</Item>
 	<Item>
@@ -2450,14 +2430,13 @@
   <CommonElement name="CodeFrameTestItemListType" type="true" dm="true">
 	<Item>
 		<Element>CodeFrameTestItemListType</Element>
-		<Characteristics>M</Characteristics>
 		<List mode="List">
         </List>
     </Item>
     <Item>
       <Element>TestItem</Element>
       <Desciption></Desciption>
-      <Characteristics>MR</Characteristics>
+      <Characteristics>OR</Characteristics>
 	   <Type ref="CommonTypes" name="CodeFrameTestItemType"/>
        <Description>
         <p></p>
@@ -2468,7 +2447,7 @@
   <CommonElement name="CodeFrameTestItemType" type="true" dm="true">
 	<Item>
 		<Element>CodeFrameTestItemType</Element>
-		<Characteristics>MR</Characteristics>
+		<Characteristics>OR</Characteristics>
 	</Item>
     <Item>
     <Element>TestItemRefId</Element>
@@ -2500,14 +2479,13 @@
      <CommonElement name="StimulusLocalIdListType" type="true" dm="true">
 	<Item>
 		<Element>StimulusLocalIdListType</Element>
-		<Characteristics>M</Characteristics>
 		<List mode="List">
-    </List>
+		</List>
 	</Item>
 	 <Item>
     <Element>StimulusLocalId</Element>
     <Desciption></Desciption>
-    <Characteristics>MR</Characteristics>
+    <Characteristics>OR</Characteristics>
 	<Type ref="CommonTypes" name="LocalIdType"/>
     <Description>
       <p>LocalId of Stimulus</p>
@@ -2778,13 +2756,12 @@
  <CommonElement name="NAPTestItemListType" type="true" dm="true">
 	<Item>
 		<Element>NAPTestItemListType</Element>
-		<Characteristics>M</Characteristics>
 		<List mode="List">
-    </List>
+		</List>
 	</Item>
 	 <Item>
     <Element>TestItem</Element>
-    <Characteristics>MR</Characteristics>
+    <Characteristics>OR</Characteristics>
 	<Type ref="CommonTypes" name="NAPTestItem2Type"/>
     <Description>
       <p></p>
@@ -2795,7 +2772,7 @@
  <CommonElement name="NAPTestItem2Type" type="true" dm="true">
 	<Item>
 		<Element>NAPTestItem2Type</Element>
-		<Characteristics>MR</Characteristics>
+		<Characteristics>OR</Characteristics>
 	    <Description></Description>
 	</Item>
 	 <Item>
@@ -2827,13 +2804,12 @@
 <CommonElement name="NAPCodeFrameTestletListType" type="true" dm="true">
 	<Item>
 		<Element>NAPCodeFrameTestletListType</Element>
-		<Characteristics>M</Characteristics>
 		<List mode="List">
-    </List>
+		</List>
 	</Item>
 	<Item>
 		<Element>Testlet</Element>
-		<Characteristics>MR</Characteristics>
+		<Characteristics>OR</Characteristics>
 		<Description>
 			<p></p>
 		</Description>
@@ -2844,7 +2820,7 @@
    <CommonElement name="NAPTestletCodeFrameType" type="true" dm="true">
 	<Item>
 		<Element>NAPTestletCodeFrameType</Element>
-		<Characteristics>MR</Characteristics>
+		<Characteristics>OR</Characteristics>
 		<Description></Description>
 	</Item>
 	<Item>
@@ -2874,13 +2850,12 @@
  <CommonElement name="NAPStudentResponseTestletListType" type="true" dm="true">
 	<Item>
 		<Element>NAPStudentResponseTestletListType</Element>
-		<Characteristics>M</Characteristics>
 		<List mode="List">
-    </List>
+		</List>
 	</Item>
 	<Item>
 		<Element>Testlet</Element>
-		<Characteristics>MR</Characteristics>
+		<Characteristics>OR</Characteristics>
 		<Description>
 			<p>Scores received by the student for each testlet in the test.</p>
 		</Description>
@@ -2891,7 +2866,7 @@
   <CommonElement name="NAPTestletResponseType" type="true" dm="true">
 	<Item>
 		<Element>NAPTestletResponseType</Element>
-		<Characteristics>MR</Characteristics>
+		<Characteristics>OR</Characteristics>
 	</Item>
 	
   <Item>
@@ -2934,9 +2909,8 @@
    <CommonElement name="NAPTestletItemResponseListType" type="true" dm="true">
 	<Item>
 		<Element>NAPTestletItemResponseListType</Element>
-		<Characteristics>M</Characteristics>
 		<List mode="List">
-    </List>
+		</List>
 	</Item>
 	<Item>
 		<Element>ItemResponse</Element>
@@ -2951,7 +2925,7 @@
    <CommonElement name="NAPTestletResponseItemType" type="true" dm="true">
 	<Item>
 		<Element>NAPTestletResponseItemType</Element>
-		<Characteristics>MR</Characteristics>
+		<Characteristics>OR</Characteristics>
 		<Description>
 			<p>Scores received by the student for teach item in the testlet</p>
 		</Description>
@@ -3039,9 +3013,8 @@
   <CommonElement name="NAPSubscoreListType" type="true" dm="true">
 	<Item>
 		<Element>NAPSubscoreListType</Element>
-		<Characteristics>M</Characteristics>
 		<List mode="List">
-    </List>
+		</List>
 	</Item>
 	<Item>
 		<Element>Subscore</Element>
@@ -3056,7 +3029,7 @@
   <CommonElement name="NAPSubscoreType" type="true" dm="true">
 	<Item>
 		<Element>NAPSubscoreType</Element>
-		<Characteristics>MR</Characteristics>
+		<Characteristics>OR</Characteristics>
 	</Item>
 	
 	<Item>
@@ -3161,13 +3134,12 @@
   <CommonElement name="NAPWritingRubricListType" type="true" dm="true">
 	<Item>
 		<Element>NAPWritingRubricListType</Element>
-		<Characteristics>O</Characteristics>
 		<List mode="List">
-    </List>
+		</List>
 	</Item>
 	<Item>
 		<Element>NAPWritingRubric</Element>
-		<Characteristics>MR</Characteristics>
+		<Characteristics>OR</Characteristics>
 		<Description>
 			<p></p>
 		</Description>
@@ -3178,7 +3150,7 @@
     <CommonElement name="NAPWritingRubricType" type="true" dm="true">
 	<Item>
 		<Element>NAPWritingRubricType</Element>
-		<Characteristics>MR</Characteristics>
+		<Characteristics>OR</Characteristics>
 		<Description>
 			<p></p>
 		</Description>
@@ -3217,13 +3189,12 @@
     <CommonElement name="ScoreListType" type="true" dm="true">
 	<Item>
 		<Element>ScoreListType</Element>
-		<Characteristics>O</Characteristics>
 		<List mode="List">
-    </List>
+		</List>
 	</Item>
 	<Item>
 		<Element>Score</Element>
-		<Characteristics>MR</Characteristics>
+		<Characteristics>OR</Characteristics>
 		<Description>
 			<p></p>
 		</Description>
@@ -3234,7 +3205,7 @@
    <CommonElement name="ScoreType" type="true" dm="true">
 	<Item>
 		<Element>ScoreType</Element>
-		<Characteristics>MR</Characteristics>
+		<Characteristics>OR</Characteristics>
 		<Description>
 			<p>.</p>
 		</Description>
@@ -3260,13 +3231,12 @@
     <CommonElement name="ScoreDescriptionListType" type="true" dm="true">
 	<Item>
 		<Element>ScoreDescriptionListType</Element>
-		<Characteristics>O</Characteristics>
 		<List mode="List">
-    </List>
+		</List>
 	</Item>
 	<Item>
 		<Element>ScoreDescription</Element>
-		<Characteristics>MR</Characteristics>
+		<Characteristics>OR</Characteristics>
 		<Description>
 			<p></p>
 		</Description>
@@ -3278,7 +3248,7 @@
     <CommonElement name="ScoreDescriptionType" type="true" dm="true">
 	<Item>
 		<Element>ScoreDescriptionType</Element>
-		<Characteristics>MR</Characteristics>
+		<Characteristics>OR</Characteristics>
 	</Item>
 	
 	   <Item>
@@ -3302,13 +3272,12 @@
    <CommonElement name="StimulusListType" type="true" dm="true">
 	<Item>
 		<Element>StimulusListType</Element>
-		<Characteristics>O</Characteristics>
 		<List mode="List">
-    </List>
+		</List>
 	</Item>
 	<Item>
 		<Element>Stimulus</Element>
-		<Characteristics>MR</Characteristics>
+		<Characteristics>OR</Characteristics>
 		<Description>
 			<p></p>
 		</Description>
@@ -3321,7 +3290,7 @@
   <CommonElement name="StimulusType" type="true" dm="true">
 	<Item>
 		<Element>StimulusType</Element>
-		<Characteristics>MR</Characteristics>
+		<Characteristics>OR</Characteristics>
 		<Description>
 			<p>Description of a trigger  for a response in a NAP test.</p>
 		</Description>
@@ -3381,13 +3350,12 @@
    <CommonElement name="ContentDescriptionListType" type="true" dm="true">
 	<Item>
 		<Element>ContentDescriptionListType</Element>
-		<Characteristics>M</Characteristics>
 		<List mode="List">
-    </List>
+		</List>
 	</Item>
 	<Item>
 		<Element>ContentDescription</Element>
-		<Characteristics>MR</Characteristics>
+		<Characteristics>OR</Characteristics>
 		<Description>
 			<p>Content description in the Australian Curriculum that is relevant to the test item.</p>
 		</Description>
@@ -3400,11 +3368,11 @@
 		<Element>PNPCodeListType</Element>
 		<Characteristics>O</Characteristics>
 		<List mode="List">
-    </List>
+		</List>
 	</Item>
 	<Item>
 		<Element>PNPCode</Element>
-		<Characteristics>MR</Characteristics>
+		<Characteristics>OR</Characteristics>
 		<Description>
 			<p>Personal Needs and Preferences Code(s) applied to the domain.</p>
 		</Description>
@@ -3447,13 +3415,12 @@
   <CommonElement name="TestDisruptionListType" type="true" dm="true">
 	<Item>
 		<Element>TestDisruptionListType</Element>
-		<Characteristics>O</Characteristics>
 		<List mode="List">
-    </List>
+		</List>
 	</Item>
 	<Item>
 		<Element>TestDisruption</Element>
-		<Characteristics>MR</Characteristics>
+		<Characteristics>OR</Characteristics>
 		<Description>
 			<p>An event disrupting a test session</p>
 		</Description>
@@ -3463,7 +3430,7 @@
  <CommonElement name="TestDisruptionType" type="true" dm="true">
 	<Item>
 		<Element>TestDisruptionType</Element>
-		<Characteristics>MR</Characteristics>
+		<Characteristics>OR</Characteristics>
 		<Description>
 			<p>This is an alert message that is associated with the student.</p>
 		</Description>
@@ -3481,9 +3448,8 @@
       <CommonElement name="CalendarSummaryListType" type="true" dm="true"> 
 		  <Item>
 			<Element>CalendarSummaryListType</Element>
-			<Characteristics>O</Characteristics>
 			<List mode="List">
-		</List>
+			</List>
 		</Item>
 		 <Item>
 			<Element>CalendarSummaryRefId</Element>
@@ -3548,7 +3514,6 @@
   <CommonElement name="VisaSubClassListType" type="true" dm="true">  
   	<Item>
 		<Element>VisaSubClassListType</Element>
-		<Characteristics>O</Characteristics>
 		<Description>
 			<p>List of Visas</p>
 		</Description>
@@ -3582,7 +3547,7 @@
    <CommonElement name="LanguageBaseType" type="true" dm="true">     
  	<Item>
 		<Element>LanguageBaseType</Element>
-		<Characteristics>MR</Characteristics>
+		<Characteristics>OR</Characteristics>
 	</Item>
 	<Item>
 		<Element>Code</Element>
@@ -3618,7 +3583,6 @@
  <CommonElement name="ReligiousEventListType" type="true" dm="true">   
  	<Item>
 		<Element>ReligiousEventListType</Element>
-		<Characteristics>O</Characteristics>
 		<Description>
 			<p>List of Religious events</p>
 		</Description>
@@ -3709,7 +3673,6 @@
   <CommonElement name="CountryListType" type="true" dm="true">
      <Item>
 		<Element>CountryListType</Element>
-		<Characteristics>O</Characteristics>
 		<List mode="List">
     </List>
 	</Item>
@@ -3727,7 +3690,6 @@
  
 <Item>
 		<Element>CountryList2Type</Element>
-		<Characteristics>O</Characteristics>
 		<List mode="List">
     </List>
 	</Item>
@@ -4877,7 +4839,6 @@
 <CommonElement name="HouseholdContactInfoListType" type="true" dm="true">
 	<Item>
 		<Element>HouseholdContactInfoListType</Element>
-		<Characteristics>O</Characteristics>
 		<Description>List of Households this Person is associated with</Description>
 		<List mode="List">
 		</List>
@@ -4949,7 +4910,6 @@
 <CommonElement name="StatementCodesType" type="true" dm="true">
 	<Item>
 		<Element>StatementCodesType</Element>
-		<Characteristics>O</Characteristics>
 		<List mode="List"/>
 	</Item>
 	<Item>
@@ -4964,7 +4924,6 @@
 <CommonElement name="StatementsType" type="true" dm="true">
 	<Item>
 		<Element>StatementsType</Element>
-		<Characteristics>O</Characteristics>
 		<List mode="List"/>
 	</Item>
 	<Item>
@@ -4979,7 +4938,6 @@
 <CommonElement name="ProgramFundingSourcesType" type="true" dm="true">
 	<Item>
 		<Element>ProgramFundingSourcesType</Element>
-		<Characteristics>O</Characteristics>
 		<Description>List of funding sources</Description>
 		<List mode="List">
     </List>
@@ -5014,7 +4972,6 @@
 <CommonElement name="AttendanceTimesType" type="true" dm="true">
 	<Item>
 		<Element>AttendanceTimesType</Element>
-		<Characteristics>M</Characteristics>
 		<Description>
 			<p>Breakdown of times that the student entered or returned to school.</p>
 		</Description>
@@ -5111,7 +5068,6 @@
 <CommonElement name="PeriodAttendancesType" type="true" dm="true">
 	<Item>
 		<Element>PeriodAttendancesType</Element>
-		<Characteristics>M</Characteristics>
 		<Description>
 			<p>Breakdown of grouped period attendance.</p>
 		</Description>
@@ -5276,12 +5232,11 @@
 <CommonElement name="StaffSubjectListType" type="true" dm="true">
 	<Item>
 		<Element>StaffSubjectListType</Element>
-		<Characteristics>O</Characteristics>
 		<Description>
 			<p>Subject(s) Staff member is eligible to teach.</p>
 		</Description>
 		<List mode="List">
-    </List>
+		</List>
 	</Item>
 	<Item>
 		<Element>StaffSubject</Element>
@@ -5328,7 +5283,6 @@
 <CommonElement name="TeachingGroupListType" type="true" dm="true">
 	<Item>
 		<Element>TeachingGroupListType</Element>
-		<Characteristics>O</Characteristics>
 		<Description>
 			<p>Teaching groups which are scheduled to attend the event. Not required for cyclical events, as this would be expected to be provided from TimeTableCell/TeachingGroup instead.</p>
 		</Description>
@@ -5346,7 +5300,6 @@
 <CommonElement name="ScheduledTeacherListType" type="true" dm="true">
 	<Item>
 		<Element>ScheduledTeacherListType</Element>
-		<Characteristics>O</Characteristics>
 		<Description>
 			<p>A listing of the teachers assigned to the activity, and the type of supervision they are credited with. If no teachers are listed, the activity is assumed to be unsupervised.</p>
 		</Description>
@@ -5429,7 +5382,6 @@
 <CommonElement name="RoomListType" type="true" dm="true">
 	<Item>
 		<Element>RoomListType</Element>
-		<Characteristics>O</Characteristics>
 		<Description>
 			<p>List of rooms in which the scheduled activity is held. Used for onsite venues which are represented in the source system as rooms. Can include large venues (ovals, library, etc), if they have been represented as rooms; source system practice varies.</p>
 		</Description>
@@ -5447,7 +5399,6 @@
 <CommonElement name="StaffListType" type="true" dm="true">
 	<Item>
 		<Element>StaffListType</Element>
-		<Characteristics>O</Characteristics>
 		<List mode="List">
     </List>
 	</Item>
@@ -5483,7 +5434,6 @@
 <CommonElement name="AuthorsType" type="true" dm="true">
 	<Item>
 		<Element>AuthorsType</Element>
-		<Characteristics>O</Characteristics>
 		<List mode="List"/>
 	</Item>
 	<Item>
@@ -5498,7 +5448,6 @@
 <CommonElement name="OrganizationsType" type="true" dm="true">
 	<Item>
 		<Element>OrganizationsType</Element>
-		<Characteristics>M</Characteristics>
 		<List mode="List"/>
 	</Item>
 	<Item>
@@ -5513,7 +5462,6 @@
 <CommonElement name="PurchasingItemsType" type="true" dm="true">
 	<Item>
 		<Element>PurchasingItemsType</Element>
-		<Characteristics>O</Characteristics>
 		<Description>
 			<p>Listing of line items from original purchase order. Included to indicate any variation between the items, item cost, or item quantity ordered, and what has been delivered.</p>
 		</Description>
@@ -5612,7 +5560,6 @@
 <CommonElement name="ExpenseAccountsType" type="true" dm="true">
 	<Item>
 		<Element>ExpenseAccountsType</Element>
-		<Characteristics>O</Characteristics>
 		<Description>
 			<p/>
 		</Description>
@@ -5671,7 +5618,6 @@
 <CommonElement name="SchoolProgramListType" type="true" dm="true">
 	<Item>
 		<Element>SchoolProgramListType</Element>
-		<Characteristics>O</Characteristics>
 		<Description>
 			<p>List of School Programs</p>
 		</Description>
@@ -5719,7 +5665,6 @@
 <CommonElement name="LearningObjectivesType" type="true" dm="true">
 	<Item>
 		<Element>LearningObjectivesType</Element>
-		<Characteristics>O</Characteristics>
 		<Description>
 			<p>Educational objectives of the activity.</p>
 		</Description>
@@ -5737,7 +5682,6 @@
 <CommonElement name="RecognitionListType" type="true" dm="true">
 	<Item>
 		<Element>RecognitionListType</Element>
-		<Characteristics>O</Characteristics>
 		<Description>
 			<p>List of awards and other types of recognition given to the student for this activity. </p>
 		</Description>
@@ -5755,7 +5699,6 @@
 <CommonElement name="LResourcesType" type="true" dm="true">
 	<Item>
 		<Element>LResourcesType</Element>
-		<Characteristics>O</Characteristics>
 		<Description>
 			<p>Learning resources that support this activity.</p>
 		</Description>
@@ -5804,7 +5747,6 @@
 <CommonElement name="SourceObjectsType" type="true" dm="true">
 	<Item>
 		<Element>SourceObjectsType</Element>
-		<Characteristics>O</Characteristics>
 		<Description>
 			<p>Source objects assigned to students.</p>
 		</Description>
@@ -5843,7 +5785,6 @@
 <CommonElement name="StudentsType" type="true" dm="true">
 	<Item>
 		<Element>StudentsType</Element>
-		<Characteristics>O</Characteristics>
 		<Description>
 			<p>GUID from the StudentPersonal  Object that identifies the student.</p>
 		</Description>
@@ -5861,7 +5802,6 @@
 <CommonElement name="PrerequisitesType" type="true" dm="true">
 	<Item>
 		<Element>PrerequisitesType</Element>
-		<Characteristics>O</Characteristics>
 		<Description>
 			<p>Skills or competencies the student must have to engage in activity.</p>
 		</Description>
@@ -5879,7 +5819,6 @@
 <CommonElement name="EssentialMaterialsType" type="true" dm="true">
 	<Item>
 		<Element>EssentialMaterialsType</Element>
-		<Characteristics>O</Characteristics>
 		<Description>
 			<p>Essential materials required to engage in this activity.</p>
 		</Description>
@@ -5897,7 +5836,6 @@
 <CommonElement name="TechnicalRequirementsType" type="true" dm="true">
 	<Item>
 		<Element>TechnicalRequirementsType</Element>
-		<Characteristics>O</Characteristics>
 		<Description>
 			<p>List of Operating system, network, and other technical requirements for the activity, if applicable.</p>
 		</Description>
@@ -5915,7 +5853,6 @@
 <CommonElement name="SoftwareRequirementListType" type="true" dm="true">
 	<Item>
 		<Element>SoftwareRequirementListType</Element>
-		<Characteristics>O</Characteristics>
 		<Description>
 			<p>Contains information about required software.</p>
 		</Description>
@@ -5974,7 +5911,6 @@
 <CommonElement name="HouseholdListType" type="true" dm="true">
 	<Item>
 		<Element>HouseholdListType</Element>
-		<Characteristics>O</Characteristics>
 		<Description>
 			<p/>
 		</Description>
@@ -5992,7 +5928,6 @@
 <CommonElement name="StudentSubjectChoiceListType" type="true" dm="true">
 	<Item>
 		<Element>StudentSubjectChoiceListType</Element>
-		<Characteristics>O</Characteristics>
 		<Description>
 			<p>List of Student Subject Choices where available.</p>
 		</Description>
@@ -6051,7 +5986,6 @@
 <CommonElement name="IdentityAssertionsType" type="true" dm="true">
 	<Item>
 		<Element>IdentityAssertionsType</Element>
-		<Characteristics>O</Characteristics>
 		<Description>
 			<p>The list of identity assertions for this user.</p>
 		</Description>
@@ -6080,7 +6014,6 @@
 <CommonElement name="LearningStandardsType" type="true" dm="true">
 	<Item>
 		<Element>LearningStandardsType</Element>
-		<Characteristics>O</Characteristics>
 		<Description>
 			<p>References to LearningStandardItems.</p>
 		</Description>
@@ -6101,7 +6034,6 @@
 		<Description>
 			<p>Container for related resources.</p>
 		</Description>
-		<Characteristics>O</Characteristics>
 		<List mode="List"/>
 	</Item>
 	<Item>
@@ -6137,7 +6069,6 @@
 <CommonElement name="LearningStandardsDocumentType" type="true" dm="true">
 	<Item>
 		<Element>LearningStandardsDocumentType</Element>
-		<Characteristics>O</Characteristics>
 		<Description>
 			<p>References to LearningStandard Documents.</p>
 		</Description>
@@ -6155,7 +6086,6 @@
 <CommonElement name="ComponentsType" type="true" dm="true">
 	<Item>
 		<Element>ComponentsType</Element>
-		<Characteristics>M</Characteristics>
 		<Description>
 			<p>Lesson or activity-sized portions of a resource.</p>
 		</Description>
@@ -6222,7 +6152,6 @@
 <CommonElement name="StrategiesType" type="true" dm="true">
 	<Item>
 		<Element>StrategiesType</Element>
-		<Characteristics>O</Characteristics>
 		<Description>
 			<p>Teaching/learning strategies used in the learning resource.</p>
 		</Description>
@@ -6240,7 +6169,6 @@
 <CommonElement name="AssociatedObjectsType" type="true" dm="true">
 	<Item>
 		<Element>AssociatedObjectsType</Element>
-		<Characteristics>O</Characteristics>
 		<Description>
 			<p>References from component to associated elements within another SIF object.</p>
 		</Description>
@@ -6266,7 +6194,6 @@
 <CommonElement name="EvaluationsType" type="true" dm="true">
 	<Item>
 		<Element>EvaluationsType</Element>
-		<Characteristics>O</Characteristics>
 		<Description>
 			<p>Evaluations/review of the resource.</p>
 		</Description>
@@ -6325,7 +6252,6 @@
 <CommonElement name="ApprovalsType" type="true" dm="true">
 	<Item>
 		<Element>ApprovalsType</Element>
-		<Characteristics>O</Characteristics>
 		<Description>
 			<p>Authorizations to use this resource. For example, this resource may be included as part of the district's standard curriculum model.</p>
 		</Description>
@@ -6368,11 +6294,8 @@
 <CommonElement name="MediaTypesType" type="true" dm="true">
 	<Item>
 		<Element>MediaTypesType</Element>
-		<Characteristics>O</Characteristics>
 		<Description>
-			<p>
-        Resource media types.
-      </p>
+			<p>Resource media types.</p>
 		</Description>
 		<List mode="List"/>
 	</Item>
@@ -6390,9 +6313,8 @@
 <CommonElement name="LEAContactListType" type="true" dm="true">
 	<Item>
 		<Element>LEAContactListType</Element>
-		<Characteristics>O</Characteristics>
 		<List mode="List">
-    </List>
+		</List>
 	</Item>
 	<Item>
 		<Element>LEAContact</Element>
@@ -6428,7 +6350,6 @@
 <CommonElement name="FinancialAccountRefIdListType" type="true" dm="true">
 	<Item>
 		<Element>FinancialAccountRefIdListType</Element>
-		<Characteristics>O</Characteristics>
 		<Description>
 			<p>List of RefIds of financial account codes.</p>
 		</Description>
@@ -6446,7 +6367,6 @@
 <CommonElement name="PasswordListType" type="true" dm="true">
 	<Item>
 		<Element>PasswordListType</Element>
-		<Characteristics>O</Characteristics>
 		<Description>
 			<p>Allows a provider or publisher to specify the same password using multiple algorithms, if supported.</p>
 		</Description>
@@ -6502,12 +6422,11 @@
 <CommonElement name="ExclusionRulesType" type="true" dm="true">
 	<Item>
 		<Element>ExclusionRulesType</Element>
-		<Characteristics>O</Characteristics>
 		<Description>
 			<p>Rules for which statistic may not be reported.</p>
 		</Description>
 		<List mode="List">
-    </List>
+		</List>
 	</Item>
 	<Item>
 		<Element>ExclusionRule</Element>
@@ -6544,11 +6463,8 @@
 <CommonElement name="CharacteristicsType" type="true" dm="true">
 	<Item>
 		<Element>CharacteristicsType</Element>
-		<Characteristics>M</Characteristics>
 		<Description>
-			<p>
-        Reference to one or more <code>AggregateCharacteristicInfo</code> objects.
-      </p>
+			<p>Reference to one or more <code>AggregateCharacteristicInfo</code> objects.</p>
 		</Description>
 		<List mode="List">
     </List>
@@ -6567,7 +6483,6 @@
 <CommonElement name="ContactsType" type="true" dm="true">
 	<Item>
 		<Element>ContactsType</Element>
-		<Characteristics>O</Characteristics>
 		<Description>
 			<p>Contains contact information about resource authors.</p>
 		</Description>
@@ -6626,7 +6541,6 @@
 <CommonElement name="TeachingGroupPeriodListType" type="true" dm="true">
 	<Item>
 		<Element>TeachingGroupPeriodListType</Element>
-		<Characteristics>O</Characteristics>
 		<Description>
 			<p>A List of schedule information that can be published by an SIS which is a subset of information available in the TimeTableCell object.</p>
 			<p>PeriodId or StartTime must be provided.</p>
@@ -6710,7 +6624,6 @@
 <CommonElement name="TeacherListType" type="true" dm="true">
 	<Item>
 		<Element>TeacherListType</Element>
-		<Characteristics>O</Characteristics>
 		<Description>
 			<p>A List of teachers associated with the group - may or may not include the teacher timetabled in the schedule.</p>
 		</Description>
@@ -6769,7 +6682,6 @@
 <CommonElement name="StudentListType" type="true" dm="true">
 	<Item>
 		<Element>StudentListType</Element>
-		<Characteristics>O</Characteristics>
 		<Description>
 			<p>List of Students in this Teaching Group</p>
 		</Description>
@@ -6820,7 +6732,6 @@
 <CommonElement name="TimeTableDayListType" type="true" dm="true">
 	<Item>
 		<Element>TimeTableDayListType</Element>
-		<Characteristics>M</Characteristics>
 		<Description>
 			<p>Container for TimeTableDays in Schedule</p>
 		</Description>
@@ -6871,7 +6782,6 @@
 <CommonElement name="TimeTablePeriodListType" type="true" dm="true">
 	<Item>
 		<Element>TimeTablePeriodListType</Element>
-		<Characteristics>M</Characteristics>
 		<Description>
 			<p></p>
 		</Description>
@@ -6983,10 +6893,8 @@
 <CommonElement name="NAPLANClassListType" type="true" dm="true">
 	<Item>
 		<Element>NAPLANClassListType</Element>
-		<Characteristics>O</Characteristics>
 		<Description>
-			<p>
-        Container for a list of classes a teacher may be responsible for with regard to NAPLAN only.</p>
+			<p>Container for a list of classes a teacher may be responsible for with regard to NAPLAN only.</p>
 		</Description>
 		<List mode="List">
 		</List>
@@ -7003,7 +6911,6 @@
 <CommonElement name="SchoolGroupListType" type="true" dm="true">
 	<Item>
 		<Element>SchoolGroupListType</Element>
-		<Characteristics>O</Characteristics>
 		<Description>
 			<p/>
 		</Description>
@@ -7021,7 +6928,6 @@
 <CommonElement name="YearLevelEnrollmentListType" type="true" dm="true">
 	<Item>
 		<Element>YearLevelEnrollmentListType</Element>
-		<Characteristics>O</Characteristics>
 		<Description>
 			<p>List of number of students enrolled per year level.</p>
 		</Description>
@@ -7065,7 +6971,6 @@
 <CommonElement name="SchoolFocusListType" type="true" dm="true">
 	<Item>
 		<Element>SchoolFocusListType</Element>
-		<Characteristics>O</Characteristics>
 		<Description>
 			<p>List containing the education focus codes of the campus/school.</p>
 		</Description>
@@ -7085,9 +6990,8 @@
 <CommonElement name="AlertMessagesType" type="true" dm="true">
 	<Item>
 		<Element>AlertMessagesType</Element>
-		<Characteristics>O</Characteristics>
 		<List mode="List">
-    </List>
+		</List>
 	</Item>
 	<Item>
 		<Element>AlertMessage</Element>
@@ -7135,9 +7039,8 @@
 <CommonElement name="MedicalAlertMessagesType" type="true" dm="true">
 	<Item>
 		<Element>MedicalAlertMessagesType</Element>
-		<Characteristics>O</Characteristics>
 		<List mode="List">
-    </List>
+		</List>
 	</Item>
 	<Item>
 		<Element>MedicalAlertMessage</Element>
@@ -7185,7 +7088,6 @@
 <CommonElement name="OtherIdListType" type="true" dm="true">
 	<Item>
 		<Element>OtherIdListType</Element>
-		<Characteristics>O</Characteristics>
 		<Description>
 			<p>Lists all "other" identifiers associated with the entity.</p>
 		</Description>
@@ -7731,9 +7633,7 @@
 	<Item>
 		<Element>YearLevelsType</Element>
 		<Description>
-			<p>
-        List of year levels.
-      </p>
+			<p>List of year levels.</p>
 		</Description>
 		<List mode="List">
     </List>
@@ -8337,7 +8237,6 @@
 <CommonElement name="StatisticalAreasType" type="true" dm="true">
   <Item>
 		<Element>StatisticalAreasType</Element>
-		<Characteristics>O</Characteristics>
 		<Description>
 			<p>A list of Statistical Areas associated with an address that will be referenced back to ABS 1270.  Only applicable to a physical address, e.g. not relevant for a Post Office Box.</p>
 		</Description>
@@ -8709,7 +8608,7 @@
 			<p>A list of electronic identifiers associated with an entity.</p>
 		</Description>
 		<List mode="List">
-    </List>
+		</List>
 	</Item>
 	<Item>
 		<Element>ElectronicId</Element>
@@ -8748,7 +8647,6 @@
 <CommonElement name="OtherNamesType" type="true" dm="true">
 	<Item>
 		<Element>OtherNamesType</Element>
-		<Characteristics>O</Characteristics>
 		<Description>
 			<p>Previous, alternate or other names or aliases associated with a person.</p>
 		</Description>
@@ -9098,7 +8996,6 @@
 <CommonElement name="LanguageListType" type="true" dm="true">
 	<Item>
 		<Element>LanguageListType</Element>
-		<Characteristics>O</Characteristics>
 		<List mode="List"/>
 	</Item>
 	<Item>

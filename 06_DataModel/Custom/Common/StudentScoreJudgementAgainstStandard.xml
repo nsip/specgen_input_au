@@ -12,7 +12,7 @@
     <Element>StudentScoreJudgementAgainstStandard</Element>
     <privacyRating>High</privacyRating>
     <Description>
-      <p>This object represents a student's score as a teacher’s judgement with reference to the written achievement standards for the curriculum in question.</p>
+      <p>This object serves to represent a student's score, (score in the form of a teacher judgement against written achievement standards), which has been recorded against a curriculum node (the curriculum node belongs to a curriculum structure), which was taught as part of a school-defined class, during a specific reporting period.</p>
     </Description>
   </Item>
   <Item>
@@ -147,7 +147,7 @@
     <Characteristics>C</Characteristics>
 	<privacyRating>Low</privacyRating>	
     <Description>
-      The curriculum node code, associated with the Teacher Judgement. Each curriculum consists of a nested structure of nodes. Either a LearningStandardList or CurriculumCode AND CuriculumNodeCode Must be provided.
+      The curriculum node code, associated with the Teacher Judgement. Each curriculum consists of a nested structure of nodes. Either a LearningStandardList or CurriculumCode AND CurriculumNodeCode Must be provided.
     </Description>
     <Type ref="CommonTypes" name="LocalIdType"></Type>
   </Item> 
@@ -193,7 +193,7 @@
     <Characteristics>C</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>The link to the school associated with this score. EEither the SchoolInfoRefId OR (SchoolLocalId AND SchoolCommonwealthId, (AGEID)), MUST BE provided.</p>
+      <p>The link to the school associated with this score. Either the SchoolInfoRefId OR (SchoolLocalId AND SchoolCommonwealthId, (AGEID)), MUST BE provided.</p>
     </Description>
     <Type ref="CommonTypes" name="LocalIdType"></Type>
   </Item> 
@@ -251,6 +251,7 @@
       <Score>10</Score>
       <SpecialCircumstanceLocalCode>SCMP</SpecialCircumstanceLocalCode>
       <ManagedPathwayLocalCode>MPOMP</ManagedPathwayLocalCode>
+      <SchoolLocalId>027789</SchoolLocalId>
       <SchoolCommonwealthId>AGEID-1032</SchoolCommonwealthId>
     </StudentScoreJudgementAgainstStandard>
   </xhtml:Example>

@@ -27,9 +27,9 @@
   
   <Item>
 	  <Element>ReportingAuthority</Element>
-	  <Characteristics>C</Characteristics>
+	  <Characteristics>M</Characteristics>
 	  <privacyRating>High</privacyRating>
-	  <Description>Authority who is submitting this Financial Questionnaire? This is Mandatory if being submitted on behalf of a school and not the school itself.</Description>
+	  <Description>Authority who submitted the collection data (e.g. FQ).</Description>
 	  <Type name="xs:normalizedString"></Type>
   </Item>
   
@@ -69,14 +69,14 @@
     </Description>
     <Type name="xs:dateTime"></Type>
   </Item>
-    
+  <!--  
   <Item>
   	  <Element>SubmissionStatusCode</Element>
 	  <Characteristics>O</Characteristics>
 	  <privacyRating>Low</privacyRating>
 	  <Description>Status Code of the actual submission.</Description>
 	  <Type name="xs:normalizedString"></Type> 
-  </Item>
+  </Item> -->
   
    <Item>
   	  <Element>AGCollection</Element>
@@ -123,7 +123,6 @@
   <ReportingAuthorityCommonwealthId>012345</ReportingAuthorityCommonwealthId>
   <SubmittedBy>XXXXXXXX</SubmittedBy>
   <SubmissionTimestamp>2018-05-30T09:00:00</SubmissionTimestamp>
-  <SubmissionStatusCode>1</SubmissionStatusCode>
   <AGCollection>FQ</AGCollection>
   <CollectionYear>2018</CollectionYear>
   <AGReportingObjectResponseList>		
