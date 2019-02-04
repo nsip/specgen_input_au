@@ -7,9 +7,9 @@
 		<localizationCode>au</localizationCode>
 		<schemaVersion>3.4.4</schemaVersion>
 		<!--
-	    <jsonExamplesXslt>98_Xslt/sif2JsonLM.xsl</jsonExamplesXslt> -->
+	    <jsonExamplesXslt>98_Xslt/xmlToJson.xsl</jsonExamplesXslt> -->
 		<resolveExtensions>true</resolveExtensions>
-		<isDraft>true</isDraft>
+		<isDraft>false</isDraft>
 	</globalSettings>
 	
 	<htmlDocuments>
@@ -18,7 +18,7 @@
 		<htmlDocument>
 			<singleDocument>false</singleDocument>
 			<rootDocumentFileName>index.html</rootDocumentFileName>
-			<rootTitle>SIF Implementation Specification (Australia) 3.4.4 (Initial Draft)- FQ 2018 </rootTitle>
+			<rootTitle>SIF Implementation Specification (Australia) 3.4.4</rootTitle>
 			<documentType>DataModel</documentType>
 		</htmlDocument>
 		
@@ -26,7 +26,7 @@
 		<htmlDocument>
 			<singleDocument>true</singleDocument>
 			<rootDocumentFileName>ImplementationSpecification.html</rootDocumentFileName>
-			<rootTitle>SIF Implementation Specification (Australia) 3.4.4 ((Initial Draft)- FQ 2018</rootTitle>
+			<rootTitle>SIF Implementation Specification (Australia) 3.4.4</rootTitle>
 			<documentType>DataModel</documentType>
 		</htmlDocument>
 		
@@ -114,8 +114,15 @@
 			<listWithKeyConstraints>false</listWithKeyConstraints>
 			<isSifMessage2Xsd>false</isSifMessage2Xsd>
 		</xsdDocument>
+	</xsdDocuments>	
+	<xsltTransformations>
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\xmlToJson.xsl</xsltInputFile>
+			<xsltOutputDir>JSON</xsltOutputDir>
+			<xsltOutputFile>sif2JsonLM.xsl</xsltOutputFile>
+			<yamlToJson>false</yamlToJson>
+		</xsltTransformation>
+	</xsltTransformations>
 		
-
-		
-	</xsdDocuments>
+	
 </sifSpecificationGeneratorConfig>

@@ -489,7 +489,15 @@
     <Type ref="CommonTypes" name="StudentGroupListType"></Type>
   </Item>
   
-  
+  <Item>
+    <Element>PublishingPermissionList</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Medium</privacyRating>
+    <Description>
+      <p>List of permissions applicable in general to publication of materials relating to the student.</p>
+    </Description>
+    <Type ref="CommonTypes" name="PublishingPermissionListType"></Type>
+  </Item>
    
   <Item>
     <Element>SIF_Metadata</Element>
@@ -521,6 +529,16 @@
       <Advisor SIF_RefObject="StaffPersonal">B359D3E3-4D75-101A-8C3D-00AA001A1652</Advisor>
       <FTE>1.00</FTE>
       <FTPTStatus>01</FTPTStatus>
+      <PublishingPermissionList>
+		  <PublishingPermission>
+			  <PermissionCategory>OKMediaRelease</PermissionCategory>
+			  <PermissionValue>N</PermissionValue>
+		  </PublishingPermission>
+		  <PublishingPermission>
+			<PermissionCategory>OKPrintedMaterial</PermissionCategory>
+			<PermissionValue>Y</PermissionValue>
+		  </PublishingPermission>
+	  </PublishingPermissionList>
       
       
     </StudentSchoolEnrollment>

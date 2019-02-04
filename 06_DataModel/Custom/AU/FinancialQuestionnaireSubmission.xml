@@ -1,0 +1,313 @@
+<DataObject name="FinancialQuestionnaireSubmission"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xmlns:xi="http://www.w3.org/2001/XInclude"
+			xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	
+            xmlns="http://sifassociation.org/SpecGen">
+
+  <Key>@RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>FinancialQuestionnaireSubmission</Element>
+	<privacyRating>High</privacyRating>
+    <Description>
+      <p></p>
+     </Description>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+	<privacyRating>High</privacyRating>
+    <Description>
+      <p>GUID for this Report. The application that owns this object is responsible for generating this unique Id.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+  
+  <Item>
+	  <Element>FQYear</Element>
+	  <Characteristics>M</Characteristics>
+	  <privacyRating>Low</privacyRating>
+	  <Description>Data Year</Description>
+	  <Type ref="CommonTypes" name="SchoolYearType"></Type>
+  </Item>
+  
+  <Item>
+	  <Element>ReportingAuthority</Element>
+	  <Characteristics>C</Characteristics>
+	  <privacyRating>High</privacyRating>
+	  <Description>Authority who is submitting this Financial Questionnaire? This is Mandatory if being submitted on behalf of a school and not the school itself.</Description>
+	  <Type name="xs:normalizedString"></Type>
+  </Item>
+  
+  <Item>
+	  <Element>ReportingAuthoritySystem</Element>
+	  <Characteristics>O</Characteristics>
+	  <privacyRating>High</privacyRating>
+	  <Description>System of Reporting Authority if Systemic.</Description>
+	  <Type name="xs:normalizedString"></Type>
+  </Item>
+  <Item>
+    <Element>ReportingAuthorityCommonwealthId</Element>
+    <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Commonwealth identifier for the submitting entity.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  
+  <Item>
+  	  <Element>SystemSubmission</Element>
+	  <Characteristics>O</Characteristics>
+	  <privacyRating>Low</privacyRating>
+	  <Description>Is this a System Submission?.</Description>
+	  <Type ref="CommonTypes" name="AUCodeSetsYesOrNoCategoryType"/>
+  </Item>
+  <Item>
+  	<Element>SoftwareVendorInfo</Element>
+	<Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+	<Description>
+	<p>
+       Container for elements containing information on the Software Product and Vendor.
+    </p>
+	</Description>
+	<Type ref="CommonTypes" name="SoftwareVendorInfoContainerType"/>
+  </Item>
+  
+ 
+
+  
+  <Item>
+	  <Element>SubmissionContact</Element>
+	  <Characteristics>M</Characteristics>
+	  <privacyRating>High</privacyRating>
+	  <Description>Information on the Contact for the submission.</Description>
+	  <Type ref="CommonTypes" name="EntityContactInfoType"></Type>
+  </Item>
+  
+    <Item>
+	  <Element>FQReportComments</Element>
+	  <Characteristics>O</Characteristics>
+	  <privacyRating>High</privacyRating>
+	  <Description>General comments on this submission.</Description>
+	  <Type name="xs:normalizedString"></Type>
+  </Item>
+  
+  
+    <Item> 
+    <Element>FQReportingList</Element>    
+    <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
+    <Description>
+      <p>A list of Financial Reports in this FQ AG Collection.</p>
+    </Description>
+	<Type ref="CommonTypes" name="FQReportingListType"></Type>
+	</Item>
+
+ 
+  <Item>   
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+  
+   <xhtml:Example xmlns="" name="FinancialQuestionnaireSubmission">
+    <FinancialQuestionnaireSubmission RefId="D3E34B35-9D75-101A-8C3D-00AA001A1652">
+		<FQYear>2018</FQYear> <!-- Data Year -->
+		<ReportingAuthority>Ballarat Diocese</ReportingAuthority>
+		<ReportingAuthoritySystem>Vic Catholic</ReportingAuthoritySystem>
+		<ReportingAuthorityCommonwealthId>012345</ReportingAuthorityCommonwealthId>
+		<SystemSubmission>N</SystemSubmission>
+		<SoftwareVendorInfo>  <!--Optional information about the Vendor -->
+			<SoftwareProduct>MYOB</SoftwareProduct>
+			<SoftwareVersion>11.0</SoftwareVersion>
+		</SoftwareVendorInfo>
+		<SubmissionContact></SubmissionContact>
+		<FQReportComments>This comment is for the FQ Submission.</FQReportComments>
+		<FQReportingList> 
+			<FQReporting>
+				<FQRefId>D3E34B35-9D75-101A-8C3D-00AA001A1655</FQRefId>
+				<EntityLevel>School</EntityLevel>
+				<SchoolInfoRefId>C4D54B35-9D75-101A-8C3D-00AA001A1689</SchoolInfoRefId>  <!-- Optional - if it exists.  If a School will be a SchoolInfoRefId -->
+				<LocalId>01011234</LocalId>
+				<StateProvinceId>01011234</StateProvinceId>
+				<CommonwealthId>012345</CommonwealthId> <!-- AGEID -->
+				<ACARAId>1234</ACARAId>
+				<EntityName>XXX Secondary College</EntityName>
+				<EntityContact>
+					<Name Type="LGL">
+					  <FamilyName>Miller</FamilyName> <!-- Collection Contact Family Name -->
+					  <GivenName>James</GivenName> <!-- Collection Contact First Name -->
+					</Name>
+					<PositionTitle>Auditor</PositionTitle> <!-- Collection Contact Position -->
+					<Email Type="01">jmiller@lsc.vic.edu.au</Email> <!-- Collection Contact EmailAddress -->
+					<PhoneNumber Type="0096"><Number>03 9637-2000</Number></PhoneNumber> <!-- Collection Contact Phone Number -->
+				</EntityContact>
+				<FQContextualQuestionList>
+					<FQContextualQuestion>
+						<FQContext>GI.010</FQContext>
+						<FQAnswer>Cash</FQAnswer>
+					</FQContextualQuestion>
+					<FQContextualQuestion>
+						<FQContext>GI.015</FQContext>
+						<FQAnswer>No</FQAnswer>
+					</FQContextualQuestion>
+				</FQContextualQuestionList>
+				
+				<FQItemList>
+					<FQItem>
+						<FQItemCode>RI.010</FQItemCode>
+						<TuitionAmount>119827</TuitionAmount>
+						<BoardingAmount>119827</BoardingAmount>
+						<SystemAmount>12345</SystemAmount>
+						<DioceseAmount>76543</DioceseAmount>
+				    </FQItem>
+					<FQItem>
+						<FQItemCode>RI.020</FQItemCode>
+						<TuitionAmount>119827</TuitionAmount>
+						<BoardingAmount>119827</BoardingAmount>
+						<SystemAmount>12345</SystemAmount>
+						<DioceseAmount>76543</DioceseAmount>
+				    </FQItem>
+				    <FQItem>
+						<FQItemCode>RI.030</FQItemCode>
+						<TuitionAmount>119827</TuitionAmount>
+						<BoardingAmount>119827</BoardingAmount>
+						<SystemAmount>12345</SystemAmount>
+						<DioceseAmount>76543</DioceseAmount>
+					</FQItem>
+				</FQItemList>
+				<AGRuleList>
+					<AGRule>
+						<AGRuleCode>WR-076</AGRuleCode>
+						<AGRuleComment>I ignored this rule because</AGRuleComment>
+					</AGRule>
+				</AGRuleList>
+		  </FQReporting>
+		  <FQReporting> 
+				<FQRefId>DCE34B35-9D75-101A-8C3D-00AA001A1655</FQRefId>
+				<EntityLevel>School</EntityLevel>
+				<SchoolInfoRefId>C4D54B35-9D75-101A-8C3D-00AA001A1688</SchoolInfoRefId>
+				<LocalId>01011234</LocalId>
+				<StateProvinceId>45645567</StateProvinceId>
+				<CommonwealthId>12387</CommonwealthId>
+				<ACARAId>99007</ACARAId>
+				<EntityName>ABCXYZ Secondary College</EntityName>
+				<EntityContact>
+					<Name Type="LGL">
+						 <FamilyName>Miller</FamilyName>
+						 <GivenName>James</GivenName>
+					</Name>
+					<PositionTitle>Auditor</PositionTitle>
+					<Email Type="01">jmiller@lsc.vic.edu.au</Email>
+					<PhoneNumber Type="0096"><Number>03 9637-2000</Number></PhoneNumber>
+				</EntityContact>
+				<FQContextualQuestionList>
+					<FQContextualQuestion>
+						<FQContext>GI.010</FQContext>
+						<FQAnswer>Cash</FQAnswer>
+				    </FQContextualQuestion>
+				    <FQContextualQuestion>
+						<FQContext>GI.015</FQContext>
+						<FQAnswer>No</FQAnswer>
+					</FQContextualQuestion>
+				</FQContextualQuestionList>
+				<FQItemList>
+					<FQItem>
+						<FQItemCode>RI.010</FQItemCode>
+						<TuitionAmount>119827</TuitionAmount>
+						<BoardingAmount>119827</BoardingAmount>
+						<SystemAmount>12345</SystemAmount>
+						<DioceseAmount>76543</DioceseAmount>
+				    </FQItem>
+				    <FQItem>
+						<FQItemCode>RI.020</FQItemCode>
+						<TuitionAmount>119827</TuitionAmount>
+						<BoardingAmount>119827</BoardingAmount>
+						<SystemAmount>12345</SystemAmount>
+						<DioceseAmount>76543</DioceseAmount>
+				    </FQItem>
+					<FQItem>
+						<FQItemCode>RI.030</FQItemCode>
+						<TuitionAmount>119827</TuitionAmount>
+						<BoardingAmount>119827</BoardingAmount>
+						<SystemAmount>12345</SystemAmount>
+						<DioceseAmount>76543</DioceseAmount>
+					</FQItem>
+				</FQItemList>
+				<AGRuleList>
+				   <AGRule>
+						<AGRuleCode>WR-076</AGRuleCode>
+						<AGRuleComment>I ignored this rule because</AGRuleComment>
+				   </AGRule>
+				</AGRuleList>
+			</FQReporting>
+		    <FQReporting> 
+		        <FQRefId>E3E34B35-9D75-101A-8C3D-00AA001A1655</FQRefId>
+				<EntityLevel>Diocese</EntityLevel>
+				<LocalId>01011235</LocalId>
+				<StateProvinceId>45645568</StateProvinceId>
+				<CommonwealthId>12388</CommonwealthId>
+				<EntityName>Ballarat Diocese</EntityName>
+				<EntityContact>
+					<Name Type="LGL">
+					  <FamilyName>Miller</FamilyName>
+					  <GivenName>James</GivenName>
+					</Name>
+					<PositionTitle>Auditor</PositionTitle>
+					<Email Type="01">jmiller@lsc.vic.edu.au</Email>
+					<PhoneNumber Type="0096"><Number>03 9637-2000</Number></PhoneNumber>
+				</EntityContact>
+				<FQContextualQuestionList>
+				  <FQContextualQuestion>
+					<FQContext>GI.010</FQContext>
+					<FQAnswer>Cash</FQAnswer>
+				  </FQContextualQuestion>
+				  <FQContextualQuestion>
+						<FQContext>GI.015</FQContext>
+						<FQAnswer>No</FQAnswer>
+				  </FQContextualQuestion>
+				</FQContextualQuestionList>
+				<FQItemList>
+				  <FQItem>
+					<FQItemCode>RI.010</FQItemCode>
+					<TuitionAmount>119827</TuitionAmount>
+					<BoardingAmount>119827</BoardingAmount>
+					<SystemAmount>12345</SystemAmount>
+					<DioceseAmount>76543</DioceseAmount>
+				  </FQItem>
+				  <FQItem>
+					<FQItemCode>RI.020</FQItemCode>
+					<TuitionAmount>119827</TuitionAmount>
+					<BoardingAmount>119827</BoardingAmount>
+					<SystemAmount>12345</SystemAmount>
+					<DioceseAmount>76543</DioceseAmount>
+				  </FQItem>
+				  <FQItem>
+					<FQItemCode>RI.030</FQItemCode>
+					<TuitionAmount>119827</TuitionAmount>
+					<BoardingAmount>119827</BoardingAmount>
+					<SystemAmount>12345</SystemAmount>
+					<DioceseAmount>76543</DioceseAmount>
+				  </FQItem>
+				</FQItemList>
+				<AGRuleList>
+				  <AGRule>
+					<AGRuleCode>WR-076</AGRuleCode>
+					<AGRuleComment>I ignored this rule because</AGRuleComment>
+				  </AGRule>
+				</AGRuleList>
+			  </FQReporting>
+		  </FQReportingList>
+		</FinancialQuestionnaireSubmission>
+	  </xhtml:Example> 
+  </DataObject>

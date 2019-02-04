@@ -10004,7 +10004,7 @@
 	</CodeSet>
 	<CodeSet>
 		<Intro>
-			<p>A set of permissions available for photo useage</p>
+			<p>A set of permissions available for media useage</p>
 		</Intro>
 		<ID>Permission Category Code</ID>
 		<Values>
@@ -10027,6 +10027,22 @@
 			<Value>
 				<Code>School/College Yearbook</Code>
 				<Text>School/College Yearbook</Text>
+			</Value>
+			<Value>
+				<Code>Jurisdiction Promotional</Code>
+				<Text>Jurisdiction Promotional</Text>
+			</Value>
+			<Value>
+				<Code>Jurisdiction Educational</Code>
+				<Text>Jurisdiction Educational</Text>
+			</Value>	
+			<Value>
+				<Code>OKPublishInfo</Code>
+				<Text>OKPublishInfo</Text>
+			</Value>
+			<Value>
+				<Code>OKOnLineServices</Code>
+				<Text>OKOnLineServices</Text>
 			</Value>
 		</Values>
 	</CodeSet>

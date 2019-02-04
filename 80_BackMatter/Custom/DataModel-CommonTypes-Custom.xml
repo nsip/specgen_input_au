@@ -153,27 +153,27 @@
 		</Item>	
 	</CommonElement>
       
-    <CommonElement name="PhotoPermissionListType" type="true" dm="true">
+    <CommonElement name="PublishingPermissionListType" type="true" dm="true">
 		<Item>
-			<Element>PhotoPermissionListType</Element>
+			<Element>PublishingPermissionListType</Element>
 			<Description>
 				<p></p>
 			</Description>
 			<List mode="List"/>
 		</Item>
 		<Item>
-			<Element>PhotoPermission</Element>
+			<Element>PublishingPermission</Element>
 			<Characteristics>OR</Characteristics>
 			<Description>
 				<p></p>
 			</Description>
-			<Type ref="CommonTypes" name="PhotoPermissionType"/>
+			<Type ref="CommonTypes" name="PublishingPermissionType"/>
 		</Item>
 	</CommonElement>
    
-   	<CommonElement name="PhotoPermissionType" type="true" dm="true">
+   	<CommonElement name="PublishingPermissionType" type="true" dm="true">
 		<Item>
-			<Element>PhotoPermissionType</Element>
+			<Element>PublishingPermissionType</Element>
 			<Characteristics/>
 			<Description>
 				<p>.</p>
@@ -196,7 +196,12 @@
 		   </Description>
 		   <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"/>
 		</Item>
-	
+	    <xhtml:Example xmlns="" name="PublishingPermission">
+			<PublishingPermission>
+				<PermissionCategory>OKPrintedMaterial</PermissionCategory>
+				<PermissionValue>Y</PermissionValue>
+			</PublishingPermission>
+	    </xhtml:Example>
 	</CommonElement>
   <!-- Added for PPOD - PersonPrivacyObligation 
    
@@ -418,7 +423,141 @@
 		<Type ref="CommonTypes" name="AGRuleListType"></Type>
   </Item>
   	</CommonElement>
+  <CommonElement name="FQReportingListType" type= "true" dm="true">
+      <Item>
+			<Element>FQReportingListType</Element>
+			<Description>
+				<p>A list of FQ Reports.</p>
+			</Description>
+			<List mode="List"/>
+	  </Item>
+      <Item>
+			<Element>FQReporting</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>The FQ being reported on.</p>
+			</Description>
+			<Type ref="CommonTypes" name="FQReportingType"/>
+		</Item>
+  </CommonElement>
+  <CommonElement name= "FQReportingType" type="true" dm="true">
+        <Item>
+			<Element>FQReportingType</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>The FQ being reported on.</p>
+			</Description>
+		</Item>
+		<Item> 	
+	 <Element>FQRefId</Element>    
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>A GUID associated with this packet of an FQReport.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+   <Item>
+	  <Element>EntityLevel</Element>
+	  <Characteristics>M</Characteristics>
+	  <privacyRating>Medium</privacyRating>
+	  <Description>Level of the Submission, current valid values "School", "Diocese", "System".</Description>
+	  <!-- Do we need to restrict the level in enumeration of the type? -->
+	  <Type name="xs:normalizedString"></Type>
+  </Item>
+	<Item> 	
+	 <Element>SchoolInfoRefId</Element>    
+    <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
+    <Description>
+      <p>A pointer back to the SchoolObject underlying this Report if it exists.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
   
+   <Item>
+    <Element>LocalId</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>The locally-assigned identifier for the entity being reported on.</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>
+  
+  <Item>
+    <Element>StateProvinceId</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>The state-assigned identifier for entity being reported on.</p>
+    </Description>
+    <Type ref="CommonTypes" name="StateProvinceIdType"></Type>
+  </Item>
+  
+  <Item>
+    <Element>CommonwealthId</Element>
+    <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Commonwealth identifier for this school/campus or entity being reported on.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  
+   <Item>
+    <Element>ACARAId</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>ACARA identifier for this school/campus.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  
+  <Item>
+	  <Element>EntityName</Element>
+	  <Characteristics>O</Characteristics>
+	  <privacyRating>Medium</privacyRating>
+	  <Description>Name of the Entity who this submission is for, if a School, it will be the SchoolName.</Description>
+	  <Type name="xs:normalizedString"></Type>
+  </Item> 
+  <Item>
+	  <Element>EntityContact</Element>
+	  <Characteristics>M</Characteristics>
+	  <privacyRating>High</privacyRating>
+	  <Description>Information on the Contact for the submission.</Description>
+	  <Type ref="CommonTypes" name="EntityContactInfoType"></Type>
+  </Item>
+  <Item>
+    <Element>FQContextualQuestionList</Element>    
+    <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
+    <Description>
+      <p>A list of Financial questions to set the context for the AG Collection.</p>
+    </Description>
+	<Type ref="CommonTypes" name="FQContextualQuestionListType"></Type>
+  </Item>
+  <Item>
+    <Element>FQItemList</Element>    
+    <Characteristics>M</Characteristics>
+	<privacyRating>High</privacyRating>
+    <Description>
+      <p>A list of Financial Items being reported on for the AG Collection.</p>
+    </Description>
+	<Type ref="CommonTypes" name="FQItemListType"></Type>
+  </Item>
+  
+  <Item>
+    <Element>AGRuleList</Element>    
+    <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
+    <Description>
+      <p>A list of Rules associated with this submission.</p>
+    </Description>
+	<Type ref="CommonTypes" name="AGRuleListType"></Type>
+  </Item>
+  </CommonElement>
   <CommonElement name="FQContextualQuestionListType" type="true" dm="true">
 		<Item>
 			<Element>FQContextualQuestionListType</Element>
@@ -611,7 +750,7 @@
 		</Item>
 		<Item>
 			<Element>SoftwareProduct</Element>
-			<Characteristics>O</Characteristics>
+			<Characteristics>M</Characteristics>
 			<Description>
 				<p>Product used to create the Submission.</p>
 			</Description>
@@ -619,7 +758,7 @@
 		</Item>
 		<Item>
 			<Element>SoftwareVersion</Element>
-			<Characteristics>O</Characteristics>
+			<Characteristics>M</Characteristics>
 			<Description>
 				<p>Version of the sofware used to create the Submission.</p>
 			</Description>

@@ -10,7 +10,7 @@
 	<h4>New Objects</h4>
 	<ul>
 		<li>StudentScoreJudgementAgainstStandard - Proposed by Catholic Education, Melbourne</li>
-		<li>FQReporting - Proposed for Australian Government, Collections Projects</li>
+		<li>FQReportingCollection - Proposed for Australian Government, Collections Projects</li>
 		<li>AGStatusReport- Proposed for Australian Government, Collections Projects</li>
 	</ul>
 	
@@ -22,6 +22,7 @@
 		<li>ESLSupport - Contained in StudentPersonal</li>
 		<li>PreviousSchoolName - Contained in StudentSchoolEnrollment</li>
 		<li>DestinationSchoolName - Contained in StudentSchoolEnrollment</li>
+		<li>FQReporting and FQReportingList - Contained in FQReportingCollection</li>
 		<li>AGReportingObjectResponseListType - Contained in AGStatusReport</li>
 		<li>AGReportingObjectResponseType -	Contained in AGStatusReport</li>
 		<li>FQContextualQuestionListType - Contained in FQReporting</li>

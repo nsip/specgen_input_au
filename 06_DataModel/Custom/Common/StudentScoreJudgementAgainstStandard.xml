@@ -12,7 +12,7 @@
     <Element>StudentScoreJudgementAgainstStandard</Element>
     <privacyRating>High</privacyRating>
     <Description>
-      <p>This object serves to represent a student's score, (score in the form of a teacher judgement against written achievement standards), which has been recorded against a curriculum node (the curriculum node belongs to a curriculum structure), which was taught as part of a school-defined class, during a specific reporting period.</p>
+      <p>This object serves to represent a student's score (score in the form of a teacher judgement against written achievement standards), which has been recorded against a curriculum node (the curriculum node belongs to a curriculum structure), which was taught as part of a school-defined class, during a specific reporting period.</p>
     </Description>
   </Item>
   <Item>
@@ -83,7 +83,7 @@
 	<Characteristics>M</Characteristics>
 	<privacyRating>Medium</privacyRating>
 	<Description>
-		<p>The current or most recent year level of the student.</p>
+		<p>The year level of the student in context of the judgement (i.e. year level relative to the SchoolYear and LocalTermCode).</p>
 	</Description>
 	<Type ref="CommonTypes" name="YearLevelType"/>
   </Item>
@@ -129,7 +129,7 @@
     <Characteristics>C</Characteristics>
 	<privacyRating>Low</privacyRating>	
     <Description>
-      Either a GUID to LearningStandardItem, LocalId or a URL to Curriculum . This can be a content description or a strand. Either a LearningStandardList or CurriculumCode AND SubCode Must be provided.
+      Either a GUID to LearningStandardItem, LocalId or a URL to Curriculum . This can be a content description or a strand. Either a LearningStandardList or CurriculumCode AND CurriculumNodeCode Must be provided.
     </Description>
     <Type ref="CommonTypes" name="LearningStandardListType"></Type>
   </Item> 
