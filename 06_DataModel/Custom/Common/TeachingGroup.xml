@@ -207,7 +207,7 @@
     <Characteristics>O</Characteristics>
 	<privacyRating>Medium</privacyRating>
     <Description>
-      <p>A List of teachers associated with the group –  may or may not include the teacher timetabled in the schedule.</p>
+      <p>A List of teachers associated with the group -  may or may not include the teacher timetabled in the schedule.</p>
     </Description>
     <Type ref="CommonTypes" name="TeacherListType"></Type>
   </Item>
@@ -263,7 +263,7 @@
       <SchoolYear>2008</SchoolYear>
       <LocalId>20087ASPN</LocalId>
       <ShortName>7A SPN</ShortName>
-      <LongName>Year 7A Maths – Space and Numbers</LongName>
+      <LongName>Year 7A Maths - Space and Numbers</LongName>
       <Set>4</Set>
       <Block>6</Block>
       <CurriculumLevel>VELS Level 5</CurriculumLevel>

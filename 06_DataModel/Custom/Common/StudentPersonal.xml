@@ -238,6 +238,15 @@
 		<Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"/>
 	</Item>
 	<Item>
+		<Element>ESLSupport</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+			<p>Is the student in receipt of ESL support?</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"/>
+	</Item>
+	<Item>
 		<Element>PrePrimaryEducation</Element>
 		<Characteristics>O</Characteristics>
 		<privacyRating>High</privacyRating>
@@ -255,8 +264,7 @@
 		</Description>
 		<Type name="xs:date"/>
 	</Item>
-	
-	
+
 	<Item>
 		<Element>SIF_Metadata</Element>
 		<Characteristics>O</Characteristics>

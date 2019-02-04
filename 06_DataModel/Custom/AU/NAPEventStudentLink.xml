@@ -11,7 +11,7 @@
     <Element>NAPEventStudentLink</Element>
 	<privacyRating>High</privacyRating>
     <Description>
-      <p>This object represents a student’s attempt to undergo NAP assessment in a particular test.</p>
+      <p>This object represents a student's attempt to undergo NAP assessment in a particular test.</p>
     </Description>
   </Item>
   <Item>
@@ -217,7 +217,7 @@
 		<Characteristics>O</Characteristics>
 		<privacyRating>High</privacyRating>
 		<Description>
-			<p>Flag indicating whether a student’s date of birth is in expected range.</p>
+			<p>Flag indicating whether a student's date of birth is in expected range.</p>
 		</Description>
 		<Type name="xs:boolean"></Type>
   </Item> 

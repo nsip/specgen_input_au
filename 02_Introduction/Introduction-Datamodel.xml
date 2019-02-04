@@ -8,7 +8,7 @@
     <p>
       With respect to the SIF Specification, educators and non-technical readers are typically interested in the pK-12 data objects
       that can be shared and reported on by SIF-enabled applications in SIF implementations.  This document, the <em>SIF Data Model Implementation Specification</em>, contains a <a href="DataModel.html">Data Model</a>
-      section in a format that should not be a barrier to readers with a some knowledge of <a href="http://www.w3.org/XML/1999/XML-in-10-points.html">[XML]</a>.
+      section in a format that should not be a barrier to readers with a some knowledge of <a href="http://https://www.w3.org/XML/">[XML]</a>.
       More technical readers, including software architects,
       developers and integrators, will also be interested in the separate <em>SIF Infrastructure Implementation Specification</em> document.   
     </p>

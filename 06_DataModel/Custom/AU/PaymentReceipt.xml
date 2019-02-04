@@ -12,7 +12,7 @@
 	<privacyRating>High</privacyRating>
     <Description>
       <p>
-        This object complements the Invoice object, and contains information about the payment of a Invoice object.</p>
+        This object complements the Invoice object, and contains information about the payment of an Invoice object.</p>
      </Description>
   </Item>
   <Item>

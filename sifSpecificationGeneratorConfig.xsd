@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- edited with XMLSpy v2010 rel. 3 sp1 (x64) (http://www.altova.com) by Vince Paredes (SIF Association) -->
+
+<!-- additions made by Stuart McGrigor (SIF New Zealand) - March/April 2018
+
+   added globalSettings:
+       - jsonExamplesXslt - when present, use the XSLT script to generate JSON samples alongside the XML samples in HTML output.
+       - resolveExtensions - when true include inherited elements and attributes in HTML output and diagrams
+           for CommonElements that are extensions of other CommonElements.
+           
+           
+   add xsltTransformations:
+       - each xsltTransformation causes an XSL-T job to run, transforming SIF_DataModel.input.xml against given
+         xsltInput script and placing resultant xsltOutputFile in xsltOutputDir  xsl:params are:
+            - sifVersion - the value of schemaVersion from global settings
+            - sifLocale  - the value of Intl from gloabl settings (uppercase)
+         
+       - yamlToJson if true = means the XSLT job wrote a YAML file, so also produce the JSON equivalent in xsltOutputDir
+-->
 <xs:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://www.sifassociation.org/sifSpecificationGenerator/1.0" targetNamespace="http://www.sifassociation.org/sifSpecificationGenerator/1.0" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:element name="sifSpecificationGeneratorConfig">
 		<xs:complexType>
@@ -11,6 +28,9 @@
 							<xs:element name="sifNamespace" type="xs:normalizedString"/>
 							<xs:element name="localizationCode" type="xs:normalizedString"/>
 							<xs:element name="schemaVersion" type="xs:normalizedString"/>
+              <xs:element name="jsonExamplesXslt" type="xs:normalizedString"/>
+              <xs:element name="resolveExtensions" type="xs:boolean"/>
+              <xs:element name="isDraft" type="xs:boolean"/>
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>
@@ -71,6 +91,23 @@
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>
+
+        <xs:element name="xsltTransformations" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="xsltTransformation" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="xsltInputFile" type="xs:normalizedString"/>
+                    <xs:element name="xsltOutputDir" type="xs:normalizedString"/>
+                    <xs:element name="xsltOutputFile" type="xs:normalizedString"/>
+                    <xs:element name="yamlToJson"     type="xs:boolean"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>

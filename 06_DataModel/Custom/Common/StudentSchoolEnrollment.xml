@@ -426,6 +426,15 @@
     </Description>
     <Type ref="CommonTypes" name="LocalIdType"></Type>
   </Item>
+  <Item>
+    <Element>PreviousSchoolName</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>If the student has previously been enrolled at a school, i.e. student is transferring, the previous school name.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
 
   <Item>
     <Element>DestinationSchool</Element>
@@ -436,6 +445,16 @@
       <p>If the student has exited the school, the local id of the school to which the student has transferred to.</p>
     </Description>
     <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>
+  <Item>
+    <Element>DestinationSchoolName</Element>
+
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>If the student has exited the school, the school name to which the student has transferred to, or is transferring to.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
   </Item>
 
   <Item>
@@ -457,6 +476,27 @@
       <p>First date the student was enrolled at this school if known.</p>
     </Description>
     <Type name="xs:date"></Type>
+  </Item>
+  
+  <Item>
+    <Element>StudentGroupList</Element>
+
+    <Characteristics>O</Characteristics>
+	<privacyRating>Medium</privacyRating>
+    <Description>
+      <p>List of groups that this student is a member of.</p>
+    </Description>
+    <Type ref="CommonTypes" name="StudentGroupListType"></Type>
+  </Item>
+  
+  <Item>
+    <Element>PublishingPermissionList</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Medium</privacyRating>
+    <Description>
+      <p>List of permissions applicable in general to publication of materials relating to the student.</p>
+    </Description>
+    <Type ref="CommonTypes" name="PublishingPermissionListType"></Type>
   </Item>
    
   <Item>
@@ -489,6 +529,16 @@
       <Advisor SIF_RefObject="StaffPersonal">B359D3E3-4D75-101A-8C3D-00AA001A1652</Advisor>
       <FTE>1.00</FTE>
       <FTPTStatus>01</FTPTStatus>
+      <PublishingPermissionList>
+		  <PublishingPermission>
+			  <PermissionCategory>OKMediaRelease</PermissionCategory>
+			  <PermissionValue>N</PermissionValue>
+		  </PublishingPermission>
+		  <PublishingPermission>
+			<PermissionCategory>OKPrintedMaterial</PermissionCategory>
+			<PermissionValue>Y</PermissionValue>
+		  </PublishingPermission>
+	  </PublishingPermissionList>
       
       
     </StudentSchoolEnrollment>

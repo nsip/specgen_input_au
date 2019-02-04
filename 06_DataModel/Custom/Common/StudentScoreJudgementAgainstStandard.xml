@@ -1,0 +1,258 @@
+<DataObject name="StudentScoreJudgementAgainstStandard"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xmlns:xi="http://www.w3.org/2001/XInclude"
+			xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	
+            xmlns="http://sifassociation.org/SpecGen">
+  <Key>@RefId</Key>
+  <EventsReported>true</EventsReported>
+
+  <Item>
+    <Element>StudentScoreJudgementAgainstStandard</Element>
+    <privacyRating>High</privacyRating>
+    <Description>
+      <p>This object serves to represent a student's score (score in the form of a teacher judgement against written achievement standards), which has been recorded against a curriculum node (the curriculum node belongs to a curriculum structure), which was taught as part of a school-defined class, during a specific reporting period.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <privacyRating>Medium</privacyRating>
+    <Description>
+      <p>The GUID that uniquely identifies an instance of the object.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+  <Item>
+    <Element>SchoolYear</Element>
+    <Characteristics>M</Characteristics>
+    <privacyRating>Medium</privacyRating>
+    <Description>
+      <p>The calendar year, where formal judgements are made.</p>
+    </Description>
+    <Type ref="CommonTypes" name="SchoolYearType"></Type>
+  </Item>
+  <Item>
+    <Element>TermInfoRefId</Element>
+    <Characteristics>C</Characteristics>
+    <privacyRating>Medium</privacyRating>
+    <Description>
+      <p>The TermInfo Object, if one is published, in which the judgements are made. Either a TermInfoRefId or a LocalTermCode must be provided.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  <Item>
+	  <Element>LocalTermCode</Element>
+	    <Characteristics>C</Characteristics>
+		<privacyRating>Medium</privacyRating>
+		<Description>
+			  <p>Refers to a local time period, the reporting period, (e.g. mid or end) within the calendar year, where formal judgements are made. Either a TermInfoRefId or a LocalTermCode must be provided.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>
+  <Item>
+    <Element>StudentPersonalRefId</Element>
+    <Characteristics>C</Characteristics>
+    <privacyRating>High</privacyRating>
+    <Description>
+      <p>The link to the student associated with this score. Either the StudentPersonalRefId or the StudentStateProvinceId, (in Vic = VSN), or StudentLocalId MUST BE provided.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  <Item>
+	<Element>StudentStateProvinceId</Element>
+	<Characteristics>C</Characteristics>
+	<privacyRating>High</privacyRating>
+	<Description>
+		<p>The state-assigned identifier for this student. Either the StudentPersonalRefId or the StudentStateProvinceId, (in Vic = VSN), or StudentLocalId MUST BE provided.</p>
+	</Description>
+	<Type ref="CommonTypes" name="StateProvinceIdType"/>
+  </Item>
+   <Item>
+	<Element>StudentLocalId</Element>
+	<Characteristics>C</Characteristics>
+	<privacyRating>High</privacyRating>
+	<Description>
+		<p>The Local identifier for this student. Either the StudentPersonalRefId or the StudentStateProvinceId, (in Vic = VSN), or StudentLocalId MUST BE provided.</p>
+	</Description>
+	<Type ref="CommonTypes" name="LocalIdType"/>
+  </Item>  
+  <Item>
+	<Element>YearLevel</Element>
+	<Characteristics>M</Characteristics>
+	<privacyRating>Medium</privacyRating>
+	<Description>
+		<p>The year level of the student in context of the judgement (i.e. year level relative to the SchoolYear and LocalTermCode).</p>
+	</Description>
+	<Type ref="CommonTypes" name="YearLevelType"/>
+  </Item>
+
+  <Item>
+    <Element>TeachingGroupRefId</Element>
+    <Characteristics>C</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The registration associated with this score. Either TeachingGroupRefId or ClassLocalId MUST BE provided.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Element>ClassLocalId</Element>
+    <Characteristics>C</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>LocalId that identifies the class code of the class associated with the school-defined subject. Either TeachingGroupRefId or ClassLocalId MUST BE provided.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  <Item>
+	<Element>StaffPersonalRefId</Element>
+	<Characteristics>C</Characteristics>
+	<privacyRating>Low</privacyRating>
+	<Description>
+		<p>The Id (GUID) of the StaffPersonal record for the teacher who is primarily associated with the score. Either StaffPersonalRefId or StaffLocalId MUST BE provided.</p>
+	</Description>
+	<Type ref="CommonTypes" name="IdRefType"/>
+  </Item>
+  <Item>
+	<Element>StaffLocalId</Element>
+	<Characteristics>C</Characteristics>
+	<privacyRating>Low</privacyRating>
+	<Description>
+		<p>LocalId of the StaffPersonal record for the teacher who is primarily associated with the score. Either StaffPersonalRefId or StaffLocalId MUST BE provided.</p>
+	</Description>
+	<Type ref="CommonTypes" name="LocalIdType"/>
+  </Item>
+  <Item>
+    <Element>LearningStandardList</Element>
+    <Characteristics>C</Characteristics>
+	<privacyRating>Low</privacyRating>	
+    <Description>
+      Either a GUID to LearningStandardItem, LocalId or a URL to Curriculum . This can be a content description or a strand. Either a LearningStandardList or CurriculumCode AND CurriculumNodeCode Must be provided.
+    </Description>
+    <Type ref="CommonTypes" name="LearningStandardListType"></Type>
+  </Item> 
+  <Item>
+    <Element>CurriculumCode</Element>
+    <Characteristics>C</Characteristics>
+	<privacyRating>Low</privacyRating>	
+    <Description>
+      The curriculum code, associated with the Teacher Judgement. Either a LearningStandardList or CurriculumCode AND CurriculumNodeCode Must be provided.
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item> 
+  <Item>
+    <Element>CurriculumNodeCode</Element>
+    <Characteristics>C</Characteristics>
+	<privacyRating>Low</privacyRating>	
+    <Description>
+      The curriculum node code, associated with the Teacher Judgement. Each curriculum consists of a nested structure of nodes. Either a LearningStandardList or CurriculumCode AND CurriculumNodeCode Must be provided.
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item> 
+  <Item>
+    <Element>Score</Element>
+    <Characteristics>M</Characteristics>
+    <privacyRating>Low</privacyRating>	
+    <Description>
+      <p>The score reflecting the teacher judgement against standards. Boundaries determined by the system.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  <Item>
+    <Element>SpecialCircumstanceLocalCode</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>High</privacyRating>
+    <Description>
+      <p>Any Special Circumstance, (or none), that needs to be taken into consideration.</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>
+    <Item>
+    <Element>ManagedPathwayLocalCode</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>High</privacyRating>
+    <Description>
+      <p>Any Managed Pathway that needs to be recorded.</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item> 
+   <Item>
+    <Element>SchoolInfoRefId</Element>
+    <Characteristics>C</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The RefId of the SchoolInfo Object.  It can be used as the link to the school object associated with this score. Either the SchoolInfoRefId OR (SchoolLocalId AND SchoolCommonwealthId, (AGEID)), MUST BE provided.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item> 
+ 
+   <Item>
+    <Element>SchoolLocalId</Element>
+    <Characteristics>C</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The link to the school associated with this score. Either the SchoolInfoRefId OR (SchoolLocalId AND SchoolCommonwealthId, (AGEID)), MUST BE provided.</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item> 
+    <Item>
+    <Element>SchoolCommonwealthId</Element>
+    <Characteristics>C</Characteristics>
+    <privacyRating>High</privacyRating>
+    <Description>
+      <p>The Australian Government Education ID that can be used as a link to the school associated with this score. Either the SchoolInfoRefId OR (SchoolLocalId AND SchoolCommonwealthId, (AGEID)), MUST BE provided.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item> 
+ 
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+
+  <xhtml:Example xmlns="" name="StudentScoreJudgementAgainstStandard Example 1 - Objects Published previously">
+    <StudentScoreJudgementAgainstStandard RefId="5810E283-E928-459C-BBA7-6EFE1963F784">
+      <SchoolYear>2018</SchoolYear>
+      <TermInfoRefId>1F971F3D-414E-4146-9325-66638290E6C1</TermInfoRefId>
+      <StudentPersonalRefId>8F0934CC-2F04-48F8-BBD7-88AA1ADE691B</StudentPersonalRefId>
+      <YearLevel>
+		  <Code>10</Code>
+      </YearLevel>
+      <TeachingGroupRefId>E5EDAE63-A04D-47E4-9D02-24A32956B074</TeachingGroupRefId>
+      <StaffPersonalRefId>9D0934CC-2F04-48F8-BBD7-88AA1ADE691B</StaffPersonalRefId>
+      <CurriculumCode>AUSVELS</CurriculumCode>
+      <CurriculumNodeCode>MATNUM</CurriculumNodeCode>
+      <Score>10</Score>
+      <SpecialCircumstanceLocalCode>SCMP</SpecialCircumstanceLocalCode>
+      <ManagedPathwayLocalCode>MPOMP</ManagedPathwayLocalCode>
+      <SchoolInfoRefId>E6EDAE63-A04D-47E4-9D02-24A32956B075</SchoolInfoRefId>
+    </StudentScoreJudgementAgainstStandard>
+  </xhtml:Example>
+ <xhtml:Example xmlns="" name="StudentScoreJudgementAgainstStandard Example 2 - No previous SIF Objects Published">
+    <StudentScoreJudgementAgainstStandard RefId="5810E283-E928-459C-BBA7-6EFE1963F784">
+      <SchoolYear>2018</SchoolYear>
+      <LocalTermCode>Mid</LocalTermCode>
+      <StudentStateProvinceId>987654321</StudentStateProvinceId>
+      <YearLevel>
+		  <Code>10</Code>
+      </YearLevel>
+      <ClassLocalId>MAT10A</ClassLocalId>
+      <StaffLocalId>C1234567</StaffLocalId>
+      <CurriculumCode>AUSVELS</CurriculumCode>
+      <CurriculumNodeCode>MATNUM</CurriculumNodeCode>
+      <Score>10</Score>
+      <SpecialCircumstanceLocalCode>SCMP</SpecialCircumstanceLocalCode>
+      <ManagedPathwayLocalCode>MPOMP</ManagedPathwayLocalCode>
+      <SchoolLocalId>027789</SchoolLocalId>
+      <SchoolCommonwealthId>AGEID-1032</SchoolCommonwealthId>
+    </StudentScoreJudgementAgainstStandard>
+  </xhtml:Example>
+</DataObject>

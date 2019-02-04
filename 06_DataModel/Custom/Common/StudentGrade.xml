@@ -175,7 +175,7 @@
 	<privacyRating>Low</privacyRating>
     <Description>
       <p>
-        The teacher judgement of the student’s performance as captured in this object.
+        The teacher judgement of the student's performance as captured in this object.
       </p>
     </Description>
     <Type name="xs:string"></Type>

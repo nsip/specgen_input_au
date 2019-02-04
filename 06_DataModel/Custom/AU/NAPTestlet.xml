@@ -11,7 +11,7 @@
     <Element>NAPTestlet</Element>
 	<privacyRating>Low</privacyRating>
     <Description>
-      <p>This object represents a student’s attempt to undergo NAP assessment in a particular test.</p>
+      <p>This object represents a student's attempt to undergo NAP assessment in a particular test.</p>
     </Description>
   </Item>
   <Item>

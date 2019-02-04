@@ -12,7 +12,7 @@
     <Element>NAPStudentResponseSet</Element>
 	<privacyRating>High</privacyRating>
     <Description>
-      <p>Capture of student’s responses to a NAP test.</p>
+      <p>Capture of student's responses to a NAP test.</p>
     </Description>
   </Item>
   <Item>
@@ -60,7 +60,7 @@
 		<privacyRating>High</privacyRating>
 		<Type name="xs:normalizedString"></Type>
 		<Description>
-		  <p>Student’s trajectory through adaptive test for the domain. Expressed as a sequence of node identifiers.Not provided if test is not adaptive (e.g. Writing).</p>
+		  <p>Student's trajectory through adaptive test for the domain. Expressed as a sequence of node identifiers. Not provided if test is not adaptive (e.g. Writing).</p>
 		</Description>
   </Item>    
   
@@ -70,7 +70,7 @@
 		<privacyRating>High</privacyRating>
 		<Type name="xs:normalizedString"></Type>
 		<Description>
-		  <p>Student’s trajectory through adaptive test for the domain. Expressed as a sequence of testlet identifiers.Not provided if test is not adaptive (e.g. Writing).</p>
+		  <p>Student's trajectory through adaptive test for the domain. Expressed as a sequence of testlet identifiers. Not provided if test is not adaptive (e.g. Writing).</p>
 		</Description>
   </Item>      
   

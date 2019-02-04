@@ -57,7 +57,6 @@
   
   <Item>
     <Element>SchoolYear</Element>
-
     <Characteristics>M</Characteristics>
 	<privacyRating>Medium</privacyRating>
     <Description>
@@ -66,7 +65,7 @@
         ends (e.g. <code>2007</code>).
       </p>
     </Description>
-     <Type ref="DataModel" name="SchoolYearType"></Type>
+     <Type ref="CommonTypes" name="SchoolYearType"></Type>
   </Item>
   <Item>
     <Element>PictureSource</Element>
@@ -99,17 +98,27 @@
     </Description>
     <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
   </Item>
+   <Item>
+    <Element>PublishingPermissionList</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Medium</privacyRating>
+    <Description>
+      <p>List of Permissions Applicable.</p>
+    </Description>
+    <Type ref="CommonTypes" name="PublishingPermissionListType"></Type>
+  </Item>
+  
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
 	<privacyRating>Medium</privacyRating>
-    <Type ref="DataModel" name="SIF_MetadataType"></Type>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
 	<privacyRating>Medium</privacyRating>
-    <Type ref="DataModel" name="SIF_ExtendedElementsType"></Type>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
   </Item>
   <xhtml:Example xmlns="" name="PersonPicture">
     <PersonPicture RefId="D3E34B35-9D75-101A-8C3D-00AA001A1652">
@@ -117,6 +126,21 @@
       <SchoolYear>2007</SchoolYear>
       <PictureSource Type="01">http://www.schoolsite.com/pictures/2007/1234.jpg </PictureSource>
       <OKToPublish>Y</OKToPublish>
+        <PublishingPermissionList>
+           <PublishingPermission>
+               <PermissionCategory>OKPrintedMaterial</PermissionCategory>       <!-- Permission to publish to Printed material e.g. NameTag -->
+               <PermissionValue>Y</PermissionValue>
+         </PublishingPermission>
+         <PublishingPermission>
+               <PermissionCategory>OKOnlineMaterial</PermissionCategory> <!-- Permission to publish online material e.g. School's Website -->
+               <PermissionValue>Y</PermissionValue>
+         </PublishingPermission>        
+         <PublishingPermission>
+               <PermissionCategory>OKMediaRelease</PermissionCategory>          <!-- Permission to release to the Media e.g. for school related activities -->
+               <PermissionValue>U</PermissionValue>
+         </PublishingPermission>               
+  </PublishingPermissionList>
+
     </PersonPicture>
 
   </xhtml:Example>
