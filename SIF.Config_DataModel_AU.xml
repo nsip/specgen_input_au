@@ -115,14 +115,16 @@
 			<isSifMessage2Xsd>false</isSifMessage2Xsd>
 		</xsdDocument>
 	</xsdDocuments>	
+	<!--
 	<xsltTransformations>
 		<xsltTransformation>
-			<xsltInputFile>98_Xslt\xmlToJson.xsl</xsltInputFile>
+			<xsltInputFile></xsltInputFile>
 			<xsltOutputDir>JSON</xsltOutputDir>
 			<xsltOutputFile>sif2JsonLM.xsl</xsltOutputFile>
 			<yamlToJson>false</yamlToJson>
 		</xsltTransformation>
 	</xsltTransformations>
+-->
 		
 	
 </sifSpecificationGeneratorConfig>

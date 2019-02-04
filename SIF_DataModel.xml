@@ -84,8 +84,8 @@
 		    <dd><br/></dd>	
 			<dt>JSON Schemas</dt>
 			<dd>
-				JSON XSLT definition <a href="JSON/xmlToJson.xslt"> (xslt)</a>
-				<a href="JSON/xmlToJson.xslt">(xslt)</a>
+				JSON XSLT definition <a href="JSON/sif2Json.xsl"> (xslt)</a>
+				<a href="JSON/sif2Json.xsl">(xslt)</a>
 			</dd>
 
 		</dl>
