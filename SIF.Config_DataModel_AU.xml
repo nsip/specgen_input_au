@@ -13,13 +13,9 @@
 		
 	    <!--<jsonExamplesXslt>98_Xslt/xmlToJson.xsl</jsonExamplesXslt> -->
 		<resolveExtensions>true</resolveExtensions>
-<<<<<<< HEAD
+
 		<isDraft>false</isDraft>
-=======
-		<isDraft>true</isDraft>
 
-
->>>>>>> 193989dfb3c7ae1c740b1875b4edba7d01def8d8
 	</globalSettings>
 	
 	<htmlDocuments>
@@ -124,7 +120,7 @@
 			<listWithKeyConstraints>false</listWithKeyConstraints>
 			<isSifMessage2Xsd>false</isSifMessage2Xsd>
 		</xsdDocument>
-<<<<<<< HEAD
+
 	</xsdDocuments>	
 	<!--
 	<xsltTransformations>
@@ -138,7 +134,7 @@
 -->
 		
 	
-=======
+
 	</xsdDocuments>
 	
 	<!-- Other outputs built using XSLT -->
@@ -167,5 +163,4 @@
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>		
 	</xsltTransformations> -->
->>>>>>> 193989dfb3c7ae1c740b1875b4edba7d01def8d8
 </sifSpecificationGeneratorConfig>
