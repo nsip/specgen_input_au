@@ -1,15 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<sifSpecificationGeneratorConfig xmlns="http://www.sifassociation.org/sifSpecificationGenerator/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sifassociation.org/sifSpecificationGenerator/1.0  sifSpecificationGeneratorConfig.xsd">
+<sifSpecificationGeneratorConfig 
+	xmlns="http://www.sifassociation.org/sifSpecificationGenerator/1.0" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.sifassociation.org/sifSpecificationGenerator/1.0  
+	sifSpecificationGeneratorConfig.xsd">	
 	
 	<globalSettings>
 		<inputDocument>SIF_DataModel.xml</inputDocument>
 		<sifNamespace>http://www.sifassociation.org/datamodel/au/3.4</sifNamespace>
 		<localizationCode>au</localizationCode>
 		<schemaVersion>3.4.4</schemaVersion>
-		<!--
-	    <jsonExamplesXslt>98_Xslt/sif2JsonLM.xsl</jsonExamplesXslt> -->
+		
+	    <!--<jsonExamplesXslt>98_Xslt/xmlToJson.xsl</jsonExamplesXslt> -->
 		<resolveExtensions>true</resolveExtensions>
+<<<<<<< HEAD
+		<isDraft>false</isDraft>
+=======
 		<isDraft>true</isDraft>
+
+
+>>>>>>> 193989dfb3c7ae1c740b1875b4edba7d01def8d8
 	</globalSettings>
 	
 	<htmlDocuments>
@@ -18,7 +28,7 @@
 		<htmlDocument>
 			<singleDocument>false</singleDocument>
 			<rootDocumentFileName>index.html</rootDocumentFileName>
-			<rootTitle>SIF Implementation Specification (Australia) 3.4.4 (Initial Draft)- FQ 2018 </rootTitle>
+			<rootTitle>SIF Implementation Specification (Australia) 3.4.4</rootTitle>
 			<documentType>DataModel</documentType>
 		</htmlDocument>
 		
@@ -26,7 +36,7 @@
 		<htmlDocument>
 			<singleDocument>true</singleDocument>
 			<rootDocumentFileName>ImplementationSpecification.html</rootDocumentFileName>
-			<rootTitle>SIF Implementation Specification (Australia) 3.4.4 ((Initial Draft)- FQ 2018</rootTitle>
+			<rootTitle>SIF Implementation Specification (Australia) 3.4.4</rootTitle>
 			<documentType>DataModel</documentType>
 		</htmlDocument>
 		
@@ -114,8 +124,48 @@
 			<listWithKeyConstraints>false</listWithKeyConstraints>
 			<isSifMessage2Xsd>false</isSifMessage2Xsd>
 		</xsdDocument>
+<<<<<<< HEAD
+	</xsdDocuments>	
+	<!--
+	<xsltTransformations>
+		<xsltTransformation>
+			<xsltInputFile></xsltInputFile>
+			<xsltOutputDir>JSON</xsltOutputDir>
+			<xsltOutputFile>sif2JsonLM.xsl</xsltOutputFile>
+			<yamlToJson>false</yamlToJson>
+		</xsltTransformation>
+	</xsltTransformations>
+-->
 		
-
-		
+	
+=======
 	</xsdDocuments>
+	
+	<!-- Other outputs built using XSLT -->
+	<!-- <xsltTransformations>
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchema.xsl</xsltInputFile>
+
+			<xsltOutputDir>JSON</xsltOutputDir>
+			<xsltOutputFile>jsonSchema.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>		
+
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToSwagger.xsl</xsltInputFile>
+
+			<xsltOutputDir>JSON</xsltOutputDir>
+			<xsltOutputFile>swagger.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>		
+
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToOpenAPI.xsl</xsltInputFile>
+
+			<xsltOutputDir>JSON</xsltOutputDir>
+			<xsltOutputFile>OpenAPI.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>		
+	</xsltTransformations> -->
+>>>>>>> 193989dfb3c7ae1c740b1875b4edba7d01def8d8
 </sifSpecificationGeneratorConfig>
