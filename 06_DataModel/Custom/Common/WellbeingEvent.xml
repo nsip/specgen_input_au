@@ -125,7 +125,7 @@
     <Characteristics>M</Characteristics>
 	<privacyRating>High</privacyRating>
     <Description>
-      <p>The calendar date on which this WellbeingEvent occured.</p>
+      <p>The calendar date on which this WellbeingEvent occurred.</p>
     </Description>
     <Type name="xs:date"></Type>
   </Item>
@@ -135,7 +135,7 @@
     <Characteristics>O</Characteristics>
 	<privacyRating>High</privacyRating>
     <Description>
-      <p>The time when WellbeingEvent occured.</p>
+      <p>The time when WellbeingEvent occurred.</p>
     </Description>
     <Type name="xs:time"></Type>
   </Item>

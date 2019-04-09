@@ -151,7 +151,7 @@
     <Characteristics>O</Characteristics>
     <privacyRating>Low</privacyRating>
     <Description>
-      <p>Type of assessment (e.g. diagnostic vs paedagogical).</p>
+      <p>Type of assessment (e.g. diagnostic vs pedagogical).</p>
     </Description>
     <Type name="xs:token"></Type>
   </Item>

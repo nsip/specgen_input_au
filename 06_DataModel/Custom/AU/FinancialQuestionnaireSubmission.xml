@@ -63,7 +63,7 @@
 	  <Characteristics>O</Characteristics>
 	  <privacyRating>Low</privacyRating>
 	  <Description>Is this a System Submission?.</Description>
-	  <Type ref="CommonTypes" name="AUCodeSetsYesOrNoCategoryType"/>
+	  <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"/>
   </Item>
   <Item>
   	<Element>SoftwareVendorInfo</Element>
