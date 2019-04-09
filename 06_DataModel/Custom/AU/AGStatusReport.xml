@@ -132,7 +132,7 @@
 	  <HTTPStatusCode>202</HTTPStatusCode> <!-- Optional HTTP Individual Object Acceptance or not Status -->
       <CommonwealthId>012345</CommonwealthId>
       <EntityName>XXX Secondary College</EntityName>
-	  <AGSubmissionStatusCode>2</AGSubmissionStatusCode>  <!-- Status of AG Processing - Internal to AG, what will those values be and what to they represent? -->
+	  <AGSubmissionStatusCode>2</AGSubmissionStatusCode>  <!-- Status of AG Processing - Internal to AG -->
     </AGReportingObjectResponse>	
 	<AGReportingObjectResponse>
 	  <SubmittedRefId>E9C5106F-7E87-4773-ACCD-390F8E8B9314</SubmittedRefId>  <!-- Original Reporting RefId of the submission -->
