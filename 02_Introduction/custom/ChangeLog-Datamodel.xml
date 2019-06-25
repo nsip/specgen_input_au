@@ -10,8 +10,8 @@
 	<h4>New Objects</h4>
 	<ul>
 		<li>StudentScoreJudgementAgainstStandard - Proposed by Catholic Education, Melbourne</li>
-		<li>FQReportingCollection - Proposed for Australian Government, Collections Projects</li>
-		<li>AGStatusReport- Proposed for Australian Government, Collections Projects</li>
+		<li>FinancialQuestionnaireSubmission     - Proposed for Australian Government, Collections Projects</li>
+		<li>AGStatusReport                       - Proposed for Australian Government, Collections Projects</li>
 	</ul>
 	
 		<h4>New Types</h4>
@@ -42,6 +42,7 @@
 	<ul>
 		<li>Permission Category Code  - added to support PhotoPermissionList</li>
 		<li>Group Category Code - added to support StudentGroupList</li>
+		<li>AG Submission Status - added to support AG Collections - added in the errata release</li>
 	</ul>
 		<h4>Changes</h4>
 	<ul>
@@ -50,7 +51,9 @@
 		<li>NAPTestletContentType/TestletName changed from Mandatory to Optional for use with NAPLAN 2019</li>
 		<li>DomainScoreType/PlausibleScaledValueList changed from Mandatory Repeating to Mandatory  (Error Correction)</li>
 		<li>StimulusType/TextDescriptor changed from Mandatory to Optional for use with NAPLAN 2019</li>
-		<li>Other minor typos, broken links and various descriptions updated</li>		
+		<li>Other minor typos, broken links and various descriptions updated</li>
+		<li>For errata Release - FQItemType - ‘FQComments’ now Optional </li>
+		<li>For errata Release - FQReporting- Contact Email, PhoneNumber now Mandatory.Name – Given Name and Family Name to be provided.</li>
 	</ul>
 	
 		<h4>The following elemnts of type changed from Mandatory Repeating to Optional Repeating for use with NAPLAN 2019</h4>
@@ -92,6 +95,7 @@
 		<li>Added to Exit/Withdrawal Type codes: 1940 - Deceased, 1941 - Permanently incapacitated</li>
 		<li>Added to Relationship to Student codes: 40 - Medical Contact</li>
 		<li>Added to Attendance Codes: 619 - School endorsed religious event</li>
+		<li>In Errata Release - NAP Test Item Changes: HT (Hot Text) changed to TS, CO (Composite) changed to COMP, IO Order interaction changed to Interactive Order</li>
 	</ul>
 	<h3>Deletions</h3>
 	<ul>

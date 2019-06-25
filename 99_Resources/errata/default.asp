@@ -1,5 +1,5 @@
 <%
 
-Response.Redirect("./0/")
+Response.Redirect("./1/")
 
 %>

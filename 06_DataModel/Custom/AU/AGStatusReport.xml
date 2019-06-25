@@ -99,7 +99,7 @@
     <Characteristics>O</Characteristics>
 	<privacyRating>High</privacyRating>
     <Description>
-      <p>A list of the Reporting Objects being responsed to.</p>
+      <p>A list of the Reporting Objects being responded to.</p>
     </Description>
 	<Type ref="CommonTypes" name="AGReportingObjectResponseListType"></Type>
   </Item>
@@ -132,7 +132,7 @@
 	  <HTTPStatusCode>202</HTTPStatusCode> <!-- Optional HTTP Individual Object Acceptance or not Status -->
       <CommonwealthId>012345</CommonwealthId>
       <EntityName>XXX Secondary College</EntityName>
-	  <AGSubmissionStatusCode>2</AGSubmissionStatusCode>  <!-- Status of AG Processing - Internal to AG, what will those values be and what to they represent? -->
+	  <AGSubmissionStatusCode>Declared</AGSubmissionStatusCode>  <!-- Status of AG Processing - Internal to AG -->
     </AGReportingObjectResponse>	
 	<AGReportingObjectResponse>
 	  <SubmittedRefId>E9C5106F-7E87-4773-ACCD-390F8E8B9314</SubmittedRefId>  <!-- Original Reporting RefId of the submission -->
@@ -140,7 +140,7 @@
 	  <ErrorText>Item components do not add up. Malformed characters.</ErrorText>
       <CommonwealthId>12387</CommonwealthId>
       <EntityName>ABCXYZ Secondary College</EntityName>
-	  <AGSubmissionStatusCode>1</AGSubmissionStatusCode>
+	  <AGSubmissionStatusCode>In Progress</AGSubmissionStatusCode>
       <AGRuleList>
 	    <AGRule>
 		  <AGRuleCode>WR-076</AGRuleCode>
@@ -156,7 +156,7 @@
 	  <HTTPStatusCode>201</HTTPStatusCode>
       <CommonwealthId>12388</CommonwealthId>
       <EntityName>Ballarat Diocese</EntityName>
-	  <AGSubmissionStatusCode>3</AGSubmissionStatusCode>
+	  <AGSubmissionStatusCode>In Review</AGSubmissionStatusCode>
     </AGReportingObjectResponse>
   </AGReportingObjectResponseList>
 </AGStatusReport>
