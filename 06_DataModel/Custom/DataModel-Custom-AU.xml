@@ -5,64 +5,86 @@
 	
     xmlns="http://sifassociation.org/SpecGen">
 
-	<Group name="SIF AU">
+	<Group name="SIF AU Student Baseline Profile (SBP) and supporting objects">
 		<Intro>
-			<p></p>
+		<!--
+			<p><img src="images/SBP.png" alt="" /></p>
+			<p>This represents the objects in the original SBP, SchoolInfo, StudentPersonal, StudentSchoolEnrollment, StudentContactRelationship, StudentContactPersonal and TeachingGroup.  Other Objects included in this group as supporting objects.
+			TeachingGroup is part of the Timetabling and Resource Scheduling Domain.</p>-->
 		</Intro>
+		
 		<xi:include parse="text" href="Common/SchoolInfo.xml"/>
-		<xi:include parse="text" href="Common/SystemRole.xml"/>		
+		<xi:include parse="text" href="Common/LEAInfo.xml"/>
 		
 		<!-- Include data model here -->		
-		<xi:include parse="text" href="Common/AggregateStatisticInfo.xml"/>
-		<xi:include parse="text" href="Common/AggregateCharacteristicInfo.xml"/>
-		<xi:include parse="text" href="Common/AggregateStatisticFact.xml"/>
-		<xi:include parse="text" href="Common/ResourceUsage.xml"/> 
-		<xi:include parse="text" href="Common/RoomInfo.xml"/>
 		<xi:include parse="text" href="Common/StaffAssignment.xml"/>
 		<xi:include parse="text" href="Common/StaffPersonal.xml"/>
 		<xi:include parse="text" href="Common/StudentPersonal.xml"/>
 		<xi:include parse="text" href="Common/StudentSchoolEnrollment.xml"/>
 		<xi:include parse="text" href="Common/StudentContactPersonal.xml"/>
-		<xi:include parse="text" href="Common/StudentParticipation.xml"/>
+		<xi:include parse="text" href="Common/StudentContactRelationship.xml"/>
 		<xi:include parse="text" href="Common/PersonPicture.xml"/>
-		<xi:include parse="text" href="Common/CalendarDate.xml"/>
-		<xi:include parse="text" href="Common/CalendarSummary.xml"/>
-		<xi:include parse="text" href="Common/StudentAttendanceSummary.xml"/>
-		<xi:include parse="text" href="Common/StudentDailyAttendance.xml"/>
-		<xi:include parse="text" href="Common/StudentPeriodAttendance.xml"/>
-		<xi:include parse="text" href="Common/SessionInfo.xml"/>
+		<xi:include parse="text" href="Common/Identity.xml"/>
 		
-		<xi:include parse="text" href="Common/LearningStandardDocument.xml"/>
-		<xi:include parse="text" href="Common/LearningStandardItem.xml"/>
-		<xi:include parse="text" href="Common/LearningResource.xml"/>
-		<xi:include parse="text" href="Common/LearningResourcePackage.xml"/>
 		
+	</Group>
+
+	<Group name="Activity">	
+		<Intro>
+		<!--
+			<p><img src="images/Activity.png" alt="" /></p>-->
+			<p></p>
+		</Intro>
+		<!-- Activity/Achievement Object-->
+		<xi:include parse="text" href="Common/Activity.xml"/>
+		<xi:include parse="text" href="Common/StudentActivityInfo.xml"/>
+		<xi:include parse="text" href="Common/StudentActivityParticipation.xml"/>
+		<xi:include parse="text" href="Common/SchoolPrograms.xml"/>
+		<xi:include parse="text" href="Common/StudentParticipation.xml"/>
+
+    </Group>	
+    
+    <Group name="Aggregated Statistics">
+    
+    	<Intro>
+			<!--<p><img src="images/AggregatedStatistics.png" alt="" /></p>-->
+			<p></p>
+		</Intro>
+	
+		<xi:include parse="text" href="Common/AggregateStatisticInfo.xml"/>
+		<xi:include parse="text" href="Common/AggregateCharacteristicInfo.xml"/>
+		<xi:include parse="text" href="Common/AggregateStatisticFact.xml"/>
+
+	</Group>
+	<Group name="Timetabling and Resource Scheduling">	
+    	<Intro>
+    	<!--
+			<p><img src="images/Timetabling.png" alt="" /></p>
+			<p><img src="images/Scheduling.png" alt="" /></p> -->
+			<p></p>
+		</Intro>	
+		<xi:include parse="text" href="Common/RoomInfo.xml"/>
 		<xi:include parse="text" href="Common/TimeTableSubject.xml"/>
 		<xi:include parse="text" href="Common/TimeTable.xml"/>
 		<xi:include parse="text" href="Common/TeachingGroup.xml"/>	
 		<xi:include parse="text" href="Common/TimeTableCell.xml"/>
 		<xi:include parse="text" href="Common/SchoolCourseInfo.xml"/>
 		
-		<xi:include parse="text" href="Common/LEAInfo.xml"/>
-		<xi:include parse="text" href="Common/TermInfo.xml"/>
-		<xi:include parse="text" href="Common/StudentContactRelationship.xml"/>
-		<xi:include parse="text" href="Common/StudentActivityInfo.xml"/>
-		<xi:include parse="text" href="Common/StudentActivityParticipation.xml"/>
-		<xi:include parse="text" href="Common/Identity.xml"/>
-		<xi:include parse="text" href="Common/SchoolPrograms.xml"/>
-		
 		<!-- Section Enrollment 1.3 -->
 		<xi:include parse="text" href="Common/SectionInfo.xml"/>
 		<xi:include parse="text" href="Common/StudentSectionEnrollment.xml"/> 
-		
-		<!-- Activity/Achievement Object-->
-		<xi:include parse="text" href="Common/Activity.xml"/>		
-		
+
 		<!-- ScheduledActivity Object-->
 		<xi:include parse="text" href="Common/ScheduledActivity.xml"/>		
 		<xi:include parse="text" href="Common/ResourceBooking.xml"/>		
 		<xi:include parse="text" href="Common/EquipmentInfo.xml"/>	
-		
+	</Group>
+	<Group name="Finance">	
+		<Intro>
+		<!--
+			<p><img src="images/Finance.png" alt="" /></p> -->
+			<p></p>
+		</Intro>	
 		<!-- Finance additions-->		
 		<xi:include parse="text" href="AU/Invoice.xml"/>
 		<xi:include parse="text" href="AU/FinancialAccount.xml"/>
@@ -72,19 +94,63 @@
 		<xi:include parse="text" href="AU/VendorInfo.xml"/>
 		<xi:include parse="text" href="AU/Journal.xml"/>
 		<xi:include parse="text" href="AU/Debtor.xml"/>
-				
+	</Group>
+	<Group name = "Attendance">		
+	
+		<Intro>
+		<!--
+			<p><img src="images/Attendance.png" alt="" /></p>-->
+			<p></p>
+		</Intro>	
 		<!-- Added for granular Attendance Reporting-->
-		<xi:include parse="text" href="Common/StudentAttendanceTimeList.xml"/>	
+		<xi:include parse="text" href="Common/StudentAttendanceTimeList.xml"/>
+		<xi:include parse="text" href="Common/StudentAttendanceSummary.xml"/>
+		<xi:include parse="text" href="Common/StudentDailyAttendance.xml"/>
+		<xi:include parse="text" href="Common/StudentPeriodAttendance.xml"/>
 		
+		<xi:include parse="text" href="Common/SessionInfo.xml"/>
+		<xi:include parse="text" href="Common/CalendarDate.xml"/>
+		<xi:include parse="text" href="Common/CalendarSummary.xml"/>
+
+
+	</Group>
+
+	<Group name = "Classroom Assessment">	
+	
+		<Intro>
+		<!--
+			<p><img src="images/ClassroomAssessment.png" alt="" /></p>-->
+			<p></p>
+		</Intro>		
 		<!-- Classroom assessment -->	
 		<xi:include parse="text" href="Common/GradingAssignment.xml"/>
 		<xi:include parse="text" href="Common/GradingAssignmentScore.xml"/>
 		<xi:include parse="text" href="Common/MarkValueInfo.xml"/>
 		<xi:include parse="text" href="Common/StudentGrade.xml"/>
+		<xi:include parse="text" href="Common/TermInfo.xml"/>
 		
 		<!-- Teacher Judgement Against Standards -->
 		<xi:include parse="text" href="Common/StudentScoreJudgementAgainstStandard.xml"/>
-		
+	</Group>
+	<Group name = "Learning Standards">	
+		<Intro>
+		<!--
+			<p><img src="images/LearningStandards.png" alt="" /></p>-->
+			<p></p>
+		</Intro>	
+		<xi:include parse="text" href="Common/LearningStandardDocument.xml"/>
+		<xi:include parse="text" href="Common/LearningStandardItem.xml"/>
+		<xi:include parse="text" href="Common/LearningResource.xml"/>
+		<xi:include parse="text" href="Common/LearningResourcePackage.xml"/>
+	
+	</Group>
+	<Group name = "NAPLAN">		
+	
+		<Intro>
+		<!--
+			<p><img src="images/NAPLAN.png" alt="" /></p>-->
+			<p></p>
+		</Intro>	
 		<!-- NAPLAN Additions -->
 		<xi:include parse="text" href="AU/NAPEventStudentLink.xml"/>
 		<xi:include parse="text" href="AU/NAPTest.xml"/>
@@ -93,7 +159,14 @@
 		<xi:include parse="text" href="AU/NAPTestItem.xml"/>
 		<xi:include parse="text" href="AU/NAPStudentResponseSet.xml"/>
 		<xi:include parse="text" href="AU/NAPCodeFrame.xml"/>
-
+	</Group>	
+	<Group name = "Wellbeing">	
+		<Intro>
+		<!--
+			<p><img src="images/Wellbeing.png" alt="" /></p>-->
+			<p></p>
+		</Intro>		
+	
 		<!-- Wellbeing Additions-->
 		<xi:include parse="text" href="Common/WellbeingResponse.xml"/>
 		<xi:include parse="text" href="Common/WellbeingAlert.xml"/>
@@ -102,13 +175,25 @@
 		<xi:include parse="text" href="Common/PersonalisedPlan.xml"/>
 		<xi:include parse="text" href="Common/WellbeingCharacteristic.xml"/>
 		
-		<!--AG Collections -->
-		  
+		
+	</Group>
+	<Group name = "Australian Government Collections">	
+	
+		<Intro>
+		<!--
+			<p><img src="images/AGCollections.png" alt="" /></p>-->
+			<p></p>
+		</Intro>	
+		<!--AG Collections -->	  
 		<xi:include parse="text" href="AU/FinancialQuestionnaireSubmission.xml"/>   
 		<xi:include parse="text" href="AU/AGStatusReport.xml"/>
 		
 		<!--P POD 
 		<xi:include parse="text" href="Common/PersonPrivacyObligation.xml"/> -->
 		
+	</Group>
+	<Group name = "Z - For Future Deprecation">	
+			<xi:include parse="text" href="Common/SystemRole.xml"/>		
+			<xi:include parse="text" href="Common/ResourceUsage.xml"/> 
 	</Group>
 </IncludeGroup>

@@ -633,9 +633,9 @@
       <ID>NAP Test Item Type</ID>
       
      <Values><Value><Code>ET</Code><Text>Extended text</Text></Value>
-		<Value><Code>CO</Code><Text>Composite</Text></Value>
+		<Value><Code>COMP</Code><Text>Composite</Text></Value>
 		<Value><Code>HS</Code><Text>Hot spot</Text></Value>
-		<Value><Code>HT</Code><Text>Hot text</Text></Value>
+		<Value><Code>TS</Code><Text>Hot text</Text></Value>
 		<Value><Code>IA</Code><Text>Interactive associate</Text></Value>
 		<Value><Code>IC</Code><Text>Inline choice</Text></Value>
 		<Value><Code>IGA</Code><Text>Interactive graphic associate</Text></Value>
@@ -643,7 +643,7 @@
 		<Value><Code>IGM</Code><Text>Interactive gap match</Text></Value>
 		<Value><Code>IGO</Code><Text>Interactive graphic order</Text></Value>
 		<Value><Code>IM</Code><Text>Interactive match</Text></Value>
-		<Value><Code>IO</Code><Text>Order interaction</Text></Value>
+		<Value><Code>IO</Code><Text>Interactive order NOTE: Will not be used in NAPLAN 2019</Text></Value>
 		<Value><Code>MC</Code><Text>Multiple choice</Text></Value>
 		<Value><Code>MCS</Code><Text>Multiple choices</Text></Value>
 		<Value><Code>PO</Code><Text>Position object</Text></Value>
@@ -828,6 +828,7 @@
 				<Code>119</Code>
 				<Text>Early Class Unexplained</Text>
 			</Value>
+			
 			<Value>
 				<Code>200</Code>
 				<Text>Medical</Text>
@@ -10071,6 +10072,58 @@
 			<Value>
 				<Code>OtherGroup</Code>
 				<Text>Other Group</Text>
+			</Value>
+		</Values>
+	</CodeSet>
+<CodeSet>
+		<Intro>
+			<p>Status Codes associated with an AG Collection Submission.  Source: Australian Government - Schools Hub</p>
+		</Intro>
+		<ID>AG Submission Status</ID>
+		<Values>
+			<Value>
+				<Code>Not Started</Code>
+				<Text>When the round opens, and ready for submission</Text>
+			</Value>
+			<Value>
+				<Code>In Progress</Code>
+				<Text>When the first data is entered in the response and passed first round of validation</Text>
+			</Value>
+			<Value>
+				<Code>Declaration Pending</Code>
+				<Text>When all data is entered and all warnings have been addressed by the client</Text>
+			</Value>
+			<Value>
+				<Code>Declared</Code>
+				<Text>When an authorised user declares via SchoolsHUB</Text>
+			</Value>
+			<Value>
+				<Code>In Review</Code>
+				<Text>When a CRM user selects the response and selects Begin Review</Text>
+			</Value>
+			<Value>
+				<Code>Exempt</Code>
+				<Text>When a CRM user sets the questionnaire and client to Exempt during the collection</Text>
+			</Value>
+			<Value>
+				<Code>Finalised</Code>
+				<Text>When Finalise is selected by a CRM user during review</Text>
+			</Value>
+			<Value>
+				<Code>Reopened</Code>
+				<Text>When reopen is selected by a CRM user during a review</Text>
+			</Value>
+			<Value>
+				<Code>Processing</Code>
+				<Text>When data has been submitted via Upload and yet to undergo first round of validation</Text>
+			</Value>
+			<Value>
+				<Code>In Error</Code>
+				<Text>When an error has been triggered during upload processing, before the second round validation step</Text>
+			</Value>
+			<Value>
+				<Code>Cancelled</Code>
+				<Text>When an departmental user has cancelled the submission</Text>
 			</Value>
 		</Values>
 	</CodeSet>

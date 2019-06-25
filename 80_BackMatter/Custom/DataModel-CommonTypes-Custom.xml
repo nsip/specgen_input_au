@@ -408,10 +408,10 @@
 	    </Item>   
 	    <Item>
 		  <Element>AGSubmissionStatusCode</Element>
-		  <Characteristics>O</Characteristics>
+		  <Characteristics>M</Characteristics>
 		  <privacyRating>Low</privacyRating>
 		  <Description>AG Status Code of the entity's submission.</Description>
-		  <Type name="xs:normalizedString"></Type> 
+		  <Type ref="CodeSets" name="AUCodeSetsAGSubmissionStatus"/> 
 	    </Item>
 	    <Item>
 		  <Element>AGRuleList</Element>    
@@ -672,7 +672,7 @@
 		</Item>                
 		<Item>
 		   <Element>FQComments</Element>
-		   <Characteristics>M</Characteristics>
+		   <Characteristics>O</Characteristics>
 		   <Description>
 			 <p>Comments associated with a FQ Item</p>
 		   </Description>
@@ -777,7 +777,7 @@
 		<Element>Name</Element>
 		<Characteristics>M</Characteristics>
 		<Description>
-			<p></p>
+			<p>Name of the Contact Person for this entity. Note: For an AG Submission, Given Name and Surname are Mandatory.</p>
 		</Description>
 		<Type ref="CommonTypes" name="NameType"/>
 	</Item>
@@ -823,17 +823,17 @@
 	</Item>
 	<Item>
 		<Element>Email</Element>
-		<Characteristics>O</Characteristics>
+		<Characteristics>M</Characteristics>
 		<Description>
-			<p>List of Email elements.</p>
+			<p>Email address of the contact.</p>
 		</Description>
 		<Type ref="CommonTypes" name="EmailType"/>
 	</Item>
 	<Item>
 		<Element>PhoneNumber</Element>
-		<Characteristics>O</Characteristics>
+		<Characteristics>M</Characteristics>
 		<Description>
-			<p>List of PhoneNumber elements.</p>
+			<p>Phone number of the contact.</p>
 		</Description>
 		<Type ref="CommonTypes" name="PhoneNumberType"/>
 	</Item>

@@ -84,7 +84,7 @@
 		    <dd><br/></dd>	
 			<dt>JSON-PESC XSLT</dt>
 			<dd>
-				JSON-PESC XSLT 3.4.4 definition <a href="JSON/sif2jsonspecgen.xslt"> (xslt)</a>
+				JSON-PESC XSLT 3.4.4 support <a href="https://github.com/nsip/sifxml2pescjson"> (GitHub Repository)</a>
 			</dd>
 			<dt>JSON-PESC Examples 3.4.4</dt>
 			<dd>
