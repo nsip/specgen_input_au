@@ -53,7 +53,7 @@
   <Item>
     <Element>SubmittedBy</Element>
     <Characteristics>O</Characteristics>
-	<privacyRating>Low</privacyRating>
+	<privacyRating>High</privacyRating>
     <Description>
       <p>Extra information about submitter.</p>
     </Description>
@@ -102,6 +102,12 @@
       <p>A list of the Reporting Objects being responded to.</p>
     </Description>
 	<Type ref="CommonTypes" name="AGReportingObjectResponseListType"></Type>
+  </Item>
+   
+  <Item>   
+    <Element>LocalCodeList</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="LocalCodeListType"></Type>
   </Item>
    
   <Item>   

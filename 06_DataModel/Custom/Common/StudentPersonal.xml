@@ -255,6 +255,15 @@
 		</Description>
 		<Type name="xs:normalizedString"/>
 	</Item>
+		<Item>
+		<Element>PrePrimaryEducationHours</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+			<p>Hours of attendance at care prior to kinder enrolment</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsPrePrimaryHoursType"/>
+	</Item>
 	<Item>
 		<Element>FirstAUSchoolEnrollment</Element>
 		<Characteristics>O</Characteristics>
@@ -264,7 +273,11 @@
 		</Description>
 		<Type name="xs:date"/>
 	</Item>
-
+	<Item>   
+		<Element>LocalCodeList</Element>
+		<Characteristics>O</Characteristics>
+		<Type ref="CommonTypes" name="LocalCodeListType"></Type>
+	</Item>
 	<Item>
 		<Element>SIF_Metadata</Element>
 		<Characteristics>O</Characteristics>

@@ -199,7 +199,11 @@
     <Description>Any other codes this subject is known by; eg VASS code for VCE in Vic.</Description>
     <Type ref="CommonTypes" name="OtherCodeListType"></Type>
   </Item>
-  
+    <Item>   
+    <Element>LocalCodeList</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="LocalCodeListType"></Type>
+  </Item>
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>

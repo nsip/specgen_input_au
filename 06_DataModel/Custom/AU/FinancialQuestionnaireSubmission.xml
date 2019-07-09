@@ -102,12 +102,16 @@
     <Characteristics>O</Characteristics>
 	<privacyRating>High</privacyRating>
     <Description>
-      <p>A list of Financial Reports in this FQ AG Collection.</p>
+      <p>A list of Financial Reports in this Financial Questionnaire AG Collection.</p>
     </Description>
 	<Type ref="CommonTypes" name="FQReportingListType"></Type>
 	</Item>
 
- 
+   <Item>   
+    <Element>LocalCodeList</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="LocalCodeListType"></Type>
+  </Item>
   <Item>   
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
@@ -132,7 +136,7 @@
 			<SoftwareVersion>11.0</SoftwareVersion>
 		</SoftwareVendorInfo>
 		<SubmissionContact></SubmissionContact>
-		<FQReportComments>This comment is for the FQ Submission.</FQReportComments>
+		<FQReportComments>This comment is for the Financial Questionnaire Submission.</FQReportComments>
 		<FQReportingList> 
 			<FQReporting>
 				<FQRefId>D3E34B35-9D75-101A-8C3D-00AA001A1655</FQRefId>

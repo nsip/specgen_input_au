@@ -134,7 +134,6 @@
 		  <Value><Code>AET</Code><Text>Australian Eastern Time	UTC +10:00 / +11:00</Text></Value>
 		  <Value><Code>AWDT</Code><Text>Australian Western Daylight Time	UTC +9</Text></Value>
 		  <Value><Code>AWST</Code><Text>Australian Western Standard Time	UTC +8</Text></Value>
-		  <Value><Code>ACDT</Code><Text>Australian Central Daylight Time	UTC +10:30</Text></Value>
 		  <Value><Code>CXT</Code><Text>Christmas Island Time	UTC +7</Text></Value>
 		  <Value><Code>LHDT</Code><Text>Lord Howe Daylight Time	UTC +11</Text></Value>
 		  <Value><Code>LHST</Code><Text>Lord Howe Standard Time	UTC +10:30</Text></Value>
@@ -828,7 +827,10 @@
 				<Code>119</Code>
 				<Text>Early Class Unexplained</Text>
 			</Value>
-			
+			<Value>
+				<Code>120</Code>
+				<Text>Transport Delay</Text>
+			</Value>
 			<Value>
 				<Code>200</Code>
 				<Text>Medical</Text>
@@ -878,6 +880,18 @@
 				<Text>Bereavement</Text>
 			</Value>
 			<Value>
+				<Code>212</Code>
+				<Text>Family Medical</Text>
+			</Value>
+			<Value>
+				<Code>213</Code>
+				<Text>Therapy Session</Text>
+			</Value>	
+			<Value>
+				<Code>299</Code>
+				<Text>Medical - further details not available</Text>
+			</Value>
+			<Value>
 				<Code>300</Code>
 				<Text>Truancy</Text>
 			</Value>
@@ -893,6 +907,11 @@
 				<Code>500</Code>
 				<Text>Unexplained</Text>
 			</Value>
+			<Value>
+				<Code>501</Code>
+				<Text>Unexplained and Unjustified</Text>
+			</Value>
+
 			<Value>
 				<Code>600</Code>
 				<Text>Educational</Text>
@@ -973,7 +992,23 @@
 			<Value>
 				<Code>619</Code>
 				<Text>School-endorsed religious event</Text>
+			</Value>
+			<Value>
+				<Code>620</Code>
+				<Text>Transition Program</Text>
+			</Value>
+			<Value>
+				<Code>621</Code>
+				<Text>Literacy and Numeracy Assessment</Text>
+			</Value>		
+			<Value>
+				<Code>622</Code>
+				<Text>Representative Event</Text>
 			</Value>			
+			<Value>
+				<Code>699</Code>
+				<Text>Educational - further details not available</Text>
+			</Value>				
 			<Value>
 				<Code>700</Code>
 				<Text>Flags</Text>
@@ -1010,6 +1045,10 @@
 				<Code>805</Code>
 				<Text>Religious/Cultural Observance</Text>
 			</Value>
+			<Value>
+				<Code>806</Code>
+				<Text>Sorry Business</Text>
+			</Value>			
 			<Value>
 				<Code>900</Code>
 				<Text>School Choice</Text>
@@ -8977,6 +9016,10 @@
 				<Text>Primary Teacher</Text>
 			</Value>
 			<Value>
+				<Code>1106</Code> 
+				<Text>Primary/Secondary Combined Teacher</Text>
+			</Value>
+			<Value>
 				<Code>1204</Code>
 				<Text>Guidance Officer</Text>
 			</Value>
@@ -9774,7 +9817,14 @@
 				<Code>O</Code>
 				<Text>On Leave</Text>
 			</Value>
-			 
+			<Value>
+				<Code>N</Code>
+				<Text>No Longer Employed</Text>
+			</Value>
+			<Value>
+				<Code>X</Code>
+				<Text>Other - Details Not Available</Text>
+			</Value> 
 		</Values>
 	</CodeSet>
 	<CodeSet>
@@ -10127,4 +10177,44 @@
 			</Value>
 		</Values>
 	</CodeSet>
+	<CodeSet>
+		<Intro>
+			<p>Education Level - Primary or Secondary, Associated with AG Student Collections</p>
+		</Intro>
+		<ID>Education Level</ID>
+		<Values>
+			<Value>
+				<Code>Primary</Code>
+				<Text>Primary</Text>
+			</Value>
+			<Value>
+				<Code>Secondary</Code>
+				<Text>Secondary</Text>
+			</Value>
+		</Values>
+	</CodeSet>		
+	<CodeSet>
+		<Intro>
+			<p>Pre-Primary Education Hours</p>
+		</Intro>
+		<ID>Pre Primary Hours</ID>
+		<Values>
+			<Value>
+				<Code>U</Code>
+				<Text>Unknown or Not Provided</Text>
+			</Value>
+			<Value>
+				<Code>O</Code>
+				<Text>Other</Text>
+			</Value>
+			<Value>
+				<Code>P</Code>
+				<Text>Part Time</Text>
+			</Value>
+			<Value>
+				<Code>F</Code>
+				<Text>Full Time</Text>
+			</Value>
+		</Values>
+	</CodeSet>		
 </Grouping>

@@ -174,6 +174,7 @@
 		<xi:include parse="text" href="Common/WellbeingEvent.xml"/>
 		<xi:include parse="text" href="Common/PersonalisedPlan.xml"/>
 		<xi:include parse="text" href="Common/WellbeingCharacteristic.xml"/>
+		<xi:include parse="text" href="Common/WellbeingPersonLink.xml"/>
 		
 		
 	</Group>
@@ -187,6 +188,7 @@
 		<!--AG Collections -->	  
 		<xi:include parse="text" href="AU/FinancialQuestionnaireSubmission.xml"/>   
 		<xi:include parse="text" href="AU/AGStatusReport.xml"/>
+		<xi:include parse="text" href="AU/AGAddressCollectionSubmission.xml"/>
 		
 		<!--P POD 
 		<xi:include parse="text" href="Common/PersonPrivacyObligation.xml"/> -->

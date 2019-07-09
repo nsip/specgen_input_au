@@ -207,8 +207,22 @@
       <p>If the staff member has previously been enrolled at a school, the previous school name.</p>
     </Description>
     <Type name="xs:normalizedString"></Type>
-  </Item>  
+  </Item> 
   
+  <Item>
+    <Element>AvailableForTimetable</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
+    <Description>
+      <p>Active staff that are not teaching will have "N" here, active stafff who are teachers and are available to be rostered will have a "Y" here.</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
+  </Item>    
+  <Item>   
+    <Element>LocalCodeList</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="LocalCodeListType"></Type>
+  </Item>
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
@@ -255,6 +269,7 @@
         </YearLevel>
       </YearLevels>
       <CasualReliefTeacher>N</CasualReliefTeacher>
+      <AvailableForTimetable>Y</AvailableForTimetable>
     </StaffAssignment>
 
   </xhtml:Example>

@@ -200,13 +200,17 @@
     <Item>
     <Element>SchoolCommonwealthId</Element>
     <Characteristics>C</Characteristics>
-    <privacyRating>High</privacyRating>
+    <privacyRating>Low</privacyRating>
     <Description>
       <p>The Australian Government Education ID that can be used as a link to the school associated with this score. Either the SchoolInfoRefId OR (SchoolLocalId AND SchoolCommonwealthId, (AGEID)), MUST BE provided.</p>
     </Description>
     <Type name="xs:normalizedString"></Type>
   </Item> 
- 
+  <Item>   
+    <Element>LocalCodeList</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="LocalCodeListType"></Type>
+  </Item>
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>

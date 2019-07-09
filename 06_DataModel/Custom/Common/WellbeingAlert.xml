@@ -57,7 +57,7 @@
   
    <Item>
     <Element>WellbeingAlertStartDate</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
 	<privacyRating>Low</privacyRating>
     <Description>
       <p>The date the wellbeing alert period commenced.</p>
@@ -129,7 +129,11 @@
     </Description>
     <Type name="xs:string"></Type>
   </Item>
- 
+   <Item>   
+    <Element>LocalCodeList</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="LocalCodeListType"></Type>
+  </Item>
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>

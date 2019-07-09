@@ -1,0 +1,220 @@
+<DataObject name="AGAddressCollectionSubmission"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xmlns:xi="http://www.w3.org/2001/XInclude"
+			xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	
+            xmlns="http://sifassociation.org/SpecGen">
+
+  <Key>@RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>AGAddressCollectionSubmission</Element>
+	<privacyRating>High</privacyRating>
+    <Description>
+      <p></p>
+     </Description>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+	<privacyRating>High</privacyRating>
+    <Description>
+      <p>GUID for this Report. The application that owns this object is responsible for generating this unique Id.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+  
+  <Item>
+	  <Element>AddressCollectionYear</Element>
+	  <Characteristics>M</Characteristics>
+	  <privacyRating>Low</privacyRating>
+	  <Description>Data Year</Description>
+	  <Type ref="CommonTypes" name="SchoolYearType"></Type>
+  </Item>
+  
+  <Item>
+	  <Element>ReportingAuthority</Element>
+	  <Characteristics>C</Characteristics>
+	  <privacyRating>High</privacyRating>
+	  <Description>Authority who is submitting this Collection? This is Mandatory if being submitted on behalf of a school and not the school itself.</Description>
+	  <Type name="xs:normalizedString"></Type>
+  </Item>
+  
+  <Item>
+	  <Element>ReportingAuthoritySystem</Element>
+	  <Characteristics>O</Characteristics>
+	  <privacyRating>High</privacyRating>
+	  <Description>System of Reporting Authority if Systemic.</Description>
+	  <Type name="xs:normalizedString"></Type>
+  </Item>
+  <Item>
+    <Element>ReportingAuthorityCommonwealthId</Element>
+    <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Commonwealth identifier for the submitting entity.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  
+  <Item>
+  	  <Element>SystemSubmission</Element>
+	  <Characteristics>O</Characteristics>
+	  <privacyRating>Low</privacyRating>
+	  <Description>Is this a System Submission?.</Description>
+	  <Type ref="CommonTypes" name="AUCodeSetsYesOrNoCategoryType"/>
+  </Item>
+  <Item>
+  	<Element>SoftwareVendorInfo</Element>
+	<Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+	<Description>
+	<p>
+       Container for elements containing information on the Software Product and Vendor.
+    </p>
+	</Description>
+	<Type ref="CommonTypes" name="SoftwareVendorInfoContainerType"/>
+  </Item>
+  
+  <Item>
+	  <Element>SubmissionContact</Element>
+	  <Characteristics>M</Characteristics>
+	  <privacyRating>High</privacyRating>
+	  <Description>Information on the Contact for the submission.</Description>
+	  <Type ref="CommonTypes" name="EntityContactInfoType"></Type>
+  </Item>
+  
+    <Item>
+	  <Element>AddressCollectionComments</Element>
+	  <Characteristics>O</Characteristics>
+	  <privacyRating>High</privacyRating>
+	  <Description>General comments on this submission.</Description>
+	  <Type name="xs:normalizedString"></Type>
+  </Item>
+  
+ 
+  <Item> 
+    <Element>AddressCollectionReportingList</Element>    
+    <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
+    <Description>
+      <p>A list of Address Collections.</p>
+    </Description>
+	<Type ref="CommonTypes" name="AddressCollectionReportingListType"></Type>
+   </Item>
+ 
+   <Item>   
+    <Element>LocalCodeList</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="LocalCodeListType"></Type>
+  </Item>
+  
+  <Item>   
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+  
+   <xhtml:Example xmlns="" name="AGAddressCollectionSubmission">
+      
+    <AGAddressCollectionSubmission RefId="D3E34B35-9D75-101A-8C3D-00AA001A1652">
+        <AddressCollectionYear>2019</AddressCollectionYear> <!-- Data Year -->
+        <ReportingAuthority>Ballarat Diocese</ReportingAuthority>
+        <ReportingAuthoritySystem>Vic Catholic</ReportingAuthoritySystem>
+        <ReportingAuthorityCommonwealthId>012345</ReportingAuthorityCommonwealthId>
+        <SystemSubmission>N</SystemSubmission>
+        <SoftwareVendorInfo>  <!--Optional information about the Vendor -->
+            <SoftwareProduct>Civica</SoftwareProduct>
+            <SoftwareVersion>Websys 1.0</SoftwareVersion>
+        </SoftwareVendorInfo>
+        <SubmissionContact>
+            <Name Type="LGL">
+               <FamilyName>Franklin</FamilyName> <!-- Collection Contact Family Name -->
+               <GivenName>Jennifer</GivenName> <!-- Collection Contact First Name -->
+            </Name>
+            <PositionTitle>Administrator</PositionTitle> <!-- Collection Contact Position -->
+            <Email Type="01">jfranklin@cenet.edu.au</Email> <!-- Collection Contact EmailAddress -->
+            <PhoneNumber Type="0096"><Number>02 9637-2000</Number></PhoneNumber> <!-- Collection Contact Phone Number -->
+        </SubmissionContact>
+        <AddressCollectionComments>This comment is for this Address Collection.</AddressCollectionComments>
+			<AddressCollectionReportingList> 
+                    <AddressCollectionReporting>
+                          <AddressCollectionRefId>D3E34B35-9D75-101A-8C3D-00AA001A1655</AddressCollectionRefId>
+                          <SchoolInfoRefId>C4D54B35-9D75-101A-8C3D-00AA001A1689</SchoolInfoRefId>  <!-- Optional - if it exists.  If a School will be a SchoolInfoRefId -->
+                          <LocalId>01011234</LocalId>
+                           <StateProvinceId>01011234</StateProvinceId>
+                           <CommonwealthId>012345</CommonwealthId> <!-- AGEID -->
+                          <ACARAId>1234</ACARAId>
+                          <EntityName>XXX Secondary College</EntityName>
+                          <EntityContact>
+                                 <Name Type="LGL">
+                                   <FamilyName>Miller</FamilyName> <!-- Collection Contact Family Name -->
+                                   <GivenName>James</GivenName> <!-- Collection Contact First Name -->
+                                 </Name>
+                                 <PositionTitle>Auditor</PositionTitle> <!-- Collection Contact Position -->
+                                 <Email Type="01">jmiller@lsc.vic.edu.au</Email> <!-- Collection Contact EmailAddress -->
+                                 <PhoneNumber Type="0096"><Number>03 9637-2000</Number></PhoneNumber> <!-- Collection Contact Phone Number-->
+                          </EntityContact>
+                          <AddressCollectionStudentList>
+                              <AddressCollectionStudent>
+                                       <LocalId>12345</LocalId>
+                                       <EducationLevel>Primary</EducationLevel>      
+                                       <BoardingStudent>N</BoardingStudent>                                           
+                                       <StudentAddress Type="0123" Role="012B">
+											<Street>
+												<Line1>The House</Line1>
+												<Line2>2819 Warburton Hwy</Line2>
+											</Street>
+											<City>Chicago</City>
+											<StateProvince>WA</StateProvince>
+											<PostalCode>60611</PostalCode>
+										</StudentAddress>
+										<Parent1>
+										    <ParentName Type="LGL">
+											   <FamilyName>Miller</FamilyName> <!-- Collection Parent Family Name -->
+											   <GivenName>James</GivenName> <!-- Collection Parent First Name -->
+											   <PreferredGivenName>Jim</PreferredGivenName> <!-- Collection Parent Preferred First Name -->
+											</ParentName>
+											<AddressSameAsStudent>Y</AddressSameAsStudent>
+											<ParentAddress Type="0123" Role="012B">
+												<Street>
+													<Line1>The House</Line1>
+													<Line2>2819 Warburton Hwy</Line2>
+												</Street>
+												<City>Chicago</City>
+												<StateProvince>WA</StateProvince>
+												<PostalCode>60611</PostalCode>
+											</ParentAddress>
+										</Parent1>	
+										<Parent2>
+										    <ParentName Type="LGL">
+											   <FamilyName>Miller</FamilyName> <!-- Collection Parent Family Name -->
+											   <GivenName>Samantha</GivenName> <!-- Collection Parent First Name -->
+											   <PreferredGivenName>Sam</PreferredGivenName> <!-- Collection Parent Preferred First Name -->
+											</ParentName>
+											<AddressSameAsStudent>Y</AddressSameAsStudent>
+											<ParentAddress Type="0123" Role="012B">
+												<Street>
+													<Line1>The House</Line1>
+													<Line2>2819 Warburton Hwy</Line2>
+												</Street>
+												<City>Chicago</City>
+												<StateProvince>WA</StateProvince>
+												<PostalCode>60611</PostalCode>
+											</ParentAddress>
+										</Parent2>
+                              	</AddressCollectionStudent>
+                          	</AddressCollectionStudentList >
+              		</AddressCollectionReporting>
+         		</AddressCollectionReportingList>
+       </AGAddressCollectionSubmission>
+
+   </xhtml:Example> 
+  </DataObject>

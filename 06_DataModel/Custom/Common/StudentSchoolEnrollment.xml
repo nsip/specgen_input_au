@@ -500,6 +500,20 @@
   </Item>
    
   <Item>
+    <Element>InternationalStudent</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
+    <Description>
+      <p>Is this student classified as an International Student?</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
+  </Item>   
+  <Item>   
+    <Element>LocalCodeList</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="LocalCodeListType"></Type>
+  </Item> 
+  <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
 	<privacyRating>High</privacyRating>
