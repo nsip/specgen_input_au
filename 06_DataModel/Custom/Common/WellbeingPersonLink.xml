@@ -46,6 +46,7 @@
 		</Description>
 		<Type ref="CommonTypes" name="LocalId"/>
 	</Item>
+	<!--
 	<Item>
 		<Element>GroupRole</Element>
 		<Characteristics>O</Characteristics>
@@ -82,6 +83,53 @@
 		</Description>
 		<Type ref="CommonTypes" name="IdRefType"/>
 	</Item>
+-->
+  	<Item>
+  	   	<Element>PersonRefId</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+		  <p>The RefId of the Person involved in the event, can be supplied if the Person is already a staff, student or student contact. </p>
+		</Description>
+		<Type ref="CommonTypes" name="IdRefType"></Type>
+  	</Item>
+  	  <Item>
+    <Attribute>SIF_RefObject</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>
+        The type of SIF object that the <code>PersonRefId</code> attribute identifies.
+      </p>
+    </Description>
+    <Values>
+      <Value>
+        <Code>StudentPersonal</Code>
+      </Value>
+      <Value>
+        <Code>StaffPersonal</Code>
+      </Value>
+      <Value>
+        <Code>StudentContactPersonal</Code>
+      </Value>
+    </Values>
+  </Item>
+  
+  <Item>
+  	   	<Element>ShortName</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+		  <p>Optional free text name for a person, usually only used where the person does not have a personal record with a RefId.</p>
+		</Description>
+		<Type name="xs:string"></Type>  
+  	</Item>
+  	
+  	<Item>
+  	   	<Element>HowInvolved</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+		  <p>Optional free text detailing involvement.</p>
+		</Description>
+		<Type name="xs:string"></Type>  
+  	</Item>
 	<Item>
 		<Element>OtherPersonId</Element>
 		<Characteristics>C</Characteristics>
@@ -121,6 +169,7 @@
 	<Item>   
 		<Element>LocalCodeList</Element>
 		<Characteristics>O</Characteristics>
+		<privacyRating>High</privacyRating>
 		<Type ref="CommonTypes" name="LocalCodeListType"></Type>
 	</Item>
 	<Item>
@@ -140,11 +189,10 @@
 			<WellbeingEventRefId>D3E34B35-9D75-101A-8C3D-00AA001A1688</WellbeingEventRefId>
 			<WellbeingResponseRefId>E6E34B35-9D75-101A-8C3D-00AA001A1700</WellbeingResponseRefId>
 			<GroupId>Inv0009</GroupId>
-			<GroupRole>Instigated</GroupRole>
-			<StudentPersonalRefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</StudentPersonalRefId>
+			<PersonRefId SIF_RefObject="StudentPersonal">D3E34B35-9D75-101A-8C3D-00AA001A1652</PersonRefId>
 			<!-- Should you have the school here???
 			<SchoolInfoRefId>CA285746-359D-7510-1A8C-36432A901A16</SchoolInfoRefId>-->
-			<PersonRole>Main</PersonRole>
+			<HowInvolved>Victim</HowInvolved>
 			<FollowUpActionList>
 			 <FollowUpAction>
 				 <FollowUpDetails>Parent's notified</FollowUpDetails>
@@ -157,11 +205,10 @@
 			<WellbeingEventRefId>D3E34B35-9D75-101A-8C3D-00AA001A1688</WellbeingEventRefId>
 			<WellbeingResponseRefId>E6E34B35-9D75-101A-8C3D-00AA001A1700</WellbeingResponseRefId>
 			<GroupId>Inv0009</GroupId>
-			<GroupRole>Instigated</GroupRole>
-			<StudentPersonalRefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</StudentPersonalRefId>
+			<PersonRefId SIF_RefObject="StudentPersonal">D3E34B35-9D75-101A-8C3D-00AA001A1652</PersonRefId>
 			<!-- Should you have the school here???
 			<SchoolInfoRefId>CA285746-359D-7510-1A8C-36432A901A16</SchoolInfoRefId>-->
-			<PersonRole>Seondary</PersonRole>
+			<HowInvolved>Instigator</HowInvolved>
 			<FollowUpActionList>
 			 <FollowUpAction>
 				 <FollowUpDetails>Parent's notified</FollowUpDetails>
@@ -174,11 +221,10 @@
 			<WellbeingEventRefId>D3E34B35-9D75-101A-8C3D-00AA001A1688</WellbeingEventRefId>
 			<WellbeingResponseRefId>E6E34B35-9D75-101A-8C3D-00AA001A1700</WellbeingResponseRefId>
 			<GroupId>Inv0009</GroupId>
-			<GroupRole>Instigated</GroupRole>
-			<StaffPersonalRefId>E4E34B35-9D75-101A-8C3D-00AA001A1652</StaffPersonalRefId>
+			<PersonRefId SIF_RefObject="StaffPersonal">D3E34B35-9D75-101A-8C3D-00AA001A1652</PersonRefId>
 			<!-- Should you have the school here???
 			<SchoolInfoRefId>CA285746-359D-7510-1A8C-36432A901A16</SchoolInfoRefId>-->
-			<PersonRole>Reporter</PersonRole>
+			<HowInvolved>Reporter</HowInvolved>
 			<FollowUpActionList>
 			 <FollowUpAction>
 				 <FollowUpDetails>Event Logged</FollowUpDetails>
@@ -191,7 +237,6 @@
 			<WellbeingEventRefId>D3E34B35-9D75-101A-8C3D-00AA001A1688</WellbeingEventRefId>
 			<WellbeingResponseRefId>E6E34B35-9D75-101A-8C3D-00AA001A1700</WellbeingResponseRefId>
 			<GroupId>Inv0009</GroupId>
-			<GroupRole>Instigated</GroupRole>
 			<OtherPersonId>Not known</OtherPersonId>
 			<OtherPersonContactDetails>Ms Smith, Visitor, 0435 345 678</OtherPersonContactDetails>
 			<PersonRole>Reported Incident to Office</PersonRole>

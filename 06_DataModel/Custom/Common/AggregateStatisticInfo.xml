@@ -175,6 +175,11 @@
       </Value>
     </Values>
   </Item>
+  <Item>   
+	<Element>LocalCodeList</Element>
+	<Characteristics>O</Characteristics>
+	<Type ref="CommonTypes" name="LocalCodeListType"></Type>
+  </Item>
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>

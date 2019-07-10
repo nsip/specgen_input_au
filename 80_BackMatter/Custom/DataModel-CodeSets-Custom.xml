@@ -89,6 +89,123 @@
 <Value><Code>MCM-24</Code><Text>Turners Syndrome</Text></Value>
 <Value><Code>MCM-25</Code><Text>Velocardiofacial Syndrome</Text></Value>
 <Value><Code>MCM-26</Code><Text>Wolf-Hirschhorn Syndrome</Text></Value>
+<!--Sub Categories Added for 3.4.5 -->
+<Value><Code>MAIM-4</Code><Text>X-Linked agammaglobullinemia</Text></Value>
+<Value><Code>MAO-1</Code><Text>Cough</Text></Value>
+<Value><Code>MAO-2</Code><Text>Eczema</Text></Value>
+<Value><Code>MAO-3</Code><Text>Hay fever</Text></Value>
+<Value><Code>MAO-4</Code><Text>Hives</Text></Value>
+<Value><Code>MAO-5</Code><Text>Other</Text></Value>
+<Value><Code>MAO-6</Code><Text>Rash</Text></Value>
+<Value><Code>MC-1</Code><Text>Bone cancer</Text></Value>
+<Value><Code>MC-2</Code><Text>Brain and/or spinal cord tumours</Text></Value>
+<Value><Code>MC-3</Code><Text>Lymphoblastic leukaemia</Text></Value>
+<Value><Code>MC-4</Code><Text>Neuroblastoma</Text></Value>
+<Value><Code>MC-5</Code><Text>Retinoblastoma</Text></Value>
+<Value><Code>MD-01</Code><Text>Conductive hearing loss</Text></Value>
+<Value><Code>MD-02</Code><Text>Otitis media</Text></Value>
+<Value><Code>MD-03</Code><Text>Perforated ear drum</Text></Value>
+<Value><Code>MD-04</Code><Text>Sensorineural hearing loss</Text></Value>
+<Value><Code>MEM-1</Code><Text>Adrenal insufficiency</Text></Value>
+<Value><Code>MEM-2</Code><Text>Diabetes</Text></Value>
+<Value><Code>MEM-3</Code><Text>Hypopituitarism</Text></Value>
+<Value><Code>MEM-4</Code><Text>Hypothyroidism</Text></Value>
+<Value><Code>MEM-5</Code><Text>Multiple pituitary hormone deficiency</Text></Value>
+<Value><Code>MEM-6</Code><Text>Pan-hypopituitarism</Text></Value>
+<Value><Code>MEM-7</Code><Text>Thyroid</Text></Value>
+<Value><Code>MGI-1</Code><Text>Crohn's disease</Text></Value>
+<Value><Code>MGI-2</Code><Text>Cyclic vomiting syndrome</Text></Value>
+<Value><Code>MGI-3</Code><Text>Diurnal encopresis</Text></Value>
+<Value><Code>MGI-4</Code><Text>Diurnal enuresis</Text></Value>
+<Value><Code>MGI-5</Code><Text>Dumping syndrome</Text></Value>
+<Value><Code>MGI-6</Code><Text>Gastrostomy</Text></Value>
+<Value><Code>MGI-7</Code><Text>Hirschsprung syndrome</Text></Value>
+<Value><Code>MGI-8</Code><Text>Hypospadius</Text></Value>
+<Value><Code>MGI-9</Code><Text>Irritable bowel syndrome</Text></Value>
+<Value><Code>MGI-10</Code><Text>Kidney disorder</Text></Value>
+<Value><Code>MGI-11</Code><Text>Liver disease</Text></Value>
+<Value><Code>MGI-12</Code><Text>Liver transplant</Text></Value>
+<Value><Code>MGI-13</Code><Text>Necrotising enterocolitis</Text></Value>
+<Value><Code>MGI-14</Code><Text>Neurogenic bladder</Text></Value>
+<Value><Code>MGI-15</Code><Text>Neurogenic bowel</Text></Value>
+<Value><Code>MGI-16</Code><Text>Pancreatitis - chronic</Text></Value>
+<Value><Code>MGI-17</Code><Text>Primary sclerosing cholangitis</Text></Value>
+<Value><Code>MGI-18</Code><Text>Reflux</Text></Value>
+<Value><Code>MGI-19</Code><Text>Stomach ulcer</Text></Value>
+<Value><Code>MGI-20</Code><Text>Ulcerative colitis</Text></Value>
+<Value><Code>MH-19</Code><Text>Gender dysphoria</Text></Value>
+<Value><Code>MH-20</Code><Text>Personality Disorder</Text></Value>
+<Value><Code>MMD-01</Code><Text>Hypertensive disease - high blood pressure</Text></Value>
+<Value><Code>MMD-02</Code><Text>Hypotensive disease - low blood pressure</Text></Value>
+<Value><Code>MMD-03</Code><Text>Kawasaki disease</Text></Value>
+<Value><Code>MMD-04</Code><Text>Pulmonary heart disease</Text></Value>
+<Value><Code>MMD-05</Code><Text>Rheumatic heart disease</Text></Value>
+<Value><Code>MMD-06</Code><Text>Tachycardia</Text></Value>
+<Value><Code>MMD-07</Code><Text>Ventricular heart defect</Text></Value>
+<Value><Code>MI-01</Code><Text>Croup</Text></Value>
+<Value><Code>MI-02</Code><Text>Cytomeglovirus</Text></Value>
+<Value><Code>MI-03</Code><Text>Hepatitis</Text></Value>
+<Value><Code>MI-04</Code><Text>HIV/AIDS</Text></Value>
+<Value><Code>MI-05</Code><Text>Meningococcal disease</Text></Value>
+<Value><Code>MI-06</Code><Text>Tuberculosis</Text></Value>
+<Value><Code>MMS-16</Code><Text>Juvenile dermatomyositis</Text></Value>
+<Value><Code>MMS-17</Code><Text>Muscular dystrophy</Text></Value>
+<Value><Code>MND-1</Code><Text>Attention deficit disorder (ADD)</Text></Value>
+<Value><Code>MND-2</Code><Text>Attention deficit hyperactivity disorder (ADHD)</Text></Value>
+<Value><Code>MND-3</Code><Text>Auditory processing disorder</Text></Value>
+<Value><Code>MND-4</Code><Text>Autism</Text></Value>
+<Value><Code>MND-5</Code><Text>DAMP syndrome</Text></Value>
+<Value><Code>MND-6</Code><Text>Diagnosed language disorder</Text></Value>
+<Value><Code>MND-7</Code><Text>Dyscalculia</Text></Value>
+<Value><Code>MND-8</Code><Text>Dysgraphia</Text></Value>
+<Value><Code>MND-9</Code><Text>Dyskinetic movement disorder</Text></Value>
+<Value><Code>MND-10</Code><Text>Dyslexia</Text></Value>
+<Value><Code>MND-11</Code><Text>Dyspraxia</Text></Value>
+<Value><Code>MND-12</Code><Text>Hyperactivity</Text></Value>
+<Value><Code>MND-13</Code><Text>Intellectual disability</Text></Value>
+<Value><Code>MND-14</Code><Text>Selective mutism</Text></Value>
+<Value><Code>MND-15</Code><Text>Sensory processing disorder</Text></Value>
+<Value><Code>MND-16</Code><Text>Smith-Magenis syndrome</Text></Value>
+<Value><Code>MND-17</Code><Text>SLD with impairment in mathematics</Text></Value>
+<Value><Code>MND-18</Code><Text>SLD with impairment in reading</Text></Value>
+<Value><Code>MND-19</Code><Text>SLD with impairment in written expression</Text></Value>
+<Value><Code>MND-20</Code><Text>Verbal dyspraxia</Text></Value>
+<Value><Code>MND-21</Code><Text>Visual processing disorder</Text></Value>
+<Value><Code>MND-22</Code><Text>William's syndrome</Text></Value>
+<Value><Code>MOP-1</Code><Text>Keratoconjunctivitis sicca</Text></Value>
+<Value><Code>MOP-2</Code><Text>Vision impairment</Text></Value>
+<Value><Code>MO-1</Code><Text>Dysphagia</Text></Value>
+<Value><Code>MO-2</Code><Text>Floppy voice box</Text></Value>
+<Value><Code>MO-3</Code><Text>Trachea-oral fistula</Text></Value>
+<Value><Code>MO-4</Code><Text>Tracheobronchomalacia</Text></Value>
+<Value><Code>MO-5</Code><Text>Tracheostomy</Text></Value>
+<Value><Code>MO-6</Code><Text>Tracheostomy fistula</Text></Value>
+<Value><Code>MRD-1</Code><Text>Asthma</Text></Value>
+<Value><Code>MRD-2</Code><Text>Bronchiectasis</Text></Value>
+<Value><Code>MRD-3</Code><Text>Chronic bronchitis</Text></Value>
+<Value><Code>MRD-4</Code><Text>Pallid attack</Text></Value>
+<Value><Code>MRD-5</Code><Text>Pneumonia</Text></Value>
+<Value><Code>Other-1</Code><Text>Granuloma annulare</Text></Value>
+<Value><Code>Other-2</Code><Text>Incontinence - faecal</Text></Value>
+<Value><Code>Other-3</Code><Text>Incontinence - urinary</Text></Value>
+<Value><Code>Other-4</Code><Text>Nosebleed - severe and recurrent</Text></Value>
+<Value><Code>Other</Code><Text>Other</Text></Value>
+<Value><Code>MN-1</Code><Text>Hypotonia</Text></Value>
+<Value><Code>MN-2</Code><Text>Juvenile huntington disease</Text></Value>
+<Value><Code>MN-3</Code><Text>Lipomas of corpus callosum</Text></Value>
+<Value><Code>MN-4</Code><Text>Macrocephaly</Text></Value>
+<Value><Code>MN-5</Code><Text>Microcephaly</Text></Value>
+<Value><Code>MN-6</Code><Text>Migraine - diagnosed</Text></Value>
+<Value><Code>MN-7</Code><Text>Mobius syndrome</Text></Value>
+<Value><Code>MN-8</Code><Text>Narcolepsy</Text></Value>
+<Value><Code>MN-9</Code><Text>PANDAS syndrome</Text></Value>
+<Value><Code>MN-10</Code><Text>Rett syndrome</Text></Value>
+<Value><Code>MN-11</Code><Text>Septo optic dysplasia</Text></Value>
+<Value><Code>MN-12</Code><Text>Shunt</Text></Value>
+<Value><Code>MN-13</Code><Text>Spina bifida</Text></Value>
+<Value><Code>MN-14</Code><Text>Thermoregulation</Text></Value>
+<Value><Code>MN-15</Code><Text>Tuberous sclerosis</Text></Value>
+<Value><Code>MN-16</Code><Text>West syndrome</Text></Value>
 </Values></CodeSet>
  <CodeSet>
       <Intro>
@@ -9016,7 +9133,7 @@
 				<Text>Primary Teacher</Text>
 			</Value>
 			<Value>
-				<Code>1106</Code> 
+				<Code>1107</Code> 
 				<Text>Primary/Secondary Combined Teacher</Text>
 			</Value>
 			<Value>
