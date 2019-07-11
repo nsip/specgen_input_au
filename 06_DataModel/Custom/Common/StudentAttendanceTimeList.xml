@@ -87,6 +87,7 @@
 	<Item>   
 		<Element>LocalCodeList</Element>
 		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
 		<Type ref="CommonTypes" name="LocalCodeListType"></Type>
 	</Item>
 	<Item>
@@ -145,7 +146,7 @@
 			</AttendanceTimes>
 		</StudentAttendanceTimeList>
 	</xhtml:Example>
-	 <xhtml:Example xmlns="" name="StudentPeriodAttendance Example 2">
+	 <xhtml:Example xmlns="" name="StudentAttendanceTimeList Example 2">
     <StudentAttendanceTimeList RefId="2FFB63B4-CFEF-4820-8501-E7D1E54555CB">
     <StudentPersonalRefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</StudentPersonalRefId>
 	<SchoolInfoRefId>CA285746-359D-7510-1A8C-36432A901A16</SchoolInfoRefId>

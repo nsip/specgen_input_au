@@ -7,10 +7,9 @@
 
 	<Group name="SIF AU Student Baseline Profile (SBP) and supporting objects">
 		<Intro>
-		<!--
+		
 			<p><img src="images/SBP.png" alt="" /></p>
-			<p>This represents the objects in the original SBP, SchoolInfo, StudentPersonal, StudentSchoolEnrollment, StudentContactRelationship, StudentContactPersonal and TeachingGroup.  Other Objects included in this group as supporting objects.
-			TeachingGroup is part of the Timetabling and Resource Scheduling Domain.</p>-->
+			<p>This represents the objects in the original SBP, SchoolInfo, StudentPersonal, StudentSchoolEnrollment, StudentContactRelationship, StudentContactPersonal and TeachingGroup.  Other Objects included in this group as supporting objects.</p>
 		</Intro>
 		
 		<xi:include parse="text" href="Common/SchoolInfo.xml"/>
@@ -31,9 +30,9 @@
 
 	<Group name="Activity">	
 		<Intro>
-		<!--
-			<p><img src="images/Activity.png" alt="" /></p>-->
-			<p></p>
+		
+			<p><img src="images/Activity.png" alt="" /></p>
+			<p>This represents activities that a student participates in, can be an educational activity or co-curricular.</p>
 		</Intro>
 		<!-- Activity/Achievement Object-->
 		<xi:include parse="text" href="Common/Activity.xml"/>
@@ -47,8 +46,8 @@
     <Group name="Aggregated Statistics">
     
     	<Intro>
-			<!--<p><img src="images/AggregatedStatistics.png" alt="" /></p>-->
-			<p></p>
+			<p><img src="images/AggregatedStatistics.png" alt="" /></p>
+			<p>Objects to supports the exchange of information for statistical purposes.</p>
 		</Intro>
 	
 		<xi:include parse="text" href="Common/AggregateStatisticInfo.xml"/>
@@ -58,10 +57,10 @@
 	</Group>
 	<Group name="Timetabling and Resource Scheduling">	
     	<Intro>
-    	<!--
+    	
 			<p><img src="images/Timetabling.png" alt="" /></p>
-			<p><img src="images/Scheduling.png" alt="" /></p> -->
-			<p></p>
+			<p><img src="images/Scheduling.png" alt="" /></p> 
+			<p>These diagrams represent the objects used in scheduling and timetabling.  The objects allow schools to securely provide SIS information to the Timetabling and/or Scheduling product of their choice, and also to allow timetable records (including teaching groups and scheduled activities), to be published to a jurisdictional data hub.</p>
 		</Intro>	
 		<xi:include parse="text" href="Common/RoomInfo.xml"/>
 		<xi:include parse="text" href="Common/TimeTableSubject.xml"/>
@@ -81,9 +80,9 @@
 	</Group>
 	<Group name="Finance">	
 		<Intro>
-		<!--
-			<p><img src="images/Finance.png" alt="" /></p> -->
-			<p></p>
+		
+			<p><img src="images/Finance.png" alt="" /></p> 
+			<p>A set of objects to support the transfer of financial information representing, and not an accounting package.  The assumption is that SIF is required only to exchange information about individual transactions (e.g. purchase orders, invoices, receipts, journals), and that reporting will be done out of existing applications—although those reports may be based on the transactional information received through SIF</p>
 		</Intro>	
 		<!-- Finance additions-->		
 		<xi:include parse="text" href="AU/Invoice.xml"/>
@@ -98,9 +97,9 @@
 	<Group name = "Attendance">		
 	
 		<Intro>
-		<!--
-			<p><img src="images/Attendance.png" alt="" /></p>-->
-			<p></p>
+		
+			<p><img src="images/Attendance.png" alt="" /></p>
+			<p>This represents objects that allow schools to securely provide SIS information to the Attendance product of their choice, and also to allow school attendance records to be published to a jurisdictional data hub, recording attendance at varying degrees of granularity.</p>
 		</Intro>	
 		<!-- Added for granular Attendance Reporting-->
 		<xi:include parse="text" href="Common/StudentAttendanceTimeList.xml"/>
@@ -118,9 +117,9 @@
 	<Group name = "Classroom Assessment">	
 	
 		<Intro>
-		<!--
-			<p><img src="images/ClassroomAssessment.png" alt="" /></p>-->
-			<p></p>
+		
+			<p><img src="images/ClassroomAssessment.png" alt="" /></p>
+			<p>This represents objects involved in third party classroom assessment applications connecting to a jurisdiction hub, collecting the relevant information and publishing back assessment results records to the centralised system.</p>
 		</Intro>		
 		<!-- Classroom assessment -->	
 		<xi:include parse="text" href="Common/GradingAssignment.xml"/>
@@ -134,8 +133,8 @@
 	</Group>
 	<Group name = "Learning Standards">	
 		<Intro>
-		<!--
-			<p><img src="images/LearningStandards.png" alt="" /></p>-->
+		
+			<p><img src="images/LearningStandards.png" alt="" /></p>
 			<p></p>
 		</Intro>	
 		<xi:include parse="text" href="Common/LearningStandardDocument.xml"/>
@@ -147,9 +146,9 @@
 	<Group name = "NAPLAN">		
 	
 		<Intro>
-		<!--
-			<p><img src="images/NAPLAN.png" alt="" /></p>-->
-			<p></p>
+		
+			<p><img src="images/NAPLAN.png" alt="" /></p>
+			<p>This diagram depicts the structure and connections between objects representing the NAPLAN Results and Reporting Data Set.</p>
 		</Intro>	
 		<!-- NAPLAN Additions -->
 		<xi:include parse="text" href="AU/NAPEventStudentLink.xml"/>
@@ -162,9 +161,9 @@
 	</Group>	
 	<Group name = "Wellbeing">	
 		<Intro>
-		<!--
-			<p><img src="images/Wellbeing.png" alt="" /></p>-->
-			<p></p>
+		
+			<p><img src="images/Wellbeing.png" alt="" /></p>
+			<p>These objects represent how schools can securely provide SIS information to the Wellbeing product(s) of their choice, and also how various wellbeing records are to be published to a jurisdictional data hub.</p>
 		</Intro>		
 	
 		<!-- Wellbeing Additions-->
@@ -181,9 +180,9 @@
 	<Group name = "Australian Government Collections">	
 	
 		<Intro>
-		<!--
-			<p><img src="images/AGCollections.png" alt="" /></p>-->
-			<p></p>
+		
+			<p><img src="images/AGCollections.png" alt="" /></p>
+			<p>This represents the current AG Data Collections represented in the SIF AU Data Model.</p>
 		</Intro>	
 		<!--AG Collections -->	  
 		<xi:include parse="text" href="AU/FinancialQuestionnaireSubmission.xml"/>   

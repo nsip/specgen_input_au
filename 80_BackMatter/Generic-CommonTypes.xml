@@ -428,7 +428,7 @@
 				<xs:pattern value="[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}"/>
 				<!--<xs:pattern value='[0-9A-F]{32}'/>-->
 				</Facets>
-<Description>SIF format for a GUID. This is different for 2.x Infrastructure  and 3.x Infrastructure - 2.x xs:pattern value='[0-9A-F]{32}'  3.x - xs:pattern value="[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}" ></Description>
+<Description>SIF format for a GUID. This is different for 2.x Infrastructure  and 3.x Infrastructure - 2.x xs:pattern value='[0-9A-F]{32}'  3.x - xs:pattern value="[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}"</Description>
 			</Item>
 		</CommonElement>
 

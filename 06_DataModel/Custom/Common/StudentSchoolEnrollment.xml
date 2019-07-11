@@ -498,7 +498,72 @@
     </Description>
     <Type ref="CommonTypes" name="PublishingPermissionListType"></Type>
   </Item>
-   
+  	<Item>
+		<Element>DisabilityLevelOfAdjustment</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Level of Adjustment made for a student's disability.</p>
+		</Description>
+		<Values>
+        <Value>
+			<Code>QDTP</Code>
+        </Value>
+        <Value>
+			<Code>Supplementary</Code>
+		</Value>
+        <Value>
+			<Code>Substantial</Code>
+		</Value>
+        <Value>
+			<Code>Extensive</Code>
+		</Value>
+       </Values>
+	</Item>
+	<Item>
+		<Element>DisabilityCategory</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Category of a student's disability.</p>
+		</Description>
+		<Values>
+        <Value>
+			<Code>Physical</Code>
+        </Value>
+        <Value>
+			<Code>Cognitive</Code>
+		</Value>
+        <Value>
+			<Code>Social-Emotional</Code>
+		</Value>
+        <Value>
+			<Code>Sensory</Code>
+		</Value>
+       </Values>
+	</Item>
+    <Item>
+    	<Element>CensusAge</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Age of the StudentCalculated for Non-gov Census reporting.</p>
+		</Description>
+		<Type name="xs:decimal"/>
+    </Item>	
+    <Item>
+      	<Element>DistanceEducationStudent</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Is this student a Distance Education Student for Non-gov Census reporting.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"/>
+    </Item>
+	<Item>
+      	<Element>BoardingStatus</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Is this student a Boarding or Day Student for AG Collection reporting?</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsBoardingType"/>
+    </Item> 
   <Item>
     <Element>InternationalStudent</Element>
     <Characteristics>O</Characteristics>
@@ -511,6 +576,7 @@
   <Item>   
     <Element>LocalCodeList</Element>
     <Characteristics>O</Characteristics>
+    <privacyRating>High</privacyRating>
     <Type ref="CommonTypes" name="LocalCodeListType"></Type>
   </Item> 
   <Item>

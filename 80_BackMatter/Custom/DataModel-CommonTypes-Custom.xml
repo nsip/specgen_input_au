@@ -261,12 +261,12 @@
 			<Type ref="CodeSets" name="AUCodeSetsEducationLevelType"/> 
 		</Item>
 		<Item>
-			<Element>BoardingStudent</Element>
+			<Element>BoardingStatus</Element>
 			<Characteristics>O</Characteristics>
 			<Description>
-				<p>Is this student a Boarding Student for AG Collection reporting.</p>
+				<p>Is this student a Boarding  or Day Student for AG Collection reporting?</p>
 			</Description>
-			<Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"/>
+			<Type ref="CodeSets" name="AUCodeSetsBoardingType"/>
 		</Item>
 		<Item>
 			<Element>StudentAddress</Element>
@@ -280,7 +280,7 @@
 			<Element>Parent1</Element>
 			<Characteristics>M</Characteristics>
 			<Description>
-				<p>Parent1 Name and Address AG Address Collection.</p>
+				<p>Name and address of Parent1 for the AG Address Collection.</p>
 			</Description> 
 			<Type ref="CommonTypes" name="AGParentType"/>
 		</Item>
@@ -289,7 +289,7 @@
 			<Element>Parent2</Element>
 			<Characteristics>O</Characteristics>
 			<Description>
-				<p>Parent2 Name and Address AG Address Collection.</p>
+				<p>Name and address of Parent2 for the AG Address Collection.</p>
 			</Description>
 			<Type ref="CommonTypes" name="AGParentType"/>
 		</Item>
@@ -407,7 +407,7 @@
 		<Item>
 			<Element>StudentGroupListType</Element>
 			<Description>
-				<p></p>
+				<p>A list of Student Groups</p>
 			</Description>
 			<List mode="List"/>
 		</Item>
@@ -415,7 +415,7 @@
 			<Element>StudentGroup</Element>
 			<Characteristics>OR</Characteristics>
 			<Description>
-				<p></p>
+				<p>A grouping of students.</p>
 			</Description>
 			<Type ref="CommonTypes" name="StudentGroupType"/>
 		</Item>
@@ -426,7 +426,7 @@
 			<Element>StudentGroupType</Element>
 			<Characteristics/>
 			<Description>
-				<p>.</p>
+				<p>A particular grouping of students used locally.</p>
 			</Description>
 		</Item>
 		<Item>
@@ -1627,7 +1627,7 @@
   	   	<Element>LearningStandardLocalId</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
-		  <p></p>
+		  <p>A local identifier or code allocated to the learning standard. Does not pre-suppose a machine readable representation of the framework that the learning standard is part of.</p>
 		</Description>
 		<Type ref="CommonTypes" name="LocalIdType"></Type>  
   	</Item>	 
@@ -2351,7 +2351,7 @@
   	   	<Element>OtherResponseType</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
-		  <p></p>
+		  <p>Details of any other response that can not be classified by previous types.</p>
 		</Description>
 		<Type name="xs:string"></Type>  
   	</Item>
@@ -4020,7 +4020,7 @@
 		<Element>Code</Element>
 		<Characteristics>M</Characteristics>
 		<Description>
-			<p>The code representing the specific language that an individual uses to communicate.�</p>
+			<p>The code representing the specific language that an individual uses to communicate.</p>
 		</Description>
 		<Type ref="CodeSets" name="AUCodeSetsAustralianStandardClassificationOfLanguagesASCLType"/>
 	</Item>
@@ -5222,12 +5222,12 @@
 		<Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"/>
     </Item>
 	<Item>
-      	<Element>BoardingStudent</Element>
+      	<Element>BoardingStatus</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
-			<p>Is this student a Boarding Student for Non-gov Census reporting.</p>
+			<p>Is this student a Boarding or Day Student for AG Collection reporting?</p>
 		</Description>
-		<Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"/>
+		<Type ref="CodeSets" name="AUCodeSetsBoardingType"/>
     </Item>
 </CommonElement>
 <CommonElement name="StaffMostRecentContainerType" type="true" dm="true">
@@ -9595,13 +9595,13 @@
 </CommonElement>
 <CommonElement name="OnTimeGraduationYearType" type="true" dm="true">
 	<Intro>
-		<p>First projected graduation year, usually determined when student is accepted into 9th grade (CCYY).</p>
+		<p>First projected graduation year, usually determined when student commences secondary education (CCYY).</p>
 	</Intro>
 	<Item>
 		<Element>OnTimeGraduationYearType</Element>
 		<Characteristics/>
 		<Description>
-			<p>First projected graduation year, usually determined when student is accepted into 9th grade (CCYY).</p>
+			<p>First projected graduation year, usually determined when student commences secondary education (CCYY).</p>
 		</Description>
 		<Type name="xs:gYear"/>
 	</Item>

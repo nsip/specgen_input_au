@@ -247,6 +247,7 @@
   <Item>   
     <Element>LocalCodeList</Element>
     <Characteristics>O</Characteristics>
+    <privacyRating>Medium</privacyRating>
     <Type ref="CommonTypes" name="LocalCodeListType"></Type>
   </Item> 
   <Item>

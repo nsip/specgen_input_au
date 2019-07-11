@@ -10,6 +10,7 @@
   <Key>@RefId</Key>
   <Item>
     <Element>SessionInfo</Element>
+    <privacyRating>Low</privacyRating>
     <Description>
       <p>
         This object provides the link between Period Attendance and the school's timetable.  It allows subject and teaching group information to be communicated to/from the attendance system.
@@ -24,6 +25,7 @@
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
     <Description>The GUID of the Object</Description>
+    <privacyRating>Low</privacyRating>
     <Type ref="CommonTypes" name="RefIdType"></Type>
   </Item>
   <Item>
@@ -33,6 +35,7 @@
     <Description>
       <p>The ID (GUID) of the school for which this attendance information is being reported.</p>
     </Description>
+    <privacyRating>Low</privacyRating>
     <Type ref="CommonTypes" name="IdRefType"></Type>
   </Item>
   <Item>
@@ -42,6 +45,7 @@
     <Description>
       <p>The (GUID) of the piece of Curriculum (TT Grid) scheduled</p>
     </Description>
+    <privacyRating>Low</privacyRating>
     <Type ref="CommonTypes" name="IdRefType"></Type>
   </Item>
   <Item>
@@ -50,6 +54,7 @@
     <Description>
       <p>School year for which the information is applicable, expressed as the four-digit year in which the school year ends (e.g., "2007").</p>
     </Description>
+    <privacyRating>Low</privacyRating>
      <Type ref="CommonTypes" name="SchoolYearType"></Type>
   </Item>
 
@@ -60,6 +65,7 @@
     <Description>
       <p>Session Local Identifier</p>
     </Description>
+    <privacyRating>Low</privacyRating>
     <Type ref="CommonTypes" name="LocalIdType"></Type>
   </Item>
 
@@ -70,6 +76,7 @@
     <Description>
       <p>TimeTableSubject Local Identifier</p>
     </Description>
+    <privacyRating>Low</privacyRating>
     <Type ref="CommonTypes" name="LocalIdType"></Type>
   </Item>
 
@@ -80,6 +87,7 @@
     <Description>
       <p>Teaching Group Local Identifier</p>
     </Description>
+    <privacyRating>Low</privacyRating>
     <Type ref="CommonTypes" name="LocalIdType"></Type>
   </Item>
 
@@ -90,6 +98,7 @@
     <Description>
       <p>School Local Identifier</p>
     </Description>
+    <privacyRating>Low</privacyRating>
     <Type ref="CommonTypes" name="LocalIdType"></Type>
   </Item>
 
@@ -100,6 +109,7 @@
     <Description>
       <p>Staff Local Identifier</p>
     </Description>
+    <privacyRating>Low</privacyRating>
     <Type ref="CommonTypes" name="LocalIdType"></Type>
   </Item>
 
@@ -109,6 +119,7 @@
     <Description>
       <p>Room number as presented to the user or application.  Needs to be provided if changed from  TimeTableCell.</p>
     </Description>
+    <privacyRating>Low</privacyRating>
     <Type name="xs:normalizedString"></Type>
   </Item>
 
@@ -119,6 +130,7 @@
     <Description>
       <p>Day Id.</p>
     </Description>
+    <privacyRating>Low</privacyRating>
     <Type ref="CommonTypes" name="LocalIdType"></Type>
   </Item>
 
@@ -129,6 +141,7 @@
     <Description>
       <p>Period Id within the Day Id</p>
     </Description>
+    <privacyRating>Low</privacyRating>
     <Type ref="CommonTypes" name="LocalIdType"></Type>
   </Item>
 
@@ -139,7 +152,9 @@
     <Description>
       <p>Date of Session</p>
     </Description>
+    <privacyRating>Low</privacyRating>
     <Type name="xs:date"></Type>
+    
   </Item>
 
   <Item>
@@ -149,6 +164,7 @@
     <Description>
       <p>Optional Start Time</p>
     </Description>
+    <privacyRating>Low</privacyRating>
     <Type name="xs:time"></Type>
   </Item>
 
@@ -159,6 +175,7 @@
     <Description>
       <p>Optional End Time</p>
     </Description>
+    <privacyRating>Low</privacyRating>
     <Type name="xs:time"></Type>
   </Item>
    
@@ -169,22 +186,26 @@
     <Description>
       <p>Was the Roll Marked for this Period?</p>
     </Description>
+    <privacyRating>Low</privacyRating>
     <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
   </Item>
   <Item>   
     <Element>LocalCodeList</Element>
     <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
     <Type ref="CommonTypes" name="LocalCodeListType"></Type>
   </Item> 
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
     <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
 
     <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
   </Item>
   <xhtml:Example xmlns="" name="SessionInfo Example">

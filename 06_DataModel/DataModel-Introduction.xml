@@ -56,6 +56,15 @@ Mandatory attributes <span class="rfc2119">MUST</span> always be present if thei
 SIF Adapters and message brokers MUST supply data according to the types specified in the Type columns and their corresponding equivalents in the most recent schema files associated with this specification. If there is a discrepancy between object and element definitions in this specification and the corresponding schema files, the definition in the schema files takes precedence; every effort will be made to note discrepancies in the <a href="errata/1.html">errata</a> for this document as they are identified.
 </p>
 </Section>
+<Section name="Conceptual Modelling">
+<p>While the SIF AU Data Model is a "data in motion" model, it is based on some commonly understood education concepts.  This document endeavors to map these concepts to the SIF AU Data Model.
+</p>
+ <ul>
+        <li class="file">
+          <a href="background/Conceptual Model v0.5.pdf">Conceptual Model v0.5.pdf (11/07/2019)</a>
+        </li>
+ </ul>      
+</Section>
 <Section name="Conventions">
 
 <Section name="Object Attributes/Primary Keys">

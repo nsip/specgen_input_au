@@ -5,7 +5,7 @@
 		<Element>WellbeingPersonLink</Element>
 		<privacyRating>High</privacyRating>
 		<Description>
-			<p></p>
+			<p>Object intended to list one or more groups of involved parties to a WellbeingEvent and optionally a WellbeingResponse, when the primary involvement in that event is not restricted to a single student. Groups are identified through the GroupId element, whose value is repeated for a WellbeingPersonLink instance for each member of that group. Participants are not restricted to being students, and can be staff, student contacts, or other third parties.</p>
 		</Description>
 	</Item>
 	<Item>
@@ -117,7 +117,7 @@
   	   	<Element>ShortName</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
-		  <p>Optional free text name for a person, usually only used where the person does not have a personal record with a RefId.</p>
+		  <p>Optional free text name for a person, usually only used where the person does not have a personal record with a RefId e.g Is not represented in a StudentPersonal, StaffPersonal or StudentContactPersonal object.</p>
 		</Description>
 		<Type name="xs:string"></Type>  
   	</Item>
@@ -162,7 +162,7 @@
 		<Characteristics>O</Characteristics>
 		<privacyRating>High</privacyRating>
 		<Description>
-			<p>List of Actions where an action resulted and is known.</p>
+			<p>List of Actions where an action resulted and is known.  This action list is added here in case follow up actions are specific to a member of the group.</p>
 		</Description>
 		<Type ref="CommonTypes" name="FollowUpActionListType"/>
 	</Item>

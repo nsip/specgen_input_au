@@ -133,14 +133,14 @@
     <Element>SIF_Metadata</Element>
     <Description></Description>
     <Characteristics>O</Characteristics>
-    <privacyRating>Low</privacyRating>
+    <privacyRating>High</privacyRating>
     <Type ref="CommonTypes" name="SIF_MetadataType"/>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Description></Description>
     <Characteristics>O</Characteristics>
-    <Description>Low</Description>
+    <privacyRating>High</privacyRating>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
   <xhtml:Example xmlns="" name='Identity published by an Access Federation Shibboleth Provider'>

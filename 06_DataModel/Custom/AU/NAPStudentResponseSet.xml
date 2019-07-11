@@ -120,11 +120,7 @@
 		<p>Overall score received in the NAP test.Overall score received in the test. Contents are not populated if this is an empty object (sanctioned abandonment or refusal).</p>
 		<Type ref="CommonTypes" name="DomainScoreType"></Type>
   </Item>  
-    <Item>   
-    <Element>LocalCodeList</Element>
-    <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="LocalCodeListType"></Type>
-  </Item>
+
    <Item>
     <Element>TestletList</Element>
     <Characteristics>C</Characteristics>
@@ -134,7 +130,12 @@
       <p>Conditional on Participation Code.</p>
     </Description>
   </Item>
-       
+  <Item>   
+    <Element>LocalCodeList</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>High</privacyRating>
+    <Type ref="CommonTypes" name="LocalCodeListType"></Type>
+  </Item>     
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>

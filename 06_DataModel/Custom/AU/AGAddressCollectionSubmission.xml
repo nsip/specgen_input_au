@@ -12,7 +12,7 @@
     <Element>AGAddressCollectionSubmission</Element>
 	<privacyRating>High</privacyRating>
     <Description>
-      <p></p>
+      <p>Object for Australian Government collection submission collecting addresses of students from schools and school authorities</p>
      </Description>
   </Item>
   <Item>
@@ -107,18 +107,21 @@
    <Item>   
     <Element>LocalCodeList</Element>
     <Characteristics>O</Characteristics>
+    <privacyRating>High</privacyRating>
     <Type ref="CommonTypes" name="LocalCodeListType"></Type>
   </Item>
   
   <Item>   
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
+    <privacyRating>High</privacyRating>
     <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
   </Item>
   
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
+    <privacyRating>High</privacyRating>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
   </Item>
   
@@ -166,7 +169,7 @@
                               <AddressCollectionStudent>
                                        <LocalId>12345</LocalId>
                                        <EducationLevel>Primary</EducationLevel>      
-                                       <BoardingStudent>N</BoardingStudent>                                           
+                                       <BoardingStatus>D</BoardingStatus>                                           
                                        <StudentAddress Type="0123" Role="012B">
 											<Street>
 												<Line1>The House</Line1>

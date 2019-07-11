@@ -1005,10 +1005,6 @@
 				<Text>Therapy Session</Text>
 			</Value>	
 			<Value>
-				<Code>299</Code>
-				<Text>Medical - further details not available</Text>
-			</Value>
-			<Value>
 				<Code>300</Code>
 				<Text>Truancy</Text>
 			</Value>
@@ -10333,5 +10329,21 @@
 				<Text>Full Time</Text>
 			</Value>
 		</Values>
-	</CodeSet>		
+	</CodeSet>
+	<CodeSet>
+		<Intro>
+			<p>Student Boarding Status</p>
+		</Intro>
+		<ID>Boarding</ID>
+		<Values>
+			<Value>
+				<Code>B</Code>
+				<Text>Boarding Student</Text>
+			</Value>
+			<Value>
+				<Code>D</Code>
+				<Text>Day Student</Text>
+			</Value>
+		</Values>
+	</CodeSet>				
 </Grouping>
