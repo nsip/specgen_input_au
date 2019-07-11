@@ -7324,6 +7324,7 @@
 <Value><Code>861</Code><Text>Skilled - Onshore Independent New Zealand Citizen (No longer issued)</Text></Value>
 <Value><Code>862</Code><Text>Skilled Australian-sponsored New Zealand Citizen (No longer issued)</Text></Value>
 <Value><Code>863</Code><Text>Skilled Designated Area-sponsored New Zealand Citizen (No longer issued)</Text></Value>
+<Value><Code>870</Code><Text>Sponsored Parent (Temporary)</Text></Value>
 <Value><Code>880</Code><Text>Skilled - Independent Overseas Student (No longer issued)</Text></Value>
 <Value><Code>881</Code><Text>Skilled - Australian-sponsored Overseas Student (No longer issued)</Text></Value>
 <Value><Code>882</Code><Text>Skilled - Designated Area-sponsored Overseas Student (No longer issued)</Text></Value>
@@ -10318,7 +10319,7 @@
 			</Value>
 			<Value>
 				<Code>O</Code>
-				<Text>Other</Text>
+				<Text>Other - not elsewhere classified</Text>
 			</Value>
 			<Value>
 				<Code>P</Code>
