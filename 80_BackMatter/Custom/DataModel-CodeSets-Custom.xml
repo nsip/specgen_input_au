@@ -3527,10 +3527,10 @@
 	</CodeSet>
 	<CodeSet>
 		<Intro>
-			<p>Federal Electorates from the Australian Electoral Commission; loaded from https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1270.0.55.003July%202017?OpenDocument updated 2017</p>
+			<p>Federal Electorates from the Australian Electoral Commission; https://www.aec.gov.au/profiles/index.htm, loaded using 2019 electorates from the coding desription of Commonwealth Electoral Divisions, ABS https://www.abs.gov.au/ausstats/abs@.nsf/Lookup/by%20Subject/1270.0.55.003~July%202017~Main%20Features~Commonwealth%20Electoral%20Divisions%20(CEDs)~6</p>
 		</Intro>
 		<ID>Federal Electorate</ID>
-      <Values><Value><Code>101</Code><Text>Banks</Text></Value>
+       <Values><Value><Code>101</Code><Text>Banks</Text></Value>
 <Value><Code>102</Code><Text>Barton</Text></Value>
 <Value><Code>103</Code><Text>Bennelong</Text></Value>
 <Value><Code>104</Code><Text>Berowra</Text></Value>
@@ -3578,7 +3578,6 @@
 <Value><Code>146</Code><Text>Werriwa</Text></Value>
 <Value><Code>147</Code><Text>Whitlam</Text></Value>
 <Value><Code>197</Code><Text>Migratory - Offshore - Shipping (NSW)</Text></Value>
-<Value><Code>199</Code><Text>Not Applicable (NSW)</Text></Value>
 <Value><Code>201</Code><Text>Aston</Text></Value>
 <Value><Code>202</Code><Text>Ballarat</Text></Value>
 <Value><Code>203</Code><Text>Batman</Text></Value>
@@ -3592,32 +3591,32 @@
 <Value><Code>211</Code><Text>Deakin</Text></Value>
 <Value><Code>212</Code><Text>Dunkley</Text></Value>
 <Value><Code>213</Code><Text>Flinders</Text></Value>
-<Value><Code>214</Code><Text>Gellibrand</Text></Value>
-<Value><Code>215</Code><Text>Gippsland</Text></Value>
-<Value><Code>216</Code><Text>Goldstein</Text></Value>
-<Value><Code>217</Code><Text>Gorton</Text></Value>
-<Value><Code>218</Code><Text>Higgins</Text></Value>
-<Value><Code>219</Code><Text>Holt</Text></Value>
-<Value><Code>220</Code><Text>Hotham</Text></Value>
-<Value><Code>221</Code><Text>Indi</Text></Value>
-<Value><Code>222</Code><Text>Isaacs</Text></Value>
-<Value><Code>223</Code><Text>Jagajaga</Text></Value>
-<Value><Code>224</Code><Text>Kooyong</Text></Value>
-<Value><Code>225</Code><Text>La Trobe</Text></Value>
-<Value><Code>226</Code><Text>Lalor</Text></Value>
-<Value><Code>227</Code><Text>Mallee</Text></Value>
-<Value><Code>228</Code><Text>Maribyrnong</Text></Value>
-<Value><Code>229</Code><Text>McEwen</Text></Value>
-<Value><Code>230</Code><Text>McMillan</Text></Value>
-<Value><Code>231</Code><Text>Melbourne</Text></Value>
-<Value><Code>232</Code><Text>Melbourne Ports</Text></Value>
-<Value><Code>233</Code><Text>Menzies</Text></Value>
-<Value><Code>234</Code><Text>Murray</Text></Value>
-<Value><Code>235</Code><Text>Scullin</Text></Value>
-<Value><Code>236</Code><Text>Wannon</Text></Value>
-<Value><Code>237</Code><Text>Wills</Text></Value>
+<Value><Code>214</Code><Text>Fraser</Text></Value>
+<Value><Code>215</Code><Text>Gellibrand</Text></Value>
+<Value><Code>216</Code><Text>Gippsland</Text></Value>
+<Value><Code>217</Code><Text>Goldstein</Text></Value>
+<Value><Code>218</Code><Text>Gorton</Text></Value>
+<Value><Code>219</Code><Text>Higgins</Text></Value>
+<Value><Code>220</Code><Text>Holt</Text></Value>
+<Value><Code>221</Code><Text>Hotham</Text></Value>
+<Value><Code>222</Code><Text>Indi</Text></Value>
+<Value><Code>223</Code><Text>Isaacs</Text></Value>
+<Value><Code>224</Code><Text>Jagajaga</Text></Value>
+<Value><Code>225</Code><Text>Kooyong</Text></Value>
+<Value><Code>226</Code><Text>La Trobe</Text></Value>
+<Value><Code>227</Code><Text>Lalor</Text></Value>
+<Value><Code>228</Code><Text>Mallee</Text></Value>
+<Value><Code>229</Code><Text>Maribyrnong</Text></Value>
+<Value><Code>230</Code><Text>McEwen</Text></Value>
+<Value><Code>231</Code><Text>McMillan</Text></Value>
+<Value><Code>232</Code><Text>Melbourne</Text></Value>
+<Value><Code>233</Code><Text>Melbourne Ports</Text></Value>
+<Value><Code>234</Code><Text>Menzies</Text></Value>
+<Value><Code>235</Code><Text>Murray</Text></Value>
+<Value><Code>236</Code><Text>Scullin</Text></Value>
+<Value><Code>237</Code><Text>Wannon</Text></Value>
+<Value><Code>238</Code><Text>Wills</Text></Value>
 <Value><Code>297</Code><Text>Migratory - Offshore - Shipping (Vic.)</Text></Value>
-<Value><Code>299</Code><Text>Not Applicable (VIC)</Text></Value>
 <Value><Code>301</Code><Text>Blair</Text></Value>
 <Value><Code>302</Code><Text>Bonner</Text></Value>
 <Value><Code>303</Code><Text>Bowman</Text></Value>
@@ -3649,7 +3648,6 @@
 <Value><Code>329</Code><Text>Wide Bay</Text></Value>
 <Value><Code>330</Code><Text>Wright</Text></Value>
 <Value><Code>397</Code><Text>Migratory - Offshore - Shipping (Qld)</Text></Value>
-<Value><Code>399</Code><Text>Not Applicable (QLD)</Text></Value>
 <Value><Code>401</Code><Text>Adelaide</Text></Value>
 <Value><Code>402</Code><Text>Barker</Text></Value>
 <Value><Code>403</Code><Text>Boothby</Text></Value>
@@ -3662,7 +3660,6 @@
 <Value><Code>410</Code><Text>Sturt</Text></Value>
 <Value><Code>411</Code><Text>Wakefield</Text></Value>
 <Value><Code>497</Code><Text>Migratory - Offshore - Shipping (SA)</Text></Value>
-<Value><Code>499</Code><Text>Not Applicable (SA)</Text></Value>
 <Value><Code>501</Code><Text>Brand</Text></Value>
 <Value><Code>502</Code><Text>Burt</Text></Value>
 <Value><Code>503</Code><Text>Canning</Text></Value>
@@ -3680,19 +3677,17 @@
 <Value><Code>515</Code><Text>Swan</Text></Value>
 <Value><Code>516</Code><Text>Tangney</Text></Value>
 <Value><Code>597</Code><Text>Migratory - Offshore - Shipping (WA)</Text></Value>
-<Value><Code>599</Code><Text>Not Applicable (WA)</Text></Value>
 <Value><Code>601</Code><Text>Bass</Text></Value>
 <Value><Code>602</Code><Text>Braddon</Text></Value>
-<Value><Code>603</Code><Text>Denison</Text></Value>
+<Value><Code>603</Code><Text>Clark</Text></Value>
 <Value><Code>604</Code><Text>Franklin</Text></Value>
 <Value><Code>605</Code><Text>Lyons</Text></Value>
 <Value><Code>697</Code><Text>Migratory - Offshore - Shipping (Tas.)</Text></Value>
-<Value><Code>699</Code><Text>Not Applicable (TAS)</Text></Value>
 <Value><Code>701</Code><Text>Lingiari</Text></Value>
 <Value><Code>702</Code><Text>Solomon</Text></Value>
 <Value><Code>797</Code><Text>Migratory - Offshore - Shipping (NT)</Text></Value>
-<Value><Code>799</Code><Text>Not Applicable (NT)</Text></Value>
-<Value><Code>801</Code><Text>Canberra</Text></Value>
+<Value><Code>801</Code><Text>Bean</Text></Value>
+<Value><Code>802</Code><Text>Canberra</Text></Value>
 <Value><Code>802</Code><Text>Fenner</Text></Value>
 <Value><Code>899</Code><Text>Not Applicable (ACT)</Text></Value>
 <Value><Code>999</Code><Text>Not Applicable</Text></Value>
