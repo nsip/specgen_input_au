@@ -6,101 +6,45 @@
          xmlns="http://sifassociation.org/SpecGen">
 	
 	<p>This release contains the following significant updates and extensions to the SIF specification.</p>
-	<h3>Additions/Changes since 3.4.3 (April, 2018)</h3>
+	<h3>Additions/Changes since 3.4.4 (April, 2019)</h3>
 	<h4>New Objects</h4>
 	<ul>
-		<li>StudentScoreJudgementAgainstStandard - Proposed by Catholic Education, Melbourne</li>
-		<li>FinancialQuestionnaireSubmission     - Proposed for Australian Government, Collections Projects</li>
-		<li>AGStatusReport                       - Proposed for Australian Government, Collections Projects</li>
+		<li>AGAddressCollectionSubmission - Proposed for Australian Government, Collections Projects</li>
+		<li>WellbeingPersonLink - Proposed for Vic DET</li>
 	</ul>
 	
-		<h4>New Types</h4>
+		<h4>Other Additons</h4>
 	<ul>
-		<li>StudentGroupListType - added to StudentSchoolEnrollment, Proposed by Simon Schools</li>
-		<li>PhotoPermissionListType - added to PersonPicture, Proposed for NSW 3PI Project</li>
-		<li>PreviousSchoolName - Contained in StaffAssignment</li>
-		<li>ESLSupport - Contained in StudentPersonal</li>
-		<li>PreviousSchoolName - Contained in StudentSchoolEnrollment</li>
-		<li>DestinationSchoolName - Contained in StudentSchoolEnrollment</li>
-		<li>FQReporting and FQReportingList - Contained in FQReportingCollection</li>
-		<li>AGReportingObjectResponseListType - Contained in AGStatusReport</li>
-		<li>AGReportingObjectResponseType -	Contained in AGStatusReport</li>
-		<li>FQContextualQuestionListType - Contained in FQReporting</li>
-		<li>FQContextualQuestionType - Contained in FQReporting</li>
-		<li>FQItemListType - Contained in FQReporting</li>
-		<li>FQItemType - Contained in FQReporting</li>
-		<li>AGRuleListType - Contained in AGStatusReport</li>
-		<li>AGRuleType - Contained in AGStatusReport</li>
-		<li>SoftwareVendorInfoContainerType - Contained in AGStatusReport</li>
-		<li>EntityContactInfoType - Contained in FQReporting</li>
-		<li>RegistrationDetails - Contained in ContactInfoType</li>
-		<li>Qualifications - Contained in ContactInfoType</li>
-		<li>InterpreterRequired - Contained in DemographicsType</li>
-   	</ul>
+		<li>WellbeingResponse– SuspensionContainerType – SuspensionNotes added, Proposed by Vic DET</li>
+		<li>MapInfo/MapReference added MapNumber, Proposed by Vic DET</li>
+		<li>Attendance Codes Added for Vic and NSW DET</li>
+		<li>Additions to Wellbeing Medical Categories and Sub Categories, Proposed by Vic DET</li>
+		<li>Additions to StudentPersonal/MostRecent and StudentSchoolEnrollment for Future AG Census Collection</li>
+		<li>Addition to StaffStatus codes, Proposed by Vic DET</li>
+		<li>StudentPersonal/PrePrimaryEducationHours – type of attendance care prior to kinder enrolment values added, Proposed by NSW DET</li>
+		<li>Added RoomInfo/AvailableForTimeTable and StaffAssignment/AvailableForTimetable - Proposed by NSW DET, 3PI project</li>
+		<li>Update to CodeSet, Staff Activity (1107) Primary/Secondary Combined Teacher - Proposed by Sentral</li>
+		<li>SymptomList added to WellbeingCharacteristic, Proposed by Vic DET</li>
+		<li>Flag added for International Students for StudentSchoolEnrollment, Proposed by NSW DET</li>
+ 	</ul>
    	
 		<h4>New CodeSets</h4>
 	<ul>
-		<li>Permission Category Code  - added to support PhotoPermissionList</li>
-		<li>Group Category Code - added to support StudentGroupList</li>
-		<li>AG Submission Status - added to support AG Collections - added in the errata release</li>
+		<li>Education Level - Primary or Secondary, Associated with AG Student Collections</li>
+		<li>Pre-Primary Education Hours - added to support PrePrimaryEducationHours</li>
+		<li>Student Boarding Status - added to support AG Collections</li>
 	</ul>
 		<h4>Changes</h4>
 	<ul>
 	
-		<li>LearningStandardItemRefId changed from Optional Repeating to Optional (Error Correction)</li>
-		<li>NAPTestletContentType/TestletName changed from Mandatory to Optional for use with NAPLAN 2019</li>
-		<li>DomainScoreType/PlausibleScaledValueList changed from Mandatory Repeating to Mandatory  (Error Correction)</li>
-		<li>StimulusType/TextDescriptor changed from Mandatory to Optional for use with NAPLAN 2019</li>
+		<li>SchoolCommonwealthId privacy rating changed to Low</li>
+		<li>Removed duplicate code ACDT, in TimeZone codeset</li>
+		<li>Changes to WellbeingEvent and WellbeingResponse Objects to cater for “groups” of students/people</li>
+		<li>HouseholdContactInfo/PreferenceNumber changed to Optional</li>
 		<li>Other minor typos, broken links and various descriptions updated</li>
-		<li>For errata Release - FQItemType - ‘FQComments’ now Optional </li>
-		<li>For errata Release - FQReporting- Contact Email, PhoneNumber now Mandatory.Name – Given Name and Family Name to be provided.</li>
+		<li>WellbeingAlert/WellbeingStartDate changed to Optional</li>
+		<li>Updates to codesets for Visa SubClass, Federal Electorates, ISO currency names.</li>
 	</ul>
 	
-		<h4>The following elemnts of type changed from Mandatory Repeating to Optional Repeating for use with NAPLAN 2019</h4>
-	<ul>	
-		<li>PlausibleScaledValueListType/PlausibleScaledValue</li> 
-		<li>SubstituteItemListType/SubstituteItem</li> 
-		<li>SubstituteItemType</li> 
-		<li>CodeFrameTestItemListType/TestItem</li> 
-		<li>CodeFrameTestItemType</li> 
-		<li>StimulusLocalIdListType/StimulusLocalId</li> 
-		<li>NAPTestItemListType/TestItem</li> 
-		<li>NAPTestItem2Type</li>
-		<li>NAPCodeFrameTestletListType/Testlet</li>
-		<li>NAPTestletCodeFrameType</li>
-		<li>NAPStudentResponseTestletListType/Testlet</li>
-		<li>NAPTestletResponseType</li>
-		<li>NAPTestletItemResponseListType/ItemResponse</li>
-		<li>NAPTestletResponseItemType</li>
-		<li>NAPSubscoreListType/Subscore</li>
-		<li>NAPSubscoreType</li>
-		<li>NAPWritingRubricListType/NAPWritingRubric</li>
-		<li>NAPWritingRubricType</li>
-		<li>ScoreListType/Score</li>
-		<li>ScoreType</li>
-		<li>ScoreDescriptionListType/ScoreDescriptor</li>
-		<li>StimulusListType/Stimulus</li>
-		<li>StimulusType</li>
-		<li>ContentDescriptionListType/ContentDescription</li>
-		<li>PNPCodeListType/PNPCode</li>
-		<li>TestDisruptionListType/TestDisruption</li>
-		<li>TestDisruptionType</li>
-		<li>LanguageBaseType</li>
-	
-	</ul>	
-		<h4>Changes to CodeSets </h4>
-	<ul>
-		<li>Visa Sub Class Codes updated from https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing updated,Added - 790 Safe Haven </li>
-		<li>Changes to PNP Codes for NAPLAN 2019 -AIM, AAM, AVM, ALL - not in use for 2019; Values added, BNB, BNG, BNL, BNW, BNY, CAL, ENZ, EST, LFS, RZL, ZOF, ZTFAO </li>
-		<li>Added to Exit/Withdrawal Type codes: 1940 - Deceased, 1941 - Permanently incapacitated</li>
-		<li>Added to Relationship to Student codes: 40 - Medical Contact</li>
-		<li>Added to Attendance Codes: 619 - School endorsed religious event</li>
-		<li>In Errata Release - NAP Test Item Changes: HT (Hot Text) changed to TS, CO (Composite) changed to COMP, IO Order interaction changed to Interactive Order</li>
-	</ul>
-	<h3>Deletions</h3>
-	<ul>
-		<li>ResourceUsage and SystemRole remain marked for deprecation in 3.5</li>
-	</ul>
-
 	
 </Section>

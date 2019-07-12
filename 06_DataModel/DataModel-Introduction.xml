@@ -57,7 +57,7 @@ SIF Adapters and message brokers MUST supply data according to the types specifi
 </p>
 </Section>
 <Section name="Conceptual Modelling">
-<p>While the SIF AU Data Model is a "data in motion" model, it is based on some commonly understood education concepts.  This document endeavors to map these concepts to the SIF AU Data Model.
+<p>The SIF AU Data Model is a “data in motion” model, which has been designed for data exchange between institutions. However, it is increasingly being used within enterprises, and it has been widely used as a nationally agreed data model for education. In order to help navigate the SIF data model better, and to make it easier to map between SIF and other data models of education, we have abstracted a conceptual data model from SIF AU, treating SIF AU as a logical data model. The document Conceptual Model v0.5.pdf (11/07/2019)  outlines the current conceptual model for SIF AU, and how it maps to the logical model.
 </p>
  <ul>
         <li class="file">
@@ -220,6 +220,14 @@ If an element is not included in the payload of an Update operation, its value i
 
 In additon, if the payload contains the RefId/UUID only, the consumer must assume that object to be DELETED or that it has been deleted since the original request was made.
 </p>
+</Section>
+<Section name="Local Code Set Validation">
+<p>In SIF AU 3.4.5 we introduce a method of augmenting code sets with local values without 'breaking changes'. Future releases will add "OtherCodeListType" to each code set and in-line enumerations will also be typed to allow for extensions.  Every Object in SIF AU 3.4.5 has a LocalCodeType which will allow extensions to, but does not replace, current validation set.  The following document outlines the need and the interim solution.</p>
+ <ul>
+        <li class="file">
+          <a href="background/CodeSetLocalSupportv3.4.5.pdf">CodeSetLocalSupportv3.4.5.pdf (12/07/2019)</a>
+        </li>
+ </ul>      
 </Section>
 </Section>
 </Section>

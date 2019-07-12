@@ -169,9 +169,9 @@
     
     <LocalCodeList>
 		<LocalCode>
-		   <LocalisedCode> SHA-256 </LocalisedCode>
+		   <LocalisedCode>SHA-256</LocalisedCode>
 		   <Description>This is the algorithm to use here.</Description>
-		   <Element> PasswordList\Password[1]@Algorithm</Element>
+		   <Element> PasswordList/Password[1]/@Algorithm</Element>
 		   <ListIndex>1</ListIndex> 
     </LocalCode>
     </LocalCodeList>

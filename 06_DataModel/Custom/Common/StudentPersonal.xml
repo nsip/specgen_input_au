@@ -457,12 +457,12 @@
 				<LocalCode>
 					<LocalisedCode>0921</LocalisedCode>
 					<Description>Serbia Montenegro</Description>
-					<Element>StudentPersonal\PersonInfo\Demographics\CountryOfBirth</Element>
+					<Element>StudentPersonal/PersonInfo/Demographics/CountryOfBirth</Element>
 				</LocalCode>
 			    <LocalCode>
 					<LocalisedCode>0921</LocalisedCode>
 					<Description>Serbia Montenegro</Description>
-					<Element>StudentPersonal\PersonInfo\Demographics\CountriesOfCitizenship\CountryOfCitizenship</Element>
+					<Element>StudentPersonal/PersonInfo/Demographics/CountriesOfCitizenship/CountryOfCitizenship</Element>
 					<ListIndex>1</ListIndex> 
 				</LocalCode>
 			</LocalCodeList>

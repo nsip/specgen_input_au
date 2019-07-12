@@ -81,7 +81,7 @@
 	<Group name="Finance">	
 		<Intro>
 		
-			<p><img src="images/Finance.png" alt="" /></p> 
+			<p><img src="images/finance.png" alt="" /></p> 
 			<p>A set of objects to support the transfer of financial information representing, and not an accounting package.  The assumption is that SIF is required only to exchange information about individual transactions (e.g. purchase orders, invoices, receipts, journals), and that reporting will be done out of existing applications—although those reports may be based on the transactional information received through SIF</p>
 		</Intro>	
 		<!-- Finance additions-->		

@@ -3530,7 +3530,7 @@
 			<p>Federal Electorates from the Australian Electoral Commission; loaded from https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1270.0.55.003July%202017?OpenDocument updated 2017</p>
 		</Intro>
 		<ID>Federal Electorate</ID>
-     <Values><Value><Code>101</Code><Text>Banks</Text></Value>
+      <Values><Value><Code>101</Code><Text>Banks</Text></Value>
 <Value><Code>102</Code><Text>Barton</Text></Value>
 <Value><Code>103</Code><Text>Bennelong</Text></Value>
 <Value><Code>104</Code><Text>Berowra</Text></Value>
@@ -3667,6 +3667,35 @@
 <Value><Code>502</Code><Text>Burt</Text></Value>
 <Value><Code>503</Code><Text>Canning</Text></Value>
 <Value><Code>504</Code><Text>Cowan</Text></Value>
+<Value><Code>505</Code><Text>Curtin</Text></Value>
+<Value><Code>506</Code><Text>Durack</Text></Value>
+<Value><Code>507</Code><Text>Forrest</Text></Value>
+<Value><Code>508</Code><Text>Fremantle</Text></Value>
+<Value><Code>509</Code><Text>Hasluck</Text></Value>
+<Value><Code>510</Code><Text>Moore</Text></Value>
+<Value><Code>511</Code><Text>O'Connor</Text></Value>
+<Value><Code>512</Code><Text>Pearce</Text></Value>
+<Value><Code>513</Code><Text>Perth</Text></Value>
+<Value><Code>514</Code><Text>Stirling</Text></Value>
+<Value><Code>515</Code><Text>Swan</Text></Value>
+<Value><Code>516</Code><Text>Tangney</Text></Value>
+<Value><Code>597</Code><Text>Migratory - Offshore - Shipping (WA)</Text></Value>
+<Value><Code>599</Code><Text>Not Applicable (WA)</Text></Value>
+<Value><Code>601</Code><Text>Bass</Text></Value>
+<Value><Code>602</Code><Text>Braddon</Text></Value>
+<Value><Code>603</Code><Text>Denison</Text></Value>
+<Value><Code>604</Code><Text>Franklin</Text></Value>
+<Value><Code>605</Code><Text>Lyons</Text></Value>
+<Value><Code>697</Code><Text>Migratory - Offshore - Shipping (Tas.)</Text></Value>
+<Value><Code>699</Code><Text>Not Applicable (TAS)</Text></Value>
+<Value><Code>701</Code><Text>Lingiari</Text></Value>
+<Value><Code>702</Code><Text>Solomon</Text></Value>
+<Value><Code>797</Code><Text>Migratory - Offshore - Shipping (NT)</Text></Value>
+<Value><Code>799</Code><Text>Not Applicable (NT)</Text></Value>
+<Value><Code>801</Code><Text>Canberra</Text></Value>
+<Value><Code>802</Code><Text>Fenner</Text></Value>
+<Value><Code>899</Code><Text>Not Applicable (ACT)</Text></Value>
+<Value><Code>999</Code><Text>Not Applicable</Text></Value>
 </Values></CodeSet>
 	<CodeSet>
 		<Intro>
@@ -6857,7 +6886,7 @@
 <Value><Code>202</Code><Text>Global Special Humanitarian</Text></Value>
 <Value><Code>203</Code><Text>Emergency Rescue</Text></Value>
 <Value><Code>204</Code><Text>Woman at Risk</Text></Value>
-<Value><Code>205</Code><Text>Camp Clearance</Text></Value>
+<Value><Code>205</Code><Text>Camp Clearance (No longer Issued)</Text></Value>
 <Value><Code>300</Code><Text>Prospective Marriage visa</Text></Value>
 <Value><Code>309</Code><Text>Partner (Provisional) visa</Text></Value>
 <Value><Code>400</Code><Text>Temporary Work (Short Stay Specialist) visa</Text></Value>
