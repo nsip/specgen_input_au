@@ -3580,12 +3580,12 @@
 <Value><Code>197</Code><Text>Migratory - Offshore - Shipping (NSW)</Text></Value>
 <Value><Code>201</Code><Text>Aston</Text></Value>
 <Value><Code>202</Code><Text>Ballarat</Text></Value>
-<Value><Code>203</Code><Text>Batman</Text></Value>
-<Value><Code>204</Code><Text>Bendigo</Text></Value>
-<Value><Code>205</Code><Text>Bruce</Text></Value>
-<Value><Code>206</Code><Text>Calwell</Text></Value>
-<Value><Code>207</Code><Text>Casey</Text></Value>
-<Value><Code>208</Code><Text>Chisholm</Text></Value>
+<Value><Code>203</Code><Text>Bendigo</Text></Value>
+<Value><Code>204</Code><Text>Bruce</Text></Value>
+<Value><Code>205</Code><Text>Calwell</Text></Value>
+<Value><Code>206</Code><Text>Casey</Text></Value>
+<Value><Code>207</Code><Text>Chisholm</Text></Value>
+<Value><Code>208</Code><Text>Cooper</Text></Value>
 <Value><Code>209</Code><Text>Corangamite</Text></Value>
 <Value><Code>210</Code><Text>Corio</Text></Value>
 <Value><Code>211</Code><Text>Deakin</Text></Value>
@@ -3603,16 +3603,16 @@
 <Value><Code>223</Code><Text>Isaacs</Text></Value>
 <Value><Code>224</Code><Text>Jagajaga</Text></Value>
 <Value><Code>225</Code><Text>Kooyong</Text></Value>
-<Value><Code>226</Code><Text>La Trobe</Text></Value>
-<Value><Code>227</Code><Text>Lalor</Text></Value>
-<Value><Code>228</Code><Text>Mallee</Text></Value>
-<Value><Code>229</Code><Text>Maribyrnong</Text></Value>
-<Value><Code>230</Code><Text>McEwen</Text></Value>
-<Value><Code>231</Code><Text>McMillan</Text></Value>
+<Value><Code>226</Code><Text>Lalor</Text></Value>
+<Value><Code>227</Code><Text>La Trobe</Text></Value>
+<Value><Code>228</Code><Text>Macnamara</Text></Value>
+<Value><Code>229</Code><Text>Mallee</Text></Value>
+<Value><Code>230</Code><Text>Maribyrnong</Text></Value>
+<Value><Code>231</Code><Text>McEwen</Text></Value>
 <Value><Code>232</Code><Text>Melbourne</Text></Value>
-<Value><Code>233</Code><Text>Melbourne Ports</Text></Value>
-<Value><Code>234</Code><Text>Menzies</Text></Value>
-<Value><Code>235</Code><Text>Murray</Text></Value>
+<Value><Code>233</Code><Text>Menzies</Text></Value>
+<Value><Code>234</Code><Text>Monash</Text></Value>
+<Value><Code>235</Code><Text>Nicholls</Text></Value>
 <Value><Code>236</Code><Text>Scullin</Text></Value>
 <Value><Code>237</Code><Text>Wannon</Text></Value>
 <Value><Code>238</Code><Text>Wills</Text></Value>
@@ -3656,7 +3656,7 @@
 <Value><Code>406</Code><Text>Kingston</Text></Value>
 <Value><Code>407</Code><Text>Makin</Text></Value>
 <Value><Code>408</Code><Text>Mayo</Text></Value>
-<Value><Code>409</Code><Text>Port Adelaide</Text></Value>
+<Value><Code>409</Code><Text>Spence</Text></Value>
 <Value><Code>410</Code><Text>Sturt</Text></Value>
 <Value><Code>411</Code><Text>Wakefield</Text></Value>
 <Value><Code>497</Code><Text>Migratory - Offshore - Shipping (SA)</Text></Value>
@@ -3688,7 +3688,7 @@
 <Value><Code>797</Code><Text>Migratory - Offshore - Shipping (NT)</Text></Value>
 <Value><Code>801</Code><Text>Bean</Text></Value>
 <Value><Code>802</Code><Text>Canberra</Text></Value>
-<Value><Code>802</Code><Text>Fenner</Text></Value>
+<Value><Code>803</Code><Text>Fenner</Text></Value>
 <Value><Code>899</Code><Text>Not Applicable (ACT)</Text></Value>
 <Value><Code>999</Code><Text>Not Applicable</Text></Value>
 </Values></CodeSet>

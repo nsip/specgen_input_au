@@ -222,8 +222,6 @@
 			<WellbeingResponseRefId>E6E34B35-9D75-101A-8C3D-00AA001A1700</WellbeingResponseRefId>
 			<GroupId>Inv0009</GroupId>
 			<PersonRefId SIF_RefObject="StaffPersonal">D3E34B35-9D75-101A-8C3D-00AA001A1652</PersonRefId>
-			<!-- Should you have the school here???
-			<SchoolInfoRefId>CA285746-359D-7510-1A8C-36432A901A16</SchoolInfoRefId>-->
 			<HowInvolved>Reporter</HowInvolved>
 			<FollowUpActionList>
 			 <FollowUpAction>
@@ -240,8 +238,6 @@
 			<OtherPersonId>Not known</OtherPersonId>
 			<OtherPersonContactDetails>Ms Smith, Visitor, 0435 345 678</OtherPersonContactDetails>
 			<PersonRole>Reported Incident to Office</PersonRole>
-			<!-- Should you have the school here???
-			<SchoolInfoRefId>CA285746-359D-7510-1A8C-36432A901A16</SchoolInfoRefId>-->
 		</WellbeingPersonLink>
 	</xhtml:Example>
 
