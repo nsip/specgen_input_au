@@ -110,7 +110,12 @@
       <p>The numeric value representing the bottom scaled score of the National 60% band graphic for this NAP domain and test level.</p>
     </Description>
   </Item>    
-  
+  <Item>   
+    <Element>LocalCodeList</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>High</privacyRating>
+    <Type ref="CommonTypes" name="LocalCodeListType"></Type>
+  </Item>
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>

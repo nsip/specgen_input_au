@@ -89,6 +89,123 @@
 <Value><Code>MCM-24</Code><Text>Turners Syndrome</Text></Value>
 <Value><Code>MCM-25</Code><Text>Velocardiofacial Syndrome</Text></Value>
 <Value><Code>MCM-26</Code><Text>Wolf-Hirschhorn Syndrome</Text></Value>
+<!--Sub Categories Added for 3.4.5 -->
+<Value><Code>MAIM-4</Code><Text>X-Linked agammaglobullinemia</Text></Value>
+<Value><Code>MAO-1</Code><Text>Cough</Text></Value>
+<Value><Code>MAO-2</Code><Text>Eczema</Text></Value>
+<Value><Code>MAO-3</Code><Text>Hay fever</Text></Value>
+<Value><Code>MAO-4</Code><Text>Hives</Text></Value>
+<Value><Code>MAO-5</Code><Text>Other</Text></Value>
+<Value><Code>MAO-6</Code><Text>Rash</Text></Value>
+<Value><Code>MC-1</Code><Text>Bone cancer</Text></Value>
+<Value><Code>MC-2</Code><Text>Brain and/or spinal cord tumours</Text></Value>
+<Value><Code>MC-3</Code><Text>Lymphoblastic leukaemia</Text></Value>
+<Value><Code>MC-4</Code><Text>Neuroblastoma</Text></Value>
+<Value><Code>MC-5</Code><Text>Retinoblastoma</Text></Value>
+<Value><Code>MD-01</Code><Text>Conductive hearing loss</Text></Value>
+<Value><Code>MD-02</Code><Text>Otitis media</Text></Value>
+<Value><Code>MD-03</Code><Text>Perforated ear drum</Text></Value>
+<Value><Code>MD-04</Code><Text>Sensorineural hearing loss</Text></Value>
+<Value><Code>MEM-1</Code><Text>Adrenal insufficiency</Text></Value>
+<Value><Code>MEM-2</Code><Text>Diabetes</Text></Value>
+<Value><Code>MEM-3</Code><Text>Hypopituitarism</Text></Value>
+<Value><Code>MEM-4</Code><Text>Hypothyroidism</Text></Value>
+<Value><Code>MEM-5</Code><Text>Multiple pituitary hormone deficiency</Text></Value>
+<Value><Code>MEM-6</Code><Text>Pan-hypopituitarism</Text></Value>
+<Value><Code>MEM-7</Code><Text>Thyroid</Text></Value>
+<Value><Code>MGI-1</Code><Text>Crohn's disease</Text></Value>
+<Value><Code>MGI-2</Code><Text>Cyclic vomiting syndrome</Text></Value>
+<Value><Code>MGI-3</Code><Text>Diurnal encopresis</Text></Value>
+<Value><Code>MGI-4</Code><Text>Diurnal enuresis</Text></Value>
+<Value><Code>MGI-5</Code><Text>Dumping syndrome</Text></Value>
+<Value><Code>MGI-6</Code><Text>Gastrostomy</Text></Value>
+<Value><Code>MGI-7</Code><Text>Hirschsprung syndrome</Text></Value>
+<Value><Code>MGI-8</Code><Text>Hypospadius</Text></Value>
+<Value><Code>MGI-9</Code><Text>Irritable bowel syndrome</Text></Value>
+<Value><Code>MGI-10</Code><Text>Kidney disorder</Text></Value>
+<Value><Code>MGI-11</Code><Text>Liver disease</Text></Value>
+<Value><Code>MGI-12</Code><Text>Liver transplant</Text></Value>
+<Value><Code>MGI-13</Code><Text>Necrotising enterocolitis</Text></Value>
+<Value><Code>MGI-14</Code><Text>Neurogenic bladder</Text></Value>
+<Value><Code>MGI-15</Code><Text>Neurogenic bowel</Text></Value>
+<Value><Code>MGI-16</Code><Text>Pancreatitis - chronic</Text></Value>
+<Value><Code>MGI-17</Code><Text>Primary sclerosing cholangitis</Text></Value>
+<Value><Code>MGI-18</Code><Text>Reflux</Text></Value>
+<Value><Code>MGI-19</Code><Text>Stomach ulcer</Text></Value>
+<Value><Code>MGI-20</Code><Text>Ulcerative colitis</Text></Value>
+<Value><Code>MH-19</Code><Text>Gender dysphoria</Text></Value>
+<Value><Code>MH-20</Code><Text>Personality Disorder</Text></Value>
+<Value><Code>MMD-01</Code><Text>Hypertensive disease - high blood pressure</Text></Value>
+<Value><Code>MMD-02</Code><Text>Hypotensive disease - low blood pressure</Text></Value>
+<Value><Code>MMD-03</Code><Text>Kawasaki disease</Text></Value>
+<Value><Code>MMD-04</Code><Text>Pulmonary heart disease</Text></Value>
+<Value><Code>MMD-05</Code><Text>Rheumatic heart disease</Text></Value>
+<Value><Code>MMD-06</Code><Text>Tachycardia</Text></Value>
+<Value><Code>MMD-07</Code><Text>Ventricular heart defect</Text></Value>
+<Value><Code>MI-01</Code><Text>Croup</Text></Value>
+<Value><Code>MI-02</Code><Text>Cytomeglovirus</Text></Value>
+<Value><Code>MI-03</Code><Text>Hepatitis</Text></Value>
+<Value><Code>MI-04</Code><Text>HIV/AIDS</Text></Value>
+<Value><Code>MI-05</Code><Text>Meningococcal disease</Text></Value>
+<Value><Code>MI-06</Code><Text>Tuberculosis</Text></Value>
+<Value><Code>MMS-16</Code><Text>Juvenile dermatomyositis</Text></Value>
+<Value><Code>MMS-17</Code><Text>Muscular dystrophy</Text></Value>
+<Value><Code>MND-1</Code><Text>Attention deficit disorder (ADD)</Text></Value>
+<Value><Code>MND-2</Code><Text>Attention deficit hyperactivity disorder (ADHD)</Text></Value>
+<Value><Code>MND-3</Code><Text>Auditory processing disorder</Text></Value>
+<Value><Code>MND-4</Code><Text>Autism</Text></Value>
+<Value><Code>MND-5</Code><Text>DAMP syndrome</Text></Value>
+<Value><Code>MND-6</Code><Text>Diagnosed language disorder</Text></Value>
+<Value><Code>MND-7</Code><Text>Dyscalculia</Text></Value>
+<Value><Code>MND-8</Code><Text>Dysgraphia</Text></Value>
+<Value><Code>MND-9</Code><Text>Dyskinetic movement disorder</Text></Value>
+<Value><Code>MND-10</Code><Text>Dyslexia</Text></Value>
+<Value><Code>MND-11</Code><Text>Dyspraxia</Text></Value>
+<Value><Code>MND-12</Code><Text>Hyperactivity</Text></Value>
+<Value><Code>MND-13</Code><Text>Intellectual disability</Text></Value>
+<Value><Code>MND-14</Code><Text>Selective mutism</Text></Value>
+<Value><Code>MND-15</Code><Text>Sensory processing disorder</Text></Value>
+<Value><Code>MND-16</Code><Text>Smith-Magenis syndrome</Text></Value>
+<Value><Code>MND-17</Code><Text>SLD with impairment in mathematics</Text></Value>
+<Value><Code>MND-18</Code><Text>SLD with impairment in reading</Text></Value>
+<Value><Code>MND-19</Code><Text>SLD with impairment in written expression</Text></Value>
+<Value><Code>MND-20</Code><Text>Verbal dyspraxia</Text></Value>
+<Value><Code>MND-21</Code><Text>Visual processing disorder</Text></Value>
+<Value><Code>MND-22</Code><Text>William's syndrome</Text></Value>
+<Value><Code>MOP-1</Code><Text>Keratoconjunctivitis sicca</Text></Value>
+<Value><Code>MOP-2</Code><Text>Vision impairment</Text></Value>
+<Value><Code>MO-1</Code><Text>Dysphagia</Text></Value>
+<Value><Code>MO-2</Code><Text>Floppy voice box</Text></Value>
+<Value><Code>MO-3</Code><Text>Trachea-oral fistula</Text></Value>
+<Value><Code>MO-4</Code><Text>Tracheobronchomalacia</Text></Value>
+<Value><Code>MO-5</Code><Text>Tracheostomy</Text></Value>
+<Value><Code>MO-6</Code><Text>Tracheostomy fistula</Text></Value>
+<Value><Code>MRD-1</Code><Text>Asthma</Text></Value>
+<Value><Code>MRD-2</Code><Text>Bronchiectasis</Text></Value>
+<Value><Code>MRD-3</Code><Text>Chronic bronchitis</Text></Value>
+<Value><Code>MRD-4</Code><Text>Pallid attack</Text></Value>
+<Value><Code>MRD-5</Code><Text>Pneumonia</Text></Value>
+<Value><Code>Other-1</Code><Text>Granuloma annulare</Text></Value>
+<Value><Code>Other-2</Code><Text>Incontinence - faecal</Text></Value>
+<Value><Code>Other-3</Code><Text>Incontinence - urinary</Text></Value>
+<Value><Code>Other-4</Code><Text>Nosebleed - severe and recurrent</Text></Value>
+<Value><Code>Other</Code><Text>Other</Text></Value>
+<Value><Code>MN-1</Code><Text>Hypotonia</Text></Value>
+<Value><Code>MN-2</Code><Text>Juvenile huntington disease</Text></Value>
+<Value><Code>MN-3</Code><Text>Lipomas of corpus callosum</Text></Value>
+<Value><Code>MN-4</Code><Text>Macrocephaly</Text></Value>
+<Value><Code>MN-5</Code><Text>Microcephaly</Text></Value>
+<Value><Code>MN-6</Code><Text>Migraine - diagnosed</Text></Value>
+<Value><Code>MN-7</Code><Text>Mobius syndrome</Text></Value>
+<Value><Code>MN-8</Code><Text>Narcolepsy</Text></Value>
+<Value><Code>MN-9</Code><Text>PANDAS syndrome</Text></Value>
+<Value><Code>MN-10</Code><Text>Rett syndrome</Text></Value>
+<Value><Code>MN-11</Code><Text>Septo optic dysplasia</Text></Value>
+<Value><Code>MN-12</Code><Text>Shunt</Text></Value>
+<Value><Code>MN-13</Code><Text>Spina bifida</Text></Value>
+<Value><Code>MN-14</Code><Text>Thermoregulation</Text></Value>
+<Value><Code>MN-15</Code><Text>Tuberous sclerosis</Text></Value>
+<Value><Code>MN-16</Code><Text>West syndrome</Text></Value>
 </Values></CodeSet>
  <CodeSet>
       <Intro>
@@ -134,7 +251,6 @@
 		  <Value><Code>AET</Code><Text>Australian Eastern Time	UTC +10:00 / +11:00</Text></Value>
 		  <Value><Code>AWDT</Code><Text>Australian Western Daylight Time	UTC +9</Text></Value>
 		  <Value><Code>AWST</Code><Text>Australian Western Standard Time	UTC +8</Text></Value>
-		  <Value><Code>ACDT</Code><Text>Australian Central Daylight Time	UTC +10:30</Text></Value>
 		  <Value><Code>CXT</Code><Text>Christmas Island Time	UTC +7</Text></Value>
 		  <Value><Code>LHDT</Code><Text>Lord Howe Daylight Time	UTC +11</Text></Value>
 		  <Value><Code>LHST</Code><Text>Lord Howe Standard Time	UTC +10:30</Text></Value>
@@ -828,7 +944,10 @@
 				<Code>119</Code>
 				<Text>Early Class Unexplained</Text>
 			</Value>
-			
+			<Value>
+				<Code>120</Code>
+				<Text>Transport Delay</Text>
+			</Value>
 			<Value>
 				<Code>200</Code>
 				<Text>Medical</Text>
@@ -878,6 +997,14 @@
 				<Text>Bereavement</Text>
 			</Value>
 			<Value>
+				<Code>212</Code>
+				<Text>Family Medical</Text>
+			</Value>
+			<Value>
+				<Code>213</Code>
+				<Text>Therapy Session</Text>
+			</Value>	
+			<Value>
 				<Code>300</Code>
 				<Text>Truancy</Text>
 			</Value>
@@ -893,6 +1020,11 @@
 				<Code>500</Code>
 				<Text>Unexplained</Text>
 			</Value>
+			<Value>
+				<Code>501</Code>
+				<Text>Unexplained and Unjustified</Text>
+			</Value>
+
 			<Value>
 				<Code>600</Code>
 				<Text>Educational</Text>
@@ -973,7 +1105,23 @@
 			<Value>
 				<Code>619</Code>
 				<Text>School-endorsed religious event</Text>
+			</Value>
+			<Value>
+				<Code>620</Code>
+				<Text>Transition Program</Text>
+			</Value>
+			<Value>
+				<Code>621</Code>
+				<Text>Literacy and Numeracy Assessment</Text>
+			</Value>		
+			<Value>
+				<Code>622</Code>
+				<Text>Representative Event</Text>
 			</Value>			
+			<Value>
+				<Code>699</Code>
+				<Text>Educational - further details not available</Text>
+			</Value>				
 			<Value>
 				<Code>700</Code>
 				<Text>Flags</Text>
@@ -1010,6 +1158,10 @@
 				<Code>805</Code>
 				<Text>Religious/Cultural Observance</Text>
 			</Value>
+			<Value>
+				<Code>806</Code>
+				<Text>Sorry Business</Text>
+			</Value>			
 			<Value>
 				<Code>900</Code>
 				<Text>School Choice</Text>
@@ -3375,665 +3527,171 @@
 	</CodeSet>
 	<CodeSet>
 		<Intro>
-			<p>Federal Electorates from the Australian Electoral Commission</p>
+			<p>Federal Electorates from the Australian Electoral Commission; https://www.aec.gov.au/profiles/index.htm, loaded using 2019 electorates from the coding desription of Commonwealth Electoral Divisions, ABS https://www.abs.gov.au/ausstats/abs@.nsf/Lookup/by%20Subject/1270.0.55.003~July%202017~Main%20Features~Commonwealth%20Electoral%20Divisions%20(CEDs)~6</p>
 		</Intro>
 		<ID>Federal Electorate</ID>
-		<Values>
-			<Value>
-				<Code>101</Code>
-				<Text>Banks</Text>
-			</Value>
-			<Value>
-				<Code>102</Code>
-				<Text>Barton</Text>
-			</Value>
-			<Value>
-				<Code>103</Code>
-				<Text>Bennelong</Text>
-			</Value>
-			<Value>
-				<Code>104</Code>
-				<Text>Berowra</Text>
-			</Value>
-			<Value>
-				<Code>105</Code>
-				<Text>Blaxland</Text>
-			</Value>
-			<Value>
-				<Code>106</Code>
-				<Text>Bradfield</Text>
-			</Value>
-			<Value>
-				<Code>107</Code>
-				<Text>Calare</Text>
-			</Value>
-			<Value>
-				<Code>108</Code>
-				<Text>Charlton</Text>
-			</Value>
-			<Value>
-				<Code>109</Code>
-				<Text>Chifley</Text>
-			</Value>
-			<Value>
-				<Code>110</Code>
-				<Text>Cook</Text>
-			</Value>
-			<Value>
-				<Code>111</Code>
-				<Text>Cowper</Text>
-			</Value>
-			<Value>
-				<Code>112</Code>
-				<Text>Cunningham</Text>
-			</Value>
-			<Value>
-				<Code>113</Code>
-				<Text>Dobell</Text>
-			</Value>
-			<Value>
-				<Code>114</Code>
-				<Text>Eden-Monaro</Text>
-			</Value>
-			<Value>
-				<Code>115</Code>
-				<Text>Farrer</Text>
-			</Value>
-			<Value>
-				<Code>116</Code>
-				<Text>Fowler</Text>
-			</Value>
-			<Value>
-				<Code>117</Code>
-				<Text>Gilmore</Text>
-			</Value>
-			<Value>
-				<Code>118</Code>
-				<Text>Grayndler</Text>
-			</Value>
-			<Value>
-				<Code>119</Code>
-				<Text>Greenway</Text>
-			</Value>
-			<Value>
-				<Code>120</Code>
-				<Text>Gwydir (deprecated)</Text>
-			</Value>
-			<Value>
-				<Code>121</Code>
-				<Text>Hughes</Text>
-			</Value>
-			<Value>
-				<Code>122</Code>
-				<Text>Hume</Text>
-			</Value>
-			<Value>
-				<Code>123</Code>
-				<Text>Hunter</Text>
-			</Value>
-			<Value>
-				<Code>124</Code>
-				<Text>Kingsford Smith</Text>
-			</Value>
-			<Value>
-				<Code>125</Code>
-				<Text>Lindsay</Text>
-			</Value>
-			<Value>
-				<Code>126</Code>
-				<Text>Lowe (deprecated)</Text>
-			</Value>
-			<Value>
-				<Code>127</Code>
-				<Text>Lyne</Text>
-			</Value>
-			<Value>
-				<Code>128</Code>
-				<Text>Macarthur</Text>
-			</Value>
-			<Value>
-				<Code>129</Code>
-				<Text>Mackellar</Text>
-			</Value>
-			<Value>
-				<Code>130</Code>
-				<Text>Macquarie</Text>
-			</Value>
-			<Value>
-				<Code>130a</Code>
-				<Text>McMahon</Text>
-			</Value>
-			<Value>
-				<Code>131</Code>
-				<Text>Mitchell</Text>
-			</Value>
-			<Value>
-				<Code>132</Code>
-				<Text>New England</Text>
-			</Value>
-			<Value>
-				<Code>133</Code>
-				<Text>Newcastle</Text>
-			</Value>
-			<Value>
-				<Code>134</Code>
-				<Text>North Sydney</Text>
-			</Value>
-			<Value>
-				<Code>135</Code>
-				<Text>Page</Text>
-			</Value>
-			<Value>
-				<Code>136</Code>
-				<Text>Parkes</Text>
-			</Value>
-			<Value>
-				<Code>137</Code>
-				<Text>Parramatta</Text>
-			</Value>
-			<Value>
-				<Code>138</Code>
-				<Text>Paterson</Text>
-			</Value>
-			<Value>
-				<Code>139</Code>
-				<Text>Prospect (deprecated)</Text>
-			</Value>
-			<Value>
-				<Code>140</Code>
-				<Text>Reid</Text>
-			</Value>
-			<Value>
-				<Code>141</Code>
-				<Text>Richmond</Text>
-			</Value>
-			<Value>
-				<Code>142</Code>
-				<Text>Riverina</Text>
-			</Value>
-			<Value>
-				<Code>143</Code>
-				<Text>Robertson</Text>
-			</Value>
-			<Value>
-				<Code>144</Code>
-				<Text>Shortland</Text>
-			</Value>
-			<Value>
-				<Code>145</Code>
-				<Text>Sydney</Text>
-			</Value>
-			<Value>
-				<Code>146</Code>
-				<Text>Throsby</Text>
-			</Value>
-			<Value>
-				<Code>147</Code>
-				<Text>Warringah</Text>
-			</Value>
-			<Value>
-				<Code>148</Code>
-				<Text>Watson</Text>
-			</Value>
-			<Value>
-				<Code>149</Code>
-				<Text>Wentworth</Text>
-			</Value>
-			<Value>
-				<Code>150</Code>
-				<Text>Werriwa</Text>
-			</Value>
-			<Value>
-				<Code>199</Code>
-				<Text>Not Applicable (NSW)</Text>
-			</Value>
-			<Value>
-				<Code>201</Code>
-				<Text>Aston</Text>
-			</Value>
-			<Value>
-				<Code>202</Code>
-				<Text>Ballarat</Text>
-			</Value>
-			<Value>
-				<Code>203</Code>
-				<Text>Batman</Text>
-			</Value>
-			<Value>
-				<Code>204</Code>
-				<Text>Bendigo</Text>
-			</Value>
-			<Value>
-				<Code>205</Code>
-				<Text>Bruce</Text>
-			</Value>
-			<Value>
-				<Code>206</Code>
-				<Text>Calwell</Text>
-			</Value>
-			<Value>
-				<Code>207</Code>
-				<Text>Casey</Text>
-			</Value>
-			<Value>
-				<Code>208</Code>
-				<Text>Chisholm</Text>
-			</Value>
-			<Value>
-				<Code>209</Code>
-				<Text>Corangamite</Text>
-			</Value>
-			<Value>
-				<Code>210</Code>
-				<Text>Corio</Text>
-			</Value>
-			<Value>
-				<Code>211</Code>
-				<Text>Deakin</Text>
-			</Value>
-			<Value>
-				<Code>212</Code>
-				<Text>Dunkley</Text>
-			</Value>
-			<Value>
-				<Code>213</Code>
-				<Text>Flinders</Text>
-			</Value>
-			<Value>
-				<Code>214</Code>
-				<Text>Gellibrand</Text>
-			</Value>
-			<Value>
-				<Code>215</Code>
-				<Text>Gippsland</Text>
-			</Value>
-			<Value>
-				<Code>216</Code>
-				<Text>Goldstein</Text>
-			</Value>
-			<Value>
-				<Code>217</Code>
-				<Text>Gorton</Text>
-			</Value>
-			<Value>
-				<Code>218</Code>
-				<Text>Higgins</Text>
-			</Value>
-			<Value>
-				<Code>219</Code>
-				<Text>Holt</Text>
-			</Value>
-			<Value>
-				<Code>220</Code>
-				<Text>Hotham</Text>
-			</Value>
-			<Value>
-				<Code>221</Code>
-				<Text>Indi</Text>
-			</Value>
-			<Value>
-				<Code>222</Code>
-				<Text>Isaacs</Text>
-			</Value>
-			<Value>
-				<Code>223</Code>
-				<Text>Jagajaga</Text>
-			</Value>
-			<Value>
-				<Code>224</Code>
-				<Text>Kooyong</Text>
-			</Value>
-			<Value>
-				<Code>225</Code>
-				<Text>La Trobe</Text>
-			</Value>
-			<Value>
-				<Code>226</Code>
-				<Text>Lalor</Text>
-			</Value>
-			<Value>
-				<Code>227</Code>
-				<Text>Mallee</Text>
-			</Value>
-			<Value>
-				<Code>228</Code>
-				<Text>Maribyrnong</Text>
-			</Value>
-			<Value>
-				<Code>229</Code>
-				<Text>McEwen</Text>
-			</Value>
-			<Value>
-				<Code>230</Code>
-				<Text>McMillan</Text>
-			</Value>
-			<Value>
-				<Code>231</Code>
-				<Text>Melbourne</Text>
-			</Value>
-			<Value>
-				<Code>232</Code>
-				<Text>Melbourne Ports</Text>
-			</Value>
-			<Value>
-				<Code>233</Code>
-				<Text>Menzies</Text>
-			</Value>
-			<Value>
-				<Code>234</Code>
-				<Text>Murray</Text>
-			</Value>
-			<Value>
-				<Code>235</Code>
-				<Text>Scullin</Text>
-			</Value>
-			<Value>
-				<Code>236</Code>
-				<Text>Wannon</Text>
-			</Value>
-			<Value>
-				<Code>237</Code>
-				<Text>Wills</Text>
-			</Value>
-			<Value>
-				<Code>299</Code>
-				<Text>Not Applicable (VIC)</Text>
-			</Value>
-			<Value>
-				<Code>301</Code>
-				<Text>Blair</Text>
-			</Value>
-			<Value>
-				<Code>302</Code>
-				<Text>Bonner</Text>
-			</Value>
-			<Value>
-				<Code>303</Code>
-				<Text>Bowman</Text>
-			</Value>
-			<Value>
-				<Code>304</Code>
-				<Text>Brisbane</Text>
-			</Value>
-			<Value>
-				<Code>305</Code>
-				<Text>Capricornia</Text>
-			</Value>
-			<Value>
-				<Code>306</Code>
-				<Text>Dawson</Text>
-			</Value>
-			<Value>
-				<Code>307</Code>
-				<Text>Dickson</Text>
-			</Value>
-			<Value>
-				<Code>308</Code>
-				<Text>Fadden</Text>
-			</Value>
-			<Value>
-				<Code>309</Code>
-				<Text>Fairfax</Text>
-			</Value>
-			<Value>
-				<Code>310</Code>
-				<Text>Fisher</Text>
-			</Value>
-			<Value>
-				<Code>310a</Code>
-				<Text>Flynn</Text>
-			</Value>
-			<Value>
-				<Code>311</Code>
-				<Text>Forde</Text>
-			</Value>
-			<Value>
-				<Code>312</Code>
-				<Text>Griffith</Text>
-			</Value>
-			<Value>
-				<Code>313</Code>
-				<Text>Groom</Text>
-			</Value>
-			<Value>
-				<Code>314</Code>
-				<Text>Herbert</Text>
-			</Value>
-			<Value>
-				<Code>315</Code>
-				<Text>Hinkler</Text>
-			</Value>
-			<Value>
-				<Code>316</Code>
-				<Text>Kennedy</Text>
-			</Value>
-			<Value>
-				<Code>317</Code>
-				<Text>Leichhardt</Text>
-			</Value>
-			<Value>
-				<Code>318</Code>
-				<Text>Lilley</Text>
-			</Value>
-			<Value>
-				<Code>319</Code>
-				<Text>Longman</Text>
-			</Value>
-			<Value>
-				<Code>320</Code>
-				<Text>Maranoa</Text>
-			</Value>
-			<Value>
-				<Code>321</Code>
-				<Text>McPherson</Text>
-			</Value>
-			<Value>
-				<Code>322</Code>
-				<Text>Moncrieff</Text>
-			</Value>
-			<Value>
-				<Code>323</Code>
-				<Text>Moreton</Text>
-			</Value>
-			<Value>
-				<Code>324</Code>
-				<Text>Oxley</Text>
-			</Value>
-			<Value>
-				<Code>325</Code>
-				<Text>Petrie</Text>
-			</Value>
-			<Value>
-				<Code>326</Code>
-				<Text>Rankin</Text>
-			</Value>
-			<Value>
-				<Code>327</Code>
-				<Text>Ryan</Text>
-			</Value>
-			<Value>
-				<Code>328</Code>
-				<Text>Wide Bay</Text>
-			</Value>
-			<Value>
-				<Code>328a</Code>
-				<Text>Wright</Text>
-			</Value>
-			<Value>
-				<Code>399</Code>
-				<Text>Not Applicable (QLD)</Text>
-			</Value>
-			<Value>
-				<Code>401</Code>
-				<Text>Adelaide</Text>
-			</Value>
-			<Value>
-				<Code>402</Code>
-				<Text>Barker</Text>
-			</Value>
-			<Value>
-				<Code>403</Code>
-				<Text>Boothby</Text>
-			</Value>
-			<Value>
-				<Code>404</Code>
-				<Text>Grey</Text>
-			</Value>
-			<Value>
-				<Code>405</Code>
-				<Text>Hindmarsh</Text>
-			</Value>
-			<Value>
-				<Code>406</Code>
-				<Text>Kingston</Text>
-			</Value>
-			<Value>
-				<Code>407</Code>
-				<Text>Makin</Text>
-			</Value>
-			<Value>
-				<Code>408</Code>
-				<Text>Mayo</Text>
-			</Value>
-			<Value>
-				<Code>409</Code>
-				<Text>Port Adelaide</Text>
-			</Value>
-			<Value>
-				<Code>410</Code>
-				<Text>Sturt</Text>
-			</Value>
-			<Value>
-				<Code>411</Code>
-				<Text>Wakefield</Text>
-			</Value>
-			<Value>
-				<Code>499</Code>
-				<Text>Not Applicable (SA)</Text>
-			</Value>
-			<Value>
-				<Code>501</Code>
-				<Text>Brand</Text>
-			</Value>
-			<Value>
-				<Code>502</Code>
-				<Text>Canning</Text>
-			</Value>
-			<Value>
-				<Code>503</Code>
-				<Text>Cowan</Text>
-			</Value>
-			<Value>
-				<Code>504</Code>
-				<Text>Curtin</Text>
-			</Value>
-			<Value>
-				<Code>504a</Code>
-				<Text>Durack</Text>
-			</Value>
-			<Value>
-				<Code>505</Code>
-				<Text>Forrest</Text>
-			</Value>
-			<Value>
-				<Code>506</Code>
-				<Text>Fremantle</Text>
-			</Value>
-			<Value>
-				<Code>507</Code>
-				<Text>Hasluck</Text>
-			</Value>
-			<Value>
-				<Code>508</Code>
-				<Text>Kalgoorlie (deprecated)</Text>
-			</Value>
-			<Value>
-				<Code>509</Code>
-				<Text>Moore</Text>
-			</Value>
-			<Value>
-				<Code>510</Code>
-				<Text>O'Connor</Text>
-			</Value>
-			<Value>
-				<Code>511</Code>
-				<Text>Pearce</Text>
-			</Value>
-			<Value>
-				<Code>512</Code>
-				<Text>Perth</Text>
-			</Value>
-			<Value>
-				<Code>513</Code>
-				<Text>Stirling</Text>
-			</Value>
-			<Value>
-				<Code>514</Code>
-				<Text>Swan</Text>
-			</Value>
-			<Value>
-				<Code>515</Code>
-				<Text>Tangney</Text>
-			</Value>
-			<Value>
-				<Code>599</Code>
-				<Text>Not Applicable (WA)</Text>
-			</Value>
-			<Value>
-				<Code>601</Code>
-				<Text>Bass</Text>
-			</Value>
-			<Value>
-				<Code>602</Code>
-				<Text>Braddon</Text>
-			</Value>
-			<Value>
-				<Code>603</Code>
-				<Text>Denison</Text>
-			</Value>
-			<Value>
-				<Code>604</Code>
-				<Text>Franklin</Text>
-			</Value>
-			<Value>
-				<Code>605</Code>
-				<Text>Lyons</Text>
-			</Value>
-			<Value>
-				<Code>699</Code>
-				<Text>Not Applicable (TAS)</Text>
-			</Value>
-			<Value>
-				<Code>701</Code>
-				<Text>Lingiari</Text>
-			</Value>
-			<Value>
-				<Code>702</Code>
-				<Text>Solomon</Text>
-			</Value>
-			<Value>
-				<Code>799</Code>
-				<Text>Not Applicable (NT)</Text>
-			</Value>
-			<Value>
-				<Code>801</Code>
-				<Text>Canberra</Text>
-			</Value>
-			<Value>
-				<Code>802</Code>
-				<Text>Fraser</Text>
-			</Value>
-			<Value>
-				<Code>899</Code>
-				<Text>Not Applicable (ACT)</Text>
-			</Value>
-			<Value>
-				<Code>999</Code>
-				<Text>Not Applicable</Text>
-			</Value>
-		 
-		</Values>
-	</CodeSet>
+       <Values><Value><Code>101</Code><Text>Banks</Text></Value>
+<Value><Code>102</Code><Text>Barton</Text></Value>
+<Value><Code>103</Code><Text>Bennelong</Text></Value>
+<Value><Code>104</Code><Text>Berowra</Text></Value>
+<Value><Code>105</Code><Text>Blaxland</Text></Value>
+<Value><Code>106</Code><Text>Bradfield</Text></Value>
+<Value><Code>107</Code><Text>Calare</Text></Value>
+<Value><Code>108</Code><Text>Chifley</Text></Value>
+<Value><Code>109</Code><Text>Cook</Text></Value>
+<Value><Code>110</Code><Text>Cowper</Text></Value>
+<Value><Code>111</Code><Text>Cunningham</Text></Value>
+<Value><Code>112</Code><Text>Dobell</Text></Value>
+<Value><Code>113</Code><Text>Eden-Monaro</Text></Value>
+<Value><Code>114</Code><Text>Farrer</Text></Value>
+<Value><Code>115</Code><Text>Fowler</Text></Value>
+<Value><Code>116</Code><Text>Gilmore</Text></Value>
+<Value><Code>117</Code><Text>Grayndler</Text></Value>
+<Value><Code>118</Code><Text>Greenway</Text></Value>
+<Value><Code>119</Code><Text>Hughes</Text></Value>
+<Value><Code>120</Code><Text>Hume</Text></Value>
+<Value><Code>121</Code><Text>Hunter</Text></Value>
+<Value><Code>122</Code><Text>Kingsford Smith</Text></Value>
+<Value><Code>123</Code><Text>Lindsay</Text></Value>
+<Value><Code>124</Code><Text>Lyne</Text></Value>
+<Value><Code>125</Code><Text>Macarthur</Text></Value>
+<Value><Code>126</Code><Text>Mackellar</Text></Value>
+<Value><Code>127</Code><Text>Macquarie</Text></Value>
+<Value><Code>128</Code><Text>McMahon</Text></Value>
+<Value><Code>129</Code><Text>Mitchell</Text></Value>
+<Value><Code>130</Code><Text>New England</Text></Value>
+<Value><Code>131</Code><Text>Newcastle</Text></Value>
+<Value><Code>132</Code><Text>North Sydney</Text></Value>
+<Value><Code>133</Code><Text>Page</Text></Value>
+<Value><Code>134</Code><Text>Parkes</Text></Value>
+<Value><Code>135</Code><Text>Parramatta</Text></Value>
+<Value><Code>136</Code><Text>Paterson</Text></Value>
+<Value><Code>137</Code><Text>Reid</Text></Value>
+<Value><Code>138</Code><Text>Richmond</Text></Value>
+<Value><Code>139</Code><Text>Riverina</Text></Value>
+<Value><Code>140</Code><Text>Robertson</Text></Value>
+<Value><Code>141</Code><Text>Shortland</Text></Value>
+<Value><Code>142</Code><Text>Sydney</Text></Value>
+<Value><Code>143</Code><Text>Warringah</Text></Value>
+<Value><Code>144</Code><Text>Watson</Text></Value>
+<Value><Code>145</Code><Text>Wentworth</Text></Value>
+<Value><Code>146</Code><Text>Werriwa</Text></Value>
+<Value><Code>147</Code><Text>Whitlam</Text></Value>
+<Value><Code>197</Code><Text>Migratory - Offshore - Shipping (NSW)</Text></Value>
+<Value><Code>201</Code><Text>Aston</Text></Value>
+<Value><Code>202</Code><Text>Ballarat</Text></Value>
+<Value><Code>203</Code><Text>Bendigo</Text></Value>
+<Value><Code>204</Code><Text>Bruce</Text></Value>
+<Value><Code>205</Code><Text>Calwell</Text></Value>
+<Value><Code>206</Code><Text>Casey</Text></Value>
+<Value><Code>207</Code><Text>Chisholm</Text></Value>
+<Value><Code>208</Code><Text>Cooper</Text></Value>
+<Value><Code>209</Code><Text>Corangamite</Text></Value>
+<Value><Code>210</Code><Text>Corio</Text></Value>
+<Value><Code>211</Code><Text>Deakin</Text></Value>
+<Value><Code>212</Code><Text>Dunkley</Text></Value>
+<Value><Code>213</Code><Text>Flinders</Text></Value>
+<Value><Code>214</Code><Text>Fraser</Text></Value>
+<Value><Code>215</Code><Text>Gellibrand</Text></Value>
+<Value><Code>216</Code><Text>Gippsland</Text></Value>
+<Value><Code>217</Code><Text>Goldstein</Text></Value>
+<Value><Code>218</Code><Text>Gorton</Text></Value>
+<Value><Code>219</Code><Text>Higgins</Text></Value>
+<Value><Code>220</Code><Text>Holt</Text></Value>
+<Value><Code>221</Code><Text>Hotham</Text></Value>
+<Value><Code>222</Code><Text>Indi</Text></Value>
+<Value><Code>223</Code><Text>Isaacs</Text></Value>
+<Value><Code>224</Code><Text>Jagajaga</Text></Value>
+<Value><Code>225</Code><Text>Kooyong</Text></Value>
+<Value><Code>226</Code><Text>Lalor</Text></Value>
+<Value><Code>227</Code><Text>La Trobe</Text></Value>
+<Value><Code>228</Code><Text>Macnamara</Text></Value>
+<Value><Code>229</Code><Text>Mallee</Text></Value>
+<Value><Code>230</Code><Text>Maribyrnong</Text></Value>
+<Value><Code>231</Code><Text>McEwen</Text></Value>
+<Value><Code>232</Code><Text>Melbourne</Text></Value>
+<Value><Code>233</Code><Text>Menzies</Text></Value>
+<Value><Code>234</Code><Text>Monash</Text></Value>
+<Value><Code>235</Code><Text>Nicholls</Text></Value>
+<Value><Code>236</Code><Text>Scullin</Text></Value>
+<Value><Code>237</Code><Text>Wannon</Text></Value>
+<Value><Code>238</Code><Text>Wills</Text></Value>
+<Value><Code>297</Code><Text>Migratory - Offshore - Shipping (Vic.)</Text></Value>
+<Value><Code>301</Code><Text>Blair</Text></Value>
+<Value><Code>302</Code><Text>Bonner</Text></Value>
+<Value><Code>303</Code><Text>Bowman</Text></Value>
+<Value><Code>304</Code><Text>Brisbane</Text></Value>
+<Value><Code>305</Code><Text>Capricornia</Text></Value>
+<Value><Code>306</Code><Text>Dawson</Text></Value>
+<Value><Code>307</Code><Text>Dickson</Text></Value>
+<Value><Code>308</Code><Text>Fadden</Text></Value>
+<Value><Code>309</Code><Text>Fairfax</Text></Value>
+<Value><Code>310</Code><Text>Fisher</Text></Value>
+<Value><Code>311</Code><Text>Flynn</Text></Value>
+<Value><Code>312</Code><Text>Forde</Text></Value>
+<Value><Code>313</Code><Text>Griffith</Text></Value>
+<Value><Code>314</Code><Text>Groom</Text></Value>
+<Value><Code>315</Code><Text>Herbert</Text></Value>
+<Value><Code>316</Code><Text>Hinkler</Text></Value>
+<Value><Code>317</Code><Text>Kennedy</Text></Value>
+<Value><Code>318</Code><Text>Leichhardt</Text></Value>
+<Value><Code>319</Code><Text>Lilley</Text></Value>
+<Value><Code>320</Code><Text>Longman</Text></Value>
+<Value><Code>321</Code><Text>Maranoa</Text></Value>
+<Value><Code>322</Code><Text>McPherson</Text></Value>
+<Value><Code>323</Code><Text>Moncrieff</Text></Value>
+<Value><Code>324</Code><Text>Moreton</Text></Value>
+<Value><Code>325</Code><Text>Oxley</Text></Value>
+<Value><Code>326</Code><Text>Petrie</Text></Value>
+<Value><Code>327</Code><Text>Rankin</Text></Value>
+<Value><Code>328</Code><Text>Ryan</Text></Value>
+<Value><Code>329</Code><Text>Wide Bay</Text></Value>
+<Value><Code>330</Code><Text>Wright</Text></Value>
+<Value><Code>397</Code><Text>Migratory - Offshore - Shipping (Qld)</Text></Value>
+<Value><Code>401</Code><Text>Adelaide</Text></Value>
+<Value><Code>402</Code><Text>Barker</Text></Value>
+<Value><Code>403</Code><Text>Boothby</Text></Value>
+<Value><Code>404</Code><Text>Grey</Text></Value>
+<Value><Code>405</Code><Text>Hindmarsh</Text></Value>
+<Value><Code>406</Code><Text>Kingston</Text></Value>
+<Value><Code>407</Code><Text>Makin</Text></Value>
+<Value><Code>408</Code><Text>Mayo</Text></Value>
+<Value><Code>409</Code><Text>Spence</Text></Value>
+<Value><Code>410</Code><Text>Sturt</Text></Value>
+<Value><Code>411</Code><Text>Wakefield</Text></Value>
+<Value><Code>497</Code><Text>Migratory - Offshore - Shipping (SA)</Text></Value>
+<Value><Code>501</Code><Text>Brand</Text></Value>
+<Value><Code>502</Code><Text>Burt</Text></Value>
+<Value><Code>503</Code><Text>Canning</Text></Value>
+<Value><Code>504</Code><Text>Cowan</Text></Value>
+<Value><Code>505</Code><Text>Curtin</Text></Value>
+<Value><Code>506</Code><Text>Durack</Text></Value>
+<Value><Code>507</Code><Text>Forrest</Text></Value>
+<Value><Code>508</Code><Text>Fremantle</Text></Value>
+<Value><Code>509</Code><Text>Hasluck</Text></Value>
+<Value><Code>510</Code><Text>Moore</Text></Value>
+<Value><Code>511</Code><Text>O'Connor</Text></Value>
+<Value><Code>512</Code><Text>Pearce</Text></Value>
+<Value><Code>513</Code><Text>Perth</Text></Value>
+<Value><Code>514</Code><Text>Stirling</Text></Value>
+<Value><Code>515</Code><Text>Swan</Text></Value>
+<Value><Code>516</Code><Text>Tangney</Text></Value>
+<Value><Code>597</Code><Text>Migratory - Offshore - Shipping (WA)</Text></Value>
+<Value><Code>601</Code><Text>Bass</Text></Value>
+<Value><Code>602</Code><Text>Braddon</Text></Value>
+<Value><Code>603</Code><Text>Clark</Text></Value>
+<Value><Code>604</Code><Text>Franklin</Text></Value>
+<Value><Code>605</Code><Text>Lyons</Text></Value>
+<Value><Code>697</Code><Text>Migratory - Offshore - Shipping (Tas.)</Text></Value>
+<Value><Code>701</Code><Text>Lingiari</Text></Value>
+<Value><Code>702</Code><Text>Solomon</Text></Value>
+<Value><Code>797</Code><Text>Migratory - Offshore - Shipping (NT)</Text></Value>
+<Value><Code>801</Code><Text>Bean</Text></Value>
+<Value><Code>802</Code><Text>Canberra</Text></Value>
+<Value><Code>803</Code><Text>Fenner</Text></Value>
+<Value><Code>899</Code><Text>Not Applicable (ACT)</Text></Value>
+<Value><Code>999</Code><Text>Not Applicable</Text></Value>
+</Values></CodeSet>
 	<CodeSet>
 		<Intro>
 			<p>Sourced from DEEWR</p>
@@ -7172,6 +6830,7 @@
 <Value><Code>861</Code><Text>Skilled - Onshore Independent New Zealand Citizen (No longer issued)</Text></Value>
 <Value><Code>862</Code><Text>Skilled Australian-sponsored New Zealand Citizen (No longer issued)</Text></Value>
 <Value><Code>863</Code><Text>Skilled Designated Area-sponsored New Zealand Citizen (No longer issued)</Text></Value>
+<Value><Code>870</Code><Text>Sponsored Parent (Temporary)</Text></Value>
 <Value><Code>880</Code><Text>Skilled - Independent Overseas Student (No longer issued)</Text></Value>
 <Value><Code>881</Code><Text>Skilled - Australian-sponsored Overseas Student (No longer issued)</Text></Value>
 <Value><Code>882</Code><Text>Skilled - Designated Area-sponsored Overseas Student (No longer issued)</Text></Value>
@@ -7222,7 +6881,7 @@
 <Value><Code>202</Code><Text>Global Special Humanitarian</Text></Value>
 <Value><Code>203</Code><Text>Emergency Rescue</Text></Value>
 <Value><Code>204</Code><Text>Woman at Risk</Text></Value>
-<Value><Code>205</Code><Text>Camp Clearance</Text></Value>
+<Value><Code>205</Code><Text>Camp Clearance (No longer Issued)</Text></Value>
 <Value><Code>300</Code><Text>Prospective Marriage visa</Text></Value>
 <Value><Code>309</Code><Text>Partner (Provisional) visa</Text></Value>
 <Value><Code>400</Code><Text>Temporary Work (Short Stay Specialist) visa</Text></Value>
@@ -8977,6 +8636,10 @@
 				<Text>Primary Teacher</Text>
 			</Value>
 			<Value>
+				<Code>1107</Code> 
+				<Text>Primary/Secondary Combined Teacher</Text>
+			</Value>
+			<Value>
 				<Code>1204</Code>
 				<Text>Guidance Officer</Text>
 			</Value>
@@ -9774,7 +9437,14 @@
 				<Code>O</Code>
 				<Text>On Leave</Text>
 			</Value>
-			 
+			<Value>
+				<Code>N</Code>
+				<Text>No Longer Employed</Text>
+			</Value>
+			<Value>
+				<Code>X</Code>
+				<Text>Other - Details Not Available</Text>
+			</Value> 
 		</Values>
 	</CodeSet>
 	<CodeSet>
@@ -10127,4 +9797,60 @@
 			</Value>
 		</Values>
 	</CodeSet>
+	<CodeSet>
+		<Intro>
+			<p>Education Level - Primary or Secondary, Associated with AG Student Collections</p>
+		</Intro>
+		<ID>Education Level</ID>
+		<Values>
+			<Value>
+				<Code>Primary</Code>
+				<Text>Primary</Text>
+			</Value>
+			<Value>
+				<Code>Secondary</Code>
+				<Text>Secondary</Text>
+			</Value>
+		</Values>
+	</CodeSet>		
+	<CodeSet>
+		<Intro>
+			<p>Pre-Primary Education Hours</p>
+		</Intro>
+		<ID>Pre Primary Hours</ID>
+		<Values>
+			<Value>
+				<Code>U</Code>
+				<Text>Unknown or Not Provided</Text>
+			</Value>
+			<Value>
+				<Code>O</Code>
+				<Text>Other - not elsewhere classified</Text>
+			</Value>
+			<Value>
+				<Code>P</Code>
+				<Text>Part Time</Text>
+			</Value>
+			<Value>
+				<Code>F</Code>
+				<Text>Full Time</Text>
+			</Value>
+		</Values>
+	</CodeSet>
+	<CodeSet>
+		<Intro>
+			<p>Student Boarding Status</p>
+		</Intro>
+		<ID>Boarding</ID>
+		<Values>
+			<Value>
+				<Code>B</Code>
+				<Text>Boarding Student</Text>
+			</Value>
+			<Value>
+				<Code>D</Code>
+				<Text>Day Student</Text>
+			</Value>
+		</Values>
+	</CodeSet>				
 </Grouping>

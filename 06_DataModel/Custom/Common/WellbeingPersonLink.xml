@@ -1,0 +1,244 @@
+<DataObject name="WellbeingPersonLink" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen">
+	<Key>@RefId</Key>
+	<EventsReported>true</EventsReported>
+	<Item>
+		<Element>WellbeingPersonLink</Element>
+		<privacyRating>High</privacyRating>
+		<Description>
+			<p>Object intended to list one or more groups of involved parties to a WellbeingEvent and optionally a WellbeingResponse, when the primary involvement in that event is not restricted to a single student. Groups are identified through the GroupId element, whose value is repeated for a WellbeingPersonLink instance for each member of that group. Participants are not restricted to being students, and can be staff, student contacts, or other third parties.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Attribute>RefId</Attribute>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The ID (GUID) assigned to uniquely identify this WellbeingPersonLink.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RefIdType"/>
+		
+	</Item>
+	<Item>
+		<Element>WellbeingEventRefId</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The ID (GUID) assigned to identify this Event that this object links to.</p>
+		</Description>
+		<Type ref="CommonTypes" name="IdRefType"/>
+		
+	</Item>
+	<Item>
+		<Element>WellbeingResponseRefId</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The ID (GUID) assigned to identify a Response that this object maybe linked to.</p>
+		</Description>
+		<Type ref="CommonTypes" name="IdRefType"/>
+	</Item>
+	<Item>
+		<Element>GroupId</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>An identifier of the group involved.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalId"/>
+	</Item>
+	<!--
+	<Item>
+		<Element>GroupRole</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The Role of the Group in the Event.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>	
+	<Item>
+		<Element>StudentPersonalRefId</Element>
+		<Characteristics>C</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+			<p>If this Link is to a student, this is the StudentPersonal record to which it links.</p>
+		</Description>
+		<Type ref="CommonTypes" name="IdRefType"/>
+	</Item>
+	<Item>
+		<Element>StaffPersonalRefId</Element>
+		<Characteristics>C</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+			<p>If this Link is to a staff member, this is the StaffPersonal record to which it links.</p>
+		</Description>
+		<Type ref="CommonTypes" name="IdRefType"/>
+	</Item>
+	<Item>
+		<Element>StudentContactPersonalRefId</Element>
+		<Characteristics>C</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+			<p>If this Link is to a student parent or contact, this is the StudentContactPersonal record to which it links.</p>
+		</Description>
+		<Type ref="CommonTypes" name="IdRefType"/>
+	</Item>
+-->
+  	<Item>
+  	   	<Element>PersonRefId</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+		  <p>The RefId of the Person involved in the event, can be supplied if the Person is already a staff, student or student contact. </p>
+		</Description>
+		<Type ref="CommonTypes" name="IdRefType"></Type>
+  	</Item>
+  	  <Item>
+    <Attribute>SIF_RefObject</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>
+        The type of SIF object that the <code>PersonRefId</code> attribute identifies.
+      </p>
+    </Description>
+    <Values>
+      <Value>
+        <Code>StudentPersonal</Code>
+      </Value>
+      <Value>
+        <Code>StaffPersonal</Code>
+      </Value>
+      <Value>
+        <Code>StudentContactPersonal</Code>
+      </Value>
+    </Values>
+  </Item>
+  
+  <Item>
+  	   	<Element>ShortName</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+		  <p>Optional free text name for a person, usually only used where the person does not have a personal record with a RefId e.g Is not represented in a StudentPersonal, StaffPersonal or StudentContactPersonal object.</p>
+		</Description>
+		<Type name="xs:string"></Type>  
+  	</Item>
+  	
+  	<Item>
+  	   	<Element>HowInvolved</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+		  <p>Optional free text detailing involvement.</p>
+		</Description>
+		<Type name="xs:string"></Type>  
+  	</Item>
+	<Item>
+		<Element>OtherPersonId</Element>
+		<Characteristics>C</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+			<p>If this Link is to a person who does not have a Personal Object, this is a LocalId or another identifier.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalId"/>
+	</Item>
+	<Item>
+		<Element>OtherPersonContactDetails</Element>
+		<Characteristics>C</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+			<p>If this Link is to a person who does not have a Personal Object, this is a more details about that person.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>PersonRole</Element>
+		<Characteristics>C</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+			<p>If this Link is to a person who does not have a Personal Object, this is a more details about that person.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>FollowUpActionList</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+			<p>List of Actions where an action resulted and is known.  This action list is added here in case follow up actions are specific to a member of the group.</p>
+		</Description>
+		<Type ref="CommonTypes" name="FollowUpActionListType"/>
+	</Item>
+	<Item>   
+		<Element>LocalCodeList</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Type ref="CommonTypes" name="LocalCodeListType"></Type>
+	</Item>
+	<Item>
+		<Element>SIF_Metadata</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Type ref="CommonTypes" name="SIF_MetadataType"/>
+	</Item>
+	<Item>
+		<Element>SIF_ExtendedElements</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
+	</Item>
+	<xhtml:Example xmlns="" name="WellbeingPersonLink">
+		<WellbeingPersonLink RefId="2FFB63B4-CFEF-4820-8501-E7D1E54555CB">
+			<WellbeingEventRefId>D3E34B35-9D75-101A-8C3D-00AA001A1688</WellbeingEventRefId>
+			<WellbeingResponseRefId>E6E34B35-9D75-101A-8C3D-00AA001A1700</WellbeingResponseRefId>
+			<GroupId>Inv0009</GroupId>
+			<PersonRefId SIF_RefObject="StudentPersonal">D3E34B35-9D75-101A-8C3D-00AA001A1652</PersonRefId>
+			<!-- Should you have the school here???
+			<SchoolInfoRefId>CA285746-359D-7510-1A8C-36432A901A16</SchoolInfoRefId>-->
+			<HowInvolved>Victim</HowInvolved>
+			<FollowUpActionList>
+			 <FollowUpAction>
+				 <FollowUpDetails>Parent's notified</FollowUpDetails>
+			 </FollowUpAction>
+			</FollowUpActionList>
+		</WellbeingPersonLink>
+	</xhtml:Example>
+	<xhtml:Example xmlns="" name="WellbeingPersonLink2">
+		<WellbeingPersonLink RefId="2FFB63B4-CFEF-4820-8501-E7D1E54555CB">
+			<WellbeingEventRefId>D3E34B35-9D75-101A-8C3D-00AA001A1688</WellbeingEventRefId>
+			<WellbeingResponseRefId>E6E34B35-9D75-101A-8C3D-00AA001A1700</WellbeingResponseRefId>
+			<GroupId>Inv0009</GroupId>
+			<PersonRefId SIF_RefObject="StudentPersonal">D3E34B35-9D75-101A-8C3D-00AA001A1652</PersonRefId>
+			<!-- Should you have the school here???
+			<SchoolInfoRefId>CA285746-359D-7510-1A8C-36432A901A16</SchoolInfoRefId>-->
+			<HowInvolved>Instigator</HowInvolved>
+			<FollowUpActionList>
+			 <FollowUpAction>
+				 <FollowUpDetails>Parent's notified</FollowUpDetails>
+			 </FollowUpAction>
+			</FollowUpActionList>
+		</WellbeingPersonLink>
+	</xhtml:Example>	
+	<xhtml:Example xmlns="" name="WellbeingPersonLink3">
+		<WellbeingPersonLink RefId="2FFB63B4-CFEF-4820-8501-E7D1E54555CB">
+			<WellbeingEventRefId>D3E34B35-9D75-101A-8C3D-00AA001A1688</WellbeingEventRefId>
+			<WellbeingResponseRefId>E6E34B35-9D75-101A-8C3D-00AA001A1700</WellbeingResponseRefId>
+			<GroupId>Inv0009</GroupId>
+			<PersonRefId SIF_RefObject="StaffPersonal">D3E34B35-9D75-101A-8C3D-00AA001A1652</PersonRefId>
+			<HowInvolved>Reporter</HowInvolved>
+			<FollowUpActionList>
+			 <FollowUpAction>
+				 <FollowUpDetails>Event Logged</FollowUpDetails>
+			 </FollowUpAction>
+			</FollowUpActionList>
+		</WellbeingPersonLink>
+	</xhtml:Example>
+	<xhtml:Example xmlns="" name="WellbeingPersonLink4">
+		<WellbeingPersonLink RefId="2FFB63B4-CFEF-4820-8501-E7D1E54555CB">
+			<WellbeingEventRefId>D3E34B35-9D75-101A-8C3D-00AA001A1688</WellbeingEventRefId>
+			<WellbeingResponseRefId>E6E34B35-9D75-101A-8C3D-00AA001A1700</WellbeingResponseRefId>
+			<GroupId>Inv0009</GroupId>
+			<OtherPersonId>Not known</OtherPersonId>
+			<OtherPersonContactDetails>Ms Smith, Visitor, 0435 345 678</OtherPersonContactDetails>
+			<PersonRole>Reported Incident to Office</PersonRole>
+		</WellbeingPersonLink>
+	</xhtml:Example>
+
+</DataObject>		

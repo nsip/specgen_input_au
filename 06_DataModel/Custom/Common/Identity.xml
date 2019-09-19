@@ -121,17 +121,26 @@
     <Type ref='CommonTypes' name='IdRefType'/>
   </Item>
   <Item>
+		<Element>LocalCodeList</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+			<p>A list of local values important to transmit with this object.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalCodeListType"/>
+  </Item>
+  <Item>
     <Element>SIF_Metadata</Element>
     <Description></Description>
     <Characteristics>O</Characteristics>
-    <privacyRating>Low</privacyRating>
+    <privacyRating>High</privacyRating>
     <Type ref="CommonTypes" name="SIF_MetadataType"/>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Description></Description>
     <Characteristics>O</Characteristics>
-    <Description>Low</Description>
+    <privacyRating>High</privacyRating>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
   <xhtml:Example xmlns="" name='Identity published by an Access Federation Shibboleth Provider'>
@@ -153,7 +162,19 @@
         <IdentityAssertion SchemaName="userPrincipalName">user01@asdf.edu.au</IdentityAssertion>
         <IdentityAssertion SchemaName="distinguishedName">cn=User01,cn=Users,dc=org</IdentityAssertion>
       </IdentityAssertions>
+      <PasswordList>
+		  <Password Algorithm="SHA1" KeyName=" ">UGFzc3cwcmQ=</Password>
+      </PasswordList>
       <AuthenticationSourceGlobalUID>23A08571-E4D6-45C3-B82A-3E52E5349925</AuthenticationSourceGlobalUID>
+    
+    <LocalCodeList>
+		<LocalCode>
+		   <LocalisedCode>SHA-256</LocalisedCode>
+		   <Description>This is the algorithm to use here.</Description>
+		   <Element> PasswordList/Password[1]/@Algorithm</Element>
+		   <ListIndex>1</ListIndex> 
+    </LocalCode>
+    </LocalCodeList>
     </Identity>
   </xhtml:Example>
   <xhtml:Example xmlns="" name="Identity published by an OpenID provider">

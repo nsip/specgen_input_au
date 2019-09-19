@@ -141,6 +141,16 @@
     <Type name="xs:string"></Type>
   </Item>
   
+  <Item>
+    <Element>SymptomList</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
+    <Description>
+      <p>List any symptoms that are deemed necessary to record; e.g. Symptoms of Asthma could be a cough or wheeze etc.</p>
+    </Description>
+     <Type ref="CommonTypes" name="SymptomListType"></Type>
+  </Item>
+  
     <Item>
     <Element>DailyManagement</Element>
     <Characteristics>O</Characteristics>
@@ -219,6 +229,12 @@
       <p>Describes the Location of any associated documents kept in relation to this Characteristic.</p>
     </Description>
      <Type ref="CommonTypes" name="WellbeingDocumentListType"></Type>
+  </Item>
+  <Item>   
+    <Element>LocalCodeList</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>High</privacyRating>
+    <Type ref="CommonTypes" name="LocalCodeListType"></Type>
   </Item>
   <Item>
     <Element>SIF_Metadata</Element>
