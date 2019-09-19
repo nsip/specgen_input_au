@@ -218,7 +218,7 @@ The second set, "SIF_Message" is 'lax' and every element within the schema is 'o
 This suite of XSDs are traditionally used for Update and Delete of current entities.
 If an element is not included in the payload of an Update operation, its value is assumed to be unchanged.
 
-In additon, if the payload contains the RefId/UUID only, the consumer must assume that object to be DELETED or that it has been deleted since the original request was made.
+In addition, if the payload contains the RefId/UUID only, the consumer must assume that object to be DELETED or that it has been deleted since the original request was made.
 </p>
 </Section>
 <Section name="Local Code Set Validation">

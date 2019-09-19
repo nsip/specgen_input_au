@@ -117,9 +117,7 @@
 		<Element>DomainScore</Element>
 		<Characteristics>C</Characteristics>
 		<privacyRating>High</privacyRating>
-		<Description>
-			<p>Overall score received in the NAP test. Contents are not populated if this is an empty object (sanctioned abandonment or refusal).</p>
-		</Description>
+		<p>Overall score received in the NAP test.Overall score received in the test. Contents are not populated if this is an empty object (sanctioned abandonment or refusal).</p>
 		<Type ref="CommonTypes" name="DomainScoreType"></Type>
   </Item>  
 

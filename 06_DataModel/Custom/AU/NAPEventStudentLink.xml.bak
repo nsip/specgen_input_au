@@ -227,7 +227,7 @@
 	<privacyRating>High</privacyRating>
     <Type ref="CommonTypes" name="TestDisruptionListType"></Type>
     <Description>
-      <p>An event disrupting a test session.</p>
+      <p></p>
     </Description>
   </Item>
    <Item>
@@ -236,7 +236,7 @@
 	<privacyRating>High</privacyRating>
     <Type ref="CommonTypes" name="AdjustmentContainerType"></Type>
     <Description>
-      <p>Adjustment information.</p>
+      <p></p>
     </Description>
   </Item>
   
@@ -244,9 +244,6 @@
     <Element>LocalCodeList</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>High</privacyRating>
-	 <Description>
-      <p>List of local codes.</p>
-    </Description>
     <Type ref="CommonTypes" name="LocalCodeListType"></Type>
   </Item>
   

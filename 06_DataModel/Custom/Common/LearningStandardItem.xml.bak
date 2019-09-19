@@ -87,9 +87,6 @@
 
     <Characteristics>O</Characteristics>
 	<privacyRating>Low</privacyRating>
-	<Description>
-      <p>An alphanumeric Id code as defined by the organization to identify the statement.</p>
-    </Description>
     <Type ref="CommonTypes" name="StatementCodesType"></Type>
   </Item>
 
@@ -99,9 +96,6 @@
 
     <Characteristics>O</Characteristics>
 	<privacyRating>Low</privacyRating>
-	<Description>
-      <p>The text of the "outcome", "standard", or other element within the structured curriculum document.</p>
-    </Description>
     <Type ref="CommonTypes" name="StatementsType"></Type>
   </Item>
  
@@ -110,18 +104,12 @@
 
     <Characteristics>M</Characteristics>
 	<privacyRating>Low</privacyRating>
-	 <Description>
-      <p>A list of academic level or years.</p>
-    </Description>
     <Type ref="CommonTypes" name="YearLevelsType"></Type>
   </Item>
   <Item>
     <Element>ACStrandSubjectArea</Element>
     <Characteristics>O</Characteristics>
 	<privacyRating>Low</privacyRating>
-	 <Description>
-      <p>Subject matter of a student's study as codified under the Australian Curriculum.</p>
-    </Description>
     <Type ref="CommonTypes" name="ACStrandSubjectAreaType"></Type>
   </Item>
   

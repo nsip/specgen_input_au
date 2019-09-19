@@ -31,7 +31,7 @@
 	<privacyRating>Low</privacyRating>
     <Type ref="CommonTypes" name="NAPTestItemContentType"></Type>
     <Description>
-      <p>Contents of a Test Item on the context of NAP.</p>
+      <p></p>
     </Description>
   </Item>
   <Item>   

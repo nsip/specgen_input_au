@@ -79,7 +79,7 @@
 <Value><Code>MCM-14</Code><Text>Oculocutaneous Albinism</Text></Value>
 <Value><Code>MCM-15</Code><Text>Phelan-McDermid Syndrome</Text></Value>
 <Value><Code>MCM-16</Code><Text>Phenylketonuria</Text></Value>
-<Value><Code>MCM-17</Code><Text>Pierre Robyn Syndrome</Text></Value>
+<Value><Code>MCM-17</Code><Text>Pierr Robyn Syndrome</Text></Value>
 <Value><Code>MCM-18</Code><Text>Potocki - Lupski Syndrome</Text></Value>
 <Value><Code>MCM-19</Code><Text>Prader Willi Syndrome</Text></Value>
 <Value><Code>MCM-20</Code><Text>Rubinstein-Taybi Syndrome</Text></Value>
@@ -3527,7 +3527,7 @@
 	</CodeSet>
 	<CodeSet>
 		<Intro>
-			<p>Federal Electorates from the Australian Electoral Commission; https://www.aec.gov.au/profiles/index.htm, loaded using 2019 electorates from the coding description of Commonwealth Electoral Divisions, ABS https://www.abs.gov.au/ausstats/abs@.nsf/Lookup/by%20Subject/1270.0.55.003~July%202017~Main%20Features~Commonwealth%20Electoral%20Divisions%20(CEDs)~6</p>
+			<p>Federal Electorates from the Australian Electoral Commission; https://www.aec.gov.au/profiles/index.htm, loaded using 2019 electorates from the coding desription of Commonwealth Electoral Divisions, ABS https://www.abs.gov.au/ausstats/abs@.nsf/Lookup/by%20Subject/1270.0.55.003~July%202017~Main%20Features~Commonwealth%20Electoral%20Divisions%20(CEDs)~6</p>
 		</Intro>
 		<ID>Federal Electorate</ID>
        <Values><Value><Code>101</Code><Text>Banks</Text></Value>

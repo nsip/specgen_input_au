@@ -102,9 +102,6 @@
     <Element>ReferralSource</Element>
     <Characteristics>O</Characteristics>
 	<privacyRating>Extreme</privacyRating>
-	<Description>
-			<p>The method by which a student was identified for referral to a particular program.</p>
-		</Description>
     <Type ref="CommonTypes" name="ReferralSourceType"/>
   </Item>
   
@@ -248,9 +245,6 @@
     <Element>ProgramAvailability</Element>
     <Characteristics>O</Characteristics>
 	<privacyRating>Extreme</privacyRating>
-	<Description>
-			<p>Describes the availability of the program.</p>
-		</Description>
     <Type ref="CommonTypes" name="ProgramAvailabilityType"></Type>
   </Item>
 

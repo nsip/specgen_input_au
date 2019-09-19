@@ -117,9 +117,6 @@
 
     <Characteristics>O</Characteristics>
 	<privacyRating>Low</privacyRating>
-	<Description>
-      <p>Year levels the resource is suitable for.</p>
-    </Description>
     <Type ref="CommonTypes" name="YearLevelsType"></Type>
   </Item>
   
@@ -127,9 +124,6 @@
     <Element>SubjectAreas</Element>
     <Characteristics>O</Characteristics>
 	<privacyRating>Low</privacyRating>
-	<Description>
-      <p>Subject areas the resource is suitable for.</p>
-    </Description>
      <Type ref="CommonTypes" name="ACStrandAreaListType"/>
   </Item>
   

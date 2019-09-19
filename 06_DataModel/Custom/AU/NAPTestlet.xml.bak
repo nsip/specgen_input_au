@@ -48,9 +48,6 @@
     <Element>TestletContent</Element>
     <Characteristics>M</Characteristics>
 	<privacyRating>Low</privacyRating>
-	 <Description>
-      <p>Contents of a Testlet in the context of NAP.</p>
-    </Description>
     <Type ref="CommonTypes" name="NAPTestletContentType"></Type>
   </Item>
   

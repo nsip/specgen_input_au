@@ -10478,17 +10478,11 @@
 	<Item>
 		<Element>LifeCycle</Element>
 		<Characteristics>O</Characteristics>
-		<Description>
-			<p>This common metadata element describes the life cycle of the object it represents, based on the IEEE LOM LifeCycle element [LOM]</p>
-		</Description>
 		<Type ref="CommonTypes" name="LifeCycleType"/>
 	</Item>
 	<Item>
 		<Element>EducationFilter</Element>
 		<Characteristics>O</Characteristics>
-		<Description>
-			<p>Education filter.</p>
-		</Description>
 		<Type ref="CommonTypes" name="EducationFilterType"/>
 	</Item>
 </CommonElement>

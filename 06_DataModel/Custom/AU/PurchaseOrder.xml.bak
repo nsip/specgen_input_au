@@ -71,7 +71,7 @@
     <Characteristics>M</Characteristics>
 	<privacyRating>Low</privacyRating>
     <Description>
-      <p>Information about the item/s delivered.</p>
+      <p></p>
     </Description>
     <Type ref="CommonTypes" name="PurchasingItemsType"></Type>
   </Item>
