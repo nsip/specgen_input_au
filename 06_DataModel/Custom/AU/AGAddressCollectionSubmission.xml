@@ -165,6 +165,16 @@
                                  <Email Type="01">jmiller@lsc.vic.edu.au</Email> <!-- Collection Contact EmailAddress -->
                                  <PhoneNumber Type="0096"><Number>03 9637-2000</Number></PhoneNumber> <!-- Collection Contact Phone Number-->
                           </EntityContact>
+                          <AGContextualQuestionList>
+							  <AGContextualQuestion>
+								  <AGContext>Are you reporting any boarding students?</AGContext>
+								  <AGAnswer>2</AGAnswer>
+							  </AGContextualQuestion>
+							  <AGContextualQuestion>
+   								  <AGContext>What is the education level of this location?</AGContext>
+								  <AGAnswer>3</AGAnswer>
+							  </AGContextualQuestion>
+                          </AGContextualQuestionList>
                           <AddressCollectionStudentList>
                               <AddressCollectionStudent>
                                        <LocalId>12345</LocalId>

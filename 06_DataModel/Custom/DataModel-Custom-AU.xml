@@ -25,7 +25,8 @@
 		<xi:include parse="text" href="Common/PersonPicture.xml"/>
 		<xi:include parse="text" href="Common/Identity.xml"/>
 		
-		
+				<!--P POD -->
+		<xi:include parse="text" href="Common/PersonPrivacyObligation.xml"/>  
 	</Group>
 
 	<Group name="Activity">	
@@ -188,9 +189,9 @@
 		<xi:include parse="text" href="AU/FinancialQuestionnaireSubmission.xml"/>   
 		<xi:include parse="text" href="AU/AGStatusReport.xml"/>
 		<xi:include parse="text" href="AU/AGAddressCollectionSubmission.xml"/>
+		<xi:include parse="text" href="AU/AGCensusSubmission.xml"/>
 		
-		<!--P POD 
-		<xi:include parse="text" href="Common/PersonPrivacyObligation.xml"/> -->
+
 		
 	</Group>
 	<Group name = "Z - For Future Deprecation">	

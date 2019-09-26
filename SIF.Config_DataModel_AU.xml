@@ -9,9 +9,12 @@
 		<inputDocument>SIF_DataModel.xml</inputDocument>
 		<sifNamespace>http://www.sifassociation.org/datamodel/au/3.4</sifNamespace>
 		<localizationCode>au</localizationCode>
-		<schemaVersion>3.4.5</schemaVersion>
+		<schemaVersion>3.4.5X</schemaVersion>
 		
-	    <!--<jsonExamplesXslt>98_Xslt/xmlToJson.xsl</jsonExamplesXslt> -->
+		<!-- Comment this one out to leave out JSON Tabs -->
+		
+	    <jsonExamplesXslt>98_Xslt/xmlToJson.xsl</jsonExamplesXslt> 
+		
 		<resolveExtensions>false</resolveExtensions>
  
 
@@ -27,7 +30,7 @@
 		<htmlDocument>
 			<singleDocument>false</singleDocument>
 			<rootDocumentFileName>index.html</rootDocumentFileName>
-			<rootTitle>SIF Implementation Specification (Australia) 3.4.5</rootTitle>
+			<rootTitle>SIF Implementation Specification (Australia) 3.4.5X</rootTitle>
 			<documentType>DataModel</documentType>
 		</htmlDocument>
 		
@@ -35,7 +38,7 @@
 		<htmlDocument>
 			<singleDocument>true</singleDocument>
 			<rootDocumentFileName>ImplementationSpecification.html</rootDocumentFileName>
-			<rootTitle>SIF Implementation Specification (Australia) 3.4.5</rootTitle>
+			<rootTitle>SIF Implementation Specification (Australia) 3.4.5X</rootTitle>
 			<documentType>DataModel</documentType>
 		</htmlDocument>
 		
@@ -125,7 +128,8 @@
 		</xsdDocument>
  
 	</xsdDocuments>	
-	<!--
+	<!--Comment out next section if JSON not required -->
+
 	<xsltTransformations>
 		<xsltTransformation>
 			<xsltInputFile></xsltInputFile>
@@ -134,7 +138,7 @@
 			<yamlToJson>false</yamlToJson>
 		</xsltTransformation>
 	</xsltTransformations>
--->
+
 		
 	
 

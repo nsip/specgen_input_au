@@ -140,3 +140,8 @@ th { border-color: #005696 }
 div.example { page-break-inside: avoid; overflow: hidden; width: auto; height: auto }
 
 .titlePage h1 { page-break-before: auto }
+
+.charOverride {
+	display:block;
+	color: #005696; font-family: monospace; font-weight:bold;
+}
