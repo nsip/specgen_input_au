@@ -1,0 +1,92 @@
+<DataObject name="TimeTableContainer" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen">
+	<Key>@RefId</Key>
+	<EventsReported>true</EventsReported>
+	<Item>
+		<Element>TimeTableContainer</Element>
+		<privacyRating>Low</privacyRating>
+		<Description>
+    </Description>
+	</Item>
+	<Item>
+		<Attribute>RefId</Attribute>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>GUID that identifies this  TimeTable Container.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RefIdType"/>
+	</Item>
+	
+	<Item>
+		<Element>TimeTable</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+		</Description>
+		<Type ref="CommonTypes" name="TimeTableType"/>
+	</Item>
+	
+	<Item>
+		<Element>TimeTableCells</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+		</Description>
+		<Type ref="CommonTypes" name="TimeTableCellCollectionType"/>
+	</Item>
+	
+	<Item>
+		<Element>TeachingGroups</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+		</Description>
+		<Type ref="CommonTypes" name="TeachingGroupCollectionType"/>
+	</Item>  
+	
+	<!-- Option 1 
+	<Item>
+		<Element>TimeTableSchedule</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+    </Description>
+		<Type ref="CommonTypes" name="TimeTableScheduleType"/>
+	</Item>
+	<Item>
+		<Element>TimeTableScheduleCellList</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>All the TimeTable Cells that belong to this TimeTable.</Description>
+		<Type ref="CommonTypes" name="TimeTableScheduleCellListType"/>
+	</Item>
+	<Item>
+		<Element>TeachingGroupScheduleList</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>All the Teaching Groups that belong to this TimeTable.</Description>
+		<Type ref="CommonTypes" name="TimeTableScheduleCellListType"/>
+	</Item>
+-->
+	<Item>
+		<Element>LocalCodeList</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Type ref="CommonTypes" name="LocalCodeListType"/>
+	</Item>
+	<Item>
+		<Element>SIF_Metadata</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Type ref="CommonTypes" name="SIF_MetadataType"/>
+	</Item>
+	<Item>
+		<Element>SIF_ExtendedElements</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
+	</Item>  
+	<!--
+  <xhtml:Example xmlns="" name="TimeTableContainer">
+  </xhtml:Example> -->
+</DataObject>

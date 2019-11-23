@@ -614,6 +614,12 @@
       </YearLevel>
       <Homeroom SIF_RefObject="RoomInfo">D7510D3E-34B3-591A-8C3D-00AA001A1651</Homeroom>
       <Advisor SIF_RefObject="StaffPersonal">B359D3E3-4D75-101A-8C3D-00AA001A1652</Advisor>
+      <ExitType>
+        <Code>1909</Code>
+        <OtherCodeList>
+            <OtherCode Codeset="Local">Victoria</OtherCode>
+        </OtherCodeList>
+	  </ExitType>
       <FTE>1.00</FTE>
       <FTPTStatus>01</FTPTStatus>
       <PublishingPermissionList>

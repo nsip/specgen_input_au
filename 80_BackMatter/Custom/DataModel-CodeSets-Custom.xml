@@ -9852,5 +9852,21 @@
 				<Text>Day Student</Text>
 			</Value>
 		</Values>
-	</CodeSet>				
+	</CodeSet>	
+	<CodeSet>
+		<Intro>
+			<p>AG Collection Contextual Question Codes</p>
+		</Intro>
+		<ID>AG Context Question</ID>
+		<Values>
+			<Value>
+				<Code>AC001</Code>
+				<Text>Are you reporting any boarding students?</Text>
+			</Value>
+			<Value>
+				<Code>AC002</Code>
+				<Text>What is the education level of this location?</Text>
+			</Value>
+		</Values>
+	</CodeSet>							
 </Grouping>

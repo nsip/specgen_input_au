@@ -1,0 +1,59 @@
+<DataObject name="ScheduledActivityContainer" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen">
+	<Key>@RefId</Key>
+	<EventsReported>true</EventsReported>
+	<Item>
+		<Element>ScheduledActivityContainer</Element>
+		<privacyRating>Low</privacyRating>
+		<Description>This Container is to contain Scheduled Activities associated with a TimeTableContainer.  The RefId of the TimeTableContainer must be known and previously published.  It can be used to update/create a batch of ScheduledActivities associated with a current TimeTable, e.g. Daily Variations and it can be used to publish the events that have actually happened.  Each individual ScheduledActivity will have a unique identifier, RefId that needs to be managed by the editor, and honoured where possible by the 'provider'.
+    </Description>
+	</Item>
+	<Item>
+		<Attribute>RefId</Attribute>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>GUID that identifies this Scheduled Activity Container.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RefIdType"/>
+	</Item>
+	 
+	<Item>
+		<Element>TimeTableContainerRefId</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>The Container or document to which these ScheduledActivities belong.
+		</Description>
+		<Type ref="CommonTypes" name="IdRefType"/>
+	</Item>
+	
+	<Item>
+		<Element>ScheduledActivitys</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+		</Description>
+		<Type ref="CommonTypes" name="ScheduledActivityCollectionType"/>
+	</Item>
+	
+	<Item>
+		<Element>LocalCodeList</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Type ref="CommonTypes" name="LocalCodeListType"/>
+	</Item>
+	<Item>
+		<Element>SIF_Metadata</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Type ref="CommonTypes" name="SIF_MetadataType"/>
+	</Item>
+	<Item>
+		<Element>SIF_ExtendedElements</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
+	</Item>  
+	<!--
+  <xhtml:Example xmlns="" name="TimeTableContainer">
+  </xhtml:Example> -->
+</DataObject>

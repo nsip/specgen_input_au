@@ -78,6 +78,9 @@
 		<xi:include parse="text" href="Common/ScheduledActivity.xml"/>		
 		<xi:include parse="text" href="Common/ResourceBooking.xml"/>		
 		<xi:include parse="text" href="Common/EquipmentInfo.xml"/>	
+		 
+		<xi:include parse="text" href="Common/TimeTableContainer.xml"/> 
+		<xi:include parse="text" href="Common/ScheduledActivityContainer.xml"/>  
 	</Group>
 	<Group name="Finance">	
 		<Intro>
@@ -190,6 +193,7 @@
 		<xi:include parse="text" href="AU/AGStatusReport.xml"/>
 		<xi:include parse="text" href="AU/AGAddressCollectionSubmission.xml"/>
 		<xi:include parse="text" href="AU/AGCensusSubmission.xml"/>
+		<xi:include parse="text" href="AU/AGGetRounds.xml"/>
 		
 
 		

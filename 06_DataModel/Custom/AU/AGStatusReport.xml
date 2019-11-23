@@ -95,6 +95,14 @@
   </Item>
   
   <Item>
+  	  <Element>RoundCode</Element>
+	  <Characteristics>M</Characteristics>
+	  <privacyRating>Low</privacyRating>
+	  <Description>Which Round of the collection is this submission for?</Description>
+	  <Type name="xs:normalizedString"></Type>
+  </Item>
+  
+  <Item>
     <Element>AGReportingObjectResponseList</Element>    
     <Characteristics>O</Characteristics>
 	<privacyRating>High</privacyRating>
@@ -134,6 +142,7 @@
   <SubmissionTimestamp>2018-05-30T09:00:00</SubmissionTimestamp>
   <AGCollection>FQ</AGCollection>
   <CollectionYear>2018</CollectionYear>
+  <RoundCode>FQ1</RoundCode>
   <AGReportingObjectResponseList>		
 	<AGReportingObjectResponse>
 	  <SubmittedRefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</SubmittedRefId>  <!-- Original Reporting RefId of the submission -->

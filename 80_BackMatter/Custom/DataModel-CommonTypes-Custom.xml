@@ -100,6 +100,585 @@
                 
       </CommonElement-->
       
+<CommonElement name="TimeTableScheduleType" type="true" dm="true">
+	<Item>
+		<Element>TimeTableScheduleType</Element>
+		<Characteristics/>
+		<Description>
+			<p>.</p>
+		</Description>
+	</Item>
+	<Item>
+    <Element>SchoolInfoRefId</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Optional, the GUID of the SchoolInfo Object if this object is known in the zone.</p>
+    </Description>
+    <Type ref="CommonTypes" relationship="records enrollment of student in" count="1:1" name="IdRefType"></Type>
+  </Item>
+  
+  
+  <Item>
+    <Element>SchoolYear</Element>
+    <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>
+        School year for which the information is applicable, expressed as the four-digit year in which the school year ends (e.g., "2007").
+      </p>
+    </Description>
+     <Type ref="CommonTypes" name="SchoolYearType"></Type>
+  </Item>
+
+  <Item>
+    <Element>LocalId</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Local TimeTable ID</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>
+
+  <Item>
+    <Element>Title</Element>
+    <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Unique Name of the proposed Time Table</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+
+  <Item>
+    <Element>DaysPerCycle</Element>
+    <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Max Number of days per Time Table cycle</p>
+    </Description>
+    <Type name="xs:unsignedInt"></Type>
+  </Item>
+
+  <Item>
+    <Element>PeriodsPerDay</Element>
+    <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Max Number of periods per Time Table Day</p>
+    </Description>
+    <Type name="xs:unsignedInt"></Type>
+  </Item>
+
+  <Item>
+    <Element>TeachingPeriodsPerDay</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Teaching periods per day if different to PeriodsPerDay</p>
+    </Description>
+    <Type name="xs:unsignedInt"></Type>
+  </Item>
+
+  <Item>
+    <Element>SchoolLocalId</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Optional Local School Id</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>
+
+  <Item>
+    <Element>SchoolName</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>The school name in plain text. </p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+
+  <Item>
+    <Element>TimeTableCreationDate</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Date Schedule was created or last edited.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+
+  <Item>
+    <Element>StartDate</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>First day of TimeTable.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+
+  <Item>
+    <Element>EndDate</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Last day of the TimeTable.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+
+  <Item>
+    <Element>TimeTableDayList</Element>
+    <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Container for TimeTableDays in Schedule</p>
+    </Description>
+    <Type ref="CommonTypes" name="TimeTableDayListType"></Type>
+  </Item>
+  
+ </CommonElement> 
+ 
+ <CommonElement name="TimeTableScheduleCellListType" type="true" dm="true">
+	<Item>
+		<Element>TimeTableScheduleCellListType</Element>
+		<Characteristics/>
+		<Description>
+			<p>.</p>
+		</Description>
+	</Item>  
+	<Item>
+	   <Element>TimeTableScheduleCell</Element>
+	   <Characteristics>OR</Characteristics>
+	   <Description>
+		 <p></p>
+	   </Description>
+	   <Type name="TimeTableScheduleCellType"></Type>
+	</Item>     
+ </CommonElement>
+ <CommonElement name="TimeTableScheduleCellType" type="true" dm="true">
+	<Item>
+		<Element>TimeTableScheduleCellType</Element>
+		<Characteristics/>
+		<Description>
+			<p>.</p>
+		</Description>
+	</Item>  
+	<Item>
+    <Element>TimeTableSubjectRefId</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>The GUID of the Subject that this Cell is scheduling</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+
+  <Item>
+    <Element>TeachingGroupGUID</Element>
+    <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>The GUID of the TeachingGroup being scheduled, provivded by the editor, the Provider of the endpoint can use this as a RefId, if they wish to.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+
+  <Item>
+    <Element>RoomInfoRefId</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>The GUID of the Resource being Scheduled</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+
+  <Item>
+    <Element>StaffPersonalRefId</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>The GUID of the Staff Member being Scheduled</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+
+  <Item>
+    <Element>TimeTableLocalId</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Time Table Local Identifier</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>
+
+  <Item>
+    <Element>SubjectLocalId</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Subject Local Id</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>
+
+  <Item>
+    <Element>TeachingGroupLocalId</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Teaching Group </p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>
+
+  <Item>
+    <Element>RoomNumber</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Room number as presented to the user/application.</p>
+    </Description>
+    <Type ref="CommonTypes" name="HomeroomNumberType"></Type>
+  </Item>
+
+  <Item>
+    <Element>StaffLocalId</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Staff LocalId</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>
+
+  <Item>
+    <Element>DayId</Element>
+    <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Day Id </p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>
+
+  <Item>
+    <Element>PeriodId</Element>
+    <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Period Id within the Day Id</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>
+
+  <Item>
+    <Element>CellType</Element>
+
+    <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Type of Lesson/Session  eg Teaching, Lunch etc</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  <Item>
+    <Element>SchoolInfoRefId</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Optional, the GUID of the SchoolInfo Object  if this object is known in the zone</p>
+    </Description>
+    <Type ref='CommonTypes' name='IdRefType'/>
+  </Item>
+  <Item>
+    <Element>SchoolLocalId</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Optional, Local School Id</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>
+  
+   <Item>
+    <Element>TeacherList</Element>
+
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>A listing of the teachers assigned to the activity, and the type of supervision they are credited with. If no teachers are listed, the activity is assumed to be unsupervised.</p>
+    </Description>
+    <Type ref="CommonTypes" name="ScheduledTeacherListType"></Type>
+ </Item>
+
+ <Item>
+    <Element>RoomList</Element>
+
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>List of rooms in which the scheduled activity is held. Used for onsite venues which are represented in the source system as rooms. Can include large venues (ovals, library, etc), if they have been represented as rooms; source system practice varies.</p>
+    </Description>
+      <Type ref="CommonTypes" name="RoomListType"></Type>
+    
+ </Item>
+ </CommonElement>
+ 
+ <CommonElement name="TeachingGroupScheduleListType" type="true" dm="true">
+	<Item>
+		<Element>TeachingGroupScheduleListType</Element>
+		<Characteristics/>
+		<Description>
+			<p>.</p>
+		</Description>
+	</Item>  
+	<Item>
+	   <Element>TeachingGroupSchedule</Element>
+	   <Characteristics>OR</Characteristics>
+	   <Description>
+		 <p></p>
+	   </Description>
+	   <Type name="TeachingGroupScheduleType"></Type>
+	</Item>     
+ </CommonElement>
+
+
+ <CommonElement name="TeachingGroupScheduleType" type="true" dm="true">
+	<Item>
+		<Element>TeachingGroupScheduleType</Element>
+		<Characteristics/>
+		<Description>
+			<p>.</p>
+		</Description>
+	</Item>  
+	
+  <Item>
+    <Element>EditorGUID</Element>
+    <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>The GUID of the TeachingGroup as provided by the 'editor' or TT vendor.  Final provider of the end point may use this as the official RefId of the publishable TeachingGroup Object.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+  <Item>
+    <Element>SchoolYear</Element>
+
+    <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>School year for which the information is applicable, expressed as the four-digit year in which the school year ends (e.g., "2007").</p>
+    </Description>
+     <Type ref="CommonTypes" name="SchoolYearType"></Type>
+  </Item>
+  <Item>
+    <Element>LocalId</Element>
+
+    <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>LocalId of the Teaching Group (previously ClassIndicator).</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>
+
+  <Item>
+    <Element>ShortName</Element>
+
+    <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Short free format label that describes the group.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+
+  <Item>
+    <Element>LongName</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Longer description if required.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+
+  <Item>
+    <Element>GroupType</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Added to allow local implementations to filter on categories of Teaching Group. Where there is a need to filter particular groups based on their types for particular functions;  group type provides the means of identifying the type of group such as roll class or subject class for instance and treat them accordingly.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  
+  <Item>
+    <Element>Set</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Set Number (UK)</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+
+  <Item>
+    <Element>Block</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Block (UK)</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+
+  <Item>
+    <Element>CurriculumLevel</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Assessment Stage eg VELS Level</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+
+  <Item>
+    <Element>SchoolInfoRefId</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>GUID of SchoolInfo object this teaching group belongs to.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+
+  <Item>
+    <Element>SchoolLocalId</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Local School Id.</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>
+
+  <Item>
+    <Element>SchoolCourseInfoRefId</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>GUID of SchoolCourseInfo object this teaching group is part of.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+
+  <Item>
+    <Element>SchoolCourseLocalId</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Local Course Id.</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>
+
+  <Item>
+    <Element>TimeTableSubjectRefId</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>GUID of TimeTableSubject object this teaching group belongs to.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+
+  <Item>
+    <Element>TimeTableSubjectLocalId</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Local subject Id.</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>
+  
+  <Item>
+    <Element>Semester</Element>
+
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Semester, Term, or Quarter subject offered.</p>
+    </Description>
+    <Type name="xs:unsignedInt"></Type>
+  </Item>
+  
+  <Item>
+    <Element>StudentList</Element>
+
+    <Characteristics>O</Characteristics>
+	<privacyRating>Medium</privacyRating>
+    <Description>
+      <p>List of Students in this Teaching Group</p>
+    </Description>
+    <Type ref="CommonTypes" name="StudentListType"></Type>
+  </Item>
+
+  <Item>
+    <Element>TeacherList</Element>
+
+    <Characteristics>O</Characteristics>
+	<privacyRating>Medium</privacyRating>
+    <Description>
+      <p>A List of teachers associated with the group -  may or may not include the teacher timetabled in the schedule.</p>
+    </Description>
+    <Type ref="CommonTypes" name="TeacherListType"></Type>
+  </Item>
+     
+  <Item>
+    <Element>MinClassSize</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Minimum class size.</p>
+    </Description>
+    <Type name='xs:integer'/>
+  </Item>
+
+  <Item>
+    <Element>MaxClassSize</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Maximum class size</p>
+    </Description>
+    <Type name='xs:integer'/>
+  </Item>
+
+  <Item>
+    <Element>TeachingGroupPeriodList</Element>
+
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>A List of schedule information that can be published by an SIS which is a subset of information available in the TimeTableCell object.</p>
+      <p>PeriodId or StartTime must be provided.</p>
+    </Description>
+    <Type ref="CommonTypes" name="TeachingGroupPeriodListType"></Type>
+
+  </Item>
+</CommonElement>
+
+<!-- List of Scheduled Activities -->
+      
       <!--POD Option 2 -->
 <CommonElement name="ApplicableLawListType" type="true" dm="true">
 	<Item>
@@ -179,7 +758,8 @@
 				<p>The AddressCollection being reported on.</p>
 			</Description>
 		</Item>
-		<Item> 	
+		<!-- There will be no individual Collection RefId's -->
+		<!--<Item> 	
 	 <Element>AddressCollectionRefId</Element>    
     <Characteristics>O</Characteristics>
 	<privacyRating>Low</privacyRating>
@@ -187,10 +767,11 @@
       <p>A GUID associated with this packet of a AddressCollectionReport.</p>
     </Description>
     <Type ref="CommonTypes" name="IdRefType"></Type>
-  </Item>
+  </Item> -->
+  
    <Item>
 	  <Element>EntityLevel</Element>
-	  <Characteristics>M</Characteristics>
+	  <Characteristics>O</Characteristics>
 	  <privacyRating>Medium</privacyRating>
 	  <Description>Level of the Submission, current valid values "System", "Office", "Location", "Special School Location".</Description>
 	  <!-- Do we need to restrict the level in enumeration of the type? -->
@@ -374,15 +955,15 @@
 			</Description>
 			<Type ref="CommonTypes" name="NameOfRecordType"/>
 		</Item>
-		<Item>
+		<!-- Leave this out for 2020 Collection <Item>
 			<Element>AddressSameAsStudent</Element>
 			<Characteristics>M</Characteristics>
 			<Description>
-				<p>Name of Parent for the AG Address Collection. Note: Type attribute value of LGL must be used here</p>
+				<p>Is this address the same as the Student's?</p>
 			</Description>
 			<Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"/>
 
-		</Item>
+		</Item>-->
 	  <Item>
 			<Element>ParentAddress</Element>
 			<Characteristics>M</Characteristics>
@@ -392,6 +973,77 @@
 			<Type ref="CommonTypes" name="AddressType"/>
 		</Item>	
 </CommonElement>
+
+<!-- Added for AGGetRounds -->
+<CommonElement name="AGRoundListType" type="true" dm="true">
+		<Item>
+			<Element>AGRoundListType</Element>
+			<Description>
+				<p>A list of Rounds available for an AG Collection</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>AGRound</Element>
+			<Characteristics>OR</Characteristics>
+			<Description>
+				<p>Details of a particular round available for AG Collection.</p>
+			</Description>
+			<Type ref="CommonTypes" name="AGRoundType"/>
+		</Item>
+	</CommonElement>
+	
+	<CommonElement name="AGRoundType" type="true" dm="true">
+
+		<Item>
+			<Element>AGRoundType</Element>
+			<Characteristics/>
+			<Description>
+				<p>Details of a particular round available for AG Collection.</p>
+			</Description>
+		</Item>
+		<Item>
+		   <Element>RoundCode</Element>
+		   <Characteristics>M</Characteristics>
+		   <Description>
+			 <p>Code of the particular AGCollection round.</p>
+		   </Description>
+		   <Type name="xs:normalizedString"></Type>
+  		</Item>  
+		<Item>
+			<Element>RoundName</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+			 <p>Name of the particular AGCollection round.</p>
+			</Description>
+		    <Type name="xs:normalizedString"></Type>
+		</Item>
+		<Item>
+			<Element>StartDate</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+			 <p>Start date of the particular AGCollection round.</p>
+			</Description>
+		    <Type name="xs:date"></Type>
+		</Item>
+		<Item>
+			<Element>DueDate</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+			 <p>Due date of the particular AGCollection round.</p>
+			</Description>
+		    <Type name="xs:date"></Type>
+		</Item>
+		<Item>
+			<Element>EndDate</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+			 <p>End date of the particular AGCollection round.</p>
+			</Description>
+		    <Type name="xs:date"></Type>
+		</Item>
+   	</CommonElement>
+
 
 <!-- Added for General Contextual Questions -->
 
@@ -423,12 +1075,14 @@
 			</Description>
 		</Item>
 		<Item>
-		   <Element>AGContext</Element>
+		   <Element>AGContextCode</Element>
 		   <Characteristics>M</Characteristics>
 		   <Description>
 			 <p>AG Context Question.</p>
 		   </Description>
-		   <Type name="xs:string"></Type>
+		   <!-- This needs to be validated against the appropriate question
+		   <Type name="xs:string"></Type> -->
+		   <Type ref="CodeSets" name="AUCodeSetsAGContextQuestionType"/>
   		</Item>  
 		<Item>
 			<Element>AGAnswer</Element>
@@ -467,6 +1121,7 @@
 				<p>The Census being reported on.</p>
 			</Description>
 		</Item>
+		<!-- No individual Report RefId 
 		<Item> 	
 	 <Element>CensusRefId</Element>    
     <Characteristics>O</Characteristics>
@@ -475,7 +1130,7 @@
       <p>A GUID associated with this packet of a CensusReport.</p>
     </Description>
     <Type ref="CommonTypes" name="IdRefType"></Type>
-  </Item>
+  </Item> -->
    <Item>
 	  <Element>EntityLevel</Element>
 	  <Characteristics>M</Characteristics>
@@ -591,9 +1246,10 @@
 			<Element>CensusStaffType</Element>
 			<Characteristics>MR</Characteristics>
 			<Description>
-				<p>The staff member being reported on.</p>
+				<p>The cohort of staff being reported on.</p>
 			</Description>
 		</Item>
+		<!-- Leave off LocalId - no unit record for first release
 		<Item>
 			<Element>LocalId</Element>
 			<Characteristics>O</Characteristics>
@@ -602,21 +1258,50 @@
 			  <p>A locally-assigned identifier for the entity being reported on.</p>
 			</Description>
 			<Type ref="CommonTypes" name="LocalIdType"></Type>
-		</Item>
+		</Item> -->
 		<Item>
 			<Element>JobFTE</Element>
 			<Characteristics>O</Characteristics>
 			<privacyRating>Low</privacyRating>
 			<Description>
-			  <p>Full-time job equivalent ratio for this assignment. (Format is x.xx; an employee who is full-time and who is 50% of their time on this assignment would be represented as 0.50)</p>
+			  <p>Total full-time job equivalent ratio for members of this co-hort. (Format is x.xx; an employee who is full-time and who is 50% of their time on this assignment would be represented as 0.50)</p>
 			</Description>
 			<Type name="xs:decimal"></Type>
 			<Facets>
 			  <xs:minInclusive value="0"/>
-			  <xs:maxInclusive value="1"/>
+			  <!--<xs:maxInclusive value="1"/> -->
 			  <xs:fractionDigits value="2"/>
 			</Facets>
 		  </Item>
+		  <!-- Add Primary and Secondary for aggregate representation -->
+	  	<Item>
+		<Element>PrimaryFTE</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+		  <p>Total full-time job equivalent ratio associated with teaching at the Primary level. (Format is x.xx; an employee who is full-time and who is 50% of their time on this assignment would be represented as 0.50)</p>
+		</Description>
+		<Type name="xs:decimal"></Type>
+		<Facets>
+		  <xs:minInclusive value="0"/>
+		  <xs:maxInclusive value="1"/>
+		  <xs:fractionDigits value="2"/>
+		</Facets>
+	</Item>
+	<Item>
+		<Element>SecondaryFTE</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+		  <p>Total full-time job equivalent ratio associated with teaching at the Secondary level. (Format is x.xx; an employee who is full-time and who is 50% of their time on this assignment would be represented as 0.50)</p>
+		</Description>
+		<Type name="xs:decimal"></Type>
+		<Facets>
+		  <xs:minInclusive value="0"/>
+		   <xs:maxInclusive value="1"/> 
+		  <xs:fractionDigits value="2"/>
+		</Facets>
+	 </Item>
 		  <Item>
 			<Element>StaffActivity</Element>
 			<Characteristics>O</Characteristics>
@@ -636,12 +1321,27 @@
 			</Description>
 			<Type ref="CommonTypes" name="DemographicsType"/>
 		  </Item>
+		  <!-- Leave off StaffAssignment - no unit level for first release
 		  <Item>
 			  <Element>StaffAssignmentMostRecent</Element>
 			  <Characteristics>O</Characteristics>
 			  <privacyRating>Low</privacyRating>
 			  <Description>Container for elements reflecting the most recent assignment of a staff member or information that may need to be calculated from other information.</Description>
 			  <Type ref="CommonTypes" name="StaffAssignmentMostRecentContainerType"></Type>
+		  </Item> -->
+		  <!-- Add Headcount for Aggregate Release -->
+		  <Item>
+			<Element>Headcount</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+			  <p>Headcount of this co-hort</p>
+			</Description>
+			<Type name="xs:decimal"></Type>
+			<Facets>
+			   <xs:minInclusive value="0"/>
+			  <xs:fractionDigits value="2"/>
+			</Facets>
 		  </Item>
     </CommonElement>		
    
@@ -726,12 +1426,132 @@
 			</Description>
 			<Type ref="CommonTypes" name="DemographicsType"/>
 		  </Item>
+		  	<Item>
+		<Element>YearLevel</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The current or most recent year level of the student.</p>
+		</Description>
+		<Type ref="CommonTypes" name="YearLevelType"/>
+	</Item>
+	<Item>
+		<Element>FTE</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Full-time equivalent numeric value of the student's course load during this enrollment, expressed in decimal form, where 1.00 represents a full-time enrollment.</p>
+		</Description>
+		<Type name="xs:decimal"/>
+		<Facets>
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="1"/>
+			<xs:fractionDigits value="2"/>
+		</Facets>
+	</Item> 
+		<Item>
+		<Element>FFPOS</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Enrolled Full-fee Paying Overseas Student (FFPOS) Status.  Enrolment Frame Element 10 NSCC Collection.</p>
+			<p>The status of an enrolment in a CRICOS course and whether the person is liable for a fee which reflects the imputed full average cost of the person's education at the school (including both recurrent and capital costs) irrespective of the actual arrangements to meet the fee.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsFFPOSStatusCodeType"/>
+	</Item>
+	<Item>
+      	<Element>OtherSchoolName</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>If this student is enrolled in another school, details of other school.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+    </Item>
+	<Item>
+		<Element>DisabilityLevelOfAdjustment</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Level of Adjustment made for a student's disability.</p>
+		</Description>
+		<Values>
+        <Value>
+			<Code>QDTP</Code>
+        </Value>
+        <Value>
+			<Code>Supplementary</Code>
+		</Value>
+        <Value>
+			<Code>Substantial</Code>
+		</Value>
+        <Value>
+			<Code>Extensive</Code>
+		</Value>
+       </Values>
+	</Item>
+	<Item>
+		<Element>DisabilityCategory</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Category of a student's disability.</p>
+		</Description>
+		<Values>
+        <Value>
+			<Code>Physical</Code>
+        </Value>
+        <Value>
+			<Code>Cognitive</Code>
+		</Value>
+        <Value>
+			<Code>Social-Emotional</Code>
+		</Value>
+        <Value>
+			<Code>Sensory</Code>
+		</Value>
+       </Values>
+	</Item>
+    <Item>
+    	<Element>CensusAge</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Age of the Student calculated for Non-gov Census reporting.</p>
+		</Description>
+		<Type name="xs:decimal"/>
+    </Item>	
+    <Item>
+      	<Element>DistanceEducationStudent</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Is this student a Distance Education Student for Non-gov Census reporting.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"/>
+    </Item>
+	<Item>
+      	<Element>BoardingStatus</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Is this student a Boarding or Day Student for AG Collection reporting?</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsBoardingType"/>
+    </Item>
+    <!--
 		  <Item>
 			  <Element>StudentMostRecent</Element>
 			  <Characteristics>O</Characteristics>
 			  <privacyRating>Low</privacyRating>
 			  <Description>Container for elements reflecting the most recent assignment of a student or information that may need to be calculated from other information.</Description>
 			  <Type ref="CommonTypes" name="StudentMostRecentContainerType"></Type>
+		  </Item>
+-->
+
+		  <Item>
+			<Element>Headcount</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+			  <p>Headcount of this co-hort</p>
+			</Description>
+			<Type name="xs:decimal"></Type>
+			<Facets>
+			   <xs:minInclusive value="0"/>
+			  <xs:fractionDigits value="2"/>
+			</Facets>
 		  </Item>
     </CommonElement>		
      
@@ -1042,7 +1862,7 @@
     -->
         
   <!-- Added for 3.4.4 FQ Object -->
-  
+    
     <CommonElement name="AGReportingObjectResponseListType" type="true" dm="true">
 		<Item>
 			<Element>AGReportingObjectResponseListType</Element>
@@ -1159,6 +1979,8 @@
 				<p>The Financial Questionnaire being reported on.</p>
 			</Description>
 		</Item>
+		
+		<!-- No individual report id
 		<Item> 	
 	 <Element>FQRefId</Element>    
     <Characteristics>O</Characteristics>
@@ -1167,7 +1989,8 @@
       <p>A GUID associated with this packet of a Financial Questionnaire Report.</p>
     </Description>
     <Type ref="CommonTypes" name="IdRefType"></Type>
-  </Item>
+  </Item> -->
+  
    <Item>
 	  <Element>EntityLevel</Element>
 	  <Characteristics>M</Characteristics>
@@ -5598,7 +6421,7 @@
 		</Description>
 		<Type ref="CommonTypes" name="LocalIdType"/>
 	</Item>
-		<Item>
+	<Item>
       	<Element>OtherSchoolName</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
