@@ -914,6 +914,27 @@
 			<Type ref="CodeSets" name="AUCodeSetsBoardingType"/>
 		</Item>
 		<Item>
+			<Element>ReportingParent2</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>Is this student reporting a 2nd Parent for the Address Collection?</p>
+			</Description>
+			<Values>
+				<Value>
+					<Code>N</Code>
+					<Description>No parent2 record exists.</Description>
+				</Value>
+				<Value>
+					<Code>Y</Code>
+					<Description>Yes, reporting a parent2.</Description>
+				</Value>
+				<Value>
+					<Code>U</Code>
+					<Description>Unusual circumstances parent2.</Description>
+				</Value>
+			</Values>
+		</Item>
+		<Item>
 			<Element>StudentAddress</Element>
 			<Characteristics>M</Characteristics>
 			<Description>

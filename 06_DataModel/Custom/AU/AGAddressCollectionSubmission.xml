@@ -174,7 +174,8 @@
                               <AddressCollectionStudent>
                                        <LocalId>12345</LocalId>
                                        <EducationLevel>Primary</EducationLevel>      
-                                       <BoardingStatus>D</BoardingStatus>                                           
+                                       <BoardingStatus>D</BoardingStatus>  
+                                       <ReportingParent2>Y</ReportingParent2>                                         
                                        <StudentAddress Type="0123" Role="012B">
 											<Street>
 												<Line1>The House</Line1>
