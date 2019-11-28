@@ -9862,10 +9862,12 @@
 			<Value>
 				<Code>AC001</Code>
 				<Text>Are you reporting any boarding students?</Text>
+				<Description>Acceptable Answers here are "Y" or "N"</Description>
 			</Value>
 			<Value>
 				<Code>AC002</Code>
 				<Text>What is the education level of this location?</Text>
+				<Description>Acceptable Answers here are "Primary", "Secondary" or "Combined"</Description>
 			</Value>
 		</Values>
 	</CodeSet>							
