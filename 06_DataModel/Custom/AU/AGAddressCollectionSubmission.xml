@@ -163,7 +163,7 @@
                           <AGContextualQuestionList>
 							  <AGContextualQuestion>
 								  <AGContextCode>AC001</AGContextCode>
-								  <AGAnswer>Y</AGAnswer>
+								  <AGAnswer>Yes</AGAnswer>
 							  </AGContextualQuestion>
 							  <AGContextualQuestion>
    								  <AGContextCode>AC002</AGContextCode>
@@ -179,7 +179,7 @@
                                        <StudentAddress Type="0123" Role="012B">
 											<Street>
 												<Line1>The House</Line1>
-												<Line2>2819 Warburton Hwy</Line2>
+												<Line2>2921 Warburton Hwy</Line2>
 											</Street>
 											<City>Chicago</City>
 											<StateProvince>WA</StateProvince>
@@ -191,10 +191,11 @@
 											   <GivenName>James</GivenName> <!-- Collection Parent First Name -->
 											   <PreferredGivenName>Jim</PreferredGivenName> <!-- Collection Parent Preferred First Name -->
 											</ParentName>
+											<AddressSameAsStudent>Y</AddressSameAsStudent>
 											<ParentAddress Type="0123" Role="012B">
 												<Street>
 													<Line1>The House</Line1>
-													<Line2>2819 Warburton Hwy</Line2>
+													<Line2>2921 Warburton Hwy</Line2>
 												</Street>
 												<City>Chicago</City>
 												<StateProvince>WA</StateProvince>
@@ -207,10 +208,11 @@
 											   <GivenName>Samantha</GivenName> <!-- Collection Parent First Name -->
 											   <PreferredGivenName>Sam</PreferredGivenName> <!-- Collection Parent Preferred First Name -->
 											</ParentName>
+											<AddressSameAsStudent>Y</AddressSameAsStudent>
 											<ParentAddress Type="0123" Role="012B">
 												<Street>
 													<Line1>The House</Line1>
-													<Line2>2819 Warburton Hwy</Line2>
+													<Line2>2921 Warburton Hwy</Line2>
 												</Street>
 												<City>Chicago</City>
 												<StateProvince>WA</StateProvince>

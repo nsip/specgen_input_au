@@ -9862,7 +9862,7 @@
 			<Value>
 				<Code>AC001</Code>
 				<Text>Are you reporting any boarding students?</Text>
-				<Description>Acceptable Answers here are "Y" or "N"</Description>
+				<Description>Acceptable Answers here are "Yes" or "No"</Description>
 			</Value>
 			<Value>
 				<Code>AC002</Code>

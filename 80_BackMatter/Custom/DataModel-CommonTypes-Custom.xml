@@ -976,15 +976,14 @@
 			</Description>
 			<Type ref="CommonTypes" name="NameOfRecordType"/>
 		</Item>
-		<!-- Leave this out for 2020 Collection <Item>
+		<Item>
 			<Element>AddressSameAsStudent</Element>
 			<Characteristics>M</Characteristics>
 			<Description>
 				<p>Is this address the same as the Student's?</p>
 			</Description>
 			<Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"/>
-
-		</Item>-->
+		</Item>
 	  <Item>
 			<Element>ParentAddress</Element>
 			<Characteristics>M</Characteristics>
