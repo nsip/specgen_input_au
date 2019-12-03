@@ -1331,15 +1331,20 @@
 			</Description>
 			<Type ref="CommonTypes" name="StaffActivityExtensionType"></Type>
 		  </Item>
- 		 
+ 		  <Item>
+			  <Element>IndigenousStatus</Element>
+			  <Characteristics>O</Characteristics>
+			  <Description>
+				<p>Whether or not the person identifies themselves as being of Aboriginal and/or Torres Strait Islander descent.</p>	     	</Description>
+			  <Type ref="CodeSets" name="AUCodeSetsIndigenousStatusType"/>
+		  </Item>
 		  <Item>
-			<Element>Demographics</Element>
+			<Element>Sex</Element>
 			<Characteristics>O</Characteristics>
-			<privacyRating>Low</privacyRating>
 			<Description>
-			  <p>Demographic information.</p>
+				<p>'Sex' is the distinction 'male'/'female'/'intersex', as reported by the person</p>
 			</Description>
-			<Type ref="CommonTypes" name="DemographicsType"/>
+			<Type ref="CodeSets" name="AUCodeSetsSexCodeType"/>
 		  </Item>
 		  <!-- Leave off StaffAssignment - no unit level for first release
 		  <Item>
@@ -1414,7 +1419,7 @@
 			<Element>CensusStudent</Element>
 			<Characteristics>MR</Characteristics>
 			<Description>
-				<p>The student being reported on.</p>
+				<p>The student cohort being reported on.</p>
 			</Description>
 			<Type ref="CommonTypes" name="CensusStudentType"/>
 		</Item>
@@ -1425,7 +1430,7 @@
 			<Element>CensusStudentType</Element>
 			<Characteristics>MR</Characteristics>
 			<Description>
-				<p>The student being reported on.</p>
+				<p>The student cohort being reported on.</p>
 			</Description>
 		</Item>
 		<Item>
@@ -1433,20 +1438,35 @@
 			<Characteristics>O</Characteristics>
 			<privacyRating>Low</privacyRating>
 			<Description>
-			  <p>A locally-assigned identifier for the entity being reported on.</p>
+			  <p>A locally-assigned identifier for the cohort being reported on.</p>
 			</Description>
 			<Type ref="CommonTypes" name="LocalIdType"></Type>
 		</Item>
-		<Item>
-			<Element>Demographics</Element>
-			<Characteristics>O</Characteristics>
-			<privacyRating>Low</privacyRating>
-			<Description>
-			  <p>Demographic information.</p>
-			</Description>
-			<Type ref="CommonTypes" name="DemographicsType"/>
-		  </Item>
-		  	<Item>
+			<Item>
+		<Element>IndigenousStatus</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Whether or not the person identifies themselves as being of Aboriginal and/or Torres Strait Islander descent.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsIndigenousStatusType"/>
+	</Item>
+	<Item>
+		<Element>Sex</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>'Sex' is the distinction 'male'/'female'/'intersex', as reported by the person</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsSexCodeType"/>
+	</Item>
+	<Item>
+		<Element>AustralianCitizenshipStatus</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The person's citizenship status.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsAustralianCitizenshipStatusType"/>
+	</Item>
+	<Item>
 		<Element>YearLevel</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
@@ -1476,6 +1496,7 @@
 		</Description>
 		<Type ref="CodeSets" name="AUCodeSetsFFPOSStatusCodeType"/>
 	</Item>
+	<!--
 	<Item>
       	<Element>OtherSchoolName</Element>
 		<Characteristics>O</Characteristics>
@@ -1484,6 +1505,7 @@
 		</Description>
 		<Type name="xs:normalizedString"/>
     </Item>
+-->
 	<Item>
 		<Element>DisabilityLevelOfAdjustment</Element>
 		<Characteristics>O</Characteristics>

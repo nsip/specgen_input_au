@@ -158,126 +158,86 @@
 				</EntityContact>
 				<CensusStaffList>
 				    <CensusStaff>
-						<!--JobFTE></JobFTE-->							<!-- Optional -->	
 						<PrimaryFTE>0.5</PrimaryFTE>					<!-- To be provided if known. -->				
 						<SecondaryFTE>0.5</SecondaryFTE>			<!-- To be provided if known. -->
 						<StaffActivity><Code>1100</Code></StaffActivity> <!-- Should be Mandatory for Census -->
-						<Demographics>
-							  <IndigenousStatus>4</IndigenousStatus>	<!-- Mandatory for Census, coded from the Data Standards Manual -->
-							  <Sex>1</Sex>								<!-- Should be Mandatory for Census -->
-						</Demographics>
+						<IndigenousStatus>4</IndigenousStatus>	<!-- Mandatory for Census, coded from the Data Standards Manual -->					  	   <Sex>1</Sex>								<!-- Should be Mandatory for Census -->
 						<Headcount>5</Headcount>
 				    </CensusStaff>
 					<CensusStaff>
-						<!--JobFTE></JobFTE-->							<!-- Optional  for Census -->	
 						<PrimaryFTE>1.0</PrimaryFTE>					<!-- To be provided if known. -->				
 						<SecondaryFTE>0</SecondaryFTE>			<!-- To be provided if known. -->
 						<StaffActivity><Code>1100</Code></StaffActivity> <!-- Should be Mandatory for Census -->
-						<Demographics>
-							  <IndigenousStatus>4</IndigenousStatus>	<!-- Mandatory for Census, coded from the Data Standards Manual -->
-							  <Sex>2</Sex>								<!-- Should be Mandatory for Census -->
-						</Demographics>
+    					<IndigenousStatus>4</IndigenousStatus>	<!-- Mandatory for Census, coded from the Data Standards Manual -->
+						<Sex>2</Sex>								<!-- Should be Mandatory for Census -->
 						<Headcount>6</Headcount>
 				    </CensusStaff>	
 				    <CensusStaff>
-						<!--JobFTE></JobFTE-->							<!-- Optional for Census -->	
 						<PrimaryFTE>0</PrimaryFTE>					<!-- To be provided if known. -->				
 						<SecondaryFTE>1</SecondaryFTE>			<!-- To be provided if known. -->
 						<StaffActivity><Code>1100</Code></StaffActivity> <!-- Should be Mandatory for Census -->
-						<Demographics>
-							  <IndigenousStatus>1</IndigenousStatus>	<!-- Mandatory for Census, coded from the Data Standards Manual -->
-							  <Sex>1</Sex>								<!-- Should be Mandatory for Census -->
-						</Demographics>
-						<Headcount>5</Headcount>
+  					    <IndigenousStatus>1</IndigenousStatus>	<!-- Mandatory for Census, coded from the Data Standards Manual -->
+						<Sex>1</Sex>								<!-- Should be Mandatory for Census -->
+ 						<Headcount>5</Headcount>
 				    </CensusStaff>				
 					<CensusStaff>
-						<!--JobFTE>1.0</JobFTE-->							<!-- Should be Mandatory for Census -->	
-						<PrimaryFTE>0.0</PrimaryFTE>					<!-- To be provided if known. -->				
+ 						<PrimaryFTE>0.0</PrimaryFTE>					<!-- To be provided if known. -->				
 						<SecondaryFTE>1.0</SecondaryFTE>			<!-- To be provided if known. -->
 						<StaffActivity><Code>1103</Code></StaffActivity> <!-- Should be Mandatory for Census -->
-						<Demographics>
-							  <IndigenousStatus>1</IndigenousStatus>	<!-- Mandatory for Census, coded from the Data Standards Manual -->
-							  <Sex>1</Sex>								<!-- Should be Mandatory for Census -->
-						</Demographics>
+ 					    <IndigenousStatus>1</IndigenousStatus>	<!-- Mandatory for Census, coded from the Data Standards Manual -->
+						<Sex>1</Sex>								<!-- Should be Mandatory for Census -->
 						<Headcount>1</Headcount>
 				    </CensusStaff>	
 				</CensusStaffList>
 				<CensusStudentList>
 					<CensusStudent>
-						<Demographics>
-						  <IndigenousStatus>1</IndigenousStatus>		<!-- Should be Mandatory for Census -->	
-						  <Sex>1</Sex>									<!-- Should be Mandatory for Census -->	
-						  <AustralianCitizenshipStatus>2</AustralianCitizenshipStatus>  <!--Should be Mandatory for Census-->
-						  <VisaSubClass>101</VisaSubClass>				<!-- Should be Mandatory for Census, this enumeration is in Union with 'string' -->	
-						</Demographics>
-
+						<IndigenousStatus>1</IndigenousStatus>		<!-- Should be Mandatory for Census -->	
+						<Sex>1</Sex>									<!-- Should be Mandatory for Census -->	
+						<AustralianCitizenshipStatus>2</AustralianCitizenshipStatus>  <!--Should be Mandatory for Census-->
 						<YearLevel><Code>7</Code></YearLevel>		<!-- Should be Mandatory for Census -->	
 						<FTE>1.0</FTE>								<!-- Should be Mandatory for Census -->	
 						<FFPOS>1</FFPOS>							<!-- If an overseas student, Mandatory for Census -->	
-						
-						<OtherSchoolName>St Francis Xavier</OtherSchoolName>   <!-- Optional for Census? -->
 						<CensusAge>13</CensusAge>						<!-- Should be Mandatory for Census -->	
 						<DistanceEducationStudent>N</DistanceEducationStudent> <!-- Should be Mandatory for Census status of studing distance ed subects. -->
 						<BoardingStatus>D</BoardingStatus> <!-- Should be Mandatory for Census D=Day, B-Boarding -->
 						<Headcount>1</Headcount>
-
-							
 					</CensusStudent>
 					<CensusStudent>
-						<Demographics>
-						  <IndigenousStatus>1</IndigenousStatus>		<!-- Should be Mandatory for Census -->	
-						  <Sex>2</Sex>									<!-- Should be Mandatory for Census -->	
-						  <AustralianCitizenshipStatus>2</AustralianCitizenshipStatus>  <!--Should be Mandatory for Census-->
-						  <VisaSubClass>101</VisaSubClass>				<!-- Should be Mandatory for Census, this enumeration is in Union with 'string' -->	
-						</Demographics>
-
+ 					    <IndigenousStatus>1</IndigenousStatus>		<!-- Should be Mandatory for Census -->	
+						<Sex>2</Sex>									<!-- Should be Mandatory for Census -->	
+						<AustralianCitizenshipStatus>2</AustralianCitizenshipStatus>  <!--Should be Mandatory for Census-->
 						<YearLevel><Code>7</Code></YearLevel>		<!-- Should be Mandatory for Census -->	
 						<FTE>1.0</FTE>								<!-- Should be Mandatory for Census -->	
 						<FFPOS>1</FFPOS>							<!-- If an overseas student, Mandatory for Census -->	
-						
-						<OtherSchoolName>St Francis Xavier</OtherSchoolName>   <!-- Optional for Census? -->
 						<CensusAge>13</CensusAge>						<!-- Should be Mandatory for Census -->	
 						<DistanceEducationStudent>N</DistanceEducationStudent> <!-- Should be Mandatory for Census status of studing distance ed subects. -->
 						<BoardingStatus>D</BoardingStatus> <!-- Should be Mandatory for Census D=Day, B-Boarding -->
 						<Headcount>1</Headcount>
-
 					</CensusStudent>	
 					<CensusStudent>
-						<Demographics>
-						  <IndigenousStatus>4</IndigenousStatus>		<!-- Should be Mandatory for Census -->	
-						  <Sex>1</Sex>									<!-- Should be Mandatory for Census -->	
-						  <AustralianCitizenshipStatus>2</AustralianCitizenshipStatus>  <!--Should be Mandatory for Census-->
-						</Demographics>							<YearLevel><Code>7</Code></YearLevel>		<!-- Should be Mandatory for Census -->	
+  					    <IndigenousStatus>4</IndigenousStatus>		<!-- Should be Mandatory for Census -->	
+						<Sex>1</Sex>									<!-- Should be Mandatory for Census -->	
+						<AustralianCitizenshipStatus>2</AustralianCitizenshipStatus>  <!--Should be Mandatory for Census-->
 						<FTE>1.0</FTE>								<!-- Should be Mandatory for Census -->	
 						<FFPOS>2</FFPOS>							<!-- If an overseas student, Mandatory for Census -->	
-						
-						<OtherSchoolName>St Francis Xavier</OtherSchoolName>   <!-- Optional for Census? -->
 						<CensusAge>13</CensusAge>						<!-- Should be Mandatory for Census -->	
 						<DistanceEducationStudent>N</DistanceEducationStudent> <!-- Should be Mandatory for Census status of studing distance ed subects. -->
 						<BoardingStatus>D</BoardingStatus> <!-- Should be Mandatory for Census D=Day, B-Boarding -->
 						<Headcount>120</Headcount>
-
 					</CensusStudent>
 					<CensusStudent>
-						<Demographics>
-						  <IndigenousStatus>1</IndigenousStatus>		<!-- Should be Mandatory for Census -->	
-						  <Sex>1</Sex>									<!-- Should be Mandatory for Census -->	
-						  <AustralianCitizenshipStatus>2</AustralianCitizenshipStatus>  <!--Should be Mandatory for Census-->
-						  <VisaSubClass>101</VisaSubClass>				<!-- Should be Mandatory for Census, this enumeration is in Union with 'string' -->	
-						</Demographics>
- 
+						<IndigenousStatus>1</IndigenousStatus>		<!-- Should be Mandatory for Census -->	
+						<Sex>1</Sex>									<!-- Should be Mandatory for Census -->	
+						<AustralianCitizenshipStatus>2</AustralianCitizenshipStatus>  <!--Should be Mandatory for Census-->
 						<YearLevel><Code>7</Code></YearLevel>		<!-- Should be Mandatory for Census -->	
 						<FTE>1.0</FTE>								<!-- Should be Mandatory for Census -->	
 						<FFPOS>1</FFPOS>							<!-- If an overseas student, Mandatory for Census -->	
-						
-						<OtherSchoolName>St Francis Xavier</OtherSchoolName>   <!-- Optional for Census? -->
 						<DisabilityLevelOfAdjustment>Substantial</DisabilityLevelOfAdjustment> <!-- If an adjustment has been made, Mandatory for Census -->
 						<DisabilityCategory>Sensory</DisabilityCategory> <!-- If an adjustment has been made, Mandatory for Census -->
 						<CensusAge>13</CensusAge>						<!-- Should be Mandatory for Census -->	
 						<DistanceEducationStudent>N</DistanceEducationStudent> <!-- Should be Mandatory for Census status of studing distance ed subects. -->
 						<BoardingStatus>D</BoardingStatus> <!-- Should be Mandatory for Census D=Day, B-Boarding -->
 						<Headcount>1</Headcount>
- 
 					</CensusStudent>
 				</CensusStudentList>
 		  </CensusReporting>
