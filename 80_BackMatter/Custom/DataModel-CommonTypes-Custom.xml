@@ -8225,6 +8225,23 @@
 		<Type ref="CommonTypes" name="IdRefType"/>
 	</Item>
 </CommonElement>
+<CommonElement name="AccountCodeListType" type="true" dm="true">
+	<Item>
+		<Element>AccountCodeListType</Element>
+		<Description>
+			<p>List offinancial account codes.</p>
+		</Description>
+		<List mode="List"/>
+	</Item>
+	<Item>
+		<Element>AccountCode</Element>
+		<Characteristics>OR</Characteristics>
+		<Description>
+			<p>Chart of account code associated with the invoice, can include program-sub-program etc.</p>
+		</Description>
+		<Type name="xs:token"/>
+	</Item>
+</CommonElement>
 <CommonElement name="PasswordListType" type="true" dm="true">
 	<Item>
 		<Element>PasswordListType</Element>

@@ -17,7 +17,6 @@
      </Description>
   </Item>
   <Item>
-
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
     <privacyRating>High</privacyRating>
@@ -26,10 +25,8 @@
     </Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
   </Item>
-
   <Item>
     <Element>ParentAccountRefId</Element>
-
     <Characteristics>O</Characteristics>
     <privacyRating>High</privacyRating>
     <Description>
@@ -40,7 +37,6 @@
   
   <Item>
     <Element>ChargedLocationInfoRefId</Element>
-    
     <Characteristics>O</Characteristics>
     <privacyRating>High</privacyRating>
     <Description>
@@ -48,7 +44,6 @@
     </Description>
     <Type ref="CommonTypes" name="IdRefType"></Type>
   </Item>
-  
   <Item>
     <Element>AccountNumber</Element>
     <Characteristics>M</Characteristics>
@@ -58,10 +53,8 @@
     </Description>
     <Type name="xs:normalizedString"></Type>
   </Item>
-
   <Item>
     <Element>Name</Element>
-
     <Characteristics>M</Characteristics>
     <privacyRating>High</privacyRating>
     <Description>
@@ -69,7 +62,6 @@
     </Description>
     <Type name="xs:normalizedString"></Type>
   </Item>
-
   <Item>
     <Element>Description</Element>
     <Characteristics>O</Characteristics>
@@ -79,7 +71,6 @@
     </Description>
     <Type name="xs:normalizedString"></Type>
   </Item>
-
   <Item>
     <Element>ClassType</Element>
     <Characteristics>M</Characteristics>
@@ -102,7 +93,15 @@
       </Value>
     </Values>
   </Item>
-  
+  <!-- Added for DET Vic requirements post 3.4.5) -->
+  <Item>
+	<Element>AccountCode</Element>
+	<Characteristics>O</Characteristics>
+	<Description>
+		<p>Account code charged to this item.</p>
+	</Description>
+	<Type name="xs:token"/>
+	</Item>
   <Item>
     <Element>CreationDate</Element>
     <Characteristics>M</Characteristics>
@@ -112,9 +111,7 @@
     </Description>
     <Type name="xs:date"></Type>
   </Item>
-  
-
-    <Item>
+  <Item>
       <Element>CreationTime</Element>
       <Characteristics>M</Characteristics>
       <privacyRating>High</privacyRating>
@@ -122,8 +119,7 @@
         <p>Account creation time.</p>
       </Description>
       <Type name="xs:time"></Type>
-    </Item>
-    
+  </Item>
   <Item>   
     <Element>LocalCodeList</Element>
     <Characteristics>O</Characteristics>
@@ -150,8 +146,7 @@
       <ClassType>Asset</ClassType>
       <CreationDate>2003-01-01</CreationDate>
       <CreationTime>04:32:23-08:00</CreationTime> 
+      <AccountCode>001-002-0034</AccountCode>
     </FinancialAccount>
-    
-
   </xhtml:Example>
 </DataObject>

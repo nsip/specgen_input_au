@@ -16,7 +16,6 @@
     </Description>
   </Item>
   <Item>
-
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
 	<privacyRating>Low</privacyRating>
@@ -63,8 +62,6 @@
     </Description>
     <Type ref="CommonTypes" name="LocalIdType"></Type>
   </Item>
-  
-
   <Item>
     <Element>BillingDate</Element>
     <Characteristics>M</Characteristics>
@@ -74,8 +71,6 @@
     </Description>
     <Type name="xs:date"></Type>
   </Item>
-
-
   <Item>
     <Element>TransactionDescription</Element>
     <Characteristics>M</Characteristics>
@@ -85,8 +80,6 @@
     </Description>
     <Type name="xs:normalizedString"></Type>
   </Item>
-  
-
   <Item>
     <Element>BilledAmount</Element>
     <Characteristics>M</Characteristics>
@@ -96,9 +89,6 @@
     </Description>
     <Type ref="CommonTypes" name="DebitOrCreditAmountType"></Type>
   </Item>
-  
-
-
   <Item>
     <Element>Ledger</Element>
     <Characteristics>M</Characteristics>
@@ -118,7 +108,6 @@
       </Value>
     </Values>
   </Item>
-
   <Item>
     <Element>ChargedLocationInfoRefId</Element>
     <Characteristics>O</Characteristics>
@@ -128,7 +117,6 @@
     </Description>
     <Type ref="CommonTypes" name="IdRefType"></Type>
   </Item>
-  
   <Item>
     <Element>NetAmount</Element>
     <Characteristics>O</Characteristics>
@@ -138,7 +126,6 @@
     </Description>
     <Type ref="CommonTypes" name="MonetaryAmountType"></Type>
   </Item>
-  
   <Item>
     <Element>TaxRate</Element>
     <Characteristics>O</Characteristics>
@@ -150,7 +137,6 @@
   </Item>
   <Item>
     <Element>TaxType</Element>
-
     <Characteristics>O</Characteristics>
 	<privacyRating>High</privacyRating>
     <Description>
@@ -158,7 +144,6 @@
     </Description>
     <Type name="xs:normalizedString"></Type>
   </Item>
-
   <Item>
     <Element>TaxAmount</Element>
     <Characteristics>O</Characteristics>
@@ -168,7 +153,6 @@
     </Description>
     <Type ref="CommonTypes" name="MonetaryAmountType"></Type>
   </Item>
-
   <Item>
     <Element>CreatedBy</Element>
     <Characteristics>O</Characteristics>
@@ -178,7 +162,6 @@
     </Description>
     <Type name="xs:normalizedString"></Type>
   </Item>
-
   <Item>
     <Element>ApprovedBy</Element>
     <Characteristics>O</Characteristics>
@@ -190,7 +173,6 @@
   </Item>
   <Item>
     <Element>ItemDetail</Element>
-
     <Characteristics>O</Characteristics>
 	<privacyRating>High</privacyRating>
     <Description>
@@ -207,7 +189,6 @@
     </Description>
     <Type name="xs:date"></Type>
   </Item>
-  
   <Item>
     <Element>FinancialAccountRefIdList</Element>
     <Characteristics>O</Characteristics>
@@ -215,14 +196,19 @@
     <Description>
       <p>List of RefIds of the Associated Financial Accounts.</p>
     </Description>
-    
     <Type ref="CommonTypes" name="FinancialAccountRefIdListType"></Type>
   </Item>
-  
-    
+ <Item>
+    <Element>AccountCodeList</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
+    <Description>
+      <p>List of Codes of the Associated Financial Accounts.</p>
+    </Description>
+    <Type ref="CommonTypes" name="AccountCodeListType"></Type>
+  </Item>  
   <Item>
     <Element>AccountingPeriod</Element>
-
     <Characteristics>O</Characteristics>
 	<privacyRating>Low</privacyRating>
     <Description>
@@ -230,10 +216,8 @@
     </Description>
     <Type ref="CommonTypes" name="LocalIdType"></Type>
   </Item>
-
   <Item>
     <Element>RelatedPurchaseOrderRefId</Element>
-
     <Characteristics>O</Characteristics>
 	<privacyRating>High</privacyRating>
     <Description>
@@ -241,7 +225,6 @@
     </Description>
     <Type ref="CommonTypes" name="IdRefType"></Type>
   </Item>
-  
   <Item>
     <Element>PurchasingItems</Element>    
     <Characteristics>O</Characteristics>
@@ -251,10 +234,8 @@
     </Description>
      <Type ref="CommonTypes" name="PurchasingItemsType"></Type>
   </Item>
-  
   <Item>
     <Element>Voluntary</Element>
-
     <Characteristics>O</Characteristics>
 	<privacyRating>High</privacyRating>
     <Description>
@@ -264,14 +245,12 @@
     </Description>
     <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
   </Item>
-
   <Item>   
     <Element>LocalCodeList</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>High</privacyRating>
     <Type ref="CommonTypes" name="LocalCodeListType"></Type>
   </Item>
-
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
@@ -301,7 +280,5 @@
       </FinancialAccountRefIdList>
       <AccountingPeriod>200004</AccountingPeriod>
     </Invoice>
-    
-
   </xhtml:Example>
 </DataObject>

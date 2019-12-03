@@ -46,6 +46,26 @@
   </Item>
   
   <Item>
+    <Element>DebitAccountCode</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
+    <Description>
+      <p>Account to debit.</p>
+    </Description>
+    <Type name="xs:token"></Type> 
+  </Item>
+  
+  <Item>
+    <Element>CreditAccountCode</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
+    <Description>
+      <p>Account to credit.</p>
+    </Description>
+    <Type name="xs:token"></Type> 
+  </Item>  
+  
+  <Item>
     <Element>OriginatingTransactionRefId</Element>    
     <Characteristics>O</Characteristics>
 	<privacyRating>High</privacyRating>
