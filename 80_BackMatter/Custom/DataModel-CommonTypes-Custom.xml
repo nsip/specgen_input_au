@@ -8225,11 +8225,12 @@
 		<Type ref="CommonTypes" name="IdRefType"/>
 	</Item>
 </CommonElement>
+<!--Added for Vic Gov finance additions post 3.4.5 -->
 <CommonElement name="AccountCodeListType" type="true" dm="true">
 	<Item>
 		<Element>AccountCodeListType</Element>
 		<Description>
-			<p>List offinancial account codes.</p>
+			<p>List of financial account codes.</p>
 		</Description>
 		<List mode="List"/>
 	</Item>
@@ -8241,6 +8242,100 @@
 		</Description>
 		<Type name="xs:token"/>
 	</Item>
+</CommonElement>
+<CommonElement name="JournalAdjustmentListType" type="true" dm="true">
+	<Item>
+		<Element>JournalAdjustmentListType</Element>
+		<Description>
+			<p>List of accounts that need adjustment.  To use this element - the journal must have an originating transaction.</p>
+		</Description>
+		<List mode="List"/>
+	</Item>
+	<Item>
+		<Element>JournalAdjustment</Element>
+		<Characteristics>OR</Characteristics>
+		<Description>
+			<p>Details of an adjustment.</p>
+		</Description>
+		<Type ref="CommonTypes" name="JournalAdjustmentType"/>
+	</Item>
+</CommonElement>
+<CommonElement name="JournalAdjustmentType" type="true" dm="true">
+	<Item>
+		<Element>JournalAdjustmentType</Element>
+		<Characteristics>OR</Characteristics>
+		<Description>
+			<p>Details of the Journal Adjustment.  There must be an originating transaction for this to be used.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>DebitFinancialAccountRefId</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+		  <p>RefId of account to debit.</p>
+		</Description>
+		<Type ref="CommonTypes" name="IdRefType"></Type>
+    </Item>
+  
+    <Item>
+		<Element>CreditFinancialAccountRefId</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+		  <p>RefId of account to credit.</p>
+		</Description>
+		<Type ref="CommonTypes" name="IdRefType"></Type>
+    </Item>
+  
+    <Item>
+		<Element>DebitAccountCode</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+		  <p>Account to debit.</p>
+		</Description>
+		<Type name="xs:token"></Type> 
+    </Item>
+  
+    <Item>
+		<Element>CreditAccountCode</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+		  <p>Account to credit.</p>
+		</Description>
+		<Type name="xs:token"></Type> 
+    </Item>  
+    <Item>
+		<Element>GSTCodeOriginal</Element>    
+		<Characteristics>O</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+		  <p>Original GST code for journal transfer (if required).</p>
+		</Description>
+		<Type name="xs:normalizedString"></Type>
+    </Item>
+  
+    <Item>
+		<Element>GSTCodeReplacement</Element>    
+		<Characteristics>O</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+		  <p>Replacement GST code for journal transfer (if required).</p>
+		</Description>
+		<Type name="xs:normalizedString"></Type>
+    </Item>
+  
+    <Item>
+		<Element>LineAdjustmentAmount</Element>    
+		<Characteristics>M</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+		  <p>Amount to transfer between the two accounts.</p>
+		</Description>
+		<Type ref="CommonTypes" name="MonetaryAmountType"></Type>
+    </Item>
 </CommonElement>
 <CommonElement name="PasswordListType" type="true" dm="true">
 	<Item>

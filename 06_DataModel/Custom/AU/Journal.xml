@@ -132,7 +132,15 @@
     </Description>
     <Type name="xs:normalizedString"></Type>
   </Item>
-  
+   <Item>
+    <Element>JournalAdjustmentList</Element>    
+    <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
+    <Description>
+      <p>Details of the Adjustment if it requires more than one line.</p>
+    </Description>
+    <Type ref="CommonTypes" name="JournalAdjustmentListType"></Type>
+  </Item>
   <Item>
     <Element>CreatedDate</Element>    
     <Characteristics>O</Characteristics>
