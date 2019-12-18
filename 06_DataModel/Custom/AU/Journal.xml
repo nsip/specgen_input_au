@@ -24,7 +24,15 @@
     </Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
   </Item>
-
+   <Item>
+    <Element>LocalId</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The Local Id of the journal.</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>
   <Item>
     <Element>DebitFinancialAccountRefId</Element>
     <Characteristics>M</Characteristics>
@@ -44,7 +52,7 @@
     </Description>
     <Type ref="CommonTypes" name="IdRefType"></Type>
   </Item>
-  
+
   <Item>
     <Element>DebitAccountCode</Element>
     <Characteristics>O</Characteristics>

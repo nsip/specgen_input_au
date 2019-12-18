@@ -13,7 +13,7 @@
 		
 		<!-- Comment this one out to leave out JSON Tabs -->
 		
-	    <jsonExamplesXslt>98_Xslt/xmlToJson.xsl</jsonExamplesXslt> 
+	    <jsonExamplesXslt>98_Xslt/sif2jsonspecgen.xslt</jsonExamplesXslt> 
 		
 		<resolveExtensions>false</resolveExtensions>
  

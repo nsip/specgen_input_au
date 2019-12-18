@@ -24,7 +24,15 @@
     </Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
   </Item>
-
+    <Item>
+    <Element>LocalId</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The Local Id of this Invoice.</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>
   <Item>
     <Element>InvoicedEntity</Element>
 

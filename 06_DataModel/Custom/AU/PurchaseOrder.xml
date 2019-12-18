@@ -25,7 +25,15 @@
     </Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
   </Item>
-
+  <Item>
+    <Element>LocalId</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The Local Id of this purchase order.</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>
   <Item>
     <Element>FormNumber</Element>
     <Characteristics>M</Characteristics>

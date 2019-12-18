@@ -26,6 +26,15 @@
     <Type ref="CommonTypes" name="RefIdType"></Type>
   </Item>
   <Item>
+    <Element>LocalId</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The Local Id of Financial Account.</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>
+  <Item>
     <Element>ParentAccountRefId</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>High</privacyRating>
@@ -34,7 +43,6 @@
     </Description>
     <Type ref="CommonTypes" name="IdRefType"></Type>
   </Item>
-  
   <Item>
     <Element>ChargedLocationInfoRefId</Element>
     <Characteristics>O</Characteristics>
@@ -44,6 +52,7 @@
     </Description>
     <Type ref="CommonTypes" name="IdRefType"></Type>
   </Item>
+
   <Item>
     <Element>AccountNumber</Element>
     <Characteristics>M</Characteristics>
@@ -93,15 +102,6 @@
       </Value>
     </Values>
   </Item>
-  <!-- Added for DET Vic requirements post 3.4.5) -->
-  <Item>
-	<Element>AccountCode</Element>
-	<Characteristics>O</Characteristics>
-	<Description>
-		<p>Account code charged to this item.</p>
-	</Description>
-	<Type name="xs:token"/>
-	</Item>
   <Item>
     <Element>CreationDate</Element>
     <Characteristics>M</Characteristics>
@@ -140,13 +140,13 @@
   </Item>
   <xhtml:Example xmlns="" name="FinancialAccount">
     <FinancialAccount RefId="EEC8FC12-8D2C-4EE3-94A8-6C5395024EDE">
+      <LocalId>89001</LocalId>
       <AccountNumber>9990001</AccountNumber>
       <Name>Purchased Foods</Name>
       <Description>Purchased Foods</Description>
       <ClassType>Asset</ClassType>
       <CreationDate>2003-01-01</CreationDate>
       <CreationTime>04:32:23-08:00</CreationTime> 
-      <AccountCode>001-002-0034</AccountCode>
     </FinancialAccount>
   </xhtml:Example>
 </DataObject>

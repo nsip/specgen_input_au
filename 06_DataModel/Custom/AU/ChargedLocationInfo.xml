@@ -25,7 +25,6 @@
     </Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
   </Item>
-
   <Item>
     <Element>LocationType</Element>
     <Characteristics>M</Characteristics>
@@ -79,8 +78,6 @@
     </Description>
     <Type name="xs:normalizedString"></Type>
   </Item>
-
-
   <Item>
     <Element>LocalId</Element>
     <Characteristics>O</Characteristics>

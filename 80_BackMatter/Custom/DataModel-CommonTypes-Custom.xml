@@ -7356,6 +7356,15 @@
 		<Type name="xs:normalizedString"/>
 	</Item>
 	<Item>
+		<Element>LocalItemId</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+		  <p>The Local Id of this purchasing item.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"></Type>
+    </Item>
+	<Item>
 		<Element>Quantity</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
