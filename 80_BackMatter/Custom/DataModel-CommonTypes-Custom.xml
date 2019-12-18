@@ -8279,7 +8279,7 @@
 	</Item>
 	<Item>
 		<Element>DebitFinancialAccountRefId</Element>
-		<Characteristics>M</Characteristics>
+		<Characteristics>O</Characteristics>
 		<privacyRating>High</privacyRating>
 		<Description>
 		  <p>RefId of account to debit.</p>
@@ -8289,7 +8289,7 @@
   
     <Item>
 		<Element>CreditFinancialAccountRefId</Element>
-		<Characteristics>M</Characteristics>
+		<Characteristics>O</Characteristics>
 		<privacyRating>High</privacyRating>
 		<Description>
 		  <p>RefId of account to credit.</p>
@@ -8346,6 +8346,26 @@
 		<Type ref="CommonTypes" name="MonetaryAmountType"></Type>
     </Item>
 </CommonElement>
+
+<CommonElement name="InvoiceRefIdfListType" type="true" dm="true">
+	<Item>
+		<Element>InvoiceRefIdfListType</Element>
+		<Description>
+			<p>List Invoice RefId's associated with this payment if more than one required.</p>
+		</Description>
+		<List mode="List"/>
+	</Item>
+  <Item>
+    <Element>InvoiceRefId</Element>    
+    <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
+    <Description>
+      <p>A pointer back to the Invoice object corresponding to this payment. Is omitted for general ledger transactions, creditor receipts and debtor payments.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+ </CommonElement>
+ 
 <CommonElement name="PasswordListType" type="true" dm="true">
 	<Item>
 		<Element>PasswordListType</Element>
