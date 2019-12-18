@@ -145,6 +145,7 @@
       <Name>Purchased Foods</Name>
       <Description>Purchased Foods</Description>
       <ClassType>Asset</ClassType>
+      <AccountCode>001-002-0034</AccountCode>
       <CreationDate>2003-01-01</CreationDate>
       <CreationTime>04:32:23-08:00</CreationTime> 
     </FinancialAccount>
