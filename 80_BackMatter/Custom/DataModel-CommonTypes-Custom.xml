@@ -8347,25 +8347,111 @@
     </Item>
 </CommonElement>
 
-<CommonElement name="InvoiceRefIdfListType" type="true" dm="true">
+<CommonElement name="PaymentReceiptLineListType" type="true" dm="true">
 	<Item>
-		<Element>InvoiceRefIdfListType</Element>
+		<Element>PaymentReceiptLineListType</Element>
 		<Description>
-			<p>List Invoice RefId's associated with this payment if more than one required.</p>
+			<p>List Invoices and reference information associated with this payment if more than one required.</p>
 		</Description>
 		<List mode="List"/>
 	</Item>
   <Item>
-    <Element>InvoiceRefId</Element>    
-    <Characteristics>O</Characteristics>
+    <Element>PaymentReceiptLine</Element>    
+    <Characteristics>OR</Characteristics>
 	<privacyRating>High</privacyRating>
     <Description>
       <p>A pointer back to the Invoice object corresponding to this payment. Is omitted for general ledger transactions, creditor receipts and debtor payments.</p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Type ref="CommonTypes" name="PaymentReceiptLineType"></Type>
   </Item>
  </CommonElement>
  
+ <CommonElement name="PaymentReceiptLineType" type="true" dm="true">
+	<Item>
+		<Element>PaymentReceiptLineType</Element>
+		<Description>
+			<p>Reference information associated with this payment line.</p>
+		</Description>
+	</Item>
+    <Item>
+      <Element>InvoiceRefId</Element>    
+      <Characteristics>O</Characteristics>
+	  <privacyRating>High</privacyRating>
+      <Description>
+      <p>A pointer back to the Invoice object corresponding to this payment. Is omitted for general ledger transactions, creditor receipts and debtor payments.</p>
+      </Description>
+      <Type ref="CommonTypes" name="IdRefType"/>
+    </Item>
+    <Item>
+      <Element>LocalId</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+      <p>The Local Id of the invoice associated with the payment.</p>
+      </Description>
+      <Type ref="CommonTypes" name="LocalIdType"></Type>
+    </Item>
+	<Item>
+      <Element>LocalPaymentReceiptLineId</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+      <p>The Local Id of the Payment Receipt Line.</p>
+      </Description>
+      <Type ref="CommonTypes" name="LocalIdType"></Type>
+    </Item>    
+    <Item>
+		<Element>TransactionAmount</Element>   
+		<Characteristics>M</Characteristics>
+		<Description>
+		  <p>Line amount.</p>
+		</Description>
+		<Type ref="CommonTypes" name="DebitOrCreditAmountType"></Type>
+    </Item>
+    <Item>
+		<Element>FinancialAccountRefId</Element>   
+		<Characteristics>O</Characteristics>
+		<Description>
+		  <p>Financial Account link via RefId.</p>
+		</Description>
+		<Type ref="CommonTypes" name="IdRefType"></Type>
+    </Item> 
+    <Item>
+		<Element>AccountCode</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Account code charged to this item.</p>
+		</Description>
+		<Type name="xs:token"/>
+	</Item>
+	  <Item>
+    <Element>TransactionDescription</Element>   
+    <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
+    <Description>
+      <p>Description of the transaction line.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  <Item>
+    <Element>TaxRate</Element>    
+    <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
+    <Description>
+      <p>Rate of tax included in the billed line amount.</p>
+    </Description>
+    <Type name="xs:decimal"></Type>
+  </Item>
+  <Item>
+    <Element>TaxAmount</Element>    
+    <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
+    <Description>
+      <p>Amount of tax included in the billed line amount.</p>
+    </Description>
+    <Type ref="CommonTypes" name="MonetaryAmountType"></Type>
+  </Item>
+ </CommonElement>
+
 <CommonElement name="PasswordListType" type="true" dm="true">
 	<Item>
 		<Element>PasswordListType</Element>

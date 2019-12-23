@@ -92,13 +92,13 @@
     <Type ref="CommonTypes" name="IdRefType"></Type>
   </Item>
   <Item>
-    <Element>InvoiceRefIdList</Element>    
+    <Element>PaymentReceiptLineList</Element>    
     <Characteristics>O</Characteristics>
 	<privacyRating>High</privacyRating>
     <Description>
-      <p>A a list of pointers back to the Invoice object corresponding to this payment. Is omitted for general ledger transactions, creditor receipts and debtor payments. To be used when this payment is associated with more than one invoice.</p>
+      <p>A List of pointers back to the Invoice object corresponding to this payment. Is omitted for general ledger transactions, creditor receipts and debtor payments. To be used when this payment is associated with more than one invoice.</p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Type ref="CommonTypes" name="PaymentReceiptLineListType"></Type>
   </Item>
   <Item>
     <Element>VendorInfoRefId</Element>    
@@ -149,8 +149,6 @@
     </Description>
     <Type ref="CommonTypes" name="DebitOrCreditAmountType"></Type>
   </Item>
-   
-  
   <Item>
     <Element>ReceivedTransactionId</Element>   
     <Characteristics>M</Characteristics>
@@ -160,12 +158,8 @@
     </Description>
     <Type name="xs:normalizedString"></Type>
   </Item>
-  
- 
-  
   <Item>
     <Element>FinancialAccountRefIdList</Element>
-    
     <Characteristics>O</Characteristics>
 	<privacyRating>High</privacyRating>
     <Description>
@@ -175,7 +169,6 @@
   </Item>
   <Item>
     <Element>AccountCodeList</Element>
-    
     <Characteristics>O</Characteristics>
 	<privacyRating>High</privacyRating>
     <Description>
@@ -192,7 +185,6 @@
     </Description>
     <Type name="xs:normalizedString"></Type>
   </Item>
-  
   <Item>
     <Element>TaxRate</Element>    
     <Characteristics>O</Characteristics>
@@ -202,7 +194,6 @@
     </Description>
     <Type name="xs:decimal"></Type>
   </Item>
-  
   <Item>
     <Element>TaxAmount</Element>    
     <Characteristics>O</Characteristics>
@@ -212,7 +203,6 @@
     </Description>
     <Type ref="CommonTypes" name="MonetaryAmountType"></Type>
   </Item>
-  
   <Item>
     <Element>TransactionMethod</Element>    
     <Characteristics>O</Characteristics>

@@ -35,7 +35,6 @@
   </Item>
   <Item>
     <Element>InvoicedEntity</Element>
-
     <Characteristics>M</Characteristics>
 	<privacyRating>High</privacyRating>
     <Description>

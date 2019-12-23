@@ -100,8 +100,19 @@
       <Value>
         <Code>Expense</Code>
       </Value>
+      <Value>
+        <Code>Other</Code>
+      </Value>
     </Values>
   </Item>
+  	<Item>
+		<Element>AccountCode</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Account code charged to this item.</p>
+		</Description>
+		<Type name="xs:token"/>
+	</Item>
   <Item>
     <Element>CreationDate</Element>
     <Characteristics>M</Characteristics>
