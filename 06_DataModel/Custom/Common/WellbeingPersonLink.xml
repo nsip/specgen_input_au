@@ -18,6 +18,15 @@
 		<Type ref="CommonTypes" name="RefIdType"/>
 		
 	</Item>
+    <Item>
+		<Element>LocalId</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+		  <p>The Local Id of this this WellbeingPersonLink.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"></Type>
+    </Item>
 	<Item>
 		<Element>WellbeingEventRefId</Element>
 		<Characteristics>M</Characteristics>
