@@ -496,6 +496,8 @@
 		  <Value><Code>S</Code><Text>Special Needs</Text></Value>
 		  <Value><Code>L</Code><Text>Legal</Text></Value>
 		  <Value><Code>O</Code><Text>Other</Text></Value>
+		  <Value><Code>W</Code><Text>Welfare</Text></Value>
+		  <Value><Code>R</Code><Text>Risk</Text></Value>
       </Values>
    </CodeSet>       
    <CodeSet>
