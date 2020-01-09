@@ -27,6 +27,15 @@
     <Type ref="CommonTypes" name="RefIdType"></Type>
   </Item>
   <Item>
+    <Element>LocalId</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The Local Id of this WellbeingResponse.</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>
+  <Item>
     <Element>StudentPersonalRefId</Element>
     <Characteristics>M</Characteristics>
 	<privacyRating>High</privacyRating>
