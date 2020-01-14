@@ -9,7 +9,7 @@
 		<inputDocument>SIF_DataModel.xml</inputDocument>
 		<sifNamespace>http://www.sifassociation.org/datamodel/au/3.4</sifNamespace>
 		<localizationCode>au</localizationCode>
-		<schemaVersion>3.4.5X</schemaVersion>
+		<schemaVersion>3.4.6</schemaVersion>
 		
 		<!-- Comment this one out to leave out JSON Tabs -->
 		
@@ -30,7 +30,7 @@
 		<htmlDocument>
 			<singleDocument>false</singleDocument>
 			<rootDocumentFileName>index.html</rootDocumentFileName>
-			<rootTitle>SIF Implementation Specification (Australia) 3.4.5X</rootTitle>
+			<rootTitle>SIF Implementation Specification (Australia) 3.4.6</rootTitle>
 			<documentType>DataModel</documentType>
 		</htmlDocument>
 		
@@ -38,7 +38,7 @@
 		<htmlDocument>
 			<singleDocument>true</singleDocument>
 			<rootDocumentFileName>ImplementationSpecification.html</rootDocumentFileName>
-			<rootTitle>SIF Implementation Specification (Australia) 3.4.5X</rootTitle>
+			<rootTitle>SIF Implementation Specification (Australia) 3.4.6</rootTitle>
 			<documentType>DataModel</documentType>
 		</htmlDocument>
 		
@@ -134,7 +134,7 @@
 		<xsltTransformation>
 			<xsltInputFile></xsltInputFile>
 			<xsltOutputDir>JSON</xsltOutputDir>
-			<xsltOutputFile>sif2JsonLM.xsl</xsltOutputFile>
+			<xsltOutputFile>sif2jsonspecgen.xslt</xsltOutputFile>
 			<yamlToJson>false</yamlToJson>
 		</xsltTransformation>
 	</xsltTransformations>
