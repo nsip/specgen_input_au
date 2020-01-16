@@ -16,7 +16,7 @@
 		</Description>
 		<Type ref="CommonTypes" name="RefIdType"/>
 	</Item>
-	
+	<!--Option2 
 	<Item>
 		<Element>TimeTable</Element>
 		<Characteristics>O</Characteristics>
@@ -43,8 +43,8 @@
 		</Description>
 		<Type ref="CommonTypes" name="TeachingGroupCollectionType"/>
 	</Item>  
-	
-	<!-- Option 1 
+	-->
+	<!-- Option 1 -->
 	<Item>
 		<Element>TimeTableSchedule</Element>
 		<Characteristics>O</Characteristics>
@@ -67,7 +67,7 @@
 		<Description>All the Teaching Groups that belong to this TimeTable.</Description>
 		<Type ref="CommonTypes" name="TimeTableScheduleCellListType"/>
 	</Item>
--->
+ 
 	<Item>
 		<Element>LocalCodeList</Element>
 		<Characteristics>O</Characteristics>

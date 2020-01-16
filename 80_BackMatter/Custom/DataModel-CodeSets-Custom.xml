@@ -890,6 +890,10 @@
 		  <Code>X</Code>
 		  <Text>No Longer Enrolled</Text>
 		</Value>
+		<Value>
+		  <Code>F</Code>
+		  <Text>Alternate Format</Text>
+		</Value>
       </Values>
     </CodeSet>   
 	<CodeSet>

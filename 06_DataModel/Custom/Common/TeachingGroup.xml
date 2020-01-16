@@ -179,9 +179,24 @@
     <Type ref="CommonTypes" name="LocalIdType"></Type>
   </Item>
   
+   <Item>
+    <Element>KeyLearningArea</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Semester, Term, or Quarter subject offered.</p>
+    </Description>
+    <Union>
+		<Type ref="CodeSets" name="AUCodeSetsACStrand"></Type>
+		<Values>
+		<Value><Code>ReligousStudies</Code></Value>
+		<Value><Code>Other</Code></Value>
+		</Values>
+	</Union>	
+  </Item>
+  
   <Item>
     <Element>Semester</Element>
-
     <Characteristics>O</Characteristics>
 	<privacyRating>Low</privacyRating>
     <Description>
@@ -192,7 +207,6 @@
   
   <Item>
     <Element>StudentList</Element>
-
     <Characteristics>O</Characteristics>
 	<privacyRating>Medium</privacyRating>
     <Description>
@@ -203,7 +217,6 @@
 
   <Item>
     <Element>TeacherList</Element>
-
     <Characteristics>O</Characteristics>
 	<privacyRating>Medium</privacyRating>
     <Description>
@@ -234,7 +247,6 @@
 
   <Item>
     <Element>TeachingGroupPeriodList</Element>
-
     <Characteristics>O</Characteristics>
 	<privacyRating>Low</privacyRating>
     <Description>
