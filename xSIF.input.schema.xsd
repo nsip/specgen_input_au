@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 2 (x64) (http://www.altova.com) by Vince Paredes (SIF Association) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xhtml="http://www.w3.org/1999/xhtml" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="SIFSpecification">
+		<xs:annotation>
+			<xs:documentation>Describes the SIF Generator input xml. This is experimental at this time.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="BuildComment">
+					<xs:complexType/>
+				</xs:element>
+				<xs:element name="TitlePage"/>
+		<xs:element name="Section">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="any" block="" minOccurs="0"/>
+				<xs:element name="Section" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="CommonElements" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="Intro"/>
+							<xs:element name="CommonElement">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element ref="Item" maxOccurs="unbounded"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="DataObjects" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="IncludeGroup">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Group">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="DataObject">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element ref="Intro" minOccurs="0"/>
+																<xs:element name="Key" minOccurs="0"/>
+																<xs:element name="EventsReported" minOccurs="0"/>
+																<xs:element ref="Item" maxOccurs="unbounded"/>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="name"/>
+		</xs:complexType>
+	</xs:element>
+				<xs:element name="Appendix" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="Intro"/>
+							<xs:element name="CommonElement">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element ref="Item"/>
+										<xs:element name="Example"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="name"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+		
+	<xs:element name="Intro" type="xs:anyType"/>
+	<xs:element name="Type">
+		<xs:complexType>
+			<xs:attribute name="ref"/>
+			<xs:attribute name="name" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Item">
+		<xs:annotation>
+			<xs:documentation>The order of the child elements may need to be standardized in the input xml</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Element" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Use Element or Attribute but not both.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Attribute" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Use Element or Attribute but not both.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Description" type="xs:anyType"/>
+				<xs:element ref="Type"/>
+				<xs:element name="Facets" type="xs:anySimpleType" minOccurs="0"/>
+				<xs:element name="Union" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+						<!-- If I want a union with a type and values will need to reduce minOccurs from "2" to "1" -->
+							<xs:element name="Type" minOccurs="1" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:attribute name="ref"/>
+									<xs:attribute name="name" use="required"/>
+								</xs:complexType>
+							</xs:element>
+							<!-- added as a test to include values in a union -->
+						    <xs:element name="Values" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Value" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Code"/>
+													<xs:element name="Text" minOccurs="0"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Values" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Value" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Code"/>
+										<xs:element name="Text" minOccurs="0"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Characteristics" type="xs:token" minOccurs="0"/>
+				<xs:element name="Choice" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Type" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:attribute name="ref"/>
+									<xs:attribute name="name" use="required"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="ItemExample" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="List" minOccurs="0">
+					<xs:complexType>
+						<xs:attribute name="mode">
+							<xs:annotation>
+								<xs:documentation>Values: List,...</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	</xs:element>
+	
+</xs:schema>

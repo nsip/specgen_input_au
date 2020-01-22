@@ -420,7 +420,7 @@
     <Characteristics>O</Characteristics>
 	<privacyRating>Low</privacyRating>
     <Description>
-      <p>An optional placeholder for a schools time zone.</p>
+      <p>An optional placeholder for a school's time zone.</p>
     </Description>
     <Type ref="CodeSets" name="AUCodeSetsAustralianTimeZoneType"></Type>
   </Item>

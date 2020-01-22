@@ -65,7 +65,7 @@
 		<Characteristics>O</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>All the Teaching Groups that belong to this TimeTable.</Description>
-		<Type ref="CommonTypes" name="TimeTableScheduleCellListType"/>
+		<Type ref="CommonTypes" name="TeachingGroupScheduleType"/>
 	</Item>
  
 	<Item>

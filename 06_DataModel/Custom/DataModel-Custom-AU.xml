@@ -26,7 +26,8 @@
 		<xi:include parse="text" href="Common/Identity.xml"/>
 		
 				<!--P POD -->
-		<xi:include parse="text" href="Common/PersonPrivacyObligation.xml"/>  
+				<!-- NOT FOR RELEASE IN 3.4.6 
+		<xi:include parse="text" href="Common/PersonPrivacyObligation.xml"/>  -->
 	</Group>
 
 	<Group name="Activity">	

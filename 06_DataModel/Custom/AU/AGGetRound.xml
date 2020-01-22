@@ -1,4 +1,4 @@
-<DataObject name="AGGetRounds"
+<DataObject name="AGGetRound"
 			xmlns:xs="http://www.w3.org/2001/XMLSchema"
 			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 			xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -9,10 +9,10 @@
   <Key>@RefId</Key>
   <EventsReported>true</EventsReported>
   <Item>
-    <Element>AGGetRounds</Element>
+    <Element>AGGetRound</Element>
 	<privacyRating>High</privacyRating>
     <Description>
-      <p>Object reporting the rounds available for submission of a particular Australian Government, (AG), Collections. Object is published by the Australian Government collections hub.</p>
+      <p>Object reporting the rounds available for submission of a particular Australian Government (AG) Collection. Object is published by the Australian Government Schools hub.</p>
      </Description>
   </Item>
   <Item>
@@ -71,7 +71,7 @@
   </Item>
   
 <xhtml:Example xmlns="" name="AGGetRounds">
-<AGGetRounds RefId="D3E34B35-9D75-101A-8C3D-00AA001A1652">
+<AGGetRound RefId="D3E34B35-9D75-101A-8C3D-00AA001A1652">
   <AGCollection>STATS1</AGCollection>
   <CollectionYear>2018</CollectionYear>
   <AGRoundList>
@@ -90,5 +90,5 @@
 		<EndDate>2019-12-31</EndDate>
 	</AGRound>
   </AGRoundList>  
-</AGGetRounds>
+</AGGetRound>
 </xhtml:Example></DataObject>

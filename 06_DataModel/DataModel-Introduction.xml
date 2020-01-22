@@ -220,6 +220,9 @@ If an element is not included in the payload of an Update operation, its value i
 
 In addition, if the payload contains the RefId/UUID only, the consumer must assume that object to be DELETED or that it has been deleted since the original request was made.
 </p>
+<Section name="JSON Validation">
+<p>No Validation mechanism/schema is currently defined for SIF JSON, but that SIF JSON is intended to be a one-to-one mapping from SIF XML</p>
+</Section>
 </Section>
 <Section name="Local Code Set Validation">
 <p>In SIF AU 3.4.5 we introduce a method of augmenting code sets with local values without 'breaking changes'. Future releases will add "OtherCodeListType" to each code set and in-line enumerations will also be typed to allow for extensions.  Every Object in SIF AU 3.4.5 has a LocalCodeType which will allow extensions to, but does not replace, current validation set.  The following document outlines the need and the interim solution.</p>

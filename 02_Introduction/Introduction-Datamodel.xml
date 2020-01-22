@@ -43,8 +43,15 @@
       </p>
     </Section>
     <Section name="Examples">
-      <Example name="Examples Convention">Longer examples of XML or HTTP messages are typically numbered and presented as given here.</Example>
+      <Example name="Examples Convention">Longer examples of XML,JSON or HTTP messages are typically numbered and presented as given here.</Example>
     </Section>
+    
+    <Section name="JSON">
+      <p>Java Script Object Notation (<em>JSON</em>) is an alternate way to represent an object in a tree like structure. <em>JSON</em> is desirable for a variety of reasons including: good wire efficiency, strong programming support, and satisfactory human readability. Since SIF’s data models are formally defined using XML Schemas, <em>JSON</em> conversion is handled through one of two sets of rules. 
+<code>Default: </code><em>Goessner Notation</em>, which uses schema-independent generic rules for ease of translation. 
+<code>Preferred: </code><em>PESC JSON</em> which uses schema-aware rules for consistent results.
+</p>
+    </Section> 
     <Section name="References">
       <p>
         References to other works occurring in this text are given in brackets, e.g. [REFERENCE].  The text in brackets corresponds to a key in the <a href="References.html#References">References</a> appendix.

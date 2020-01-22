@@ -117,16 +117,16 @@
 		
 	</Section>
  
-	<!--Conceptual Model-->
+	<!--Conceptual Model
 	<Section name="Conceptual Model">
 		<Intro>
 			<p>This is a Conceptual Data Model for this release</p>
 		</Intro>
 		
-		<xi:include parse="xml" href="07_Conceptual_Model/Conceptual.xml"/>
+		<xi:include parse="xml" href="07_Conceptual_DataModel/Conceptual.xml"/>
 	 
 	
-    </Section> 
+    </Section> -->
 	
 	
 	<!--Back Matter-->

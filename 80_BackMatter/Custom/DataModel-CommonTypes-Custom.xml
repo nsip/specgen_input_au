@@ -782,7 +782,7 @@
     <Characteristics>O</Characteristics>
 	<privacyRating>High</privacyRating>
     <Description>
-      <p>A pointer back to the SchoolObject underlying this Report if it exists.</p>
+      <p>A pointer back to the SchoolInfo object underlying this Report if it exists.</p>
     </Description>
     <Type ref="CommonTypes" name="IdRefType"></Type>
   </Item>
@@ -1164,7 +1164,7 @@
     <Characteristics>O</Characteristics>
 	<privacyRating>High</privacyRating>
     <Description>
-      <p>A pointer back to the SchoolObject underlying this Report if it exists.</p>
+      <p>A pointer back to the SchoolInfo object underlying this Report if it exists.</p>
     </Description>
     <Type ref="CommonTypes" name="IdRefType"></Type>
   </Item>
@@ -2046,7 +2046,7 @@
     <Characteristics>O</Characteristics>
 	<privacyRating>High</privacyRating>
     <Description>
-      <p>A pointer back to the SchoolObject underlying this Report if it exists.</p>
+      <p>A pointer back to the SchoolInfo object underlying this Report if it exists.</p>
     </Description>
     <Type ref="CommonTypes" name="IdRefType"></Type>
   </Item>

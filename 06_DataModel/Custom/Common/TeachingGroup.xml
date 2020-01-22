@@ -184,15 +184,9 @@
     <Characteristics>O</Characteristics>
 	<privacyRating>Low</privacyRating>
     <Description>
-      <p>Semester, Term, or Quarter subject offered.</p>
+      <p>Key Learning Area - map to ACStrand in Union with Religious Studies and Other.</p>
     </Description>
-    <Union>
-		<Type ref="CodeSets" name="AUCodeSetsACStrand"></Type>
-		<Values>
-		<Value><Code>ReligousStudies</Code></Value>
-		<Value><Code>Other</Code></Value>
-		</Values>
-	</Union>	
+    <Type ref="CodeSets" name="AUCodeSetsACStrand"></Type> 
   </Item>
   
   <Item>

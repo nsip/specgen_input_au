@@ -1,0 +1,100 @@
+<Section name="Conceptual"
+		 xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xmlns:xi="http://www.w3.org/2001/XInclude"
+		 
+         xmlns="http://sifassociation.org/SpecGen">
+	
+	<p>This is a space for conceptual Modelling.</p>
+	<h3>Conceptual Model 3.4.6</h3>
+	<h4>Enrolment</h4>
+	<p>The following are the primary objects involved in enrolling a student onto school systems.</p>
+	<p><img src="images/Cenrolment.png" alt="" /></p>
+	<p>The following includes secondary objects which may also be invoked during student enrolment (shaded grey).</p>
+	<p><img src="images/Cenrolment_extended.png" alt="" /></p>
+	<h3>Entities</h3>
+	<table>
+	<thead>
+		<tr>
+			<td>Conceptual Entity</td>
+			<td>SIF AU Object</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>School</td>
+			<td>SchoolInfo</td>
+		</tr>
+		<tr>
+			<td>Student</td>
+			<td>StudentPersonal</td>
+		</tr>
+		<tr>
+			<td><em>enrolls</em></td>
+			<td>StudentSchoolEnrollment</td>
+		</tr>
+		<tr>
+			<td>Teacher</td>
+			<td>StaffPersonal</td>
+		</tr>
+		<tr>
+			<td><em>assigns roles</em></td>
+			<td>StaffAssignment</td>
+		</tr>				
+		<tr>
+			<td>Parent/Student Contact</td>
+			<td>StudentContactPersonal</td>
+		</tr>
+		<tr>
+			<td><em>relationship with</em></td>
+			<td>StudentContactRelationship</td>
+		</tr>
+		<tr>
+			<td>Class</td>
+			<td>TeachingGroup; SectionInfo</td>
+		</tr>
+		<tr>
+			<td><em>member</em></td>
+			<td>StudentSectionEnrollment</td>
+		</tr>			
+		<tr>
+			<td>Course</td>
+			<td>SchoolCourseInfo [<em>relations coded redundantly with Class</em>]</td>
+		</tr>			
+		<tr>
+			<td>Subject</td>
+			<td>TimeTableSubject</td>
+		</tr>			
+		<tr>
+			<td>EducationAuthority</td>
+			<td>LEAInfo</td>
+		</tr>			
+		<tr>
+			<td>Term</td>
+			<td>TermInfo</td>
+		</tr>			
+		<tr>
+			<td>Period</td>
+			<td>TimeTableCell</td>
+		</tr>			
+		<tr>
+			<td>Room</td>
+			<td>RoomInfo</td>
+		</tr>	
+		<tr>
+			<td>Program</td>
+			<td>SchoolProgram</td>
+		</tr>	
+		<tr>
+			<td><em>participates</em></td>
+			<td><em>Program: </em>StudentParticipation; <em>Co-Curricular Activity: </em>StudentActivityInfo</td>
+		</tr>	
+		<tr>
+			<td>Picture</td>
+			<td>PersonPicture</td>
+		</tr>					
+	</tbody>
+</table>
+    	
+	
+</Section>
