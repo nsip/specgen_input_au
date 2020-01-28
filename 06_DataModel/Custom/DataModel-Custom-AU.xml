@@ -193,7 +193,7 @@
 		<xi:include parse="text" href="AU/FinancialQuestionnaireSubmission.xml"/>   
 		<xi:include parse="text" href="AU/AGStatusReport.xml"/>
 		<xi:include parse="text" href="AU/AGAddressCollectionSubmission.xml"/>
-		<!--xi:include parse="text" href="AU/AGCensusSubmission.xml"/-->
+		<xi:include parse="text" href="AU/AGCensusSubmission.xml"/>
 		<xi:include parse="text" href="AU/AGGetRound.xml"/>
 		
 
