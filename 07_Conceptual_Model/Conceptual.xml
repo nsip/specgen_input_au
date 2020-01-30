@@ -5,9 +5,9 @@
 		 
          xmlns="http://sifassociation.org/SpecGen">
 	
-	<p>This is a space for conceptual Modelling.</p>
-	<h3>Conceptual Model 3.4.6</h3>
-	<h4>Enrolment</h4>
+	<p>The conceptual model uses UML conventions. Each class corresponds to one or more SIF objects. Abstract classes, which generalise from classes, are used to capture relations more economically; they are <em>italicised</em>.</p>
+	<h2>Conceptual Model 3.4.6</h2>
+	<h3>Enrolment</h3>
 	<p>The following are the primary objects involved in enrolling a student onto school systems.</p>
 	<p><img src="images/Cenrolment.png" alt="" /></p>
 	<p>The following includes secondary objects which may also be invoked during student enrolment (shaded grey).</p>
@@ -92,9 +92,49 @@
 		<tr>
 			<td>Picture</td>
 			<td>PersonPicture</td>
-		</tr>					
+		</tr>	
+		<tr>
+			<td>Co-Curricular Activity</td>
+			<td>StudentActivityInfo</td>
+		</tr>									
 	</tbody>
-</table>
+   </table>
+	<h4>Relations</h4>
+	<p>The following maps the relations captured in the conceptual model to sets of SIF-AU objects.</p>
+	<table>
+	<thead>
+		<tr>
+			<td>Conceptual</td>
+			<td>SIF AU</td>
+		</tr>
+	</thead>
+		<tbody>
+			<tr>
+				<td>A Student is enrolled in a School</td>
+				<td>StudentPersonal, StudentSchoolEnrolment, SchoolInfo</td>
+			</tr>	
+			<tr>
+				<td>A Teacher is assigned a role in a School</td>
+				<td>StaffPersonal, StaffAssignment, SchoolInfo</td>
+			</tr>	
+			<tr>
+				<td>A Parent/Student Contact has a relationship with a Student</td>
+				<td>StudentContactPersonal, StudentContactRelationship, StudentPersonal</td>
+			</tr>	
+			<tr>
+				<td>A Teacher teaches/associates with a Class</td>
+				<td>StaffPersonal, TeachingGroup</td>
+			</tr>	
+			<tr>
+				<td>A Class delivers a Course</td>
+				<td>TeachingGroup, SchoolCourseInfo, SectionInfo, SchoolCourseInfo</td>
+			</tr>
+			<tr>
+				<td>A Subject is taught within a Class</td>
+				<td>TeachingGroup, TimeTableSubject</td>
+			</tr>			
+		</tbody>
+	</table>
     	
 	
 </Section>
