@@ -81,7 +81,8 @@
 		<xi:include parse="text" href="Common/EquipmentInfo.xml"/>	
 		 
 		<xi:include parse="text" href="Common/TimeTableContainer.xml"/> 
-		<xi:include parse="text" href="Common/ScheduledActivityContainer.xml"/>  
+		<!-- delay this container till next release (3.4.7) The reference to a collection needs to be removed Option 2 - No RefId's valid here too
+		<xi:include parse="text" href="Common/ScheduledActivityContainer.xml"/>  -->
 	</Group>
 	<Group name="Finance">	
 		<Intro>
