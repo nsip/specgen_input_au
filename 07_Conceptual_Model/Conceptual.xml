@@ -6,6 +6,22 @@
          xmlns="http://sifassociation.org/SpecGen">
          
 	<h2>Conceptual Model 3.4.6</h2>
+	<p>The conceptual model is at the level of entities and relations between them; attributes are not listed. All objects in the Australian data model are represented; some objects are represented as relations between entities, rather than as distinct entities.
+For clarity, the conceptual model is broken up into use cases:</p>
+<ul>
+	<li> 	Enrolment</li>
+	<li>    Account Provisioning</li>
+	<li>	Timetable/Attendance</li>
+	<li>	Finance/Resources</li>
+	<li>	NAPLAN</li>
+	<li>	Wellbeing</li>
+	<li>	Classroom Assessment</li>
+	<li>	Scheduling</li>
+	<li>	Statistics</li>
+	<li>	Teaching and Learning</li>
+	<li>	Reporting Collections</li>
+</ul>
+<p>Entities are named with names that the schools sector business can relate to readily, rather than the current names of SIF AU objects.</p>
 	<p>The conceptual model uses UML conventions. Each class corresponds to one or more SIF objects. Abstract classes, which generalise from classes, are used to capture relations more economically; they are <em>italicised</em>.</p>
 	
 	<h2>Enrolment</h2>
@@ -185,7 +201,7 @@
 			</tr>			
 		</tbody>
 	</table>
-		<h2>Account Provisioning</h2>
+	<h2>Account Provisioning</h2>
 	<p>The grey arrows point to superclasses; e.g. Party is a superclass of Teacher, Parent, and Student. The dotted entity Party is not represented separately in the SIF AU data model; a common type contains Personal information.</p>
 	<p>Relations whose logical representation will be deprecated in SIF-AU 3.5 are marked in red.</p>
 	<p><img src="images/provisioning.png" alt="" /></p>	
@@ -218,7 +234,7 @@
 		</tr>
 	</tbody>
 	</table>
-		<h3>Relations</h3>
+	<h3>Relations</h3>
 	<p>The following maps the relations captured in the conceptual model to sets of SIF AU objects.</p>
 	<table>
 		<thead>
@@ -253,7 +269,44 @@
 				<td>(Party), SystemRole, (System)</td>
 			</tr>	
 		</tbody>
-	</table>	
+	</table>
+	<h2>Timetable/Attendance</h2>
+	<p><img src="images/TTAttend.png" alt="" /></p>	
 	
-
+	<h3>Entities</h3>
+	<p>Relations which map to SIF objects are given in lowercase and <em>italicised</em></p>
+	<table>
+	<thead>
+		<tr>
+			<td>Conceptual Entity</td>
+			<td>SIF AU Object/s</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>School</td>
+			<td>SchoolInfo</td>
+		</tr>
+		<tr>
+			<td>Student</td>
+			<td>StudentPersonal</td>
+		</tr>	
+		<tr>
+			<td><em>enrolls</em></td>
+			<td>StudentSchoolEnrollment</td>
+		</tr>
+		<tr>
+			<td>Teacher</td>
+			<td>StaffPersonal</td>
+		</tr>
+		<tr>
+			<td><em>assigns role</em></td>
+			<td>StaffAssignment</td>
+		</tr>
+		<tr>
+			<td>Class</td>
+			<td>TeachingGroup; SectionInfo; TimeTableContainer</td>
+		</tr>
+	</tbody>
+	</table>	
 </Section>
