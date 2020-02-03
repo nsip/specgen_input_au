@@ -9860,7 +9860,7 @@
 	</CodeSet>
 	<CodeSet>
 		<Intro>
-			<p>Education Level - Primary or Secondary, Associated with AG Student Collections</p>
+			<p>Education Level - Primary, Secondary or Combined, Associated with AG Student Collections</p>
 		</Intro>
 		<ID>Education Level</ID>
 		<Values>
@@ -9871,6 +9871,10 @@
 			<Value>
 				<Code>Secondary</Code>
 				<Text>Secondary</Text>
+			</Value>
+			<Value>
+				<Code>Combined</Code>
+				<Text>Combined</Text>
 			</Value>
 		</Values>
 	</CodeSet>		

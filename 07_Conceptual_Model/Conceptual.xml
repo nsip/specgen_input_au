@@ -4,20 +4,22 @@
 		 xmlns:xi="http://www.w3.org/2001/XInclude"
 		 
          xmlns="http://sifassociation.org/SpecGen">
-	
-	<p>The conceptual model uses UML conventions. Each class corresponds to one or more SIF objects. Abstract classes, which generalise from classes, are used to capture relations more economically; they are <em>italicised</em>.</p>
+         
 	<h2>Conceptual Model 3.4.6</h2>
-	<h3>Enrolment</h3>
+	<p>The conceptual model uses UML conventions. Each class corresponds to one or more SIF objects. Abstract classes, which generalise from classes, are used to capture relations more economically; they are <em>italicised</em>.</p>
+	
+	<h2>Enrolment</h2>
 	<p>The following are the primary objects involved in enrolling a student onto school systems.</p>
 	<p><img src="images/Cenrolment.png" alt="" /></p>
 	<p>The following includes secondary objects which may also be invoked during student enrolment (shaded grey).</p>
 	<p><img src="images/Cenrolment_extended.png" alt="" /></p>
 	<h3>Entities</h3>
+	
 	<table>
 	<thead>
 		<tr>
 			<td>Conceptual Entity</td>
-			<td>SIF AU Object</td>
+			<td>SIF AU Object/s</td>
 		</tr>
 	</thead>
 	<tbody>
@@ -99,15 +101,15 @@
 		</tr>									
 	</tbody>
    </table>
-	<h4>Relations</h4>
-	<p>The following maps the relations captured in the conceptual model to sets of SIF-AU objects.</p>
+	<h3>Relations</h3>
+	<p>The following maps the relations captured in the conceptual model to sets of SIF AU objects.</p>
 	<table>
-	<thead>
-		<tr>
-			<td>Conceptual</td>
-			<td>SIF AU</td>
-		</tr>
-	</thead>
+		<thead>
+			<tr>
+				<td>Conceptual</td>
+				<td>SIF AU Object/s</td>
+			</tr>
+		</thead>
 		<tbody>
 			<tr>
 				<td>A Student is enrolled in a School</td>
@@ -132,9 +134,126 @@
 			<tr>
 				<td>A Subject is taught within a Class</td>
 				<td>TeachingGroup, TimeTableSubject</td>
+			</tr>
+			<tr>
+				<td>(A Class occurs during a Term)</td>
+				<td>SectionInfo, TermInfo</td>
+			</tr>
+			<tr>
+				<td>A Class is taught in a Room</td>
+				<td>TeachingGroup, RoomInfo</td>
+			</tr>
+			<tr>
+				<td>A Class is taught during a Period</td>
+				<td>TeachingGroup, TimeTableCell</td>
+			</tr>
+			<tr>
+				<td>A Course is taught within a School</td>
+				<td>SchoolCourseInfo, SchoolInfo</td>
+			</tr>
+			<tr>
+				<td>A Course is taught during a Term</td>
+				<td>SchoolCourseInfo, TermInfo</td>
+			</tr>
+			<tr>
+				<td>A Subject is part of a Course</td>
+				<td>TimeTableSubject, SchoolCourseInfo</td>
+			</tr>
+			<tr>
+				<td>A Subject is taught within a School</td>
+				<td>TimeTableSubject, SchoolInfo</td>
+			</tr>
+			<tr>
+				<td>A Term is administered by a School</td>
+				<td>TermInfo, SchoolInfo</td>
+			</tr>
+			<tr>
+				<td>A Student participates in a Co-Curricular Activity</td>
+				<td>StudentPersonal, StudentActivityParticipation, StudentActivityInfo</td>
+			</tr>
+			<tr>
+				<td>A School belongs to an Education Authority</td>
+				<td>SchoolInfo, LEAInfo</td>
+			</tr>
+			<tr>
+				<td>A School offers a Program</td>
+				<td>SchoolInfo, SchoolPrograms</td>
+			</tr>
+			<tr>
+				<td>A Student participates in a Program</td>
+				<td>StudentPersonal, StudentParticipation, SchoolPrograms</td>
 			</tr>			
 		</tbody>
 	</table>
-    	
+		<h2>Account Provisioning</h2>
+	<p>The grey arrows point to superclasses; e.g. Party is a superclass of Teacher, Parent, and Student. The dotted entity Party is not represented separately in the SIF AU data model; a common type contains Personal information.</p>
+	<p>Relations whose logical representation will be deprecated in SIF-AU 3.5 are marked in red.</p>
+	<p><img src="images/provisioning.png" alt="" /></p>	
 	
+	<h3>Entities</h3>
+	<p>Relations which map to SIF objects are given in lowercase and are <em>italicised</em></p>
+	<table>
+	<thead>
+		<tr>
+			<td>Conceptual Entity</td>
+			<td>SIF AU Object/s</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Identity</td>
+			<td>Itentity</td>
+		</tr>
+		<tr>
+			<td>System</td>
+			<td>SystemRole</td>
+		</tr>
+		<tr>
+		<td><em>role</em></td>
+			<td>SystemRole</td>
+		</tr>
+		<tr>
+			<td>Picture</td>
+			<td>PersonPicture</td>
+		</tr>
+	</tbody>
+	</table>
+		<h3>Relations</h3>
+	<p>The following maps the relations captured in the conceptual model to sets of SIF AU objects.</p>
+	<table>
+		<thead>
+			<tr>
+				<td>Conceptual</td>
+				<td>SIF AU Object/s</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>A Student is a Party</td>
+				<td>StudentPersonal</td>
+			</tr>
+			<tr>
+				<td>A Teacher is a Party</td>
+				<td>StaffPersonal</td>
+			</tr>
+			<tr>
+				<td>A Parent is a Party</td>
+				<td>StudentContactPersonal</td>
+			</tr>	
+			<tr>
+				<td>A Party has a Picture</td>
+				<td>(Party), PersonPicture</td>
+			</tr>	
+			<tr>
+				<td>A Party asserts and Identity</td>
+				<td>(Party), Identity</td>
+			</tr>
+			<tr>
+				<td>A Party has a role on a System</td>
+				<td>(Party), SystemRole, (System)</td>
+			</tr>	
+		</tbody>
+	</table>	
+	
+
 </Section>

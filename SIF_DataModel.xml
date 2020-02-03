@@ -119,13 +119,11 @@
  
 	<!--Conceptual Model-->
 	<Section name="Conceptual Model">
-		<Intro>
-			<p>This is a Conceptual Data Model for this release</p>
-		</Intro>
+		<!--Intro>
+			<p>This is a Conceptual Model representing the SIF AU Data Model 3.4.6 </p>
+		</Intro-->
 		
 		<xi:include parse="xml" href="07_Conceptual_Model/Conceptual.xml"/>
-	 
-	
     </Section> 
 	
 	
