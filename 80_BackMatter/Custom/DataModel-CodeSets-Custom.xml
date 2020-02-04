@@ -228,7 +228,7 @@
 <Value><Code>MI</Code><Text>Infectious Diseases</Text></Value>
 <Value><Code>MGI</Code><Text>Gastro Intestinal/Urinary conditions</Text></Value>
 <Value><Code>MND</Code><Text>Neuro/Developmental Disorders</Text></Value>
-<Value><Code>MO</Code><Text>be Oral/Pharyngeal Disorders</Text></Value>
+<Value><Code>MO</Code><Text>Oral/Pharyngeal Disorders</Text></Value>
 <Value><Code>MD</Code><Text>Deaf and Hard of Hearing</Text></Value>
 <Value><Code>MOP</Code><Text>Optical/ Vision Disorder</Text></Value>
 <Value><Code>M-Other</Code><Text>Medical Other</Text></Value>
@@ -3070,6 +3070,7 @@
 		<Intro>
 			<p>1269.0 Standard Australian Classification of Countries (SACC), 2016</p>
 			<p>Source Data ABS: http://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1269.02016?OpenDocument</p>
+			<p>updated March 15, 2019</p>
 		</Intro>
 		<ID>Standard Australian Classification of Countries (SACC)</ID>
 	       <Values><Value><Code>1101</Code><Text>Australia</Text></Value>
@@ -3144,7 +3145,7 @@
 <Value><Code>3203</Code><Text>Bulgaria</Text></Value>
 <Value><Code>3204</Code><Text>Croatia</Text></Value>
 <Value><Code>3205</Code><Text>Cyprus</Text></Value>
-<Value><Code>3206</Code><Text>The former Yugoslav Republic of Macedonia</Text></Value>
+<Value><Code>3206</Code><Text>North Macedonia</Text></Value>
 <Value><Code>3207</Code><Text>Greece</Text></Value>
 <Value><Code>3208</Code><Text>Moldova</Text></Value>
 <Value><Code>3211</Code><Text>Romania</Text></Value>
@@ -3153,7 +3154,7 @@
 <Value><Code>3215</Code><Text>Serbia</Text></Value>
 <Value><Code>3216</Code><Text>Kosovo</Text></Value>
 <Value><Code>3301</Code><Text>Belarus</Text></Value>
-<Value><Code>3302</Code><Text>Czech Republic</Text></Value>
+<Value><Code>3302</Code><Text>Czechia</Text></Value>
 <Value><Code>3303</Code><Text>Estonia</Text></Value>
 <Value><Code>3304</Code><Text>Hungary</Text></Value>
 <Value><Code>3305</Code><Text>Latvia</Text></Value>
@@ -3321,7 +3322,7 @@
 <Value><Code>9223</Code><Text>Seychelles</Text></Value>
 <Value><Code>9224</Code><Text>Somalia</Text></Value>
 <Value><Code>9225</Code><Text>South Africa</Text></Value>
-<Value><Code>9226</Code><Text>Swaziland</Text></Value>
+<Value><Code>9226</Code><Text>Eswatini</Text></Value>
 <Value><Code>9227</Code><Text>Tanzania</Text></Value>
 <Value><Code>9228</Code><Text>Uganda</Text></Value>
 <Value><Code>9231</Code><Text>Zambia</Text></Value>
@@ -6729,23 +6730,23 @@
 		<Values>
 			<Value>
 				<Code>1</Code>
-				<Text>Aboriginal but not Torres Strait Islander Origin</Text>
+				<Text>Aboriginal but not Torres Strait Islander origin</Text>
 			</Value>
 			<Value>
 				<Code>2</Code>
-				<Text>Torres Strait Islander but not Aboriginal Origin</Text>
+				<Text>Torres Strait Islander but not Aboriginal origin</Text>
 			</Value>
 			<Value>
 				<Code>3</Code>
-				<Text>Both Torres Strait and Aboriginal Origin</Text>
+				<Text>Both Aboriginal and Torres Strait Islander origin</Text>
 			</Value>
 			<Value>
 				<Code>4</Code>
-				<Text>Neither Aboriginal or Torres Strait Origin</Text>
+				<Text>Neither Aboriginal nor Torres Strait Islander origin</Text>
 			</Value>
 			<Value>
 				<Code>9</Code>
-				<Text>Not Stated/Unknown</Text>
+				<Text>Not stated/unknown</Text>
 			</Value>
 			 
 		</Values>
@@ -8153,13 +8154,6 @@
 			</Value>
 			<Value>
 				<Code>11</Code>
-				<Text>Year 11</Text>
-			</Value>
-			<Value>
-				<Code>12</Code>
-				<Text>Year 12</Text>
-			</Value>
-			<Value>
 				<Code>13</Code>
 				<Text>Year 13</Text>
 			</Value>
@@ -9934,6 +9928,30 @@
 				<Text>What is the education level of this location?</Text>
 				<Description>Acceptable Answers here are "Primary", "Secondary" or "Combined"</Description>
 			</Value>
+		</Values>
+	</CodeSet>							
+	<CodeSet>
+		<Intro>
+			<p>Which AG Collection do these Rounds refer to?</p>
+		</Intro>
+		<ID>AG Collection</ID>
+		<Values>
+			<Value>
+				<Code>SES</Code>
+				<Description>Address Collection</Description>
+			</Value>
+			<Value>
+				<Code>FQ</Code>
+				<Description>Financial Questionnaire</Description>
+			</Value>
+			<Value>
+				<Code>COI</Code>
+				<Description>Non-Government Schools Census</Description>
+			</Value>
+			<Value>
+				<Code>STATS</Code>
+				<Description>Student Attendance (STATS)</Description>
+			</Value>			
 		</Values>
 	</CodeSet>							
 </Grouping>

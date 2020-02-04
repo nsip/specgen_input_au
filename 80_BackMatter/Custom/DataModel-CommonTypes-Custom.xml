@@ -1164,7 +1164,7 @@
   </Item> -->
    <Item>
 	  <Element>EntityLevel</Element>
-	  <Characteristics>M</Characteristics>
+	  <Characteristics>O</Characteristics>
 	  <privacyRating>Medium</privacyRating>
 	  <Description>Level of the Submission, current valid values "System", "Office", "Location", "Special School Location".</Description>
 	  <!-- Do we need to restrict the level in enumeration of the type? -->
@@ -1335,7 +1335,7 @@
 	 </Item>
 		  <Item>
 			<Element>StaffActivity</Element>
-			<Characteristics>O</Characteristics>
+			<Characteristics>M</Characteristics>
 			<privacyRating>Low</privacyRating>
 			<Description>
 			  <p>The purpose of the Teacher's role as related to students. Equivalent to 'JobFunction' in US Object.  Limited to the values of 1100 - Teacher in school n.f.d., 1103 - Principal, 1200 -Specialist support in school n.f.d., 1300 - Administration and clerical in school n.f.d., 1400 - Building Operations in school n.f.d. for Census Reporting.</p>
@@ -1344,14 +1344,14 @@
 		  </Item>
  		  <Item>
 			  <Element>IndigenousStatus</Element>
-			  <Characteristics>O</Characteristics>
+			  <Characteristics>M</Characteristics>
 			  <Description>
 				<p>Whether or not the person identifies themselves as being of Aboriginal and/or Torres Strait Islander descent.</p>	     	</Description>
 			  <Type ref="CodeSets" name="AUCodeSetsIndigenousStatusType"/>
 		  </Item>
 		  <Item>
 			<Element>Sex</Element>
-			<Characteristics>O</Characteristics>
+			<Characteristics>M</Characteristics>
 			<Description>
 				<p>'Sex' is the distinction 'male'/'female'/'intersex', as reported by the person</p>
 			</Description>
@@ -1368,7 +1368,7 @@
 		  <!-- Add Headcount for Aggregate Release -->
 		  <Item>
 			<Element>Headcount</Element>
-			<Characteristics>O</Characteristics>
+			<Characteristics>M</Characteristics>
 			<privacyRating>Low</privacyRating>
 			<Description>
 			  <p>Headcount of this co-hort</p>
@@ -1444,6 +1444,7 @@
 				<p>The student cohort being reported on.</p>
 			</Description>
 		</Item>
+		<!--
 		<Item>
 			<Element>LocalId</Element>
 			<Characteristics>O</Characteristics>
@@ -1452,10 +1453,10 @@
 			  <p>A locally-assigned identifier for the cohort being reported on.</p>
 			</Description>
 			<Type ref="CommonTypes" name="LocalIdType"></Type>
-		</Item>
-			<Item>
+		</Item> -->
+		<Item>
 		<Element>IndigenousStatus</Element>
-		<Characteristics>O</Characteristics>
+		<Characteristics>M</Characteristics>
 		<Description>
 			<p>Whether or not the person identifies themselves as being of Aboriginal and/or Torres Strait Islander descent.</p>
 		</Description>
@@ -1463,7 +1464,7 @@
 	</Item>
 	<Item>
 		<Element>Sex</Element>
-		<Characteristics>O</Characteristics>
+		<Characteristics>M</Characteristics>
 		<Description>
 			<p>'Sex' is the distinction 'male'/'female'/'intersex', as reported by the person</p>
 		</Description>
@@ -1471,7 +1472,7 @@
 	</Item>
 	<Item>
 		<Element>AustralianCitizenshipStatus</Element>
-		<Characteristics>O</Characteristics>
+		<Characteristics>M</Characteristics>
 		<Description>
 			<p>The person's citizenship status.</p>
 		</Description>
@@ -1479,7 +1480,7 @@
 	</Item>
 	<Item>
 		<Element>YearLevel</Element>
-		<Characteristics>O</Characteristics>
+		<Characteristics>M</Characteristics>
 		<Description>
 			<p>The current or most recent year level of the student.</p>
 		</Description>
@@ -1487,7 +1488,7 @@
 	</Item>
 	<Item>
 		<Element>FTE</Element>
-		<Characteristics>O</Characteristics>
+		<Characteristics>M</Characteristics>
 		<Description>
 			<p>Full-time equivalent numeric value of the student's course load during this enrollment, expressed in decimal form, where 1.00 represents a full-time enrollment.</p>
 		</Description>
@@ -1500,7 +1501,7 @@
 	</Item> 
 		<Item>
 		<Element>FFPOS</Element>
-		<Characteristics>O</Characteristics>
+		<Characteristics>M</Characteristics>
 		<Description>
 			<p>Enrolled Full-fee Paying Overseas Student (FFPOS) Status.  Enrolment Frame Element 10 NSCC Collection.</p>
 			<p>The status of an enrolment in a CRICOS course and whether the person is liable for a fee which reflects the imputed full average cost of the person's education at the school (including both recurrent and capital costs) irrespective of the actual arrangements to meet the fee.</p>
@@ -1519,9 +1520,9 @@
 -->
 	<Item>
 		<Element>DisabilityLevelOfAdjustment</Element>
-		<Characteristics>O</Characteristics>
+		<Characteristics>M</Characteristics>
 		<Description>
-			<p>Level of Adjustment made for a student's disability.</p>
+			<p>Level of Adjustment made for a student's disability. None if there is no adjustment.</p>
 		</Description>
 		<Values>
         <Value>
@@ -1536,13 +1537,14 @@
         <Value>
 			<Code>Extensive</Code>
 		</Value>
+		<Value><Code>None</Code></Value>
        </Values>
 	</Item>
 	<Item>
 		<Element>DisabilityCategory</Element>
-		<Characteristics>O</Characteristics>
+		<Characteristics>M</Characteristics>
 		<Description>
-			<p>Category of a student's disability.</p>
+			<p>Category of a student's disability. None if no disability.</p>
 		</Description>
 		<Values>
         <Value>
@@ -1557,11 +1559,12 @@
         <Value>
 			<Code>Sensory</Code>
 		</Value>
+		<Value><Code>None</Code></Value>
        </Values>
 	</Item>
     <Item>
     	<Element>CensusAge</Element>
-		<Characteristics>O</Characteristics>
+		<Characteristics>M</Characteristics>
 		<Description>
 			<p>Age of the Student calculated for Non-gov Census reporting.</p>
 		</Description>
@@ -1569,7 +1572,7 @@
     </Item>	
     <Item>
       	<Element>DistanceEducationStudent</Element>
-		<Characteristics>O</Characteristics>
+		<Characteristics>M</Characteristics>
 		<Description>
 			<p>Is this student a Distance Education Student for Non-gov Census reporting.</p>
 		</Description>
@@ -1577,7 +1580,7 @@
     </Item>
 	<Item>
       	<Element>BoardingStatus</Element>
-		<Characteristics>O</Characteristics>
+		<Characteristics>M</Characteristics>
 		<Description>
 			<p>Is this student a Boarding or Day Student for AG Collection reporting?</p>
 		</Description>
@@ -1595,7 +1598,7 @@
 
 		  <Item>
 			<Element>Headcount</Element>
-			<Characteristics>O</Characteristics>
+			<Characteristics>M</Characteristics>
 			<privacyRating>Low</privacyRating>
 			<Description>
 			  <p>Headcount of this co-hort</p>
@@ -6486,7 +6489,7 @@
 		<Element>DisabilityLevelOfAdjustment</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
-			<p>Level of Adjustment made for a student's disability.</p>
+			<p>Level of Adjustment made for a student's disability.  None if there is no adjustment.</p>
 		</Description>
 		<Values>
         <Value>
@@ -6501,13 +6504,14 @@
         <Value>
 			<Code>Extensive</Code>
 		</Value>
+		<Value><Code>None</Code></Value>
        </Values>
 	</Item>
 	<Item>
 		<Element>DisabilityCategory</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
-			<p>Category of a student's disability.</p>
+			<p>Category of a student's disability. None if no disability.</p>
 		</Description>
 		<Values>
         <Value>
@@ -6522,6 +6526,7 @@
         <Value>
 			<Code>Sensory</Code>
 		</Value>
+		<Value><Code>None</Code></Value>
        </Values>
 	</Item>
     <Item>

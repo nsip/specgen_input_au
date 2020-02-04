@@ -30,7 +30,7 @@
 	  <Characteristics>O</Characteristics>
 	  <privacyRating>Low</privacyRating>
 	  <Description>The type of AG Collection.</Description>
-	  <Type name="xs:normalizedString"></Type> 
+	  <Type ref="CodeSets" name="AUCodeSetsAGCollectionType"></Type> 
   </Item>
   
     <Item>
@@ -72,19 +72,19 @@
   
 <xhtml:Example xmlns="" name="AGGetRounds">
 <AGGetRound RefId="D3E34B35-9D75-101A-8C3D-00AA001A1652">
-  <AGCollection>STATS1</AGCollection>
+  <AGCollection>STATS</AGCollection>
   <CollectionYear>2018</CollectionYear>
   <AGRoundList>
 	<AGRound>
-		<RoundCode> STATS1 </RoundCode>
-		<RoundName> Student Attendance Semester 1</RoundName>
+		<RoundCode>STATS1</RoundCode>
+		<RoundName>Student Attendance Semester 1</RoundName>
 		<StartDate>2019-06-28</StartDate>
 		<DueDate>2019-08-02</DueDate>
 		<EndDate>2019-10-01</EndDate>
 	</AGRound>
 	<AGRound>
-		<RoundCode> STATS2 </RoundCode>
-		<RoundName> Student Attendance Term 3</RoundName>
+		<RoundCode>STATS2 </RoundCode>
+		<RoundName>Student Attendance Term 3</RoundName>
 		<StartDate>2019-09-20</StartDate>
 		<DueDate>2019-10-18</DueDate>
 		<EndDate>2019-12-31</EndDate>
