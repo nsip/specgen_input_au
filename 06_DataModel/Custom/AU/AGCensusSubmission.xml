@@ -156,6 +156,26 @@
 					<Email Type="01">jmiller@lsc.vic.edu.au</Email> <!-- Collection Contact EmailAddress -->
 					<PhoneNumber Type="0096"><Number>03 9637-2000</Number></PhoneNumber> <!-- Collection Contact Phone Number -->
 				</EntityContact>
+				<YearLevels>
+					<YearLevel>
+						<Code>7</Code>
+					</YearLevel>
+					<YearLevel>
+						<Code>8</Code>
+					</YearLevel>
+					<YearLevel>
+						<Code>9</Code>
+					</YearLevel>
+					<YearLevel>
+						<Code>10</Code>
+					</YearLevel>
+					<YearLevel>
+						<Code>11</Code>
+					</YearLevel>
+					<YearLevel>
+						<Code>12</Code>
+					</YearLevel>
+				</YearLevels>
 				<CensusStaffList>
 				    <CensusStaff>
 						<PrimaryFTE>0.5</PrimaryFTE>					<!-- To be provided if known. -->				

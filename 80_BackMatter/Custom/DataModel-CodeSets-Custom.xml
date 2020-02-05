@@ -8154,6 +8154,13 @@
 			</Value>
 			<Value>
 				<Code>11</Code>
+				<Text>Year 11</Text>
+			</Value>
+			<Value>
+				<Code>12</Code>
+				<Text>Year 12</Text>
+			</Value>	
+			<Value> 
 				<Code>13</Code>
 				<Text>Year 13</Text>
 			</Value>
@@ -9927,6 +9934,31 @@
 				<Code>AC002</Code>
 				<Text>What is the education level of this location?</Text>
 				<Description>Acceptable Answers here are "Primary", "Secondary" or "Combined"</Description>
+			</Value>
+			<Value>
+				<Code>NGSC001</Code>
+				<Text>Did all enrolled students attend during the Census reference period?</Text>
+				<Description>Acceptable Answers here are "Yes" or "No"</Description>
+			</Value>
+			<Value>
+				<Code>NGSC002</Code>
+				<Text>Are all your students Australian citizens?</Text>
+				<Description>Acceptable Answers here are "Yes" or "No"</Description>
+			</Value>
+			<Value>
+				<Code>NGSC003</Code>
+				<Text>Do you have part time students?</Text>
+				<Description>Acceptable Answers here are "Yes" or "No"</Description>
+			</Value>
+			<Value>
+				<Code>NGSC004</Code>
+				<Text>Do you have boarding students?</Text>
+				<Description>Acceptable Answers here are "Yes" or "No"</Description>
+			</Value>
+			<Value>
+				<Code>NGSC005</Code>
+				<Text>Do you have distance education students?</Text>
+				<Description>Acceptable Answers here are "Yes" or "No"</Description>
 			</Value>
 		</Values>
 	</CodeSet>							

@@ -1235,6 +1235,13 @@
 	  <Type ref="CommonTypes" name="EntityContactInfoType"></Type>
   </Item>
   <Item>
+	  <Element>YearLevels</Element>
+	  <Characteristics>O</Characteristics>
+	  <privacyRating>Low</privacyRating>
+	  <Description>Year Levels available at this location/school.</Description>
+	  <Type ref="CommonTypes" name="YearLevelsType"></Type>
+  </Item>
+  <Item>
     <Element>CensusStaffList</Element>    
     <Characteristics>O</Characteristics>
 	<privacyRating>High</privacyRating>
