@@ -202,7 +202,7 @@ For clarity, the conceptual model is broken up into use cases:</p>
 		</tbody>
 	</table>
 	<h2>Account Provisioning</h2>
-	<p>The grey arrows point to superclasses; e.g. Party is a superclass of Teacher, Parent, and Student. The dotted entity Party is not represented separately in the SIF AU data model; a common type contains Personal information.</p>
+	<p></p>
 	<p>Relations whose logical representation will be deprecated in SIF-AU 3.5 are marked in red.</p>
 	<p><img src="images/provisioning.png" alt="" /></p>	
 	
