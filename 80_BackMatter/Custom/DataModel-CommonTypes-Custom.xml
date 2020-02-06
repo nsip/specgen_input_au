@@ -1242,6 +1242,16 @@
 	  <Type ref="CommonTypes" name="YearLevelsType"></Type>
   </Item>
   <Item>
+    <Element>AGContextualQuestionList</Element>    
+    <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
+    <Description>
+      <p>A list of questions to set the context for the AG Collection.</p>
+    </Description>
+	<Type ref="CommonTypes" name="AGContextualQuestionListType"></Type>
+  </Item>
+  
+  <Item>
     <Element>CensusStaffList</Element>    
     <Characteristics>O</Characteristics>
 	<privacyRating>High</privacyRating>

@@ -176,6 +176,16 @@
 						<Code>12</Code>
 					</YearLevel>
 				</YearLevels>
+				<AGContextualQuestionList>
+							  <AGContextualQuestion>
+								  <AGContextCode>NGSC001</AGContextCode>
+								  <AGAnswer>Yes</AGAnswer>
+							  </AGContextualQuestion>
+							  <AGContextualQuestion>
+   								  <AGContextCode>NGSC002</AGContextCode>
+								  <AGAnswer>Yes</AGAnswer>
+							  </AGContextualQuestion>
+                          </AGContextualQuestionList>
 				<CensusStaffList>
 				    <CensusStaff>
 						<PrimaryFTE>0.5</PrimaryFTE>					<!-- To be provided if known. -->				
