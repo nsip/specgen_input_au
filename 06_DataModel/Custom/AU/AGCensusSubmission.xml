@@ -177,15 +177,23 @@
 					</YearLevel>
 				</YearLevels>
 				<AGContextualQuestionList>
-							  <AGContextualQuestion>
-								  <AGContextCode>NGSC001</AGContextCode>
-								  <AGAnswer>Yes</AGAnswer>
-							  </AGContextualQuestion>
-							  <AGContextualQuestion>
-   								  <AGContextCode>NGSC002</AGContextCode>
-								  <AGAnswer>Yes</AGAnswer>
-							  </AGContextualQuestion>
-                          </AGContextualQuestionList>
+					<AGContextualQuestion>
+					   <AGContextCode>NGSC001</AGContextCode>
+					   <AGAnswer>Yes</AGAnswer>
+					</AGContextualQuestion>
+					<AGContextualQuestion>
+					   <AGContextCode>NGSC002</AGContextCode>
+					   <AGAnswer>Yes</AGAnswer>
+				    </AGContextualQuestion>
+					<AGContextualQuestion>
+					   <AGContextCode>NGSC003</AGContextCode>
+					   <AGAnswer>No</AGAnswer>
+				    </AGContextualQuestion>
+					<AGContextualQuestion>
+					   <AGContextCode>NGSC004</AGContextCode>
+					   <AGAnswer>Yes</AGAnswer>
+				    </AGContextualQuestion>			    
+				 </AGContextualQuestionList>
 				<CensusStaffList>
 				    <CensusStaff>
 						<PrimaryFTE>0.5</PrimaryFTE>					<!-- To be provided if known. -->				
