@@ -192,6 +192,10 @@
 					<AGContextualQuestion>
 					   <AGContextCode>NGSC004</AGContextCode>
 					   <AGAnswer>Yes</AGAnswer>
+		            </AGContextualQuestion>	
+					<AGContextualQuestion>
+					   <AGContextCode>NGSC005</AGContextCode>
+					   <AGAnswer>Yes</AGAnswer>
 				    </AGContextualQuestion>			    
 				 </AGContextualQuestionList>
 				<CensusStaffList>
