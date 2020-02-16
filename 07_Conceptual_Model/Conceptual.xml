@@ -26,9 +26,9 @@ For clarity, the conceptual model is broken up into use cases:</p>
 	
 	<h2>Enrolment</h2>
 	<p>The following are the primary objects involved in enrolling a student onto school systems.</p>
-	<p><img src="images/Cenrolment.png" alt="" /></p>
+	<p><img src="images/Conceptual_enrolment.png" alt="" /></p>
 	<p>The following includes secondary objects which may also be invoked during student enrolment (shaded grey).</p>
-	<p><img src="images/Cenrolment_extended.png" alt="" /></p>
+	<p><img src="images/Conceptual_enrolment_extended.png" alt="" /></p>
 	<h3>Entities</h3>
 	
 	<table>
@@ -144,7 +144,7 @@ For clarity, the conceptual model is broken up into use cases:</p>
 				<td>StaffPersonal, TeachingGroup</td>
 			</tr>	
 			<tr>
-				<td>A Class delivers a Course</td>
+				<td>A Class contributes to a Course</td>
 				<td>TeachingGroup, SchoolCourseInfo, SectionInfo, SchoolCourseInfo</td>
 			</tr>
 			<tr>
@@ -204,7 +204,7 @@ For clarity, the conceptual model is broken up into use cases:</p>
 	<h2>Account Provisioning</h2>
 	<p></p>
 	<p>Relations whose logical representation will be deprecated in SIF-AU 3.5 are marked in red.</p>
-	<p><img src="images/provisioning.png" alt="" /></p>	
+	<p><img src="images/Conceptual_provisioning.png" alt="" /></p>	
 	
 	<h3>Entities</h3>
 	<p>Relations which map to SIF objects are given in lowercase and are <em>italicised</em></p>
@@ -271,7 +271,7 @@ For clarity, the conceptual model is broken up into use cases:</p>
 		</tbody>
 	</table>
 	<h2>Timetable/Attendance</h2>
-	<p><img src="images/TTAttend.png" alt="" /></p>	
+	<p><img src="images/Conceptual_timetable_attendance.png" alt="" /></p>	
 	
 	<h3>Entities</h3>
 	<p>Relations which map to SIF objects are given in lowercase and <em>italicised</em></p>
@@ -307,6 +307,267 @@ For clarity, the conceptual model is broken up into use cases:</p>
 			<td>Class</td>
 			<td>TeachingGroup; SectionInfo; TimeTableContainer</td>
 		</tr>
+		<tr>
+			<td><em>member</em></td>
+			<td>StudentSectionEnrollment</td>
+		</tr>
+		<tr>
+			<td>Calendar</td>
+			<td>CalendarSummary</td>
+		</tr>
+		<tr>
+			<td>Day</td>
+			<td>CalendarDate</td>
+		</tr>
+		<tr>
+			<td>Period</td>
+			<td>TimeTableCell, TimeTableContainer</td>
+		</tr>
+		<tr>
+			<td>TimeTable</td>
+			<td>TimeTableCell, TimeTableContainer</td>
+		</tr>
+		<tr>
+			<td>Scheduled Activity</td>
+			<td>ScheduledActivity</td>
+		</tr>
+		<tr>
+			<td><em>attendance marked for</em></td>
+			<td>Period: StudentPeriodAttendance; Calendar Day: StudentDailyAttendance, StudentAttendanceTimeList; reporting object: StudentAttendanceSummary</td>
+		</tr>
 	</tbody>
-	</table>	
+	</table>
+	<h3>Relations</h3>
+	<p>The following maps the relations captured in the conceptual model to sets of SIF AU objects.</p>
+	<table>
+		<thead>
+			<tr>
+				<td>Conceptual</td>
+				<td>SIF AU Object/s</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>A Student is enrolled in a School</td>
+				<td>StudentPersonal, StudentSchoolEnrolment, SchoolInfo</td>
+			</tr>
+			<tr>
+				<td>A Teacher is assigned a role in a School</td>
+				<td>StaffPersonal, StaffAssignment, SchoolInfo</td>
+			</tr>
+			<tr>
+				<td>A Student is a member of a Class</td>
+				<td>StudentPersonal, TeachingGroup; StudentPersonal, StudentSectionEnrollment, SectionInfo</td>
+			</tr>	
+			<tr>
+				<td>A Teacher teaches/associates with a Class</td>
+				<td>StaffPersonal, TeachingGroup</td>
+			</tr>	
+			<tr>
+				<td>A Class is taught during a Period</td>
+				<td>TeachingGroup, TimeTableCell <em>cyclic</em></td>
+			</tr>
+			<tr>
+				<td>A School has a Calendar</td>
+				<td>SchoolInfo, CalendarSummary</td>
+			</tr>	
+			<tr>
+				<td>A Day belongs to a Calendar</td>
+				<td>CalendarDate, CalendarSummary</td>
+			</tr>				<tr>
+				<td>A Timetable is administered by a School</td>
+				<td>TimeTable, SchoolInfo</td>
+			</tr>				<tr>
+				<td>A Period belongs to a Timetable</td>
+				<td>TimeTableCell, TimeTable</td>
+			</tr>				<tr>
+				<td>A Scheduled Activity is scheduled for a Period</td>
+				<td>ScheduledActivity, TimeTableCell, (SessionInfo)</td>
+			</tr>				<tr>
+				<td>A Student attends a Scheduled Activity</td>
+				<td>ScheduledActivity, StudentPersonal</td>
+			</tr>				<tr>
+				<td>A Teacher attends a Scheduled Activity</td>
+				<td>ScheduledActivity, StaffPersonal</td>
+			</tr>				<tr>
+				<td>A Class is involved with a Scheduled Activity</td>
+				<td>ScheduledActivity, TeachingGroup</td>
+			</tr>				<tr>
+				<td>A Student has attendance marked for a Period</td>
+				<td>StudentPersonal, StudentPeriodAttendance, (TimeTablePeriod = TimeTableCell)</td>
+			</tr>				<tr>
+				<td>A Student has attendance marked for a Day</td>
+				<td>StudentPersonal, StudentDailyAttendance, (Date = CalendarDate); StudentPersonal, StudentAttendanceTimeList, (Date = CalendarDate)</td>
+			</tr>	
+		</tbody>
+	</table>
+	<h2>Finance/Resources</h2>
+	<p><img src="images/Conceptual_finance_resources.png" alt="" /></p>	
+	
+	<h3>Entities</h3>
+	<p>Relations which map to SIF objects are given in lowercase and <em>italicised</em></p>
+	<table>
+	<thead>
+		<tr>
+			<td>Conceptual Entity</td>
+			<td>SIF AU Object/s</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>School</td>
+			<td>SchoolInfo</td>
+		</tr>
+		<tr>
+			<td>Teacher</td>
+			<td>StaffPersonal</td>
+		</tr>
+		<tr>
+			<td>Parent/StudentContact</td>
+			<td>StudentContactPersonal</td>
+		</tr>
+		<tr>
+			<td>Equipment</td>
+			<td>EquipmentInfo</td>
+		</tr>	
+		<tr>
+			<td>Resource Usage</td>
+			<td>ResourceUseage</td>
+		</tr>	
+		<tr>
+			<td>Vendor</td>
+			<td>VendorInfo</td>
+		</tr>	
+		<tr>
+			<td>Purchase Order</td>
+			<td>PurchaseOrder</td>
+		</tr>	
+		<tr>
+			<td>Charged Location</td>
+			<td>ChargedLocation</td>
+		</tr>	
+		<tr>
+			<td>Debtor</td>
+			<td>Debtor</td>
+		</tr>	
+		<tr>
+			<td>Account</td>
+			<td>FinancialAccount</td>
+		</tr>	
+		<tr>
+			<td>Journal</td>
+			<td>Journal</td>
+		</tr>	
+		<tr>
+			<td>Invoice</td>
+			<td>Invoice</td>
+		</tr>	
+		<tr>
+			<td>Receipt</td>
+			<td>PaymentReceipt</td>
+		</tr>	
+	</tbody>
+	</table>
+		<h3>Relations</h3>
+	<p>The following maps the relations captured in the conceptual model to sets of SIF AU objects.</p>
+	<table>
+		<thead>
+			<tr>
+				<td>Conceptual</td>
+				<td>SIF AU Object/s</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>A Person engages in Resource Usage</td>
+				<td>(Person), ResourceUsage</td>
+			</tr>
+			<tr>
+				<td>A School pays for Resource Usage</td>
+				<td>SchoolInfo, ResourceUsage</td>
+			</tr>
+			<tr>
+				<td>A Teacher (Staff) raises a Purchase Order</td>
+				<td>StaffPersonal, PurchaseOrder</td>
+			</tr>
+			<tr>
+				<td>A Purchase Order is raised against a Vendor</td>
+				<td>PurchaseOrder, VendorInfo</td>
+			</tr>
+			<tr>
+				<td>A Purchase Order is raised for a Charged Location</td>
+				<td>PurchaseOrder, ChargedLocationInfo</td>
+			</tr>
+			<tr>
+				<td>A School is a Charged Location</td>
+				<td>SchoolInfo, ChargedLocationInfo</td>
+			</tr>
+			<tr>
+				<td>A Party is a Debtor</td>
+				<td><em>Party</em>,, Debtor</td>
+			</tr>
+			<tr>
+				<td>A Vendor is a Debtor</td>
+				<td>VendorInfo, Debtor</td>
+			</tr>
+			<tr>
+				<td>A Charged Location has an Account</td>
+				<td>ChargedLocationInfo, FinancialAccount</td>
+			</tr>
+			<tr>
+				<td>A Party is a Debtor</td>
+				<td><em>Party</em>,, Debtor</td>
+			</tr>
+			<tr>
+				<td>An Invoice is a Transaction</td>
+				<td><em>Party</em>, Debtor</td>
+			</tr>
+			<tr>
+				<td>A Receipt is a Transaction</td>
+				<td>PaymentReceipt</td>
+			</tr>
+			<tr>
+				<td>A Purchase Order is a Transaction</td>
+				<td>PurchaseOrder</td>
+			</tr>
+			<tr>
+				<td>A Journal processes a Transaction</td>
+				<td>Journal, Transaction</td>
+			</tr>
+			<tr>
+				<td>A Journal debits/credits an Account</td>
+				<td>Journal,FinancialAccount</td>
+			</tr>
+			<tr>
+				<td>A Debtor is an Invoicee</td>
+				<td>Debtor</td>
+			</tr>
+			<tr>
+				<td>A Purchase Order is an <em>Invoicee</em></td>
+				<td>PurchaseOrder</td>
+			</tr>
+			<tr>
+				<td>An Invoice invoices an <em>Invoicee</em></td>
+				<td>Invoice, <em>Invoicee</em></td>
+			</tr>
+			<tr>
+				<td>An Invoice is invoiced against an Account</td>
+				<td>Invoice, FinancialAccount</td>
+			</tr>
+			<tr>
+				<td>An Invoice is invoiced for a Purchase Order</td>
+				<td>Invoice, PurchaseOrder</td>
+			</tr>
+			<tr>
+				<td>A Receipt is issued for an Invoice</td>
+				<td>Invoice, PaymentReceipt</td>
+			</tr>
+			<tr>
+				<td>A Purchase Order is for Equipment</td>
+				<td>PurchaseOrder, EquipmentInfo</td>
+			</tr>
+
+		</tbody>
+	</table>
+
 </Section>
