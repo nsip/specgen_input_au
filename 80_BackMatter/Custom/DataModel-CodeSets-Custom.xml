@@ -206,6 +206,17 @@
 <Value><Code>MN-14</Code><Text>Thermoregulation</Text></Value>
 <Value><Code>MN-15</Code><Text>Tuberous sclerosis</Text></Value>
 <Value><Code>MN-16</Code><Text>West syndrome</Text></Value>
+<!--Added for 3.4.6 -->
+<Value><Code>DP-1</Code><Text>Vegetarian</Text><Description>No meat or fish</Description></Value>
+<Value><Code>DP-2</Code><Text>Vegan</Text><Description>No animal products</Description></Value>
+<Value><Code>DP-3</Code><Text>Pescatarian</Text><Description>No meat but food may contain fish</Description></Value>
+<Value><Code>DP-4</Code><Text>Lacto-vegetarian</Text><Description>No meat or eggs, food can contain milk</Description></Value>
+<Value><Code>DP-5</Code><Text>Ovo-lacto-vegetarian</Text><Description>No meat or fish, food can contain eggs or milk</Description></Value>
+<Value><Code>DP-6</Code><Text>Kosher</Text><Description></Description></Value>
+<Value><Code>DP-7</Code><Text>Halal</Text><Description></Description></Value>
+<Value><Code>DP-8</Code><Text>Fruitarian</Text><Description>Same as vegan, but only contains foods that doesn’t kill the plant (apples can be picked without killing the plant, carrots cannot)</Description></Value>
+<Value><Code>DP-9</Code><Text>Non-dairy</Text><Description>Food may actually contain milk or milk derivatives but does not have enough percentage of milk fat to be called dairy</Description></Value>
+<Value><Code>DP-10</Code><Text>Lactose Free</Text><Description>Food may not contain lactose.  No milk or milk derivatives</Description></Value>
 </Values></CodeSet>
  <CodeSet>
       <Intro>
@@ -235,6 +246,7 @@
 <Value><Code>D-Other</Code><Text>Disability Other</Text></Value>
 <Value><Code>S-Other</Code><Text>Special Needs Other</Text></Value>
 <Value><Code>Other</Code><Text>Other</Text></Value>
+<Value><Code>DP</Code><Text>Dietary Preference</Text></Value>
 </Values></CodeSet>
   <CodeSet>
       <Intro>
@@ -481,6 +493,7 @@
 		  <Value><Code>D</Code><Text>Disability</Text></Value>
 		  <Value><Code>S</Code><Text>SpecialNeeds</Text></Value>
 		  <Value><Code>O</Code><Text>Other</Text></Value>
+		  <Value><Code>DP</Code><Text>Dietary Preference</Text></Value> 
       </Values>
     </CodeSet>
 <CodeSet>
@@ -9970,19 +9983,19 @@
 		<Values>
 			<Value>
 				<Code>SES</Code>
-				<Description>Address Collection</Description>
+				<Text>Address Collection</Text>
 			</Value>
 			<Value>
 				<Code>FQ</Code>
-				<Description>Financial Questionnaire</Description>
+				<Text>Financial Questionnaire</Text>
 			</Value>
 			<Value>
 				<Code>COI</Code>
-				<Description>Non-Government Schools Census</Description>
+				<Text>Non-Government Schools Census</Text>
 			</Value>
 			<Value>
 				<Code>STATS</Code>
-				<Description>Student Attendance (STATS)</Description>
+				<Text>Student Attendance (STATS)</Text>
 			</Value>			
 		</Values>
 	</CodeSet>							
