@@ -6,19 +6,6 @@
   min-height:12em;
   max-height:24em; 
 }
-
-/* Picks up IE 10 & 11 */
-_:-ms-input-placeholder, :root .tabs {
-  margin: 25px 0 110px 0;
-}
-
-/* Should pickup Microsoft Edge */
-@supports (-ms-ime-align:auto) {
-  .tabs {
-    margin: 25px 0 110px 0;
-  }
-}
-
 .tab {
   float: left;
 }

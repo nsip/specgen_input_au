@@ -253,20 +253,20 @@ For clarity, the conceptual model is broken up into use cases:</p>
 				<td>StaffPersonal</td>
 			</tr>
 			<tr>
-				<td>A Parent is a Party</td>
+				<td>A Parent/Student Contact is a Party</td>
 				<td>StudentContactPersonal</td>
 			</tr>	
 			<tr>
 				<td>A Party has a Picture</td>
-				<td>(Party), PersonPicture</td>
+				<td>{StudentPersonal, StaffPersonal, StudentContactPersonal}, PersonPicture</td>
 			</tr>	
 			<tr>
-				<td>A Party asserts and Identity</td>
-				<td>(Party), Identity</td>
+				<td>A Party asserts an Identity</td>
+				<td>{StudentPersonal, StaffPersonal, StudentContactPersonal}, Identity</td>
 			</tr>
 			<tr>
 				<td>A Party has a role on a System</td>
-				<td>(Party), SystemRole, (System)</td>
+				<td>{StudentPersonal, StaffPersonal, StudentContactPersonal}, SystemRole</td>
 			</tr>	
 		</tbody>
 	</table>
@@ -333,7 +333,7 @@ For clarity, the conceptual model is broken up into use cases:</p>
 		</tr>
 		<tr>
 			<td><em>attendance marked for</em></td>
-			<td>Period: StudentPeriodAttendance; Calendar Day: StudentDailyAttendance, StudentAttendanceTimeList; reporting object: StudentAttendanceSummary</td>
+			<td><em>Period:</em> StudentPeriodAttendance; <em>Calendar Day:</em> StudentDailyAttendance, StudentAttendanceTimeList; <em>reporting object: </em>StudentAttendanceSummary</td>
 		</tr>
 	</tbody>
 	</table>
@@ -479,8 +479,8 @@ For clarity, the conceptual model is broken up into use cases:</p>
 		</thead>
 		<tbody>
 			<tr>
-				<td>A Person engages in Resource Usage</td>
-				<td>(Person), ResourceUsage</td>
+				<td>A Teacher engages in Resource Usage</td>
+				<td>StaffPersonal, ResourceUsage</td>
 			</tr>
 			<tr>
 				<td>A School pays for Resource Usage</td>
@@ -504,7 +504,7 @@ For clarity, the conceptual model is broken up into use cases:</p>
 			</tr>
 			<tr>
 				<td>A Party is a Debtor</td>
-				<td><em>Party</em>, Debtor</td>
+				<td>{StudentPersonal, StaffPersonal, StudentContactPersonal}, Debtor</td>
 			</tr>
 			<tr>
 				<td>A Vendor is a Debtor</td>
@@ -515,12 +515,8 @@ For clarity, the conceptual model is broken up into use cases:</p>
 				<td>ChargedLocationInfo, FinancialAccount</td>
 			</tr>
 			<tr>
-				<td>A Party is a Debtor</td>
-				<td><em>Party</em>, Debtor</td>
-			</tr>
-			<tr>
 				<td>An Invoice is a Transaction</td>
-				<td><em>Transaction</em>, Invoice</td>
+				<td>Invoice</td>
 			</tr>
 			<tr>
 				<td>A Receipt is a Transaction</td>
@@ -532,7 +528,7 @@ For clarity, the conceptual model is broken up into use cases:</p>
 			</tr>
 			<tr>
 				<td>A Journal processes a Transaction</td>
-				<td>Journal, Transaction</td>
+				<td>Journal, {Invoice, PaymentReceipt, PurchaseOrder}</td>
 			</tr>
 			<tr>
 				<td>A Journal debits/credits an Account</td>
@@ -548,7 +544,7 @@ For clarity, the conceptual model is broken up into use cases:</p>
 			</tr>
 			<tr>
 				<td>An Invoice invoices an <em>Invoicee</em></td>
-				<td>Invoice, <em>Invoicee</em></td>
+				<td>Invoice, {Debtor, PurchaseOrder}</td>
 			</tr>
 			<tr>
 				<td>An Invoice is invoiced against an Account</td>
@@ -804,7 +800,418 @@ For clarity, the conceptual model is broken up into use cases:</p>
 			</tr>
 		</tbody>
 	</table>
+	
+	<h2>Classroom Assessment</h2>
+	<p><img src="images/Conceptual_gradebook.png" alt="" /></p>	
+	
+	<h3>Entities</h3>
+	<p>Relations which map to SIF objects are given in lowercase and <em>italicised</em></p>
+	<table>
+	<thead>
+		<tr>
+			<td>Conceptual Entity</td>
+			<td>SIF AU Object/s</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Student</td>
+			<td>StudentPersonal</td>
+		</tr>
+		<tr>
+			<td>Teacher</td>
+			<td>StaffPersonal</td>
+		</tr>
+		<tr>
+			<td>Class</td>
+			<td>TeachingGroup; SectionInfo</td>
+		</tr>
+		<tr>
+			<td><em>member</em></td>
+			<td>TeachingGroup; StudentSectionEnrollment</td>
+		</tr>
+		<tr>
+			<td>Term</td>
+			<td>TermInfo</td>
+		</tr>
+		<tr>
+			<td>LearningStandard</td>
+			<td>LearningStandardItem</td>
+		</tr>
+		<tr>
+			<td>Grading Assignment</td>
+			<td>GradingAssignment</td>
+		</tr>
+		<tr>
+			<td>Assignment Score</td>
+			<td>GradingAssignmentScore</td>
+		</tr>
+		<tr>
+			<td>Marking Value</td>
+			<td>MarkValueInfo</td>
+		</tr>
+		<tr>
+			<td>Grade</td>
+			<td>StudentGrade, <em>reporting object:</em> StudentScoreJudgementAgainstStandard</td>
+		</tr>
+
+	</tbody>
+	</table>
+	<h3>Relations</h3>
+	<p>The following maps the relations captured in the conceptual model to sets of SIF AU objects.</p>
+	<table>
+		<thead>
+			<tr>
+				<td>Conceptual</td>
+				<td>SIF AU Object/s</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>A Student is a member of a Class</td>
+				<td>StudentPersonal, TeachingGroup;  StudentPersonal, StudentSectionEnrollment, SectionInfo</td>
+			</tr>
+			<tr>
+				<td>A Grading Assignment is assigned to a Class</td>
+				<td>GradingAssignment, TeachingGroup</td>
+			</tr>
+			<tr>
+				<td>A Grading Assigment is assigned to a Student</td>
+				<td>GradingAssignment, StudentPersonal</td>
+			</tr>
+			<tr>
+				<td>A Grading Assignment receives an Assignment Score</td>
+				<td>GradingAssignmentScore, GradingAssignment</td>
+			</tr>
+			<tr>
+				<td>An Assignment Score is achieved by a Student</td>
+				<td>GradingAssignmentScore, StudentPersonal</td>
+			</tr>
+			<tr>
+				<td>An Assignment Score is scaled to a Marking Value</td>
+				<td>GradingAssignmentScore, MarkValueInfo</td>
+			</tr>
+			<tr>
+				<td>A Teacher marks an Assignment Score </td>
+				<td>GradingAssignmentScore, StaffPersonal</td>
+			</tr>
+			<tr>
+				<td>A Grading Assignment assesses performance against a Learning Standard</td>
+				<td>GradingAssignment, LearningStandardItem</td>
+			</tr>
+			<tr>
+				<td>A Student receives a Grade in a Class</td>
+				<td>StudentGrade;StudentScoreJudgementAgainstStandard, StudentPersonal, TeachingGroup</td>
+			</tr>
+			<tr>
+				<td>A Teacher marks a Grade</td>
+				<td>StudentGrade;StudentScoreJudgementAgainstStandard, StaffPersonal</td>
+			</tr>
+			<tr>
+				<td>A Grade covers a Term</td>
+				<td>StudentGrade;StudentScoreJudgementAgainstStandard, TermInfo</td>
+			</tr>
+			<tr>
+				<td>An Assignment Score is scaled to a Marking Value</td>
+				<td>GradingAssignmentScore, MarkValueInfo</td>
+			</tr>
+			<tr>
+				<td>A Grade assesses performance against a Learning Standard</td>
+				<td>StudentGrade;StudentScoreJudgementAgainstStandard, LearningStandardItem</td>
+			</tr>
+			<tr>
+				<td>A Grade is scaled to a Marking Value</td>
+				<td>StudentGrade;StudentScoreJudgementAgainstStandard, MarkValueInfo</td>
+			</tr>
+			<tr>
+				<td>A Grade encompasses Assignment Scores</td>
+				<td>StudentGrade;StudentScoreJudgementAgainstStandard, GradingAssignmentScore</td>
+			</tr>
+		</tbody>
+	</table>
+	<h2>Scheduling</h2>
+	<p><img src="images/Conceptual_scheduling.png" alt="" /></p>	
+	
+	<h3>Entities</h3>
+	<p>The grey arrows point to superclasses; e.g. Resource is a superclass of Room and Learning Resource. The <em>italicised</em> entity Resource is not represented separately in the SIF AU data model; it is realised through a choice of links to their subclass objects.</p>
+	<table>
+	<thead>
+		<tr>
+			<td>Conceptual Entity</td>
+			<td>SIF AU Object/s</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Teacher</td>
+			<td>StaffPersonal</td>
+		</tr>
+		<tr>
+			<td>Period</td>
+			<td>TimeTableCell;TeachingGroup</td>
+		</tr>
+		<tr>
+			<td>Room</td>
+			<td>RoomInfo</td>
+		</tr>
+		<tr>
+			<td>Scheduled Activity</td>
+			<td>ScheduledActivity</td>
+		</tr>
+		<tr>
+			<td>Learning Resource</td>
+			<td>LearningResource</td>
+		</tr>
+	</tbody>
+	</table>
 		
-			
+	<h3>Relations</h3>
+	<p>The following maps the relations captured in the conceptual model to sets of SIF AU objects.</p>
+	<table>
+		<thead>
+			<tr>
+				<td>Conceptual</td>
+				<td>SIF AU Object/s</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>A Room is a Resource</td>
+				<td>RoomInfo</td>
+			</tr>
+			<tr>
+				<td>A piece of Equipment is a Resource</td>
+				<td>EquipmentInfo</td>
+			</tr>
+			<tr>
+				<td>A Learning Resource is a Resource</td>
+				<td>LearningResource</td>
+			</tr>
+			<tr>
+				<td>A Resource may be booked for a Period</td>
+				<td>{RoomInfo, EquipmentInfo, LearningResource}, ResourceBooking, (Period)</td>
+			</tr>
+			<tr>
+				<td>A Resource may be booked for a Scheduled Activity</td>
+				<td>{RoomInfo, EquipmentInfo, LearningResource}, ResourceBooking, ScheduledActivity</td>
+			</tr>
+			<tr>
+				<td>A Resource is booked by a Teacher</td>
+				<td>{RoomInfo, EquipmentInfo, LearningResource}, ResourceBooking, StaffPersonal</td>
+			</tr>
+		</tbody>
+	</table>
+	
+	<h2>Statistics</h2>
+	<p><img src="images/Conceptual_statistics.png" alt="" /></p>	
+	
+	<h3>Entities</h3>
+	<p>The greyed out objects are of secondary importance to the specification, and have been little used to date.</p>
+	<table>
+	<thead>
+		<tr>
+			<td>Conceptual Entity</td>
+			<td>SIF AU Object/s</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Statistical Measurement</td>
+			<td>AggregateStatisticInfo</td>
+		</tr>
+		<tr>
+			<td>Statistical Value</td>
+			<td>AggregateStatisticFact</td>
+		</tr>
+		<tr>
+			<td>Statistical Characteristic</td>
+			<td>AggregateCharacteristic</td>
+		</tr>
+	</tbody>
+	</table>
+
+	<h3>Relations</h3>
+	<p>The following maps the relations captured in the conceptual model to sets of SIF AU objects.</p>
+	<table>
+		<thead>
+			<tr>
+				<td>Conceptual</td>
+				<td>SIF AU Object/s</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>A Room is a Resource</td>
+				<td>RoomInfo</td>
+			</tr>
+			<tr>
+				<td>A Statistical Measurement has a Statistical Value</td>
+				<td>AggregateStatisticalFact, AggregateStatisticalInfo</td>
+			</tr>
+			<tr>
+				<td>A Statistical Value has a Statistical Characteristic</td>
+				<td>AggregateStatisticalInfo, AggregateCharacteristicInfo</td>
+			</tr>
+
+		</tbody>
+	</table>
+
+	<h2>Teaching and Learning</h2>
+	<p><img src="images/Conceptual_teaching_learning.png" alt="" /></p>	
+	
+	<h3>Entities</h3>
+	<p>The greyed out objects are of secondary importance to the specification, and have been little used to date.</p>
+	<table>
+	<thead>
+		<tr>
+			<td>Conceptual Entity</td>
+			<td>SIF AU Object/s</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Student</td>
+			<td>StudentPersonal</td>
+		</tr>
+		<tr>
+			<td>Learning Activity</td>
+			<td>Activity</td>
+		</tr>
+		<tr>
+			<td>Learning Standard</td>
+			<td>LearningStandardItem</td>
+		</tr>
+		<tr>
+			<td>Curriculum</td>
+			<td>LearningStandardDocument</td>
+		</tr>
+		<tr>
+			<td>Learning Resource</td>
+			<td>LearningResource</td>
+		</tr>
+		<tr>
+			<td>Learning Resource Package</td>
+			<td>LearningResourcePackage</td>
+		</tr>
+	</tbody>
+	</table>
+
+	<h3>Relations</h3>
+	<p>The following maps the relations captured in the conceptual model to sets of SIF AU objects.</p>
+	<table>
+		<thead>
+			<tr>
+				<td>Conceptual</td>
+				<td>SIF AU Object/s</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>A Learning Activity is assigned to a Student</td>
+				<td>Activity, StudentPersonal</td>
+			</tr>
+			<tr>
+				<td>A Learning Activity is aligned to a Learning Standard</td>
+				<td>Activity, LearningStandardItem</td>
+			</tr>
+			<tr>
+				<td>A Learning Resource is aligned to a Learning Standard</td>
+				<td>LearningResource, LearningStandardItem</td>
+			</tr>
+			<tr>
+				<td>A Learning Resource is packaged in a Learning Resource Package</td>
+				<td>LearningResource, LearningResourcePackage</td>
+			</tr>
+			<tr>
+				<td>A Learning Standard is part of a Curriculum</td>
+				<td>LearningStandardItem, LearningStandardDocument</td>
+			</tr>
+			<tr>
+				<td>A Learning Resource supports a Learning Activity</td>
+				<td>Activity, LearningResource</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h2>Australian Government Reporting Collections</h2>
+	<p><img src="images/Conceptual_reporting_collections.png" alt="" /></p>	
+	
+	<h3>Entities</h3>
+	<p>The greyed out objects are of secondary importance to the specification, and have been little used to date.</p>
+	<table>
+	<thead>
+		<tr>
+			<td>Conceptual Entity</td>
+			<td>SIF AU Object/s</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>School</td>
+			<td>SchoolInfo</td>
+		</tr>
+		<tr>
+			<td>Education Authority</td>
+			<td>LEAInfo</td>
+		</tr>
+		<tr>
+			<td>Financial Questionnaire</td>
+			<td>Financial Questionnaire Submission</td>
+		</tr>
+		<tr>
+			<td>Address Collection</td>
+			<td>AGAddressCollectionSubmission</td>
+		</tr>
+		<tr>
+			<td>Status Report</td>
+			<td>AGStatusReport</td>
+		</tr>
+		<tr>
+			<td>Collection Round</td>
+			<td>AGGetRounds</td>
+		</tr>
+	</tbody>
+	</table>
+
+	<h3>Relations</h3>
+	<p>The following maps the relations captured in the conceptual model to sets of SIF AU objects.</p>
+	<table>
+		<thead>
+			<tr>
+				<td>Conceptual</td>
+				<td>SIF AU Object/s</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>A Financial Questionnaire is an Australian Government Data Collection</td>
+				<td>FinancialQuestionnaireSubmission</td>
+			</tr>
+			<tr>
+				<td>An Address Collection is an Australian Government Data Collection</td>
+				<td>AGAddressCollectionSubmission</td>
+			</tr>
+			<tr>
+				<td>A Census Collection is an Australian Government Data Collection</td>
+				<td>AGCensusSubmission</td>
+			</tr>
+			<tr>
+				<td>An Australian Government Data Collection comes from a School</td>
+				<td>{FinancialQuestionnaireSubmission, AGAddressCollectionSubmission, AGCensusSubmission}</td>
+			</tr>
+			<tr>
+				<td>An Australian Government Data Collection comes from an Education Authority</td>
+				<td>{FinancialQuestionnaireSubmission, AGAddressCollectionSubmission, AGCensusSubmission}</td>
+			</tr>
+			<tr>
+				<td>A Status Report is about an Australian Government Data Collection</td>
+				<td>AGStatusReport</td>
+			</tr>
+			<tr>
+				<td>A Collection Round is of an Australian Government Data Collection</td>
+				<td>AGGetRounds, {FinancialQuestionnaireSubmission, AGAddressCollectionSubmission, AGCensusSubmission}</td>
+			</tr>
+		</tbody>
+	</table>
 
 </Section>

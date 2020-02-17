@@ -128,7 +128,21 @@
 		</xsdDocument>
  
 	</xsdDocuments>	
- 	 
+	<!--Comment out next section if JSON not required -->
+
+	<xsltTransformations>
+		<xsltTransformation>
+			<xsltInputFile></xsltInputFile>
+			<xsltOutputDir>JSON</xsltOutputDir>
+			<xsltOutputFile>sif2jsonspecgen.xslt</xsltOutputFile>
+			<yamlToJson>false</yamlToJson>
+		</xsltTransformation>
+	</xsltTransformations>
+
+		
+	
+
+  	 
 	<!-- Other outputs built using XSLT -->
 	<!-- <xsltTransformations>
 		<xsltTransformation>
