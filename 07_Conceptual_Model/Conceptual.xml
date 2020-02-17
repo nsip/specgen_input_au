@@ -504,7 +504,7 @@ For clarity, the conceptual model is broken up into use cases:</p>
 			</tr>
 			<tr>
 				<td>A Party is a Debtor</td>
-				<td><em>Party</em>,, Debtor</td>
+				<td><em>Party</em>, Debtor</td>
 			</tr>
 			<tr>
 				<td>A Vendor is a Debtor</td>
@@ -516,11 +516,11 @@ For clarity, the conceptual model is broken up into use cases:</p>
 			</tr>
 			<tr>
 				<td>A Party is a Debtor</td>
-				<td><em>Party</em>,, Debtor</td>
+				<td><em>Party</em>, Debtor</td>
 			</tr>
 			<tr>
 				<td>An Invoice is a Transaction</td>
-				<td><em>Party</em>, Debtor</td>
+				<td><em>Transaction</em>, Invoice</td>
 			</tr>
 			<tr>
 				<td>A Receipt is a Transaction</td>
@@ -569,5 +569,242 @@ For clarity, the conceptual model is broken up into use cases:</p>
 
 		</tbody>
 	</table>
+	<h2>NAPLAN</h2>
+	<p><img src="images/Conceptual_naplan.png" alt="" /></p>	
+	
+	<h3>Entities</h3>
+	<p>Relations which map to SIF objects are given in lowercase and <em>italicised</em></p>
+	<table>
+	<thead>
+		<tr>
+			<td>Conceptual Entity</td>
+			<td>SIF AU Object/s</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>School</td>
+			<td>SchoolInfo</td>
+		</tr>
+		<tr>
+			<td>Student</td>
+			<td>StudentPersonal</td>
+		</tr>
+		<tr>
+			<td>NAP Test</td>
+			<td>NAPTest</td>
+		</tr>
+		<tr>
+			<td><em>registers for</em></td>
+			<td>NAPEventStudentLink</td>
+		</tr>	
+		<tr>
+			<td>NAP Testlet</td>
+			<td>NAPTestlet</td>
+		</tr>	
+		<tr>
+			<td>NAP Item</td>
+			<td>NAPTestItem</td>
+		</tr>	
+		<tr>
+			<td>NAP Results</td>
+			<td>NAPStudentResponseSet, <em>reporting object:</em> NAPTestScoreSummary</td>
+		</tr>	
+		<tr>
+			<td>NAP Codeframe</td>
+			<td>NAPCodeFrame</td>
+		</tr>	
+	</tbody>
+	</table>
+	<h3>Relations</h3>
+	<p>The following maps the relations captured in the conceptual model to sets of SIF AU objects.</p>
+	<table>
+		<thead>
+			<tr>
+				<td>Conceptual</td>
+				<td>SIF AU Object/s</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>A Student registers for a NAP Test</td>
+				<td>StudentPersonal, NAPStudentEventLink, NAPTest</td>
+			</tr>
+			<tr>
+				<td>A School administers a NAP Test</td>
+				<td>StudentPersonal, (SchoolInfo), NAPStudentEventLink, NAPTest</td>
+			</tr>
+			<tr>
+				<td>A NAP Testlet is part of a NAP Test</td>
+				<td>NAPTestlet, NAPTest</td>
+			</tr>
+			<tr>
+				<td>A NAP Item is part of a NAP Testlet</td>
+				<td>NAPTestItem, NAPTestlet</td>
+			</tr>
+			<tr>
+				<td>A NAP Codeframe releases NAP Tests</td>
+				<td>NAPCodeFrame, NAPTest</td>
+			</tr>
+			<tr>
+				<td>A NAP Codeframe releases NAP Testlets</td>
+				<td>NAPCodeFrame, NAPTestlet</td>
+			</tr>
+			<tr>
+				<td>A NAP Codeframe releases NAP Test items</td>
+				<td>NAPCodeFrame, NAPTestItem</td>
+			</tr>
+			<tr>
+				<td>A Student achieves a NAP Result</td>
+				<td>StudentPersonal, NAPStudentResponseSet; NAPTestScoreSummary</td>
+			</tr>
+			<tr>
+				<td>NAP Results are graded against a NAP Test</td>
+				<td>NAPStudentResponseSet, NAPTest; NAPTestScoreSummary</td>
+			</tr>
+		</tbody>
+	</table>
+	<h2>Wellbeing</h2>
+	<p><img src="images/Conceptual_wellbeing.png" alt="" /></p>	
+	
+	<h3>Entities</h3>
+	<p>The entities in the Wellbeing Usecase are densely interrelated; an Individualised Plan, for example, can draw on all of Behaviour Events, Alerts, and Wellbeing Characteristics. The relations indicated here are not an exhaustive list, and some relations have been left out for clarity. Relations which map to SIF objects are given in lowercase and <em>italicised</em></p>
+	<table>
+	<thead>
+		<tr>
+			<td>Conceptual Entity</td>
+			<td>SIF AU Object/s</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>School</td>
+			<td>SchoolInfo</td>
+		</tr>
+		<tr>
+			<td>Student</td>
+			<td>StudentPersonal</td>
+		</tr>
+		<tr>
+			<td>Teacher</td>
+			<td>StaffPersonal</td>
+		</tr>
+		<tr>
+			<td>Parent</td>
+			<td>StudentContactPersonal</td>
+		</tr>
+		<tr>
+			<td>Other Person</td>
+			<td>WellbeingPersonLink</td>
+		</tr>
+		<tr>
+			<td>Wellbeing Event</td>
+			<td>WellbeingEvent</td>
+		</tr>
+		<tr>
+			<td>Wellbeing Response</td>
+			<td>WellbeingResponse</td>
+		</tr>
+		<tr>
+			<td><em>involved</em></td>
+			<td>WellbeingPersonLink</td>
+		</tr>
+		<tr>
+			<td><em>appeals</em></td>
+			<td>WellbeingAppeal</td>
+		</tr>
+		<tr>
+			<td>Wellbeing Alert</td>
+			<td>WellbeingAlert</td>
+		</tr>
+		<tr>
+			<td>Wellbeing Characteristic</td>
+			<td>WellbeingCharacteristic</td>
+		</tr>
+		<tr>
+			<td>Personalised Student Plan</td>
+			<td>PersonalisedPlan</td>
+		</tr>	
+	</tbody>
+	</table>	
+	<h3>Relations</h3>
+	<p>The following maps the relations captured in the conceptual model to sets of SIF AU objects.</p>
+	<table>
+		<thead>
+			<tr>
+				<td>Conceptual</td>
+				<td>SIF AU Object/s</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>A Student is involved in a Wellbeing Event</td>
+				<td>StudentPersonal, WellbeingEvent, <em>group:</em>WellbeingPersonLink</td>
+			</tr>
+			<tr>
+				<td>A Teacher can be involved in a Wellbeing Event</td>
+				<td>StaffPersonal, WellbeingEvent, <em>group:</em>WellbeingPersonLink</td>
+			</tr>
+
+			<tr>
+				<td>A Student Contact can be involved in a Wellbeing Event</td>
+				<td>StudentContactPersonal, WellbeingPersonLink</td>
+			</tr>
+			<tr>
+				<td>An Other Person can be involved in a Wellbeing Event</td>
+				<td>WellbeingPersonLink</td>
+			</tr>
+			<tr>
+				<td>A Teacher (Staff) reports a Wellbeing Event</td>
+				<td>StaffPersonal, WellbeingPersonLink</td>
+			</tr>
+			<tr>
+				<td>A Wellbeing Event has a Wellbeing Response</td>
+				<td>WellbeingEvent, WellbeingResponse</td>
+			</tr>
+			<tr>
+				<td>A Student is involved in a Wellbeing Response</td>
+				<td>StudentPersonal, WellbeingResponse</td>
+			</tr>											
+			<tr>
+				<td>A Teacher can be involved in a Wellbeing Response</td>
+				<td>StaffPersonal, WellbeingResponse, <em>group:</em>WellbeingPersonLink</td>
+			</tr>
+			<tr>
+				<td>A Student Contact can be involved in a Wellbeing Response</td>
+				<td>StudentContactPersonal, WellbeingPersonLink</td>
+			</tr>
+			<tr>
+				<td>An Other Person can be involved in a Wellbeing Response</td>
+				<td>WellbeingPersonLink</td>
+			</tr>
+			<tr>
+				<td>A Wellbeing Response is appealed by a Student</td>
+				<td>WellbeingResponse, WellbeingAppeal, StudentPersonal</td>
+			</tr>
+			<tr>
+				<td>A Wellbeing Alert is raised about a Student</td>
+				<td>WellbeingAlert, StudentPersonal</td>
+			</tr>
+			<tr>
+				<td>A Student has a Wellbeing Characteristic</td>
+				<td>StudentPersonal, WellbeingCharacteristic</td>
+			</tr>	
+			<tr>		
+				<td>An Individualised Plan is for a Student</td>
+				<td>SPersonalisedPlan, StudentPersonal</td>
+			</tr>
+			<tr>
+				<td>An Individualised Plan responds to a Wellbeing Characteristic</td>
+				<td>WellbeingChracteristic, PersonalisedPlan</td>
+			</tr>
+			<tr>
+				<td>An Individualised Plan responds to a Behaviour Event</td>
+				<td>WellbeingEvent, PersonalisedPlan</td>
+			</tr>
+		</tbody>
+	</table>
+		
+			
 
 </Section>
