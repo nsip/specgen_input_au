@@ -24,6 +24,8 @@ For clarity, the conceptual model is broken up into use cases:</p>
 <p>Entities are named with names that the schools sector business can relate to readily, rather than the current names of SIF AU objects.</p>
 	<p>The conceptual model uses UML conventions. Each class corresponds to one or more SIF objects. Abstract classes, which generalise from classes, are used to capture relations more economically; they are <em>italicised</em>.</p>
 	
+	
+	
 	<h2>Enrolment</h2>
 	<p>The following are the primary objects involved in enrolling a student onto school systems.</p>
 	<p><img src="images/Conceptual_enrolment.png" alt="" /></p>
@@ -105,7 +107,7 @@ For clarity, the conceptual model is broken up into use cases:</p>
 		</tr>	
 		<tr>
 			<td><em>participates</em></td>
-			<td><em>Program: </em>StudentParticipation; <em>Co-Curricular Activity: </em>StudentActivityInfo</td>
+			<td><em>Program: </em>StudentParticipation; <em>Co-Curricular Activity: </em>StudentActivityParticipation</td>
 		</tr>	
 		<tr>
 			<td>Picture</td>
@@ -145,7 +147,7 @@ For clarity, the conceptual model is broken up into use cases:</p>
 			</tr>	
 			<tr>
 				<td>A Class contributes to a Course</td>
-				<td>TeachingGroup, SchoolCourseInfo, SectionInfo, SchoolCourseInfo</td>
+				<td>TeachingGroup, SchoolCourseInfo; SectionInfo, SchoolCourseInfo</td>
 			</tr>
 			<tr>
 				<td>A Subject is taught within a Class</td>
@@ -321,11 +323,11 @@ For clarity, the conceptual model is broken up into use cases:</p>
 		</tr>
 		<tr>
 			<td>Period</td>
-			<td>TimeTableCell, TimeTableContainer</td>
+			<td>TimeTableCell; SessionInfo; TimeTableContainer</td>
 		</tr>
 		<tr>
 			<td>TimeTable</td>
-			<td>TimeTableCell, TimeTableContainer</td>
+			<td>TimeTable; TimeTableContainer</td>
 		</tr>
 		<tr>
 			<td>Scheduled Activity</td>
@@ -394,10 +396,11 @@ For clarity, the conceptual model is broken up into use cases:</p>
 				<td>ScheduledActivity, TeachingGroup</td>
 			</tr>				<tr>
 				<td>A Student has attendance marked for a Period</td>
-				<td>StudentPersonal, StudentPeriodAttendance, (TimeTablePeriod = TimeTableCell)</td>
-			</tr>				<tr>
+				<td>StudentPersonal, StudentPeriodAttendance, ({TimeTableCell, SessionInfo})</td>
+			</tr>
+			<tr>
 				<td>A Student has attendance marked for a Day</td>
-				<td>StudentPersonal, StudentDailyAttendance, (Date = CalendarDate); StudentPersonal, StudentAttendanceTimeList, (Date = CalendarDate)</td>
+				<td>StudentPersonal, StudentDailyAttendance, (CalendarDate); StudentPersonal, StudentAttendanceTimeList, (CalendarDate)</td>
 			</tr>	
 		</tbody>
 	</table>
@@ -532,18 +535,18 @@ For clarity, the conceptual model is broken up into use cases:</p>
 			</tr>
 			<tr>
 				<td>A Journal debits/credits an Account</td>
-				<td>Journal,FinancialAccount</td>
+				<td>Journal, FinancialAccount</td>
 			</tr>
 			<tr>
 				<td>A Debtor is an Invoicee</td>
 				<td>Debtor</td>
 			</tr>
 			<tr>
-				<td>A Purchase Order is an <em>Invoicee</em></td>
+				<td>A Purchase Order is an Invoicee</td>
 				<td>PurchaseOrder</td>
 			</tr>
 			<tr>
-				<td>An Invoice invoices an <em>Invoicee</em></td>
+				<td>An Invoice invoices an Invoicee</td>
 				<td>Invoice, {Debtor, PurchaseOrder}</td>
 			</tr>
 			<tr>
@@ -652,11 +655,11 @@ For clarity, the conceptual model is broken up into use cases:</p>
 			</tr>
 			<tr>
 				<td>A Student achieves a NAP Result</td>
-				<td>StudentPersonal, NAPStudentResponseSet; NAPTestScoreSummary</td>
+				<td>StudentPersonal, NAPStudentResponseSet; <em>aggregated: </em>NAPTestScoreSummary</td>
 			</tr>
 			<tr>
 				<td>NAP Results are graded against a NAP Test</td>
-				<td>NAPStudentResponseSet, NAPTest; NAPTestScoreSummary</td>
+				<td>NAPStudentResponseSet, NAPTest; <em>aggregated: </em>NAPTestScoreSummary, NAPTest</td>
 			</tr>
 		</tbody>
 	</table>
@@ -901,15 +904,15 @@ For clarity, the conceptual model is broken up into use cases:</p>
 			</tr>
 			<tr>
 				<td>A Student receives a Grade in a Class</td>
-				<td>StudentGrade;StudentScoreJudgementAgainstStandard, StudentPersonal, TeachingGroup</td>
+				<td>{StudentGrade, StudentScoreJudgementAgainstStandard}, StudentPersonal, TeachingGroup</td>
 			</tr>
 			<tr>
 				<td>A Teacher marks a Grade</td>
-				<td>StudentGrade;StudentScoreJudgementAgainstStandard, StaffPersonal</td>
+				<td>{StudentGrade, StudentScoreJudgementAgainstStandard}, StaffPersonal</td>
 			</tr>
 			<tr>
 				<td>A Grade covers a Term</td>
-				<td>StudentGrade;StudentScoreJudgementAgainstStandard, TermInfo</td>
+				<td>{StudentGrade, StudentScoreJudgementAgainstStandard}, TermInfo</td>
 			</tr>
 			<tr>
 				<td>An Assignment Score is scaled to a Marking Value</td>
@@ -917,15 +920,15 @@ For clarity, the conceptual model is broken up into use cases:</p>
 			</tr>
 			<tr>
 				<td>A Grade assesses performance against a Learning Standard</td>
-				<td>StudentGrade;StudentScoreJudgementAgainstStandard, LearningStandardItem</td>
+				<td>{StudentGrade, StudentScoreJudgementAgainstStandard}, LearningStandardItem</td>
 			</tr>
 			<tr>
 				<td>A Grade is scaled to a Marking Value</td>
-				<td>StudentGrade;StudentScoreJudgementAgainstStandard, MarkValueInfo</td>
+				<td>{StudentGrade, StudentScoreJudgementAgainstStandard}, MarkValueInfo</td>
 			</tr>
 			<tr>
 				<td>A Grade encompasses Assignment Scores</td>
-				<td>StudentGrade;StudentScoreJudgementAgainstStandard, GradingAssignmentScore</td>
+				<td>{StudentGrade, StudentScoreJudgementAgainstStandard}, GradingAssignmentScore</td>
 			</tr>
 		</tbody>
 	</table>
@@ -989,7 +992,7 @@ For clarity, the conceptual model is broken up into use cases:</p>
 			</tr>
 			<tr>
 				<td>A Resource may be booked for a Period</td>
-				<td>{RoomInfo, EquipmentInfo, LearningResource}, ResourceBooking, (Period)</td>
+				<td>{RoomInfo, EquipmentInfo, LearningResource}, ResourceBooking</td>
 			</tr>
 			<tr>
 				<td>A Resource may be booked for a Scheduled Activity</td>

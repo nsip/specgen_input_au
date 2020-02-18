@@ -3,9 +3,15 @@
 	<EventsReported>true</EventsReported>
 	<Item>
 		<Element>TimeTableContainer</Element>
-		<privacyRating>Low</privacyRating>
-		<Description>
-    </Description>
+		<privacyRating>Medium</privacyRating>
+	   <Description>
+	   <p>This object has been proposed as part of a solution for issues raised with the transmission of timetable information where the software vendor producing the cyclic timetable is not the source of truth for ongoing publishing.  e.g. not the endpoint provider.</p>
+	   <p>This object is labelled as EXPERIMENTAL.  That means it is subject to changes which may be breaking based on vendor and jurisdiciton implementation, testing and confirmation.</p>
+      <p>
+        The purpose of this object is to allow a third party software product to submit a cyclic Timetable and all its components as a single payload.
+        The POSTing of this information to an endpoint, allows the endpoint provider to allocate individual resource id's to the components so that the individual entities can be managed by the endpoint provider.
+        e.g. specific TeachingGroupType in this payload will not have a RefId, that will be managed by the endpoint provider if that information is to be re-published separately.</p>
+		</Description>
 	</Item>
 	<Item>
 		<Attribute>RefId</Attribute>
