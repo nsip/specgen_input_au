@@ -25,7 +25,7 @@ For clarity, the conceptual model is broken up into use cases:</p>
 <h2>Entity Diagram/Table Conventions</h2>
 <p>Entities are named with names that the schools sector business can relate to readily, rather than the current names of SIF AU objects.</p>
 <p>The conceptual model uses UML conventions. Each class corresponds to one or more SIF objects. Abstract classes, which generalise from classes, are used to capture relations more economically; they are <em>italicised</em>.</p>
-<p>Alternatives are indicated with semicolon Refinements/context on alternatives indicated by italics and prefix.</p>
+<p>Alternatives are indicated with semicolon Refinements/context on alternatives indicated by italics and prefix. A colon is used to introduce the context in which an alternative representation is applicable.</p>
 	
 <h2>Relation Table Conventions</h2>	
 <p>The comma-delimited objects enumerated are the set of objects which together represent the relationship, including the two objects containing the join attribute</p>
