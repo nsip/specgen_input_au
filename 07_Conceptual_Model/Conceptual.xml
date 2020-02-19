@@ -21,11 +21,20 @@ For clarity, the conceptual model is broken up into use cases:</p>
 	<li>	Teaching and Learning</li>
 	<li>	Reporting Collections</li>
 </ul>
+
+<h2>Entity Diagram/Table Conventions</h2>
 <p>Entities are named with names that the schools sector business can relate to readily, rather than the current names of SIF AU objects.</p>
-	<p>The conceptual model uses UML conventions. Each class corresponds to one or more SIF objects. Abstract classes, which generalise from classes, are used to capture relations more economically; they are <em>italicised</em>.</p>
+<p>The conceptual model uses UML conventions. Each class corresponds to one or more SIF objects. Abstract classes, which generalise from classes, are used to capture relations more economically; they are <em>italicised</em>.</p>
+<p>Alternatives are indicated with semicolon Refinements/context on alternatives indicated by italics and prefix.</p>
 	
-	
-	
+<h2>Relation Table Conventions</h2>	
+<p>The comma-delimited objects enumerated are the set of objects which together represent the relationship, including the two objects containing the join attribute</p>
+<p>If an object is optional for the relation to be expressed, it is put in brackets</p>	
+<p>If two objects are alternatives for each other in the relation presented, they are represented by { Object1, Object 2 }. (See Account Provisioning, for instance.</p>
+<p>If there are multiple sets of objects which represent the relationship, they are semicolon-delimited: “A, B, C; Y, Z”. </p>
+<p>Some objects are highly denormalised, to the extent that they contain data about both entities being related; in such cases, only a single object is needed to represent the relation.</p>
+
+
 	<h2>Enrolment</h2>
 	<p>The following are the primary objects involved in enrolling a student onto school systems.</p>
 	<p><img src="images/Conceptual_enrolment.png" alt="" /></p>
