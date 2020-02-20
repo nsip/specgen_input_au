@@ -24,13 +24,14 @@ For clarity, the conceptual model is broken up into use cases:</p>
 
 <h2>Entity Diagram/Table Conventions</h2>
 <p>Entities are named with names that the schools sector business can relate to readily, rather than the current names of SIF AU objects.</p>
-<p>The conceptual model uses UML conventions. Each class corresponds to one or more SIF objects. Abstract classes, which generalise from classes, are used to capture relations more economically; they are <em>italicised</em>.</p>
-<p>Alternatives are indicated with semicolon Refinements/context on alternatives indicated by italics and prefix. A colon is used to introduce the context in which an alternative representation is applicable.</p>
+<p>The conceptual model uses UML conventions. Each class corresponds to one or more SIF objects. Abstract classes, which generalise from classes, are used to capture relations more economically; they are <em>italicised</em> in the diagrams.</p>
+<p>Relations between classes, which correspond to SIF objects, are italicised in the Entity tables.</p>
+<p>Alternatives are indicated with semicolon. Refinements/context on alternatives are indicated by <em>italics</em> and prefix. A colon is used to introduce the context in which an alternative representation is applicable.</p>
 	
 <h2>Relation Table Conventions</h2>	
-<p>The comma-delimited objects enumerated are the set of objects which together represent the relationship, including the two objects containing the join attribute</p>
-<p>If an object is optional for the relation to be expressed, it is put in brackets</p>	
-<p>If two objects are alternatives for each other in the relation presented, they are represented by { Object1, Object 2 }. (See Account Provisioning, for instance.</p>
+<p>The comma-delimited objects enumerated are the set of objects which together represent the relationship, including the two objects containing the join attribute and the object joining the two, where applicable.</p>
+<p>If an object is optional for the relation to be expressed, it is put in brackets.</p>	
+<p>If two objects are alternatives for each other in the relation presented, they are represented by { Object1, Object 2 }. (See Account Provisioning, for instance).</p>
 <p>If there are multiple sets of objects which represent the relationship, they are semicolon-delimited: “A, B, C; Y, Z”. </p>
 <p>Some objects are highly denormalised, to the extent that they contain data about both entities being related; in such cases, only a single object is needed to represent the relation.</p>
 
@@ -676,7 +677,7 @@ For clarity, the conceptual model is broken up into use cases:</p>
 	<p><img src="images/Conceptual_wellbeing.png" alt="" /></p>	
 	
 	<h3>Entities</h3>
-	<p>The entities in the Wellbeing Usecase are densely interrelated; an Individualised Plan, for example, can draw on all of Behaviour Events, Alerts, and Wellbeing Characteristics. The relations indicated here are not an exhaustive list, and some relations have been left out for clarity. Relations which map to SIF objects are given in lowercase and <em>italicised</em></p>
+	<p>The entities in the Wellbeing Usecase are densely interrelated; a Personalised Plan, for example, can draw on all of Behaviour Events, Alerts, and Wellbeing Characteristics. The relations indicated here are not an exhaustive list, and some relations have been left out for clarity. Relations which map to SIF objects are given in lowercase and <em>italicised</em></p>
 	<table>
 	<thead>
 		<tr>
@@ -945,7 +946,7 @@ For clarity, the conceptual model is broken up into use cases:</p>
 	<p><img src="images/Conceptual_scheduling.png" alt="" /></p>	
 	
 	<h3>Entities</h3>
-	<p>The grey arrows point to superclasses; e.g. Resource is a superclass of Room and Learning Resource. The <em>italicised</em> entity Resource is not represented separately in the SIF AU data model; it is realised through a choice of links to their subclass objects.</p>
+	<p></p>
 	<table>
 	<thead>
 		<tr>
@@ -1149,7 +1150,7 @@ For clarity, the conceptual model is broken up into use cases:</p>
 	<p><img src="images/Conceptual_reporting_collections.png" alt="" /></p>	
 	
 	<h3>Entities</h3>
-	<p>The greyed out objects are of secondary importance to the specification, and have been little used to date.</p>
+	<p></p>
 	<table>
 	<thead>
 		<tr>
