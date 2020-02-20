@@ -210,7 +210,7 @@
 <Value><Code>DP-1</Code><Text>Vegetarian</Text><Description>No meat or fish</Description></Value>
 <Value><Code>DP-2</Code><Text>Vegan</Text><Description>No animal products</Description></Value>
 <Value><Code>DP-3</Code><Text>Pescatarian</Text><Description>No meat but food may contain fish</Description></Value>
-<Value><Code>DP-4</Code><Text>Lacto-vegetarian</Text><Description>No meat or eggs, food can contain milk</Description></Value>
+<Value><Code>DP-4</Code><Text>Lacto-vegetarian</Text><Description>No meat or fish or eggs, food can contain milk</Description></Value>
 <Value><Code>DP-5</Code><Text>Ovo-lacto-vegetarian</Text><Description>No meat or fish, food can contain eggs or milk</Description></Value>
 <Value><Code>DP-6</Code><Text>Kosher</Text><Description></Description></Value>
 <Value><Code>DP-7</Code><Text>Halal</Text><Description></Description></Value>
