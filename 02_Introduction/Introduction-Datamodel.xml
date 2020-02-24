@@ -47,9 +47,10 @@
     </Section>
     
     <Section name="JSON">
-      <p>Java Script Object Notation (<em>JSON</em>) is an alternate way to represent an object in a tree like structure. <em>JSON</em> is desirable for a variety of reasons including: good wire efficiency, strong programming support, and satisfactory human readability. Since SIF’s data models are formally defined using XML Schemas, <em>JSON</em> conversion is handled through one of two sets of rules. 
-<code>Default: </code><em>Goessner Notation</em>, which uses schema-independent generic rules for ease of translation. 
-<code>Preferred: </code><em>PESC JSON</em> which uses schema-aware rules for consistent results.
+      <p>Java Script Object Notation (<em>JSON</em>) is an alternate way to represent an object in a tree like structure. <em>JSON</em> is desirable for a variety of reasons including: good wire efficiency, strong programming support, and satisfactory human readability. Since SIF’s data models are formally defined using XML Schemas, <em>JSON</em> conversion is handled through one of two sets of rules. </p>
+<p><code>Default: </code><em>Goessner Notation</em>, which uses schema-independent generic rules for ease of translation. <a href="https://www.xml.com/pub/a/2006/05/31/converting-between-xml-and-json.html">[Goessner JSON]</a></p>
+<p>
+<code>Preferred: </code><em>PESC JSON</em> which uses schema-aware rules for consistent results. <a href="http://specification.sifassociation.org/Implementation/Infrastructure/3.3/PESC_JSON.pdf">[PESC JSON]</a>
 </p>
     </Section> 
     <Section name="References">

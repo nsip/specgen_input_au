@@ -57,14 +57,9 @@ SIF Adapters and message brokers MUST supply data according to the types specifi
 </p>
 </Section>
 <Section name="Conceptual Modelling">
-<p>The SIF AU Data Model is a “data in motion” model, which has been designed for data exchange between institutions. However, it is increasingly being used within enterprises, and it has been widely used as a nationally agreed data model for education. In order to help navigate the SIF data model better, and to make it easier to map between SIF and other data models of education, we have abstracted a conceptual data model from SIF AU, treating SIF AU as a logical data model. The document Conceptual Model v0.5.pdf (11/07/2019)  outlines the current conceptual model for SIF AU, and how it maps to the logical model.
+<p>The SIF AU Data Model is a “data in motion” model, which has been designed for data exchange between institutions. However, it is increasingly being used within enterprises, and it has been widely used as a nationally agreed data model for education. In order to help navigate the SIF data model better, and to make it easier to map between SIF and other data models of education, we have abstracted a conceptual data model from SIF AU, treating SIF AU as a logical data model. See section 4 for more detailed information and the model itself.
 </p>
- <ul>
-        <li class="file">
-          <a href="background/Conceptual Model v0.5.pdf">Conceptual Model v0.5.pdf (11/07/2019)</a>
-        </li>
- </ul>      
-</Section>
+ </Section>
 <Section name="Conventions">
 
 <Section name="Object Attributes/Primary Keys">

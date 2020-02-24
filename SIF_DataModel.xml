@@ -86,10 +86,11 @@
 			<dd>
 				JSON-PESC XSLT 3.4.6 support <a href="https://github.com/nsip/sifxml2pescjson"> (GitHub Repository)</a>
 			</dd>
+			<!-- Leave this out when examples inline
 			<dt>JSON-PESC Examples 3.4.6</dt>
 			<dd>
 				JSON-PESC Examples 3.4.6<a href="JSON/siftest.pretty.json"> (json)</a>
-			</dd>
+			</dd> -->
 
 
 		</dl>
