@@ -190,13 +190,15 @@
 		
 			<p><img src="images/Logical_AGCollections.png" alt="" /></p>
 			<p>This represents the current AG Data Collections represented in the SIF AU Data Model.</p>
+			<p>Please note that the AG Collection objects have been removed from the initial 3.4.6 release due to changes that will be required for future functionality.  They will be added with an errata release when new changes have been tested and approved by stakeholders.</p>
 		</Intro>	
-		<!--AG Collections -->	  
+		<!--AG Collections -->	
+		<!--  
 		<xi:include parse="text" href="AU/FinancialQuestionnaireSubmission.xml"/>   
 		<xi:include parse="text" href="AU/AGStatusReport.xml"/>
 		<xi:include parse="text" href="AU/AGAddressCollectionSubmission.xml"/>
 		<xi:include parse="text" href="AU/AGCensusSubmission.xml"/>
-		<xi:include parse="text" href="AU/AGGetRound.xml"/>
+		<xi:include parse="text" href="AU/AGGetRound.xml"/>-->
 		
 
 		

@@ -9931,7 +9931,8 @@
 				<Text>Day Student</Text>
 			</Value>
 		</Values>
-	</CodeSet>	
+	</CodeSet>
+	<!--
 	<CodeSet>
 		<Intro>
 			<p>AG Collection Contextual Question Codes</p>
@@ -9999,4 +10000,5 @@
 			</Value>			
 		</Values>
 	</CodeSet>							
+	-->
 </Grouping>
