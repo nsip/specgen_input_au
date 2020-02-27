@@ -9,8 +9,9 @@
 	<h3>Additions/Changes since 3.4.5 (August, 2019)</h3>
 	<h4>New Objects</h4>
 	<ul>
+	<!--
 		<li>AGGetRounds to support Australian Government Collections - Proposed for Australian Government, Collections Projects</li>
-		<li>AGCensusSubmission to support Australian Government Collections - Proposed for Australian Government, Collections Projects</li>
+		<li>AGCensusSubmission to support Australian Government Collections - Proposed for Australian Government, Collections Projects</li> -->
 		<li>TimeTableContainer - Proposed out of investigation into publishing Timetables.  This object is considered <em>“experimental”</em>.</li>
 	</ul>
 		<h4>New Types</h4>
@@ -20,8 +21,9 @@
 		<li>AccountCodeList – added to PaymentReceipt</li>
 		<li>JournalAdjustmentList – added to Journal</li>
 		<li>TimeTableScheduleType – included in TimeTableContainer</li>
-		<li>AGContextualQuestionList – added for AG Collection Objects to set context</li>
-		<li>AGRoundListType, AGRoundType – added for AG Collection Objects</li>
+		<!--
+		<li>AGContextualQuestionList – added for AG Collection Objects to set context</li> 
+		<li>AGRoundListType, AGRoundType – added for AG Collection Objects</li> -->
 		<li>AccountCodeList – added to Financial objects - Vic</li>
 	</ul>
 	
@@ -39,18 +41,19 @@
 		<li>PersonalisedPlan – LodalId</li>
 		<li>WellbeingCharacteristic – LocalId</li>
 		<li>WellbeingPersonLink – LocalId</li>
-		<li>FinancialQuestionnaireSubmission – Roun</li>
+		<!--
+		<li>FinancialQuestionnaireSubmission – RoundCode</li>
 		<li>AGStatusReport -RoundCode</li>
-		<li>AddressCollectionStudentType – ReportingParent2</li>
+		<li>AddressCollectionStudentType – ReportingParent2</li> -->
 		<li>PurchasingItemType - LocalItemId</li>
 	</ul>
 	
-		
+		<!--
 	<h4>New CodeSets</h4>
 	
 	<ul>
 		<li>AGContextQuestion - for AG Collections</li>
-	</ul>
+	</ul> -->
 
 	
 	<h4>New Enumerations</h4>
@@ -93,11 +96,12 @@
 	
 		<h4>Deletions</h4>
 	<ul>
-	
+	   <p>Please note that the AG Collection objects have been removed from the initial 3.4.6 release due to changes that will be required for future functionality.  They will be added with an errata release when new changes have been tested and approved by stakeholders.</p>
+	<!--
 		<li>FinancialQuestionnaireSubmission – ReportingAuthority, ReportingAuthoritySystem, SystemSubmission, SubmissionContact, FQReportingComments</li>
 		<li>FQReportingType – FQRefId (Can never be supplied).</li>
 		<li>AGAddressCollectionSubmission – ReportingAuthority, ReportingAuthoritySystem, SystemSubmission, SubmissionContact, AddressCollectionComments</li>
-		<li>AddressCollectionReportingType – AddressCollectionRefId (Can never be supplied).</li>
+		<li>AddressCollectionReportingType – AddressCollectionRefId (Can never be supplied).</li> -->
 	</ul>
 		
 </Section>
