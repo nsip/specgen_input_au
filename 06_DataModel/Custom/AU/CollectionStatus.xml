@@ -1,0 +1,181 @@
+<DataObject name="CollectionStatus"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xmlns:xi="http://www.w3.org/2001/XInclude"
+			xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	
+            xmlns="http://sifassociation.org/SpecGen">
+
+  <Key>@RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>CollectionStatus</Element>
+	<privacyRating>High</privacyRating>
+    <Description>
+      <p>Object reporting the processing status of a collection object submitted to the Australian Government. Object is published by the Australian Government collections hub.</p>
+     </Description>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+	<privacyRating>High</privacyRating>
+    <Description>
+      <p>GUID for this Status Report. The application that owns this object is responsible for generating this unique Id.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+  
+  <Item>
+	  <Element>ReportingAuthority</Element>
+	  <Characteristics>M</Characteristics>
+	  <privacyRating>High</privacyRating>
+	  <Description>Authority who submitted the collection data.</Description>
+	  <Type name="xs:normalizedString"></Type>
+  </Item>
+  
+  <Item>
+	  <Element>ReportingAuthoritySystem</Element>
+	  <Characteristics>O</Characteristics>
+	  <privacyRating>High</privacyRating>
+	  <Description>System of Reporting Authority if Systemic.</Description>
+	  <Type name="xs:normalizedString"></Type>
+  </Item>
+  <Item>
+    <Element>ReportingAuthorityCommonwealthId</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Commonwealth identifier for the submitting entity.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  
+  <Item>
+    <Element>SubmittedBy</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
+    <Description>
+      <p>Extra information about submitter.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  
+  <Item>
+    <Element>SubmissionTimestamp</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Timestamp of the original collection submission that these entities were reported on.</p>
+    </Description>
+    <Type name="xs:dateTime"></Type>
+  </Item>
+  <!--  
+  <Item>
+  	  <Element>SubmissionStatusCode</Element>
+	  <Characteristics>O</Characteristics>
+	  <privacyRating>Low</privacyRating>
+	  <Description>Status Code of the actual submission.</Description>
+	  <Type name="xs:normalizedString"></Type> 
+  </Item> -->
+  
+   <Item>
+  	  <Element>AGCollection</Element>
+	  <Characteristics>O</Characteristics>
+	  <privacyRating>Low</privacyRating>
+	  <Description>The type of AG Collection being reported on.</Description>
+	  <Type name="xs:normalizedString"></Type> 
+  </Item>
+  
+    <Item>
+	  <Element>CollectionYear</Element>
+	  <Characteristics>M</Characteristics>
+	  <privacyRating>Low</privacyRating>
+	  <Description>Data Year</Description>
+	  <Type ref="CommonTypes" name="SchoolYearType"></Type>
+  </Item>
+  
+  <Item>
+  	  <Element>RoundCode</Element>
+	  <Characteristics>M</Characteristics>
+	  <privacyRating>Low</privacyRating>
+	  <Description>Which Round of the collection is this submission for?</Description>
+	  <Type name="xs:normalizedString"></Type>
+  </Item>
+  
+  <Item>
+    <Element>AGReportingObjectResponseList</Element>    
+    <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
+    <Description>
+      <p>A list of the Reporting Objects being responded to.</p>
+    </Description>
+	<Type ref="CommonTypes" name="AGReportingObjectResponseListType"></Type>
+  </Item>
+   
+  <Item>   
+    <Element>LocalCodeList</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Extreme</privacyRating>
+    <Type ref="CommonTypes" name="LocalCodeListType"></Type>
+  </Item>
+   
+  <Item>   
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Extreme</privacyRating>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Extreme</privacyRating>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+  
+<xhtml:Example xmlns="" name="CollectionStatus">
+<CollectionStatus RefId="D3E34B35-9D75-101A-8C3D-00AA001A1652">
+  <ReportingAuthority>Ballarat Diocese</ReportingAuthority>
+  <ReportingAuthoritySystem>Vic Catholic</ReportingAuthoritySystem>
+  <ReportingAuthorityCommonwealthId>012345</ReportingAuthorityCommonwealthId>
+  <SubmittedBy>XXXXXXXX</SubmittedBy>
+  <SubmissionTimestamp>2018-05-30T09:00:00</SubmissionTimestamp>
+  <AGCollection>FQ</AGCollection>
+  <CollectionYear>2018</CollectionYear>
+  <RoundCode>FQ1</RoundCode>
+  <AGReportingObjectResponseList>		
+	<AGReportingObjectResponse>
+	  <SubmittedRefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</SubmittedRefId>  <!-- Original Reporting RefId of the submission -->
+	  <SIFRefId>73048175-5738-4386-A260-40CE6230FC1B</SIFRefId>   <!-- AG assigned for a submission (they can be the same as the original submission but at the discretion of the AG) -->
+	  <HTTPStatusCode>202</HTTPStatusCode> <!-- Optional HTTP Individual Object Acceptance or not Status -->
+      <CommonwealthId>012345</CommonwealthId>
+      <EntityName>XXX Secondary College</EntityName>
+	  <AGSubmissionStatusCode>Declared</AGSubmissionStatusCode>  <!-- Status of AG Processing - Internal to AG -->
+    </AGReportingObjectResponse>	
+	<AGReportingObjectResponse>
+	  <SubmittedRefId>E9C5106F-7E87-4773-ACCD-390F8E8B9314</SubmittedRefId>  <!-- Original Reporting RefId of the submission -->
+	  <HTTPStatusCode>400</HTTPStatusCode>
+	  <ErrorText>Item components do not add up. Malformed characters.</ErrorText>
+      <CommonwealthId>12387</CommonwealthId>
+      <EntityName>ABCXYZ Secondary College</EntityName>
+	  <AGSubmissionStatusCode>In Progress</AGSubmissionStatusCode>
+      <AGRuleList>
+	    <AGRule>
+		  <AGRuleCode>WR-076</AGRuleCode>
+			<AGRuleComment>Cannot be ignored because Components do not add up to Total - Fix</AGRuleComment>
+			<AGRuleResponse></AGRuleResponse>  
+			<AGRuleStatus>Fail</AGRuleStatus>
+		</AGRule>
+	  </AGRuleList>	
+    </AGReportingObjectResponse>
+	<AGReportingObjectResponse>
+	  <SubmittedRefId>CFB3EB6B-F873-4108-BAA7-ED11711A9E86</SubmittedRefId>
+	  <SIFRefId>4C194A64-362F-4163-BAE9-1A7852913E3C</SIFRefId>
+	  <HTTPStatusCode>201</HTTPStatusCode>
+      <CommonwealthId>12388</CommonwealthId>
+      <EntityName>Ballarat Diocese</EntityName>
+	  <AGSubmissionStatusCode>In Review</AGSubmissionStatusCode>
+    </AGReportingObjectResponse>
+  </AGReportingObjectResponseList>
+</CollectionStatus>
+</xhtml:Example></DataObject>
