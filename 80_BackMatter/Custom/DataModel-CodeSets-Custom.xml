@@ -1137,7 +1137,12 @@
 			<Value>
 				<Code>622</Code>
 				<Text>Representative Event</Text>
+			</Value>
+			<Value>
+				<Code>623</Code>
+				<Text>On-site program</Text>
 			</Value>			
+			
 			<Value>
 				<Code>699</Code>
 				<Text>Educational - further details not available</Text>
@@ -9820,6 +9825,7 @@
 			</Value>
 		</Values>
 	</CodeSet>
+	 
 <CodeSet>
 		<Intro>
 			<p>Status Codes associated with an AG Collection Submission.  Source: Australian Government - Schools Hub</p>
@@ -9999,6 +10005,6 @@
 				<Text>Student Attendance (STATS)</Text>
 			</Value>			
 		</Values>
-	</CodeSet>							
+	</CodeSet>					
 	
 </Grouping>
