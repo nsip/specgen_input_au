@@ -75,7 +75,7 @@
     <Characteristics>O</Characteristics>
 	<privacyRating>Medium</privacyRating>
     <Description>
-      <p></p>
+      <p>List of households.</p>
     </Description>
     <Type ref="CommonTypes" name="HouseholdListType"></Type>
   </Item>

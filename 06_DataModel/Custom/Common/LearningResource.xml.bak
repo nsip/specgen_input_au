@@ -1,0 +1,323 @@
+<DataObject name="LearningResource"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xmlns:xi="http://www.w3.org/2001/XInclude"
+			xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	
+            xmlns="http://sifassociation.org/SpecGen">
+  <Key>@RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>LearningResource</Element>
+    <privacyRating>Low</privacyRating>
+	<Description>
+      <p>
+        This object contains information related to learning resources that may be used in educational settings. These
+        include textbooks, Internet content, educational software, videos and DVDs, supplemental print material, etc.
+      </p>
+    </Description>
+  </Item>
+  <Item>
+
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>GUID assigned to this LearningResource.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+  
+   <!--Item>
+
+    <Element>xml:lang</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The default language used in the LearningResource object.</p>
+    </Description>
+  </Item-->
+ 
+  <Item>
+    <Element>Name</Element>
+
+    <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Name of learning resource.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  
+  <Item>
+    <Element>Author</Element>
+
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Name of organization or company that created the resource.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+
+  <Item>
+    <Element>Contacts</Element>
+
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Contains contact information about resource authors.</p>
+    </Description>
+    <Type ref="CommonTypes" name="ContactsType"></Type>
+  </Item>
+  
+  <Item> 
+    <Element>Location</Element>
+
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Description of location of resource, i.e. location in library or URL, community resource, outside resource supplier.</p>
+    </Description>
+    <Type name="xs:string"></Type>
+  </Item>
+  <Item>
+
+    <Attribute>ReferenceType</Attribute>
+    <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>A qualifying attribute for the Location payload. If ReferenceType is "URI", the payload contains a web address where the resource can be found.</p>
+    </Description>
+    <Type name="xs:token"></Type>
+  </Item>
+  
+  
+  <Item>
+    <Element>Status</Element>
+
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Describes availability status of resource, e.g. "checked out."</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  <Item>
+    <Element>Description</Element>
+
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Description of the resource, e.g., "This textbook is intended for year 4 social studies students and addresses..."</p>
+    </Description>
+    <Type name="xs:string"></Type>
+  </Item>
+  <Item>
+    <Element>YearLevels</Element>
+
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Type ref="CommonTypes" name="YearLevelsType"></Type>
+  </Item>
+  
+  <Item>
+    <Element>SubjectAreas</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+     <Type ref="CommonTypes" name="ACStrandAreaListType"/>
+  </Item>
+  
+  <Item>
+    <Element>MediaTypes</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>
+        Resource media types.
+      </p>
+    </Description>
+     <Type ref="CommonTypes" name="MediaTypesType"></Type>
+  </Item>
+  
+  <Item>
+    <Element>UseAgreement</Element>
+
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Describes terms of use for resource.</p>
+    </Description>
+    <Type name="xs:string"></Type>
+  </Item>
+  <Item>
+    <Element>AgreementDate</Element>
+
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>A date that defines the date of agreement.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+  
+  <Item>
+    <Element>Approvals</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Authorizations to use this resource. For example, this resource may be included as part of the district's standard curriculum model.</p>
+    </Description>
+     <Type ref="CommonTypes" name="ApprovalsType"></Type>
+  </Item>
+   
+  <Item>
+    <Element>Evaluations</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Evaluations/review of the resource.</p>
+    </Description>
+     <Type ref="CommonTypes" name="EvaluationsType"></Type>
+  </Item>
+  
+  <Item>
+    <Element>Components</Element>
+    <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Lesson or activity-sized portions of a resource.</p>
+    </Description>
+    <Type ref="CommonTypes" name="ComponentsType"></Type>
+  </Item>
+  
+  <Item>
+    <Element>LearningStandards</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>References to LearningStandardItems.</p>
+    </Description>
+    <Type ref="CommonTypes" name="LearningStandardsType"></Type>
+  </Item>
+
+  <Item>
+    <Element>LearningResourcePackageRefId</Element>
+
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>
+        Reference to a <code>LearningResourcePackage</code>, a transport envelope for teaching and learning object files.
+      </p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  <Item>   
+	<Element>LocalCodeList</Element>
+	<Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+	<Type ref="CommonTypes" name="LocalCodeListType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+  <xhtml:Example xmlns="" name="LearningResource">
+    <LearningResource RefId="6938D88F-82A3-7EFD-8889-2429EC6AB1B5">
+      <!--Lang>en</Lang-->
+      <Name>A World of Music (Teacher Reference Sheet)</Name>
+      <Author>The Queensland Performing Arts Edge</Author>
+      <Contacts>
+        <Contact>
+          <Address Type="0123" Role="012A">
+            <Street>
+              <Line1>QPAC</Line1>
+              <Line2>Southbank</Line2>
+            </Street>
+            <City>Brisbane</City>
+            <StateProvince>QLD</StateProvince>
+            <Country>1101</Country>
+            <PostalCode>4002</PostalCode>
+          </Address>
+          <PhoneNumber Type="0096">
+            <Number>(555) 555-1234</Number>
+            <ListedStatus>Y</ListedStatus>
+          </PhoneNumber>
+          <Email Type="01">info@QPAC.edu.au</Email>
+        </Contact>
+      </Contacts>
+      <Location ReferenceType="URI">http://www.artsedge/QPAC/curric/86_u_dreams/489_words.pdf</Location>
+      <Status>Available</Status>
+      <Description>Teacher Reference Sheet</Description>
+      <YearLevels>
+        <YearLevel>
+          <Code>3</Code>
+        </YearLevel>
+        <YearLevel>
+          <Code>4</Code>
+        </YearLevel>
+        <YearLevel>
+          <Code>5</Code>
+        </YearLevel>
+      </YearLevels>
+      <SubjectAreas>
+        <ACStrandSubjectArea>
+       <ACStrand>H</ACStrand>
+      <SubjectArea>
+      	<Code>Hist</Code>
+      	  <OtherCodeList>
+        	<OtherCode Codeset="Text">Revolutions</OtherCode>
+      	</OtherCodeList>
+      </SubjectArea>
+    </ACStrandSubjectArea>
+      </SubjectAreas>
+      <MediaTypes>
+        <MediaType>x-application/pdf</MediaType>
+      </MediaTypes>
+      <UseAgreement>see http://www.artsedge.QPAC/teaching_materials/using/artsedge.html for the user agreement</UseAgreement>
+      <AgreementDate>2002-06-05</AgreementDate>
+      <Approvals>
+        <Approval>
+          <Organization>QLD DET</Organization>
+          <Date>2002-03-15</Date>
+        </Approval>
+      </Approvals>
+      <Evaluations>
+        <Evaluation RefId="F1BC63DF-D02C-CED6-54EF-558E84904E01">
+          <Description>This resource references QLD curriculum standards</Description>
+          <Date>2001-06-15</Date>
+          <Name Type="LGL">
+            <FamilyName>Doe</FamilyName>
+            <GivenName>Joan</GivenName>
+          </Name>
+        </Evaluation>
+      </Evaluations>
+      <Components>
+        <Component>
+          <Name>Vocabulary</Name>
+          <Reference>http://www.artsedge.QPAC.org/teaching_materials/curricula/curric/86_u_dreams/489_vocab.html</Reference>
+          <Description>Students learn about social contexts such as nationality, culture, etc.</Description>
+          <Strategies>
+            <Strategy>Inquiry</Strategy>
+          </Strategies>
+          <AssociatedObjects>
+            <AssociatedObject SIF_RefObject="LearningResource">667A87E2-1B4B-9470-CE61-568576DF921E</AssociatedObject>
+          </AssociatedObjects>
+        </Component>
+      </Components>
+      <LearningStandards>
+        <LearningStandardItemRefId>D56D76D4-0F0B-9691-6DA4-CA2E230494E8</LearningStandardItemRefId>
+        <LearningStandardItemRefId>DBCE6406-0B47-E555-A64A-F7FCE6C1A4A9</LearningStandardItemRefId>
+      </LearningStandards>
+      <LearningResourcePackageRefId>6D254047-C5E5-42CB-B792-1D03ED3BD894</LearningResourcePackageRefId>
+    </LearningResource>
+  </xhtml:Example>
+</DataObject>

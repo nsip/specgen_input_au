@@ -179,9 +179,18 @@
     <Type ref="CommonTypes" name="LocalIdType"></Type>
   </Item>
   
+   <Item>
+    <Element>KeyLearningArea</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Key Learning Area - map to ACStrand in Union with Religious Studies and Other.</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsACStrand"></Type> 
+  </Item>
+  
   <Item>
     <Element>Semester</Element>
-
     <Characteristics>O</Characteristics>
 	<privacyRating>Low</privacyRating>
     <Description>
@@ -192,7 +201,6 @@
   
   <Item>
     <Element>StudentList</Element>
-
     <Characteristics>O</Characteristics>
 	<privacyRating>Medium</privacyRating>
     <Description>
@@ -203,7 +211,6 @@
 
   <Item>
     <Element>TeacherList</Element>
-
     <Characteristics>O</Characteristics>
 	<privacyRating>Medium</privacyRating>
     <Description>
@@ -234,7 +241,6 @@
 
   <Item>
     <Element>TeachingGroupPeriodList</Element>
-
     <Characteristics>O</Characteristics>
 	<privacyRating>Low</privacyRating>
     <Description>

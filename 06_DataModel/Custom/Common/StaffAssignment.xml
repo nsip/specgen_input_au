@@ -214,7 +214,7 @@
     <Characteristics>O</Characteristics>
 	<privacyRating>High</privacyRating>
     <Description>
-      <p>Active staff that are not teaching will have "N" here, active stafff who are teachers and are available to be rostered will have a "Y" here.</p>
+      <p>Active staff that are not teaching will have "N" here, active staff who are teachers and are available to be rostered will have a "Y" here.</p>
     </Description>
     <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
   </Item>    

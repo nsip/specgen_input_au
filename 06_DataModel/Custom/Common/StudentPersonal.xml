@@ -29,6 +29,9 @@
 		<Element>AlertMessages</Element>
 		<Characteristics>O</Characteristics>
 		<privacyRating>Extreme</privacyRating>
+		<Description>
+			<p>A list of Alert message/s associated with the student.</p>
+		</Description>
 		<Type ref="CommonTypes"  name="AlertMessagesType"/>
     </Item>
 		
@@ -36,6 +39,9 @@
 		<Element>MedicalAlertMessages</Element>
 		<Characteristics>O</Characteristics>
 		<privacyRating>Extreme</privacyRating>
+		<Description>
+			<p>A list of Medical alert/s associated with the student.</p>
+		</Description>
 		<Type ref="CommonTypes"  name="MedicalAlertMessagesType"/>
     </Item>
     

@@ -67,7 +67,7 @@
 	
 	<Item>
 		<Element>AttendanceTimes</Element>
-		<Characteristics>M</Characteristics>
+		<Characteristics>O</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
 			<p>Breakdown of times that the student entered or returned to school.</p>

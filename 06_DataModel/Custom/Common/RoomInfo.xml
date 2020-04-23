@@ -57,6 +57,9 @@
     <Element>StaffList</Element>
     <Characteristics>O</Characteristics>
 	<privacyRating>Low</privacyRating>
+	<Description>
+			<p>A list of GUIDs that identify the staff person assigned to this room (e.g. the homeroom teacher).</p>
+		</Description>
     <Type ref="CommonTypes" name="StaffListType"></Type>
   </Item>
 

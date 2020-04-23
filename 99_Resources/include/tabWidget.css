@@ -2,9 +2,23 @@
   position: relative;   
   clear: both;
   display:block;
-  min-height:32em;
   margin: 25px 0;
+  min-height:12em;
+  max-height:24em; 
 }
+
+/* Picks up IE 10 & 11 */
+_:-ms-input-placeholder, :root .tabs {
+  margin: 25px 0 110px 0;
+}
+
+/* Should pickup Microsoft Edge */
+@supports (-ms-ime-align:auto) {
+  .tabs {
+    margin: 25px 0 110px 0;
+  }
+}
+
 .tab {
   float: left;
 }
@@ -36,15 +50,14 @@
   padding: 10px;
   border: 1px solid #ccc;
   width:65em;
-  height:30em;
 }
 div.example_parent {
-	height:30em;
 }
 div.example {
 	padding:0px;
 	margin-top:0px;
-	width:99%;
+  width:99%;
+  min-height:12em;
 }
 
 [type=radio]:checked ~ label {

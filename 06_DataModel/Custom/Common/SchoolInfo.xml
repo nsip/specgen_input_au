@@ -409,8 +409,8 @@
     <Element>SchoolGroupList</Element>
     <Characteristics>O</Characteristics>
 	<privacyRating>Low</privacyRating>
-    <Description>
-      <p></p>
+	 <Description>
+      <p>List of Local identifiers used to identify a loosely connected group of schools. E.g. Yarra Valley Cluster.</p>
     </Description>
    <Type ref="CommonTypes" name="SchoolGroupListType"></Type>
   </Item>
@@ -420,7 +420,7 @@
     <Characteristics>O</Characteristics>
 	<privacyRating>Low</privacyRating>
     <Description>
-      <p>An optional placeholder for a schools time zone.</p>
+      <p>An optional placeholder for a school's time zone.</p>
     </Description>
     <Type ref="CodeSets" name="AUCodeSetsAustralianTimeZoneType"></Type>
   </Item>

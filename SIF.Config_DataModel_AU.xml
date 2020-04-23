@@ -9,14 +9,17 @@
 		<inputDocument>SIF_DataModel.xml</inputDocument>
 		<sifNamespace>http://www.sifassociation.org/datamodel/au/3.4</sifNamespace>
 		<localizationCode>au</localizationCode>
-		<schemaVersion>3.4.5</schemaVersion>
+		<schemaVersion>3.4.6</schemaVersion>
 		
-	    <!--<jsonExamplesXslt>98_Xslt/xmlToJson.xsl</jsonExamplesXslt> -->
+		<!-- Comment this one out to leave out JSON Tabs -->
+		
+	    <jsonExamplesXslt>98_Xslt/sif2jsonspecgen.xslt</jsonExamplesXslt> 
+		
 		<resolveExtensions>false</resolveExtensions>
  
 
 		 
- 		<isDraft>true</isDraft>
+ 		<isDraft>false</isDraft>
 
  
 	</globalSettings>
@@ -27,7 +30,7 @@
 		<htmlDocument>
 			<singleDocument>false</singleDocument>
 			<rootDocumentFileName>index.html</rootDocumentFileName>
-			<rootTitle>SIF Implementation Specification (Australia) 3.4.5</rootTitle>
+			<rootTitle>SIF Implementation Specification (Australia) 3.4.6</rootTitle>
 			<documentType>DataModel</documentType>
 		</htmlDocument>
 		
@@ -35,7 +38,7 @@
 		<htmlDocument>
 			<singleDocument>true</singleDocument>
 			<rootDocumentFileName>ImplementationSpecification.html</rootDocumentFileName>
-			<rootTitle>SIF Implementation Specification (Australia) 3.4.5</rootTitle>
+			<rootTitle>SIF Implementation Specification (Australia) 3.4.6</rootTitle>
 			<documentType>DataModel</documentType>
 		</htmlDocument>
 		
@@ -125,20 +128,7 @@
 		</xsdDocument>
  
 	</xsdDocuments>	
-	<!--
-	<xsltTransformations>
-		<xsltTransformation>
-			<xsltInputFile></xsltInputFile>
-			<xsltOutputDir>JSON</xsltOutputDir>
-			<xsltOutputFile>sif2JsonLM.xsl</xsltOutputFile>
-			<yamlToJson>false</yamlToJson>
-		</xsltTransformation>
-	</xsltTransformations>
--->
-		
-	
-
-  	 
+ 	 
 	<!-- Other outputs built using XSLT -->
 	<!-- <xsltTransformations>
 		<xsltTransformation>

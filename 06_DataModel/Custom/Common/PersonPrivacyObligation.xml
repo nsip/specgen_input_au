@@ -37,7 +37,7 @@
   </Item>
   
   <Item>
-    <Element>ParentObjectType</Element>
+    <Attribute>ParentObjectType</Attribute>
     <Characteristics>M</Characteristics>
 	<privacyRating>High</privacyRating>
     <Description>
@@ -99,6 +99,7 @@
     </Values>
   </Item>
   
+  <!--
   <Item>
 	  <Element>DataDomainObligationList</Element>
 	  <Characteristics>M</Characteristics>
@@ -106,12 +107,17 @@
 	  <Description></Description>
 	  <Type ref="CommonTypes" name="DataDomainObligationListType"></Type>
   </Item>
-  <Item>   
-    <Element>LocalCodeList</Element>
-    <Characteristics>O</Characteristics>
-    <privacyRating>Low</privacyRating>
-    <Type ref="CommonTypes" name="LocalCodeListType"></Type>
+-->
+
+  <Item>
+	  <Element>ApplicableLawList</Element>
+	  <Characteristics>O</Characteristics>
+	  <privacyRating>Medium</privacyRating>
+	  <Description></Description>
+	  <Type ref="CommonTypes" name="ApplicableLawListType"></Type>
   </Item>
+
+
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
@@ -126,7 +132,8 @@
   </Item>
   <xhtml:Example xmlns="" name="PersonPrivacyObligation">
     <PersonPrivacyObligation RefId="D3E34B35-9D75-101A-8C3D-00AA001A1652">
-      <ParentObjectRefId SIF_RefObject="StudentPersonal">AA648462-8886-24AA-5294-BC638017320B</ParentObjectRefId>
+    <!-- Do we want this as an Element/Attribute or 2 elements?? -->
+      <ParentObjectRefId ParentObjectType="StudentPersonal">AA648462-8886-24AA-5294-BC638017320B</ParentObjectRefId>
       <SchoolYear>2007</SchoolYear>
        
     </PersonPrivacyObligation>

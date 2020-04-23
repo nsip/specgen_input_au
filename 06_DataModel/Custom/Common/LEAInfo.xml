@@ -91,6 +91,9 @@
     <Element>LEAContactList</Element>
     <Characteristics>O</Characteristics>
 	<privacyRating>Low</privacyRating>
+	 <Description>
+      <p>A list of information on contact persons for this LEA.</p>
+    </Description>
     <Type ref="CommonTypes" name="LEAContactListType"></Type>
   </Item>
    

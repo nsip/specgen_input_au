@@ -42,7 +42,7 @@
 	<privacyRating>Low</privacyRating>
     <Type ref="CommonTypes" name="NAPTestContentType"></Type>
     <Description>
-      <p></p>
+      <p>Contents of an assessment assigned in the context of NAP, targeted at a particular domain and year level.</p>
     </Description>
   </Item>
   
@@ -102,6 +102,9 @@
     <Element>TestletList</Element>
     <Characteristics>M</Characteristics>
 	<privacyRating>Low</privacyRating>
+	 <Description>
+      <p>List of Testlets.</p>
+    </Description>
 	<Type ref="CommonTypes" name="NAPCodeFrameTestletListType"/>
    </Item>
     
@@ -109,6 +112,9 @@
     <Element>LocalCodeList</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>High</privacyRating>
+	 <Description>
+      <p>List of Local Codes.</p>
+    </Description>
     <Type ref="CommonTypes" name="LocalCodeListType"></Type>
   </Item>
   <Item>

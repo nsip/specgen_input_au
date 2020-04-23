@@ -84,12 +84,13 @@
 		    <dd><br/></dd>	
 			<dt>JSON-PESC XSLT</dt>
 			<dd>
-				JSON-PESC XSLT 3.4.5 support <a href="https://github.com/nsip/sifxml2pescjson"> (GitHub Repository)</a>
+				JSON-PESC XSLT 3.4.6 support <a href="https://github.com/nsip/sifxml2pescjson"> (GitHub Repository)</a>
 			</dd>
-			<dt>JSON-PESC Examples 3.4.5</dt>
+			<!-- Leave this out when examples inline
+			<dt>JSON-PESC Examples 3.4.6</dt>
 			<dd>
-				JSON-PESC Examples 3.4.5<a href="JSON/siftest.pretty.json"> (json)</a>
-			</dd>
+				JSON-PESC Examples 3.4.6<a href="JSON/siftest.pretty.json"> (json)</a>
+			</dd> -->
 
 
 		</dl>
@@ -116,6 +117,15 @@
    		<xi:include parse="xml" href="06_DataModel/DataModel.xml"/>
 		
 	</Section>
+ 
+	<!--Conceptual Model-->
+	<Section name="Conceptual Model">
+		<!--Intro>
+			<p>This is a Conceptual Model representing the SIF AU Data Model 3.4.6 </p>
+		</Intro-->
+		
+		<xi:include parse="xml" href="07_Conceptual_Model/Conceptual.xml"/>
+    </Section> 
 	
 	
 	<!--Back Matter-->

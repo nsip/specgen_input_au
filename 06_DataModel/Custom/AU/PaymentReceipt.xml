@@ -24,7 +24,15 @@
     </Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
   </Item>
-
+  <Item>
+    <Element>LocalId</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The Local Id of this payment or receipt.</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>
   <Item>
     <Element>TransactionType</Element>
     <Characteristics>M</Characteristics>
@@ -51,19 +59,47 @@
       <Value>
         <Code>Debtor payment</Code>
       </Value>
+      <Value>
+        <Code>Creditor Reverse Payment</Code>
+      </Value>
+      <Value>
+        <Code>Creditor Reverse Receipt</Code>
+      </Value> 
+      <Value>
+        <Code>GL Reverse Payment</Code>
+      </Value> 
+      <Value>
+        <Code>GL Reverse Receipt</Code>
+      </Value>  
+      <Value>
+        <Code>Debtor Reverse Payment</Code>
+      </Value>     
+      <Value>
+        <Code>Debtor Reverse Receipt</Code>
+      </Value> 
+      <Value>
+        <Code>Employee Payroll</Code>
+      </Value>           
     </Values>
   </Item>
-  
   <Item>
     <Element>InvoiceRefId</Element>    
     <Characteristics>O</Characteristics>
 	<privacyRating>High</privacyRating>
     <Description>
-      <p>A pointer back to the Invoice object corresponding to this payment. Is omitted for general ledger transactions, creditor receipts and debtor payments.</p>
+      <p>A pointer back to the Invoice object corresponding to this payment. Is omitted for general ledger transactions, creditor receipts and debtor payments. To be used if this payment is only for one invoice.</p>
     </Description>
     <Type ref="CommonTypes" name="IdRefType"></Type>
   </Item>
-  
+  <Item>
+    <Element>PaymentReceiptLineList</Element>    
+    <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
+    <Description>
+      <p>A List of pointers back to the Invoice object corresponding to this payment. Is omitted for general ledger transactions, creditor receipts and debtor payments. To be used when this payment is associated with more than one invoice.</p>
+    </Description>
+    <Type ref="CommonTypes" name="PaymentReceiptLineListType"></Type>
+  </Item>
   <Item>
     <Element>VendorInfoRefId</Element>    
     <Characteristics>O</Characteristics>
@@ -113,8 +149,6 @@
     </Description>
     <Type ref="CommonTypes" name="DebitOrCreditAmountType"></Type>
   </Item>
-   
-  
   <Item>
     <Element>ReceivedTransactionId</Element>   
     <Characteristics>M</Characteristics>
@@ -124,20 +158,24 @@
     </Description>
     <Type name="xs:normalizedString"></Type>
   </Item>
-  
- 
-  
   <Item>
     <Element>FinancialAccountRefIdList</Element>
-    
     <Characteristics>O</Characteristics>
 	<privacyRating>High</privacyRating>
     <Description>
-      <p></p>
+      <p>List of RefIds of financial account codes.</p>
     </Description>
       <Type ref="CommonTypes" name="FinancialAccountRefIdListType"></Type>
   </Item>
-  
+  <Item>
+    <Element>AccountCodeList</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
+    <Description>
+      <p>List of financial account codes.</p>
+    </Description>
+      <Type ref="CommonTypes" name="AccountCodeListType"></Type>
+  </Item>
   <Item>
     <Element>TransactionDescription</Element>   
     <Characteristics>O</Characteristics>
@@ -147,7 +185,6 @@
     </Description>
     <Type name="xs:normalizedString"></Type>
   </Item>
-  
   <Item>
     <Element>TaxRate</Element>    
     <Characteristics>O</Characteristics>
@@ -157,7 +194,6 @@
     </Description>
     <Type name="xs:decimal"></Type>
   </Item>
-  
   <Item>
     <Element>TaxAmount</Element>    
     <Characteristics>O</Characteristics>
@@ -167,7 +203,6 @@
     </Description>
     <Type ref="CommonTypes" name="MonetaryAmountType"></Type>
   </Item>
-  
   <Item>
     <Element>TransactionMethod</Element>    
     <Characteristics>O</Characteristics>

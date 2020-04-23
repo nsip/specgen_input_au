@@ -48,7 +48,9 @@
     <Element>Excluded</Element>
     <privacyRating>Low</privacyRating>
     <Characteristics>O</Characteristics>
-    <Description></Description>
+    <Description>
+			<p>Can the fact be excluded?</p>
+		</Description>
     <Values>
       <Value>
         <Code>Yes</Code>

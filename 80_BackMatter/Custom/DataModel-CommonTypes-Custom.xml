@@ -100,234 +100,653 @@
                 
       </CommonElement-->
       
-  <!-- Added for the AddressCollection -->  
- <CommonElement name="AddressCollectionReportingListType" type= "true" dm="true">
-      <Item>
-			<Element>AddressCollectionReportingListType</Element>
-			<Description>
-				<p>A list of AddressCollection Reports.</p>
-			</Description>
-			<List mode="List"/>
-	  </Item>
-      <Item>
-			<Element>AddressCollectionReporting</Element>
-			<Characteristics>MR</Characteristics>
-			<Description>
-				<p>The AddressCollection being reported on.</p>
-			</Description>
-			<Type ref="CommonTypes" name="AddressCollectionReportingType"/>
-		</Item>
-  </CommonElement> 
- <CommonElement name= "AddressCollectionReportingType" type="true" dm="true">
-        <Item>
-			<Element>AddressCollectionReportingType</Element>
-			<Characteristics>MR</Characteristics>
-			<Description>
-				<p>The AddressCollection being reported on.</p>
-			</Description>
-		</Item>
-		<Item> 	
-	 <Element>AddressCollectionRefId</Element>    
+
+      
+<CommonElement name="TimeTableScheduleType" type="true" dm="true">
+	<Item>
+		<Element>TimeTableScheduleType</Element>
+		<Characteristics/>
+		<Description>
+			<p>.</p>
+		</Description>
+	</Item>
+	<Item>
+    <Element>SchoolInfoRefId</Element>
     <Characteristics>O</Characteristics>
 	<privacyRating>Low</privacyRating>
     <Description>
-      <p>A GUID associated with this packet of a AddressCollectionReport.</p>
+      <p>Optional, the GUID of the SchoolInfo Object if this object is known in the zone.</p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
-  </Item>
-   <Item>
-	  <Element>EntityLevel</Element>
-	  <Characteristics>M</Characteristics>
-	  <privacyRating>Medium</privacyRating>
-	  <Description>Level of the Submission, current valid values "System", "Office", "Location", "Special School Location".</Description>
-	  <!-- Do we need to restrict the level in enumeration of the type? -->
-	  <Type name="xs:normalizedString"></Type>
-  </Item>
-	<Item> 	
-	 <Element>SchoolInfoRefId</Element>    
-    <Characteristics>O</Characteristics>
-	<privacyRating>High</privacyRating>
-    <Description>
-      <p>A pointer back to the SchoolObject underlying this Report if it exists.</p>
-    </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Type ref="CommonTypes" relationship="records enrollment of student in" count="1:1" name="IdRefType"></Type>
   </Item>
   
-   <Item>
+  
+  <Item>
+    <Element>SchoolYear</Element>
+    <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>
+        School year for which the information is applicable, expressed as the four-digit year in which the school year ends (e.g., "2007").
+      </p>
+    </Description>
+     <Type ref="CommonTypes" name="SchoolYearType"></Type>
+  </Item>
+
+  <Item>
     <Element>LocalId</Element>
     <Characteristics>O</Characteristics>
 	<privacyRating>Low</privacyRating>
     <Description>
-      <p>The locally-assigned identifier for the entity being reported on.</p>
+      <p>Local TimeTable ID</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>
+
+  <Item>
+    <Element>Title</Element>
+    <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Unique Name of the proposed Time Table</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+
+  <Item>
+    <Element>DaysPerCycle</Element>
+    <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Max Number of days per Time Table cycle</p>
+    </Description>
+    <Type name="xs:unsignedInt"></Type>
+  </Item>
+
+  <Item>
+    <Element>PeriodsPerDay</Element>
+    <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Max Number of periods per Time Table Day</p>
+    </Description>
+    <Type name="xs:unsignedInt"></Type>
+  </Item>
+
+  <Item>
+    <Element>TeachingPeriodsPerDay</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Teaching periods per day if different to PeriodsPerDay</p>
+    </Description>
+    <Type name="xs:unsignedInt"></Type>
+  </Item>
+
+  <Item>
+    <Element>SchoolLocalId</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Optional Local School Id</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>
+
+  <Item>
+    <Element>SchoolName</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>The school name in plain text. </p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+
+  <Item>
+    <Element>TimeTableCreationDate</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Date Schedule was created or last edited.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+
+  <Item>
+    <Element>StartDate</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>First day of TimeTable.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+
+  <Item>
+    <Element>EndDate</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Last day of the TimeTable.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+
+  <Item>
+    <Element>TimeTableDayList</Element>
+    <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Container for TimeTableDays in Schedule</p>
+    </Description>
+    <Type ref="CommonTypes" name="TimeTableDayListType"></Type>
+  </Item>
+  
+ </CommonElement> 
+ 
+ <CommonElement name="TimeTableScheduleCellListType" type="true" dm="true">
+	<Item>
+		<Element>TimeTableScheduleCellListType</Element>
+		<Characteristics/>
+		<Description>
+			<p>.</p>
+		</Description>
+	</Item>  
+	<Item>
+	   <Element>TimeTableScheduleCell</Element>
+	   <Characteristics>OR</Characteristics>
+	   <Description>
+		 <p></p>
+	   </Description>
+	   <Type name="TimeTableScheduleCellType"></Type>
+	</Item>     
+ </CommonElement>
+ <CommonElement name="TimeTableScheduleCellType" type="true" dm="true">
+	<Item>
+		<Element>TimeTableScheduleCellType</Element>
+		<Characteristics/>
+		<Description>
+			<p>.</p>
+		</Description>
+	</Item>  
+	
+	 <Item>
+    <Element>TimeTableScheduleCellLocalId</Element>
+    <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Local Identifier of this cell. Must be provided by the publisher.</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>
+	<Item>
+    <Element>TimeTableSubjectRefId</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>The GUID of the Subject that this Cell is scheduling</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+
+  <Item>
+    <Element>TeachingGroupGUID</Element>
+    <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>The GUID of the TeachingGroup being scheduled, provivded by the editor, the Provider of the endpoint can use this as a RefId, if they wish to.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+
+  <Item>
+    <Element>RoomInfoRefId</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>The GUID of the Resource being Scheduled</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+
+  <Item>
+    <Element>StaffPersonalRefId</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>The GUID of the Staff Member being Scheduled</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+
+  <Item>
+    <Element>TimeTableLocalId</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Time Table Local Identifier</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>
+
+  <Item>
+    <Element>SubjectLocalId</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Subject Local Id</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>
+
+  <Item>
+    <Element>TeachingGroupLocalId</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Teaching Group </p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>
+
+
+  <Item>
+    <Element>RoomNumber</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Room number as presented to the user/application.</p>
+    </Description>
+    <Type ref="CommonTypes" name="HomeroomNumberType"></Type>
+  </Item>
+
+  <Item>
+    <Element>StaffLocalId</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Staff LocalId</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>
+
+  <Item>
+    <Element>DayId</Element>
+    <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Day Id </p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>
+
+  <Item>
+    <Element>PeriodId</Element>
+    <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Period Id within the Day Id</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>
+
+  <Item>
+    <Element>CellType</Element>
+
+    <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Type of Lesson/Session  eg Teaching, Lunch etc</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  <Item>
+    <Element>SchoolInfoRefId</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Optional, the GUID of the SchoolInfo Object  if this object is known in the zone</p>
+    </Description>
+    <Type ref='CommonTypes' name='IdRefType'/>
+  </Item>
+  <Item>
+    <Element>SchoolLocalId</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Optional, Local School Id</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>
+  
+   <Item>
+    <Element>TeacherList</Element>
+
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>A listing of the teachers assigned to the activity, and the type of supervision they are credited with. If no teachers are listed, the activity is assumed to be unsupervised.</p>
+    </Description>
+    <Type ref="CommonTypes" name="ScheduledTeacherListType"></Type>
+ </Item>
+
+ <Item>
+    <Element>RoomList</Element>
+
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>List of rooms in which the scheduled activity is held. Used for onsite venues which are represented in the source system as rooms. Can include large venues (ovals, library, etc), if they have been represented as rooms; source system practice varies.</p>
+    </Description>
+      <Type ref="CommonTypes" name="RoomListType"></Type>
+    
+ </Item>
+ </CommonElement>
+ 
+ <CommonElement name="TeachingGroupScheduleListType" type="true" dm="true">
+	<Item>
+		<Element>TeachingGroupScheduleListType</Element>
+		<Characteristics/>
+		<Description>
+			<p>.</p>
+		</Description>
+	</Item>  
+	<Item>
+	   <Element>TeachingGroupSchedule</Element>
+	   <Characteristics>OR</Characteristics>
+	   <Description>
+		 <p></p>
+	   </Description>
+	   <Type name="TeachingGroupScheduleType"></Type>
+	</Item>     
+ </CommonElement>
+
+
+ <CommonElement name="TeachingGroupScheduleType" type="true" dm="true">
+	<Item>
+		<Element>TeachingGroupScheduleType</Element>
+		<Characteristics/>
+		<Description>
+			<p>.</p>
+		</Description>
+	</Item>  
+	
+  <Item>
+    <Element>EditorGUID</Element>
+    <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>The GUID of the TeachingGroup as provided by the 'editor' or TT vendor.  Final provider of the end point may use this as the official RefId of the publishable TeachingGroup Object.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+  <Item>
+    <Element>SchoolYear</Element>
+
+    <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>School year for which the information is applicable, expressed as the four-digit year in which the school year ends (e.g., "2007").</p>
+    </Description>
+     <Type ref="CommonTypes" name="SchoolYearType"></Type>
+  </Item>
+  <Item>
+    <Element>LocalId</Element>
+
+    <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>LocalId of the Teaching Group (previously ClassIndicator).</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>
+
+  <Item>
+    <Element>ShortName</Element>
+
+    <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Short free format label that describes the group.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+
+  <Item>
+    <Element>LongName</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Longer description if required.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+
+  <Item>
+    <Element>GroupType</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Added to allow local implementations to filter on categories of Teaching Group. Where there is a need to filter particular groups based on their types for particular functions;  group type provides the means of identifying the type of group such as roll class or subject class for instance and treat them accordingly.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  
+  <Item>
+    <Element>Set</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Set Number (UK)</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+
+  <Item>
+    <Element>Block</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Block (UK)</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+
+  <Item>
+    <Element>CurriculumLevel</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Assessment Stage eg VELS Level</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+
+  <Item>
+    <Element>SchoolInfoRefId</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>GUID of SchoolInfo object this teaching group belongs to.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+
+  <Item>
+    <Element>SchoolLocalId</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Local School Id.</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>
+
+  <Item>
+    <Element>SchoolCourseInfoRefId</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>GUID of SchoolCourseInfo object this teaching group is part of.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+
+  <Item>
+    <Element>SchoolCourseLocalId</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Local Course Id.</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>
+
+  <Item>
+    <Element>TimeTableSubjectRefId</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>GUID of TimeTableSubject object this teaching group belongs to.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+
+  <Item>
+    <Element>TimeTableSubjectLocalId</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Local subject Id.</p>
     </Description>
     <Type ref="CommonTypes" name="LocalIdType"></Type>
   </Item>
   
   <Item>
-    <Element>StateProvinceId</Element>
-    <Characteristics>O</Characteristics>
-	<privacyRating>Low</privacyRating>
-    <Description>
-      <p>The state-assigned identifier for entity being reported on.</p>
-    </Description>
-    <Type ref="CommonTypes" name="StateProvinceIdType"></Type>
-  </Item>
-  
-  <Item>
-    <Element>CommonwealthId</Element>
-    <Characteristics>M</Characteristics>
-	<privacyRating>Low</privacyRating>
-    <Description>
-      <p>Commonwealth identifier for this school/campus or entity being reported on.</p>
-    </Description>
-    <Type name="xs:normalizedString"></Type>
-  </Item>
-  
-   <Item>
-    <Element>ACARAId</Element>
-    <Characteristics>O</Characteristics>
-	<privacyRating>Low</privacyRating>
-    <Description>
-      <p>ACARA identifier for this school/campus.</p>
-    </Description>
-    <Type name="xs:normalizedString"></Type>
-  </Item>
-  
-  <Item>
-	  <Element>EntityName</Element>
-	  <Characteristics>O</Characteristics>
-	  <privacyRating>Medium</privacyRating>
-	  <Description>Name of the Entity who this submission is for, if a School, it will be the SchoolName.</Description>
-	  <Type name="xs:normalizedString"></Type>
-  </Item> 
-  <Item>
-	  <Element>EntityContact</Element>
-	  <Characteristics>M</Characteristics>
-	  <privacyRating>High</privacyRating>
-	  <Description>Information on the Contact for the submission.</Description>
-	  <Type ref="CommonTypes" name="EntityContactInfoType"></Type>
-  </Item>
-  <Item>
-    <Element>AddressCollectionStudentList</Element>    
-    <Characteristics>O</Characteristics>
-	<privacyRating>High</privacyRating>
-    <Description>
-      <p>A list of Students being reported on for this Address Collection.</p>
-    </Description>
-	<Type ref="CommonTypes" name="AddressCollectionStudentListType" complex="extension"></Type>
-  </Item> 
-  </CommonElement>
-  
-  <CommonElement name="AddressCollectionStudentListType" type= "true" dm="true">
-      <Item>
-			<Element>AddressCollectionStudentListType</Element>
-			<Description>
-				<p>A list of Students Addresses.</p>
-			</Description>
-			<List mode="List"/>
-	  </Item>    
-       <Item>
-			<Element>AddressCollectionStudent</Element>
-			<Characteristics>MR</Characteristics>
-			<Description>
-				<p>A Student and their Address.</p>
-			</Description>
-			<Type ref="CommonTypes" name="AddressCollectionStudentType"/>
-		</Item>
- </CommonElement>
- <CommonElement name= "AddressCollectionStudentType" type="true" dm="true">
-        <Item>
-			<Element>AddressCollectionStudentType</Element>
-			<Characteristics>MR</Characteristics>
-			<Description>
-				<p>The student and addresses being reported on.</p>
-			</Description>
-		</Item>
-		<Item>
-			<Element>LocalId</Element>
-			<Characteristics>M</Characteristics>
-			<Description>
-				<p>The locally-assigned identifier for this student.</p>
-			</Description>
-			<Type ref="CommonTypes" name="LocalIdType"/> 
-		</Item>
-		
-		<Item>
-			<Element>EducationLevel</Element>
-			<Characteristics>M</Characteristics>
-			<Description>
-				<p>Primary or Secondary for AG Collection reporting.</p>
-			</Description>
-			<Type ref="CodeSets" name="AUCodeSetsEducationLevelType"/> 
-		</Item>
-		<Item>
-			<Element>BoardingStatus</Element>
-			<Characteristics>O</Characteristics>
-			<Description>
-				<p>Is this student a Boarding  or Day Student for AG Collection reporting?</p>
-			</Description>
-			<Type ref="CodeSets" name="AUCodeSetsBoardingType"/>
-		</Item>
-		<Item>
-			<Element>StudentAddress</Element>
-			<Characteristics>M</Characteristics>
-			<Description>
-				<p>Residential Address of the student for the AG Address Collection.</p>
-			</Description>
-			<Type ref="CommonTypes" name="AddressType"/>
-		</Item>
-		<Item>
-			<Element>Parent1</Element>
-			<Characteristics>M</Characteristics>
-			<Description>
-				<p>Name and address of Parent1 for the AG Address Collection.</p>
-			</Description> 
-			<Type ref="CommonTypes" name="AGParentType"/>
-		</Item>
-		
-		 <Item>
-			<Element>Parent2</Element>
-			<Characteristics>O</Characteristics>
-			<Description>
-				<p>Name and address of Parent2 for the AG Address Collection.</p>
-			</Description>
-			<Type ref="CommonTypes" name="AGParentType"/>
-		</Item>
- </CommonElement>  
- 
- <CommonElement name="AGParentType" type= "true" dm="true">
-      <Item> 
-    	<Element>AGParentType</Element>
-		<Description>
-			<p>Parent Name and Address for AG Collections.</p>
-		</Description>
-	  </Item>
-	  <Item>
-			<Element>ParentName</Element>
-			<Characteristics>M</Characteristics>
-			<Description>
-				<p>Name of Parent for the AG Address Collection. Note: Type attribute value of LGL must be used here</p>
-			</Description>
-			<Type ref="CommonTypes" name="NameOfRecordType"/>
-		</Item>
-		<Item>
-			<Element>AddressSameAsStudent</Element>
-			<Characteristics>M</Characteristics>
-			<Description>
-				<p>Name of Parent for the AG Address Collection. Note: Type attribute value of LGL must be used here</p>
-			</Description>
-			<Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"/>
+    <Element>Semester</Element>
 
-		</Item>
-	  <Item>
-			<Element>ParentAddress</Element>
-			<Characteristics>M</Characteristics>
-			<Description>
-				<p>Residential Address of Parent for the AG Address Collection.</p>
-			</Description>
-			<Type ref="CommonTypes" name="AddressType"/>
-		</Item>	
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Semester, Term, or Quarter subject offered.</p>
+    </Description>
+    <Type name="xs:unsignedInt"></Type>
+  </Item>
+  
+  <Item>
+    <Element>StudentList</Element>
+
+    <Characteristics>O</Characteristics>
+	<privacyRating>Medium</privacyRating>
+    <Description>
+      <p>List of Students in this Teaching Group</p>
+    </Description>
+    <Type ref="CommonTypes" name="StudentListType"></Type>
+  </Item>
+
+  <Item>
+    <Element>TeacherList</Element>
+
+    <Characteristics>O</Characteristics>
+	<privacyRating>Medium</privacyRating>
+    <Description>
+      <p>A List of teachers associated with the group -  may or may not include the teacher timetabled in the schedule.</p>
+    </Description>
+    <Type ref="CommonTypes" name="TeacherListType"></Type>
+  </Item>
+     
+  <Item>
+    <Element>MinClassSize</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Minimum class size.</p>
+    </Description>
+    <Type name='xs:integer'/>
+  </Item>
+
+  <Item>
+    <Element>MaxClassSize</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Maximum class size</p>
+    </Description>
+    <Type name='xs:integer'/>
+  </Item>
+
+  <Item>
+    <Element>TeachingGroupPeriodList</Element>
+
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>A List of schedule information that can be published by an SIS which is a subset of information available in the TimeTableCell object.</p>
+      <p>PeriodId or StartTime must be provided.</p>
+    </Description>
+    <Type ref="CommonTypes" name="TeachingGroupPeriodListType"></Type>
+
+  </Item>
 </CommonElement>
+
+<!-- List of Scheduled Activities -->
+      
+      <!--POD Option 2 -->
+<CommonElement name="ApplicableLawListType" type="true" dm="true">
+	<Item>
+		<Element>ApplicableLawListType</Element>
+		<Characteristics/>
+		<Description>
+			<p>.</p>
+		</Description>
+	</Item>
+	<Item>
+	   <Element>ApplicableLaw</Element>
+	   <Characteristics>OR</Characteristics>
+	   <Description>
+		 <p></p>
+	   </Description>
+	   <Type name="ApplicableLawType"></Type>
+	</Item>  
+</CommonElement>
+
+<CommonElement name="ApplicableLawType" type="true" dm="true">  
+	<Item>
+		<Element>ApplicableLawType</Element>
+		<Characteristics/>
+		<Description>
+			<p>.</p>
+		</Description>
+		<Item>
+		   <Element>ApplicableCountry</Element>
+		   <Characteristics>M</Characteristics>
+		   <Description>
+			<p></p>
+		   </Description>
+		   <Type name="xs:normalizedString"></Type>
+		</Item>  
+		<Item>
+		   <Element>ApplicableLawName</Element>
+		   <Characteristics>M</Characteristics>
+		   <Description>
+			<p></p>
+		   </Description>
+		   <Type name="xs:normalizedString"></Type>
+		</Item>  
+		<Item>
+		   <Element>ApplicableLawURL</Element>
+		   <Characteristics>O</Characteristics>
+		   <Description>
+			<p></p>
+		   </Description>
+		   <Type name="xs:anyURI"></Type>
+		</Item>  
+	</Item>
+</CommonElement>
+      
+ <!-- Placeholder for AGCollections -->
+
 <!-- Added for 3.4.5 Local Code Set support -->
 <CommonElement name="LocalCodeListType" type="true" dm="true">
 	<Item>
@@ -342,8 +761,7 @@
 		<Element>LocalCode</Element>
 		<Characteristics>MR</Characteristics>
 		<Description>
-			<p>
-             </p>
+			<p>A state/province code, local code, other code or a text string that crosswalks to or serves as a translation of an associated Code element.</p>
 		</Description>
 		 <Type ref="CommonTypes" name="LocalCodeType"></Type>
 	</Item>
@@ -460,7 +878,7 @@
 		<Item>
 			<Element>PublishingPermissionListType</Element>
 			<Description>
-				<p></p>
+				<p>List of publishing permissions.</p>
 			</Description>
 			<List mode="List"/>
 		</Item>
@@ -468,7 +886,7 @@
 			<Element>PublishingPermission</Element>
 			<Characteristics>OR</Characteristics>
 			<Description>
-				<p></p>
+				<p>Publishing permission.</p>
 			</Description>
 			<Type ref="CommonTypes" name="PublishingPermissionType"/>
 		</Item>
@@ -633,441 +1051,7 @@
    	</CommonElement>
     -->
         
-  <!-- Added for 3.4.4 FQ Object -->
   
-    <CommonElement name="AGReportingObjectResponseListType" type="true" dm="true">
-		<Item>
-			<Element>AGReportingObjectResponseListType</Element>
-			<Description>
-				<p>A list of the Reporting Objects being responsed to.</p>
-			</Description>
-			<List mode="List"/>
-		</Item>
-		<Item>
-			<Element>AGReportingObjectResponse</Element>
-			<Characteristics>OR</Characteristics>
-			<Description>
-				<p>The AG Reporting Object's response.</p>
-			</Description>
-			<Type ref="CommonTypes" name="AGReportingObjectResponseType"/>
-		</Item>
-	</CommonElement>
-	<CommonElement name="AGReportingObjectResponseType" type="true" dm="true">
-
-		<Item>
-			<Element>AGReportingObjectResponseType</Element>
-			<Characteristics/>
-			<Description>
-				<p>The AG Reporting Object's response.</p>
-			</Description>
-		</Item>
-		<Item>
-		   <Element>SubmittedRefId</Element>
-		   <Characteristics>O</Characteristics>
-		   <Description>
-			 <p>Original Reporting RefId of the submission.</p>
-		   </Description>
-		   <Type ref="CommonTypes" name="IdRefType"></Type>
-  		</Item>  
-		<Item>
-		   <Element>SIFRefId</Element>
-		   <Characteristics>O</Characteristics>
-		   <Description>
-			 <p>AG assigned for a submission (they can be the same as the original submission but at the discretion of the AG). Only required to be sent if different from the initial RefId submitted.</p>
-		   </Description>
-		   <Type ref="CommonTypes" name="IdRefType"></Type>
-  		</Item>  
-		<Item>
-			<Element>HTTPStatusCode</Element>
-			<Characteristics>O</Characteristics>
-			<Description>
-			 <p>HTTP Status Code of the original submission.</p>
-			</Description>
-		    <Type name="xs:string"></Type>
-		</Item>
-		<Item>
-		   <Element>ErrorText</Element>
-		   <Characteristics>O</Characteristics>
-		   <Description>
-			 <p>Text associated with an error status.</p>
-		   </Description>
-		   <Type name="xs:normalizedString"></Type>
-		</Item>
-		<Item>
-			<Element>CommonwealthId</Element>
-			<Characteristics>M</Characteristics>
-			<privacyRating>Low</privacyRating>
-			<Description>
-			  <p>Commonwealth identifier for this school/campus or entity being reported on.</p>
-			</Description>
-			<Type name="xs:normalizedString"></Type>
-	    </Item>
-		<Item>
-			<Element>EntityName</Element>
-		    <Characteristics>O</Characteristics>
-	        <privacyRating>Medium</privacyRating>
-	        <Description>Name of the Entity who this submission is for, if a School, it will be the SchoolName.</Description>
-	        <Type name="xs:normalizedString"></Type>
-	    </Item>   
-	    <Item>
-		  <Element>AGSubmissionStatusCode</Element>
-		  <Characteristics>M</Characteristics>
-		  <privacyRating>Low</privacyRating>
-		  <Description>AG Status Code of the entity's submission.</Description>
-		  <Type ref="CodeSets" name="AUCodeSetsAGSubmissionStatusType"/> 
-	    </Item>
-	    <Item>
-		  <Element>AGRuleList</Element>    
-	      <Characteristics>O</Characteristics>
-		  <privacyRating>High</privacyRating>
-          <Description>
-			  <p>A list of Rules associated with this submission.</p>
-		  </Description>
-		<Type ref="CommonTypes" name="AGRuleListType"></Type>
-  </Item>
-  	</CommonElement>
-  <CommonElement name="FQReportingListType" type= "true" dm="true">
-      <Item>
-			<Element>FQReportingListType</Element>
-			<Description>
-				<p>A list of Financial Questionnaire Reports.</p>
-			</Description>
-			<List mode="List"/>
-	  </Item>
-      <Item>
-			<Element>FQReporting</Element>
-			<Characteristics>MR</Characteristics>
-			<Description>
-				<p>The Financial Questionnaire being reported on.</p>
-			</Description>
-			<Type ref="CommonTypes" name="FQReportingType"/>
-		</Item>
-  </CommonElement>
-  <CommonElement name= "FQReportingType" type="true" dm="true">
-        <Item>
-			<Element>FQReportingType</Element>
-			<Characteristics>MR</Characteristics>
-			<Description>
-				<p>The Financial Questionnaire being reported on.</p>
-			</Description>
-		</Item>
-		<Item> 	
-	 <Element>FQRefId</Element>    
-    <Characteristics>O</Characteristics>
-	<privacyRating>Low</privacyRating>
-    <Description>
-      <p>A GUID associated with this packet of an Financial Questionnaire Report.</p>
-    </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
-  </Item>
-   <Item>
-	  <Element>EntityLevel</Element>
-	  <Characteristics>M</Characteristics>
-	  <privacyRating>Medium</privacyRating>
-	  <Description>Level of the Submission, current valid values "School", "Diocese", "System".</Description>
-	  <!-- Do we need to restrict the level in enumeration of the type? -->
-	  <Type name="xs:normalizedString"></Type>
-  </Item>
-	<Item> 	
-	 <Element>SchoolInfoRefId</Element>    
-    <Characteristics>O</Characteristics>
-	<privacyRating>High</privacyRating>
-    <Description>
-      <p>A pointer back to the SchoolObject underlying this Report if it exists.</p>
-    </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
-  </Item>
-  
-   <Item>
-    <Element>LocalId</Element>
-    <Characteristics>O</Characteristics>
-	<privacyRating>Low</privacyRating>
-    <Description>
-      <p>The locally-assigned identifier for the entity being reported on.</p>
-    </Description>
-    <Type ref="CommonTypes" name="LocalIdType"></Type>
-  </Item>
-  
-  <Item>
-    <Element>StateProvinceId</Element>
-    <Characteristics>O</Characteristics>
-	<privacyRating>Low</privacyRating>
-    <Description>
-      <p>The state-assigned identifier for entity being reported on.</p>
-    </Description>
-    <Type ref="CommonTypes" name="StateProvinceIdType"></Type>
-  </Item>
-  
-  <Item>
-    <Element>CommonwealthId</Element>
-    <Characteristics>M</Characteristics>
-	<privacyRating>Low</privacyRating>
-    <Description>
-      <p>Commonwealth identifier for this school/campus or entity being reported on.</p>
-    </Description>
-    <Type name="xs:normalizedString"></Type>
-  </Item>
-  
-   <Item>
-    <Element>ACARAId</Element>
-    <Characteristics>O</Characteristics>
-	<privacyRating>Low</privacyRating>
-    <Description>
-      <p>ACARA identifier for this school/campus.</p>
-    </Description>
-    <Type name="xs:normalizedString"></Type>
-  </Item>
-  
-  <Item>
-	  <Element>EntityName</Element>
-	  <Characteristics>O</Characteristics>
-	  <privacyRating>Medium</privacyRating>
-	  <Description>Name of the Entity who this submission is for, if a School, it will be the SchoolName.</Description>
-	  <Type name="xs:normalizedString"></Type>
-  </Item> 
-  <Item>
-	  <Element>EntityContact</Element>
-	  <Characteristics>M</Characteristics>
-	  <privacyRating>High</privacyRating>
-	  <Description>Information on the Contact for the submission.</Description>
-	  <Type ref="CommonTypes" name="EntityContactInfoType"></Type>
-  </Item>
-  <Item>
-    <Element>FQContextualQuestionList</Element>    
-    <Characteristics>O</Characteristics>
-	<privacyRating>High</privacyRating>
-    <Description>
-      <p>A list of Financial questions to set the context for the AG Collection.</p>
-    </Description>
-	<Type ref="CommonTypes" name="FQContextualQuestionListType"></Type>
-  </Item>
-  <Item>
-    <Element>FQItemList</Element>    
-    <Characteristics>M</Characteristics>
-	<privacyRating>High</privacyRating>
-    <Description>
-      <p>A list of Financial Items being reported on for the AG Collection.</p>
-    </Description>
-	<Type ref="CommonTypes" name="FQItemListType"></Type>
-  </Item>
-  
-  <Item>
-    <Element>AGRuleList</Element>    
-    <Characteristics>O</Characteristics>
-	<privacyRating>High</privacyRating>
-    <Description>
-      <p>A list of Rules associated with this submission.</p>
-    </Description>
-	<Type ref="CommonTypes" name="AGRuleListType"></Type>
-  </Item>
-  </CommonElement>
-  <CommonElement name="FQContextualQuestionListType" type="true" dm="true">
-		<Item>
-			<Element>FQContextualQuestionListType</Element>
-			<Description>
-				<p>A list of Contextual Questions.</p>
-			</Description>
-			<List mode="List"/>
-		</Item>
-		<Item>
-			<Element>FQContextualQuestion</Element>
-			<Characteristics>OR</Characteristics>
-			<Description>
-				<p>The Contextual Question.</p>
-			</Description>
-			<Type ref="CommonTypes" name="FQContextualQuestionType"/>
-		</Item>
-	</CommonElement>
-	<CommonElement name="FQContextualQuestionType" type="true" dm="true">
-
-		<Item>
-			<Element>FQContextualQuestionType</Element>
-			<Characteristics/>
-			<Description>
-				<p>The FQItem contextual question.</p>
-			</Description>
-		</Item>
-		<Item>
-		   <Element>FQContext</Element>
-		   <Characteristics>M</Characteristics>
-		   <Description>
-			 <p></p>
-		   </Description>
-		   <Type name="xs:string"></Type>
-  		</Item>  
-		<Item>
-			<Element>FQAnswer</Element>
-			<Characteristics>M</Characteristics>
-			<Description>
-			 <p></p>
-			</Description>
-		    <Type name="xs:string"></Type>
-		</Item>
-   	</CommonElement>
-
-	
-  	<CommonElement name="FQItemListType" type="true" dm="true">
-		<Item>
-			<Element>FQItemListType</Element>
-			<Description>
-				<p>A list of FQ Items reported on.</p>
-			</Description>
-			<List mode="List"/>
-		</Item>
-		<Item>
-			<Element>FQItem</Element>
-			<Characteristics>OR</Characteristics>
-			<Description>
-				<p>The FQItem being reported on.</p>
-			</Description>
-			<Type ref="CommonTypes" name="FQItemType"/>
-		</Item>
-	</CommonElement>
-	
-	<CommonElement name="FQItemType" type="true" dm="true">
-
-		<Item>
-			<Element>FQItemType</Element>
-			<Characteristics/>
-			<Description>
-				<p>The FQItem being reported on.</p>
-			</Description>
-		</Item>
-		<Item>
-		   <Element>FQItemCode</Element>
-		   <Characteristics>M</Characteristics>
-		   <Description>
-			 <p></p>
-		   </Description>
-		   <Type name="xs:string"></Type>
-  		</Item>  
-		<Item>
-			<Element>TuitionAmount</Element>
-			<Characteristics>O</Characteristics>
-			<Description>
-			 <p>Amount associated with Tuition.</p>
-			</Description>
-		    <Type name="xs:decimal"></Type>
-		</Item>
-		<Item>
-			<Element>BoardingAmount</Element>
-			<Characteristics>O</Characteristics>
-			<Description>
-			 <p>Amount associated with Boarding.</p>
-			</Description>
-		    <Type name="xs:decimal"></Type>
-		</Item>        
-		<Item>
-			<Element>SystemAmount</Element>
-			<Characteristics>O</Characteristics>
-			<Description>
-			 <p>Amount associated with the System.</p>
-			</Description>
-		    <Type name="xs:decimal"></Type>
-		</Item>                
-		<Item>
-			<Element>DioceseAmount</Element>
-			<Characteristics>O</Characteristics>
-			<Description>
-			 <p>Amount associated with the Diocese.</p>
-			</Description>
-		    <Type name="xs:decimal"></Type>
-		</Item>                
-		<Item>
-		   <Element>FQComments</Element>
-		   <Characteristics>O</Characteristics>
-		   <Description>
-			 <p>Comments associated with a FQ Item</p>
-		   </Description>
-		   <Type name="xs:string"></Type>
-		</Item>
-		
-   	</CommonElement>
-   	
-	<CommonElement name="AGRuleListType" type="true" dm="true">
-		<Item>
-			<Element>AGRuleListType</Element>
-			<Description>
-				<p>A list of Rules associated with the Item.</p>
-			</Description>
-			<List mode="List"/>
-		</Item>
-		<Item>
-			<Element>AGRule</Element>
-			<Characteristics>OR</Characteristics>
-			<Description>
-				<p>Rule associated with the Collection Item.</p>
-			</Description>
-			<Type ref="CommonTypes" name="AGRuleType"/>
-		</Item>
-	</CommonElement>
-	<CommonElement name="AGRuleType" type="true" dm="true">
-		<Item>
-			<Element>AGRuleType</Element>
-			<Characteristics/>
-			<Description>
-				<p>Rule.</p>
-			</Description>
-		</Item>
-		<Item>
-			<Element>AGRuleCode</Element>
-			<Characteristics>O</Characteristics>
-			<Description>
-			  <p>Collection Data Rule Code.</p>
-			</Description>
-			<Type name="xs:normalizedString"></Type>
-		</Item>
-		<Item>
-		   <Element>AGRuleComment</Element>
-		   <Characteristics>O</Characteristics>
-		   <Description>
-			 <p>Comment associated with a Rule.</p>
-		   </Description>
-		   <Type name="xs:normalizedString"></Type>
-		</Item>
-		<Item>
-		   <Element>AGRuleResponse</Element>
-		   <Characteristics>O</Characteristics>
-		   <Description>
-			 <p>Response associated with a Rule comment on response to a submission.</p>
-		   </Description>
-		   <Type name="xs:normalizedString"></Type>
-		</Item>   
-		<Item>
-		   <Element>AGRuleStatus</Element>
-		   <Characteristics>O</Characteristics>
-		   <Description>
-			 <p>Status associated with a particular Rule, if there is one.</p>
-		   </Description>
-		   <Type name="xs:normalizedString"></Type>
-		</Item>	
-   	</CommonElement>
-   	
-   	<CommonElement name="SoftwareVendorInfoContainerType" type="true" dm="true">
-		<Item>
-			<Element>SoftwareVendorInfoContainerType</Element>
-			<Characteristics>O</Characteristics>
-			<Description>
-				<p>Container for elements containing information on the Software Product and Vendor.</p>
-			</Description>
-		</Item>
-		<Item>
-			<Element>SoftwareProduct</Element>
-			<Characteristics>M</Characteristics>
-			<Description>
-				<p>Product used to create the Submission.</p>
-			</Description>
-			<Type name="xs:normalizedString"/>
-		</Item>
-		<Item>
-			<Element>SoftwareVersion</Element>
-			<Characteristics>M</Characteristics>
-			<Description>
-				<p>Version of the sofware used to create the Submission.</p>
-			</Description>
-			<Type name="xs:normalizedString"/>
-		</Item>
-	</CommonElement>
   
   <CommonElement name="EntityContactInfoType" type="true" dm="true">
 	<Item>
@@ -1447,7 +1431,9 @@
         </Item>
         <Item>
 		  <Element>Marker</Element>
-		  <Description></Description>
+		  <Description>
+				<p>Staff member/s who were involved with the grading of the student, or who were responsible for any associated teacher judgement/s</p>
+		  </Description>
 		  <Characteristics>OR</Characteristics>
 	      <Type ref="CommonTypes" name="MarkerType"/>
 		
@@ -1573,7 +1559,7 @@
 		<Element>MarkInfoRefId</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
-			<p>GUID of a the MarkInfo Object that provides information about this grading.</p>
+			<p>GUID of the MarkInfo Object that provides information about this grading.</p>
 		</Description>
 		<Type ref="CommonTypes" name="IdRefType"/>
 	</Item>
@@ -1695,14 +1681,16 @@
 	  <Item>
 		<Element>SymptomListType</Element>
 		 <Description>
-          <p>A list of symptoms that are deemed necessary to record; e.g. Symptoms of Asthma could be a cough or wheeze etc..</p>
+          <p>A list of symptoms that are deemed necessary to record; e.g. Symptoms of Asthma could be a cough or wheeze etc.</p>
         </Description>
         <List mode="List">
         </List>
     </Item>
     <Item>
       <Element>Symptom</Element>
-      <Description></Description>
+      <Description>
+			<p>Symptom/s that are deemed necessary to record; e.g. Symptoms of Asthma could be a cough or wheeze etc.</p>
+		</Description>
       <Characteristics>OR</Characteristics>
 	   <Type name="xs:normalizedString"/>
 	</Item>
@@ -1789,8 +1777,10 @@
 	</Item>
 	<Item>
       <Element>WellbeingEventCategory</Element>
-      <Desciption></Desciption>
       <Characteristics>MR</Characteristics>
+	  <Description>
+		  <p>Category of wellbeing event.</p>
+	  </Description>
 	  <Type ref="CommonTypes" name="WellbeingEventCategoryType"></Type>
 	</Item>
   </CommonElement>
@@ -1835,8 +1825,10 @@
     </Item>
     <Item>
       <Element>WellbeingEventSubCategory</Element>
-      <Desciption></Desciption>
       <Characteristics>MR</Characteristics>
+	  <Description>
+		  <p>Subcategory of wellbeing event.</p>
+		</Description>
 	    <Union>
 			<Type ref="CodeSets" name="AUCodeSetsEventSubCategoryType"/>
 			<Type name="xs:string"/>
@@ -1891,7 +1883,7 @@
     </Item>
     <Item>
       <Element>FollowUpAction</Element>
-      <Desciption>Container for the Follow Up details.</Desciption>
+      <Description>Container for the Follow Up details.</Description>
       <Characteristics>OR</Characteristics>
 	   <Type ref="CommonTypes" name="FollowUpActionType"/>
 	</Item>
@@ -1947,7 +1939,7 @@
     </Item>
     <Item>
       <Element>PersonInvolvement</Element>
-      <Desciption>A person (additional to the student) involved in a  Wellbeing event/response where required to be known.  </Desciption>
+      <Description>A person (additional to the student) involved in a  Wellbeing event/response where required to be known.</Description>
       <Characteristics>OR</Characteristics>
 	   <Type ref="CommonTypes" name="PersonInvolvementType"/>
 	</Item>
@@ -2021,7 +2013,7 @@
     </Item>
     <Item>
       <Element>Withdrawal</Element>
-      <Desciption></Desciption>
+      <Description>Repeatable withdrawal.</Description>
       <Characteristics>MR</Characteristics>
 	   <Type ref="CommonTypes" name="WithdrawalType"/>
 	</Item>
@@ -2039,7 +2031,7 @@
   	   	<Element>WithdrawalDate</Element>
 		<Characteristics>M</Characteristics>
 		<Description>
-		  <p></p>
+		  <p>Date of withdrawal.</p>
 		</Description>
 		<Type name="xs:date"></Type>  
   	</Item>
@@ -2113,7 +2105,7 @@
 		<Element>WithdrawalTimeList</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
-		  <p></p>
+		  <p>A List of the times where a student is to be removed or withdrawn partially for particular times in a week within the Start and End dates of the Response.</p>
 		</Description>
 		<Type ref="CommonTypes" name="WithdrawalTimeListType"></Type>
   </Item>
@@ -2186,7 +2178,7 @@
   	   	<Element>DetentionDate</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
-		  <p></p>
+		  <p>Date of the detention.</p>
 		</Description>
 		<Type name="xs:date"></Type>  
   	</Item>
@@ -2227,7 +2219,7 @@
 		<Element>PlanRequiredList</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
-		  <p></p>
+		  <p>List to contain information of any plans that may eventuate.</p>
 		</Description>
 		<Type ref="CommonTypes" name="PlanRequiredListType"></Type>
     </Item>
@@ -2252,7 +2244,9 @@
     </Item>
     <Item>
       <Element>Plan</Element>
-      <Desciption></Desciption>
+      <Description>
+          <p>Repeatable plan information.</p>
+      </Description>
       <Characteristics>OR</Characteristics>
 	   <Type ref="CommonTypes" name="WellbeingPlanType"/>
 	</Item>
@@ -2392,7 +2386,7 @@
     </Item>
     <Item>
       <Element>Document</Element>
-      <Desciption></Desciption>
+      <Description>Wellbeing related document/s including evidentiary documents and action plans.</Description>
       <Characteristics>MR</Characteristics>
 	   <Type ref="CommonTypes" name="WellbeingDocumentType"/>
 	</Item>
@@ -2648,7 +2642,7 @@
 		<Element>ContentDescriptionList</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
-		  <p></p>
+		  <p>A list of Content descriptions in the Australian Curriculum that is relevant to the test item.</p>
 		</Description>
 		<Type ref="CommonTypes" name="ContentDescriptionListType"></Type>
   </Item>
@@ -2657,7 +2651,7 @@
 		<Element>StimulusList</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
-		  <p></p>
+		  <p>List of Stimuli.</p>
 		</Description>
 		<Type ref="CommonTypes" name="StimulusListType"></Type>
   </Item>	
@@ -2666,7 +2660,7 @@
 		<Element>NAPWritingRubricList</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
-		  <p></p>
+		  <p>Writing Rubric List.</p>
 		</Description>
 		<Type ref="CommonTypes" name="NAPWritingRubricListType"></Type>
   </Item>		
@@ -2770,7 +2764,9 @@
   <Item>
 		<Element>TestLevel</Element>
 		<Characteristics>M</Characteristics>
+		<Description>
 		<p>Values: 3,5,7,9. The test level that the student is registering for.</p>
+		</Description>
 		<Type ref="CommonTypes" name="YearLevelType"/>
   </Item>  
   <Item>
@@ -2784,7 +2780,7 @@
    
     <Item>
 		<Element>Domain</Element>
-		<Desciption>Domain of the NAP test. Values: Writing, Reading, Language Conventions - Spelling, Language Conventions - Grammar and Punctuation, Numeracy.</Desciption>
+		<Description>Domain of the NAP test. Values: Writing, Reading, Language Conventions - Spelling, Language Conventions - Grammar and Punctuation, Numeracy.</Description>
 		<Characteristics>M</Characteristics>
 		<Type ref="CodeSets" name="AUCodeSetsNAPTestDomainType"/>
 		<Description>
@@ -2857,7 +2853,7 @@
     <Characteristics>OR</Characteristics>
 	<Type ref="CommonTypes" name="SubstituteItemType"/>
     <Description>
-      <p></p>
+      <p>Substitute Item.</p>
     </Description>
   </Item>
  </CommonElement>
@@ -2902,7 +2898,7 @@
     </Item>
     <Item>
       <Element>TestItem</Element>
-      <Desciption></Desciption>
+      <Description>Code Frame Test Item</Description>
       <Characteristics>OR</Characteristics>
 	   <Type ref="CommonTypes" name="CodeFrameTestItemType"/>
        <Description>
@@ -2951,7 +2947,7 @@
 	</Item>
 	 <Item>
     <Element>StimulusLocalId</Element>
-    <Desciption></Desciption>
+    <Description>Stimulus Local Id</Description>
     <Characteristics>OR</Characteristics>
 	<Type ref="CommonTypes" name="LocalIdType"/>
     <Description>
@@ -3278,7 +3274,7 @@
 		<Element>Testlet</Element>
 		<Characteristics>OR</Characteristics>
 		<Description>
-			<p></p>
+			<p>Code Frame Testlet.</p>
 		</Description>
 		<Type ref="CommonTypes" name="NAPTestletCodeFrameType"/>
 	</Item>
@@ -3301,13 +3297,16 @@
    <Item>
 		<Element>TestletContent</Element>
 		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Contents of a Testlet in the context of NAP.</p>
+		</Description>
 	    <Type ref="CommonTypes" name="NAPTestletContentType"/>
    </Item>    
     <Item>
 		<Element>TestItemList</Element>
 		<Characteristics>M</Characteristics>
 		<Description>
-			<p> </p>
+			<p>List of test items.</p>
 		</Description>
 			<Type ref="CommonTypes" name="CodeFrameTestItemListType"/>
    </Item>    
@@ -3366,7 +3365,7 @@
 		<Element>ItemResponseList</Element>
 		<Characteristics>M</Characteristics>
 		<Description>
-			<p></p>
+			<p>List of item responses.</p>
 		</Description>
 		<Type ref="CommonTypes" name="NAPTestletItemResponseListType"/>
    </Item>
@@ -3383,7 +3382,7 @@
 		<Element>ItemResponse</Element>
 		<Characteristics>OR</Characteristics>
 		<Description>
-			<p></p>
+			<p>Student's response to the test item.</p>
 		</Description>
 		<Type ref="CommonTypes" name="NAPTestletResponseItemType"/>
 	</Item>
@@ -3487,7 +3486,7 @@
 		<Element>Subscore</Element>
 		<Characteristics>OR</Characteristics>
 		<Description>
-			<p></p>
+			<p>Subscore</p>
 		</Description>
 		<Type ref="CommonTypes" name="NAPSubscoreType"/>
 	</Item>
@@ -3590,7 +3589,7 @@
 		<Element>PlausibleScaledValueList</Element>
 		<Characteristics>M</Characteristics>
 		<Description>
-			<p></p>
+			<p>List of Plausible values used for reporting to determine cut off points, there are 5 per student per domain.</p>
 		</Description>
 		<Type ref="CommonTypes" name="PlausibleScaledValueListType"/>
 	</Item>
@@ -3663,7 +3662,7 @@
 		<Element>Score</Element>
 		<Characteristics>OR</Characteristics>
 		<Description>
-			<p></p>
+			<p>Score.</p>
 		</Description>
 		<Type ref="CommonTypes" name="ScoreType"/>
 	</Item>
@@ -3689,7 +3688,7 @@
 		<Element>ScoreDescriptionList</Element>
 		<Characteristics>M</Characteristics>
 		<Description>
-			<p></p>
+			<p>List of score descriptions.</p>
 		</Description>
 	    <Type ref="CommonTypes" name="ScoreDescriptionListType"/>
 	</Item>
@@ -3705,7 +3704,7 @@
 		<Element>ScoreDescription</Element>
 		<Characteristics>OR</Characteristics>
 		<Description>
-			<p></p>
+			<p>Score description.</p>
 		</Description>
 		 <Type ref="CommonTypes" name="ScoreDescriptionType"/>
 	</Item>
@@ -3746,7 +3745,7 @@
 		<Element>Stimulus</Element>
 		<Characteristics>OR</Characteristics>
 		<Description>
-			<p></p>
+			<p>Description of a trigger for a response in a NAP test.</p>
 		</Description>
 		<Type ref="CommonTypes" name="StimulusType"/>
 	</Item>
@@ -3800,7 +3799,7 @@
 		<Element>TextDescriptor</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
-			<p></p>
+			<p>Text Descriptor.</p>
 		</Description>
 		<Type name="xs:normalizedString"/>
 	</Item>
@@ -3940,7 +3939,7 @@
 		<Element>Code</Element>
 		<Characteristics>M</Characteristics>
 		<Description>
-			<p> </p>
+			<p>Visa sub class code.</p>
 		</Description>
 		<Type ref="CommonTypes" name="VisaSubClassCodeType"/>
 	</Item>
@@ -3990,7 +3989,7 @@
 		<Element>VisaSubClass</Element>
 		<Characteristics>OR</Characteristics>
 		<Description>
-			<p/>
+			<p>Visa sub class.</p>
 		</Description>
 		<Type ref="CommonTypes" name="VisaSubClassType"/>
 	</Item>	
@@ -4027,6 +4026,9 @@
 	<Item>
 		<Element>OtherCodeList</Element>
 		<Characteristics>O</Characteristics>
+		<Description>
+			<p>List of other codes or strings that crosswalk to or serve as translations of the Code element paired with this common element. If Code changes and OtherCodes are supported, both Code and all associated OtherCode elements must be present. </p>
+		</Description>
 		<Type ref="CommonTypes" name="OtherCodeListType"/>
 	</Item>
 	<Item>
@@ -4059,7 +4061,7 @@
 		<Element>ReligiousEvent</Element>
 		<Characteristics>OR</Characteristics>
 		<Description>
-			<p/>
+			<p>Religious event.</p>
 		</Description>
 		<Type ref="CommonTypes" name="ReligiousEventType"/>
 	</Item>	
@@ -4110,6 +4112,9 @@
 	<Item>
 		<Element>OtherCodeList</Element>
 		<Characteristics>O</Characteristics>
+		<Description>
+      <p>List of other codes or strings that crosswalk to or serve as translations of the Code element paired with this common element. If Code changes and OtherCodes are supported, both Code and all associated OtherCode elements must be present. </p>
+    </Description>
 		<Type ref="CommonTypes" name="OtherCodeListType"/>
 	</Item>
 </CommonElement>
@@ -4465,7 +4470,9 @@
   <Item>
     <Element>OtherCodeList</Element>
     <Characteristics>O</Characteristics>
-    <Description></Description>
+   <Description>
+      <p>List of other codes or strings that crosswalk to or serve as translations of the Code element paired with this common element. If Code changes and OtherCodes are supported, both Code and all associated OtherCode elements must be present. </p>
+    </Description>
     <Type ref="CommonTypes" name="OtherCodeListType"></Type>
   </Item>
 
@@ -4809,6 +4816,9 @@
   <Item>
     <Element>OtherCodeList</Element>
     <Characteristics>O</Characteristics>
+	<Description>
+      <p>List of other codes or strings that crosswalk to or serve as translations of the Code element paired with this common element. If Code changes and OtherCodes are supported, both Code and all associated OtherCode elements must be present. .</p>
+    </Description>
     <Type ref="CommonTypes" name="OtherCodeListType"/>
   </Item>
   
@@ -4830,6 +4840,9 @@
   <Item>
     <Element>OtherCodeList</Element>
     <Characteristics>O</Characteristics>
+	<Description>
+      <p>List of other codes or strings that crosswalk to or serve as translations of the Code element paired with this common element. If Code changes and OtherCodes are supported, both Code and all associated OtherCode elements must be present. </p>
+    </Description>
     <Type ref="CommonTypes" name="OtherCodeListType"/>
   </Item>
   </CommonElement>
@@ -4916,6 +4929,9 @@
   <Item>
     <Element>OtherCodeList</Element>
     <Characteristics>O</Characteristics>
+	<Description>
+      <p>List of other codes or strings that crosswalk to or serve as translations of the Code element paired with this common element. If Code changes and OtherCodes are supported, both Code and all associated OtherCode elements must be present. </p>
+    </Description>
     <Type ref="CommonTypes" name="OtherCodeListType"></Type>
   </Item>
   
@@ -4941,6 +4957,9 @@
   <Item>
     <Element>OtherCodeList</Element>
     <Characteristics>O</Characteristics>
+	<Description>
+      <p>List of other codes or strings that crosswalk to or serve as translations of the Code element paired with this common element. If Code changes and OtherCodes are supported, both Code and all associated OtherCode elements must be present. </p>
+    </Description>
     <Type ref="CommonTypes" name="OtherCodeListType"></Type>
   </Item>
 </CommonElement>
@@ -5155,7 +5174,7 @@
 		</Description>
 		<Type ref="CommonTypes" name="LocalIdType"/>
 	</Item>
-		<Item>
+	<Item>
       	<Element>OtherSchoolName</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
@@ -5167,7 +5186,7 @@
 		<Element>DisabilityLevelOfAdjustment</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
-			<p>Level of Adjustment made for a student's disability.</p>
+			<p>Level of Adjustment made for a student's disability.  None if there is no adjustment.</p>
 		</Description>
 		<Values>
         <Value>
@@ -5182,13 +5201,14 @@
         <Value>
 			<Code>Extensive</Code>
 		</Value>
+		<Value><Code>None</Code></Value>
        </Values>
 	</Item>
 	<Item>
 		<Element>DisabilityCategory</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
-			<p>Category of a student's disability.</p>
+			<p>Category of a student's disability. None if no disability.</p>
 		</Description>
 		<Values>
         <Value>
@@ -5203,13 +5223,14 @@
         <Value>
 			<Code>Sensory</Code>
 		</Value>
+		<Value><Code>None</Code></Value>
        </Values>
 	</Item>
     <Item>
     	<Element>CensusAge</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
-			<p>Age of the StudentCalculated for Non-gov Census reporting.</p>
+			<p>Age of the Student calculated for Non-gov Census reporting.</p>
 		</Description>
 		<Type name="xs:decimal"/>
     </Item>	
@@ -5300,6 +5321,9 @@
 	<Item>
 		<Element>OtherCodeList</Element>
 		<Characteristics>O</Characteristics>
+		<Description>
+			<p>List of other codes or strings that crosswalk to or serve as translations of the Code element paired with this common element. If Code changes and OtherCodes are supported, both Code and all associated OtherCode elements must be present. </p>
+		</Description>
 		<Type ref="CommonTypes" name="OtherCodeListType"/>
 	</Item>
 </CommonElement>
@@ -5427,7 +5451,7 @@
 		<Element>AddressList</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
-			<p/>
+			<p>The person's address(es).</p>
 		</Description>
 		<Type ref="CommonTypes" name="AddressListType"/>
 	</Item>
@@ -5507,6 +5531,9 @@
 	<Item>
 		<Element>OtherCodeList</Element>
 		<Characteristics>O</Characteristics>
+	<Description>
+			<p>List of other codes or strings that crosswalk to or serve as translations of the Code element paired with this common element. If Code changes and OtherCodes are supported, both Code and all associated OtherCode elements must be present. </p>
+		</Description>
 		<Type ref="CommonTypes" name="OtherCodeListType"/>
 	</Item>
 </CommonElement>
@@ -5618,7 +5645,7 @@
 		<Element>PeriodAttendance</Element>
 		<Characteristics>MR</Characteristics>
 		<Description>
-			<p/>
+			<p>Recording of period level attendance for a student.</p>
 		</Description>
 		<Type ref="CommonTypes" name="PeriodAttendanceType"/>
 	</Item>
@@ -6042,6 +6069,15 @@
 		<Type name="xs:normalizedString"/>
 	</Item>
 	<Item>
+		<Element>LocalItemId</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+		  <p>The Local Id of this purchasing item.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"></Type>
+    </Item>
+	<Item>
 		<Element>Quantity</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
@@ -6093,7 +6129,7 @@
 		<Element>ExpenseAccounts</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
-			<p/>
+			<p>Account/s to be charged for the item</p>
 		</Description>
 		<Type ref="CommonTypes" name="ExpenseAccountsType"/>
 	</Item>
@@ -6168,7 +6204,7 @@
 		<Element>Program</Element>
 		<Characteristics>OR</Characteristics>
 		<Description>
-			<p/>
+			<p>School program.</p>
 		</Description>
 		<Type ref="CommonTypes" name="SchoolProgramType"/>
 	</Item>
@@ -6200,6 +6236,9 @@
 	<Item>
 		<Element>OtherCodeList</Element>
 		<Characteristics>O</Characteristics>
+		<Description>
+			<p>List of other codes or strings that crosswalk to or serve as translations of the Code element paired with this common element. If Code changes and OtherCodes are supported, both Code and all associated OtherCode elements must be present. </p>
+		</Description>
 		<Type ref="CommonTypes" name="OtherCodeListType"/>
 	</Item>
 </CommonElement>
@@ -6653,7 +6692,7 @@
 		<Element>Name</Element>
 		<Characteristics>M</Characteristics>
 		<Description>
-			<p>Name of learning resource component within the resource, i.e. "Chapter 1, Section 4.</p>
+			<p>Name of learning resource component within the resource, i.e. "Chapter 1, Section 4."</p>
 		</Description>
 		<Type name="xs:normalizedString"/>
 	</Item>
@@ -6885,6 +6924,9 @@
 	<Item>
 		<Element>ContactInfo</Element>
 		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Common element used to supply information for a contact person at a school, LEA, or other institution..</p>
+		</Description>
 		<Type ref="CommonTypes" name="ContactInfoType"/>
 	</Item>
 </CommonElement>
@@ -6905,6 +6947,224 @@
 		<Type ref="CommonTypes" name="IdRefType"/>
 	</Item>
 </CommonElement>
+<!--Added for Vic Gov finance additions post 3.4.5 -->
+<CommonElement name="AccountCodeListType" type="true" dm="true">
+	<Item>
+		<Element>AccountCodeListType</Element>
+		<Description>
+			<p>List of financial account codes.</p>
+		</Description>
+		<List mode="List"/>
+	</Item>
+	<Item>
+		<Element>AccountCode</Element>
+		<Characteristics>OR</Characteristics>
+		<Description>
+			<p>Chart of account code associated with the invoice, can include program-sub-program etc.</p>
+		</Description>
+		<Type name="xs:token"/>
+	</Item>
+</CommonElement>
+<CommonElement name="JournalAdjustmentListType" type="true" dm="true">
+	<Item>
+		<Element>JournalAdjustmentListType</Element>
+		<Description>
+			<p>List of accounts that need adjustment.  To use this element - the journal must have an originating transaction.</p>
+		</Description>
+		<List mode="List"/>
+	</Item>
+	<Item>
+		<Element>JournalAdjustment</Element>
+		<Characteristics>OR</Characteristics>
+		<Description>
+			<p>Details of an adjustment.</p>
+		</Description>
+		<Type ref="CommonTypes" name="JournalAdjustmentType"/>
+	</Item>
+</CommonElement>
+<CommonElement name="JournalAdjustmentType" type="true" dm="true">
+	<Item>
+		<Element>JournalAdjustmentType</Element>
+		<Characteristics>OR</Characteristics>
+		<Description>
+			<p>Details of the Journal Adjustment.  There must be an originating transaction for this to be used.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>DebitFinancialAccountRefId</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+		  <p>RefId of account to debit.</p>
+		</Description>
+		<Type ref="CommonTypes" name="IdRefType"></Type>
+    </Item>
+  
+    <Item>
+		<Element>CreditFinancialAccountRefId</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+		  <p>RefId of account to credit.</p>
+		</Description>
+		<Type ref="CommonTypes" name="IdRefType"></Type>
+    </Item>
+  
+    <Item>
+		<Element>DebitAccountCode</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+		  <p>Account to debit.</p>
+		</Description>
+		<Type name="xs:token"></Type> 
+    </Item>
+  
+    <Item>
+		<Element>CreditAccountCode</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+		  <p>Account to credit.</p>
+		</Description>
+		<Type name="xs:token"></Type> 
+    </Item>  
+    <Item>
+		<Element>GSTCodeOriginal</Element>    
+		<Characteristics>O</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+		  <p>Original GST code for journal transfer (if required).</p>
+		</Description>
+		<Type name="xs:normalizedString"></Type>
+    </Item>
+  
+    <Item>
+		<Element>GSTCodeReplacement</Element>    
+		<Characteristics>O</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+		  <p>Replacement GST code for journal transfer (if required).</p>
+		</Description>
+		<Type name="xs:normalizedString"></Type>
+    </Item>
+  
+    <Item>
+		<Element>LineAdjustmentAmount</Element>    
+		<Characteristics>M</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+		  <p>Amount to transfer between the two accounts.</p>
+		</Description>
+		<Type ref="CommonTypes" name="MonetaryAmountType"></Type>
+    </Item>
+</CommonElement>
+
+<CommonElement name="PaymentReceiptLineListType" type="true" dm="true">
+	<Item>
+		<Element>PaymentReceiptLineListType</Element>
+		<Description>
+			<p>List Invoices and reference information associated with this payment if more than one required.</p>
+		</Description>
+		<List mode="List"/>
+	</Item>
+  <Item>
+    <Element>PaymentReceiptLine</Element>    
+    <Characteristics>OR</Characteristics>
+	<privacyRating>High</privacyRating>
+    <Description>
+      <p>A pointer back to the Invoice object corresponding to this payment. Is omitted for general ledger transactions, creditor receipts and debtor payments.</p>
+    </Description>
+    <Type ref="CommonTypes" name="PaymentReceiptLineType"></Type>
+  </Item>
+ </CommonElement>
+ 
+ <CommonElement name="PaymentReceiptLineType" type="true" dm="true">
+	<Item>
+		<Element>PaymentReceiptLineType</Element>
+		<Description>
+			<p>Reference information associated with this payment line.</p>
+		</Description>
+	</Item>
+    <Item>
+      <Element>InvoiceRefId</Element>    
+      <Characteristics>O</Characteristics>
+	  <privacyRating>High</privacyRating>
+      <Description>
+      <p>A pointer back to the Invoice object corresponding to this payment. Is omitted for general ledger transactions, creditor receipts and debtor payments.</p>
+      </Description>
+      <Type ref="CommonTypes" name="IdRefType"/>
+    </Item>
+    <Item>
+      <Element>LocalId</Element>
+      <Characteristics>O</Characteristics>
+      <privacyRating>Low</privacyRating>
+      <Description>
+      <p>The Local Id of the invoice associated with the payment.</p>
+      </Description>
+      <Type ref="CommonTypes" name="LocalIdType"></Type>
+    </Item>
+	<Item>
+      <Element>LocalPaymentReceiptLineId</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+      <p>The Local Id of the Payment Receipt Line.</p>
+      </Description>
+      <Type ref="CommonTypes" name="LocalIdType"></Type>
+    </Item>    
+    <Item>
+		<Element>TransactionAmount</Element>   
+		<Characteristics>M</Characteristics>
+		<Description>
+		  <p>Line amount.</p>
+		</Description>
+		<Type ref="CommonTypes" name="DebitOrCreditAmountType"></Type>
+    </Item>
+    <Item>
+		<Element>FinancialAccountRefId</Element>   
+		<Characteristics>O</Characteristics>
+		<Description>
+		  <p>Financial Account link via RefId.</p>
+		</Description>
+		<Type ref="CommonTypes" name="IdRefType"></Type>
+    </Item> 
+    <Item>
+		<Element>AccountCode</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Account code charged to this item.</p>
+		</Description>
+		<Type name="xs:token"/>
+	</Item>
+	  <Item>
+    <Element>TransactionDescription</Element>   
+    <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
+    <Description>
+      <p>Description of the transaction line.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  <Item>
+    <Element>TaxRate</Element>    
+    <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
+    <Description>
+      <p>Rate of tax included in the billed line amount.</p>
+    </Description>
+    <Type name="xs:decimal"></Type>
+  </Item>
+  <Item>
+    <Element>TaxAmount</Element>    
+    <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
+    <Description>
+      <p>Amount of tax included in the billed line amount.</p>
+    </Description>
+    <Type ref="CommonTypes" name="MonetaryAmountType"></Type>
+  </Item>
+ </CommonElement>
+
 <CommonElement name="PasswordListType" type="true" dm="true">
 	<Item>
 		<Element>PasswordListType</Element>
@@ -7307,7 +7567,7 @@
 		<Element>DayTitle</Element>
 		<Characteristics>M</Characteristics>
 		<Description>
-			<p/>
+			<p>Title of the day referred to.</p>
 		</Description>
 		<Type name="xs:normalizedString"/>
 	</Item>
@@ -7315,7 +7575,7 @@
 		<Element>TimeTablePeriodList</Element>
 		<Characteristics>M</Characteristics>
 		<Description>
-			<p></p>
+			<p>List of Timetable periods.</p>
 		</Description>
 		<Type ref="CommonTypes" name="TimeTablePeriodListType"/>
 	</Item>
@@ -8182,6 +8442,9 @@
 	<Item>
 		<Element>YearLevel</Element>
 		<Characteristics>MR</Characteristics>
+		<Description>
+		  <p>Year or academic level.</p>
+		</Description>
 		<Type ref="CommonTypes" name="YearLevelType"/>
 	</Item>
 	<xhtml:Example xmlns="">
@@ -8297,6 +8560,9 @@
 	<Item>
 		<Element>ContactInfo</Element>
 		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Common element used to supply information for a contact person at a school, LEA, or other institution.</p>
+		</Description>
 		<Type ref="CommonTypes" name="ContactInfoType"/>
 	</Item>
 </CommonElement>
@@ -8933,6 +9199,9 @@
 	<Item>
 		<Element>Email</Element>
 		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>E-mail address.</p>
+		</Description>
 		<Type ref="CommonTypes" name="EmailType"/>
 	</Item>
 	<xhtml:Example xmlns="">
@@ -8976,6 +9245,9 @@
 	<Item>
 		<Element>PhoneNumber</Element>
 		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>Phone numbers associated with an entity.</p>
+		</Description>
 		<Type ref="CommonTypes" complex="extension" name="PhoneNumberType"/>
 	</Item>
 	<xhtml:Example xmlns="">
@@ -9302,12 +9574,18 @@
 	<Item>
 		<Element>CountriesOfCitizenship</Element>
 		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The person's country of citizenship.</p>
+		</Description>
 		<Type ref="CommonTypes" name="CountryListType"/>
 	</Item>
 
 	<Item>
 		<Element>CountriesOfResidency</Element>
 		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The person's country of residency.</p>
+		</Description>
 		<Type ref="CommonTypes" name="CountryList2Type"/>
 	</Item>
 	
@@ -9627,6 +9905,9 @@
 	<Item>
 		<Element>OtherCodeList</Element>
 		<Characteristics>O</Characteristics>
+		<Description>
+      <p>List of other codes or strings that crosswalk to or serve as translations of the Code element paired with this common element. If Code changes and OtherCodes are supported, both Code and all associated OtherCode elements must be present. </p>
+    </Description>
 		<Type ref="CommonTypes" name="OtherCodeListType"/>
 	</Item>
 	<xhtml:Example xmlns="">
@@ -9800,11 +10081,17 @@
 	<Item>
 		<Element>StartDateTime</Element>
 		<Characteristics>O</Characteristics>
+		<Description>
+			<p>StartDateTime</p>
+		</Description>
 		<Type name="xs:dateTime"/>
 	</Item>
 	<Item>
 		<Element>EndDateTime</Element>
 		<Characteristics>O</Characteristics>
+		<Description>
+			<p>EndDateTime</p>
+		</Description>
 		<Type name="xs:dateTime"/>
 	</Item>
 	<Item>
@@ -9825,31 +10112,49 @@
 	<Item>
 		<Element>//Type</Element>
 		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Type</p>
+		</Description>
 		<Type name="xs:normalizedString"/>
 	</Item>
 	<Item>
 		<Element>//Code</Element>
 		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Code</p>
+		</Description>
 		<Type name="xs:token"/>
 	</Item>
 	<Item>
 		<Element>//Name</Element>
 		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Name</p>
+		</Description>
 		<Type name="xs:normalizedString"/>
 	</Item>
 	<Item>
 		<Element>//Value</Element>
 		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Value</p>
+		</Description>
 		<Type name="xs:normalizedString"/>
 	</Item>
 	<Item>
 		<Element>//StartDateTime</Element>
 		<Characteristics>O</Characteristics>
+		<Description>
+			<p>StartDate and Time</p>
+		</Description>
 		<Type name="xs:dateTime"/>
 	</Item>
 	<Item>
 		<Element>//EndDateTime</Element>
 		<Characteristics>O</Characteristics>
+		<Description>
+			<p>EndDate and Time</p>
+		</Description>
 		<Type name="xs:dateTime"/>
 	</Item>
 	<Item>
@@ -9905,11 +10210,17 @@
 	<Item>
 		<Element>/DateTime</Element>
 		<Characteristics>M</Characteristics>
+		<Description>
+		  <p>Date and time object was created.</p>
+		</Description>
 		<Type name="xs:dateTime"/>
 	</Item>
 	<Item>
 		<Element>/Creators</Element>
 		<Characteristics>O</Characteristics>
+		<Description>
+		  <p>List of Creators.</p>
+		</Description>
 		<List mode="List">
     </List>
 	</Item>
@@ -9968,12 +10279,19 @@
 	<Item>
 		<Element>TimeElements</Element>
 		<Characteristics>O</Characteristics>
+		<Description>
+			<p>List of Time Elements.</p>
+		</Description>
+		
 		<List mode="List">
     </List>
 	</Item>
 	<Item>
 		<Element>/TimeElement</Element>
 		<Characteristics>OR</Characteristics>
+		<Description>
+			<p>A common metadata element designed to contain time data, both self-defined and by type.</p>
+		</Description>
 		<Type ref="DataModelTaskForce" name="TimeElementType"/>
 	</Item>
 	<xhtml:Example xmlns="">
@@ -10012,10 +10330,8 @@
 		<Element>OtherCode</Element>
 		<Characteristics>MR</Characteristics>
 		<Description>
-			<p>
-        A state/province code, local code, other code or a text string that crosswalks to or serves as a translation of an associated <code>Code</code> element.
-      </p>
-		</Description>
+	        A state/province code, local code, other code or a text string that crosswalks to or serves as a translation of an associated <code>Code</code>  element.
+      	</Description>
 		<Type name="xs:token"/>
 	</Item>
 	<Item>
@@ -10376,11 +10692,17 @@
 	<Item>
 		<Element>LifeCycle</Element>
 		<Characteristics>O</Characteristics>
+		<Description>
+			<p>This common metadata element describes the life cycle of the object it represents, based on the IEEE LOM LifeCycle element [LOM]</p>
+		</Description>
 		<Type ref="CommonTypes" name="LifeCycleType"/>
 	</Item>
 	<Item>
 		<Element>EducationFilter</Element>
 		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Education filter.</p>
+		</Description>
 		<Type ref="CommonTypes" name="EducationFilterType"/>
 	</Item>
 </CommonElement>

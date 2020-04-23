@@ -112,6 +112,11 @@ li.folder ul { margin-left: 16px; margin-top: 2px; margin-bottom: 0px; padding-t
 .index-name { font-size: smaller }
 .index-number { font-size: smaller }
 
+.charOverride {
+	display:block;
+	color: #005696; font-family: monospace; font-weight:bold;
+}
+
 @media print
 {
 	body { font-size: smaller }

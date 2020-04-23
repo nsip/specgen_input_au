@@ -1,0 +1,94 @@
+<DataObject name="CollectionRound"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xmlns:xi="http://www.w3.org/2001/XInclude"
+			xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	
+            xmlns="http://sifassociation.org/SpecGen">
+
+  <Key>@RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>CollectionRound</Element>
+	<privacyRating>High</privacyRating>
+    <Description>
+      <p>Object reporting the rounds available for submission of a particular Australian Government (AG) Collection. Object is published by the Australian Government Schools hub.</p>
+     </Description>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+	<privacyRating>High</privacyRating>
+    <Description>
+      <p>GUID for this Status Report. The application that owns this object is responsible for generating this unique Id.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+   
+  <Item>
+  	  <Element>AGCollection</Element>
+	  <Characteristics>O</Characteristics>
+	  <privacyRating>Low</privacyRating>
+	  <Description>The type of AG Collection.</Description>
+	  <Type ref="CodeSets" name="AUCodeSetsAGCollectionType"></Type> 
+  </Item>
+  
+    <Item>
+	  <Element>CollectionYear</Element>
+	  <Characteristics>M</Characteristics>
+	  <privacyRating>Low</privacyRating>
+	  <Description>Data Year</Description>
+	  <Type ref="CommonTypes" name="SchoolYearType"></Type>
+  </Item>
+  
+  <Item>
+  	  <Element>AGRoundList</Element>
+	  <Characteristics>M</Characteristics>
+	  <privacyRating>Low</privacyRating>
+	  <Description>List of Rounds available for the particular collection.</Description>
+	  <Type ref="CommonTypes" name="AGRoundListType"></Type>
+  </Item>
+  
+  <Item>   
+    <Element>LocalCodeList</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Extreme</privacyRating>
+    <Type ref="CommonTypes" name="LocalCodeListType"></Type>
+  </Item>
+   
+  <Item>   
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Extreme</privacyRating>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Extreme</privacyRating>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+  
+<xhtml:Example xmlns="" name="CollectionRound">
+<CollectionRound RefId="D3E34B35-9D75-101A-8C3D-00AA001A1652">
+  <AGCollection>STATS</AGCollection>
+  <CollectionYear>2018</CollectionYear>
+  <AGRoundList>
+	<AGRound>
+		<RoundCode>STATS1</RoundCode>
+		<RoundName>Student Attendance Semester 1</RoundName>
+		<StartDate>2019-06-28</StartDate>
+		<DueDate>2019-08-02</DueDate>
+		<EndDate>2019-10-01</EndDate>
+	</AGRound>
+	<AGRound>
+		<RoundCode>STATS2 </RoundCode>
+		<RoundName>Student Attendance Term 3</RoundName>
+		<StartDate>2019-09-20</StartDate>
+		<DueDate>2019-10-18</DueDate>
+		<EndDate>2019-12-31</EndDate>
+	</AGRound>
+  </AGRoundList>  
+</CollectionRound>
+</xhtml:Example></DataObject>

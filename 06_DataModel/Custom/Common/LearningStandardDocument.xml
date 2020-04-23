@@ -105,6 +105,9 @@
     <Element>Organizations</Element>
     <Characteristics>M</Characteristics>
 	<privacyRating>Low</privacyRating>
+	<Description>
+      <p>Name of organization represented by the document, i.e., "National Council of Teachers of Mathematics (NCTM)"," "ACARA", "NSW DET".</p>
+    </Description>
        <Type ref="CommonTypes" name="OrganizationsType"></Type>
   </Item>
 
@@ -113,6 +116,9 @@
     <Element>Authors</Element>
     <Characteristics>O</Characteristics>
 	<privacyRating>Low</privacyRating>
+	<Description>
+      <p>A list of the organisations of the curriculum document, i.e. "ACARA". May be the same as "Organization" above.</p>
+    </Description>
      <Type ref="CommonTypes" name="AuthorsType"></Type>
   </Item>
   
@@ -139,7 +145,9 @@
 
     <Characteristics>M</Characteristics>
 	<privacyRating>Low</privacyRating>
-    <Description></Description>
+    <Description>
+      <p>Current status of the document.</p>
+    </Description>
     <Values>
       <Value>
         <Code>Draft</Code>
@@ -240,6 +248,9 @@
     <Element>RelatedLearningStandards</Element>
     <Characteristics>O</Characteristics>
 	<privacyRating>Low</privacyRating>
+	<Description>
+      <p>References to Learning Standard Documents.</p>
+    </Description>
     <Type ref="CommonTypes" name="LearningStandardsDocumentType"></Type>
   </Item>
   <Item>   

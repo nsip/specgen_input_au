@@ -24,10 +24,18 @@
     </Description>
     <Type ref="CommonTypes" name="RefIdType"></Type>
   </Item>
-
+   <Item>
+    <Element>LocalId</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Low</privacyRating>
+    <Description>
+      <p>The Local Id of the journal.</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>
   <Item>
     <Element>DebitFinancialAccountRefId</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
 	<privacyRating>High</privacyRating>
     <Description>
       <p>RefId of account to debit.</p>
@@ -37,13 +45,33 @@
   
   <Item>
     <Element>CreditFinancialAccountRefId</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
 	<privacyRating>High</privacyRating>
     <Description>
       <p>RefId of account to credit.</p>
     </Description>
     <Type ref="CommonTypes" name="IdRefType"></Type>
   </Item>
+
+  <Item>
+    <Element>DebitAccountCode</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
+    <Description>
+      <p>Account to debit.</p>
+    </Description>
+    <Type name="xs:token"></Type> 
+  </Item>
+  
+  <Item>
+    <Element>CreditAccountCode</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
+    <Description>
+      <p>Account to credit.</p>
+    </Description>
+    <Type name="xs:token"></Type> 
+  </Item>  
   
   <Item>
     <Element>OriginatingTransactionRefId</Element>    
@@ -112,7 +140,15 @@
     </Description>
     <Type name="xs:normalizedString"></Type>
   </Item>
-  
+   <Item>
+    <Element>JournalAdjustmentList</Element>    
+    <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
+    <Description>
+      <p>Details of the Adjustment if it requires more than one line.</p>
+    </Description>
+    <Type ref="CommonTypes" name="JournalAdjustmentListType"></Type>
+  </Item>
   <Item>
     <Element>CreatedDate</Element>    
     <Characteristics>O</Characteristics>

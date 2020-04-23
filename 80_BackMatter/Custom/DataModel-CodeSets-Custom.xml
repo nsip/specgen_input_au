@@ -23,7 +23,7 @@
 <Value><Code>MH-17</Code><Text>Tourette's Syndrome</Text></Value>
 <Value><Code>MH-18</Code><Text>Conduct Disorder</Text></Value>
 <Value><Code>MS-1</Code><Text>Absence seizures epilepsy</Text></Value>
-<Value><Code>MS-2</Code><Text>Tonic Clonic epilepsy</Text></Value>
+<Value><Code>MS-2</Code><Text>Tonic-Clonic epilepsy</Text></Value>
 <Value><Code>MS-3</Code><Text>Myotonic epilepsy</Text></Value>
 <Value><Code>MS-4</Code><Text>Refractory epilepsy</Text></Value>
 <Value><Code>MAA-1</Code><Text>Antibiotics -specify type(s)</Text></Value>
@@ -48,19 +48,19 @@
 <Value><Code>MB-3</Code><Text>Thalassemia</Text></Value>
 <Value><Code>MB-4</Code><Text>Vasculitis</Text></Value>
 <Value><Code>MB-5</Code><Text>Von Willebrand's Disease</Text></Value>
-<Value><Code>MMS-1</Code><Text>Ehlers Danlos</Text></Value>
-<Value><Code>MMS-2</Code><Text>Fibromyalgia  - discuss</Text></Value>
+<Value><Code>MMS-1</Code><Text>Ehlers-Danlos</Text></Value>
+<Value><Code>MMS-2</Code><Text>Fibromyalgia</Text></Value>
 <Value><Code>MMS-3</Code><Text>Hip Dysplasia</Text></Value>
 <Value><Code>MMS-4</Code><Text>Joint Hypermobility</Text></Value>
 <Value><Code>MMS-5</Code><Text>Juvenile Arthritis</Text></Value>
-<Value><Code>MMS-6</Code><Text>Kohlers Disease</Text></Value>
+<Value><Code>MMS-6</Code><Text>Köhler's Disease</Text></Value>
 <Value><Code>MMS-7</Code><Text>Marfan Syndrome</Text></Value>
-<Value><Code>MMS-8</Code><Text>Meyers Dysplasia</Text></Value>
+<Value><Code>MMS-8</Code><Text>Meyer's Dysplasia</Text></Value>
 <Value><Code>MMS-9</Code><Text>Neurofibromatosis type 1</Text></Value>
 <Value><Code>MMS-10</Code><Text>Osgood Schlatter Condition</Text></Value>
-<Value><Code>MMS-11</Code><Text>Osteo Imperfecta</Text></Value>
+<Value><Code>MMS-11</Code><Text>Osteogenesis Imperfecta</Text></Value>
 <Value><Code>MMS-12</Code><Text>Scoliosis</Text></Value>
-<Value><Code>MMS-13</Code><Text>Severs Disease</Text></Value>
+<Value><Code>MMS-13</Code><Text>Sever's Disease</Text></Value>
 <Value><Code>MMS-14</Code><Text>Talipes</Text></Value>
 <Value><Code>MMS-15</Code><Text>Von Eulenburg Disease</Text></Value>
 <Value><Code>MCM-1</Code><Text>Angelman Syndrome</Text></Value>
@@ -79,18 +79,18 @@
 <Value><Code>MCM-14</Code><Text>Oculocutaneous Albinism</Text></Value>
 <Value><Code>MCM-15</Code><Text>Phelan-McDermid Syndrome</Text></Value>
 <Value><Code>MCM-16</Code><Text>Phenylketonuria</Text></Value>
-<Value><Code>MCM-17</Code><Text>Pierr Robyn Syndrome</Text></Value>
+<Value><Code>MCM-17</Code><Text>Pierre Robyn Syndrome</Text></Value>
 <Value><Code>MCM-18</Code><Text>Potocki - Lupski Syndrome</Text></Value>
 <Value><Code>MCM-19</Code><Text>Prader Willi Syndrome</Text></Value>
 <Value><Code>MCM-20</Code><Text>Rubinstein-Taybi Syndrome</Text></Value>
 <Value><Code>MCM-21</Code><Text>ScN2A (Sodium Channel) Gene Mutation</Text></Value>
 <Value><Code>MCM-22</Code><Text>Trisomy - chromosome</Text></Value>
 <Value><Code>MCM-23</Code><Text>Trisomy 21/Down Syndrome</Text></Value>
-<Value><Code>MCM-24</Code><Text>Turners Syndrome</Text></Value>
+<Value><Code>MCM-24</Code><Text>Turner's Syndrome</Text></Value>
 <Value><Code>MCM-25</Code><Text>Velocardiofacial Syndrome</Text></Value>
 <Value><Code>MCM-26</Code><Text>Wolf-Hirschhorn Syndrome</Text></Value>
 <!--Sub Categories Added for 3.4.5 -->
-<Value><Code>MAIM-4</Code><Text>X-Linked agammaglobullinemia</Text></Value>
+<Value><Code>MAIM-4</Code><Text>X-Linked agammaglobulinemia</Text></Value>
 <Value><Code>MAO-1</Code><Text>Cough</Text></Value>
 <Value><Code>MAO-2</Code><Text>Eczema</Text></Value>
 <Value><Code>MAO-3</Code><Text>Hay fever</Text></Value>
@@ -143,7 +143,7 @@
 <Value><Code>MMD-06</Code><Text>Tachycardia</Text></Value>
 <Value><Code>MMD-07</Code><Text>Ventricular heart defect</Text></Value>
 <Value><Code>MI-01</Code><Text>Croup</Text></Value>
-<Value><Code>MI-02</Code><Text>Cytomeglovirus</Text></Value>
+<Value><Code>MI-02</Code><Text>Cytomegalovirus</Text></Value>
 <Value><Code>MI-03</Code><Text>Hepatitis</Text></Value>
 <Value><Code>MI-04</Code><Text>HIV/AIDS</Text></Value>
 <Value><Code>MI-05</Code><Text>Meningococcal disease</Text></Value>
@@ -166,12 +166,12 @@
 <Value><Code>MND-14</Code><Text>Selective mutism</Text></Value>
 <Value><Code>MND-15</Code><Text>Sensory processing disorder</Text></Value>
 <Value><Code>MND-16</Code><Text>Smith-Magenis syndrome</Text></Value>
-<Value><Code>MND-17</Code><Text>SLD with impairment in mathematics</Text></Value>
-<Value><Code>MND-18</Code><Text>SLD with impairment in reading</Text></Value>
-<Value><Code>MND-19</Code><Text>SLD with impairment in written expression</Text></Value>
+<Value><Code>MND-17</Code><Text>Specific Learning Disability with impairment in mathematics</Text></Value>
+<Value><Code>MND-18</Code><Text>Specific Learning Disability with impairment in reading</Text></Value>
+<Value><Code>MND-19</Code><Text>Specific Learning Disability with impairment in written expression</Text></Value>
 <Value><Code>MND-20</Code><Text>Verbal dyspraxia</Text></Value>
 <Value><Code>MND-21</Code><Text>Visual processing disorder</Text></Value>
-<Value><Code>MND-22</Code><Text>William's syndrome</Text></Value>
+<Value><Code>MND-22</Code><Text>Williams' syndrome</Text></Value>
 <Value><Code>MOP-1</Code><Text>Keratoconjunctivitis sicca</Text></Value>
 <Value><Code>MOP-2</Code><Text>Vision impairment</Text></Value>
 <Value><Code>MO-1</Code><Text>Dysphagia</Text></Value>
@@ -191,7 +191,7 @@
 <Value><Code>Other-4</Code><Text>Nosebleed - severe and recurrent</Text></Value>
 <Value><Code>Other</Code><Text>Other</Text></Value>
 <Value><Code>MN-1</Code><Text>Hypotonia</Text></Value>
-<Value><Code>MN-2</Code><Text>Juvenile huntington disease</Text></Value>
+<Value><Code>MN-2</Code><Text>Juvenile Huntington disease</Text></Value>
 <Value><Code>MN-3</Code><Text>Lipomas of corpus callosum</Text></Value>
 <Value><Code>MN-4</Code><Text>Macrocephaly</Text></Value>
 <Value><Code>MN-5</Code><Text>Microcephaly</Text></Value>
@@ -200,12 +200,23 @@
 <Value><Code>MN-8</Code><Text>Narcolepsy</Text></Value>
 <Value><Code>MN-9</Code><Text>PANDAS syndrome</Text></Value>
 <Value><Code>MN-10</Code><Text>Rett syndrome</Text></Value>
-<Value><Code>MN-11</Code><Text>Septo optic dysplasia</Text></Value>
+<Value><Code>MN-11</Code><Text>Septo-optic dysplasia</Text></Value>
 <Value><Code>MN-12</Code><Text>Shunt</Text></Value>
 <Value><Code>MN-13</Code><Text>Spina bifida</Text></Value>
 <Value><Code>MN-14</Code><Text>Thermoregulation</Text></Value>
 <Value><Code>MN-15</Code><Text>Tuberous sclerosis</Text></Value>
 <Value><Code>MN-16</Code><Text>West syndrome</Text></Value>
+<!--Added for 3.4.6 -->
+<Value><Code>DP-1</Code><Text>Vegetarian</Text><Description>No meat or fish</Description></Value>
+<Value><Code>DP-2</Code><Text>Vegan</Text><Description>No animal products</Description></Value>
+<Value><Code>DP-3</Code><Text>Pescatarian</Text><Description>No meat but food may contain fish</Description></Value>
+<Value><Code>DP-4</Code><Text>Lacto-vegetarian</Text><Description>No meat or fish or eggs, food can contain milk</Description></Value>
+<Value><Code>DP-5</Code><Text>Ovo-lacto-vegetarian</Text><Description>No meat or fish, food can contain eggs or milk</Description></Value>
+<Value><Code>DP-6</Code><Text>Kosher</Text><Description></Description></Value>
+<Value><Code>DP-7</Code><Text>Halal</Text><Description></Description></Value>
+<Value><Code>DP-8</Code><Text>Fruitarian</Text><Description>Same as vegan, but only contains foods that doesn’t kill the plant (apples can be picked without killing the plant, carrots cannot)</Description></Value>
+<Value><Code>DP-9</Code><Text>Non-dairy</Text><Description>Food may actually contain milk or milk derivatives but does not have enough percentage of milk fat to be called dairy</Description></Value>
+<Value><Code>DP-10</Code><Text>Lactose Free</Text><Description>Food may not contain lactose.  No milk or milk derivatives</Description></Value>
 </Values></CodeSet>
  <CodeSet>
       <Intro>
@@ -228,13 +239,14 @@
 <Value><Code>MI</Code><Text>Infectious Diseases</Text></Value>
 <Value><Code>MGI</Code><Text>Gastro Intestinal/Urinary conditions</Text></Value>
 <Value><Code>MND</Code><Text>Neuro/Developmental Disorders</Text></Value>
-<Value><Code>MO</Code><Text>Oral/Phalangeal Disorders</Text></Value>
+<Value><Code>MO</Code><Text>Oral/Pharyngeal Disorders</Text></Value>
 <Value><Code>MD</Code><Text>Deaf and Hard of Hearing</Text></Value>
 <Value><Code>MOP</Code><Text>Optical/ Vision Disorder</Text></Value>
 <Value><Code>M-Other</Code><Text>Medical Other</Text></Value>
 <Value><Code>D-Other</Code><Text>Disability Other</Text></Value>
 <Value><Code>S-Other</Code><Text>Special Needs Other</Text></Value>
 <Value><Code>Other</Code><Text>Other</Text></Value>
+<Value><Code>DP</Code><Text>Dietary Preference</Text></Value>
 </Values></CodeSet>
   <CodeSet>
       <Intro>
@@ -365,7 +377,7 @@
 			<Value><Code>B7n</Code><Text>Helps others to reach their goals</Text></Value>
 			<Value><Code>B8a</Code><Text>Is fair</Text></Value>
 			<Value><Code>B8b</Code><Text>Shows mutuality (sharing a feeling, action or relationship)</Text></Value>
-			<Value><Code>B8c</Code><Text>Shows reciprocity (“I scratch your back, you scratch mine)</Text></Value>
+			<Value><Code>B8c</Code><Text>Shows reciprocity (“I scratch your back, you scratch mine")</Text></Value>
 			<Value><Code>B8d</Code><Text>Shows goodwill</Text></Value>
 			<Value><Code>B8e</Code><Text>Is attentive to others' reactions</Text></Value>
 			<Value><Code>B8f</Code><Text>Is open to dialogue/discussion</Text></Value>
@@ -414,12 +426,12 @@
 			<Value><Code>M5c</Code><Text>Deliberate damage to personal property</Text></Value>
 			<Value><Code>M5d</Code><Text>Incidental damage through negligence</Text></Value>
 			<Value><Code>M5e</Code><Text>Graffiti</Text></Value>
-			<Value><Code>M5f</Code><Text>Buildings and glass</Text></Value>
-			<Value><Code>M5g</Code><Text>Fittings and fixtures</Text></Value>
-			<Value><Code>M5h</Code><Text>Furniture</Text></Value>
-			<Value><Code>M5i</Code><Text>Equipment</Text></Value>
-			<Value><Code>M5j</Code><Text>Vehicles</Text></Value>
-			<Value><Code>M5k</Code><Text>Garden and plants</Text></Value>
+			<Value><Code>M5f</Code><Text>Damage to: Buildings and glass</Text></Value>
+			<Value><Code>M5g</Code><Text>Damage to: Fittings and fixtures</Text></Value>
+			<Value><Code>M5h</Code><Text>Damage to: Furniture</Text></Value>
+			<Value><Code>M5i</Code><Text>Damage to: Equipment</Text></Value>
+			<Value><Code>M5j</Code><Text>Damage to: Vehicles</Text></Value>
+			<Value><Code>M5k</Code><Text>Damage to: Garden and plants</Text></Value>
 			<Value><Code>M6a</Code><Text>Active refusal to follow reasonable instructions</Text></Value>
 			<Value><Code>M6b</Code><Text>Passive non-compliance</Text></Value>
 			<Value><Code>M6c</Code><Text>Disruptive</Text></Value>
@@ -481,6 +493,7 @@
 		  <Value><Code>D</Code><Text>Disability</Text></Value>
 		  <Value><Code>S</Code><Text>SpecialNeeds</Text></Value>
 		  <Value><Code>O</Code><Text>Other</Text></Value>
+		  <Value><Code>DP</Code><Text>Dietary Preference</Text></Value> 
       </Values>
     </CodeSet>
 <CodeSet>
@@ -496,6 +509,8 @@
 		  <Value><Code>S</Code><Text>Special Needs</Text></Value>
 		  <Value><Code>L</Code><Text>Legal</Text></Value>
 		  <Value><Code>O</Code><Text>Other</Text></Value>
+		  <Value><Code>W</Code><Text>Welfare</Text></Value>
+		  <Value><Code>R</Code><Text>Risk</Text></Value>
       </Values>
    </CodeSet>       
    <CodeSet>
@@ -640,7 +655,8 @@
     </CodeSet>
   <CodeSet>
       <Intro>
-        <p></p>
+    		<p>This code set references AS4590 - Interchange of client information, 2017 - Australian Government Jurisdiction Code</p>
+			<p>This Australian Standard can be purchased here: https://www.standards.org.au/standards-catalogue/sa-snz/communication/it-004/as--4590-dot-1-colon-2017</p>
       </Intro>
       <ID>NAP Jurisdiction</ID>
       <Values>
@@ -888,6 +904,10 @@
 		  <Code>X</Code>
 		  <Text>No Longer Enrolled</Text>
 		</Value>
+		<Value>
+		  <Code>F</Code>
+		  <Text>Alternate Format</Text>
+		</Value>
       </Values>
     </CodeSet>   
 	<CodeSet>
@@ -1117,7 +1137,12 @@
 			<Value>
 				<Code>622</Code>
 				<Text>Representative Event</Text>
+			</Value>
+			<Value>
+				<Code>623</Code>
+				<Text>On-site program</Text>
 			</Value>			
+			
 			<Value>
 				<Code>699</Code>
 				<Text>Educational - further details not available</Text>
@@ -1194,14 +1219,15 @@
 	</CodeSet>
 <CodeSet>
   		<Intro>
-			<p>1249.0 Australian Standard Classification of Cultural and Ethnic Groups, 2016</p>
-			<p>Source Data ABS: http://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1249.02016?OpenDocument</p>
+			<p>1249.0 Australian Standard Classification of Cultural and Ethnic Groups, 2019</p>
+			<p>Source Data ABS: https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1249.02019?OpenDocument</p>
 		</Intro>
 		<ID>Australian Standard Classification of Cultural and Ethnic Groups (ASCCEG)</ID>
  <Values><Value><Code>1101</Code><Text>Australian</Text></Value>
 <Value><Code>1102</Code><Text>Australian Aboriginal</Text></Value>
 <Value><Code>1103</Code><Text>Australian South Sea Islander</Text></Value>
 <Value><Code>1104</Code><Text>Torres Strait Islander</Text></Value>
+<Value><Code>1105</Code><Text>Norfolk Islander</Text></Value>
 <Value><Code>1201</Code><Text>Maori</Text></Value>
 <Value><Code>1202</Code><Text>New Zealander</Text></Value>
 <Value><Code>1301</Code><Text>New Caledonian</Text></Value>
@@ -1522,7 +1548,8 @@
 </CodeSet>
 	<CodeSet>
 		<Intro>
-			<p/>
+			<p>The codeset is derived from the coding of activities for 2009 ABS 4177.0 Participation in Sport and Physical Recreation, Australia, with added values for non-sporting cocurricular activities. The number of sports and physical recreation activities has increased in the latest version of the survey from 2013. https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/4177.02013-14?OpenDocument</p>
+			<p>Additional values in this set are from previous surveys and additional school values.</p>
 		</Intro>
 		<ID>Activity Involvement Code</ID>
 		<Values>
@@ -1542,6 +1569,7 @@
 				<Code>1013</Code>
 				<Text>Gymnasium workouts</Text>
 			</Value>
+
 			<Value>
 				<Code>1014</Code>
 				<Text>Aerobics/exercising (other)</Text>
@@ -1585,6 +1613,10 @@
 			<Value>
 				<Code>101E</Code>
 				<Text>Rope skipping</Text>
+			</Value>
+			<Value>
+				<Code>101F</Code>
+				<Text>Gym classes</Text>
 			</Value>
 			<Value>
 				<Code>1020</Code>
@@ -1636,7 +1668,7 @@
 			</Value>
 			<Value>
 				<Code>1031</Code>
-				<Text>Aquareobics</Text>
+				<Text>Aqua aerobics</Text>
 			</Value>
 			<Value>
 				<Code>1041</Code>
@@ -1645,6 +1677,10 @@
 			<Value>
 				<Code>1042</Code>
 				<Text>Bow hunting</Text>
+			</Value>
+			<Value>
+				<Code>1043</Code>
+				<Text>Crossbow shooting</Text>
 			</Value>
 			<Value>
 				<Code>1051</Code>
@@ -1685,6 +1721,10 @@
 			<Value>
 				<Code>1113</Code>
 				<Text>Snooker</Text>
+			</Value>
+			<Value>
+				<Code>1114</Code>
+				<Text>Pool</Text>
 			</Value>
 			<Value>
 				<Code>1121</Code>
@@ -1929,6 +1969,10 @@
 			<Value>
 				<Code>1374</Code>
 				<Text>Show jumping</Text>
+			</Value>
+			<Value>
+				<Code>1375</Code>
+				<Text>Pony Club</Text>
 			</Value>
 			<Value>
 				<Code>1380</Code>
@@ -2397,6 +2441,10 @@
 			<Value>
 				<Code>1775</Code>
 				<Text>Dragon boat racing</Text>
+			</Value>
+			<Value>
+				<Code>1776</Code>
+				<Text>Rafting</Text>
 			</Value>
 			<Value>
 				<Code>1781</Code>
@@ -2981,10 +3029,18 @@
 	</CodeSet>
 	<CodeSet>
 		<Intro>
-			<p/>
+      <Intro>
+    		<p>This code set references AS4590 - Interchange of client information, 2017 - Australian State or Territory Code</p>
+			<p>This Australian Standard can be purchased here: https://www.standards.org.au/standards-catalogue/sa-snz/communication/it-004/as--4590-dot-1-colon-2017</p>
+		  <p>More details of useage: https://meteor.aihw.gov.au/content/index.phtml/itemId/430134</p>
+      </Intro>
 		</Intro>
 		<ID>State Territory Code</ID>
 		<Values>
+			<Value>
+				<Code>AAT</Code>
+				<Text>Australian Antartic Territory</Text>
+			</Value>
 			<Value>
 				<Code>ACT</Code>
 				<Text>Australian Capital Territory</Text>
@@ -3032,6 +3088,7 @@
 		<Intro>
 			<p>1269.0 Standard Australian Classification of Countries (SACC), 2016</p>
 			<p>Source Data ABS: http://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1269.02016?OpenDocument</p>
+			<p>updated March 15, 2019</p>
 		</Intro>
 		<ID>Standard Australian Classification of Countries (SACC)</ID>
 	       <Values><Value><Code>1101</Code><Text>Australia</Text></Value>
@@ -3106,7 +3163,7 @@
 <Value><Code>3203</Code><Text>Bulgaria</Text></Value>
 <Value><Code>3204</Code><Text>Croatia</Text></Value>
 <Value><Code>3205</Code><Text>Cyprus</Text></Value>
-<Value><Code>3206</Code><Text>The former Yugoslav Republic of Macedonia</Text></Value>
+<Value><Code>3206</Code><Text>North Macedonia</Text></Value>
 <Value><Code>3207</Code><Text>Greece</Text></Value>
 <Value><Code>3208</Code><Text>Moldova</Text></Value>
 <Value><Code>3211</Code><Text>Romania</Text></Value>
@@ -3115,7 +3172,7 @@
 <Value><Code>3215</Code><Text>Serbia</Text></Value>
 <Value><Code>3216</Code><Text>Kosovo</Text></Value>
 <Value><Code>3301</Code><Text>Belarus</Text></Value>
-<Value><Code>3302</Code><Text>Czech Republic</Text></Value>
+<Value><Code>3302</Code><Text>Czechia</Text></Value>
 <Value><Code>3303</Code><Text>Estonia</Text></Value>
 <Value><Code>3304</Code><Text>Hungary</Text></Value>
 <Value><Code>3305</Code><Text>Latvia</Text></Value>
@@ -3283,7 +3340,7 @@
 <Value><Code>9223</Code><Text>Seychelles</Text></Value>
 <Value><Code>9224</Code><Text>Somalia</Text></Value>
 <Value><Code>9225</Code><Text>South Africa</Text></Value>
-<Value><Code>9226</Code><Text>Swaziland</Text></Value>
+<Value><Code>9226</Code><Text>Eswatini</Text></Value>
 <Value><Code>9227</Code><Text>Tanzania</Text></Value>
 <Value><Code>9228</Code><Text>Uganda</Text></Value>
 <Value><Code>9231</Code><Text>Zambia</Text></Value>
@@ -3527,7 +3584,7 @@
 	</CodeSet>
 	<CodeSet>
 		<Intro>
-			<p>Federal Electorates from the Australian Electoral Commission; https://www.aec.gov.au/profiles/index.htm, loaded using 2019 electorates from the coding desription of Commonwealth Electoral Divisions, ABS https://www.abs.gov.au/ausstats/abs@.nsf/Lookup/by%20Subject/1270.0.55.003~July%202017~Main%20Features~Commonwealth%20Electoral%20Divisions%20(CEDs)~6</p>
+			<p>Federal Electorates from the Australian Electoral Commission; https://www.aec.gov.au/profiles/index.htm, loaded using 2019 electorates from the coding description of Commonwealth Electoral Divisions, ABS https://www.abs.gov.au/ausstats/abs@.nsf/Lookup/by%20Subject/1270.0.55.003~July%202017~Main%20Features~Commonwealth%20Electoral%20Divisions%20(CEDs)~6</p>
 		</Intro>
 		<ID>Federal Electorate</ID>
        <Values><Value><Code>101</Code><Text>Banks</Text></Value>
@@ -4316,7 +4373,7 @@
 	</CodeSet>
 	<CodeSet>
 		<Intro>
-			<p>This Code Set is union between the Australian Statistical Geography Standard (ASGS):  http://www.abs.gov.au/ausstats/abs@.nsf/PrimaryMainFeatures/1270.0.55.001?OpenDocument</p>
+			<p>This Code Set is union between the Australian Statistical Geography Standard (ASGS):  http://www.abs.gov.au/ausstats/abs@.nsf/PrimaryMainFeatures/1270.0.55.001?OpenDocument and ARIA Remoteness</p>
 			<p>In previous versions the ARIA definition of Remoteness has been used for this validation. For the publication of ACARA's  Australian Schools List (ASL)  the ASGS validation is also supported.</p>
 		</Intro>
 		<ID>School Location</ID>
@@ -5858,7 +5915,8 @@
 	</CodeSet>
 	<CodeSet>
 		<Intro>
-			<p/>
+			<p>This code set references AS4590 - Interchange of client information, 2017 - Name Usage Type Code</p>
+			<p>This Australian Standard can be purchased here: https://www.standards.org.au/standards-catalogue/sa-snz/communication/it-004/as--4590-dot-1-colon-2017</p>
 		</Intro>
 		<ID>Name Usage Type</ID>
 		<Values>
@@ -5902,7 +5960,10 @@
 				<Code>TRB</Code>
 				<Text>Tribal Name</Text>
 			</Value>
-			 
+			<Value>
+				<Code>PBN</Code>
+				<Text>Professional or buisness name</Text>
+			</Value> 
 		</Values>
 	</CodeSet>
 	<CodeSet>
@@ -6005,7 +6066,12 @@
 	</CodeSet>
 	<CodeSet>
 		<Intro>
-			<p/>
+			<p>1289.0 - Standards for Statistics on Cultural and Language Diversity, 1999, https://www.abs.gov.au/Ausstats/abs@.nsf/mf/1289.0</p>
+			<p>Explanation of usage: https://www.ausstats.abs.gov.au/ausstats/subscriber.nsf/0/CA25687100069892CA256889000C9E88/$File/12890_1999.pdf</p>
+			<p>Classification:
+			 The standard classification used to code, store and disseminate data collected by Proficiency in Spoken English is a flat classification, having only one level with four categories. These categories are the same as the question response categories (‘Very well’, ‘Well’, ‘Not well’, ‘Not at all’). Two supplementary codes are also provided in the classification for ‘Not stated’ and ‘Not applicable’ responses (see Coding Procedures), which makes the classification applicable to all persons. However, it should be noted that this is a coding convention and that, setting aside these special codes, the scope of the classification, along with the variable, is people who speak a language other than English.
+</p>
+			<p>See Also: https://meteor.aihw.gov.au/content/index.phtml/itemId/695981</p>
 		</Intro>
 		<ID>English Proficiency</ID>
 		<Values>
@@ -6682,23 +6748,23 @@
 		<Values>
 			<Value>
 				<Code>1</Code>
-				<Text>Aboriginal but not Torres Strait Islander Origin</Text>
+				<Text>Aboriginal but not Torres Strait Islander origin</Text>
 			</Value>
 			<Value>
 				<Code>2</Code>
-				<Text>Torres Strait Islander but not Aboriginal Origin</Text>
+				<Text>Torres Strait Islander but not Aboriginal origin</Text>
 			</Value>
 			<Value>
 				<Code>3</Code>
-				<Text>Both Torres Strait and Aboriginal Origin</Text>
+				<Text>Both Aboriginal and Torres Strait Islander origin</Text>
 			</Value>
 			<Value>
 				<Code>4</Code>
-				<Text>Neither Aboriginal or Torres Strait Origin</Text>
+				<Text>Neither Aboriginal nor Torres Strait Islander origin</Text>
 			</Value>
 			<Value>
 				<Code>9</Code>
-				<Text>Not Stated/Unknown</Text>
+				<Text>Not stated/unknown</Text>
 			</Value>
 			 
 		</Values>
@@ -6876,6 +6942,7 @@
 <Value><Code>188</Code><Text>Business Innovation and Investment (provisional) visa</Text></Value>
 <Value><Code>189</Code><Text>Skilled Independent visa</Text></Value>
 <Value><Code>190</Code><Text>Skilled Nominated visa</Text></Value>
+<Value><Code>191</Code><Text>Permanent Residence (Skilled Regional) visa</Text></Value>
 <Value><Code>200</Code><Text>Refugee visas</Text></Value>
 <Value><Code>201</Code><Text>In-country Special Humanitarian</Text></Value>
 <Value><Code>202</Code><Text>Global Special Humanitarian</Text></Value>
@@ -6915,7 +6982,9 @@
 <Value><Code>485</Code><Text>Temporary Graduate visa</Text></Value>
 <Value><Code>487</Code><Text>Repealed - Skilled Regional Sponsored</Text></Value>
 <Value><Code>488</Code><Text>Repealed - Superyacht Crew visa</Text></Value>
-<Value><Code>489</Code><Text>Skilled Regional (provisional) visa</Text></Value>
+<Value><Code>489</Code><Text>Skilled Regional (Provisional) visa</Text></Value>
+<Value><Code>491</Code><Text>Skilled Work Regional (Provisional) visa</Text></Value>
+<Value><Code>494</Code><Text>Skilled Employer Sponsored Regional (Provisional) visa</Text></Value>
 <Value><Code>495</Code><Text>Repealed - Skilled Independent Regional (Provisional) visa</Text></Value>
 <Value><Code>496</Code><Text>Repealed - Skilled Designated Area Sponsored visa</Text></Value>
 <Value><Code>500</Code><Text>Student visa</Text></Value>
@@ -7873,7 +7942,9 @@
 	</CodeSet>
 	<CodeSet>
 		<Intro>
-			<p/>
+			<p>Based on ABS: 1288.0 - Standards for Labour Force Statistics, 2018</p>
+			<p>https://www.abs.gov.au/ausstats/abs@.nsf/mf/1288.0 </p>
+			<p>For more context for coding refer to: https://meteor.aihw.gov.au/content/index.phtml/itemId/691891</p>
 		</Intro>
 		<ID>FTPT Status Code</ID>
 		<Values>
@@ -7885,7 +7956,10 @@
 				<Code>02</Code>
 				<Text>Part Time</Text>
 			</Value>
-			 
+			<Value>
+				<Code>9</Code>
+				<Text>Not stated/inadequately described</Text>
+			</Value> 
 		</Values>
 	</CodeSet>
 	<CodeSet>
@@ -8103,8 +8177,8 @@
 			<Value>
 				<Code>12</Code>
 				<Text>Year 12</Text>
-			</Value>
-			<Value>
+			</Value>	
+			<Value> 
 				<Code>13</Code>
 				<Text>Year 13</Text>
 			</Value>
@@ -8246,6 +8320,8 @@
 			<p>MaritalStatus - AIHW</p>
 			<p>http://meteor.aihw.gov.au/content/index.phtml/itemId/291045</p>
 			<p>From Meteor - Australian Institute of Health and Welfare</p>
+			<p>Source Reference: 1286.0 - Family, Household and Income Unit Variables, 2014</p>
+			<p>https://www.abs.gov.au/ausstats/abs@.nsf/Lookup/by%20Subject/1286.0~2014~Main%20Features~Classification%20and%20Coding~46</p>
 		</Intro>
 		<ID>Marital Status AIHW</ID>
 		<Values>
@@ -8273,7 +8349,6 @@
 				<Code>6</Code>
 				<Text>Not stated/inadequately described</Text>
 			</Value>
-		 
 		</Values>
 	</CodeSet>
 	<CodeSet>
@@ -9235,6 +9310,7 @@
 			<p>Australian education vocabularies</p>
 			<p>This vocabulary describes a curriculum framework organised into structural units.</p>
 			<p>Source: http://vocabulary.esa.edu.au/framework/ </p>
+			<p>Note: Religious Studies and Other have been added to enable interoperability where the subject matter is not covered in the Australian Curriculum.</p>
 		</Intro>
 		<ID>ACStrand</ID>
 		<Values>
@@ -9298,6 +9374,10 @@
 				<Code>W</Code>
 				<Text>Work Studies</Text>
 			</Value>
+			
+			<!-- Additional Values added to this Code Set are necessary as the Australian Curriculum is for P-10 only -->
+			<Value><Code>ReligousStudies</Code></Value>
+			<Value><Code>Other</Code></Value>
 		 
 		</Values>
 	</CodeSet>
@@ -9745,6 +9825,7 @@
 			</Value>
 		</Values>
 	</CodeSet>
+	 
 <CodeSet>
 		<Intro>
 			<p>Status Codes associated with an AG Collection Submission.  Source: Australian Government - Schools Hub</p>
@@ -9765,15 +9846,15 @@
 			</Value>
 			<Value>
 				<Code>Declared</Code>
-				<Text>When an authorised user declares via SchoolsHUB</Text>
+				<Text>When an authorised user declares via Schools HUB</Text>
 			</Value>
 			<Value>
 				<Code>In Review</Code>
-				<Text>When a CRM user selects the response and selects Begin Review</Text>
+				<Text>When a user selects the response and selects Begin Review</Text>
 			</Value>
 			<Value>
 				<Code>Exempt</Code>
-				<Text>When a CRM user sets the questionnaire and client to Exempt during the collection</Text>
+				<Text>When a user sets the questionnaire and client to Exempt during the collection</Text>
 			</Value>
 			<Value>
 				<Code>Finalised</Code>
@@ -9781,7 +9862,7 @@
 			</Value>
 			<Value>
 				<Code>Reopened</Code>
-				<Text>When reopen is selected by a CRM user during a review</Text>
+				<Text>When reopen is selected by a user during a review</Text>
 			</Value>
 			<Value>
 				<Code>Processing</Code>
@@ -9793,13 +9874,13 @@
 			</Value>
 			<Value>
 				<Code>Cancelled</Code>
-				<Text>When an departmental user has cancelled the submission</Text>
+				<Text>When a departmental user has cancelled the submission</Text>
 			</Value>
 		</Values>
 	</CodeSet>
 	<CodeSet>
 		<Intro>
-			<p>Education Level - Primary or Secondary, Associated with AG Student Collections</p>
+			<p>Education Level - Primary, Secondary or Combined, Associated with AG Student Collections</p>
 		</Intro>
 		<ID>Education Level</ID>
 		<Values>
@@ -9810,6 +9891,10 @@
 			<Value>
 				<Code>Secondary</Code>
 				<Text>Secondary</Text>
+			</Value>
+			<Value>
+				<Code>Combined</Code>
+				<Text>Combined</Text>
 			</Value>
 		</Values>
 	</CodeSet>		
@@ -9852,5 +9937,74 @@
 				<Text>Day Student</Text>
 			</Value>
 		</Values>
-	</CodeSet>				
+	</CodeSet>
+	
+	<CodeSet>
+		<Intro>
+			<p>AG Collection Contextual Question Codes</p>
+		</Intro>
+		<ID>AG Context Question</ID>
+		<Values>
+			<Value>
+				<Code>AC001</Code>
+				<Text>Are you reporting any boarding students?</Text>
+				<Description>Acceptable Answers here are "Yes" or "No"</Description>
+			</Value>
+			<Value>
+				<Code>AC002</Code>
+				<Text>What is the education level of this location?</Text>
+				<Description>Acceptable Answers here are "Primary", "Secondary" or "Combined"</Description>
+			</Value>
+			<Value>
+				<Code>NGSC001</Code>
+				<Text>Did all enrolled students attend during the Census reference period?</Text>
+				<Description>Acceptable Answers here are "Yes" or "No"</Description>
+			</Value>
+			<Value>
+				<Code>NGSC002</Code>
+				<Text>Are all your students Australian citizens?</Text>
+				<Description>Acceptable Answers here are "Yes" or "No"</Description>
+			</Value>
+			<Value>
+				<Code>NGSC003</Code>
+				<Text>Do you have part time students?</Text>
+				<Description>Acceptable Answers here are "Yes" or "No"</Description>
+			</Value>
+			<Value>
+				<Code>NGSC004</Code>
+				<Text>Do you have boarding students?</Text>
+				<Description>Acceptable Answers here are "Yes" or "No"</Description>
+			</Value>
+			<Value>
+				<Code>NGSC005</Code>
+				<Text>Do you have distance education students?</Text>
+				<Description>Acceptable Answers here are "Yes" or "No"</Description>
+			</Value>
+		</Values>
+	</CodeSet>							
+	<CodeSet>
+		<Intro>
+			<p>Which AG Collection do these Rounds refer to?</p>
+		</Intro>
+		<ID>AG Collection</ID>
+		<Values>
+			<Value>
+				<Code>SES</Code>
+				<Text>Address Collection</Text>
+			</Value>
+			<Value>
+				<Code>FQ</Code>
+				<Text>Financial Questionnaire</Text>
+			</Value>
+			<Value>
+				<Code>COI</Code>
+				<Text>Non-Government Schools Census</Text>
+			</Value>
+			<Value>
+				<Code>STATS</Code>
+				<Text>Student Attendance (STATS)</Text>
+			</Value>			
+		</Values>
+	</CodeSet>					
+	
 </Grouping>
