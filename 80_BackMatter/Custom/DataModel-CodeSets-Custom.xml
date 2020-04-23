@@ -1142,7 +1142,6 @@
 				<Code>623</Code>
 				<Text>On-site program</Text>
 			</Value>			
-			
 			<Value>
 				<Code>699</Code>
 				<Text>Educational - further details not available</Text>
@@ -9825,7 +9824,6 @@
 			</Value>
 		</Values>
 	</CodeSet>
-	 
 <CodeSet>
 		<Intro>
 			<p>Status Codes associated with an AG Collection Submission.  Source: Australian Government - Schools Hub</p>
@@ -9980,6 +9978,16 @@
 				<Text>Do you have distance education students?</Text>
 				<Description>Acceptable Answers here are "Yes" or "No"</Description>
 			</Value>
+			<Value>
+				<Code>STAT001</Code>
+				<Text>Are you reporting students who identified as Indigenous?</Text>
+				<Description>Acceptable Answers here are "Yes" or "No"</Description>
+			</Value>
+			<Value>
+				<Code>STAT002</Code>
+				<Text>What genders are you are reporting?</Text>
+				<Description>Acceptable Answers here are combinations of "M", "F" and "X"</Description>
+			</Value>
 		</Values>
 	</CodeSet>							
 	<CodeSet>
@@ -10005,6 +10013,6 @@
 				<Text>Student Attendance (STATS)</Text>
 			</Value>			
 		</Values>
-	</CodeSet>					
+	</CodeSet>							
 	
 </Grouping>

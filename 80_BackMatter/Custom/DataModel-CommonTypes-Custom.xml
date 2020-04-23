@@ -100,7 +100,1661 @@
                 
       </CommonElement-->
       
+  <!-- Added for STATS (Student Attendance Collection)-->
+  
+    
+ <CommonElement name="StudentAttendanceCollectionReportingListType" type= "true" dm="true">
+      <Item>
+			<Element>StudentAttendanceCollectionReportingListType</Element>
+			<Description>
+				<p>A list of StudentAttendanceCollection Reports.</p>
+			</Description>
+			<List mode="List"/>
+	  </Item>
+      <Item>
+			<Element>StudentAttendanceCollectionReporting</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>The AddressCollection being reported on.</p>
+			</Description>
+			<Type ref="CommonTypes" name="StudentAttendanceCollectionReportingType"/>
+		</Item>
+  </CommonElement> 
+ <CommonElement name= "StudentAttendanceCollectionReportingType" type="true" dm="true">
+        <Item>
+			<Element>StudentAttendanceCollectionReportingType</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>The StudentAttendanceCollection being reported on.</p>
+			</Description>
+		</Item>
+ 
+	   <Item>
+		  <Element>EntityLevel</Element>
+		  <Characteristics>O</Characteristics>
+		  <privacyRating>Medium</privacyRating>
+		  <Description>Level of the Submission, current valid values "System", "Office", "Location", "Special School Location".</Description>
+		  <!-- Do we need to restrict the level in enumeration of the type? -->
+		  <Type name="xs:normalizedString"></Type>
+	  </Item>
+		<Item> 	
+		 <Element>SchoolInfoRefId</Element>    
+		<Characteristics>O</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+		  <p>A pointer back to the SchoolInfo object underlying this Report if it exists.</p>
+		</Description>
+		<Type ref="CommonTypes" name="IdRefType"></Type>
+	  </Item>
+  
+	   <Item>
+		<Element>LocalId</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+		  <p>The locally-assigned identifier for the entity being reported on.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"></Type>
+	  </Item>
+  
+	  <Item>
+		<Element>StateProvinceId</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+		  <p>The state-assigned identifier for entity being reported on.</p>
+		</Description>
+		<Type ref="CommonTypes" name="StateProvinceIdType"></Type>
+	  </Item>
+  
+	  <Item>
+		<Element>CommonwealthId</Element>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+		  <p>Commonwealth identifier for this school/campus or entity being reported on.</p>
+		</Description>
+		<Type name="xs:normalizedString"></Type>
+	  </Item>
+  
+	   <Item>
+		<Element>ACARAId</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+		  <p>ACARA identifier for this school/campus.</p>
+		</Description>
+		<Type name="xs:normalizedString"></Type>
+	  </Item>
+  
+	  <Item>
+		  <Element>EntityName</Element>
+		  <Characteristics>O</Characteristics>
+		  <privacyRating>Medium</privacyRating>
+		  <Description>Name of the Entity who this submission is for, if a School, it will be the SchoolName.</Description>
+		  <Type name="xs:normalizedString"></Type>
+	  </Item> 
+	  <Item>
+		  <Element>EntityContact</Element>
+		  <Characteristics>M</Characteristics>
+		  <privacyRating>High</privacyRating>
+		  <Description>Information on the Contact for the submission.</Description>
+		  <Type ref="CommonTypes" name="EntityContactInfoType"></Type>
+	  </Item>
+	  <!-- Request from Jay to leave these out, 20/4/2020 ?
+      <Item>
+		<Element>AGContextualYearLevelList</Element>    
+		<Characteristics>O</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+		  <p>A list of Year levels to set the context for cohorts in this AG Collection.</p>
+		</Description>
+		<Type ref="CommonTypes" name="YearLevelsType"></Type>
+      </Item> 
+	   <Item>
+		<Element>AGContextualQuestionList</Element>    
+		<Characteristics>O</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+		  <p>A list of questions to set the context for the AG Collection.</p>
+		</Description>
+		<Type ref="CommonTypes" name="AGContextualQuestionListType"></Type> 
+	  </Item> -->
+  
+	  <Item>
+		<Element>StatsCohortYearLevelList</Element>    
+		<Characteristics>O</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+		  <p>A list of co-horts being reported on for this collection.</p>
+		</Description>
+		<Type ref="CommonTypes" name="StatsCohortYearLevelListType" complex="extension"></Type>
+	  </Item> 
+  </CommonElement>
+  
+    <CommonElement name="StatsCohortYearLevelListType" type= "true" dm="true">
+      <Item>
+			<Element>StatsCohortYearLevelListType</Element>
+			<Description>
+				<p>A list of Year Levels being reported on.</p>
+			</Description>
+			<List mode="List"/>
+	  </Item>    
+       <Item>
+			<Element>StatsCohortYearLevel</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>The Stats Year Level being reported on.</p>
+			</Description>
+			<Type ref="CommonTypes" name="StatsCohortYearLevelType"/>
+		</Item>
+ </CommonElement>
+ 
+ <CommonElement name= "StatsCohortYearLevelType" type="true" dm="true">
+        <Item>
+			<Element>StatsCohortYearLevelType</Element>
+			<Description>
+				<p>The Stats Year Level being reported on.</p>
+			</Description>
+		</Item>
+		
+		<Item>
+			<Element>CohortYearLevel</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>The year level of the students represented by this cohort.</p>
+			</Description>
+			<Type ref="CommonTypes" name="YearLevelType"/>
+		</Item>
+		
+		<Item>
+			<Element>StatsCohortList</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>A list of Stats Cohorts for the YearLevel.</p>
+			</Description>
+			<Type ref="CommonTypes" name="StatsCohortListType"/> 
+		</Item>
+  </CommonElement>      
+  
+  <CommonElement name="StatsCohortListType" type= "true" dm="true">
+      <Item>
+			<Element>StatsCohortListType</Element>
+			<Description>
+				<p>A list of Stats Cohorts.</p>
+			</Description>
+			<List mode="List"/>
+	  </Item>    
+       <Item>
+			<Element>StatsCohort</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>A Stats cohort.</p>
+			</Description>
+			<Type ref="CommonTypes" name="StatsCohortType"/>
+		</Item>
+ </CommonElement>
+ <CommonElement name= "StatsCohortType" type="true" dm="true">
+        <Item>
+			<Element>StatsCohortType</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>The individual stats cohort.</p>
+			</Description>
+		</Item>
+		<Item>
+			<Element>StatsCohortId</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>The locally-assigned identifier for this cohort.</p>
+			</Description>
+			<Type ref="CommonTypes" name="LocalIdType"/> 
+		</Item>
+ 		<Item>
+			<Element>StatsIndigenousStudentType</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>Student cohort type.</p>
+			</Description>
+			<Values>
+				<Value>
+					<Code>T</Code>
+					<Description>Total Students</Description>
+				</Value>
+				<Value>
+					<Code>I</Code>
+					<Description>Students identifying as Indigenous</Description>
+				</Value>
+			</Values>
+		</Item>		
 
+	    <Item>
+			<Element>CohortGender</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>Collection cohorts are male, female or other.</p>
+			</Description>
+			<Values>
+				<Value>
+					<Code>M</Code>
+					<Description>Male cohort</Description>
+				</Value>
+				<Value>
+					<Code>F</Code>
+					<Description>Female cohort</Description>
+				</Value>
+				<Value>
+					<Code>X</Code>
+					<Description>Other cohort</Description>
+				</Value>
+			</Values>
+		</Item>
+		
+		<Item>
+			<Element>DaysInReferencePeriod</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>Number of school days in Semester 1 / Term 3 (grade specific).</p>
+			</Description>
+			<Type name="xs:integer"></Type>
+		</Item>
+
+		<Item>
+			<Element>PossibleSchoolDays</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p></p>
+			</Description>
+			<Type name="xs:integer"></Type>
+		</Item>
+		<Item>
+			<Element>AttendanceDays</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>Sum of attendance days for all students in the cohort during the reference period.</p>
+			</Description>
+			<Type name="xs:decimal"></Type>
+		</Item>
+		<Item>
+			<Element>AttendanceLess90Percent</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>Count of full-time students who attended school less than 90% of possible school days in the reference period.</p>
+			</Description>
+			<Type name="xs:integer"></Type>
+		</Item>
+		<Item>
+			<Element>AttendanceGTE90Percent</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>Count of full-time students who attended school for 90% or more of the possible school days in the reference period.</p>
+			</Description>
+			<Type name="xs:integer"></Type>
+		</Item>
+		<Item>
+			<Element>PossibleSchoolDaysGT90PercentAttendance</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>Sum of days enrolled for Students with attendance rates of 90% or more.</p>
+			</Description>
+			<Type name="xs:integer"></Type>
+		</Item>
+ </CommonElement>      
+      
+  <!-- Added for the AddressCollection -->
+  
+ <CommonElement name="AddressCollectionReportingListType" type= "true" dm="true">
+      <Item>
+			<Element>AddressCollectionReportingListType</Element>
+			<Description>
+				<p>A list of AddressCollection Reports.</p>
+			</Description>
+			<List mode="List"/>
+	  </Item>
+      <Item>
+			<Element>AddressCollectionReporting</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>The AddressCollection being reported on.</p>
+			</Description>
+			<Type ref="CommonTypes" name="AddressCollectionReportingType"/>
+		</Item>
+  </CommonElement> 
+ <CommonElement name= "AddressCollectionReportingType" type="true" dm="true">
+        <Item>
+			<Element>AddressCollectionReportingType</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>The AddressCollection being reported on.</p>
+			</Description>
+		</Item>
+		<!-- There will be no individual Collection RefId's -->
+		<!--<Item> 	
+	 <Element>AddressCollectionRefId</Element>    
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>A GUID associated with this packet of a AddressCollectionReport.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item> -->
+  
+   <Item>
+	  <Element>EntityLevel</Element>
+	  <Characteristics>O</Characteristics>
+	  <privacyRating>Medium</privacyRating>
+	  <Description>Level of the Submission, current valid values "System", "Office", "Location", "Special School Location".</Description>
+	  <!-- Do we need to restrict the level in enumeration of the type? -->
+	  <Type name="xs:normalizedString"></Type>
+  </Item>
+	<Item> 	
+	 <Element>SchoolInfoRefId</Element>    
+    <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
+    <Description>
+      <p>A pointer back to the SchoolInfo object underlying this Report if it exists.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  
+   <Item>
+    <Element>LocalId</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>The locally-assigned identifier for the entity being reported on.</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>
+  
+  <Item>
+    <Element>StateProvinceId</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>The state-assigned identifier for entity being reported on.</p>
+    </Description>
+    <Type ref="CommonTypes" name="StateProvinceIdType"></Type>
+  </Item>
+  
+  <Item>
+    <Element>CommonwealthId</Element>
+    <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Commonwealth identifier for this school/campus or entity being reported on.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  
+   <Item>
+    <Element>ACARAId</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>ACARA identifier for this school/campus.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  
+  <Item>
+	  <Element>EntityName</Element>
+	  <Characteristics>O</Characteristics>
+	  <privacyRating>Medium</privacyRating>
+	  <Description>Name of the Entity who this submission is for, if a School, it will be the SchoolName.</Description>
+	  <Type name="xs:normalizedString"></Type>
+  </Item> 
+  <Item>
+	  <Element>EntityContact</Element>
+	  <Characteristics>M</Characteristics>
+	  <privacyRating>High</privacyRating>
+	  <Description>Information on the Contact for the submission.</Description>
+	  <Type ref="CommonTypes" name="EntityContactInfoType"></Type>
+  </Item>
+  
+   <Item>
+    <Element>AGContextualQuestionList</Element>    
+    <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
+    <Description>
+      <p>A list of questions to set the context for the AG Collection.</p>
+    </Description>
+	<Type ref="CommonTypes" name="AGContextualQuestionListType"></Type>
+  </Item>
+  
+  <Item>
+    <Element>AddressCollectionStudentList</Element>    
+    <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
+    <Description>
+      <p>A list of Students being reported on for this Address Collection.</p>
+    </Description>
+	<Type ref="CommonTypes" name="AddressCollectionStudentListType" complex="extension"></Type>
+  </Item> 
+  </CommonElement>
+  
+  <CommonElement name="AddressCollectionStudentListType" type= "true" dm="true">
+      <Item>
+			<Element>AddressCollectionStudentListType</Element>
+			<Description>
+				<p>A list of Students Addresses.</p>
+			</Description>
+			<List mode="List"/>
+	  </Item>    
+       <Item>
+			<Element>AddressCollectionStudent</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>A Student and their Address.</p>
+			</Description>
+			<Type ref="CommonTypes" name="AddressCollectionStudentType"/>
+		</Item>
+ </CommonElement>
+ <CommonElement name= "AddressCollectionStudentType" type="true" dm="true">
+        <Item>
+			<Element>AddressCollectionStudentType</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>The student and addresses being reported on.</p>
+			</Description>
+		</Item>
+		<Item>
+			<Element>LocalId</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>The locally-assigned identifier for this student.</p>
+			</Description>
+			<Type ref="CommonTypes" name="LocalIdType"/> 
+		</Item>
+		
+		<Item>
+			<Element>EducationLevel</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>Primary or Secondary for AG Collection reporting.</p>
+			</Description>
+			<Type ref="CodeSets" name="AUCodeSetsEducationLevelType"/> 
+		</Item>
+		<Item>
+			<Element>BoardingStatus</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>Is this student a Boarding  or Day Student for AG Collection reporting?</p>
+			</Description>
+			<Type ref="CodeSets" name="AUCodeSetsBoardingType"/>
+		</Item>
+		<Item>
+			<Element>ReportingParent2</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>Is this student reporting a 2nd Parent for the Address Collection?</p>
+			</Description>
+			<Values>
+				<Value>
+					<Code>N</Code>
+					<Description>No parent2 record exists.</Description>
+				</Value>
+				<Value>
+					<Code>Y</Code>
+					<Description>Yes, reporting a parent2.</Description>
+				</Value>
+				<Value>
+					<Code>U</Code>
+					<Description>Unusual circumstances parent2.</Description>
+				</Value>
+			</Values>
+		</Item>
+		<Item>
+			<Element>StudentAddress</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>Residential Address of the student for the AG Address Collection.</p>
+			</Description>
+			<Type ref="CommonTypes" name="AddressType"/>
+		</Item>
+		<Item>
+			<Element>Parent1</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>Name and address of Parent1 for the AG Address Collection.</p>
+			</Description> 
+			<Type ref="CommonTypes" name="AGParentType"/>
+		</Item>
+		
+		 <Item>
+			<Element>Parent2</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>Name and address of Parent2 for the AG Address Collection.</p>
+			</Description>
+			<Type ref="CommonTypes" name="AGParentType"/>
+		</Item>
+ </CommonElement>  
+ 
+ <CommonElement name="AGParentType" type= "true" dm="true">
+      <Item> 
+    	<Element>AGParentType</Element>
+		<Description>
+			<p>Parent Name and Address for AG Collections.</p>
+		</Description>
+	  </Item>
+	  <Item>
+			<Element>ParentName</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>Name of Parent for the AG Address Collection. Note: Type attribute value of LGL must be used here</p>
+			</Description>
+			<Type ref="CommonTypes" name="NameOfRecordType"/>
+		</Item>
+		<Item>
+			<Element>AddressSameAsStudent</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>Is this address the same as the Student's?</p>
+			</Description>
+			<Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"/>
+		</Item>
+	  <Item>
+			<Element>ParentAddress</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>Residential Address of Parent for the AG Address Collection.</p>
+			</Description>
+			<Type ref="CommonTypes" name="AddressType"/>
+		</Item>	
+</CommonElement>
+
+<!-- Added for AGGetRounds -->
+<CommonElement name="AGRoundListType" type="true" dm="true">
+		<Item>
+			<Element>AGRoundListType</Element>
+			<Description>
+				<p>A list of Rounds available for an AG Collection</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>AGRound</Element>
+			<Characteristics>OR</Characteristics>
+			<Description>
+				<p>Details of a particular round available for AG Collection.</p>
+			</Description>
+			<Type ref="CommonTypes" name="AGRoundType"/>
+		</Item>
+	</CommonElement>
+	
+	<CommonElement name="AGRoundType" type="true" dm="true">
+
+		<Item>
+			<Element>AGRoundType</Element>
+			<Characteristics/>
+			<Description>
+				<p>Details of a particular round available for AG Collection.</p>
+			</Description>
+		</Item>
+		<Item>
+		   <Element>RoundCode</Element>
+		   <Characteristics>M</Characteristics>
+		   <Description>
+			 <p>Code of the particular AGCollection round.</p>
+		   </Description>
+		   <Type name="xs:normalizedString"></Type>
+  		</Item>  
+		<Item>
+			<Element>RoundName</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+			 <p>Name of the particular AGCollection round.</p>
+			</Description>
+		    <Type name="xs:normalizedString"></Type>
+		</Item>
+		<Item>
+			<Element>StartDate</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+			 <p>Start date of the particular AGCollection round.</p>
+			</Description>
+		    <Type name="xs:date"></Type>
+		</Item>
+		<Item>
+			<Element>DueDate</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+			 <p>Due date of the particular AGCollection round.</p>
+			</Description>
+		    <Type name="xs:date"></Type>
+		</Item>
+		<Item>
+			<Element>EndDate</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+			 <p>End date of the particular AGCollection round.</p>
+			</Description>
+		    <Type name="xs:date"></Type>
+		</Item>
+   	</CommonElement>
+
+
+<!-- Added for General Contextual Questions -->
+
+ <CommonElement name="AGContextualQuestionListType" type="true" dm="true">
+		<Item>
+			<Element>AGContextualQuestionListType</Element>
+			<Description>
+				<p>A list of Contextual Questions for an AG Collection</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>AGContextualQuestion</Element>
+			<Characteristics>OR</Characteristics>
+			<Description>
+				<p>A Contextual Question required for an AG Collection.</p>
+			</Description>
+			<Type ref="CommonTypes" name="AGContextualQuestionType"/>
+		</Item>
+	</CommonElement>
+	
+	<CommonElement name="AGContextualQuestionType" type="true" dm="true">
+
+		<Item>
+			<Element>AGContextualQuestionType</Element>
+			<Characteristics/>
+			<Description>
+				<p>The AG contextual question.</p>
+			</Description>
+		</Item>
+		<Item>
+		   <Element>AGContextCode</Element>
+		   <Characteristics>M</Characteristics>
+		   <Description>
+			 <p>AG Context Question.</p>
+		   </Description>
+		   <!-- This needs to be validated against the appropriate question -->
+		   <Type ref="CodeSets" name="AUCodeSetsAGContextQuestionType"/>
+  		</Item>  
+		<Item>
+			<Element>AGAnswer</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+			 <p>Associated Answer.</p>
+			</Description>
+		    <Type name="xs:string"></Type>
+		</Item>
+   	</CommonElement>
+
+ <!--Added for Census Submission -->    
+ 
+ <CommonElement name="CensusReportingListType" type= "true" dm="true">
+      <Item>
+			<Element>CensusReportingListType</Element>
+			<Description>
+				<p>A list of Census Reports.</p>
+			</Description>
+			<List mode="List"/>
+	  </Item>
+      <Item>
+			<Element>CensusReporting</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>The Census being reported on.</p>
+			</Description>
+			<Type ref="CommonTypes" name="CensusReportingType"/>
+		</Item>
+  </CommonElement> 
+ <CommonElement name= "CensusReportingType" type="true" dm="true">
+        <Item>
+			<Element>CensusReportingType</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>The Census being reported on.</p>
+			</Description>
+		</Item>
+		<!-- No individual Report RefId 
+		<Item> 	
+	 <Element>CensusRefId</Element>    
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>A GUID associated with this packet of a CensusReport.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item> -->
+   <Item>
+	  <Element>EntityLevel</Element>
+	  <Characteristics>O</Characteristics>
+	  <privacyRating>Medium</privacyRating>
+	  <Description>Level of the Submission, current valid values "System", "Office", "Location", "Special School Location".</Description>
+	  <!-- Do we need to restrict the level in enumeration of the type? -->
+	  <Type name="xs:normalizedString"></Type>
+  </Item>
+	<Item> 	
+	 <Element>SchoolInfoRefId</Element>    
+    <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
+    <Description>
+      <p>A pointer back to the SchoolInfo object underlying this Report if it exists.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  
+   <Item>
+    <Element>LocalId</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>The locally-assigned identifier for the entity being reported on.</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>
+  
+  <Item>
+    <Element>StateProvinceId</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>The state-assigned identifier for entity being reported on.</p>
+    </Description>
+    <Type ref="CommonTypes" name="StateProvinceIdType"></Type>
+  </Item>
+  
+  <Item>
+    <Element>CommonwealthId</Element>
+    <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Commonwealth identifier for this school/campus or entity being reported on.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  
+   <Item>
+    <Element>ACARAId</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>ACARA identifier for this school/campus.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  
+  <Item>
+	  <Element>EntityName</Element>
+	  <Characteristics>O</Characteristics>
+	  <privacyRating>Medium</privacyRating>
+	  <Description>Name of the Entity who this submission is for, if a School, it will be the SchoolName.</Description>
+	  <Type name="xs:normalizedString"></Type>
+  </Item> 
+  <Item>
+	  <Element>EntityContact</Element>
+	  <Characteristics>M</Characteristics>
+	  <privacyRating>High</privacyRating>
+	  <Description>Information on the Contact for the submission.</Description>
+	  <Type ref="CommonTypes" name="EntityContactInfoType"></Type>
+  </Item>
+  <Item>
+	  <Element>YearLevels</Element>
+	  <Characteristics>O</Characteristics>
+	  <privacyRating>Low</privacyRating>
+	  <Description>Year Levels available at this location/school.</Description>
+	  <Type ref="CommonTypes" name="YearLevelsType"></Type>
+  </Item>
+  <Item>
+    <Element>AGContextualQuestionList</Element>    
+    <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
+    <Description>
+      <p>A list of questions to set the context for the AG Collection.</p>
+    </Description>
+	<Type ref="CommonTypes" name="AGContextualQuestionListType"></Type>
+  </Item>
+  
+  <Item>
+    <Element>CensusStaffList</Element>    
+    <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
+    <Description>
+      <p>A list of Staff being reported on for this Census Collection.</p>
+    </Description>
+	<Type ref="CommonTypes" name="CensusStaffListType" complex="extension"></Type>
+  </Item>
+<Item>
+    <Element>CensusStudentList</Element>    
+    <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
+    <Description>
+      <p>A list of Students being reported on for this Census Collection.</p>
+    </Description>
+	<Type ref="CommonTypes" name="CensusStudentListType" complex="extension"></Type>
+  </Item>
+ 
+  </CommonElement>
+  
+  <CommonElement name="CensusStaffListType" type= "true" dm="true">
+      <Item>
+			<Element>CensusStaffListType</Element>
+			<Description>
+				<p>A list of staff associated with the Census.</p>
+			</Description>
+			<List mode="List"/>
+	  </Item>
+      <Item>
+			<Element>CensusStaff</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>The staff member being reported on.</p>
+			</Description>
+			<Type ref="CommonTypes" name="CensusStaffType"/>
+		</Item>
+  </CommonElement>
+  <CommonElement name= "CensusStaffType" type="true" dm="true">
+        <Item>
+			<Element>CensusStaffType</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>The cohort of staff being reported on.</p>
+			</Description>
+		</Item>
+		<Item>
+			<Element>StaffCohortId</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+			  <p>A locally-assigned identifier for the cohort being reported on.</p>
+			</Description>
+			<Type ref="CommonTypes" name="LocalIdType"></Type>
+		</Item>  
+	  <Item>
+			<Element>StaffActivity</Element>
+			<Characteristics>M</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+			  <p>The purpose of the Teacher's role as related to students. Equivalent to 'JobFunction' in US Object.  Limited to the values of 1100 - Teacher in school n.f.d., 1103 - Principal, 1200 -Specialist support in school n.f.d., 1300 - Administration and clerical in school n.f.d., 1400 - Building Operations in school n.f.d. for Census Reporting.</p>
+			</Description>
+			<Type ref="CommonTypes" name="StaffActivityExtensionType"></Type>
+		  </Item>
+	    <Item>
+			<Element>CohortGender</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>Collection cohorts are male, female or other.</p>
+			</Description>
+			<Values>
+				<Value>
+					<Code>M</Code>
+					<Description>Male cohort</Description>
+				</Value>
+				<Value>
+					<Code>F</Code>
+					<Description>Female cohort</Description>
+				</Value>
+				<Value>
+					<Code>X</Code>
+					<Description>Other cohort</Description>
+				</Value>
+			</Values>
+		</Item>
+		<Item>
+			<Element>CensusIndigenousType</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>Indigenous Indicator</p>
+			</Description>
+			<Values>
+				<Value>
+					<Code>I</Code>
+					<Description>Person identifies as Indigenous</Description>
+				</Value>
+				<Value>
+					<Code>N</Code>
+					<Description>Person identifies as Non-Indigenous</Description>
+				</Value>
+				<Value>
+					<Code>NS</Code>
+					<Description>Not Stated</Description>
+				</Value>
+			</Values>
+		</Item>		
+		<Item>
+			<Element>JobFTE</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+			  <p>Total full-time job equivalent ratio for members of this co-hort. (Format is x.xx; an employee who is full-time and who is 50% of their time on this assignment would be represented as 0.50)</p>
+			</Description>
+			<Type name="xs:decimal"></Type>
+			<Facets>
+			  <xs:minInclusive value="0"/>
+			  <!--<xs:maxInclusive value="1"/> -->
+			  <xs:fractionDigits value="2"/>
+			</Facets>
+		  </Item>
+		  <!-- Add Primary and Secondary for aggregate representation -->
+	  	<Item>
+		<Element>PrimaryFTE</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+		  <p>Total full-time job equivalent ratio associated with teaching at the Primary level. (Format is x.xx; an employee who is full-time and who is 50% of their time on this assignment would be represented as 0.50)</p>
+		</Description>
+		<Type name="xs:decimal"></Type>
+		<Facets>
+		  <xs:minInclusive value="0"/>
+		  <xs:maxInclusive value="1"/>
+		  <xs:fractionDigits value="2"/>
+		</Facets>
+	</Item>
+	<Item>
+		<Element>SecondaryFTE</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+		  <p>Total full-time job equivalent ratio associated with teaching at the Secondary level. (Format is x.xx; an employee who is full-time and who is 50% of their time on this assignment would be represented as 0.50)</p>
+		</Description>
+		<Type name="xs:decimal"></Type>
+		<Facets>
+		  <xs:minInclusive value="0"/>
+		   <xs:maxInclusive value="1"/> 
+		  <xs:fractionDigits value="2"/>
+		</Facets>
+	 </Item>
+
+		  <!-- Leave off StaffAssignment - no unit level for first release
+		  <Item>
+			  <Element>StaffAssignmentMostRecent</Element>
+			  <Characteristics>O</Characteristics>
+			  <privacyRating>Low</privacyRating>
+			  <Description>Container for elements reflecting the most recent assignment of a staff member or information that may need to be calculated from other information.</Description>
+			  <Type ref="CommonTypes" name="StaffAssignmentMostRecentContainerType"></Type>
+		  </Item> -->
+		  <!-- Add Headcount for Aggregate Release -->
+		  <Item>
+			<Element>Headcount</Element>
+			<Characteristics>M</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+			  <p>Headcount of this co-hort</p>
+			</Description>
+			<Type name="xs:decimal"></Type>
+			<Facets>
+			   <xs:minInclusive value="0"/>
+			  <xs:fractionDigits value="2"/>
+			</Facets>
+		  </Item>
+    </CommonElement>	
+    	
+   
+  <CommonElement name="StaffAssignmentMostRecentContainerType" type="true" dm="true">
+	<Item>
+		<Element>StaffAssignmentMostRecentContainerType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Container for elements reflecting the most recent assignment of a staff member or information that may need to be calculated from other information.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>PrimaryFTE</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+		  <p>Full-time job equivalent ratio associated with teaching at the Primary level. (Format is x.xx; an employee who is full-time and who is 50% of their time on this assignment would be represented as 0.50)</p>
+		</Description>
+		<Type name="xs:decimal"></Type>
+		<Facets>
+		  <xs:minInclusive value="0"/>
+		  <xs:maxInclusive value="1"/>
+		  <xs:fractionDigits value="2"/>
+		</Facets>
+	</Item>
+	<Item>
+		<Element>SecondaryFTE</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+		  <p>Full-time job equivalent ratio associated with teaching at the Secondary level. (Format is x.xx; an employee who is full-time and who is 50% of their time on this assignment would be represented as 0.50)</p>
+		</Description>
+		<Type name="xs:decimal"></Type>
+		<Facets>
+		  <xs:minInclusive value="0"/>
+		  <xs:maxInclusive value="1"/>
+		  <xs:fractionDigits value="2"/>
+		</Facets>
+	 </Item>
+</CommonElement>	
+ <CommonElement name="CensusStudentListType" type= "true" dm="true">
+      <Item>
+			<Element>CensusStudentListType</Element>
+			<Description>
+				<p>A list of students associated with the Census.</p>
+			</Description>
+			<List mode="List"/>
+	  </Item>
+      <Item>
+			<Element>CensusStudent</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>The student cohort being reported on.</p>
+			</Description>
+			<Type ref="CommonTypes" name="CensusStudentType"/>
+		</Item>
+  </CommonElement> 
+  
+ <CommonElement name= "CensusStudentType" type="true" dm="true">
+        <Item>
+			<Element>CensusStudentType</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>The student cohort being reported on.</p>
+			</Description>
+		</Item>
+		<!--
+		<Item>
+			<Element>LocalId</Element>
+			<Characteristics>O</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+			  <p>A locally-assigned identifier for the cohort being reported on.</p>
+			</Description>
+			<Type ref="CommonTypes" name="LocalIdType"></Type>
+		</Item> -->
+		<Item>
+		<Element>IndigenousStatus</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Whether or not the person identifies themselves as being of Aboriginal and/or Torres Strait Islander descent.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsIndigenousStatusType"/>
+	</Item>
+	<Item>
+		<Element>Sex</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>'Sex' is the distinction 'male'/'female'/'intersex', as reported by the person</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsSexCodeType"/>
+	</Item>
+	<Item>
+		<Element>AustralianCitizenshipStatus</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The person's citizenship status.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsAustralianCitizenshipStatusType"/>
+	</Item>
+	<Item>
+		<Element>YearLevel</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The current or most recent year level of the student.</p>
+		</Description>
+		<Type ref="CommonTypes" name="YearLevelType"/>
+	</Item>
+	<Item>
+		<Element>FTE</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Full-time equivalent numeric value of the student's course load during this enrollment, expressed in decimal form, where 1.00 represents a full-time enrollment.</p>
+		</Description>
+		<Type name="xs:decimal"/>
+		<Facets>
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="1"/>
+			<xs:fractionDigits value="2"/>
+		</Facets>
+	</Item> 
+		<Item>
+		<Element>FFPOS</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Enrolled Full-fee Paying Overseas Student (FFPOS) Status.  Enrolment Frame Element 10 NSCC Collection.</p>
+			<p>The status of an enrolment in a CRICOS course and whether the person is liable for a fee which reflects the imputed full average cost of the person's education at the school (including both recurrent and capital costs) irrespective of the actual arrangements to meet the fee.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsFFPOSStatusCodeType"/>
+	</Item>
+	<!--
+	<Item>
+      	<Element>OtherSchoolName</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>If this student is enrolled in another school, details of other school.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+    </Item>
+-->
+	<Item>
+		<Element>DisabilityLevelOfAdjustment</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Level of Adjustment made for a student's disability. None if there is no adjustment.</p>
+		</Description>
+		<Values>
+        <Value>
+			<Code>QDTP</Code>
+			<Description>support provided within Quality Differentiated Teaching Practice</Description>
+        </Value>
+        <Value>
+			<Code>Supplementary</Code>
+		</Value>
+        <Value>
+			<Code>Substantial</Code>
+		</Value>
+        <Value>
+			<Code>Extensive</Code>
+		</Value>
+		<Value><Code>None</Code></Value>
+       </Values>
+	</Item>
+	<Item>
+		<Element>DisabilityCategory</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Category of a student's disability. None if no disability.</p>
+		</Description>
+		<Values>
+        <Value>
+			<Code>Physical</Code>
+        </Value>
+        <Value>
+			<Code>Cognitive</Code>
+		</Value>
+        <Value>
+			<Code>Social-Emotional</Code>
+		</Value>
+        <Value>
+			<Code>Sensory</Code>
+		</Value>
+		<Value><Code>None</Code></Value>
+       </Values>
+	</Item>
+    <Item>
+    	<Element>CensusAge</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Age of the Student calculated for Non-gov Census reporting.</p>
+		</Description>
+		<Type name="xs:decimal"/>
+    </Item>	
+    <Item>
+      	<Element>DistanceEducationStudent</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Is this student a Distance Education Student for Non-gov Census reporting.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"/>
+    </Item>
+	<Item>
+      	<Element>BoardingStatus</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Is this student a Boarding or Day Student for AG Collection reporting?</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsBoardingType"/>
+    </Item>
+    <!--
+		  <Item>
+			  <Element>StudentMostRecent</Element>
+			  <Characteristics>O</Characteristics>
+			  <privacyRating>Low</privacyRating>
+			  <Description>Container for elements reflecting the most recent assignment of a student or information that may need to be calculated from other information.</Description>
+			  <Type ref="CommonTypes" name="StudentMostRecentContainerType"></Type>
+		  </Item>
+-->
+
+		  <Item>
+			<Element>Headcount</Element>
+			<Characteristics>M</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+			  <p>Headcount of this co-hort</p>
+			</Description>
+			<Type name="xs:decimal"></Type>
+			<Facets>
+			   <xs:minInclusive value="0"/>
+			  <xs:fractionDigits value="2"/>
+			</Facets>
+		  </Item>
+    </CommonElement>		
+     
+<!-- Added for 3.4.4 FQ Object -->
+    
+    <CommonElement name="AGReportingObjectResponseListType" type="true" dm="true">
+		<Item>
+			<Element>AGReportingObjectResponseListType</Element>
+			<Description>
+				<p>A list of the Reporting Objects being responsed to.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>AGReportingObjectResponse</Element>
+			<Characteristics>OR</Characteristics>
+			<Description>
+				<p>The AG Reporting Object's response.</p>
+			</Description>
+			<Type ref="CommonTypes" name="AGReportingObjectResponseType"/>
+		</Item>
+	</CommonElement>
+	<CommonElement name="AGReportingObjectResponseType" type="true" dm="true">
+
+		<Item>
+			<Element>AGReportingObjectResponseType</Element>
+			<Characteristics/>
+			<Description>
+				<p>The AG Reporting Object's response.</p>
+			</Description>
+		</Item>
+		<Item>
+		   <Element>SubmittedRefId</Element>
+		   <Characteristics>O</Characteristics>
+		   <Description>
+			 <p>Original Reporting RefId of the submission.</p>
+		   </Description>
+		   <Type ref="CommonTypes" name="IdRefType"></Type>
+  		</Item>  
+		<Item>
+		   <Element>SIFRefId</Element>
+		   <Characteristics>O</Characteristics>
+		   <Description>
+			 <p>AG assigned for a submission (they can be the same as the original submission but at the discretion of the AG). Only required to be sent if different from the initial RefId submitted.</p>
+		   </Description>
+		   <Type ref="CommonTypes" name="IdRefType"></Type>
+  		</Item>  
+		<Item>
+			<Element>HTTPStatusCode</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+			 <p>HTTP Status Code of the original submission.</p>
+			</Description>
+		    <Type name="xs:string"></Type>
+		</Item>
+		<Item>
+		   <Element>ErrorText</Element>
+		   <Characteristics>O</Characteristics>
+		   <Description>
+			 <p>Text associated with an error status.</p>
+		   </Description>
+		   <Type name="xs:normalizedString"></Type>
+		</Item>
+		<Item>
+			<Element>CommonwealthId</Element>
+			<Characteristics>M</Characteristics>
+			<privacyRating>Low</privacyRating>
+			<Description>
+			  <p>Commonwealth identifier for this school/campus or entity being reported on.</p>
+			</Description>
+			<Type name="xs:normalizedString"></Type>
+	    </Item>
+		<Item>
+			<Element>EntityName</Element>
+		    <Characteristics>O</Characteristics>
+	        <privacyRating>Medium</privacyRating>
+	        <Description>Name of the Entity who this submission is for, if a School, it will be the SchoolName.</Description>
+	        <Type name="xs:normalizedString"></Type>
+	    </Item>   
+	    <Item>
+		  <Element>AGSubmissionStatusCode</Element>
+		  <Characteristics>M</Characteristics>
+		  <privacyRating>Low</privacyRating>
+		  <Description>AG Status Code of the entity's submission.</Description>
+		  <Type ref="CodeSets" name="AUCodeSetsAGSubmissionStatusType"/> 
+	    </Item>
+	    <Item>
+		  <Element>AGRuleList</Element>    
+	      <Characteristics>O</Characteristics>
+		  <privacyRating>High</privacyRating>
+          <Description>
+			  <p>A list of Rules associated with this submission.</p>
+		  </Description>
+		<Type ref="CommonTypes" name="AGRuleListType"></Type>
+  </Item>
+  	</CommonElement>
+  <CommonElement name="FQReportingListType" type= "true" dm="true">
+      <Item>
+			<Element>FQReportingListType</Element>
+			<Description>
+				<p>A list of Financial Questionnaire Reports.</p>
+			</Description>
+			<List mode="List"/>
+	  </Item>
+      <Item>
+			<Element>FQReporting</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>The Financial Questionnaire being reported on.</p>
+			</Description>
+			<Type ref="CommonTypes" name="FQReportingType"/>
+		</Item>
+  </CommonElement>
+  <CommonElement name= "FQReportingType" type="true" dm="true">
+        <Item>
+			<Element>FQReportingType</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>The Financial Questionnaire being reported on.</p>
+			</Description>
+		</Item>
+		
+		<!-- No individual report id
+		<Item> 	
+	 <Element>FQRefId</Element>    
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>A GUID associated with this packet of a Financial Questionnaire Report.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item> -->
+  
+   <Item>
+	  <Element>EntityLevel</Element>
+	  <Characteristics>M</Characteristics>
+	  <privacyRating>Medium</privacyRating>
+	  <Description>Level of the Submission, current valid values "School", "Diocese", "System".</Description>
+	  <!-- Do we need to restrict the level in enumeration of the type? -->
+	  <Type name="xs:normalizedString"></Type>
+  </Item>
+	<Item> 	
+	 <Element>SchoolInfoRefId</Element>    
+    <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
+    <Description>
+      <p>A pointer back to the SchoolInfo object underlying this Report if it exists.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  
+   <Item>
+    <Element>LocalId</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>The locally-assigned identifier for the entity being reported on.</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>
+  
+  <Item>
+    <Element>StateProvinceId</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>The state-assigned identifier for entity being reported on.</p>
+    </Description>
+    <Type ref="CommonTypes" name="StateProvinceIdType"></Type>
+  </Item>
+  
+  <Item>
+    <Element>CommonwealthId</Element>
+    <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Commonwealth identifier for this school/campus or entity being reported on.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  
+   <Item>
+    <Element>ACARAId</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>ACARA identifier for this school/campus.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  
+  <Item>
+	  <Element>EntityName</Element>
+	  <Characteristics>O</Characteristics>
+	  <privacyRating>Medium</privacyRating>
+	  <Description>Name of the Entity who this submission is for, if a School, it will be the SchoolName.</Description>
+	  <Type name="xs:normalizedString"></Type>
+  </Item> 
+  <Item>
+	  <Element>EntityContact</Element>
+	  <Characteristics>M</Characteristics>
+	  <privacyRating>High</privacyRating>
+	  <Description>Information on the Contact for the submission.</Description>
+	  <Type ref="CommonTypes" name="EntityContactInfoType"></Type>
+  </Item>
+  <Item>
+    <Element>FQContextualQuestionList</Element>    
+    <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
+    <Description>
+      <p>A list of Financial questions to set the context for the AG Collection.</p>
+    </Description>
+	<Type ref="CommonTypes" name="FQContextualQuestionListType"></Type>
+  </Item>
+  <Item>
+    <Element>FQItemList</Element>    
+    <Characteristics>M</Characteristics>
+	<privacyRating>High</privacyRating>
+    <Description>
+      <p>A list of Financial Items being reported on for the AG Collection.</p>
+    </Description>
+	<Type ref="CommonTypes" name="FQItemListType"></Type>
+  </Item>
+  
+  <Item>
+    <Element>AGRuleList</Element>    
+    <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
+    <Description>
+      <p>A list of Rules associated with this submission.</p>
+    </Description>
+	<Type ref="CommonTypes" name="AGRuleListType"></Type>
+  </Item>
+  </CommonElement>
+  <CommonElement name="FQContextualQuestionListType" type="true" dm="true">
+		<Item>
+			<Element>FQContextualQuestionListType</Element>
+			<Description>
+				<p>A list of Contextual Questions.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>FQContextualQuestion</Element>
+			<Characteristics>OR</Characteristics>
+			<Description>
+				<p>The Contextual Question.</p>
+			</Description>
+			<Type ref="CommonTypes" name="FQContextualQuestionType"/>
+		</Item>
+	</CommonElement>
+	<CommonElement name="FQContextualQuestionType" type="true" dm="true">
+
+		<Item>
+			<Element>FQContextualQuestionType</Element>
+			<Characteristics/>
+			<Description>
+				<p>The FQItem contextual question.</p>
+			</Description>
+		</Item>
+		<Item>
+		   <Element>FQContext</Element>
+		   <Characteristics>M</Characteristics>
+		   <Description>
+			 <p>Context Question.</p>
+		   </Description>
+		   <Type name="xs:string"></Type>
+  		</Item>  
+		<Item>
+			<Element>FQAnswer</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+			 <p>Associated Answer.</p>
+			</Description>
+		    <Type name="xs:string"></Type>
+		</Item>
+   	</CommonElement>
+
+	
+  	<CommonElement name="FQItemListType" type="true" dm="true">
+		<Item>
+			<Element>FQItemListType</Element>
+			<Description>
+				<p>A list of FQ Items reported on.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>FQItem</Element>
+			<Characteristics>OR</Characteristics>
+			<Description>
+				<p>The FQItem being reported on.</p>
+			</Description>
+			<Type ref="CommonTypes" name="FQItemType"/>
+		</Item>
+	</CommonElement>
+	
+	<CommonElement name="FQItemType" type="true" dm="true">
+
+		<Item>
+			<Element>FQItemType</Element>
+			<Characteristics/>
+			<Description>
+				<p>The FQItem being reported on.</p>
+			</Description>
+		</Item>
+		<Item>
+		   <Element>FQItemCode</Element>
+		   <Characteristics>M</Characteristics>
+		   <Description>
+			 <p>Financial Questionnaire Item Code</p>
+		   </Description>
+		   <Type name="xs:string"></Type>
+  		</Item>  
+		<Item>
+			<Element>TuitionAmount</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+			 <p>Amount associated with Tuition.</p>
+			</Description>
+		    <Type name="xs:decimal"></Type>
+		</Item>
+		<Item>
+			<Element>BoardingAmount</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+			 <p>Amount associated with Boarding.</p>
+			</Description>
+		    <Type name="xs:decimal"></Type>
+		</Item>        
+		<Item>
+			<Element>SystemAmount</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+			 <p>Amount associated with the System.</p>
+			</Description>
+		    <Type name="xs:decimal"></Type>
+		</Item>                
+		<Item>
+			<Element>DioceseAmount</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+			 <p>Amount associated with the Diocese.</p>
+			</Description>
+		    <Type name="xs:decimal"></Type>
+		</Item>                
+		<Item>
+		   <Element>FQComments</Element>
+		   <Characteristics>O</Characteristics>
+		   <Description>
+			 <p>Comments associated with a FQ Item</p>
+		   </Description>
+		   <Type name="xs:string"></Type>
+		</Item>
+		
+   	</CommonElement>
+   	
+	<CommonElement name="AGRuleListType" type="true" dm="true">
+		<Item>
+			<Element>AGRuleListType</Element>
+			<Description>
+				<p>A list of Rules associated with the Item.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>AGRule</Element>
+			<Characteristics>OR</Characteristics>
+			<Description>
+				<p>Rule associated with the Collection Item.</p>
+			</Description>
+			<Type ref="CommonTypes" name="AGRuleType"/>
+		</Item>
+	</CommonElement>
+	<CommonElement name="AGRuleType" type="true" dm="true">
+		<Item>
+			<Element>AGRuleType</Element>
+			<Characteristics/>
+			<Description>
+				<p>Rule.</p>
+			</Description>
+		</Item>
+		<Item>
+			<Element>AGRuleCode</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+			  <p>Collection Data Rule Code.</p>
+			</Description>
+			<Type name="xs:normalizedString"></Type>
+		</Item>
+		<Item>
+		   <Element>AGRuleComment</Element>
+		   <Characteristics>O</Characteristics>
+		   <Description>
+			 <p>Comment associated with a Rule.</p>
+		   </Description>
+		   <Type name="xs:normalizedString"></Type>
+		</Item>
+		<Item>
+		   <Element>AGRuleResponse</Element>
+		   <Characteristics>O</Characteristics>
+		   <Description>
+			 <p>Response associated with a Rule comment on response to a submission.</p>
+		   </Description>
+		   <Type name="xs:normalizedString"></Type>
+		</Item>   
+		<Item>
+		   <Element>AGRuleStatus</Element>
+		   <Characteristics>O</Characteristics>
+		   <Description>
+			 <p>Status associated with a particular Rule, if there is one.</p>
+		   </Description>
+		   <Type name="xs:normalizedString"></Type>
+		</Item>	
+   	</CommonElement>
+   	
+   	<CommonElement name="SoftwareVendorInfoContainerType" type="true" dm="true">
+		<Item>
+			<Element>SoftwareVendorInfoContainerType</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+				<p>Container for elements containing information on the Software Product and Vendor.</p>
+			</Description>
+		</Item>
+		<Item>
+			<Element>SoftwareProduct</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>Product used to create the Submission.</p>
+			</Description>
+			<Type name="xs:normalizedString"/>
+		</Item>
+		<Item>
+			<Element>SoftwareVersion</Element>
+			<Characteristics>M</Characteristics>
+			<Description>
+				<p>Version of the software used to create the Submission.</p>
+			</Description>
+			<Type name="xs:normalizedString"/>
+		</Item>
+	</CommonElement>     
+	
+<!--TimeTableContainer -->	
       
 <CommonElement name="TimeTableScheduleType" type="true" dm="true">
 	<Item>
@@ -5191,6 +6845,7 @@
 		<Values>
         <Value>
 			<Code>QDTP</Code>
+			<Description>support provided within Quality Differentiated Teaching Practice</Description>
         </Value>
         <Value>
 			<Code>Supplementary</Code>

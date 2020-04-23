@@ -1,0 +1,213 @@
+<IncludeGroup
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+
+    xmlns="http://sifassociation.org/SpecGen">
+
+	<Group name="SIF AU Student Baseline Profile (SBP) and supporting objects">
+		<Intro>
+
+			<p><img src="images/Logical_SBP.png" alt="" /></p>
+			<p>This represents the objects in the original SBP, SchoolInfo, StudentPersonal, StudentSchoolEnrollment, StudentContactRelationship, StudentContactPersonal and TeachingGroup.  Other Objects included in this group as supporting objects.</p>
+		</Intro>
+
+		<xi:include parse="text" href="Common/SchoolInfo.xml"/>
+		<xi:include parse="text" href="Common/LEAInfo.xml"/>
+
+		<!-- Include data model here -->
+		<xi:include parse="text" href="Common/StaffAssignment.xml"/>
+		<xi:include parse="text" href="Common/StaffPersonal.xml"/>
+		<xi:include parse="text" href="Common/StudentPersonal.xml"/>
+		<xi:include parse="text" href="Common/StudentSchoolEnrollment.xml"/>
+		<xi:include parse="text" href="Common/StudentContactPersonal.xml"/>
+		<xi:include parse="text" href="Common/StudentContactRelationship.xml"/>
+		<xi:include parse="text" href="Common/PersonPicture.xml"/>
+		<xi:include parse="text" href="Common/Identity.xml"/>
+
+				<!--P POD -->
+				<!-- NOT FOR RELEASE IN 3.4.6
+		<xi:include parse="text" href="Common/PersonPrivacyObligation.xml"/>  -->
+	</Group>
+
+	<Group name="Activity">
+		<Intro>
+
+			<p><img src="images/Logical_Activity.png" alt="" /></p>
+			<p>This represents activities that a student participates in, can be an educational activity or co-curricular.</p>
+		</Intro>
+		<!-- Activity/Achievement Object-->
+		<xi:include parse="text" href="Common/Activity.xml"/>
+		<xi:include parse="text" href="Common/StudentActivityInfo.xml"/>
+		<xi:include parse="text" href="Common/StudentActivityParticipation.xml"/>
+		<xi:include parse="text" href="Common/SchoolPrograms.xml"/>
+		<xi:include parse="text" href="Common/StudentParticipation.xml"/>
+
+    </Group>
+
+    <Group name="Aggregated Statistics">
+
+    	<Intro>
+			<p><img src="images/Logical_AggregatedStatistics.png" alt="" /></p>
+			<p>Objects to supports the exchange of information for statistical purposes.</p>
+		</Intro>
+
+		<xi:include parse="text" href="Common/AggregateStatisticInfo.xml"/>
+		<xi:include parse="text" href="Common/AggregateCharacteristicInfo.xml"/>
+		<xi:include parse="text" href="Common/AggregateStatisticFact.xml"/>
+
+	</Group>
+	<Group name="Timetabling and Resource Scheduling">
+    	<Intro>
+
+			<p><img src="images/Logical_Timetabling.png" alt="" /></p>
+			<p><img src="images/Logical_Scheduling.png" alt="" /></p>
+			<p>These diagrams represent the objects used in scheduling and timetabling.  The objects allow schools to securely provide SIS information to the Timetabling and/or Scheduling product of their choice, and also to allow timetable records (including teaching groups and scheduled activities), to be published to a jurisdictional data hub.</p>
+		</Intro>
+		<xi:include parse="text" href="Common/RoomInfo.xml"/>
+		<xi:include parse="text" href="Common/TimeTableSubject.xml"/>
+		<xi:include parse="text" href="Common/TimeTable.xml"/>
+		<xi:include parse="text" href="Common/TeachingGroup.xml"/>
+		<xi:include parse="text" href="Common/TimeTableCell.xml"/>
+		<xi:include parse="text" href="Common/SchoolCourseInfo.xml"/>
+
+		<!-- Section Enrollment 1.3 -->
+		<xi:include parse="text" href="Common/SectionInfo.xml"/>
+		<xi:include parse="text" href="Common/StudentSectionEnrollment.xml"/>
+
+		<!-- ScheduledActivity Object-->
+		<xi:include parse="text" href="Common/ScheduledActivity.xml"/>
+		<xi:include parse="text" href="Common/ResourceBooking.xml"/>
+		<xi:include parse="text" href="Common/EquipmentInfo.xml"/>
+
+		<xi:include parse="text" href="Common/TimeTableContainer.xml"/>
+		<!-- delay this container till next release (3.4.7) The reference to a collection needs to be removed Option 2 - No RefId's valid here too
+		<xi:include parse="text" href="Common/ScheduledActivityContainer.xml"/>  -->
+	</Group>
+	<Group name="Finance">
+		<Intro>
+
+			<p><img src="images/Logical_finance.png" alt="" /></p>
+			<p>A set of objects to support the transfer of financial information representing, and not an accounting package.  The assumption is that SIF is required only to exchange information about individual transactions (e.g. purchase orders, invoices, receipts, journals), and that reporting will be done out of existing applications—although those reports may be based on the transactional information received through SIF</p>
+		</Intro>
+		<!-- Finance additions-->
+		<xi:include parse="text" href="AU/Invoice.xml"/>
+		<xi:include parse="text" href="AU/FinancialAccount.xml"/>
+		<xi:include parse="text" href="AU/ChargedLocationInfo.xml"/>
+		<xi:include parse="text" href="AU/PaymentReceipt.xml"/>
+		<xi:include parse="text" href="AU/PurchaseOrder.xml"/>
+		<xi:include parse="text" href="AU/VendorInfo.xml"/>
+		<xi:include parse="text" href="AU/Journal.xml"/>
+		<xi:include parse="text" href="AU/Debtor.xml"/>
+	</Group>
+	<Group name = "Attendance">
+	
+		<Intro>
+
+			<p><img src="images/Logical_Attendance.png" alt="" /></p>
+			<p><img src="images/Logical_Attendance_Period.png" alt="" /></p>
+			<p>This represents objects that allow schools to securely provide SIS information to the Attendance product of their choice, and also to allow school attendance records to be published to a jurisdictional data hub, recording attendance at varying degrees of granularity.</p>
+		</Intro>
+		<!-- Added for granular Attendance Reporting-->
+		<xi:include parse="text" href="Common/StudentAttendanceTimeList.xml"/>
+		<xi:include parse="text" href="Common/StudentAttendanceSummary.xml"/>
+		<xi:include parse="text" href="Common/StudentDailyAttendance.xml"/>
+		<xi:include parse="text" href="Common/StudentPeriodAttendance.xml"/>
+
+		<xi:include parse="text" href="Common/SessionInfo.xml"/>
+		<xi:include parse="text" href="Common/CalendarDate.xml"/>
+		<xi:include parse="text" href="Common/CalendarSummary.xml"/>
+
+
+	</Group>
+
+	<Group name = "Classroom Assessment">
+
+		<Intro>
+
+			<p><img src="images/Logical_ClassroomAssessment.png" alt="" /></p>
+			<p>This represents objects involved in third party classroom assessment applications connecting to a jurisdiction hub, collecting the relevant information and publishing back assessment results records to the centralised system.</p>
+		</Intro>
+		<!-- Classroom assessment -->
+		<xi:include parse="text" href="Common/GradingAssignment.xml"/>
+		<xi:include parse="text" href="Common/GradingAssignmentScore.xml"/>
+		<xi:include parse="text" href="Common/MarkValueInfo.xml"/>
+		<xi:include parse="text" href="Common/StudentGrade.xml"/>
+		<xi:include parse="text" href="Common/TermInfo.xml"/>
+
+		<!-- Teacher Judgement Against Standards -->
+		<xi:include parse="text" href="Common/StudentScoreJudgementAgainstStandard.xml"/>
+	</Group>
+	<Group name = "Learning Standards">
+		<Intro>
+
+			<p><img src="images/Logical_LearningStandards.png" alt="" /></p>
+			<p></p>
+		</Intro>
+		<xi:include parse="text" href="Common/LearningStandardDocument.xml"/>
+		<xi:include parse="text" href="Common/LearningStandardItem.xml"/>
+		<xi:include parse="text" href="Common/LearningResource.xml"/>
+		<xi:include parse="text" href="Common/LearningResourcePackage.xml"/>
+
+	</Group>
+	<Group name = "NAPLAN">
+
+		<Intro>
+
+			<p><img src="images/Logical_NAPLAN.png" alt="" /></p>
+			<p>This diagram depicts the structure and connections between objects representing the NAPLAN Results and Reporting Data Set.</p>
+		</Intro>
+		<!-- NAPLAN Additions -->
+		<xi:include parse="text" href="AU/NAPEventStudentLink.xml"/>
+		<xi:include parse="text" href="AU/NAPTest.xml"/>
+		<xi:include parse="text" href="AU/NAPTestlet.xml"/>
+		<xi:include parse="text" href="AU/NAPTestScoreSummary.xml"/>
+		<xi:include parse="text" href="AU/NAPTestItem.xml"/>
+		<xi:include parse="text" href="AU/NAPStudentResponseSet.xml"/>
+		<xi:include parse="text" href="AU/NAPCodeFrame.xml"/>
+	</Group>
+	<Group name = "Wellbeing">
+		<Intro>
+
+			<p><img src="images/Logical_Wellbeing.png" alt="" /></p>
+			<p>These objects represent how schools can securely provide SIS information to the Wellbeing product(s) of their choice, and also how various wellbeing records are to be published to a jurisdictional data hub.</p>
+		</Intro>
+
+		<!-- Wellbeing Additions-->
+		<xi:include parse="text" href="Common/WellbeingResponse.xml"/>
+		<xi:include parse="text" href="Common/WellbeingAlert.xml"/>
+		<xi:include parse="text" href="Common/WellbeingAppeal.xml"/>
+		<xi:include parse="text" href="Common/WellbeingEvent.xml"/>
+		<xi:include parse="text" href="Common/PersonalisedPlan.xml"/>
+		<xi:include parse="text" href="Common/WellbeingCharacteristic.xml"/>
+		<xi:include parse="text" href="Common/WellbeingPersonLink.xml"/>
+
+
+	</Group>
+	<Group name = "Australian Government Collections">
+
+		<Intro>
+
+			<p><img src="images/Logical_AGCollections.png" alt="" /></p>
+			<p>This represents the current AG Data Collections represented in the SIF AU Data Model.</p>
+			<p>Please note that the AG Collection objects have been removed from the initial 3.4.6 release due to changes that will be required for future functionality. They will be added with an errata release when new changes have been tested and approved by stakeholders.</p>
+			<!--<p>Please note that the AG Collection objects have been added after the initial 3.4.6 release due to changes that were required for future functionality.</p>-->
+		</Intro>
+		
+		<!--AG Collections -->
+		 
+		
+		<xi:include parse="text" href="AU/FinancialQuestionnaireCollection.xml"/>
+		<xi:include parse="text" href="AU/CollectionStatus.xml"/>
+		<xi:include parse="text" href="AU/AddressCollection.xml"/>
+		<xi:include parse="text" href="AU/CensusCollection.xml"/>
+		<xi:include parse="text" href="AU/CollectionRound.xml"/>  
+
+
+
+	</Group>
+	<Group name = "Z - For Future Deprecation">
+			<xi:include parse="text" href="Common/SystemRole.xml"/>
+			<xi:include parse="text" href="Common/ResourceUsage.xml"/>
+	</Group>
+</IncludeGroup>
