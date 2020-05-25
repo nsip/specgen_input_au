@@ -1142,7 +1142,10 @@
 				<Code>623</Code>
 				<Text>On-site program</Text>
 			</Value>			
-			
+			<Value>
+				<Code>624</Code>
+				<Text>Remote learning (exceptional)</Text>
+			</Value>	
 			<Value>
 				<Code>699</Code>
 				<Text>Educational - further details not available</Text>
