@@ -1169,19 +1169,27 @@ For clarity, the conceptual model is broken up into use cases:</p>
 		</tr>
 		<tr>
 			<td>Financial Questionnaire</td>
-			<td>Financial Questionnaire Submission</td>
+			<td>FinancialQuestionnaireCollection</td>
 		</tr>
 		<tr>
 			<td>Address Collection</td>
-			<td>AGAddressCollectionSubmission</td>
+			<td>AddressCollection</td>
+		</tr>
+		<tr>
+			<td>Student Attendance (STATS)</td>
+			<td>StudentAttendanceCollection</td>
+		</tr>
+		<tr>
+			<td>(Non-gov) Census Collection</td>
+			<td>CensusCollection</td>
 		</tr>
 		<tr>
 			<td>Status Report</td>
-			<td>AGStatusReport</td>
+			<td>CollectionStatus</td>
 		</tr>
 		<tr>
 			<td>Collection Round</td>
-			<td>AGGetRounds</td>
+			<td>CollectionRound</td>
 		</tr>
 	</tbody>
 	</table>
@@ -1198,31 +1206,35 @@ For clarity, the conceptual model is broken up into use cases:</p>
 		<tbody>
 			<tr>
 				<td>A Financial Questionnaire is an Australian Government Data Collection</td>
-				<td>FinancialQuestionnaireSubmission</td>
+				<td>FinancialQuestionnaireCollection</td>
 			</tr>
 			<tr>
 				<td>An Address Collection is an Australian Government Data Collection</td>
-				<td>AGAddressCollectionSubmission</td>
+				<td>AddressCollection</td>
 			</tr>
 			<tr>
-				<td>A Census Collection is an Australian Government Data Collection</td>
-				<td>AGCensusSubmission</td>
+				<td>A Census Collection (Non-gov) is an Australian Government Data Collection</td>
+				<td>CensusCollection</td>
+			</tr>
+			<tr>
+				<td>A Student Attendance (STATS) Collection is an Australian Government Data Collection</td>
+				<td>StudentAttendanceCollection</td>
 			</tr>
 			<tr>
 				<td>An Australian Government Data Collection comes from a School</td>
-				<td>{FinancialQuestionnaireSubmission, AGAddressCollectionSubmission, AGCensusSubmission}</td>
+				<td>{FinancialQuestionnaireCollection, AddressCollection, CensusCollection, StudentAttendance}</td>
 			</tr>
 			<tr>
 				<td>An Australian Government Data Collection comes from an Education Authority</td>
-				<td>{FinancialQuestionnaireSubmission, AGAddressCollectionSubmission, AGCensusSubmission}</td>
+				<td>{FinancialQuestionnaireCollection, AddressCollection, CensusCollection, StudentAttendance}</td>
 			</tr>
 			<tr>
 				<td>A Status Report is about an Australian Government Data Collection</td>
-				<td>AGStatusReport</td>
+				<td>CollectionStatus</td>
 			</tr>
 			<tr>
 				<td>A Collection Round is of an Australian Government Data Collection</td>
-				<td>AGGetRounds, {FinancialQuestionnaireSubmission, AGAddressCollectionSubmission, AGCensusSubmission}</td>
+				<td>CollectionRound, {FinancialQuestionnaireCollection, AddressCollection, CensusCollection, StudentAttendance}</td>
 			</tr>
 		</tbody>
 	</table>

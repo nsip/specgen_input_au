@@ -12,7 +12,7 @@
     <Element>StudentAttendanceCollection</Element>
 	<privacyRating>High</privacyRating>
     <Description>
-      <p>Object for Australian Government collection submission collecting Student Attendance Information</p>
+      <p>Object for Australian Government collection submission collecting Student Attendance Information.The Student Attendance Collection captures attendance information for each school location by cohort. A cohort comprises the combination of year level, gender and indigeneity. There are a maximum of six possible cohorts per year level (see Cohort attribute in table below). Data is submitted to the collection at two reporting periods (Semester 1 and Term 3).  Student Attendance data is only captured for full-time students in Years  1 to 10.</p>
      </Description>
   </Item>
   <Item>
@@ -37,7 +37,7 @@
   	  <Element>RoundCode</Element>
 	  <Characteristics>M</Characteristics>
 	  <privacyRating>Low</privacyRating>
-	  <Description>Which Round of the collection is this submission for?</Description>
+	  <Description>Identifies the reference period for the collection. Schools report each reference period as a separate submission at different times of the school year.</Description>
 	  <Type name="xs:normalizedString"></Type>
   </Item>
 
@@ -46,7 +46,7 @@
     <Characteristics>O</Characteristics>
 	<privacyRating>Low</privacyRating>
     <Description>
-      <p>Commonwealth identifier for the submitting entity.</p>
+      <p>Commonwealth identifier for the submitting entity, e.g. AGEID for the Approved Authority.</p>
     </Description>
     <Type name="xs:normalizedString"></Type>
   </Item>
@@ -87,7 +87,7 @@
     <Characteristics>O</Characteristics>
 	<privacyRating>High</privacyRating>
     <Description>
-      <p>A list of Address Collections.</p>
+      <p>A list of identifying information for the location reporting to STATS collection.</p>
     </Description>
 	<Type ref="CommonTypes" name="StudentAttendanceCollectionReportingListType"></Type>
    </Item>
@@ -113,192 +113,189 @@
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
   </Item>
   
-   <xhtml:Example xmlns="" name="StudentAttendanceCollection">
-      
-   <StudentAttendanceCollection RefId="D3E34B35-9D75-101A-8C3D-00AA001A1652">
-	<StudentAttendanceCollectionYear>2020</StudentAttendanceCollectionYear>
-	<!-- Data Year -->
-	<!-- Do we need collection period? -->
-	<RoundCode>STATS1</RoundCode>
-	<ReportingAuthorityCommonwealthId>012345</ReportingAuthorityCommonwealthId>
-	<SoftwareVendorInfo>
-		<!--Optional information about the Vendor -->
-		<SoftwareProduct>Civica</SoftwareProduct>
-		<SoftwareVersion>Websys 1.0</SoftwareVersion>
-	</SoftwareVendorInfo>
-	<StudentAttendanceCollectionReportingList>
-		<StudentAttendanceCollectionReporting>
-			<CommonwealthId>012345</CommonwealthId>
-			<!-- AGEID -->
-			<EntityName>XXX Secondary College</EntityName>
-			<EntityContact>
-				<Name Type="LGL">
-					<FamilyName>Miller</FamilyName>
-					<!-- Collection Contact Family Name -->
-					<GivenName>Justine</GivenName>
-					<!-- Collection Contact First Name -->
-				</Name>
-				<PositionTitle>BusinessManager</PositionTitle>
-				<!-- Collection Contact Position -->
-				<Email Type="01">jmiller@lsc.vic.edu.au</Email>
-				<!-- Collection Contact EmailAddress -->
-				<PhoneNumber Type="0096">
-					<Number>03 9637-2000</Number>
-				</PhoneNumber>
-				<!-- Collection Contact Phone Number-->
-			</EntityContact>
-			<StatsCohortYearLevelList>
-				<StatsCohortYearLevel>
-					<CohortYearLevel>
-						<Code>1</Code>
-					</CohortYearLevel>
-					<StatsCohortList>
-						<StatsCohort>
-							<StatsCohortId>1000</StatsCohortId>
-							<StatsIndigenousStudentType>T</StatsIndigenousStudentType>
-							<CohortGender>M</CohortGender>
-							<DaysInReferencePeriod>120</DaysInReferencePeriod>
-							<PossibleSchoolDays>120</PossibleSchoolDays>
-							<AttendanceDays>120</AttendanceDays>
-							<AttendanceLess90Percent>10</AttendanceLess90Percent>
-							<AttendanceGTE90Percent>20</AttendanceGTE90Percent>
-							<PossibleSchoolDaysGT90PercentAttendance>2380</PossibleSchoolDaysGT90PercentAttendance>
-						</StatsCohort>
-						<StatsCohort>
-							<StatsCohortId>1001</StatsCohortId>
-							<StatsIndigenousStudentType>T</StatsIndigenousStudentType>
-							<CohortGender>F</CohortGender>
-							<DaysInReferencePeriod>120</DaysInReferencePeriod>
-							<PossibleSchoolDays>120</PossibleSchoolDays>
-							<AttendanceDays>120</AttendanceDays>
-							<AttendanceLess90Percent>10</AttendanceLess90Percent>
-							<AttendanceGTE90Percent>20</AttendanceGTE90Percent>
-							<PossibleSchoolDaysGT90PercentAttendance>2380</PossibleSchoolDaysGT90PercentAttendance>
-						</StatsCohort>
-						<StatsCohort>
-							<StatsCohortId>1002</StatsCohortId>
-							<StatsIndigenousStudentType>T</StatsIndigenousStudentType>
-							<CohortGender>X</CohortGender>
-							<DaysInReferencePeriod>120</DaysInReferencePeriod>
-							<PossibleSchoolDays>120</PossibleSchoolDays>
-							<AttendanceDays>120</AttendanceDays>
-							<AttendanceLess90Percent>10</AttendanceLess90Percent>
-							<AttendanceGTE90Percent>20</AttendanceGTE90Percent>
-							<PossibleSchoolDaysGT90PercentAttendance>2380</PossibleSchoolDaysGT90PercentAttendance>
-						</StatsCohort>
-						<StatsCohort>
-							<StatsCohortId>1003</StatsCohortId>
-							<StatsIndigenousStudentType>I</StatsIndigenousStudentType>
-							<CohortGender>M</CohortGender>
-							<DaysInReferencePeriod>120</DaysInReferencePeriod>
-							<PossibleSchoolDays>120</PossibleSchoolDays>
-							<AttendanceDays>120</AttendanceDays>
-							<AttendanceLess90Percent>10</AttendanceLess90Percent>
-							<AttendanceGTE90Percent>20</AttendanceGTE90Percent>
-							<PossibleSchoolDaysGT90PercentAttendance>2380</PossibleSchoolDaysGT90PercentAttendance>
-						</StatsCohort>
-						<StatsCohort>
-							<StatsCohortId>1004</StatsCohortId>
-							<StatsIndigenousStudentType>I</StatsIndigenousStudentType>
-							<CohortGender>F</CohortGender>
-							<DaysInReferencePeriod>120</DaysInReferencePeriod>
-							<PossibleSchoolDays>120</PossibleSchoolDays>
-							<AttendanceDays>120</AttendanceDays>
-							<AttendanceLess90Percent>10</AttendanceLess90Percent>
-							<AttendanceGTE90Percent>20</AttendanceGTE90Percent>
-							<PossibleSchoolDaysGT90PercentAttendance>2380</PossibleSchoolDaysGT90PercentAttendance>
-						</StatsCohort>
-						<StatsCohort>
-							<StatsCohortId>1005</StatsCohortId>
-							<StatsIndigenousStudentType>I</StatsIndigenousStudentType>
-							<CohortGender>X</CohortGender>
-							<DaysInReferencePeriod>120</DaysInReferencePeriod>
-							<PossibleSchoolDays>120</PossibleSchoolDays>
-							<AttendanceDays>120</AttendanceDays>
-							<AttendanceLess90Percent>10</AttendanceLess90Percent>
-							<AttendanceGTE90Percent>20</AttendanceGTE90Percent>
-							<PossibleSchoolDaysGT90PercentAttendance>2380</PossibleSchoolDaysGT90PercentAttendance>
-						</StatsCohort>
-					</StatsCohortList>
-				</StatsCohortYearLevel>
-				<StatsCohortYearLevel>
-					<CohortYearLevel>
-						<Code>2</Code>
-					</CohortYearLevel>
-					<StatsCohortList>
-						<StatsCohort>
-							<StatsCohortId>1006</StatsCohortId>
-							<StatsIndigenousStudentType>T</StatsIndigenousStudentType>
-							<CohortGender>M</CohortGender>
-							<DaysInReferencePeriod>120</DaysInReferencePeriod>
-							<PossibleSchoolDays>120</PossibleSchoolDays>
-							<AttendanceDays>120</AttendanceDays>
-							<AttendanceLess90Percent>10</AttendanceLess90Percent>
-							<AttendanceGTE90Percent>20</AttendanceGTE90Percent>
-							<PossibleSchoolDaysGT90PercentAttendance>2380</PossibleSchoolDaysGT90PercentAttendance>
-						</StatsCohort>
-						<StatsCohort>
-							<StatsCohortId>1007</StatsCohortId>
-							<StatsIndigenousStudentType>T</StatsIndigenousStudentType>
-							<CohortGender>F</CohortGender>
-							<DaysInReferencePeriod>120</DaysInReferencePeriod>
-							<PossibleSchoolDays>120</PossibleSchoolDays>
-							<AttendanceDays>120</AttendanceDays>
-							<AttendanceLess90Percent>10</AttendanceLess90Percent>
-							<AttendanceGTE90Percent>20</AttendanceGTE90Percent>
-							<PossibleSchoolDaysGT90PercentAttendance>2380</PossibleSchoolDaysGT90PercentAttendance>
-						</StatsCohort>
-						<StatsCohort>
-							<StatsCohortId>1008</StatsCohortId>
-							<StatsIndigenousStudentType>T</StatsIndigenousStudentType>
-							<CohortGender>X</CohortGender>
-							<DaysInReferencePeriod>120</DaysInReferencePeriod>
-							<PossibleSchoolDays>120</PossibleSchoolDays>
-							<AttendanceDays>120</AttendanceDays>
-							<AttendanceLess90Percent>10</AttendanceLess90Percent>
-							<AttendanceGTE90Percent>20</AttendanceGTE90Percent>
-							<PossibleSchoolDaysGT90PercentAttendance>2380</PossibleSchoolDaysGT90PercentAttendance>
-						</StatsCohort>
-						<StatsCohort>
-							<StatsCohortId>1009</StatsCohortId>
-							<StatsIndigenousStudentType>I</StatsIndigenousStudentType>
-							<CohortGender>M</CohortGender>
-							<DaysInReferencePeriod>120</DaysInReferencePeriod>
-							<PossibleSchoolDays>120</PossibleSchoolDays>
-							<AttendanceDays>120</AttendanceDays>
-							<AttendanceLess90Percent>10</AttendanceLess90Percent>
-							<AttendanceGTE90Percent>20</AttendanceGTE90Percent>
-							<PossibleSchoolDaysGT90PercentAttendance>2380</PossibleSchoolDaysGT90PercentAttendance>
-						</StatsCohort>
-						<StatsCohort>
-							<StatsCohortId>1010</StatsCohortId>
-							<StatsIndigenousStudentType>I</StatsIndigenousStudentType>
-							<CohortGender>F</CohortGender>
-							<DaysInReferencePeriod>120</DaysInReferencePeriod>
-							<PossibleSchoolDays>120</PossibleSchoolDays>
-							<AttendanceDays>120</AttendanceDays>
-							<AttendanceLess90Percent>10</AttendanceLess90Percent>
-							<AttendanceGTE90Percent>20</AttendanceGTE90Percent>
-							<PossibleSchoolDaysGT90PercentAttendance>2380</PossibleSchoolDaysGT90PercentAttendance>
-						</StatsCohort>
-						<StatsCohort>
-							<StatsCohortId>1011</StatsCohortId>
-							<StatsIndigenousStudentType>I</StatsIndigenousStudentType>
-							<CohortGender>X</CohortGender>
-							<DaysInReferencePeriod>120</DaysInReferencePeriod>
-							<PossibleSchoolDays>120</PossibleSchoolDays>
-							<AttendanceDays>120</AttendanceDays>
-							<AttendanceLess90Percent>10</AttendanceLess90Percent>
-							<AttendanceGTE90Percent>20</AttendanceGTE90Percent>
-							<PossibleSchoolDaysGT90PercentAttendance>2380</PossibleSchoolDaysGT90PercentAttendance>
-						</StatsCohort>
-					</StatsCohortList>
-				</StatsCohortYearLevel>			
-			</StatsCohortYearLevelList>
-		</StudentAttendanceCollectionReporting>
-	</StudentAttendanceCollectionReportingList>
+ <xhtml:Example xmlns="" name="StudentAttendanceCollection Example 2">  
+<StudentAttendanceCollection RefId="D3E34B35-9D75-101A-8C3D-00AA001A1653">
+  <StudentAttendanceCollectionYear>2020</StudentAttendanceCollectionYear>
+  <!-- Data Year -->
+  <RoundCode>Semester1</RoundCode>
+  <ReportingAuthorityCommonwealthId>012345</ReportingAuthorityCommonwealthId>
+  <SoftwareVendorInfo>
+    <!--Optional information about the Vendor -->
+    <SoftwareProduct>Software</SoftwareProduct>
+    <SoftwareVersion>Websys 1.0</SoftwareVersion>
+  </SoftwareVendorInfo>
+  <StudentAttendanceCollectionReportingList>
+    <StudentAttendanceCollectionReporting>
+      <CommonwealthId>24680</CommonwealthId>
+      <!-- AGEID -->
+      <EntityName>XXX Secondary College</EntityName>
+      <EntityContact>
+        <Name Type="LGL">
+          <FamilyName>Citizen</FamilyName>
+          <!-- Collection Contact Family Name -->
+          <GivenName>John</GivenName>
+          <!-- Collection Contact First Name -->
+        </Name>
+        <PositionTitle>BusinessManager</PositionTitle>
+        <!-- Collection Contact Position -->
+       <Email Type="01">jcitizen@school.vic.edu.au</Email>
+        <!-- Collection Contact EmailAddress -->
+        <PhoneNumber Type="0096">
+          <Number>03 1234-5678</Number>
+        </PhoneNumber>
+        <!-- Collection Contact Phone Number-->
+      </EntityContact>
+      <StatsCohortYearLevelList>
+        <StatsCohortYearLevel>
+          <CohortYearLevel>
+            <Code>1</Code>
+          </CohortYearLevel>
+          <StatsCohortList>
+            <StatsCohort>
+              <StatsCohortId>1000</StatsCohortId>
+              <StatsIndigenousStudentType>T</StatsIndigenousStudentType>
+              <CohortGender>M</CohortGender>
+              <DaysInReferencePeriod>120</DaysInReferencePeriod>
+              <PossibleSchoolDays>3600</PossibleSchoolDays>
+              <AttendanceDays>3400</AttendanceDays>
+              <AttendanceLess90Percent>10</AttendanceLess90Percent>
+              <AttendanceGTE90Percent>20</AttendanceGTE90Percent>
+              <PossibleSchoolDaysGT90PercentAttendance>2400</PossibleSchoolDaysGT90PercentAttendance>
+            </StatsCohort>
+            <StatsCohort>
+              <StatsCohortId>1001</StatsCohortId>
+              <StatsIndigenousStudentType>T</StatsIndigenousStudentType>
+              <CohortGender>F</CohortGender>
+              <DaysInReferencePeriod>120</DaysInReferencePeriod>
+              <PossibleSchoolDays>3600</PossibleSchoolDays>
+              <AttendanceDays>3300</AttendanceDays>
+              <AttendanceLess90Percent>10</AttendanceLess90Percent>
+              <AttendanceGTE90Percent>20</AttendanceGTE90Percent>
+              <PossibleSchoolDaysGT90PercentAttendance>2400</PossibleSchoolDaysGT90PercentAttendance>
+            </StatsCohort>
+            <StatsCohort>
+              <StatsCohortId>1002</StatsCohortId>
+              <StatsIndigenousStudentType>T</StatsIndigenousStudentType>
+              <CohortGender>X</CohortGender>
+              <DaysInReferencePeriod>120</DaysInReferencePeriod>
+              <PossibleSchoolDays>120</PossibleSchoolDays>
+              <AttendanceDays>118</AttendanceDays>
+              <AttendanceLess90Percent>0</AttendanceLess90Percent>
+              <AttendanceGTE90Percent>1</AttendanceGTE90Percent>
+              <PossibleSchoolDaysGT90PercentAttendance>120</PossibleSchoolDaysGT90PercentAttendance>
+            </StatsCohort>
+            <StatsCohort>
+              <StatsCohortId>1003</StatsCohortId>
+              <StatsIndigenousStudentType>I</StatsIndigenousStudentType>
+              <CohortGender>M</CohortGender>
+              <DaysInReferencePeriod>120</DaysInReferencePeriod>
+              <PossibleSchoolDays>240</PossibleSchoolDays>
+              <AttendanceDays>235</AttendanceDays>
+              <AttendanceLess90Percent>0</AttendanceLess90Percent>
+              <AttendanceGTE90Percent>2</AttendanceGTE90Percent>
+              <PossibleSchoolDaysGT90PercentAttendance>240</PossibleSchoolDaysGT90PercentAttendance>
+            </StatsCohort>
+            <StatsCohort>
+              <StatsCohortId>1004</StatsCohortId>
+              <StatsIndigenousStudentType>I</StatsIndigenousStudentType>
+              <CohortGender>F</CohortGender>
+              <DaysInReferencePeriod>120</DaysInReferencePeriod>
+              <PossibleSchoolDays>120</PossibleSchoolDays>
+              <AttendanceDays>120</AttendanceDays>
+              <AttendanceLess90Percent>0</AttendanceLess90Percent>
+              <AttendanceGTE90Percent>1</AttendanceGTE90Percent>
+              <PossibleSchoolDaysGT90PercentAttendance>120</PossibleSchoolDaysGT90PercentAttendance>
+            </StatsCohort>
+            <StatsCohort>
+              <StatsCohortId>1005</StatsCohortId>
+              <StatsIndigenousStudentType>I</StatsIndigenousStudentType>
+              <CohortGender>X</CohortGender>
+              <DaysInReferencePeriod>120</DaysInReferencePeriod>
+              <PossibleSchoolDays>120</PossibleSchoolDays>
+              <AttendanceDays>80</AttendanceDays>
+              <AttendanceLess90Percent>1</AttendanceLess90Percent>
+              <AttendanceGTE90Percent>0</AttendanceGTE90Percent>
+              <PossibleSchoolDaysGT90PercentAttendance>0</PossibleSchoolDaysGT90PercentAttendance>
+            </StatsCohort>
+          </StatsCohortList>
+        </StatsCohortYearLevel>
+        <StatsCohortYearLevel>
+          <CohortYearLevel>
+            <Code>2</Code>
+          </CohortYearLevel>
+          <StatsCohortList>
+            <StatsCohort>
+              <StatsCohortId>1006</StatsCohortId>
+              <StatsIndigenousStudentType>T</StatsIndigenousStudentType>
+              <CohortGender>M</CohortGender>
+              <DaysInReferencePeriod>120</DaysInReferencePeriod>
+              <PossibleSchoolDays>1200</PossibleSchoolDays>
+              <AttendanceDays>1200</AttendanceDays>
+              <AttendanceLess90Percent>10</AttendanceLess90Percent>
+              <AttendanceGTE90Percent>20</AttendanceGTE90Percent>
+              <PossibleSchoolDaysGT90PercentAttendance>2400</PossibleSchoolDaysGT90PercentAttendance>
+            </StatsCohort>
+            <StatsCohort>
+              <StatsCohortId>1007</StatsCohortId>
+              <StatsIndigenousStudentType>T</StatsIndigenousStudentType>
+              <CohortGender>F</CohortGender>
+              <DaysInReferencePeriod>120</DaysInReferencePeriod>
+              <PossibleSchoolDays>3600</PossibleSchoolDays>
+              <AttendanceDays>120</AttendanceDays>
+              <AttendanceLess90Percent>10</AttendanceLess90Percent>
+              <AttendanceGTE90Percent>20</AttendanceGTE90Percent>
+              <PossibleSchoolDaysGT90PercentAttendance>2400</PossibleSchoolDaysGT90PercentAttendance>
+            </StatsCohort>
+            <StatsCohort>
+              <StatsCohortId>1008</StatsCohortId>
+              <StatsIndigenousStudentType>T</StatsIndigenousStudentType>
+              <CohortGender>X</CohortGender>
+              <DaysInReferencePeriod>120</DaysInReferencePeriod>
+              <PossibleSchoolDays>100</PossibleSchoolDays>
+              <AttendanceDays>99</AttendanceDays>
+              <AttendanceLess90Percent>0</AttendanceLess90Percent>
+              <AttendanceGTE90Percent>1</AttendanceGTE90Percent>
+              <PossibleSchoolDaysGT90PercentAttendance>100</PossibleSchoolDaysGT90PercentAttendance>
+            </StatsCohort>
+            <StatsCohort>
+              <StatsCohortId>1009</StatsCohortId>
+              <StatsIndigenousStudentType>I</StatsIndigenousStudentType>
+              <CohortGender>M</CohortGender>
+              <DaysInReferencePeriod>120</DaysInReferencePeriod>
+              <PossibleSchoolDays>600</PossibleSchoolDays>
+              <AttendanceDays>580</AttendanceDays>
+              <AttendanceLess90Percent>1</AttendanceLess90Percent>
+              <AttendanceGTE90Percent>4</AttendanceGTE90Percent>
+              <PossibleSchoolDaysGT90PercentAttendance>480</PossibleSchoolDaysGT90PercentAttendance>
+            </StatsCohort>
+            <StatsCohort>
+              <StatsCohortId>1010</StatsCohortId>
+              <StatsIndigenousStudentType>I</StatsIndigenousStudentType>
+              <CohortGender>F</CohortGender>
+              <DaysInReferencePeriod>120</DaysInReferencePeriod>
+              <PossibleSchoolDays>720</PossibleSchoolDays>
+              <AttendanceDays>710</AttendanceDays>
+              <AttendanceLess90Percent>0</AttendanceLess90Percent>
+              <AttendanceGTE90Percent>6</AttendanceGTE90Percent>
+              <PossibleSchoolDaysGT90PercentAttendance>720</PossibleSchoolDaysGT90PercentAttendance>
+            </StatsCohort>
+            <StatsCohort>
+              <StatsCohortId>1011</StatsCohortId>
+              <StatsIndigenousStudentType>I</StatsIndigenousStudentType>
+              <CohortGender>X</CohortGender>
+              <DaysInReferencePeriod>120</DaysInReferencePeriod>
+              <PossibleSchoolDays>120</PossibleSchoolDays>
+              <AttendanceDays>120</AttendanceDays>
+              <AttendanceLess90Percent>0</AttendanceLess90Percent>
+              <AttendanceGTE90Percent>1</AttendanceGTE90Percent>
+              <PossibleSchoolDaysGT90PercentAttendance>120</PossibleSchoolDaysGT90PercentAttendance>
+            </StatsCohort>
+          </StatsCohortList>
+        </StatsCohortYearLevel>
+      </StatsCohortYearLevelList>
+    </StudentAttendanceCollectionReporting>
+  </StudentAttendanceCollectionReportingList>
 </StudentAttendanceCollection>
-
-
-   </xhtml:Example> 
+      </xhtml:Example> 
+   
   </DataObject>
