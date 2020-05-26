@@ -100,6 +100,365 @@
                 
       </CommonElement-->
       
+  <!-- Added for Library Patron Status -->
+    <CommonElement name="LibraryTransactionListType" type="true" dm="true">
+    <Item>
+      <Element>LibraryTransactionListType</Element>
+      <Description>
+        <p>List of transactions.</p>
+      </Description>
+      <List mode="List">
+			</List>
+    </Item>
+    <Item>
+      <Element>Transaction</Element>
+      <Characteristics>OR</Characteristics>
+      <Description>
+        <p>Contains information about library transactions for the referenced student.  These include items that are checked out or have fines or holds placed on them.</p>
+      </Description>
+      <Type ref="CommonTypes" name="LibraryTransactionType"/>
+    </Item>
+  </CommonElement>  
+  
+   <CommonElement name="LibraryTransactionType" type="true" dm="true">
+    <Item>
+      <Element>LibraryTransactionType</Element>
+      <Description>
+        <p>Contains information about library transactions for the referenced student.  These include items that are checked out or have fines or holds placed on them.</p>
+      </Description>
+    </Item>
+    <Item>
+      <Element>ItemInfo</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>
+        If this transaction has an item associated with it, this element contains the information about the item.  Most <code>Transaction</code> elements will contain this element.  However, certain types of fines assessed to the student like "talking in class",  "running in library", etc. do not have a corresponding item so that <code>Transaction</code> instance would not contain an ItemInfo.
+				</p>
+      </Description>
+      <Type ref="CommonTypes" name="LibraryItemInfoType"/>
+    </Item>
+    <Item>
+      <Element>CheckoutInfo</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>If the item is currently checked out to this person, this element contains the date and time that the item is due to be returned.</p>
+      </Description>
+      <Type ref="CommonTypes" name="CheckoutInfoType"/>
+    </Item>
+    <Item>
+      <Element>FineInfoList</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>List of fines assessed.</p>
+      </Description>
+      <Type ref="CommonTypes" name="FineInfoListType"/>
+    </Item>
+    <Item>
+      <Element>HoldInfoList</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>List of holds placed.</p>
+      </Description>
+      <Type ref="CommonTypes" name="HoldInfoListType"/>
+    </Item>
+  </CommonElement>  
+  
+    <CommonElement name="LibraryItemInfoType" type="true" dm="true">
+    <Item>
+      <Element>LibraryItemInfoType</Element>
+      <Description>
+        <p>This element contains the information about the library item.  Most <code>Transaction</code> elements will contain this element.  However, certain types of fines assessed to the student like "talking in class",  "running in library", etc. do not have a corresponding item so that <code>Transaction</code> instance would not contain an ItemInfo.</p>
+      </Description>
+    </Item>
+    <Item>
+      <Attribute>Type</Attribute>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Type of item being referenced.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Attribute>TypeCodeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Element>Title</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>
+        The title of the item being referenced by this <code>Transaction</code>.
+				</p>
+      </Description>
+      <Type name="xs:string"/>
+    </Item>
+    <Item>
+      <Element>Author</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>
+        The author of the item being referenced by this <code>Transaction</code>.
+				</p>
+      </Description>
+      <Type name="xs:string"/>
+    </Item>
+    <Item>
+      <Element>ElectronicId</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>
+        Electronic identifier associated with this <code>Transaction</code>.
+				</p>
+        <p>
+        This element will not appear if the <code>Transaction</code> contains a HoldInfo for an item where a specific instance of the item hasn't been assigned to fulfill the hold request (i.e. unfulfilled title hold request).
+				</p>
+      </Description>
+      <Type ref="CommonTypes" name="ElectronicIdType"/>
+    </Item>
+    <Item>
+      <Element>CallNumber</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>The library call number, if any, assigned to this item.</p>
+      </Description>
+      <Type name="xs:string"/>
+    </Item>
+    <Item>
+      <Element>Price</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>The cost of this item. </p>
+      </Description>
+      <Type ref="CommonTypes" name="MonetaryAmountType"/>
+    </Item>
+  </CommonElement>
+  
+   <CommonElement name="CheckoutInfoType" type="true" dm="true">
+    <Item>
+      <Element>CheckoutInfoType</Element>
+      <Description>
+        <p>If the item is currently checked out to this person, this element contains the date and time that the item is due to be returned.</p>
+      </Description>
+    </Item>
+    <Item>
+      <Element>ReturnBy</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>The date and time that this item is due to be returned.</p>
+      </Description>
+      <Type name="xs:dateTime"/>
+    </Item>
+  </CommonElement>
+  
+   <CommonElement name="FineInfoListType" type="true" dm="true">
+    <Item>
+      <Element>FineInfoListType</Element>
+      <Description>
+        <p>List of fines assessed.</p>
+      </Description>
+      <List mode="List">
+			</List>
+    </Item>
+    <Item>
+      <Element>FineInfo</Element>
+      <Characteristics>OR</Characteristics>
+      <Description>
+        <p>If the item has a fine assessed to this person, this element will contain the information about the fine.</p>
+      </Description>
+      <Type ref="CommonTypes" name="FineInfoType"/>
+    </Item>
+  </CommonElement>
+  
+    <CommonElement name="FineInfoType" type="true" dm="true">
+    <Item>
+      <Element>FineInfoType</Element>
+      <Characteristics>OR</Characteristics>
+      <Description>
+        <p>If the item has a fine assessed to this person, this element will contain the information about the fine.</p>
+      </Description>
+    </Item>
+    <Item>
+      <Attribute>Type</Attribute>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Type of fine assessed to this patron and item.  A corresponding ItemInfo is required for all FineInfo types except "Other" and "Refund" where it is permissible to omit the ItemInfo element if there isn't an item associated with the fine.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Attribute>TypeCodeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Element>Assessed</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>The date and time that this fine was assessed to the patron.</p>
+      </Description>
+      <Type name="xs:dateTime"/>
+    </Item>
+    <Item>
+      <Element>Description</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>More detailed information concerning the assessed fine or refund.</p>
+      </Description>
+      <Type name="xs:string"/>
+    </Item>
+    <Item>
+      <Element>Amount</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>The current balance of the fine expressed as a positive number. </p>
+      </Description>
+      <Type ref="CommonTypes" name="MonetaryAmountType"/>
+    </Item>
+    <Item>
+      <Element>Reference</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>An application-specific reference identifier for the fine being assessed, paid, or refunded.  It is intended to identify a specific fine transaction allowing consumers to include this information in Billing or Payment events sent to the library application.</p>
+      </Description>
+      <Type name="xs:string"/>
+    </Item>
+  </CommonElement>
+  
+    <CommonElement name="HoldInfoListType" type="true" dm="true">
+    <Item>
+      <Element>HoldInfoListType</Element>
+      <Description>
+        <p>List of holds placed.</p>
+      </Description>
+      <List mode="List">
+			</List>
+    </Item>
+    <Item>
+      <Element>HoldInfo</Element>
+      <Characteristics>OR</Characteristics>
+      <Description>
+        <p>If the item has a hold placed on it by a patron, this element will contain the information about the hold.</p>
+      </Description>
+      <Type ref="CommonTypes" name="HoldInfoType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="HoldInfoType" type="true" dm="true">
+    <Item>
+      <Element>HoldInfoType</Element>
+      <Description>
+        <p>If the item has a hold placed on it by a patron, this element will contain the information about the hold.</p>
+      </Description>
+    </Item>
+    <Item>
+      <Attribute>Type</Attribute>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>The type of hold being referenced.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Attribute>TypeCodeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Element>DatePlaced</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>The date that the patron placed the hold.</p>
+      </Description>
+      <Type name="xs:date"/>
+    </Item>
+    <Item>
+      <Element>DateNeeded</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>The date that the patron needs this item by.</p>
+      </Description>
+      <Type name="xs:date"/>
+    </Item>
+    <Item>
+      <Element>MadeAvailable</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>The date that this item became available for the patron to pick up.</p>
+      </Description>
+      <Type name="xs:date"/>
+    </Item>
+    <Item>
+      <Element>Expires</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>The date when this ready hold will expire freeing the item to be assigned to another patron.</p>
+      </Description>
+      <Type name="xs:date"/>
+    </Item>
+  </CommonElement>
+   <CommonElement name="LibraryMessageListType" type="true" dm="true">
+    <Item>
+      <Element>LibraryMessageListType</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>List of messages for/regarding the patron.</p>
+      </Description>
+      <List mode="List">
+			</List>
+    </Item>
+    <Item>
+      <Element>Message</Element>
+      <Characteristics>OR</Characteristics>
+      <Type ref="CommonTypes" name="LibraryMessageType"/>
+    </Item>
+  </CommonElement>
+   <CommonElement name="LibraryMessageType" type="true" dm="true">
+    <Item>
+      <Element>LibraryMessageType</Element>
+    </Item>
+    <Item>
+      <Attribute>Priority</Attribute>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>The level of urgency associated with this message.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Attribute>PriorityCodeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Element>Sent</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>The date and time that this message was originally sent.</p>
+      </Description>
+      <Type name="xs:dateTime"/>
+    </Item>
+    <Item>
+      <Element>Text</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>The contents of the message.</p>
+      </Description>
+      <Type name="xs:string"/>
+    </Item>
+  </CommonElement>
+      
   <!-- Added for STATS (Student Attendance Collection)-->
   
     

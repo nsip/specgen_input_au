@@ -78,13 +78,13 @@
 
   <Item>
 
-    <Element>Patron_RefId</Element>
+    <Element>PatronRefId</Element>
 
     <Characteristics>C</Characteristics>
 
     <Description>
 
-      <p>The SIF wide unique identifier of a Patron.</p>
+      <p>The SIF wide unique identifier of a Patron. Either RefId or LocalId must be supplied here.</p>
 
     </Description>
 
@@ -94,13 +94,13 @@
   
   <Item>
 
-    <Element>Patron_LocalId</Element>
+    <Element>PatronLocalId</Element>
 
     <Characteristics>C</Characteristics>
 
     <Description>
 
-      <p>The Local unique identifier of a Patron.</p>
+      <p>The Local unique identifier of a Patron. Either RefId or LocalId must be supplied here.</p>
 
     </Description>
 
@@ -110,7 +110,7 @@
 
   <Item>
 
-    <Element>Patron_RefObject</Element>
+    <Element>PatronRefObject</Element>
 
     <Characteristics>M</Characteristics>
 
@@ -121,11 +121,11 @@
     </Description>
 	<Values>
 		<Value>
-			<Code>Student</Code>
+			<Code>StudentPersonal</Code>
 			<Description>Student Patron</Description>
 		</Value>
 		<Value>
-			<Code>Staff</Code>
+			<Code>StaffPersonal</Code>
 			<Description>Staff Patron</Description>
 		</Value>
 	</Values>
@@ -296,19 +296,22 @@
 
   </Item>
 
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="LibraryPatronStatus">
 
-    <LibraryPatronStatus RefId="359D75101AD0A9D7A8C3DAD0A85103A2" LibraryType="S" SIF_RefId="52DBFBFC021311D68E8C00039303AE9C" SIF_RefObject="StudentPersonal">
-
+    <LibraryPatronStatus RefId="D3E34B35-9D75-101A-8C3D-00AA001A1652">
+	  <LibraryType>S</LibraryType>
+	  <PatronRefId>5DE34B35-9D75-101A-8C3D-00AA001A1652</PatronRefId>
+	  <PatronLocalId>MAR01</PatronLocalId>
+	  <PatronRefObject>StudentPersonal</PatronRefObject>
       <ElectronicIdList>
 
-        <ElectronicId Type="Barcode">P 7676</ElectronicId>
+        <ElectronicId Type="01">P 7676</ElectronicId>
 
-        <ElectronicId Type="Magstripe">200606300007676JJI</ElectronicId>
+        <ElectronicId Type="02">200606300007676JJI</ElectronicId>
 
-        <ElectronicId Type="PIN">1234</ElectronicId>
+        <ElectronicId Type="03">1234</ElectronicId>
 
-        <ElectronicId Type="RFID">0EF3098055921FEDC008FEEB</ElectronicId>
+        <ElectronicId Type="04">0EF3098055921FEDC008FEEB</ElectronicId>
 
       </ElectronicIdList>
 
@@ -322,11 +325,11 @@
 
             <Author>Brian Jacques</Author>
 
-            <ElectronicId Type="Barcode">T 311</ElectronicId>
+            <ElectronicId Type="01">T 311</ElectronicId>
 
             <CallNumber>YA JACQ</CallNumber>
 
-            <Price Currency="USD">6.99</Price>
+            <Price>6.99</Price>
 
           </ItemInfo>
 
@@ -344,7 +347,7 @@
 
               <Description>ESTIMATED FINE FOR OVERDUE ITEM</Description>
 
-              <Amount Currency="USD">0.50</Amount>
+              <Amount>0.50</Amount>
 
             </FineInfo>
 
@@ -360,11 +363,11 @@
 
             <Author>Brian Jacques</Author>
 
-            <ElectronicId Type="Barcode">T 1211</ElectronicId>
+            <ElectronicId Type="01">T 1211</ElectronicId>
 
             <CallNumber>YA JACQ</CallNumber>
 
-            <Price Currency="USD">7.49</Price>
+            <Price>7.49</Price>
 
           </ItemInfo>
 
@@ -416,9 +419,9 @@
 
             <Author>Larson, Boswell, Kanold and Stiff</Author>
 
-            <ElectronicId Type="Barcode">98770000178215</ElectronicId>
+            <ElectronicId Type="01">98770000178215</ElectronicId>
 
-            <Price Currency="USD">57.18</Price>
+            <Price>57.18</Price>
 
           </ItemInfo>
 
@@ -438,7 +441,7 @@
 
             <Author>JK Rowlings</Author>
 
-            <ElectronicId Type="Barcode">T 99321</ElectronicId>
+            <ElectronicId Type="01">T 99321</ElectronicId>
 
           </ItemInfo>
 
@@ -450,7 +453,7 @@
 
               <Description>Lost item returned</Description>
 
-              <Amount Currency="USD">28.90</Amount>
+              <Amount>28.90</Amount>
 
             </FineInfo>
 
@@ -468,7 +471,7 @@
 
               <Description>Running in library</Description>
 
-              <Amount Currency="USD">1.00</Amount>
+              <Amount>1.00</Amount>
 
               <Reference>42</Reference>
 
@@ -504,11 +507,11 @@
 
       <NumberOfFines>1</NumberOfFines>
 
-      <FineAmount Currency="USD">1.00</FineAmount>
+      <FineAmount>1.00</FineAmount>
 
       <NumberOfRefunds>1</NumberOfRefunds>
 
-      <RefundAmount Currency="USD">28.90</RefundAmount>
+      <RefundAmount>28.90</RefundAmount>
 
     </LibraryPatronStatus>
 

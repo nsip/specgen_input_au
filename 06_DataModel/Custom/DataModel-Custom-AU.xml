@@ -148,6 +148,9 @@
 		<xi:include parse="text" href="Common/LearningStandardItem.xml"/>
 		<xi:include parse="text" href="Common/LearningResource.xml"/>
 		<xi:include parse="text" href="Common/LearningResourcePackage.xml"/>
+		
+		<!-- Library ?? -->
+		<xi:include parse="text" href="AU/LibraryPatronStatus.xml"/>
 
 	</Group>
 	<Group name = "NAPLAN">
