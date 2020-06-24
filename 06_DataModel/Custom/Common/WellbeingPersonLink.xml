@@ -53,7 +53,7 @@
 		<Description>
 			<p>An identifier of the group involved.</p>
 		</Description>
-		<Type ref="CommonTypes" name="LocalId"/>
+		<Type ref="CommonTypes" name="LocalIdType"/>
 	</Item>
 	<!--
 	<Item>
@@ -146,7 +146,7 @@
 		<Description>
 			<p>If this Link is to a person who does not have a Personal Object, this is a LocalId or another identifier.</p>
 		</Description>
-		<Type ref="CommonTypes" name="LocalId"/>
+		<Type ref="CommonTypes" name="LocalIdType"/>
 	</Item>
 	<Item>
 		<Element>OtherPersonContactDetails</Element>

@@ -9,7 +9,7 @@
 		<inputDocument>SIF_DataModel.xml</inputDocument>
 		<sifNamespace>http://www.sifassociation.org/datamodel/au/3.4</sifNamespace>
 		<localizationCode>au</localizationCode>
-		<schemaVersion>3.4.6</schemaVersion>
+		<schemaVersion>3.4.7</schemaVersion>
 		
 		<!-- Comment this one out to leave out JSON Tabs -->
 		
