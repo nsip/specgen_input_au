@@ -1406,7 +1406,7 @@
 		<Description>
 		  <p>For each member of the cohort, on a full-time-equivalent basis, the proportion of the staff member’s job that goes toward supporting the primary school component of the location. For staff at combined (primary and secondary) locations, this field plus the secondary FTE field equals the total FTE for the staff member’s job. (Format is x.x, with a full time workload being equal to 1 FTE. Primary FTE plus Secondary FTE should not exceed 1.</p>
 		</Description>
-		<Type name="xs:decimal"></Type>
+	 	<Type name="xs:decimal"></Type>
 		<Facets>
 		  <xs:minInclusive value="0"/>
 		   <xs:maxInclusive value="1"/> 
@@ -1426,7 +1426,7 @@
 			  <!--<xs:maxInclusive value="1"/> -->
 			  <xs:fractionDigits value="1"/>
 			</Facets>
-	</Item>
+ 	</Item>
 
 		  <!-- Leave off StaffAssignment - no unit level for first release
 		  <Item>

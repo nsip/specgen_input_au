@@ -30,7 +30,7 @@
 		<htmlDocument>
 			<singleDocument>false</singleDocument>
 			<rootDocumentFileName>index.html</rootDocumentFileName>
-			<rootTitle>SIF Implementation Specification (Australia) 3.4.6</rootTitle>
+			<rootTitle>SIF Implementation Specification (Australia) 3.4.7</rootTitle>
 			<documentType>DataModel</documentType>
 		</htmlDocument>
 		
@@ -38,7 +38,7 @@
 		<htmlDocument>
 			<singleDocument>true</singleDocument>
 			<rootDocumentFileName>ImplementationSpecification.html</rootDocumentFileName>
-			<rootTitle>SIF Implementation Specification (Australia) 3.4.6</rootTitle>
+			<rootTitle>SIF Implementation Specification (Australia) 3.4.7</rootTitle>
 			<documentType>DataModel</documentType>
 		</htmlDocument>
 		
@@ -130,7 +130,7 @@
 	</xsdDocuments>	
  	 
 	<!-- Other outputs built using XSLT -->
-	<!-- <xsltTransformations>
+	<xsltTransformations>
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToJsonSchema.xsl</xsltInputFile>
 
@@ -154,5 +154,5 @@
 			<xsltOutputFile>OpenAPI.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>		
-	</xsltTransformations> -->
+	</xsltTransformations> 
 </sifSpecificationGeneratorConfig>

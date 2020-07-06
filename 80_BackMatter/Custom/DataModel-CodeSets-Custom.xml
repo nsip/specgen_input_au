@@ -3718,7 +3718,7 @@
 <Value><Code>408</Code><Text>Mayo</Text></Value>
 <Value><Code>409</Code><Text>Spence</Text></Value>
 <Value><Code>410</Code><Text>Sturt</Text></Value>
-<Value><Code>411</Code><Text>Wakefield</Text></Value>
+<Value><Code>411</Code><Text>Wakefield - Deprecated</Text></Value>
 <Value><Code>497</Code><Text>Migratory - Offshore - Shipping (SA)</Text></Value>
 <Value><Code>501</Code><Text>Brand</Text></Value>
 <Value><Code>502</Code><Text>Burt</Text></Value>
@@ -5897,7 +5897,7 @@
 	</CodeSet>
 	<CodeSet>
 		<Intro>
-			<p>Sourced from DEEWR</p>
+			<p>Sourced from DESE, (previously DEEWR).</p>
 		</Intro>
 		<ID>School Co-Ed Status</ID>
 		<Values>
@@ -7076,7 +7076,6 @@
 				<Code>N</Code>
 				<Text>Not Sighted or Not Provided</Text>
 			</Value>
-			 
 		</Values>
 	</CodeSet>
 	<CodeSet>
@@ -9376,13 +9375,12 @@
 			</Value>
 			<Value>
 				<Code>T</Code>
-				<Text>Technology</Text>
+				<Text>Technologies</Text>
 			</Value>
 			<Value>
 				<Code>W</Code>
 				<Text>Work Studies</Text>
 			</Value>
-			
 			<!-- Additional Values added to this Code Set are necessary as the Australian Curriculum is for P-10 only -->
 			<Value><Code>ReligousStudies</Code></Value>
 			<Value><Code>Other</Code></Value>
