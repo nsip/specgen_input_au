@@ -19,7 +19,7 @@
 	</ul>
 		<h4>New Types</h4>
 	<ul>
-		<li>Added for LibraryPatronStatus – LibraryTransactionListType, LibraryTransactionType, LibraryItemInfoType, CheckoutInfoType, FineInfoListType, FineInfoType, HoldInfoListType, HoldInfoType, LibraryMessageListType, LibraryMessageType </li>
+		<li>Added for LibraryPatronStatus - LibraryTransactionListType, LibraryTransactionType, LibraryItemInfoType, CheckoutInfoType, FineInfoListType, FineInfoType, HoldInfoListType, HoldInfoType, LibraryMessageListType, LibraryMessageType </li>
 		<li>Added for all AG Collection Objects CollectionReportingListTypes</li>
 	</ul>
 	
@@ -27,12 +27,16 @@
 	<h4>Additions to CodeSets</h4>
 	
 	<ul>	
-		<h5>Addition to Year Level Code– 0 Year Level 0 – added for AG Collections</h5>		</ul>
+		<li>Addition to Year Level Code- 0 Year Level 0 - added for AG Collections</li>	
+		<li>Addition to Relationship to Student - 14 Step-Sibling - added for NSW - school request</li>	
+		<li>Additions to Attendance Codes for COVID-19 - request from VIC DET - 625 Remote learning and 214 Sent home (COVID symptoms)</li>	
+
+	</ul>
 
 	<h4>Other Changes</h4>
 	<ul>
-		<li>Federal Electorate Codeset – Wakefield Deprecated</li>
-		<li>StudentPersonal- MostRecent – CensusAge Integer</li>
+		<li>Federal Electorate Codeset - Wakefield Deprecated</li>
+		<li>StudentPersonal- MostRecent - CensusAge Integer</li>
  	</ul>
    	
 	

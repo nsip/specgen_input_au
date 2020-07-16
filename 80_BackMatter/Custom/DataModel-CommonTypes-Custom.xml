@@ -114,7 +114,7 @@
       <Element>Transaction</Element>
       <Characteristics>OR</Characteristics>
       <Description>
-        <p>Contains information about library transactions for the referenced student.  These include items that are checked out or have fines or holds placed on them.</p>
+        <p>Contains information about library transactions for the referenced patron.  These include items that are checked out or have fines or holds placed on them.</p>
       </Description>
       <Type ref="CommonTypes" name="LibraryTransactionType"/>
     </Item>
@@ -124,7 +124,7 @@
     <Item>
       <Element>LibraryTransactionType</Element>
       <Description>
-        <p>Contains information about library transactions for the referenced student.  These include items that are checked out or have fines or holds placed on them.</p>
+        <p>Contains information about library transactions for the referenced patron.  These include items that are checked out or have fines or holds placed on them.</p>
       </Description>
     </Item>
     <Item>
@@ -179,14 +179,6 @@
       <Type name="xs:token"/>
     </Item>
     <Item>
-      <Attribute>TypeCodeset</Attribute>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-      </Description>
-      <Type name="xs:token"/>
-    </Item>
-    <Item>
       <Element>Title</Element>
       <Characteristics>M</Characteristics>
       <Description>
@@ -214,7 +206,7 @@
         Electronic identifier associated with this <code>Transaction</code>.
 				</p>
         <p>
-        This element will not appear if the <code>Transaction</code> contains a HoldInfo for an item where a specific instance of the item hasn't been assigned to fulfill the hold request (i.e. unfulfilled title hold request).
+        This element will not appear if the <code>Transaction</code> contains a <code>HoldInfo</code> for an item where a specific instance of the item hasn't been assigned to fulfill the hold request (i.e. unfulfilled title hold request).
 				</p>
       </Description>
       <Type ref="CommonTypes" name="ElectronicIdType"/>
@@ -228,15 +220,30 @@
       <Type name="xs:string"/>
     </Item>
     <Item>
-      <Element>Price</Element>
+      <Element>ISBN</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>ISBN (International Standard Book Number) is a unique identifier for this book.</p>
+      </Description>
+      <Type name="xs:string"/>
+    </Item>
+    <Item>
+      <Element>Cost</Element>
       <Characteristics>O</Characteristics>
       <Description>
         <p>The cost of this item. </p>
       </Description>
       <Type ref="CommonTypes" name="MonetaryAmountType"/>
     </Item>
+    <Item>
+      <Element>ReplacementCost</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>The replacement cost of this item. </p>
+      </Description>
+      <Type ref="CommonTypes" name="MonetaryAmountType"/>
+    </Item>
   </CommonElement>
-  
    <CommonElement name="CheckoutInfoType" type="true" dm="true">
     <Item>
       <Element>CheckoutInfoType</Element>
@@ -245,12 +252,28 @@
       </Description>
     </Item>
     <Item>
+      <Element>CheckedOutOn</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>The date and time that this item is was checked out.</p>
+      </Description>
+      <Type name="xs:dateTime"/>
+    </Item>
+    <Item>
       <Element>ReturnBy</Element>
       <Characteristics>M</Characteristics>
       <Description>
         <p>The date and time that this item is due to be returned.</p>
       </Description>
       <Type name="xs:dateTime"/>
+    </Item>
+    <Item>
+      <Element>RenewalCount</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>The number of times this item has been renewed by this patron. On initial checkout, this value will be 0.</p>
+      </Description>
+      <Type name="xs:unsignedInt"/>
     </Item>
   </CommonElement>
   
@@ -285,15 +308,7 @@
       <Attribute>Type</Attribute>
       <Characteristics>M</Characteristics>
       <Description>
-        <p>Type of fine assessed to this patron and item.  A corresponding ItemInfo is required for all FineInfo types except "Other" and "Refund" where it is permissible to omit the ItemInfo element if there isn't an item associated with the fine.</p>
-      </Description>
-      <Type name="xs:token"/>
-    </Item>
-    <Item>
-      <Attribute>TypeCodeset</Attribute>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+        <p>Type of fine assessed to this patron and item.  A corresponding <code>ItemInfo</code> is required for all <code>FineInfo</code> types except "Other" and "Refund" where it is permissible to omit the <code>ItemInfo</code> element if there isn't an item associated with the fine.</p>
       </Description>
       <Type name="xs:token"/>
     </Item>
@@ -338,7 +353,7 @@
         <p>List of holds placed.</p>
       </Description>
       <List mode="List">
-			</List>
+	  </List>
     </Item>
     <Item>
       <Element>HoldInfo</Element>
@@ -365,14 +380,6 @@
       <Type name="xs:token"/>
     </Item>
     <Item>
-      <Attribute>TypeCodeset</Attribute>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-      </Description>
-      <Type name="xs:token"/>
-    </Item>
-    <Item>
       <Element>DatePlaced</Element>
       <Characteristics>M</Characteristics>
       <Description>
@@ -385,6 +392,14 @@
       <Characteristics>O</Characteristics>
       <Description>
         <p>The date that the patron needs this item by.</p>
+      </Description>
+      <Type name="xs:date"/>
+    </Item>
+    <Item>
+      <Element>ReservationExpiry</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>The date when this reservation will expire freeing the item to be assigned to another patron.</p>
       </Description>
       <Type name="xs:date"/>
     </Item>
@@ -2738,7 +2753,7 @@
 
 <!-- List of Scheduled Activities -->
       
-      <!--POD Option 2 -->
+      <!--POD Option 2 
 <CommonElement name="ApplicableLawListType" type="true" dm="true">
 	<Item>
 		<Element>ApplicableLawListType</Element>
@@ -2758,12 +2773,13 @@
 </CommonElement>
 
 <CommonElement name="ApplicableLawType" type="true" dm="true">  
-	<Item>
+	   <Item>
 		<Element>ApplicableLawType</Element>
 		<Characteristics/>
 		<Description>
 			<p>.</p>
 		</Description>
+		</Item>
 		<Item>
 		   <Element>ApplicableCountry</Element>
 		   <Characteristics>M</Characteristics>
@@ -2788,8 +2804,7 @@
 		   </Description>
 		   <Type name="xs:anyURI"></Type>
 		</Item>  
-	</Item>
-</CommonElement>
+</CommonElement> -->
       
  <!-- Placeholder for AGCollections -->
 

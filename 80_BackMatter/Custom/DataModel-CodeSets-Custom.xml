@@ -1023,6 +1023,10 @@
 			<Value>
 				<Code>213</Code>
 				<Text>Therapy Session</Text>
+			</Value>
+			<Value>
+				<Code>214</Code>
+				<Text>Sent home (COVID symptoms)</Text>
 			</Value>	
 			<Value>
 				<Code>300</Code>
@@ -1145,7 +1149,11 @@
 			<Value>
 				<Code>624</Code>
 				<Text>Remote learning (exceptional)</Text>
-			</Value>	
+			</Value>
+			<Value>
+				<Code>625</Code>
+				<Text>Remote learning</Text>
+			</Value>		
 			<Value>
 				<Code>699</Code>
 				<Text>Educational - further details not available</Text>
@@ -7202,6 +7210,10 @@
 			<Value>
 				<Code>13</Code>
 				<Text>Nephew/Niece</Text>
+			</Value>
+			<Value>
+				<Code>14</Code>
+				<Text>Step-Sibling</Text>
 			</Value>
 			<Value>
 				<Code>00</Code>

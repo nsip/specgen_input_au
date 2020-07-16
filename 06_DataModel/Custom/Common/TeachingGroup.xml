@@ -186,7 +186,7 @@
     <Description>
       <p>Key Learning Area - map to ACStrand in Union with Religious Studies and Other.</p>
     </Description>
-    <Type ref="CodeSets" name="AUCodeSetsACStrand"></Type> 
+    <Type ref="CodeSets" name="AUCodeSetsACStrandType"></Type> 
   </Item>
   
   <Item>
