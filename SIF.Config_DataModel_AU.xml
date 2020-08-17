@@ -19,7 +19,7 @@
  
 
 		 
- 		<isDraft>true</isDraft>
+ 		<isDraft>false</isDraft>
 
  
 	</globalSettings>

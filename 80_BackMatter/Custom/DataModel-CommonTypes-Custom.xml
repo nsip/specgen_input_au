@@ -2753,58 +2753,7 @@
 
 <!-- List of Scheduled Activities -->
       
-      <!--POD Option 2 
-<CommonElement name="ApplicableLawListType" type="true" dm="true">
-	<Item>
-		<Element>ApplicableLawListType</Element>
-		<Characteristics/>
-		<Description>
-			<p>.</p>
-		</Description>
-	</Item>
-	<Item>
-	   <Element>ApplicableLaw</Element>
-	   <Characteristics>OR</Characteristics>
-	   <Description>
-		 <p></p>
-	   </Description>
-	   <Type name="ApplicableLawType"></Type>
-	</Item>  
-</CommonElement>
-
-<CommonElement name="ApplicableLawType" type="true" dm="true">  
-	   <Item>
-		<Element>ApplicableLawType</Element>
-		<Characteristics/>
-		<Description>
-			<p>.</p>
-		</Description>
-		</Item>
-		<Item>
-		   <Element>ApplicableCountry</Element>
-		   <Characteristics>M</Characteristics>
-		   <Description>
-			<p></p>
-		   </Description>
-		   <Type name="xs:normalizedString"></Type>
-		</Item>  
-		<Item>
-		   <Element>ApplicableLawName</Element>
-		   <Characteristics>M</Characteristics>
-		   <Description>
-			<p></p>
-		   </Description>
-		   <Type name="xs:normalizedString"></Type>
-		</Item>  
-		<Item>
-		   <Element>ApplicableLawURL</Element>
-		   <Characteristics>O</Characteristics>
-		   <Description>
-			<p></p>
-		   </Description>
-		   <Type name="xs:anyURI"></Type>
-		</Item>  
-</CommonElement> -->
+  
       
  <!-- Placeholder for AGCollections -->
 
@@ -2985,8 +2934,9 @@
 			</PublishingPermission>
 	    </xhtml:Example>
 	</CommonElement>
-  <!-- Added for PPOD - PersonPrivacyObligation 
-   
+	
+  <!-- Added for PPOD - PersonPrivacyObligation -->
+  <!--
     <CommonElement name="DataDomainObligationListType" type="true" dm="true">
 		<Item>
 			<Element>DataDomainObligationListType</Element>
@@ -3040,6 +2990,7 @@
 		    <Type ref="CommonTypes" name="ShareWithListType"/>
 		</Item>
 	</CommonElement>
+	
 	<CommonElement name="ShareWithListType" type="true" dm="true">
 		<Item>
 			<Element>ShareWithListType</Element>
@@ -3109,10 +3060,63 @@
 		   <Type name="xs:anyURI"></Type>
 		</Item>
 		   	
-   	</CommonElement>
-    -->
-        
+ </CommonElement> 
+   
+             
+<CommonElement name="ApplicableLawListType" type="true" dm="true">
+	<Item>
+		<Element>ApplicableLawListType</Element>
+		<Characteristics/>
+		<Description>
+			<p>.</p>
+		</Description>
+	</Item>
+	<Item>
+	   <Element>ApplicableLaw</Element>
+	   <Characteristics>OR</Characteristics>
+	   <Description>
+		 <p></p>
+	   </Description>
+	   <Type name="ApplicableLawType"></Type>
+	</Item>  
+</CommonElement>
+
+<CommonElement name="ApplicableLawType" type="true" dm="true">  
+	   <Item>
+		<Element>ApplicableLawType</Element>
+		<Characteristics/>
+		<Description>
+			<p>.</p>
+		</Description>
+		</Item>
+		<Item>
+		   <Element>ApplicableCountry</Element>
+		   <Characteristics>M</Characteristics>
+		   <Description>
+			<p></p>
+		   </Description>
+		   <Type name="xs:normalizedString"></Type>
+		</Item>  
+		<Item>
+		   <Element>ApplicableLawName</Element>
+		   <Characteristics>M</Characteristics>
+		   <Description>
+			<p></p>
+		   </Description>
+		   <Type name="xs:normalizedString"></Type>
+		</Item>  
+		<Item>
+		   <Element>ApplicableLawURL</Element>
+		   <Characteristics>O</Characteristics>
+		   <Description>
+			<p></p>
+		   </Description>
+		   <Type name="xs:anyURI"></Type>
+		</Item>  
+</CommonElement>  -->
   
+ <!-- End of PPOD Types -->
+ 
   
   <CommonElement name="EntityContactInfoType" type="true" dm="true">
 	<Item>

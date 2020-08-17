@@ -6,7 +6,7 @@
          xmlns="http://sifassociation.org/SpecGen">
 	
 	<p>This release contains the following significant updates and extensions to the SIF specification.</p>
-	<h3>Additions/Changes since 3.4.5 (August, 2019)</h3>
+	<h3>Additions/Changes since 3.4.6 (March, 2020)</h3>
 	<h4>New Objects</h4>
 	<ul>
 		<li>AddressCollection - Object for Australian Government collection submission collecting addresses of students from schools and school authorities</li>
