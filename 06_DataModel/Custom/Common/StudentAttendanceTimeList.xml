@@ -110,6 +110,16 @@
 			<Date>2002-11-01</Date>
 			<SchoolYear>2003</SchoolYear>
 			<AttendanceTimes>
+
+				<AttendanceTime>
+					<AttendanceCode>
+						<Code>100</Code>
+					</AttendanceCode>
+					<AttendanceStatus>01</AttendanceStatus>
+					<StartTime>09:00:00</StartTime>
+					<EndTime>11:00:00</EndTime>
+					<AttendanceNote/>
+				</AttendanceTime>
 				<AttendanceTime>
 					<AttendanceCode>
 						<Code>200</Code>
@@ -130,15 +140,6 @@
 						<Code>100</Code>
 					</AttendanceCode>
 					<AttendanceStatus>01</AttendanceStatus>
-					<StartTime>09:00:00</StartTime>
-					<EndTime>11:00:00</EndTime>
-					<AttendanceNote/>
-				</AttendanceTime>
-				<AttendanceTime>
-					<AttendanceCode>
-						<Code>100</Code>
-					</AttendanceCode>
-					<AttendanceStatus>01</AttendanceStatus>
 					<StartTime>12:05:00</StartTime>
 					<EndTime>15:30:00</EndTime>
 					<AttendanceNote/>
@@ -153,16 +154,7 @@
 	<Date>2002-11-01</Date>
 	<SchoolYear>2003</SchoolYear>
 	<AttendanceTimes>
-			<AttendanceTime>
-				<AttendanceType>RC</AttendanceType>	 
-				<AttendanceCode>
-					<Code>100</Code>
-				</AttendanceCode>
-				<AttendanceStatus>NA</AttendanceStatus>
-				<StartTime>09:00:00</StartTime>
-				<EndTime>15:00:00</EndTime>
-				<DurationValue>1.000</DurationValue>
-			</AttendanceTime>
+
 			<AttendanceTime>
 				<AttendanceType>LA</AttendanceType> 
 				<AttendanceCode>
@@ -174,13 +166,23 @@
 				<AttendanceNote>No acceptable excuse given</AttendanceNote>
 			</AttendanceTime>
 			<AttendanceTime>
+				<AttendanceType>RC</AttendanceType>	 
+				<AttendanceCode>
+					<Code>100</Code>
+				</AttendanceCode>
+				<AttendanceStatus>NA</AttendanceStatus>
+				<StartTime>09:30:00</StartTime>
+				<EndTime>11:00:00</EndTime>
+				<DurationValue>1.000</DurationValue>
+			</AttendanceTime>
+			<AttendanceTime>
 				<AttendanceType>OC</AttendanceType> 
 				<AttendanceCode>
 					<Code>200</Code>
 				</AttendanceCode>
 				<AttendanceStatus>01</AttendanceStatus>
 				<StartTime>11:00:00</StartTime>
-				<EndTime>13:00:00</EndTime>
+				<EndTime>14:30:00</EndTime>
 				<AttendanceNote>Student had stomach ache</AttendanceNote>
 			</AttendanceTime>
 			<AttendanceTime>

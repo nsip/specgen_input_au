@@ -1023,6 +1023,10 @@
 			<Value>
 				<Code>213</Code>
 				<Text>Therapy Session</Text>
+			</Value>
+			<Value>
+				<Code>214</Code>
+				<Text>Sent home (COVID symptoms)</Text>
 			</Value>	
 			<Value>
 				<Code>300</Code>
@@ -1141,11 +1145,15 @@
 			<Value>
 				<Code>623</Code>
 				<Text>On-site program</Text>
-			</Value>			
+			</Value>
 			<Value>
 				<Code>624</Code>
 				<Text>Remote learning (exceptional)</Text>
-			</Value>	
+			</Value>
+			<Value>
+				<Code>625</Code>
+				<Text>Remote learning</Text>
+			</Value>		
 			<Value>
 				<Code>699</Code>
 				<Text>Educational - further details not available</Text>
@@ -3718,7 +3726,7 @@
 <Value><Code>408</Code><Text>Mayo</Text></Value>
 <Value><Code>409</Code><Text>Spence</Text></Value>
 <Value><Code>410</Code><Text>Sturt</Text></Value>
-<Value><Code>411</Code><Text>Wakefield</Text></Value>
+<Value><Code>411</Code><Text>Wakefield - Deprecated</Text></Value>
 <Value><Code>497</Code><Text>Migratory - Offshore - Shipping (SA)</Text></Value>
 <Value><Code>501</Code><Text>Brand</Text></Value>
 <Value><Code>502</Code><Text>Burt</Text></Value>
@@ -5897,7 +5905,7 @@
 	</CodeSet>
 	<CodeSet>
 		<Intro>
-			<p>Sourced from DEEWR</p>
+			<p>Sourced from DESE, (previously DEEWR).</p>
 		</Intro>
 		<ID>School Co-Ed Status</ID>
 		<Values>
@@ -7076,7 +7084,6 @@
 				<Code>N</Code>
 				<Text>Not Sighted or Not Provided</Text>
 			</Value>
-			 
 		</Values>
 	</CodeSet>
 	<CodeSet>
@@ -7203,6 +7210,10 @@
 			<Value>
 				<Code>13</Code>
 				<Text>Nephew/Niece</Text>
+			</Value>
+			<Value>
+				<Code>14</Code>
+				<Text>Step-Sibling</Text>
 			</Value>
 			<Value>
 				<Code>00</Code>
@@ -8165,6 +8176,11 @@
     </Intro>
 		<ID>Year Level Code</ID>
 		<Values>
+			<Value>
+				<Code>0</Code>
+				<Text>Year 1 minus 1</Text>
+				<Description>For use for AG Collection Reporting. Full time Education Pre Year 1, equivalent to Year Level 1 minus 1, also known for AG purposes as Foundation</Description>
+			</Value>
 			<Value>
 				<Code>1</Code>
 				<Text>Year 1</Text>
@@ -9371,13 +9387,12 @@
 			</Value>
 			<Value>
 				<Code>T</Code>
-				<Text>Technology</Text>
+				<Text>Technologies</Text>
 			</Value>
 			<Value>
 				<Code>W</Code>
 				<Text>Work Studies</Text>
 			</Value>
-			
 			<!-- Additional Values added to this Code Set are necessary as the Australian Curriculum is for P-10 only -->
 			<Value><Code>ReligousStudies</Code></Value>
 			<Value><Code>Other</Code></Value>
@@ -9828,7 +9843,6 @@
 			</Value>
 		</Values>
 	</CodeSet>
-	 
 <CodeSet>
 		<Intro>
 			<p>Status Codes associated with an AG Collection Submission.  Source: Australian Government - Schools Hub</p>
@@ -9958,31 +9972,6 @@
 				<Text>What is the education level of this location?</Text>
 				<Description>Acceptable Answers here are "Primary", "Secondary" or "Combined"</Description>
 			</Value>
-			<Value>
-				<Code>NGSC001</Code>
-				<Text>Did all enrolled students attend during the Census reference period?</Text>
-				<Description>Acceptable Answers here are "Yes" or "No"</Description>
-			</Value>
-			<Value>
-				<Code>NGSC002</Code>
-				<Text>Are all your students Australian citizens?</Text>
-				<Description>Acceptable Answers here are "Yes" or "No"</Description>
-			</Value>
-			<Value>
-				<Code>NGSC003</Code>
-				<Text>Do you have part time students?</Text>
-				<Description>Acceptable Answers here are "Yes" or "No"</Description>
-			</Value>
-			<Value>
-				<Code>NGSC004</Code>
-				<Text>Do you have boarding students?</Text>
-				<Description>Acceptable Answers here are "Yes" or "No"</Description>
-			</Value>
-			<Value>
-				<Code>NGSC005</Code>
-				<Text>Do you have distance education students?</Text>
-				<Description>Acceptable Answers here are "Yes" or "No"</Description>
-			</Value>
 		</Values>
 	</CodeSet>							
 	<CodeSet>
@@ -10008,6 +9997,6 @@
 				<Text>Student Attendance (STATS)</Text>
 			</Value>			
 		</Values>
-	</CodeSet>					
+	</CodeSet>							
 	
 </Grouping>

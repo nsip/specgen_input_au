@@ -158,12 +158,12 @@
 				<EntityName>XXX Secondary College</EntityName>
 				<EntityContact>
 					<Name Type="LGL">
-					  <FamilyName>Miller</FamilyName> <!-- Collection Contact Family Name -->
-					  <GivenName>James</GivenName> <!-- Collection Contact First Name -->
+					  <FamilyName>Citizen</FamilyName> <!-- Collection Contact Family Name -->
+					  <GivenName>John</GivenName> <!-- Collection Contact First Name -->
 					</Name>
 					<PositionTitle>Auditor</PositionTitle> <!-- Collection Contact Position -->
-					<Email Type="01">jmiller@lsc.vic.edu.au</Email> <!-- Collection Contact EmailAddress -->
-					<PhoneNumber Type="0096"><Number>03 9637-2000</Number></PhoneNumber> <!-- Collection Contact Phone Number -->
+					<Email Type="01">jcitizen@school.vic.edu.au</Email> <!-- Collection Contact EmailAddress -->
+					<PhoneNumber Type="0096"><Number>03 1234-5678</Number></PhoneNumber> <!-- Collection Contact Phone Number -->
 				</EntityContact>
 				<FQContextualQuestionList>
 					<FQContextualQuestion>
@@ -216,12 +216,12 @@
 				<EntityName>ABCXYZ Secondary College</EntityName>
 				<EntityContact>
 					<Name Type="LGL">
-						 <FamilyName>Miller</FamilyName>
-						 <GivenName>James</GivenName>
+						 <FamilyName>Citizen</FamilyName>
+						 <GivenName>John</GivenName>
 					</Name>
 					<PositionTitle>Auditor</PositionTitle>
-					<Email Type="01">jmiller@lsc.vic.edu.au</Email>
-					<PhoneNumber Type="0096"><Number>03 9637-2000</Number></PhoneNumber>
+					<Email Type="01">jcitizen@school.vic.edu.au</Email>
+					<PhoneNumber Type="0096"><Number>03 1234-5678</Number></PhoneNumber>
 				</EntityContact>
 				<FQContextualQuestionList>
 					<FQContextualQuestion>
@@ -271,12 +271,12 @@
 				<EntityName>Ballarat Diocese</EntityName>
 				<EntityContact>
 					<Name Type="LGL">
-					  <FamilyName>Miller</FamilyName>
-					  <GivenName>James</GivenName>
+					  <FamilyName>Citizen</FamilyName>
+					  <GivenName>John</GivenName>
 					</Name>
 					<PositionTitle>Auditor</PositionTitle>
-					<Email Type="01">jmiller@lsc.vic.edu.au</Email>
-					<PhoneNumber Type="0096"><Number>03 9637-2000</Number></PhoneNumber>
+					<Email Type="01">jcitizeb@school.vic.edu.au</Email>
+					<PhoneNumber Type="0096"><Number>03 1234-5678</Number></PhoneNumber>
 				</EntityContact>
 				<FQContextualQuestionList>
 				  <FQContextualQuestion>

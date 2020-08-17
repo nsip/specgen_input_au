@@ -6,105 +6,40 @@
          xmlns="http://sifassociation.org/SpecGen">
 	
 	<p>This release contains the following significant updates and extensions to the SIF specification.</p>
-	<h3>Additions/Changes since 3.4.5 (August, 2019)</h3>
+	<h3>Additions/Changes since 3.4.6 (March, 2020)</h3>
 	<h4>New Objects</h4>
 	<ul>
-	<!--
-		<li>AGGetRounds to support Australian Government Collections - Proposed for Australian Government, Collections Projects</li>
-		<li>AGCensusSubmission to support Australian Government Collections - Proposed for Australian Government, Collections Projects</li> -->
-		<li>TimeTableContainer - Proposed out of investigation into publishing Timetables.  This object is considered <em>“experimental”</em>.</li>
+		<li>AddressCollection - Object for Australian Government collection submission collecting addresses of students from schools and school authorities</li>
+		<li>CensusCollection - Object for Australian Government collection submission collecting non-government school census information from schools and school authorities.</li>
+		<li>CollectionRound - Object reporting the rounds available for submission of a particular Australian Government (AG) Collection. Object is published by the Australian Government Schools hub.</li>
+		<li>CollectionStatus - Object reporting the processing status of a collection object submitted to the Australian Government. Object is published by the Australian Government collections hub.</li>
+		<li>FinancialQuestionnaireCollection - Object for Australian Government collection submission collecting financial information from schools and school authorities.</li>
+		<li>StudentAttendanceCollection - Object for Australian Government collection submission collecting Student Attendance Information. The Student Attendance Collection captures attendance information for each school location by cohort. A cohort comprises the combination of year level, gender and indigeneity. There are a maximum of six possible cohorts per year level (see Cohort attribute in table below). Data is submitted to the collection at two reporting periods (Semester 1 and Term 3). Student Attendance data is only captured for full-time students in Years 1 to 10.</li>
+		<li>LibraryPatronStatus - This object reports the current library status for the requested student or staff member. </li>
 	</ul>
 		<h4>New Types</h4>
 	<ul>
-		<li>KeyLearningArea – added to TeachingGroup Object</li>
-		<li>PaymentReceiptLineList – added to PaymentReceipt</li>
-		<li>AccountCodeList – added to PaymentReceipt</li>
-		<li>JournalAdjustmentList – added to Journal</li>
-		<li>TimeTableScheduleType – included in TimeTableContainer</li>
-		<!--
-		<li>AGContextualQuestionList – added for AG Collection Objects to set context</li> 
-		<li>AGRoundListType, AGRoundType – added for AG Collection Objects</li> -->
-		<li>AccountCodeList – added to Financial objects - Vic</li>
+		<li>Added for LibraryPatronStatus - LibraryTransactionListType, LibraryTransactionType, LibraryItemInfoType, CheckoutInfoType, FineInfoListType, FineInfoType, HoldInfoListType, HoldInfoType, LibraryMessageListType, LibraryMessageType </li>
+		<li>Added for all AG Collection Objects CollectionReportingListTypes</li>
 	</ul>
-	
-		<h4>New Elements</h4>
-	<ul>
-		<li>Invoice – LocalId, AccountCodeList</li>
-		<li>FinancialAccount – LocalId, AccountCode</li>
-		<li>PaymentReceipt – LocalId, PaymentReceiptLineList, AccountCodeList</li>
-		<li>PurchaseOrder – LocalId</li>
-		<li>VendorInfo – LocalId</li>
-		<li>Journal – LocalId, DebitAcdountCode, CreditAccountCode, JournalAdjustmentList</li>
-		<li>Debtor – LocalId</li>
-		<li>WellbeingResponse – LocalId</li>
-		<li>WellbeingAppeal – LocalId</li>
-		<li>PersonalisedPlan – LodalId</li>
-		<li>WellbeingCharacteristic – LocalId</li>
-		<li>WellbeingPersonLink – LocalId</li>
-		<!--
-		<li>FinancialQuestionnaireSubmission – RoundCode</li>
-		<li>AGStatusReport -RoundCode</li>
-		<li>AddressCollectionStudentType – ReportingParent2</li> -->
-		<li>PurchasingItemType - LocalItemId</li>
-	</ul>
-	
-		<!--
-	<h4>New CodeSets</h4>
-	
-	<ul>
-		<li>AGContextQuestion - for AG Collections</li>
-	</ul> -->
-
 	
 	<h4>New Enumerations</h4>
-	<ul>
-		<li>FinancialAccount - ClassType – enumeration “Other” added</li>
-		<li>PaymentReceipt - TransactionType - enumerations “Creditor Reverse Payment, Creditor Reverse Receipt, GL Reverse Payment, GL Reverse Receipt, GL Reverse Receipt, Debtor Reverse Payment, Debtor Reverse Receipt, Employee Payroll” added</li>
-	</ul>
-	
-		
 	<h4>Additions to CodeSets</h4>
 	
 	<ul>	
-		<h5>Addition of new Attendance Codes requested to support Covid-19 learning</h5>	
-		<li>Attendance Code - 624 - Remote learning (exceptional) added by request of Vic DET</li>
-		<li>Attendance Code - 623 - On-site program added by request of Vic DET</li>
-		<h5>Addition to Wellbeing Characteristic Classification for Dietary Preferences</h5>
-		<li>Wellbeing Characteristic Classification - DP- Dietary Preference Added</li>
-		<li>Wellbeing Characteristic Category - DP- Dietary Preference Added</li>
-		<li>Wellbeing Characteristic Sub-Category – additions to cater for; Vegetarian, Vegan, Pescatarian, Fruitarian, Kosher, Halal, Lacto-vegetarian, Ovo-lacto-vegetarian, Non-dairy and Lactose Free</li>
-		
-		<h5>Other CodeSet Additions</h5>
 
-		<li>PersonalisedPlanType - “W” – Welfare and “R” – Risk</li>
-		<li>NAPParticipationCode – “F” – Alternative Format</li>
-		<li>AustralianStandardClassificationOfCulturalAndEthnicGroups  - 1105</li>
-		<li>ActivityInvolvementCodeType – 101F, 1043, 1114, 1375, 1776</li>
-		<li>StateTerritoryCodeType – AAT</li>
-		<li>NameUsageType – PBN</li>
-		<li>VisaSubClassType - 191, 491, 494</li>
-		<li>FTPTStatusCodeType  -“9” – NotStated/Unknown</li>
-		<li>Supplementary values added to ACStrandType for ReligiousStudies and Other</li>
-		<li>Addition of “Combined” Primary and Secondary to Education Level Code Set for AG Collections</li>
-		<li>DisabilityLevelOfAdjustment – “None” – added for AG Collections</li>
-		<li>DisabilityCategory – “None” – added for AG Collections</li>
+		<li>Addition to Year Level Code- 0 Year Level 0 - added for AG Collections</li>	
+		<li>Addition to Relationship to Student - 14 Step-Sibling - added for NSW - school request</li>	
+		<li>Additions to Attendance Codes for COVID-19 - request from VIC DET - 625 Remote learning and 214 Sent home (COVID symptoms)</li>	
+
+
 	</ul>
-	
-	
-		<h4>Other Changes</h4>
+
+	<h4>Other Changes</h4>
 	<ul>
-		<li>AttendanceTimes in StudentAttendanceTimeList has been made “Optional”</li>
+		<li>Federal Electorate Codeset - Wakefield Deprecated</li>
+		<li>StudentPersonal- MostRecent - CensusAge Integer</li>
  	</ul>
    	
 	
-		<h4>Deletions</h4>
-	<ul>
-	   <p>Please note that the AG Collection objects have been removed from the initial 3.4.6 release due to changes that will be required for future functionality.  They will be added with an errata release when new changes have been tested and approved by stakeholders.</p>
-	<!--
-		<li>FinancialQuestionnaireSubmission – ReportingAuthority, ReportingAuthoritySystem, SystemSubmission, SubmissionContact, FQReportingComments</li>
-		<li>FQReportingType – FQRefId (Can never be supplied).</li>
-		<li>AGAddressCollectionSubmission – ReportingAuthority, ReportingAuthoritySystem, SystemSubmission, SubmissionContact, AddressCollectionComments</li>
-		<li>AddressCollectionReportingType – AddressCollectionRefId (Can never be supplied).</li> -->
-	</ul>
-		
 </Section>

@@ -83,6 +83,9 @@
 		<xi:include parse="text" href="Common/TimeTableContainer.xml"/>
 		<!-- delay this container till next release (3.4.7) The reference to a collection needs to be removed Option 2 - No RefId's valid here too
 		<xi:include parse="text" href="Common/ScheduledActivityContainer.xml"/>  -->
+				<!-- Library ?? -->
+		<xi:include parse="text" href="AU/LibraryPatronStatus.xml"/>
+
 	</Group>
 	<Group name="Finance">
 		<Intro>
@@ -148,7 +151,7 @@
 		<xi:include parse="text" href="Common/LearningStandardItem.xml"/>
 		<xi:include parse="text" href="Common/LearningResource.xml"/>
 		<xi:include parse="text" href="Common/LearningResourcePackage.xml"/>
-
+		
 	</Group>
 	<Group name = "NAPLAN">
 
@@ -190,18 +193,16 @@
 
 			<p><img src="images/Logical_AGCollections.png" alt="" /></p>
 			<p>This represents the current AG Data Collections represented in the SIF AU Data Model.</p>
-			<p>Please note that the AG Collection objects have been removed from the initial 3.4.6 release due to changes that will be required for future functionality. They will be added with an errata release when new changes have been tested and approved by stakeholders.</p>
-			<!--<p>Please note that the AG Collection objects have been added after the initial 3.4.6 release due to changes that were required for future functionality.</p>-->
+			<p>Please note that the AG Collection objects have been added after the initial 3.4.6 release and changes that were required for consistency and future functionality have been applied.</p>
 		</Intro>
-		
 		<!--AG Collections -->
-		<!--
 		
 		<xi:include parse="text" href="AU/FinancialQuestionnaireCollection.xml"/>
 		<xi:include parse="text" href="AU/CollectionStatus.xml"/>
 		<xi:include parse="text" href="AU/AddressCollection.xml"/>
+		<xi:include parse="text" href="AU/StudentAttendanceCollection.xml"/>
 		<xi:include parse="text" href="AU/CensusCollection.xml"/>
-		<xi:include parse="text" href="AU/CollectionRound.xml"/> -->
+		<xi:include parse="text" href="AU/CollectionRound.xml"/>
 
 
 

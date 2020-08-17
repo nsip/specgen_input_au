@@ -9,7 +9,7 @@
 		<inputDocument>SIF_DataModel.xml</inputDocument>
 		<sifNamespace>http://www.sifassociation.org/datamodel/au/3.4</sifNamespace>
 		<localizationCode>au</localizationCode>
-		<schemaVersion>3.4.6</schemaVersion>
+		<schemaVersion>3.4.7</schemaVersion>
 		
 		<!-- Comment this one out to leave out JSON Tabs -->
 		
@@ -30,7 +30,7 @@
 		<htmlDocument>
 			<singleDocument>false</singleDocument>
 			<rootDocumentFileName>index.html</rootDocumentFileName>
-			<rootTitle>SIF Implementation Specification (Australia) 3.4.6</rootTitle>
+			<rootTitle>SIF Implementation Specification (Australia) 3.4.7</rootTitle>
 			<documentType>DataModel</documentType>
 		</htmlDocument>
 		
@@ -38,7 +38,7 @@
 		<htmlDocument>
 			<singleDocument>true</singleDocument>
 			<rootDocumentFileName>ImplementationSpecification.html</rootDocumentFileName>
-			<rootTitle>SIF Implementation Specification (Australia) 3.4.6</rootTitle>
+			<rootTitle>SIF Implementation Specification (Australia) 3.4.7</rootTitle>
 			<documentType>DataModel</documentType>
 		</htmlDocument>
 		
@@ -130,7 +130,8 @@
 	</xsdDocuments>	
  	 
 	<!-- Other outputs built using XSLT -->
-	<!-- <xsltTransformations>
+	<!--
+	<xsltTransformations>
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToJsonSchema.xsl</xsltInputFile>
 
@@ -138,21 +139,66 @@
 			<xsltOutputFile>jsonSchema.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>		
-
+ 
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToSwagger.xsl</xsltInputFile>
 
 			<xsltOutputDir>JSON</xsltOutputDir>
 			<xsltOutputFile>swagger.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
-		</xsltTransformation>		
+		</xsltTransformation>		 
 
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToOpenApi.xsl</xsltInputFile>
+
+			<xsltOutputDir>JSON</xsltOutputDir>
+			<xsltOutputFile>OpenAPI.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>		
+	</xsltTransformations>  -->
+	
+		<!-- Other outputs built using XSLT -->
+		 
+	<xsltTransformations>
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaCreate.xsl</xsltInputFile>
+
+			<xsltOutputDir>JSON</xsltOutputDir>
+			<xsltOutputFile>jsonSchemaCreate.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdate.xsl</xsltInputFile>
+
+			<xsltOutputDir>JSON</xsltOutputDir>
+			<xsltOutputFile>jsonSchemaUpdate.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaCreateStrict.xsl</xsltInputFile>
+
+			<xsltOutputDir>JSON</xsltOutputDir>
+			<xsltOutputFile>jsonSchemaCreate-strict.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+
+
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdateStrict.xsl</xsltInputFile>
+
+			<xsltOutputDir>JSON</xsltOutputDir>
+			<xsltOutputFile>jsonSchemaUpdate-strict.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+ 
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToOpenAPI.xsl</xsltInputFile>
 
 			<xsltOutputDir>JSON</xsltOutputDir>
 			<xsltOutputFile>OpenAPI.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
-		</xsltTransformation>		
-	</xsltTransformations> -->
+		</xsltTransformation>	
+	</xsltTransformations>
 </sifSpecificationGeneratorConfig>
