@@ -1,29 +1,5 @@
 <Grouping code="AUCodeSets" name="AU Code Sets">
 <CodeSet>
-	<Intro>Travel Mode - Introduced by CEM to indicate mode of travel of the student to/from school.  Initial release in 3.4.8</Intro>
-	<ID>Travel Mode</ID>
-	<Values>
-	<Value><Code>A</Code><Text>Walks between home or a carers' residence and school</Text></Value>	
-	<Value><Code>B</Code><Text>Rides a bicycle or scooter between home or carer's place and school</Text></Value>	
-	<Value><Code>C</Code><Text>Driven by car/motor vehicle between home or a carers' residence and school</Text></Value>	
-	<Value><Code>D</Code><Text>Bus to/from school gates (mostly by bus, remainder on foot)</Text></Value>	
-	<Value><Code>E</Code><Text>Tram to/from near school (mostly by tram, remainder on foot)</Text></Value>	
-	<Value><Code>F</Code><Text>Train to/from near the school (mostly by train, remainder on foot)</Text></Value>	
-	<Value><Code>G</Code><Text>Combination of car and public transport</Text></Value>	
-	<Value><Code>H</Code><Text>Combinations of public transport such as train and bus, or train and tram</Text></Value>	
-	<Value><Code>I</Code><Text>Taxi or other modes</Text></Value>
-	</Values>	
-</CodeSet>
-<CodeSet>
-<Intro>Accompaniment - Introduced by CEM to indicate whether or not the student is accompanied to/from school.  Initial release in 3.4.8</Intro>
-	<ID>Accompaniment</ID>
-	<Values>
-		<Value><Code>A</Code><Text>Adult Accompaniment</Text></Value>
-		<Value><Code>I</Code><Text>Independent</Text></Value>
-		<Value><Code>U</Code><Text>Unknown</Text></Value>
-	</Values>
-</CodeSet>
-<CodeSet>
       <Intro>
         <p>Wellbeing Characteristics - High Level.  Initially provided by WA.  This code set is in draft and changes are expected.  Future changes may re-specify code values.</p> 
       </Intro>
@@ -1257,7 +1233,7 @@
 			<p>1249.0 Australian Standard Classification of Cultural and Ethnic Groups, 2019</p>
 			<p>Source Data ABS: https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1249.02019?OpenDocument</p>
 		</Intro>
-		<ID>Australian Standard Classification Of Cultural And Ethnic Groups (ASCCEG)</ID>
+		<ID>Australian Standard Classification of Cultural and Ethnic Groups (ASCCEG)</ID>
  <Values><Value><Code>1101</Code><Text>Australian</Text></Value>
 <Value><Code>1102</Code><Text>Australian Aboriginal</Text></Value>
 <Value><Code>1103</Code><Text>Australian South Sea Islander</Text></Value>
@@ -3125,7 +3101,7 @@
 			<p>Source Data ABS: http://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1269.02016?OpenDocument</p>
 			<p>updated March 15, 2019</p>
 		</Intro>
-		<ID>Standard Australian Classification Of Countries (SACC)</ID>
+		<ID>Standard Australian Classification of Countries (SACC)</ID>
 	       <Values><Value><Code>1101</Code><Text>Australia</Text></Value>
 <Value><Code>1102</Code><Text>Norfolk Island</Text></Value>
 <Value><Code>1199</Code><Text>Australian External Territories, nec</Text></Value>
@@ -3853,7 +3829,7 @@
  </p>
 			<p>Source Data ABS: http://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1266.02016?OpenDocument</p>
 		</Intro>
-		<ID>Australian Standard Classification Of Religious Groups (ASCRG)</ID>
+		<ID>Australian Standard Classification of Religious Groups (ASCRG)</ID>
 		<Values>
 			<Value>
 				<Code>0001</Code>
@@ -6144,7 +6120,7 @@
 			<p>Source Data: http://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1267.02016?OpenDocument</p>
 			<p>This extract contains all 4 digit classifications and supplementary codes.</p>
 		</Intro>
-		<ID>Australian Standard Classification Of Languages (ASCL)</ID>
+		<ID>Australian Standard Classification of Languages (ASCL)</ID>
 <Values>
 <Value><Code>1101</Code><Text>Gaelic (Scotland)</Text></Value>
 <Value><Code>1102</Code><Text>Irish</Text></Value>
@@ -9335,10 +9311,8 @@
 				<Code>Content</Code>
 				<Text>A link to another state or school content standard.</Text>
 			</Value>
-			<Value>
-				<Code>Other</Code>
-				<Text>Any other type of relationship between the current standard and the target standard item.</Text>
-			</Value>
+			<Code>Other</Code>
+			<Text>Any other type of relationship between the current standard and the target standard item.</Text>
 			<Value>
 				<Code>PD</Code>
 				<Text>Personal Development</Text>
@@ -9711,7 +9685,7 @@
 		<Intro>
 			<p>Source: US 2.6 0209 Medium Of Instruction</p>
 		</Intro>
-		<ID>Medium Of Instruction</ID>
+		<ID>Medium of Instruction</ID>
 		<Values>
 			<Value>
 				<Code>0603</Code>

@@ -100,134 +100,6 @@
                 
       </CommonElement-->
       
-  <!-- Added for CEM Travel Details 3.4.8 -->
- 
-  <CommonElement name="HomeroomType" ype="true" dm="true">
-	  <Item>
-		<Element>HomeroomType</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-		  <p>Homeroom for this enrollment.</p>
-		</Description>
-		<Type ref="CommonTypes" relationship="records student homeroom as" count="1:?" name="IdRefType"></Type>
-	  </Item>
-	  <Item>
-		<Attribute>SIF_RefObject</Attribute>
-		<Characteristics>M</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-		  <p>The name of the object referenced.</p>
-		</Description>
-		<Values>
-		  <Value>
-			<Code>RoomInfo</Code>
-		  </Value>
-		</Values>
-	  </Item>
-  </CommonElement>
-  
-  <CommonElement name="StaffRefIdType" ype="true" dm="true">
-	  <Item>
-		<Element>StaffRefIdType</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-		  <p>Staff member assigned as an advisor.</p>
-		</Description>
-		<Type ref="CommonTypes" relationship="records student advisor as" count="1:?" name="IdRefType"></Type>
-	  </Item>
-	  <Item>
-		<Attribute>SIF_RefObject</Attribute>
-		<Characteristics>M</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-		  <p>The name of the object referenced.</p>
-		</Description>
-		<Values>
-		  <Value>
-			<Code>StaffPersonal</Code>
-		  </Value>
-		</Values>
-	  </Item>
- </CommonElement>
- <!-- Added for CEM Travel Details 3.4.8 --> 
-    <!--
-  <Travel> 
-       <ToSchool>
-             <TravelMode></TravelMode>
-             <Details></Details>
-             <Accompaniment></Accompaniment>
-       </ToSchool>
-       <FromSchool>
-             <TravelMode></TravelMode>
-             <Details></Details>
-             <Accompaniment></Accompaniment>
-       </FromSchool>
-</Travel>-->    
-
-
-
- <CommonElement name="TravelDetailsContainerType" type="true" dm="true">
-	<Item>
-		<Element>TravelDetailsContainerType</Element>
-		<Characteristics>O</Characteristics>
-		<Description>
-			<p>Container for elements information on how a student travels to and from school.</p>
-		</Description>
-	</Item>
-	<Item>
-		<Element>ToSchool</Element>
-		<Characteristics>O</Characteristics>
-		<Description>
-		  <p>Details on how a student travels to School</p>
-		</Description>
-		<Type ref="CommonTypes" name="SchoolTravelType"/>
-	</Item>
-		<Item>
-		<Element>FromSchool</Element>
-		<Characteristics>O</Characteristics>
-		<Description>
-		  <p>Details on how a student travels from School</p>
-		</Description>
-		<Type ref="CommonTypes" name="SchoolTravelType"/>
-	</Item>
-  </CommonElement>	
- 	
-   <CommonElement name="SchoolTravelType" type="true" dm="true">
-	<Item>
-		<Element>SchoolTravelType</Element>
-		<Characteristics>O</Characteristics>
-		<Description>
-			<p>Information on how a student travels to or from school.</p>
-		</Description>
-	</Item>
-	<Item>
-		<Element>TravelMode</Element>	
-    	<Characteristics>O</Characteristics>
-		<Description>
-		  <p>Mode of travel used</p>
-		</Description>
-		<Type ref="CodeSets" name="AUCodeSetsTravelModeType"/>
-	</Item>
-	<Item>
-		<Element>Details</Element>	
-    	<Characteristics>O</Characteristics>
-		<Description>
-		  <p>Further information on travel</p>
-		</Description>
-		<Type name="xs:normalizedString"/>
-	</Item>
-	<Item>
-		<Element>TravelAccompaniment</Element>	
-    	<Characteristics>O</Characteristics>
-		<Description>
-		  <p>Status of student's accompaniment</p>
-		</Description>
-		<Type ref="CodeSets" name="AUCodeSetsAccompanimentType"/>
-	</Item>
-  </CommonElement>
-  	
   <!-- Added for Library Patron Status -->
     <CommonElement name="LibraryTransactionListType" type="true" dm="true">
     <Item>
@@ -4976,6 +4848,9 @@
 		<Description>Domain of the NAP test. Values: Writing, Reading, Language Conventions - Spelling, Language Conventions - Grammar and Punctuation, Numeracy.</Description>
 		<Characteristics>M</Characteristics>
 		<Type ref="CodeSets" name="AUCodeSetsNAPTestDomainType"/>
+		<Description>
+		  <p></p>
+		</Description>
    </Item>
  
     <Item>
@@ -11729,14 +11604,6 @@
 		</Description>
 		<Type name="xs:date"/>
 	</Item>
-		<Item>
-		<Element>Deceased</Element>
-		<Characteristics>O</Characteristics>
-		<Description>
-			<p>Indicator if the person is known to be deceased.</p>
-		</Description>
-		<Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"/>
-	</Item>
 	<Item>
 		<Element>BirthDateVerification</Element>
 		<Characteristics>O</Characteristics>
@@ -11948,7 +11815,6 @@
 			<IndigenousStatus>3</IndigenousStatus>
 			<Sex>1</Sex>
 			<BirthDate>1990-09-26</BirthDate>
-			<Deceased>Y</Deceased>
 			<BirthDateVerification>1004</BirthDateVerification>
 			<PlaceOfBirth>Clayton</PlaceOfBirth>
 			<StateOfBirth>VIC</StateOfBirth>

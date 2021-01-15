@@ -1,9 +1,10 @@
 
 <Grouping code="ISO" name="International Standards Organization (ISO)">
 
+<!-- Changed to upper case for 3.4.8 api -->
 
   <CodeSet>
-    <ID>4217 Currency names and code elements</ID>
+    <ID>4217 Currency Names And Code Elements</ID>
     <Values>
       <Value>
         <Code>AED</Code>

@@ -67,16 +67,6 @@
     <Type ref="CommonTypes" relationship="records enrollment of student in" count="1:1" name="IdRefType"></Type>
   </Item>
   <Item>
- 
-
-    <Element>MembershipType</Element>
-    <Characteristics>M</Characteristics>
-	<privacyRating>Low</privacyRating>
-    <Description>
-      <p>The type of this enrollment as it relates to the school identified in SchoolInfoRefId.</p>
-    </Description>
-    <Type ref="CodeSets" name="AUCodeSetsSchoolEnrollmentTypeType"></Type>
-  </Item>
   
      <Item>
 		<Element>LocalId</Element>
@@ -87,6 +77,15 @@
 		</Description>
 		<Type ref="CommonTypes" name="LocalId"/> 
 	</Item>
+
+    <Element>MembershipType</Element>
+    <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>The type of this enrollment as it relates to the school identified in SchoolInfoRefId.</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsSchoolEnrollmentTypeType"></Type>
+  </Item>
   <Item>
 
     <Element>TimeFrame</Element>
@@ -148,7 +147,20 @@
     <Description>
       <p>Homeroom for this enrollment.</p>
     </Description>
-    <Type ref="CommonTypes" name="HomeroomType"></Type>
+    <Type ref="CommonTypes" relationship="records student homeroom as" count="1:?" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Attribute>SIF_RefObject</Attribute>
+    <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>The name of the object referenced.</p>
+    </Description>
+    <Values>
+      <Value>
+        <Code>RoomInfo</Code>
+      </Value>
+    </Values>
   </Item>
   <Item>
     <Element>Advisor</Element>
@@ -157,17 +169,44 @@
     <Description>
       <p>Staff member assigned as an advisor.</p>
     </Description>
-    <Type ref="CommonTypes"  name="StaffRefIdType"></Type>
+    <Type ref="CommonTypes" relationship="records student advisor as" count="1:?" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Attribute>SIF_RefObject</Attribute>
+    <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>The name of the object referenced.</p>
+    </Description>
+    <Values>
+      <Value>
+        <Code>StaffPersonal</Code>
+      </Value>
+    </Values>
   </Item>
   <Item>
     <Element>Counselor</Element>
     <Characteristics>O</Characteristics>
 	<privacyRating>Low</privacyRating>
     <Description>
-      <p>Staff member assigned as counselor.</p>
+      <p>Staff member assigned as an advisor.</p>
     </Description>
-    <Type ref="CommonTypes" name="StaffRefIdType"></Type>
+    <Type ref="CommonTypes" relationship="records student counselor as" count="1:?" name="IdRefType"></Type>
   </Item>
+  <Item>
+    <Attribute>SIF_RefObject</Attribute>
+    <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>The name of the object referenced.</p>
+    </Description>
+    <Values>
+      <Value>
+        <Code>StaffPersonal</Code>
+      </Value>
+    </Values>
+  </Item>
+
   <Item>
     <Element>Homegroup</Element>
     <Characteristics>O</Characteristics>
@@ -541,16 +580,6 @@
     </Description>
     <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
   </Item>   
-  <!-- Added for CEM Travel Mode requirements, 3.4.8 -->
-  <Item>
-	<Element>TravelDetails</Element>
-    <Characteristics>O</Characteristics>
-	<privacyRating>High</privacyRating>
-    <Description>
-      <p>Information on a student's travel to and from school.</p>
-    </Description>
-    <Type ref="CommonTypes" name="TravelDetailsContainerType"></Type> 
-  </Item> 
   <Item>   
     <Element>LocalCodeList</Element>
     <Characteristics>O</Characteristics>
@@ -585,7 +614,6 @@
       </YearLevel>
       <Homeroom SIF_RefObject="RoomInfo">D7510D3E-34B3-591A-8C3D-00AA001A1651</Homeroom>
       <Advisor SIF_RefObject="StaffPersonal">B359D3E3-4D75-101A-8C3D-00AA001A1652</Advisor>
-      <Counselor SIF_RefObject="StaffPersonal">B459D3E3-4D75-101A-8C3D-00AA001A1653</Counselor>
       <ExitType>
         <Code>1909</Code>
         <OtherCodeList>

@@ -1,3 +1,4 @@
+<!-- Leave out these 2 packages for 3.4.8
 
 <CommonElement name="ReportPackageType" type="true">
   <Item>
@@ -13,6 +14,8 @@
   </Item>
 </CommonElement>
 
+-->
+<!--
 <CommonElement type="true" name="AbstractContentPackageType">
   <Key>@RefId</Key>
   <Item>
@@ -177,7 +180,7 @@
   </Choice>
   
 </CommonElement>
-
+-->
 <CommonElement type="true" name="AbstractContentElementType">
 		  <Item>
 			<Element>AbstractContentElementType</Element>
@@ -187,6 +190,14 @@
 			  </p>
 			</Description>
 		  </Item>
+		  	<!-- RefId added for replacement of abstractcontenttype -->
+	<Item>
+		<Attribute>RefId</Attribute>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>The GUID of the Object</Description>
+		<Type ref="CommonTypes" name="RefIdType"></Type>
+	</Item>
 		  <Choice>
 			<Item>
 			  <Element>XMLData</Element>
