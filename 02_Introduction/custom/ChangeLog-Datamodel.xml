@@ -6,40 +6,54 @@
          xmlns="http://sifassociation.org/SpecGen">
 	
 	<p>This release contains the following significant updates and extensions to the SIF specification.</p>
-	<h3>Additions/Changes since 3.4.6 (March, 2020)</h3>
+	<h3>Additions/Changes since 3.4.7 August, 2020)</h3>
 	<h4>New Objects</h4>
 	<ul>
-		<li>AddressCollection - Object for Australian Government collection submission collecting addresses of students from schools and school authorities</li>
-		<li>CensusCollection - Object for Australian Government collection submission collecting non-government school census information from schools and school authorities.</li>
-		<li>CollectionRound - Object reporting the rounds available for submission of a particular Australian Government (AG) Collection. Object is published by the Australian Government Schools hub.</li>
-		<li>CollectionStatus - Object reporting the processing status of a collection object submitted to the Australian Government. Object is published by the Australian Government collections hub.</li>
-		<li>FinancialQuestionnaireCollection - Object for Australian Government collection submission collecting financial information from schools and school authorities.</li>
-		<li>StudentAttendanceCollection - Object for Australian Government collection submission collecting Student Attendance Information. The Student Attendance Collection captures attendance information for each school location by cohort. A cohort comprises the combination of year level, gender and indigeneity. There are a maximum of six possible cohorts per year level (see Cohort attribute in table below). Data is submitted to the collection at two reporting periods (Semester 1 and Term 3). Student Attendance data is only captured for full-time students in Years 1 to 10.</li>
-		<li>LibraryPatronStatus - This object reports the current library status for the requested student or staff member. </li>
+		<li>No new objects were added for this release</li>
 	</ul>
-		<h4>New Types</h4>
+	<h4>New Elements</h4>
 	<ul>
-		<li>Added for LibraryPatronStatus - LibraryTransactionListType, LibraryTransactionType, LibraryItemInfoType, CheckoutInfoType, FineInfoListType, FineInfoType, HoldInfoListType, HoldInfoType, LibraryMessageListType, LibraryMessageType </li>
-		<li>Added for all AG Collection Objects CollectionReportingListTypes</li>
+		<li>Deceased Flag – to indicate deceased status of a person at request of CEM.</li>
+		<li>Travel Mode to StudentSchoolEnrollment</li>
 	</ul>
 	
+	<h4>New Types</h4>
+	<ul>
+	<li>New Types: a) HomeRoomType b)StaffRefIdType added to correct Venetian Blind typing </li>
+	<li>New Types for Venetian Blind typing of SystemRole and ResourceUseage Objects</li>
+	<li>TravelDetailsContainerType and SchoolTravelType added to support CEM requirements around student travel arrangements.</li>
+    </ul>
 	<h4>New Enumerations</h4>
-	<h4>Additions to CodeSets</h4>
+	<ul><li>New enumeration added to the Sex Code Set to represent Victorian legislation, value added;  4 - Self-described</li></ul>
 	
+	<h5>New CodeSets added to support CEM Travel mode additions</h5>
 	<ul>	
-
-		<li>Addition to Year Level Code- 0 Year Level 0 - added for AG Collections</li>	
-		<li>Addition to Relationship to Student - 14 Step-Sibling - added for NSW - school request</li>	
-		<li>Additions to Attendance Codes for COVID-19 - request from VIC DET - 625 Remote learning and 214 Sent home (COVID symptoms)</li>	
-
-
+		<li>Travel Mode - Introduced by CEM to indicate mode of travel of the student to/from school.</li>
+		<li>Accompaniment - Introduced by CEM to indicate whether or not the student is accompanied to/from school.</li>
 	</ul>
 
 	<h4>Other Changes</h4>
 	<ul>
-		<li>Federal Electorate Codeset - Wakefield Deprecated</li>
-		<li>StudentPersonal- MostRecent - CensusAge Integer</li>
+		<li>FSystemRole and ResourceUsage Objects have been reformatted to Venetian Blind</li>
  	</ul>
    	
-	
+	<h4>Corrections</h4>
+	<ul>
+		<p>Several Types used in the AG Collections were changed to xs:unsignedInt as they are required to be positive integers.</p>
+		<li>Stats Collection (Attendance) - DaysInReferencePeriod, PossibleSchoolDays, AttendanceLess90Percent,	AttendanceGTE90Percent, PossibleSchoolDaysGT90PercentAttendance </li>
+		<li>Census collection: Student Reporting: Headcount, CensusAge;	Staff Reporting: Headcount; StudentSchoolEnrollment: CensusAge - was listed as a decimal, it is required to be a positive integer for AG reporting.</li>
+        <p>Code set corrections were as follows:</p>
+        <li>a) Correction of the description of NAP Jurisdiction enumerations.  Western Australia listed twice.  Code Set updated.</li>
+        <li>b) Correction of ill-formed value in LearningStandardItem Relationship Types enumeration set.</li>
+
+   </ul>
+   <h4>Deletions</h4>
+   <ul>
+   <p>AG have requested the following deletions:</p>
+   <li>AddressCollection: ReportingAuthorityCommonwealthId,	EntityLevel, SchoolInfoRefId, LocalId, StateProvinceId,	ACARAId</li>
+   <li>CensusCollection:  ReportingAuthorityCommonwealthId,	EntityLevel </li>
+   <li>FinancialQuestionnaireCollection:  ReportingAuthorityCommonwealthId,	EntityLevel, SchoolInfoRefId, LocalId, StateProvinceId, ACARAId </li>
+   <li>StudentAttendanceCollection:	ReportingAuthorityCommonwealthId, EntityLevel, SchoolInfoRefId, LocalId, StateProvinceId, ACARAId</li>
+   </ul>
+
 </Section>

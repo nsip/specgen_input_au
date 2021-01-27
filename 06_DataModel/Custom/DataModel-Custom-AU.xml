@@ -193,7 +193,7 @@
 
 			<p><img src="images/Logical_AGCollections.png" alt="" /></p>
 			<p>This represents the current AG Data Collections represented in the SIF AU Data Model.</p>
-			<p>Please note that the AG Collection objects have been added after the initial 3.4.6 release and changes that were required for consistency and future functionality have been applied.</p>
+			<p>Please note that the AG Collection objects have been updated after the initial 3.4.7 release and changes that were required for consistency and future functionality have been applied.  These changes are listed in 2.4 Highlighed Additions/Changes section.</p>
 		</Intro>
 		<!--AG Collections -->
 		

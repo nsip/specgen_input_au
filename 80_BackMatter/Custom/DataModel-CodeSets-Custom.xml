@@ -679,8 +679,10 @@
     </CodeSet>
   <CodeSet>
       <Intro>
+			<p>The code that identifies the State and Territory level of Australian Government which exercises control over a particular institutional unit.</p>  
     		<p>This code set references AS4590 - Interchange of client information, 2017 - Australian Government Jurisdiction Code</p>
 			<p>This Australian Standard can be purchased here: https://www.standards.org.au/standards-catalogue/sa-snz/communication/it-004/as--4590-dot-1-colon-2017</p>
+			<p>Source Standard ABS 1218.0</p>	
       </Intro>
       <ID>NAP Jurisdiction</ID>
       <Values>
@@ -690,7 +692,7 @@
 		  <Value><Code>4</Code><Text>South Australia</Text></Value>
  		  <Value><Code>5</Code><Text>Western Australia</Text></Value>
 		  <Value><Code>6</Code><Text>Tasmania</Text></Value>
-   		  <Value><Code>7</Code><Text>Western Australia</Text></Value>
+   		  <Value><Code>7</Code><Text>Northern Territory</Text></Value>
 		  <Value><Code>8</Code><Text>Australian Capital Territory</Text></Value>
 		  <Value><Code>9</Code><Text>Other Territories</Text></Value>
       </Values>
@@ -8172,6 +8174,7 @@
 		<Intro>
 			<p>Reference:ACARA Data Standards Manual - Technical Specs - Sex</p>
 			<p>https://www.acara.edu.au/reporting/data-standards-manual-student-background-characteristics</p>
+			<p>Vic DET - https://www.vic.gov.au/victorian-family-violence-data-collection-framework/data-collection-standards-lesbian-gay-bisexual</p>
 		</Intro>
 		<ID>Sex Code</ID>
 		<Values>
@@ -8188,10 +8191,14 @@
 				<Text>Intersex or indeterminate</Text>
 			</Value>
 			<Value>
+				<Code>4</Code>
+				<Text>Self-described</Text>
+				<Description>https://www.vic.gov.au/victorian-family-violence-data-collection-framework/data-collection-standards-lesbian-gay-bisexual</Description>
+			</Value>	
+			<Value>
 				<Code>9</Code>
 				<Text>Not Stated/Inadequately Described</Text>
 			</Value>
-		 
 		</Values>
 	</CodeSet>
 	<CodeSet>

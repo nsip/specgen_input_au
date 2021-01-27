@@ -56,7 +56,9 @@
 	  <Description>System of Reporting Authority if Systemic.</Description>
 	  <Type name="xs:normalizedString"></Type>
   </Item>
--->
+--> 
+<!-- Removal of this ID, means that it must be known by the AG, this is not reccomended, however, it is requested by stakeholder. -->
+  <!-- 
   <Item>
     <Element>ReportingAuthorityCommonwealthId</Element>
     <Characteristics>M</Characteristics>
@@ -67,7 +69,7 @@
     <Type name="xs:normalizedString"></Type>
   </Item>
   
-  <!--
+
   <Item>
   	  <Element>SystemSubmission</Element>
 	  <Characteristics>O</Characteristics>
@@ -142,19 +144,13 @@
     <FinancialQuestionnaireCollection RefId="D3E34B35-9D75-101A-8C3D-00AA001A1652">
 		<FQYear>2018</FQYear> <!-- Data Year -->
 		<RoundCode>FQ1</RoundCode>
-		<ReportingAuthorityCommonwealthId>012345</ReportingAuthorityCommonwealthId>
 		<SoftwareVendorInfo>  <!--Optional information about the Vendor -->
 			<SoftwareProduct>MYOB</SoftwareProduct>
 			<SoftwareVersion>11.0</SoftwareVersion>
 		</SoftwareVendorInfo>
 		<FQReportingList> 
 			<FQReporting>
-				<EntityLevel>School</EntityLevel>
-				<SchoolInfoRefId>C4D54B35-9D75-101A-8C3D-00AA001A1689</SchoolInfoRefId>  <!-- Optional - if it exists.  If a School will be a SchoolInfoRefId -->
-				<LocalId>01011234</LocalId>
-				<StateProvinceId>01011234</StateProvinceId>
 				<CommonwealthId>012345</CommonwealthId> <!-- AGEID -->
-				<ACARAId>1234</ACARAId>
 				<EntityName>XXX Secondary College</EntityName>
 				<EntityContact>
 					<Name Type="LGL">
@@ -207,12 +203,7 @@
 				</AGRuleList>
 		  </FQReporting>
 		  <FQReporting> 
-				<EntityLevel>School</EntityLevel>
-				<SchoolInfoRefId>C4D54B35-9D75-101A-8C3D-00AA001A1688</SchoolInfoRefId>
-				<LocalId>01011234</LocalId>
-				<StateProvinceId>45645567</StateProvinceId>
 				<CommonwealthId>12387</CommonwealthId>
-				<ACARAId>99007</ACARAId>
 				<EntityName>ABCXYZ Secondary College</EntityName>
 				<EntityContact>
 					<Name Type="LGL">
@@ -264,9 +255,6 @@
 				</AGRuleList>
 			</FQReporting>
 		    <FQReporting> 
-				<EntityLevel>Diocese</EntityLevel>
-				<LocalId>01011235</LocalId>
-				<StateProvinceId>45645568</StateProvinceId>
 				<CommonwealthId>12388</CommonwealthId>
 				<EntityName>Ballarat Diocese</EntityName>
 				<EntityContact>

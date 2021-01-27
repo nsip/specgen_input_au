@@ -100,13 +100,173 @@
                 
       </CommonElement-->
       
-  <!-- Added for CEM Travel Details 3.4.8 -->
+ <!-- Added for 3.4.8 for Venetian Blind patterning in the ResourceUsage Object -->
  
-  <CommonElement name="HomeroomType" ype="true" dm="true">
+ <CommonElement name="ResourceUsageContentTType" type="true" dm="true">
+  <Item>
+    <Element>ResourceUsageContentTType</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Container of Information about the ResourceUsage.</p>
+    </Description>
+  </Item>
+   <Item>
+    <Element>Code</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Codeset for type of resource being tracked.</p>
+    </Description>
+    <Type ref="CodeSets" name='AUCodeSetsResourceUsageContentTypeType'/>
+  </Item>
+  <Item>
+    <Element>LocalDescription</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Local description of type of resource being tracked.</p>
+    </Description>
+    <Type name="xs:string"></Type>
+  </Item>
+ </CommonElement> 
+ <CommonElement name="ResourceReportColumnListType" type="true" dm="true">
+  <Item>
+      <Element>ResourceReportColumnListType</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+         <p>Definitions of the values given in ResourceReportList/ ResourceReport/ ReportRow.</p>
+      </Description>
+      <List mode="List">
+      </List>
+    </Item>
+    <Item>
+       <Element>ResourceReportColumn</Element>
+       <Characteristics>MR</Characteristics>
+       <Description>
+         <p>Definition of a single value given in ResourceReportList/ ResourceReport/ ReportRow; the value definitions in ReportColumnList appear in the same order as they do in ReportRow.</p>
+       </Description>
+       <Type ref="CommonTypes" name="ResourceReportColumnType"/>
+    </Item>
+    </CommonElement>
+    <CommonElement name="ResourceReportColumnType" type="true" dm="true">
+    <Item>
+       <Element>ResourceReportColumnType</Element>
+       <Description>
+         <p>Definition of a single value given in ResourceReportList/ ResourceReport/ ReportRow; the value definitions in ReportColumnList appear in the same order as they do in ReportRow.</p>
+       </Description>
+    </Item>   
+    <Item>
+		<Element>ColumnName</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+		  <p>Name of a ReportRow value.</p>
+		</Description>
+		<Type name="xs:normalizedString"></Type>
+    </Item>
+  
+	  <Item>
+		<Element>ColumnDescription</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+		  <p>Description of a ReportRow value.</p>
+		</Description>
+		<Type name="xs:normalizedString"></Type>
+	  </Item>
+	  <Item>
+		<Element>ColumnDelimiter</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+		  <p>Delimiter separating this ReportRow value from the next; is assumed by default to be ",", with CSV parsing rules.</p>
+		</Description>
+		<Type name="xs:normalizedString"></Type>
+	  
+	  </Item> 
+  </CommonElement>	
+   <CommonElement name="ResourceReportLineListType" type="true" dm="true">
+     <Item>
+      <Element>ResourceReportLineListType</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+         <p>List of resource reports, one per user.</p>
+      </Description>
+      <List mode="List">
+      </List>
+    </Item>
+   <Item>
+		<Element>ResourceReportLine</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>List of resource reports, one per user.</Description>
+		<Type ref="CommonTypes" name="ResourceReportLineType"/> 
+  </Item>
+  </CommonElement>
+   <CommonElement name="ResourceReportLineType" type="true" dm="true">
+      <Item>
+		<Element>ResourceReportLineType</Element>
+		<Description>List of resource reports, one per user.</Description>
+  </Item>
+  <Item>
+		<Element>SIF_RefId</Element>
+		<Characteristics>O</Characteristics>
+		<Description>SIF RefId that identifies the student, staff or group whose usage is being tracked.</Description>
+		 <Type name="IdRefType"></Type> 
+  </Item>
+  <Item>
+    <Attribute>SIF_RefObject</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>
+        The type of SIF object that the <code>ReportUserRefId</code> attribute identifies.
+     </p>
+    </Description>
+    <Values>
+      <Value>
+        <Code>StudentPersonal</Code>
+      </Value>
+      <Value>
+        <Code>StaffPersonal</Code>
+      </Value>
+      <Value>
+        <Code>TeachingGroup</Code>
+      </Value>
+    </Values>
+  </Item>
+  
+   <Item>
+    <Element>StartDate</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Starting date for reporting period of resource usage.</p>
+    </Description>
+    <Type name='xs:date'/>
+  </Item>
+  <Item>
+    <Element>EndDate</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>End date for reporting period of resource usage.</p>
+    </Description>
+    <Type name='xs:date'/>
+  </Item>
+  <Item>
+    <Element>CurrentCost</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Current cost of reported resource usage.</p>
+    </Description>
+    <Type ref='CommonTypes' name='MonetaryAmountType'/>
+  </Item>
+   <Item>
+    <Element>ReportRow</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Key of report-specific values, defined in ReportColumn</p>
+    </Description>
+   	<Type name="xs:normalizedString"></Type>
+  </Item>  
+  </CommonElement>
+  
+  <CommonElement name="HomeroomType" type="true" dm="true">
 	  <Item>
 		<Element>HomeroomType</Element>
 		<Characteristics>O</Characteristics>
-		<privacyRating>Low</privacyRating>
 		<Description>
 		  <p>Homeroom for this enrollment.</p>
 		</Description>
@@ -115,7 +275,6 @@
 	  <Item>
 		<Attribute>SIF_RefObject</Attribute>
 		<Characteristics>M</Characteristics>
-		<privacyRating>Low</privacyRating>
 		<Description>
 		  <p>The name of the object referenced.</p>
 		</Description>
@@ -127,11 +286,10 @@
 	  </Item>
   </CommonElement>
   
-  <CommonElement name="StaffRefIdType" ype="true" dm="true">
+  <CommonElement name="StaffRefIdType" type="true" dm="true">
 	  <Item>
 		<Element>StaffRefIdType</Element>
 		<Characteristics>O</Characteristics>
-		<privacyRating>Low</privacyRating>
 		<Description>
 		  <p>Staff member assigned as an advisor.</p>
 		</Description>
@@ -140,7 +298,6 @@
 	  <Item>
 		<Attribute>SIF_RefObject</Attribute>
 		<Characteristics>M</Characteristics>
-		<privacyRating>Low</privacyRating>
 		<Description>
 		  <p>The name of the object referenced.</p>
 		</Description>
@@ -151,6 +308,162 @@
 		</Values>
 	  </Item>
  </CommonElement>
+ 
+  <!-- Added for 3.4.8 for Venetian Blind patterning in the SystemRole Object -->
+ <CommonElement name="SystemContextListType" type="true" dm="true">
+    <Item>
+      <Element>SystemContextListType</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+         <p>At least one SystemContext must be provided.</p>
+      </Description>
+      <List mode="List">
+      </List>
+    </Item>
+    <Item>
+       <Element>SystemContext</Element>
+       <Characteristics>MR</Characteristics>
+       <Description>
+         <p>Details about enterprise roles for an Identity/Personal Object for subscribing systems</p>
+       </Description>
+       <Type ref="CommonTypes" name="SystemContextType"/> 
+    </Item>
+    </CommonElement>
+    <CommonElement name="SystemContextType" type="true" dm="true"> 
+     <Item>
+        <Element>SystemContextType</Element>
+       <Description>
+         <p>Details about enterprise roles for an Identity/Personal Object for subscribing systems</p>
+       </Description>
+      </Item> 
+    <Item>
+      <Attribute>SystemId</Attribute>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Id of the system that this SystemContext relates to.</p>
+      </Description>
+      <Type name="xs:normalizedString"></Type>
+     </Item> 
+     
+    <Item>
+		<Element>RoleList</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+		  <p>List of Roles.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RoleListType"/>
+    </Item>
+   </CommonElement>
+  <CommonElement name="RoleListType" type="true" dm="true">
+     <Item> 
+     <Element>RoleListType</Element>
+     <Characteristics>O</Characteristics>
+     <Description>
+      <p>List of Roles.</p>
+     </Description>
+    <List mode="List"></List>
+    </Item>
+    <Item>
+    <Element>Role</Element>
+    <Characteristics>MR</Characteristics>
+    <Description>
+      <p>Role of the entity this object describes in the SystemContext.</p>
+    </Description>
+     <Type ref="CommonTypes" name="RoleType"/>  
+    </Item>
+  </CommonElement>
+  <CommonElement name="RoleType" type="true" dm="true">  
+  <Item>
+    <Element>RoleType</Element>
+    <Description>
+      <p>Role of the entity this object describes in the SystemContext.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>RoleId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Role of the entity this object describes in the SystemContext.</p>
+    </Description>
+    <ItemExample>Admin</ItemExample>
+    <ItemExample>User</ItemExample>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  <Item>
+      <Element>RoleScopeList</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p></p>
+      </Description>
+     <Type ref="CommonTypes" name="RoleScopeListType"/> 
+  </Item>
+  </CommonElement>
+  <CommonElement name="RoleScopeListType" type="true" dm="true">  
+    <Item>
+      <Element>RoleScopeListType</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p></p>
+      </Description>
+      <List mode="List">
+      </List>
+    </Item>
+    <Item>
+      <Element>RoleScope</Element>
+      <Characteristics>MR</Characteristics>
+      <Description>
+        <p>Container</p>
+      </Description>
+      <Type ref="CommonTypes" name="RoleScopeType"/> 
+    </Item>
+   </CommonElement>
+   <CommonElement name="RoleScopeType" type="true" dm="true">  
+    <Item>
+      <Element>RoleScopeType</Element>
+      <Characteristics>MR</Characteristics>
+      <Description>
+        <p>Container</p>
+      </Description>
+     
+    </Item>
+    <Item>
+      <Element>RoleScopeName</Element>
+      <Characteristics>C</Characteristics>
+      <Description>
+        <p>The group/OU this role is applicable to.</p>
+        <p>One of RoleScopeName or associated RefId must be provided.</p>
+      </Description>
+      <Type name="xs:normalizedString"></Type>
+    </Item>
+    <Item>
+      <Element>RoleScopeRefId</Element>
+      <Characteristics>C</Characteristics>
+      <Description>
+        <p>The  SIF_RefId that provides  the source Object for this RoleScope.</p>
+        <p>One of RoleScopeName or associated RefId must be provided.</p>
+      </Description>
+      <Type name="IdRefType"></Type>
+    </Item>
+    <Item>
+      <Attribute>SIF_RefObject</Attribute>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>The type of SIF object that the SIF_RefId attribute identifies.</p>
+      </Description>
+      <Values>
+        <Value>
+          <Code>SchoolInfo</Code>
+        </Value>
+        <Value>
+          <Code>TeachingGroup</Code>
+        </Value>
+        <Value>
+          <Code>StudentActivityParticipation</Code>
+        </Value>
+      </Values>
+    </Item>
+ </CommonElement>
+ 
  <!-- Added for CEM Travel Details 3.4.8 --> 
     <!--
   <Travel> 
@@ -211,7 +524,7 @@
 		<Type ref="CodeSets" name="AUCodeSetsTravelModeType"/>
 	</Item>
 	<Item>
-		<Element>Details</Element>	
+		<Element>TravelDetails</Element>	
     	<Characteristics>O</Characteristics>
 		<Description>
 		  <p>Further information on travel</p>
@@ -630,13 +943,13 @@
 				<p>The StudentAttendanceCollection being reported on.</p>
 			</Description>
 		</Item>
- 
+ <!-- AG asked for these to be removed from 3.4.8 -->
+ <!--
 	   <Item>
 		  <Element>EntityLevel</Element>
 		  <Characteristics>O</Characteristics>
 		  <privacyRating>Medium</privacyRating>
 		  <Description>Level of the Submission, current valid values "System", "Office", "Location", "Special School Location".</Description>
-		  <!-- Do we need to restrict the level in enumeration of the type? -->
 		  <Type name="xs:normalizedString"></Type>
 	  </Item>
 		<Item> 	
@@ -668,17 +981,16 @@
 		</Description>
 		<Type ref="CommonTypes" name="StateProvinceIdType"></Type>
 	  </Item>
-  
+  -->
 	  <Item>
 		<Element>CommonwealthId</Element>
 		<Characteristics>M</Characteristics>
-		<privacyRating>Low</privacyRating>
 		<Description>
 		  <p>Commonwealth identifier for this school/campus or entity being reported on.</p>
 		</Description>
 		<Type name="xs:normalizedString"></Type>
 	  </Item>
-  
+  <!--
 	   <Item>
 		<Element>ACARAId</Element>
 		<Characteristics>O</Characteristics>
@@ -687,19 +999,17 @@
 		  <p>ACARA identifier for this school/campus.</p>
 		</Description>
 		<Type name="xs:normalizedString"></Type>
-	  </Item>
+	  </Item> -->
   
 	  <Item>
 		  <Element>EntityName</Element>
 		  <Characteristics>O</Characteristics>
-		  <privacyRating>Medium</privacyRating>
 		  <Description>Name of the Entity who this submission is for, if a School, it will be the SchoolName.</Description>
 		  <Type name="xs:normalizedString"></Type>
 	  </Item> 
 	  <Item>
 		  <Element>EntityContact</Element>
 		  <Characteristics>M</Characteristics>
-		  <privacyRating>High</privacyRating>
 		  <Description>Information on the Contact for the submission.</Description>
 		  <Type ref="CommonTypes" name="EntityContactInfoType"></Type>
 	  </Item>
@@ -726,7 +1036,6 @@
 	  <Item>
 		<Element>StatsCohortYearLevelList</Element>    
 		<Characteristics>O</Characteristics>
-		<privacyRating>High</privacyRating>
 		<Description>
 		  <p>A list of co-horts being reported on for this collection.</p>
 		</Description>
@@ -858,7 +1167,7 @@
 			<Description>
 				<p>Number of school days for the cohort in Semester 1 / Term 3 (Cohort specific).Tested against expected norms, Warnings will be given for values at the extremes of the norm. Error is given if over the extreme end of the norm.</p>
 			</Description>
-			<Type name="xs:integer"></Type>
+			<Type name="xs:unsignedInt"></Type>
 		</Item>
 
 		<Item>
@@ -867,7 +1176,7 @@
 			<Description>
 				<p>Sum of days all students in the cohort are enrolled during the reference period. Refers to full-time students only in each Cohort. This field must not contain decimal points and must not be comma delimited.</p>
 			</Description>
-			<Type name="xs:integer"></Type>
+			<Type name="xs:unsignedInt"></Type>
 		</Item>
 		<Item>
 			<Element>AttendanceDays</Element>
@@ -887,7 +1196,7 @@
 			<Description>
 				<p>Count of full-time students in the cohort who attended school less than 90% of possible school days in the reference period. Number of students where (Attendance days ÷ Possible School Days) × 100 LT 90. The number must not be comma delimited</p>
 			</Description>
-			<Type name="xs:integer"></Type>
+			<Type name="xs:unsignedInt"></Type>
 		</Item>
 		<Item>
 			<Element>AttendanceGTE90Percent</Element>
@@ -895,7 +1204,7 @@
 			<Description>
 				<p>Count of full-time students in the cohort who attended school for 90% or more of the possible school days in the reference period. Number of students where (Attendance days ÷ Possible School Days) × 100 ≥ 90. The field must not be comma delimited.</p>
 			</Description>
-			<Type name="xs:integer"></Type>
+			<Type name="xs:unsignedInt"></Type>
 		</Item>
 		<Item>
 			<Element>PossibleSchoolDaysGT90PercentAttendance</Element>
@@ -903,7 +1212,7 @@
 			<Description>
 				<p>Sum of days enrolled for Students in the cohort with attendance rates of 90% or more. A subset of ‘Possible School Days’ used to calculate Full-time equivalent estimate. This field must not contain decimal points and must not be comma delimited.</p>
 			</Description>
-			<Type name="xs:integer"></Type>
+			<Type name="xs:unsignedInt"></Type>
 		</Item>
  </CommonElement>      
       
@@ -944,13 +1253,14 @@
     </Description>
     <Type ref="CommonTypes" name="IdRefType"></Type>
   </Item> -->
-  
+  <!-- AG requested these id's be removed from 3.4.8 -->
+  <!--
    <Item>
 	  <Element>EntityLevel</Element>
 	  <Characteristics>O</Characteristics>
 	  <privacyRating>Medium</privacyRating>
 	  <Description>Level of the Submission, current valid values "System", "Office", "Location", "Special School Location".</Description>
-	  <!-- Do we need to restrict the level in enumeration of the type? -->
+	   
 	  <Type name="xs:normalizedString"></Type>
   </Item>
 	<Item> 	
@@ -982,17 +1292,16 @@
     </Description>
     <Type ref="CommonTypes" name="StateProvinceIdType"></Type>
   </Item>
-  
+  -->
   <Item>
     <Element>CommonwealthId</Element>
     <Characteristics>M</Characteristics>
-	<privacyRating>Low</privacyRating>
     <Description>
       <p>Commonwealth identifier for this school/campus or entity being reported on.</p>
     </Description>
     <Type name="xs:normalizedString"></Type>
   </Item>
-  
+  <!--
    <Item>
     <Element>ACARAId</Element>
     <Characteristics>O</Characteristics>
@@ -1002,18 +1311,16 @@
     </Description>
     <Type name="xs:normalizedString"></Type>
   </Item>
-  
+  -->
   <Item>
 	  <Element>EntityName</Element>
 	  <Characteristics>O</Characteristics>
-	  <privacyRating>Medium</privacyRating>
 	  <Description>Name of the Entity who this submission is for, if a School, it will be the SchoolName.</Description>
 	  <Type name="xs:normalizedString"></Type>
   </Item> 
   <Item>
 	  <Element>EntityContact</Element>
 	  <Characteristics>M</Characteristics>
-	  <privacyRating>High</privacyRating>
 	  <Description>Information on the Contact for the submission.</Description>
 	  <Type ref="CommonTypes" name="EntityContactInfoType"></Type>
   </Item>
@@ -1021,7 +1328,6 @@
    <Item>
     <Element>AGContextualQuestionList</Element>    
     <Characteristics>O</Characteristics>
-	<privacyRating>High</privacyRating>
     <Description>
       <p>A list of questions to set the context for the AG Collection.</p>
     </Description>
@@ -1031,7 +1337,6 @@
   <Item>
     <Element>AddressCollectionStudentList</Element>    
     <Characteristics>O</Characteristics>
-	<privacyRating>High</privacyRating>
     <Description>
       <p>A list of Students being reported on for this Address Collection.</p>
     </Description>
@@ -1329,7 +1634,6 @@
    <Item>
 	  <Element>EntityLevel</Element>
 	  <Characteristics>O</Characteristics>
-	  <privacyRating>Medium</privacyRating>
 	  <Description>Level of the Submission, current valid values "System", "Office", "Location", "Special School Location".</Description>
 	  <!-- Do we need to restrict the level in enumeration of the type? -->
 	  <Type name="xs:normalizedString"></Type>
@@ -1369,7 +1673,6 @@
   <Item>
     <Element>CommonwealthId</Element>
     <Characteristics>M</Characteristics>
-	<privacyRating>Low</privacyRating>
     <Description>
       <p>Commonwealth identifier for this school/campus or entity being reported on.</p>
     </Description>
@@ -1389,14 +1692,12 @@
   <Item>
 	  <Element>EntityName</Element>
 	  <Characteristics>O</Characteristics>
-	  <privacyRating>Medium</privacyRating>
 	  <Description>Name of the Entity who this submission is for, if a School, it will be the SchoolName.</Description>
 	  <Type name="xs:normalizedString"></Type>
   </Item> 
   <Item>
 	  <Element>EntityContact</Element>
 	  <Characteristics>M</Characteristics>
-	  <privacyRating>High</privacyRating>
 	  <Description>Information on the Contact for the submission.</Description>
 	  <Type ref="CommonTypes" name="EntityContactInfoType"></Type>
   </Item>
@@ -1423,7 +1724,6 @@
   <Item>
     <Element>CensusStaffList</Element>    
     <Characteristics>O</Characteristics>
-	<privacyRating>High</privacyRating>
     <Description>
       <p>A list of Staff being reported on for this Census Collection.</p>
     </Description>
@@ -1432,7 +1732,6 @@
 <Item>
     <Element>CensusStudentList</Element>    
     <Characteristics>O</Characteristics>
-	<privacyRating>High</privacyRating>
     <Description>
       <p>A list of Students being reported on for this Census Collection.</p>
     </Description>
@@ -1469,7 +1768,6 @@
 		<Item>
 			<Element>StaffCohortId</Element>
 			<Characteristics>M</Characteristics>
-			<privacyRating>Low</privacyRating>
 			<Description>
 			  <p>The locally assigned identifier for this staff cohort.</p>
 			</Description>
@@ -1478,7 +1776,6 @@
 	  <Item>
 			<Element>StaffActivity</Element>
 			<Characteristics>M</Characteristics>
-			<privacyRating>Low</privacyRating>
 			<Description>
 			  <p>The major function which the staff members are spending their time performing e.g. teaching.  Limited to the values of 1100 - Teacher in school n.f.d., 1103 - Principal, 1200 -Specialist support in school n.f.d., 1300 - Administration and clerical in school n.f.d., 1400 - Building Operations in school n.f.d. for Census Reporting. </p>
 			</Description>
@@ -1531,7 +1828,6 @@
 	  	<Item>
 		<Element>PrimaryFTE</Element>
 		<Characteristics>O</Characteristics>
-		<privacyRating>Low</privacyRating>
 		<Description>
 		  <p>For each member of the cohort, on a full-time-equivalent basis, the proportion of the staff member’s job that goes toward supporting the primary school component of the location. For staff at combined (primary and secondary) locations, this field plus the secondary FTE field equals the total FTE for the staff member’s job. (Format is x.x, with a full time workload being equal to 1 FTE. Primary FTE plus Secondary FTE should not exceed 1.</p>
 		</Description>
@@ -1545,7 +1841,6 @@
 	<Item>
 		<Element>SecondaryFTE</Element>
 		<Characteristics>O</Characteristics>
-		<privacyRating>Low</privacyRating>
 		<Description>
 		  <p>For each member of the cohort, on a full-time-equivalent basis, the proportion of the staff member’s job that goes toward supporting the primary school component of the location. For staff at combined (primary and secondary) locations, this field plus the secondary FTE field equals the total FTE for the staff member’s job. (Format is x.x, with a full time workload being equal to 1 FTE. Primary FTE plus Secondary FTE should not exceed 1.</p>
 		</Description>
@@ -1559,7 +1854,6 @@
 	<Item>
 			<Element>JobFTE</Element>
 			<Characteristics>O</Characteristics>
-			<privacyRating>Low</privacyRating>
 			<Description>
 			  <p>The full-time-equivalent measure of the job for each member of the cohort. (Format is x.x, with a full time workload being equal to 1 FTE.) Note: This field is used instead of Primary FTE and Secondary FTE, where the client is a system or diocese office and is not a school location where primary or secondary education is delivered.</p>
 			</Description>
@@ -1583,11 +1877,10 @@
 		  <Item>
 			<Element>Headcount</Element>
 			<Characteristics>M</Characteristics>
-			<privacyRating>Low</privacyRating>
 			<Description>
 			  <p>Count of staff for this cohort.</p>
 			</Description>
-			<Type name="xs:integer"></Type>
+			<Type name="xs:unsignedInt"></Type>
 		  </Item>
     </CommonElement>	
     	
@@ -1603,7 +1896,6 @@
 	<Item>
 		<Element>PrimaryFTE</Element>
 		<Characteristics>O</Characteristics>
-		<privacyRating>Low</privacyRating>
 		<Description>
 		  <p>Full-time job equivalent ratio associated with teaching at the Primary level. (Format is x.xx; an employee who is full-time and who is 50% of their time on this assignment would be represented as 0.50)</p>
 		</Description>
@@ -1617,7 +1909,6 @@
 	<Item>
 		<Element>SecondaryFTE</Element>
 		<Characteristics>O</Characteristics>
-		<privacyRating>Low</privacyRating>
 		<Description>
 		  <p>Full-time job equivalent ratio associated with teaching at the Secondary level. (Format is x.xx; an employee who is full-time and who is 50% of their time on this assignment would be represented as 0.50)</p>
 		</Description>
@@ -1680,7 +1971,7 @@
 			<Description>
 				<p>Age of the Student calculated for Non-gov Census reporting. Age must be provided as on 1 July for the reporting year. </p>
 			</Description>
-			<Type name="xs:integer"/>
+			<Type name="xs:unsignedInt"/>
         </Item>
         <Item>
 			<Element>CohortGender</Element>
@@ -1842,11 +2133,10 @@
 		<Item>
 			<Element>Headcount</Element>
 			<Characteristics>M</Characteristics>
-			<privacyRating>Low</privacyRating>
 			<Description>
 			  <p>Count of students for this cohort.</p>
 			</Description>
-			<Type name="xs:integer"></Type>
+			<Type name="xs:unsignedInt"></Type>
 		  </Item>
     </CommonElement>		
      
@@ -1913,7 +2203,6 @@
 		<Item>
 			<Element>CommonwealthId</Element>
 			<Characteristics>M</Characteristics>
-			<privacyRating>Low</privacyRating>
 			<Description>
 			  <p>Commonwealth identifier for this school/campus or entity being reported on.</p>
 			</Description>
@@ -1922,21 +2211,18 @@
 		<Item>
 			<Element>EntityName</Element>
 		    <Characteristics>O</Characteristics>
-	        <privacyRating>Medium</privacyRating>
 	        <Description>Name of the Entity who this submission is for, if a School, it will be the SchoolName.</Description>
 	        <Type name="xs:normalizedString"></Type>
 	    </Item>   
 	    <Item>
 		  <Element>AGSubmissionStatusCode</Element>
 		  <Characteristics>M</Characteristics>
-		  <privacyRating>Low</privacyRating>
 		  <Description>AG Status Code of the entity's submission.</Description>
 		  <Type ref="CodeSets" name="AUCodeSetsAGSubmissionStatusType"/> 
 	    </Item>
 	    <Item>
 		  <Element>AGRuleList</Element>    
 	      <Characteristics>O</Characteristics>
-		  <privacyRating>High</privacyRating>
           <Description>
 			  <p>A list of Rules associated with this submission.</p>
 		  </Description>
@@ -1979,13 +2265,13 @@
     </Description>
     <Type ref="CommonTypes" name="IdRefType"></Type>
   </Item> -->
-  
+  <!--AG Asked for the following to be removed from 3.4.8 -->
+  <!--
    <Item>
 	  <Element>EntityLevel</Element>
 	  <Characteristics>M</Characteristics>
 	  <privacyRating>Medium</privacyRating>
 	  <Description>Level of the Submission, current valid values "School", "Diocese", "System".</Description>
-	  <!-- Do we need to restrict the level in enumeration of the type? -->
 	  <Type name="xs:normalizedString"></Type>
   </Item>
 	<Item> 	
@@ -2017,17 +2303,16 @@
     </Description>
     <Type ref="CommonTypes" name="StateProvinceIdType"></Type>
   </Item>
-  
+  -->
   <Item>
     <Element>CommonwealthId</Element>
     <Characteristics>M</Characteristics>
-	<privacyRating>Low</privacyRating>
     <Description>
       <p>Commonwealth identifier for this school/campus or entity being reported on.</p>
     </Description>
     <Type name="xs:normalizedString"></Type>
   </Item>
-  
+  <!--
    <Item>
     <Element>ACARAId</Element>
     <Characteristics>O</Characteristics>
@@ -2036,26 +2321,23 @@
       <p>ACARA identifier for this school/campus.</p>
     </Description>
     <Type name="xs:normalizedString"></Type>
-  </Item>
+  </Item> -->
   
   <Item>
 	  <Element>EntityName</Element>
 	  <Characteristics>O</Characteristics>
-	  <privacyRating>Medium</privacyRating>
 	  <Description>Name of the Entity who this submission is for, if a School, it will be the SchoolName.</Description>
 	  <Type name="xs:normalizedString"></Type>
   </Item> 
   <Item>
 	  <Element>EntityContact</Element>
 	  <Characteristics>M</Characteristics>
-	  <privacyRating>High</privacyRating>
 	  <Description>Information on the Contact for the submission.</Description>
 	  <Type ref="CommonTypes" name="EntityContactInfoType"></Type>
   </Item>
   <Item>
     <Element>FQContextualQuestionList</Element>    
     <Characteristics>O</Characteristics>
-	<privacyRating>High</privacyRating>
     <Description>
       <p>A list of Financial questions to set the context for the AG Collection.</p>
     </Description>
@@ -2064,7 +2346,6 @@
   <Item>
     <Element>FQItemList</Element>    
     <Characteristics>M</Characteristics>
-	<privacyRating>High</privacyRating>
     <Description>
       <p>A list of Financial Items being reported on for the AG Collection.</p>
     </Description>

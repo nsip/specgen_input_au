@@ -46,25 +46,9 @@
     <Description>
       <p>Information about the ResourceUsage.</p>
     </Description>
+    <Type ref="CommonTypes" name="ResourceUsageContentTType"/>
   </Item>
-   <Item>
-    <Element>/Code</Element>
-    <Characteristics>M</Characteristics>
-	<privacyRating>Low</privacyRating>
-    <Description>
-      <p>Codeset for type of resource being tracked.</p>
-    </Description>
-    <Type ref="CodeSets" name='AUCodeSetsResourceUsageContentTypeType'/>
-  </Item>
-  <Item>
-    <Element>/LocalDescription</Element>
-    <Characteristics>O</Characteristics>
-	<privacyRating>Low</privacyRating>
-    <Description>
-      <p>Local description of type of resource being tracked.</p>
-    </Description>
-    <Type name="xs:string"></Type>
-  </Item>
+
   <Item>
       <Element>ResourceReportColumnList</Element>
       <Characteristics>M</Characteristics>
@@ -72,49 +56,8 @@
       <Description>
          <p>Definitions of the values given in ResourceReportList/ ResourceReport/ ReportRow.</p>
       </Description>
-      <List mode="List">
-      </List>
+      <Type ref="CommonTypes" name="ResourceReportColumnListType"/>
     </Item>
-    <Item>
-       <Element>/ResourceReportColumn</Element>
-       <Characteristics>MR</Characteristics>
-	   <privacyRating>Low</privacyRating>
-       <Description>
-         <p>Definition of a single value given in ResourceReportList/ ResourceReport/ ReportRow; the value definitions in ReportColumnList appear in the same order as they do in ReportRow.</p>
-       </Description>
-   
-    </Item>
-    <Item>
-    <Element>//ColumnName</Element>
-    <Characteristics>M</Characteristics>
-	<privacyRating>Low</privacyRating>
-    <Description>
-      <p>Name of a ReportRow value.</p>
-    </Description>
-	<Type name="xs:normalizedString"></Type>
-  
-  </Item>
-  
-  <Item>
-    <Element>//ColumnDescription</Element>
-    <Characteristics>O</Characteristics>
-	<privacyRating>Low</privacyRating>
-    <Description>
-      <p>Description of a ReportRow value.</p>
-    </Description>
-	<Type name="xs:normalizedString"></Type>
-  
-  </Item>
-  <Item>
-    <Element>//ColumnDelimiter</Element>
-    <Characteristics>O</Characteristics>
-	<privacyRating>Low</privacyRating>
-    <Description>
-      <p>Delimiter separating this ReportRow value from the next; is assumed by default to be ",", with CSV parsing rules.</p>
-    </Description>
-	<Type name="xs:normalizedString"></Type>
-  
-  </Item>
   
     <Item>
       <Element>ResourceReportLineList</Element>
@@ -123,82 +66,9 @@
       <Description>
          <p>List of resource reports, one per user.</p>
       </Description>
-      <List mode="List">
-      </List>
+      <Type ref="CommonTypes" name="ResourceReportLineListType"/>
     </Item>
-   <Item>
-		<Element>/ResourceReportLine</Element>
-		<Characteristics>MR</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>List of resource reports, one per user.</Description>
-		 
-  </Item>
   
-  <Item>
-		<Element>//SIF_RefId</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>SIF RefId that identifies the student, staff or group whose usage is being tracked.</Description>
-		 <Type name="IdRefType"></Type> 
-  </Item>
-  <Item>
-    <Attribute>SIF_RefObject</Attribute>
-    <Characteristics>M</Characteristics>
-	<privacyRating>Low</privacyRating>
-    <Description>
-      <p>
-        The type of SIF object that the <code>ReportUserRefId</code> attribute identifies.
-     </p>
-    </Description>
-    <Values>
-      <Value>
-        <Code>StudentPersonal</Code>
-      </Value>
-      <Value>
-        <Code>StaffPersonal</Code>
-      </Value>
-      <Value>
-        <Code>TeachingGroup</Code>
-      </Value>
-    </Values>
-  </Item>
-  
-   <Item>
-    <Element>//StartDate</Element>
-    <Characteristics>M</Characteristics>
-	<privacyRating>Low</privacyRating>
-    <Description>
-      <p>Starting date for reporting period of resource usage.</p>
-    </Description>
-    <Type name='xs:date'/>
-  </Item>
-  <Item>
-    <Element>//EndDate</Element>
-    <Characteristics>O</Characteristics>
-	<privacyRating>Low</privacyRating>
-    <Description>
-      <p>End date for reporting period of resource usage.</p>
-    </Description>
-    <Type name='xs:date'/>
-  </Item>
-  <Item>
-    <Element>//CurrentCost</Element>
-    <Characteristics>M</Characteristics>
-	<privacyRating>Low</privacyRating>
-    <Description>
-      <p>Current cost of reported resource usage.</p>
-    </Description>
-    <Type ref='CommonTypes' name='MonetaryAmountType'/>
-  </Item>
-   <Item>
-    <Element>//ReportRow</Element>
-    <Characteristics>M</Characteristics>
-	<privacyRating>Low</privacyRating>
-    <Description>
-      <p>Key of report-specific values, defined in ReportColumn</p>
-    </Description>
-   	<Type name="xs:normalizedString"></Type>
-  </Item>
   <Item>   
     <Element>LocalCodeList</Element>
     <Characteristics>O</Characteristics>

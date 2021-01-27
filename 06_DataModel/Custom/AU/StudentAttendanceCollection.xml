@@ -40,7 +40,8 @@
 	  <Description>Identifies the reference period for the collection. Schools report each reference period as a separate submission at different times of the school year.</Description>
 	  <Type name="xs:normalizedString"></Type>
   </Item>
-
+<!-- Removal of this ID, means that it must be known by the AG, this is not reccomended, however, it is requested by stakeholder. -->
+<!--
   <Item>
     <Element>ReportingAuthorityCommonwealthId</Element>
     <Characteristics>O</Characteristics>
@@ -50,7 +51,7 @@
     </Description>
     <Type name="xs:normalizedString"></Type>
   </Item>
- 
+ -->
   <Item>
   	<Element>SoftwareVendorInfo</Element>
 	<Characteristics>O</Characteristics>
@@ -118,7 +119,6 @@
   <StudentAttendanceCollectionYear>2020</StudentAttendanceCollectionYear>
   <!-- Data Year -->
   <RoundCode>Semester1</RoundCode>
-  <ReportingAuthorityCommonwealthId>012345</ReportingAuthorityCommonwealthId>
   <SoftwareVendorInfo>
     <!--Optional information about the Vendor -->
     <SoftwareProduct>Software</SoftwareProduct>
