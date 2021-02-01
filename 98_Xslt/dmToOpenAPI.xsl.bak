@@ -709,7 +709,7 @@
 			<!-- Check if single end-points are excluded -->
 			<xsl:if test="not(contains($excludeOps,'all-single'))">
 				<xsl:if test="specgen:Key">
-					<xsl:value-of select="concat('  /', @name, 's/{', translate(specgen:Key, '@', ''), '}:&#x0a;')"/>
+					<xsl:value-of select="concat('  /', @name, 's/{', translate(specgen:Key[1], '@', ''), '}:&#x0a;')"/>
 	
 					<xsl:if test="not(contains($excludeOps,'put-single'))">
 						<!-- ====================================== -->
@@ -719,9 +719,9 @@
 						<xsl:value-of select="concat('      tags:&#x0a;      - ', $q, @name, $q, '&#x0a;')"/>
 						<xsl:value-of select="concat('      summary: Default operation to update a single ', @name, '&#x0a;')"/>
 						<xsl:value-of select="concat('      description: Default operation to update a single ', @name, '&#x0a;')"/>
-						<xsl:value-of select="concat('      parameters:&#x0a;      - name: ', translate(specgen:Key, '@', ''), '&#x0a;')"/>
+						<xsl:value-of select="concat('      parameters:&#x0a;      - name: ', translate(specgen:Key[1], '@', ''), '&#x0a;')"/>
 						<xsl:text>        in: path&#x0a;        description: >-&#x0a;          </xsl:text>
-						<xsl:apply-templates select="specgen:Item[specgen:Element=current()/specgen:Key]/specgen:Description"/><xsl:text>&#x0a;</xsl:text>
+						<xsl:apply-templates select="specgen:Item[specgen:Element=current()/specgen:Key[1]]/specgen:Description"/><xsl:text>&#x0a;</xsl:text>
 						<xsl:text>        required: true&#x0a;</xsl:text>
 						<xsl:text>        schema:&#x0a;</xsl:text>
 						<xsl:text>          type: string&#x0a;</xsl:text>
@@ -760,9 +760,9 @@
 						<xsl:value-of select="concat('      summary: Default operation to get a single ', @name, '&#x0a;')"/>
 						<xsl:value-of select="concat('      description: Default operation to get a single ', @name, '&#x0a;')"/>
 						<xsl:value-of select="concat('      operationId: get', @name, '&#x0a;')"/>
-						<xsl:value-of select="concat('      parameters:&#x0a;      - name: ', translate(specgen:Key, '@', ''), '&#x0a;')"/>
+						<xsl:value-of select="concat('      parameters:&#x0a;      - name: ', translate(specgen:Key[1], '@', ''), '&#x0a;')"/>
 						<xsl:text>        in: path&#x0a;        description: >-&#x0a;          </xsl:text>
-						<xsl:apply-templates select="specgen:Item[specgen:Element=current()/specgen:Key]/specgen:Description"/><xsl:text>&#x0a;</xsl:text>
+						<xsl:apply-templates select="specgen:Item[specgen:Element=current()/specgen:Key[1]]/specgen:Description"/><xsl:text>&#x0a;</xsl:text>
 						<xsl:text>        required: true&#x0a;</xsl:text>
 						<xsl:text>        schema:&#x0a;</xsl:text>
 						<xsl:text>          type: string&#x0a;</xsl:text>
@@ -796,9 +796,9 @@
 						<xsl:value-of select="concat('      summary: Default operation to delete a single ', @name, '&#x0a;')"/>
 						<xsl:value-of select="concat('      description: Default operation to delete a single ', @name, '&#x0a;')"/>
 						<xsl:value-of select="concat('      operationId: delete', @name, '&#x0a;')"/>
-						<xsl:value-of select="concat('      parameters:&#x0a;      - name: ', translate(specgen:Key, '@', ''), '&#x0a;')"/>
+						<xsl:value-of select="concat('      parameters:&#x0a;      - name: ', translate(specgen:Key[1], '@', ''), '&#x0a;')"/>
 						<xsl:text>        in: path&#x0a;        description: >-&#x0a;          </xsl:text>
-						<xsl:apply-templates select="specgen:Item[specgen:Element=current()/specgen:Key]/specgen:Description"/><xsl:text>&#x0a;</xsl:text>
+						<xsl:apply-templates select="specgen:Item[specgen:Element=current()/specgen:Key[1]]/specgen:Description"/><xsl:text>&#x0a;</xsl:text>
 						<xsl:text>        required: true&#x0a;</xsl:text>
 						<xsl:text>        schema:&#x0a;</xsl:text>
 						<xsl:text>          type: string&#x0a;</xsl:text>

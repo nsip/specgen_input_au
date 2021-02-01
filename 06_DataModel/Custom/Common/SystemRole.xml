@@ -42,29 +42,7 @@
       <Description>The SIF RefId that provides the source Object for this SystemRole Object.</Description>
       <Characteristics>M</Characteristics>
 	  <privacyRating>Low</privacyRating>
-      <Type ref="CommonTypes" name="IdRefType"/>
-    </Item>
-    <Item>
-      <Attribute>SIF_RefObject</Attribute>
-      <Characteristics>M</Characteristics>
-	  <privacyRating>Low</privacyRating>
-      <Description>
-        <p>The type of SIF object that the SIF_RefId attribute identifies.</p>
-      </Description>
-      <Values>
-        <Value>
-          <Code>Identity</Code>
-        </Value>
-        <Value>
-         <Code>StudentPersonal</Code>
-       </Value>
-       <Value>
-         <Code>StaffPersonal</Code>
-       </Value>
-       <Value>
-         <Code>StudentContactPersonal</Code>
-       </Value>     
-      </Values>
+      <Type ref="CommonTypes" name="SystemRoleObjectRefIdType"/>
     </Item>
     <Item>
       <Element>SystemContextList</Element>

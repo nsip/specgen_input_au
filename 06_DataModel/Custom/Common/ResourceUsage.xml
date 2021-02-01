@@ -46,7 +46,7 @@
     <Description>
       <p>Information about the ResourceUsage.</p>
     </Description>
-    <Type ref="CommonTypes" name="ResourceUsageContentTType"/>
+    <Type ref="CommonTypes" name="ResourceUsageContentTypeType"/>
   </Item>
 
   <Item>
@@ -125,7 +125,7 @@
 		  <StartDate>2011-03-18</StartDate>
 		  <EndDate>2011-04-17</EndDate>
 		  <CurrentCost Currency="AUD">5.43</CurrentCost>
-		  <ReportRow>name.surename.1,null,Year 10 Test,47,2</ReportRow>
+		  <ReportRow>name.surname.1,null,Year 10 Test,47,2</ReportRow>
 		  
     </ResourceReportLine>
     <ResourceReportLine>
@@ -133,7 +133,7 @@
       <StartDate>2011-03-18</StartDate>
       <EndDate>2011-04-17</EndDate>
       <CurrentCost Currency="AUD">0.00</CurrentCost>
-      <ReportRow>name.surename.2,cost waived,Year 10 Test,93,4</ReportRow>
+      <ReportRow>name.surname.2,cost waived,Year 10 Test,93,4</ReportRow>
       </ResourceReportLine>
   </ResourceReportLineList>
 </ResourceUsage> 

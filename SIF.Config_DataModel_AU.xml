@@ -30,7 +30,7 @@
 		<htmlDocument>
 			<singleDocument>false</singleDocument>
 			<rootDocumentFileName>index.html</rootDocumentFileName>
-			<rootTitle>SIF Implementation Specification (Australia) 3.4.7</rootTitle>
+			<rootTitle>SIF Implementation Specification (Australia) 3.4.8</rootTitle>
 			<documentType>DataModel</documentType>
 		</htmlDocument>
 		
@@ -38,7 +38,7 @@
 		<htmlDocument>
 			<singleDocument>true</singleDocument>
 			<rootDocumentFileName>ImplementationSpecification.html</rootDocumentFileName>
-			<rootTitle>SIF Implementation Specification (Australia) 3.4.7</rootTitle>
+			<rootTitle>SIF Implementation Specification (Australia) 3.4.8</rootTitle>
 			<documentType>DataModel</documentType>
 		</htmlDocument>
 		

@@ -18,7 +18,7 @@
      <p>Note: Due to the change above, the community agreed that general advice should be removed from useage of the object from 3.4.8.  The implications of this are;
       <ul>
       <li>StudentSchoolEnrollment may span one or many years</li>
-      <li>A consumer must look to entry and exit dates as well as TimeFrame to identify a “Current” student.</li>
+      <li>A consumer must look to entry and exit dates as well as <code>TimeFrame</code> to identify a 'Current' student.</li>
       <li>It will be up to the implementation to provide applications with advice.</li>
       <li>This does not impact on the data structure of the StudentSchoolEnrollment object itself.</li>
       </ul>
@@ -76,7 +76,7 @@
 		<Description>
 			<p>The locally-assigned identifier for this student enrollment.</p>
 		</Description>
-		<Type ref="CommonTypes" name="LocalId"/> 
+		<Type ref="CommonTypes" name="LocalIdType"/> 
 	</Item>
   <Item>
 

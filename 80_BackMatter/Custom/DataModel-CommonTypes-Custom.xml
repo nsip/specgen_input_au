@@ -102,9 +102,9 @@
       
  <!-- Added for 3.4.8 for Venetian Blind patterning in the ResourceUsage Object -->
  
- <CommonElement name="ResourceUsageContentTType" type="true" dm="true">
+ <CommonElement name="ResourceUsageContentTypeType" type="true" dm="true">
   <Item>
-    <Element>ResourceUsageContentTType</Element>
+    <Element>ResourceUsageContentTypeType</Element>
     <Characteristics>M</Characteristics>
     <Description>
       <p>Container of Information about the ResourceUsage.</p>
@@ -197,16 +197,11 @@
 		<Type ref="CommonTypes" name="ResourceReportLineType"/> 
   </Item>
   </CommonElement>
-   <CommonElement name="ResourceReportLineType" type="true" dm="true">
-      <Item>
-		<Element>ResourceReportLineType</Element>
-		<Description>List of resource reports, one per user.</Description>
-  </Item>
-  <Item>
-		<Element>SIF_RefId</Element>
-		<Characteristics>O</Characteristics>
+  <CommonElement name="ReportUserRefIdType" type="true" dm="true">
+       <Item>
+		<Element>ReportUserRefIdType</Element>
 		<Description>SIF RefId that identifies the student, staff or group whose usage is being tracked.</Description>
-		 <Type name="IdRefType"></Type> 
+		<Type ref='CommonTypes' name="IdRefType"></Type> 
   </Item>
   <Item>
     <Attribute>SIF_RefObject</Attribute>
@@ -228,7 +223,19 @@
       </Value>
     </Values>
   </Item>
-  
+  </CommonElement>
+   <CommonElement name="ResourceReportLineType" type="true" dm="true">
+      <Item>
+		<Element>ResourceReportLineType</Element>
+		<Description>List of resource reports, one per user.</Description>
+	  </Item>
+	  <Item>
+			<Element>SIF_RefId</Element>
+			<Characteristics>O</Characteristics>
+			<Description>SIF RefId that identifies the student, staff or group whose usage is being tracked.</Description>
+			<Type ref='CommonTypes' name="ReportUserRefIdType"></Type> 
+	  </Item>
+   
    <Item>
     <Element>StartDate</Element>
     <Characteristics>M</Characteristics>
@@ -310,6 +317,38 @@
  </CommonElement>
  
   <!-- Added for 3.4.8 for Venetian Blind patterning in the SystemRole Object -->
+  
+    <CommonElement name="SystemRoleObjectRefIdType" type="true" dm="true">
+      <Item>
+      <Element>SystemRoleObjectRefIdType</Element>
+      <Description>The SIF RefId that provides the source Object for this SystemRole Object.</Description>
+      <Characteristics>M</Characteristics>
+	  <privacyRating>Low</privacyRating>
+      <Type ref="CommonTypes" name="IdRefType"/>
+    </Item>
+    <Item>
+      <Attribute>SIF_RefObject</Attribute>
+      <Characteristics>M</Characteristics>
+	  <privacyRating>Low</privacyRating>
+      <Description>
+        <p>The type of SIF object that the SIF_RefId attribute identifies.</p>
+      </Description>
+      <Values>
+        <Value>
+          <Code>Identity</Code>
+        </Value>
+        <Value>
+         <Code>StudentPersonal</Code>
+       </Value>
+       <Value>
+         <Code>StaffPersonal</Code>
+       </Value>
+       <Value>
+         <Code>StudentContactPersonal</Code>
+       </Value>     
+      </Values>
+    </Item>
+   </CommonElement> 
  <CommonElement name="SystemContextListType" type="true" dm="true">
     <Item>
       <Element>SystemContextListType</Element>
@@ -351,12 +390,12 @@
 		<Description>
 		  <p>List of Roles.</p>
 		</Description>
-		<Type ref="CommonTypes" name="RoleListType"/>
+		<Type ref="CommonTypes" name="SystemRoleListType"/>
     </Item>
    </CommonElement>
-  <CommonElement name="RoleListType" type="true" dm="true">
+  <CommonElement name="SystemRoleListType" type="true" dm="true">
      <Item> 
-     <Element>RoleListType</Element>
+     <Element>SystemRoleListType</Element>
      <Characteristics>O</Characteristics>
      <Description>
       <p>List of Roles.</p>
@@ -369,12 +408,12 @@
     <Description>
       <p>Role of the entity this object describes in the SystemContext.</p>
     </Description>
-     <Type ref="CommonTypes" name="RoleType"/>  
+     <Type ref="CommonTypes" name="SystemRoleElementType"/>  
     </Item>
   </CommonElement>
-  <CommonElement name="RoleType" type="true" dm="true">  
+  <CommonElement name="SystemRoleElementType" type="true" dm="true">  
   <Item>
-    <Element>RoleType</Element>
+    <Element>SystemRoleElementType</Element>
     <Description>
       <p>Role of the entity this object describes in the SystemContext.</p>
     </Description>
@@ -395,12 +434,12 @@
       <Description>
         <p></p>
       </Description>
-     <Type ref="CommonTypes" name="RoleScopeListType"/> 
+     <Type ref="CommonTypes" name="SystemRoleScopeListType"/> 
   </Item>
   </CommonElement>
-  <CommonElement name="RoleScopeListType" type="true" dm="true">  
+  <CommonElement name="SystemRoleScopeListType" type="true" dm="true">  
     <Item>
-      <Element>RoleScopeListType</Element>
+      <Element>SystemRoleScopeListType</Element>
       <Characteristics>O</Characteristics>
       <Description>
         <p></p>
@@ -414,12 +453,41 @@
       <Description>
         <p>Container</p>
       </Description>
-      <Type ref="CommonTypes" name="RoleScopeType"/> 
+      <Type ref="CommonTypes" name="SystemRoleScopeType"/> 
     </Item>
    </CommonElement>
-   <CommonElement name="RoleScopeType" type="true" dm="true">  
+   <CommonElement name="SystemRoleScopeRefIdType" type="true" dm="true">  
+      <Item>
+      <Element>SystemRoleScopeRefIdType</Element>
+      <Characteristics>C</Characteristics>
+      <Description>
+        <p>The  SIF_RefId that provides  the source Object for this RoleScope.</p>
+        <p>One of RoleScopeName or associated RefId must be provided.</p>
+      </Description>
+      <Type ref="CommonTypes" name="IdRefType"></Type>
+    </Item>
     <Item>
-      <Element>RoleScopeType</Element>
+      <Attribute>SIF_RefObject</Attribute>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>The type of SIF object that the SIF_RefId attribute identifies.</p>
+      </Description>
+      <Values>
+        <Value>
+          <Code>SchoolInfo</Code>
+        </Value>
+        <Value>
+          <Code>TeachingGroup</Code>
+        </Value>
+        <Value>
+          <Code>StudentActivityParticipation</Code>
+        </Value>
+      </Values>
+    </Item>
+   </CommonElement>
+   <CommonElement name="SystemRoleScopeType" type="true" dm="true">  
+    <Item>
+      <Element>SystemRoleScopeType</Element>
       <Characteristics>MR</Characteristics>
       <Description>
         <p>Container</p>
@@ -442,27 +510,9 @@
         <p>The  SIF_RefId that provides  the source Object for this RoleScope.</p>
         <p>One of RoleScopeName or associated RefId must be provided.</p>
       </Description>
-      <Type name="IdRefType"></Type>
+      <Type ref="CommonTypes" name="SystemRoleScopeRefIdType"></Type>
     </Item>
-    <Item>
-      <Attribute>SIF_RefObject</Attribute>
-      <Characteristics>M</Characteristics>
-      <Description>
-        <p>The type of SIF object that the SIF_RefId attribute identifies.</p>
-      </Description>
-      <Values>
-        <Value>
-          <Code>SchoolInfo</Code>
-        </Value>
-        <Value>
-          <Code>TeachingGroup</Code>
-        </Value>
-        <Value>
-          <Code>StudentActivityParticipation</Code>
-        </Value>
-      </Values>
-    </Item>
- </CommonElement>
+  </CommonElement>
  
  <!-- Added for CEM Travel Details 3.4.8 --> 
     <!--
