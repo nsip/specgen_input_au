@@ -12,9 +12,9 @@
 
 	<xsl:param name="sifVersion"/>
 	<xsl:param name="sifLocale"/>
-	<xsl:param name="sifObjectList" select="''"/> <!-- Default to empty list -->
-	<xsl:param name="sifObjectGroupList" select="''"/> <!-- Default to empty list -->
-
+	<xsl:param name="sifObjectList" select="'StudentAttendanceTimeList,StudentAttendanceSummary,StudentDailyAttendance,StudentPeriodAttendance,SessionInfo,CalendarDate,CalendarSummary'"/> <!-- Default to 			SchoolInfo,LEAInfo,StaffAssignment,StaffPersonal,StudentPersonal,StudentSchoolEnrollment,StudentContactPersonal,StudentContactRelationship,PersonPicture,Identity -->
+    <xsl:param name="sifObjectGroupList" select="'ATTENDANCE'"/> <!-- Default to empty list -->	
+  
     <!-- Get the Data Model URL from the Title Page -->
 	<xsl:variable name="extDocUrlRoot">
 		<xsl:value-of select="specgen:SIFSpecification/specgen:TitlePage/specgen:dl/specgen:dd[1]/specgen:a[@href]"/>

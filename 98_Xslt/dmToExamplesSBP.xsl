@@ -12,7 +12,7 @@
 
 	<xsl:param name="sifVersion"/>
 	<xsl:param name="sifLocale"/>
-	<xsl:param name="sifObjectList" select="''"/> <!-- Default to empty list -->
+	<xsl:param name="sifObjectList" select="'SchoolInfo,LEAInfo,StaffAssignment,StaffPersonal,StudentPersonal,StudentSchoolEnrollment,StudentContactPersonal,StudentContactRelationship,PersonPicture,Identity'"/> <!-- Default to empty list -->
 
 	<xsl:import href="./sif2jsonspecgen.xslt"/>
 	<xsl:import href="./xmlToJson-goessner.xslt"/>

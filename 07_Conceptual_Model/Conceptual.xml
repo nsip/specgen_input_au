@@ -5,7 +5,7 @@
 		 
          xmlns="http://sifassociation.org/SpecGen">
          
-	<h2>Conceptual Model 3.4.6</h2>
+	<h2>Conceptual Model 3.4.8</h2>
 	<p>The conceptual model is at the level of entities and relations between them; attributes are not listed. All objects in the Australian data model are represented; some objects are represented as relations between entities, rather than as distinct entities.
 For clarity, the conceptual model is broken up into use cases:</p>
 <ul>

@@ -12628,66 +12628,10 @@
 	<Item>
 		<Element>SpanGaps</Element>
 		<Characteristics>O</Characteristics>
-		<List mode="List">
-    </List>
 		<Description>A container element for holding multiple possible span gaps.</Description>
+		<Type ref="CommonTypes" name="SpanGapListType"/>
 	</Item>
-	<Item>
-		<Element>/SpanGap</Element>
-		<Characteristics>OR</Characteristics>
-		<Description>
-      This structure duplicates much of the structure of <code>TimeElement</code> and is designed to represent a gap in the parent time period
-      defined by <code>StartDateTime</code> and <code>EndDateTime</code> above.
-    </Description>
-	</Item>
-	<Item>
-		<Element>//Type</Element>
-		<Characteristics>M</Characteristics>
-		<Description>
-			<p>Type</p>
-		</Description>
-		<Type name="xs:normalizedString"/>
-	</Item>
-	<Item>
-		<Element>//Code</Element>
-		<Characteristics>M</Characteristics>
-		<Description>
-			<p>Code</p>
-		</Description>
-		<Type name="xs:token"/>
-	</Item>
-	<Item>
-		<Element>//Name</Element>
-		<Characteristics>M</Characteristics>
-		<Description>
-			<p>Name</p>
-		</Description>
-		<Type name="xs:normalizedString"/>
-	</Item>
-	<Item>
-		<Element>//Value</Element>
-		<Characteristics>M</Characteristics>
-		<Description>
-			<p>Value</p>
-		</Description>
-		<Type name="xs:normalizedString"/>
-	</Item>
-	<Item>
-		<Element>//StartDateTime</Element>
-		<Characteristics>O</Characteristics>
-		<Description>
-			<p>StartDate and Time</p>
-		</Description>
-		<Type name="xs:dateTime"/>
-	</Item>
-	<Item>
-		<Element>//EndDateTime</Element>
-		<Characteristics>O</Characteristics>
-		<Description>
-			<p>EndDate and Time</p>
-		</Description>
-		<Type name="xs:dateTime"/>
-	</Item>
+
 	<Item>
 		<Element>IsCurrent</Element>
 		<Characteristics>M</Characteristics>
@@ -12720,6 +12664,83 @@
 		</TimeElement>
 	</xhtml:Example>
 </CommonElement>
+<CommonElement name="SpanGapListType" type="true" dm="true">
+  <Item>
+      <Element>SpanGapListType</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+         <p></p>
+      </Description>
+      <List mode="List">
+      </List>
+    </Item>
+    <Item>
+       <Element>SpanGap</Element>
+       <Characteristics>OR</Characteristics>
+       <Description>
+         This structure duplicates much of the structure of <code>TimeElement</code> and is designed to represent a gap in the parent time period
+      defined by <code>StartDateTime</code> and <code>EndDateTime</code> above
+       </Description>
+       <Type ref="CommonTypes" name="SpanGapType"/>
+    </Item>
+   </CommonElement> 
+   <CommonElement name="SpanGapType" type="true" dm="true">
+    	<Item>
+		<Element>SpanGapType</Element>
+		<Description>
+      This structure duplicates much of the structure of <code>TimeElement</code> and is designed to represent a gap in the parent time period
+      defined by <code>StartDateTime</code> and <code>EndDateTime</code> above.
+    </Description>
+	</Item>
+	<Item>
+		<Element>Type</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Type</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>Code</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Code</p>
+		</Description>
+		<Type name="xs:token"/>
+	</Item>
+	<Item>
+		<Element>Name</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Name</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>Value</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Value</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>StartDateTime</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>StartDate and Time</p>
+		</Description>
+		<Type name="xs:dateTime"/>
+	</Item>
+	<Item>
+		<Element>EndDateTime</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>EndDate and Time</p>
+		</Description>
+		<Type name="xs:dateTime"/>
+	</Item>
+</CommonElement>
 <CommonElement name="LifeCycleType" type="true" dm="true">
 	<Item>
 		<Element>LifeCycleType</Element>
@@ -12737,75 +12758,16 @@
       the date/time in the object's <code>SIF_Header</code>.
       Depending on the use case being implemented, this value could contain the date the data in the object first entered the zone or was actually created.
     </Description>
-	</Item>
-	<Item>
-		<Element>/DateTime</Element>
-		<Characteristics>M</Characteristics>
-		<Description>
-		  <p>Date and time object was created.</p>
-		</Description>
-		<Type name="xs:dateTime"/>
-	</Item>
-	<Item>
-		<Element>/Creators</Element>
-		<Characteristics>O</Characteristics>
-		<Description>
-		  <p>List of Creators.</p>
-		</Description>
-		<List mode="List">
-    </List>
-	</Item>
-	<Item>
-		<Element>//Creator</Element>
-		<Characteristics>MR</Characteristics>
-	</Item>
-	<Item>
-		<Element>///Name</Element>
-		<Characteristics>M</Characteristics>
-		<Type name="xs:normalizedString"/>
-		<Description>
-      Human-readable name of the data's creator. If the object contains system-generated data,
-      the name should identify the creating service or application.
-    </Description>
-	</Item>
-	<Item>
-		<Element>///ID</Element>
-		<Characteristics>M</Characteristics>
-		<Type name="xs:normalizedString"/>
-		<Description>Unique identifier of the creator.  An email address or URI could be used here.</Description>
+    <Type ref="CommonTypes" name="LifeCycleCreatedType"/>
 	</Item>
 	<Item>
 		<Element>ModificationHistory</Element>
 		<Characteristics>O</Characteristics>
-		<List mode="List">
-    </List>
 		<Description>
       An ordered set of <code>Modified</code> elements describing which system modified the data, when
       the modification took place, and a brief description of the modification.
-    </Description>
-	</Item>
-	<Item>
-		<Element>/Modified</Element>
-		<Characteristics>OR</Characteristics>
-		<Description>A single modification event.</Description>
-	</Item>
-	<Item>
-		<Element>//By</Element>
-		<Characteristics>M</Characteristics>
-		<Type name="xs:normalizedString"/>
-		<Description>Identifier of the system or person that modified the data.</Description>
-	</Item>
-	<Item>
-		<Element>//DateTime</Element>
-		<Characteristics>M</Characteristics>
-		<Type name="xs:dateTime"/>
-		<Description>The date/time the modification occurred.</Description>
-	</Item>
-	<Item>
-		<Element>//Description</Element>
-		<Characteristics>O</Characteristics>
-		<Type name="xs:string"/>
-		<Description>Human readable description of the data modifications.</Description>
+        </Description>
+      <Type ref="CommonTypes" name="ModificationHistoryListType"/>
 	</Item>
 	<Item>
 		<Element>TimeElements</Element>
@@ -12813,17 +12775,7 @@
 		<Description>
 			<p>List of Time Elements.</p>
 		</Description>
-		
-		<List mode="List">
-    </List>
-	</Item>
-	<Item>
-		<Element>/TimeElement</Element>
-		<Characteristics>OR</Characteristics>
-		<Description>
-			<p>A common metadata element designed to contain time data, both self-defined and by type.</p>
-		</Description>
-		<Type ref="DataModelTaskForce" name="TimeElementType"/>
+		<Type ref="CommonTypes" name="TimeElementListType"/>
 	</Item>
 	<xhtml:Example xmlns="">
 		<LifeCycle>
@@ -12844,6 +12796,110 @@
 			</ModificationHistory>
 		</LifeCycle>
 	</xhtml:Example>
+</CommonElement>		
+<CommonElement name="ModificationHistoryListType" type="true" dm="true">
+	<Item>
+		<Element>ModificationHistoryListType</Element>
+		<List mode="List">
+        </List>
+		<Description>
+      An ordered set of <code>Modified</code> elements describing which system modified the data, when
+      the modification took place, and a brief description of the modification.
+        </Description>
+	</Item>
+	<Item>
+		<Element>Modified</Element>
+		<Characteristics>OR</Characteristics>
+		<Description>A single modification event.</Description>
+		<Type ref="CommonTypes" name="ModificationType"/>
+	</Item>
+</CommonElement>
+
+<CommonElement name="ModificationType" type="true" dm="true">
+	<Item>
+		<Element>ModificationType</Element>
+		<Description>A single modification event.</Description>
+	</Item>
+	<Item>
+		<Element>By</Element>
+		<Characteristics>M</Characteristics>
+		<Type name="xs:normalizedString"/>
+		<Description>Identifier of the system or person that modified the data.</Description>
+	</Item>
+	<Item>
+		<Element>DateTime</Element>
+		<Characteristics>M</Characteristics>
+		<Type name="xs:dateTime"/>
+		<Description>The date/time the modification occurred.</Description>
+	</Item>
+	<Item>
+		<Element>Description</Element>
+		<Characteristics>O</Characteristics>
+		<Type name="xs:string"/>
+		<Description>Human readable description of the data modifications.</Description>
+	</Item>
+</CommonElement>
+  <CommonElement name="LifeCycleCreatedType" type="true" dm="true">
+	<Item>
+		<Element>LifeCycleCreatedType</Element>
+		<Description>When the object was created by whom.  This is a more persistent creation date than
+      the date/time in the object's <code>SIF_Header</code>.
+      Depending on the use case being implemented, this value could contain the date the data in the object first entered the zone or was actually created.
+      </Description>
+    </Item>
+	<Item>
+		<Element>DateTime</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+		  <p>Date and time object was created.</p>
+		</Description>
+		<Type name="xs:dateTime"/>
+	</Item>
+	<Item>
+		<Element>Creators</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+		  <p>List of Creators.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LifeCycleCreatorListType"/>
+	</Item>
+	</CommonElement>
+<CommonElement	name="LifeCycleCreatorListType" type="true" dm="true">
+    <Item>
+		<Element>LifeCycleCreatorListType</Element>
+		 <List mode="List">
+		 </List>
+		<Description>
+		  <p>List of Creators.</p>
+		</Description>
+	</Item>	
+	<Item>
+		<Element>Creator</Element>
+		<Characteristics>MR</Characteristics>
+		<Type ref="CommonTypes" name="LifeCycleCreatorType"/>
+	</Item>
+</CommonElement>	
+<CommonElement name="LifeCycleCreatorType" type="true" dm="true">
+    <Item>
+		<Element>LifeCycleCreatorType</Element>
+        <Description>Information about the Creator</Description> 
+	</Item>	
+	<Item>
+		<Element>Name</Element>
+		<Characteristics>M</Characteristics>
+		<Type name="xs:normalizedString"/>
+		<Description>
+      Human-readable name of the data's creator. If the object contains system-generated data,
+      the name should identify the creating service or application.
+    </Description>
+	</Item>
+	<Item>
+		<Element>ID</Element>
+		<Characteristics>M</Characteristics>
+		<Type name="xs:normalizedString"/>
+		<Description>Unique identifier of the creator.  An email address or URI could be used here.</Description>
+	</Item>
+
 </CommonElement>
 <CommonElement name="OtherCodeListType" type="true" dm="true">
 	<Item>
@@ -13212,14 +13268,9 @@
 	<Item>
 		<Element>TimeElements</Element>
 		<Characteristics>O</Characteristics>
-		<List mode="List">
-  </List>
+		<Type ref="CommonTypes" name="TimeElementListType"/>
 	</Item>
-	<Item>
-		<Element>/TimeElement</Element>
-		<Characteristics>OR</Characteristics>
-		<Type ref="CommonTypes" name="TimeElementType"/>
-	</Item>
+
 	<Item>
 		<Element>LifeCycle</Element>
 		<Characteristics>O</Characteristics>
@@ -13235,6 +13286,20 @@
 			<p>Education filter.</p>
 		</Description>
 		<Type ref="CommonTypes" name="EducationFilterType"/>
+	</Item>
+</CommonElement>
+
+<CommonElement name="TimeElementListType" type="true" dm="true">
+	<Item>
+		<Element>TimeElementListType</Element>
+		<Characteristics>O</Characteristics>
+		<List mode="List">
+	  </List>
+	</Item>
+  	<Item>
+		<Element>TimeElement</Element>
+		<Characteristics>OR</Characteristics>
+		<Type ref="CommonTypes" name="TimeElementType"/>
 	</Item>
 </CommonElement>
 
