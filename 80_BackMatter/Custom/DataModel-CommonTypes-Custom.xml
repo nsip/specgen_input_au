@@ -12758,7 +12758,7 @@
       the date/time in the object's <code>SIF_Header</code>.
       Depending on the use case being implemented, this value could contain the date the data in the object first entered the zone or was actually created.
     </Description>
-    <Type ref="CommonTypes" name="LifeCycleCreatedType"/>
+    <Type ref="CommonTypes" name="CreatedType"/>
 	</Item>
 	<Item>
 		<Element>ModificationHistory</Element>
@@ -12767,7 +12767,7 @@
       An ordered set of <code>Modified</code> elements describing which system modified the data, when
       the modification took place, and a brief description of the modification.
         </Description>
-      <Type ref="CommonTypes" name="ModificationHistoryListType"/>
+      <Type ref="CommonTypes" name="ModifiedListType"/>
 	</Item>
 	<Item>
 		<Element>TimeElements</Element>
@@ -12797,9 +12797,9 @@
 		</LifeCycle>
 	</xhtml:Example>
 </CommonElement>		
-<CommonElement name="ModificationHistoryListType" type="true" dm="true">
+<CommonElement name="ModifiedListType" type="true" dm="true">
 	<Item>
-		<Element>ModificationHistoryListType</Element>
+		<Element>ModifiedListType</Element>
 		<List mode="List">
         </List>
 		<Description>
@@ -12811,13 +12811,13 @@
 		<Element>Modified</Element>
 		<Characteristics>OR</Characteristics>
 		<Description>A single modification event.</Description>
-		<Type ref="CommonTypes" name="ModificationType"/>
+		<Type ref="CommonTypes" name="ModifiedType"/>
 	</Item>
 </CommonElement>
 
-<CommonElement name="ModificationType" type="true" dm="true">
+<CommonElement name="ModifiedType" type="true" dm="true">
 	<Item>
-		<Element>ModificationType</Element>
+		<Element>ModifiedType</Element>
 		<Description>A single modification event.</Description>
 	</Item>
 	<Item>
@@ -12839,9 +12839,9 @@
 		<Description>Human readable description of the data modifications.</Description>
 	</Item>
 </CommonElement>
-  <CommonElement name="LifeCycleCreatedType" type="true" dm="true">
+  <CommonElement name="CreatedType" type="true" dm="true">
 	<Item>
-		<Element>LifeCycleCreatedType</Element>
+		<Element>CreatedType</Element>
 		<Description>When the object was created by whom.  This is a more persistent creation date than
       the date/time in the object's <code>SIF_Header</code>.
       Depending on the use case being implemented, this value could contain the date the data in the object first entered the zone or was actually created.
@@ -12861,12 +12861,12 @@
 		<Description>
 		  <p>List of Creators.</p>
 		</Description>
-		<Type ref="CommonTypes" name="LifeCycleCreatorListType"/>
+		<Type ref="CommonTypes" name="CreatorListType"/>
 	</Item>
 	</CommonElement>
-<CommonElement	name="LifeCycleCreatorListType" type="true" dm="true">
+<CommonElement	name="CreatorListType" type="true" dm="true">
     <Item>
-		<Element>LifeCycleCreatorListType</Element>
+		<Element>CreatorListType</Element>
 		 <List mode="List">
 		 </List>
 		<Description>
