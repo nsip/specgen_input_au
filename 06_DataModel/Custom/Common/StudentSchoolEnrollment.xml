@@ -13,25 +13,16 @@
 	<privacyRating>High</privacyRating>
     <Description>
       <p>
-        This object defines information related to a student's enrollment.  StudentSchoolEnrollment
-        instances must not span multiple school years.
-      </p>
-      <p>
-        Note there is only one current home enrollment at a time per student.
-        Only one instance of the <code>StudentSchoolEnrollment</code> object must exist for a given student with <code>MembershipType</code>=<code>01</code>
-        (Home School) and <code>TimeFrame</code>=<code>C</code> (Current) 
-        for the time interval between <code>EntryDate</code> and <code>ExitDate</code>, inclusive.
-      </p>
-
-      <p>
-        A <code>StudentSchoolEnrollment</code> object should be re-published when the
-        <code>TimeFrame</code> attribute changes, regardless of when the data entry is done.
-        This is in addition to the practice of publishing the object at the time the data changes in the corresponding application.
-      </p>
-
-      <p>
-        When the object is re-published, it must contain all the data in the object that is supported by the publisher.
-      </p>
+        This object defines information related to a student's enrollment.  StudentSchoolEnrollment has typically been for one school year, however from 3.4.8, advice is that instances MAY span multiple school years.  Due to this change, SchoolYear will now become optional.  <code>EntryDate</code> and <code>ExitDate</code> will define the length of the particular school enrollment.
+      </p> 
+     <p>Note: Due to the change above, the community agreed that general advice should be removed from useage of the object from 3.4.8.  The implications of this are;
+      <ul>
+      <li>StudentSchoolEnrollment may span one or many years</li>
+      <li>A consumer must look to entry and exit dates as well as <code>TimeFrame</code> to identify a 'Current' student.</li>
+      <li>It will be up to the implementation to provide applications with advice.</li>
+      <li>This does not impact on the data structure of the StudentSchoolEnrollment object itself.</li>
+      </ul>
+	 </p>
 
 
     </Description>
@@ -67,16 +58,7 @@
     <Type ref="CommonTypes" relationship="records enrollment of student in" count="1:1" name="IdRefType"></Type>
   </Item>
   <Item>
-  
-     <Item>
-		<Element>LocalId</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-			<p>The locally-assigned identifier for this student enrollment.</p>
-		</Description>
-		<Type ref="CommonTypes" name="LocalId"/> 
-	</Item>
+ 
 
     <Element>MembershipType</Element>
     <Characteristics>M</Characteristics>
@@ -86,6 +68,16 @@
     </Description>
     <Type ref="CodeSets" name="AUCodeSetsSchoolEnrollmentTypeType"></Type>
   </Item>
+  
+     <Item>
+		<Element>LocalId</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>The locally-assigned identifier for this student enrollment.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"/> 
+	</Item>
   <Item>
 
     <Element>TimeFrame</Element>
@@ -147,20 +139,7 @@
     <Description>
       <p>Homeroom for this enrollment.</p>
     </Description>
-    <Type ref="CommonTypes" relationship="records student homeroom as" count="1:?" name="IdRefType"></Type>
-  </Item>
-  <Item>
-    <Attribute>SIF_RefObject</Attribute>
-    <Characteristics>M</Characteristics>
-	<privacyRating>Low</privacyRating>
-    <Description>
-      <p>The name of the object referenced.</p>
-    </Description>
-    <Values>
-      <Value>
-        <Code>RoomInfo</Code>
-      </Value>
-    </Values>
+    <Type ref="CommonTypes" name="HomeroomType"></Type>
   </Item>
   <Item>
     <Element>Advisor</Element>
@@ -169,44 +148,17 @@
     <Description>
       <p>Staff member assigned as an advisor.</p>
     </Description>
-    <Type ref="CommonTypes" relationship="records student advisor as" count="1:?" name="IdRefType"></Type>
-  </Item>
-  <Item>
-    <Attribute>SIF_RefObject</Attribute>
-    <Characteristics>M</Characteristics>
-	<privacyRating>Low</privacyRating>
-    <Description>
-      <p>The name of the object referenced.</p>
-    </Description>
-    <Values>
-      <Value>
-        <Code>StaffPersonal</Code>
-      </Value>
-    </Values>
+    <Type ref="CommonTypes"  name="StaffRefIdType"></Type>
   </Item>
   <Item>
     <Element>Counselor</Element>
     <Characteristics>O</Characteristics>
 	<privacyRating>Low</privacyRating>
     <Description>
-      <p>Staff member assigned as an advisor.</p>
+      <p>Staff member assigned as counselor.</p>
     </Description>
-    <Type ref="CommonTypes" relationship="records student counselor as" count="1:?" name="IdRefType"></Type>
+    <Type ref="CommonTypes" name="StaffRefIdType"></Type>
   </Item>
-  <Item>
-    <Attribute>SIF_RefObject</Attribute>
-    <Characteristics>M</Characteristics>
-	<privacyRating>Low</privacyRating>
-    <Description>
-      <p>The name of the object referenced.</p>
-    </Description>
-    <Values>
-      <Value>
-        <Code>StaffPersonal</Code>
-      </Value>
-    </Values>
-  </Item>
-
   <Item>
     <Element>Homegroup</Element>
     <Characteristics>O</Characteristics>
@@ -551,7 +503,7 @@
 		<Description>
 			<p>Age of the StudentCalculated for Non-gov Census reporting.</p>
 		</Description>
-		<Type name="xs:decimal"/>
+		<Type name="xs:unsignedInt"/>
     </Item>	
     <Item>
       	<Element>DistanceEducationStudent</Element>
@@ -580,6 +532,16 @@
     </Description>
     <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
   </Item>   
+  <!-- Added for CEM Travel Mode requirements, 3.4.8 -->
+  <Item>
+	<Element>TravelDetails</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
+    <Description>
+      <p>Information on a student's travel to and from school.</p>
+    </Description>
+    <Type ref="CommonTypes" name="TravelDetailsContainerType"></Type> 
+  </Item> 
   <Item>   
     <Element>LocalCodeList</Element>
     <Characteristics>O</Characteristics>
@@ -614,6 +576,7 @@
       </YearLevel>
       <Homeroom SIF_RefObject="RoomInfo">D7510D3E-34B3-591A-8C3D-00AA001A1651</Homeroom>
       <Advisor SIF_RefObject="StaffPersonal">B359D3E3-4D75-101A-8C3D-00AA001A1652</Advisor>
+      <Counselor SIF_RefObject="StaffPersonal">B459D3E3-4D75-101A-8C3D-00AA001A1653</Counselor>
       <ExitType>
         <Code>1909</Code>
         <OtherCodeList>
@@ -632,8 +595,20 @@
 			<PermissionValue>Y</PermissionValue>
 		  </PublishingPermission>
 	  </PublishingPermissionList>
-      
-      
+      <CensusAge>16</CensusAge>
+      <InternationalStudent>Y</InternationalStudent>
+      <TravelDetails>
+		  <ToSchool>
+			  <TravelMode>A</TravelMode> 
+			  <TravelDetails>Usually walks to school unless otherwise advised.</TravelDetails>
+			  <TravelAccompaniment>I</TravelAccompaniment>
+   		  </ToSchool>	  
+		  <FromSchool>
+			  <TravelMode>A</TravelMode>
+			  <TravelDetails>Usually walks from school unless otherwise advised.</TravelDetails>
+			  <TravelAccompaniment>I</TravelAccompaniment>
+		  </FromSchool>
+      </TravelDetails>
     </StudentSchoolEnrollment>
   </xhtml:Example>
 </DataObject>

@@ -1,3 +1,4 @@
+<!-- Leave out these 2 packages for 3.4.8
 
 <CommonElement name="ReportPackageType" type="true">
   <Item>
@@ -13,6 +14,8 @@
   </Item>
 </CommonElement>
 
+-->
+<!--
 <CommonElement type="true" name="AbstractContentPackageType">
   <Key>@RefId</Key>
   <Item>
@@ -177,20 +180,63 @@
   </Choice>
   
 </CommonElement>
-
+-->
 <CommonElement type="true" name="AbstractContentElementType">
 		  <Item>
 			<Element>AbstractContentElementType</Element>
 			<Description>
 			  <p>
-				<code>AbstractContentPackageType</code> used as an element rather than an object, omitting <code>RefId</code>, <code>SIF_Metadata</code> and <code>SIF_ExtendedElements</code>.
+				<code>AbstractContentPackageType</code> used as an element, omitting <code>RefId</code>, <code>SIF_Metadata</code> and <code>SIF_ExtendedElements</code>
+				or as an object which includes <code>RefId</code>.
 			  </p>
 			</Description>
 		  </Item>
+		  	<!-- RefId added for replacement of abstractcontenttype -->
+	<Item>
+		<Attribute>RefId</Attribute>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>The GUID of the Object</Description>
+		<Type ref="CommonTypes" name="RefIdType"></Type>
+	</Item>
 		  <Choice>
 			<Item>
 			  <Element>XMLData</Element>
 			  <Characteristics>C</Characteristics>
+			  <Type ref="CommonTypes" name="XMLDataType"></Type>
+			  <Description>
+				<p>Contains an arbitrary XML element, encoded in UTF-8.</p>
+			  </Description>
+			</Item>
+			<Item>
+			  <Element>TextData</Element>
+			  <Characteristics>C</Characteristics>
+			  <Description>
+				<p>Contains arbitrary text, encoded in UTF-8.</p>
+			  </Description>
+			  <Type ref="CommonTypes" name="TextDataType"></Type>
+			</Item>
+			<Item>
+			  <Element>BinaryData</Element>
+			  <Characteristics>C</Characteristics>
+			  <Type ref="CommonTypes" name="BinaryDataType"></Type>
+			  <Description>
+				<p>Contains the base64Binary encoding of binary or text data not encoded in UTF-8.</p>
+			  </Description>
+			</Item>
+			<Item>
+			  <Element>Reference</Element>
+			  <Characteristics>C</Characteristics>
+			  <Description>
+				<p>References external content via a URL.</p>
+			  </Description>
+			  <Type ref="CommonTypes" name="ReferenceDataType"></Type>
+			</Item>
+		  </Choice>
+		</CommonElement>
+	<CommonElement type="true" name="XMLDataType">
+			<Item>
+			  <Element>XMLDataType</Element>
 			  <Type>
 				<xs:any processContents="lax"/>
 			  </Type>
@@ -209,9 +255,10 @@
 				</p>
 			  </Description>
 			</Item>
+	</CommonElement>
+	<CommonElement type="true" name="TextDataType">
 			<Item>
-			  <Element>TextData</Element>
-			  <Characteristics>C</Characteristics>
+			  <Element>TextDataType</Element>
 			  <Description>
 				<p>Contains arbitrary text, encoded in UTF-8.</p>
 			  </Description>
@@ -248,9 +295,10 @@
 				</p>
 			  </Description>
 			</Item>
-			<Item>
-			  <Element>BinaryData</Element>
-			  <Characteristics>C</Characteristics>
+	</CommonElement>
+	<CommonElement type="true" name="BinaryDataType">
+				<Item>
+			  <Element>BinaryDataType</Element>
 			  <Type name="xs:base64Binary"/>
 			  <Description>
 				<p>Contains the base64Binary encoding of binary or text data not encoded in UTF-8.</p>
@@ -287,9 +335,10 @@
 				</p>
 			  </Description>
 			</Item>
+	</CommonElement>
+	<CommonElement type="true" name="ReferenceDataType">
 			<Item>
-			  <Element>Reference</Element>
-			  <Characteristics>C</Characteristics>
+			  <Element>ReferenceDataType</Element>
 			  <Description>
 				<p>References external content via a URL.</p>
 			  </Description>
@@ -316,16 +365,14 @@
 			  </Description>
 			</Item>
 			<Item>
-			  <Element>/URL</Element>
+			  <Element>URL</Element>
 			  <Characteristics>M</Characteristics>
 			  <Type name="xs:anyURI"/>
 			  <Description>
 				<p>Location of external content.</p>
 			  </Description>
 			</Item>
-		  </Choice>
-		</CommonElement>
-
+	</CommonElement>
 	<CommonElement type="true" name="MonetaryAmountType">
 			<Item>
 				<Element>MonetaryAmountType</Element>

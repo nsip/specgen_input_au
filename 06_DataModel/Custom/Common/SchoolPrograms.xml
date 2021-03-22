@@ -10,8 +10,6 @@
   <Intro>
     This object contains information about Programs offered by a school.
   </Intro>
-  <EventsReported>true</EventsReported>
-  <Key>@RefId</Key>
   <Item>
     <Element>SchoolPrograms</Element>
 	<privacyRating>Low</privacyRating>

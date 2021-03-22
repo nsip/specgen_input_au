@@ -7,6 +7,7 @@
 	
             xmlns="http://sifassociation.org/SpecGen">
 	<EventsReported>false</EventsReported>
+	<Key>@RefId</Key>
 	<Intro>
 		<p>
       Many instructional applications in a SIF zone need to share teaching and learning objects.
@@ -20,11 +21,12 @@
 		  Note: With SIF Implementation Specification version 2.4 the choice element depicted in the diagram below has changed.  In the XSD files, the choice element used to be rendered as a sequence of optional elements.  Now, in the XSD files, the choice element is rendered as an xs:choice.  This may cause problems with agents that treat the choice element as two optional elements rather than a choice of one and only one of the choices. 
       </p>
 	</Intro>
+
 	<Item>
 		<Element>LearningResourcePackage</Element>
 		<privacyRating>Low</privacyRating>
 		<Description>A wrapper for any external learning content to be transmitted across a SIF Zone.</Description>
-		<Type ref="CommonTypes" complex="extension" name="AbstractContentPackageType"/>
+		<Type ref="CommonTypes" complex="extension" name="AbstractContentElementType"/>
 	</Item>
 	<xhtml:Example xmlns="" name="LearningResourcePackage">
 		<LearningResourcePackage RefId="C7DE8668-5968-459F-BF9F-ED22A0E1EA6E">

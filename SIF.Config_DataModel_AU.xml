@@ -9,7 +9,7 @@
 		<inputDocument>SIF_DataModel.xml</inputDocument>
 		<sifNamespace>http://www.sifassociation.org/datamodel/au/3.4</sifNamespace>
 		<localizationCode>au</localizationCode>
-		<schemaVersion>3.4.7</schemaVersion>
+		<schemaVersion>3.4.8</schemaVersion>
 		
 		<!-- Comment this one out to leave out JSON Tabs -->
 		
@@ -17,8 +17,6 @@
 		
 		<resolveExtensions>false</resolveExtensions>
  
-
-		 
  		<isDraft>false</isDraft>
 
  
@@ -30,7 +28,7 @@
 		<htmlDocument>
 			<singleDocument>false</singleDocument>
 			<rootDocumentFileName>index.html</rootDocumentFileName>
-			<rootTitle>SIF Implementation Specification (Australia) 3.4.7</rootTitle>
+			<rootTitle>SIF Implementation Specification (Australia) 3.4.8</rootTitle>
 			<documentType>DataModel</documentType>
 		</htmlDocument>
 		
@@ -38,7 +36,7 @@
 		<htmlDocument>
 			<singleDocument>true</singleDocument>
 			<rootDocumentFileName>ImplementationSpecification.html</rootDocumentFileName>
-			<rootTitle>SIF Implementation Specification (Australia) 3.4.7</rootTitle>
+			<rootTitle>SIF Implementation Specification (Australia) 3.4.8</rootTitle>
 			<documentType>DataModel</documentType>
 		</htmlDocument>
 		
@@ -131,6 +129,7 @@
  	 
 	<!-- Other outputs built using XSLT -->
 	<!--
+	
 	<xsltTransformations>
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToJsonSchema.xsl</xsltInputFile>
@@ -158,47 +157,137 @@
 	</xsltTransformations>  -->
 	
 		<!-- Other outputs built using XSLT -->
-		 
+	 	 
 	<xsltTransformations>
+		
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToExamples.xsl</xsltInputFile>
+			<xsltOutputDir>JSON</xsltOutputDir>
+			<xsltOutputFile>examples_AU_3.4.8.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToJsonSchemaCreate.xsl</xsltInputFile>
-
 			<xsltOutputDir>JSON</xsltOutputDir>
-			<xsltOutputFile>jsonSchemaCreate.yaml</xsltOutputFile>
+			<xsltOutputFile>jsonSchemaCreate_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 		
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdate.xsl</xsltInputFile>
-
 			<xsltOutputDir>JSON</xsltOutputDir>
-			<xsltOutputFile>jsonSchemaUpdate.yaml</xsltOutputFile>
+			<xsltOutputFile>jsonSchemaUpdate_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToJsonSchemaCreateStrict.xsl</xsltInputFile>
-
 			<xsltOutputDir>JSON</xsltOutputDir>
-			<xsltOutputFile>jsonSchemaCreate-strict.yaml</xsltOutputFile>
+			<xsltOutputFile>jsonSchemaCreate-strict_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 
 
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdateStrict.xsl</xsltInputFile>
-
 			<xsltOutputDir>JSON</xsltOutputDir>
-			<xsltOutputFile>jsonSchemaUpdate-strict.yaml</xsltOutputFile>
+			<xsltOutputFile>jsonSchemaUpdate-strict_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
  
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToOpenAPI.xsl</xsltInputFile>
-
 			<xsltOutputDir>JSON</xsltOutputDir>
-			<xsltOutputFile>OpenAPI.yaml</xsltOutputFile>
+			<xsltOutputFile>OpenAPI_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>	
+			
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToExamplesSBP.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\SBP</xsltOutputDir>
+			<xsltOutputFile>examples_AU_3.4.8.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToSBPAPI.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\SBP</xsltOutputDir>
+			<xsltOutputFile>SBPAPI_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+		<!-- These need to be either transformed or copied to the SBP directory -->
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaCreate.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\SBP</xsltOutputDir>
+			<xsltOutputFile>jsonSchemaCreate_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdate.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\SBP</xsltOutputDir>
+			<xsltOutputFile>jsonSchemaUpdate_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaCreateStrict.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\SBP</xsltOutputDir>
+			<xsltOutputFile>jsonSchemaCreate-strict_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdateStrict.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\SBP</xsltOutputDir>
+			<xsltOutputFile>jsonSchemaUpdate-strict_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+		<!-- Attendance -->
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToExamplesAtt.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\ATTEND</xsltOutputDir>
+			<xsltOutputFile>examples_AU_3.4.8.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToAttendanceAPI.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\ATTEND</xsltOutputDir>
+			<xsltOutputFile>ATTENDAPI_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+	 	<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaCreate.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\ATTEND</xsltOutputDir>
+			<xsltOutputFile>jsonSchemaCreate_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdate.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\ATTEND</xsltOutputDir>
+			<xsltOutputFile>jsonSchemaUpdate_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaCreateStrict.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\ATTEND</xsltOutputDir>
+			<xsltOutputFile>jsonSchemaCreate-strict_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdateStrict.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\ATTEND</xsltOutputDir>
+			<xsltOutputFile>jsonSchemaUpdate-strict_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
 	</xsltTransformations>
 </sifSpecificationGeneratorConfig>
