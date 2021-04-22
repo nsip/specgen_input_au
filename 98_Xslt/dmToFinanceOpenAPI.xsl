@@ -12,8 +12,8 @@
 
 	<xsl:param name="sifVersion"/>
 	<xsl:param name="sifLocale"/>
-	<xsl:param name="sifObjectList" select="'StudentAttendanceTimeList,StudentAttendanceSummary,StudentDailyAttendance,StudentPeriodAttendance,SessionInfo,CalendarDate,CalendarSummary'"/> <!-- Default to empty list -->
-	<xsl:param name="sifObjectGroupList" select="'ATTENDANCE'"/> <!-- Default to empty list -->
+	<xsl:param name="sifObjectList" select="'Invoice,FinancialAccount,ChargedLocationInfo,PaymentReceipt,PurchaseOrder,VendorInfo,Journal,Debtor'"/> <!-- Default to empty list -->
+	<xsl:param name="sifObjectGroupList" select="'Finance'"/> <!-- Default to empty list -->
 
     <!-- Get the Data Model URL from the Title Page -->
 	<xsl:variable name="extDocUrlRoot">

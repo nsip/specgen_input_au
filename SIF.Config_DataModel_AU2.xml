@@ -205,6 +205,16 @@
 			
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToExamplesSBP.xsl</xsltInputFile>
+			<xsltParamList>
+				<xsltParam>
+					<xsltParamName>sifObjectList</xsltParamName> 
+					<xsltParamValue>StudentPersonal,StudentSchoolEnrollment</xsltParamValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltParamName>sifObjectGroup</xsltParamName> 
+					<xsltParamValue>SBP</xsltParamValue>
+				</xsltParam>
+			</xsltParamList>
 			<xsltOutputDir>JSON\SBP</xsltOutputDir>
 			<xsltOutputFile>examples_AU_3.4.8.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
@@ -285,49 +295,6 @@
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdateStrict.xsl</xsltInputFile>
 			<xsltOutputDir>JSON\ATTEND</xsltOutputDir>
-			<xsltOutputFile>jsonSchemaUpdate-strict_AU.yaml</xsltOutputFile>
-			<yamlToJson>true</yamlToJson>
-		</xsltTransformation>
-		
-				<!-- Finance -->
-		<xsltTransformation>
-			<xsltInputFile>98_Xslt\dmToExamplesFinance.xsl</xsltInputFile>
-			<xsltOutputDir>JSON\Finance</xsltOutputDir>
-			<xsltOutputFile>examples_AU_3.4.8.yaml</xsltOutputFile>
-			<yamlToJson>true</yamlToJson>
-		</xsltTransformation>
-		
-		<xsltTransformation>
-			<xsltInputFile>98_Xslt\dmToFinanceOpenAPI.xsl</xsltInputFile>
-			<xsltOutputDir>JSON\Finance</xsltOutputDir>
-			<xsltOutputFile>FinanceOpenAPI_AU.yaml</xsltOutputFile>
-			<yamlToJson>true</yamlToJson>
-		</xsltTransformation>
-		
-	 	<xsltTransformation>
-			<xsltInputFile>98_Xslt\dmToJsonSchemaCreate.xsl</xsltInputFile>
-			<xsltOutputDir>JSON\Finance</xsltOutputDir>
-			<xsltOutputFile>jsonSchemaCreate_AU.yaml</xsltOutputFile>
-			<yamlToJson>true</yamlToJson>
-		</xsltTransformation>
-		
-		<xsltTransformation>
-			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdate.xsl</xsltInputFile>
-			<xsltOutputDir>JSON\Finance</xsltOutputDir>
-			<xsltOutputFile>jsonSchemaUpdate_AU.yaml</xsltOutputFile>
-			<yamlToJson>true</yamlToJson>
-		</xsltTransformation>
-
-		<xsltTransformation>
-			<xsltInputFile>98_Xslt\dmToJsonSchemaCreateStrict.xsl</xsltInputFile>
-			<xsltOutputDir>JSON\Finance</xsltOutputDir>
-			<xsltOutputFile>jsonSchemaCreate-strict_AU.yaml</xsltOutputFile>
-			<yamlToJson>true</yamlToJson>
-		</xsltTransformation>
-
-		<xsltTransformation>
-			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdateStrict.xsl</xsltInputFile>
-			<xsltOutputDir>JSON\Finance</xsltOutputDir>
 			<xsltOutputFile>jsonSchemaUpdate-strict_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
