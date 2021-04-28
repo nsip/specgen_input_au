@@ -57,6 +57,7 @@
 <NAPTestItem RefId="31CA1A02-4E53-4A29-AE1E-807489C30827">
   <TestItemContent>
     <NAPTestItemLocalId>NAPLAN-2017-0005-Language Conventions: Spelling-S2-01-01</NAPTestItemLocalId>
+    <ItemName>Spelling Unit S2</ItemName>
     <ItemType>MC</ItemType>
     <Subdomain>Spelling</Subdomain>
     <ItemDescriptor>Descriptor #1</ItemDescriptor>

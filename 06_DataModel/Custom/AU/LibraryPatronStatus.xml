@@ -1,6 +1,6 @@
 <DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="LibraryPatronStatus">
 
-  <Key>RefId</Key>
+  <Key>@RefId</Key>
 
   <EventsReported>false</EventsReported>
 
@@ -371,6 +371,7 @@
 
           <CheckoutInfo>
 
+			<CheckedOutOn>2018-12-04T23:59:59-05:00</CheckedOutOn> 	
             <ReturnBy>2019-01-04T23:59:59-05:00</ReturnBy>
 
           </CheckoutInfo>

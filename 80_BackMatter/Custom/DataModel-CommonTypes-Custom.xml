@@ -3568,12 +3568,12 @@
       <Type ref="CommonTypes" name="IdRefType"/>
     </Item>
     <Item>
-			<Element>ShareWithObjectTypeName</Element>
-			<Characteristics>O</Characteristics>
-			<Description>
-			  <p>The name of the object referenced.</p>
-			</Description>
-			<Type name="xs:normalizedString"></Type>
+		<Element>ShareWithObjectTypeName</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+		  <p>The name of the object referenced.</p>
+		</Description>
+		<Type name="xs:normalizedString"></Type>
 		</Item>
     <Item>
       <Element>ShareWithLocalId</Element>

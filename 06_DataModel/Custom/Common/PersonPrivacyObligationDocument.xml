@@ -214,7 +214,7 @@
                 <ShareWithLocalId/>
                 <ShareWithPurpose>entrance requirement</ShareWithPurpose>
                 <ShareWithRole>Military</ShareWithRole>
-                <ShareWithComments>A comment</ShareWithComments>
+                <ShareWithComments>A comment</ShareWithComments> 
                 <PermissionToOnShare>N</PermissionToOnShare>
                 <ShareWithURL>www.military.com</ShareWithURL>
               </ShareWith>
@@ -239,6 +239,7 @@
               <ShareWith>
                 <ShareWithParty>Assessment Vendors</ShareWithParty>
                 <ShareWithPurpose>Assessment reporting</ShareWithPurpose>
+                <ShareWithRole>Assessment</ShareWithRole>
                 <ShareWithComments>A comment</ShareWithComments>
                 <PermissionToOnShare>N</PermissionToOnShare>
                 <ShareWithURL>www.assessmentworld.com</ShareWithURL>
@@ -246,6 +247,7 @@
               <ShareWith>
                 <ShareWithParty>Military</ShareWithParty>
                 <ShareWithPurpose>entrance requirement</ShareWithPurpose>
+                <ShareWithRole>Military</ShareWithRole>
                 <ShareWithComments>A comment</ShareWithComments>
                 <PermissionToOnShare>N</PermissionToOnShare>
                 <ShareWithURL>www.military.com</ShareWithURL>
@@ -267,6 +269,7 @@
               <ShareWith>
                 <ShareWithParty>School XYZ</ShareWithParty>
                 <ShareWithPurpose>Attendance reporting</ShareWithPurpose>
+                <ShareWithRole>A Role</ShareWithRole>
                 <ShareWithComments>A comment</ShareWithComments>
                 <PermissionToOnShare>Y</PermissionToOnShare>
                 <ShareWithURL>www.XYZ.edu.au</ShareWithURL>
@@ -274,6 +277,7 @@
               <ShareWith>
                 <ShareWithParty>School ABC</ShareWithParty>
                 <ShareWithPurpose>Attendance reporting</ShareWithPurpose>
+                <ShareWithRole>A Role</ShareWithRole>
                 <ShareWithComments>A comment</ShareWithComments>
                 <PermissionToOnShare>Y</PermissionToOnShare>
                 <ShareWithURL>www.ABC.edu.au</ShareWithURL>

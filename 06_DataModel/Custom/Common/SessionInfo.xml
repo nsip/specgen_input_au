@@ -215,6 +215,7 @@
       <SchoolYear>2008</SchoolYear>
       <LocalId>2</LocalId>
       <TimeTableSubjectLocalId>10MA1</TimeTableSubjectLocalId>
+      <TeachingGroupLocalId>10MA1-Smith</TeachingGroupLocalId>
       <SchoolLocalId>01991</SchoolLocalId>
       <StaffPersonalLocalId>SMI009</StaffPersonalLocalId>
       <RoomNumber>R08</RoomNumber>
@@ -225,6 +226,5 @@
           <FinishTime>13:30:00</FinishTime>
           <RollMarked>Y</RollMarked>
         </SessionInfo>
-
   </xhtml:Example>
 </DataObject>
