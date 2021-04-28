@@ -18,7 +18,7 @@
 		<resolveExtensions>false</resolveExtensions>
  
  		<isDraft>false</isDraft>
-
+	    <examplesValidatorFile>XSD\DataModelNoIncludes\SIF_Message.xsd</examplesValidatorFile>
  
 	</globalSettings>
 	

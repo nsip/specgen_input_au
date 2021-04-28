@@ -3395,184 +3395,645 @@
 	</CommonElement>
 	
   <!-- Added for PPOD - PersonPrivacyObligation -->
-  <!--
-    <CommonElement name="DataDomainObligationListType" type="true" dm="true">
-		<Item>
-			<Element>DataDomainObligationListType</Element>
+   <!-- P-POD -->
+  <CommonElement name="SettingLocationListType" type="true" dm="true">
+    <Item>
+      <Element>SettingLocationListType</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p/>
+      </Description>
+      <List mode="List"/>
+    </Item>
+    <Item>
+      <Element>SettingLocation</Element>
+      <Characteristics>MR</Characteristics>
+      <Description>
+        <p/>
+      </Description>
+      <Type ref="CommonTypes" name="SettingLocationType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="SettingLocationType" type="true">
+    <Intro>
+      <p> This element initially supports describing specific physical locations where the P-POD applied.</p>
+    </Intro>
+    <Item>
+      <Element>SettingLocationType</Element>
+    </Item>
+    <Item>
+      <Element>SettingLocationName</Element>
+      <Characteristics>O</Characteristics>
+      <Description>Name of the location.</Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Element>SettingLocationType</Element>
+      <Characteristics>O</Characteristics>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Element>SettingLocationRefId</Element>
+      <Characteristics>O</Characteristics>
+      <Description> RefId of the location object if the location is a SIF Object such as <code>SchoolInfo</code>. </Description>
+      <Type ref="CommonTypes" name="IdRefType"/>
+    </Item>
+    <Item>
+      <Element>SettingLocationObjectTypeName</Element>
+      <Characteristics>M</Characteristics>
+      <Description> Type of SIF Object <code>SettingLocationRefId</code> points to. </Description>
+      <Type name="xs:token"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="ConsentToSharingOfDataContainerType" type="true" dm="true">
+    <Item>
+      <Element>ConsentToSharingOfDataContainerType</Element>
+      <Characteristics>M</Characteristics>
+      <Description>Container for sharing of data</Description>
+    </Item>
+    <Item>
+      <Element>DataDomainObligationList</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p/>
+      </Description>
+      <Type ref="CommonTypes" name="DataDomainObligationListType"/>
+    </Item>
+    <Item>
+      <Element>NeverShareWithList</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p/>
+      </Description>
+      <Type ref="CommonTypes" name="NeverShareWithListType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="DataDomainObligationListType" type="true" dm="true">
+    <Item>
+      <Element>DataDomainObligationListType</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p/>
+      </Description>
+      <List mode="List"/>
+    </Item>
+    <Item>
+      <Element>DataDomainObligation</Element>
+      <Characteristics>OR</Characteristics>
+      <Description>
+        <p/>
+      </Description>
+      <Type ref="CommonTypes" name="DataDomainObligationType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="DataDomainObligationType" type="true" dm="true">
+    <Item>
+      <Element>DataDomainObligationType</Element>
+      <Characteristics/>
+      <Description>
+        <p>.</p>
+      </Description>
+    </Item>
+    <Item>
+      <Element>DataDomain</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p/>
+      </Description>
+      <Type name="xs:string"/>
+    </Item>
+    <Item>
+      <Element>DomainComments</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Comments associated with data obligation.</p>
+      </Description>
+      <Type name="xs:string"/>
+    </Item>
+    <Item>
+      <Element>ShareWithList</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p/>
+      </Description>
+      <Type ref="CommonTypes" name="ShareWithListType"/>
+    </Item>
+    <Item>
+      <Element>DoNotShareWithList</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p/>
+      </Description>
+      <Type ref="CommonTypes" name="DoNotShareWithListType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="ShareWithListType" type="true" dm="true">
+    <Item>
+      <Element>ShareWithListType</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A list of parties and data sharing permissions.</p>
+      </Description>
+      <List mode="List"/>
+    </Item>
+    <Item>
+      <Element>ShareWith</Element>
+      <Characteristics>OR</Characteristics>
+      <Description>
+        <p>The .</p>
+      </Description>
+      <Type ref="CommonTypes" name="ShareWithType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="ShareWithType" type="true" dm="true">
+    <Item>
+      <Element>ShareWithType</Element>
+      <Characteristics/>
+      <Description>
+        <p>Information about data sharing.</p>
+      </Description>
+    </Item>
+    <Item>
+      <Element>ShareWithParty</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Who data could be shared with?</p>
+      </Description>
+      <Type name="xs:normalizedString"/>
+    </Item>
+    <Item>
+      <Element>ShareWithRefId</Element>
+      <Characteristics>O</Characteristics>
+      <Description>RefId of entity data to be shared with if known.</Description>
+      <Type ref="CommonTypes" name="IdRefType"/>
+    </Item>
+    <Item>
+			<Element>ShareWithObjectTypeName</Element>
 			<Characteristics>O</Characteristics>
 			<Description>
-				<p></p>
+			  <p>The name of the object referenced.</p>
 			</Description>
-			<List mode="List"/>
+			<Type name="xs:normalizedString"></Type>
 		</Item>
+    <Item>
+      <Element>ShareWithLocalId</Element>
+      <Characteristics>O</Characteristics>
+      <Description>LocalId of entity data to be shared with if known.</Description>
+      <Type ref="CommonTypes" name="LocalIdType"/>
+    </Item>
 		<Item>
-			<Element>DataDomainObligation</Element>
-			<Characteristics>OR</Characteristics>
-			<Description>
-				<p></p>
-			</Description>
-			<Type ref="CommonTypes" name="DataDomainObligationType"/>
-		</Item>
-	</CommonElement>
-	
-	<CommonElement name="DataDomainObligationType" type="true" dm="true">
-			<Item>
-			<Element>DataDomainObligationType</Element>
-			<Characteristics/>
-			<Description>
-				<p>.</p>
-			</Description>
-		</Item>
-		<Item>
-		   <Element>DataDomain</Element>
-		   <Characteristics>M</Characteristics>
-		   <Description>
-			 <p></p>
-		   </Description>
-		   <Type name="xs:string"></Type>
-  		</Item>  
-
-		<Item>
-		   <Element>DomainComments</Element>
-		   <Characteristics>M</Characteristics>
-		   <Description>
-			 <p>Comments associated with data obligation.</p>
-		   </Description>
-		   <Type name="xs:string"></Type>
-		</Item>
-		<Item>
-			<Element>ShareWithList</Element>
+			<Element>ShareWithName</Element>
 			<Characteristics>O</Characteristics>
 			<Description>
-			 <p></p>
+			  <p>The name of the person/body. Only to be used when a SIF reference object not available.</p>
 			</Description>
-		    <Type ref="CommonTypes" name="ShareWithListType"/>
+			<Type name="xs:normalizedString"></Type>
 		</Item>
-	</CommonElement>
-	
-	<CommonElement name="ShareWithListType" type="true" dm="true">
 		<Item>
-			<Element>ShareWithListType</Element>
+			<Element>ShareWithRelationship</Element>
 			<Characteristics>O</Characteristics>
 			<Description>
-				<p>A list of parties and data sharing permissions.</p>
+			  <p>The relationship of the person/body. Only to be used when a SIF reference object not available.</p>
 			</Description>
-			<List mode="List"/>
+			<Type name="xs:normalizedString"></Type>
 		</Item>
+    <Item>
+      <Element>ShareWithPurpose</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Why is this information to be shared?</p>
+      </Description>
+      <Type name="xs:string"/>
+    </Item>
+    <Item>
+      <Element>ShareWithRole</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Role of the information to be shared?</p>
+      </Description>
+      <Type name="xs:string"/>
+    </Item>
+    <Item>
+      <Element>ShareWithComments</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>Comments associated with Sharing arrangement</p>
+      </Description>
+      <Type name="xs:string"/>
+    </Item>
+    <Item>
+      <Element>PermissionToOnShare</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Can this information be shared with other parties?</p>
+      </Description>
+      <Type ref="CodeSets" name="GenericYesNoType"/>
+    </Item>
+    <Item>
+      <Element>ShareWithURL</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>URL Associated with Share</p>
+      </Description>
+      <Type name="xs:anyURI"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="DoNotShareWithListType" type="true" dm="true">
+    <Item>
+      <Element>DoNotShareWithListType</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A list of parties and data sharing permissions.</p>
+      </Description>
+      <List mode="List"/>
+    </Item>
+    <Item>
+      <Element>DoNotShareWith</Element>
+      <Characteristics>OR</Characteristics>
+      <Description>
+        <p>The .</p>
+      </Description>
+      <Type ref="CommonTypes" name="DoNotShareWithType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="DoNotShareWithType" type="true" dm="true">
+    <Item>
+      <Element>DoNotShareWithType</Element>
+      <Characteristics/>
+      <Description>
+        <p>Information about data sharing.</p>
+      </Description>
+    </Item>
+    <Item>
+      <Element>DoNotShareWithParty</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Who data should not be shared with? (Can we agree on a broadlist that can be typed for enumeration?)</p>
+      </Description>
+      <Type name="xs:normalizedString"/>
+    </Item>
+    <Item>
+      <Element>DoNotShareWithRefId</Element>
+      <Characteristics>O</Characteristics>
+      <Description>RefId of entity date not to be shared with if known.</Description>
+      <Type ref="CommonTypes" name="IdRefType"/>
+    </Item>
 		<Item>
-			<Element>ShareWith</Element>
-			<Characteristics>OR</Characteristics>
+			<Element>DoNotShareWithObjectTypeName</Element>
+			<Characteristics>O</Characteristics>
 			<Description>
-				<p>The FQItem being reported on.</p>
+			  <p>The name of the object referenced.</p>
 			</Description>
-			<Type ref="CommonTypes" name="ShareWithType"/>
-		</Item>
-	</CommonElement>
-	
-	<CommonElement name="ShareWithType" type="true" dm="true">
+			<Type name="xs:normalizedString"></Type>
+		</Item>    
+    <Item>
+      <Element>DoNotShareWithLocalId</Element>
+      <Characteristics>O</Characteristics>
+      <Description>LocalId of entity data not to be shared with if known.</Description>
+      <Type ref="CommonTypes" name="LocalIdType"/>
+    </Item>
 		<Item>
-			<Element>ShareWithType</Element>
-			<Characteristics/>
+			<Element>DoNotShareWithName</Element>
+			<Characteristics>O</Characteristics>
 			<Description>
-				<p>Information about data sharing.</p>
+			  <p>The name of the person/body. Only to be used when a SIF reference object not available.</p>
 			</Description>
+			<Type name="xs:normalizedString"></Type>
 		</Item>
 		<Item>
-		   <Element>ShareWithParty</Element>
-		   <Characteristics>M</Characteristics>
-		   <Description>
-			 <p>Who data could be shared with?</p>
-		   </Description>
-		   <Type name="xs:normalizedString"></Type>
-  		</Item>  
-		<Item>
-			<Element>Purpose</Element>
-			<Characteristics>M</Characteristics>
+			<Element>DoNotShareWithRelationship</Element>
+			<Characteristics>O</Characteristics>
 			<Description>
-			 <p>Why is this information to be shared?</p>
+			  <p>The relationship of the person/body. Only to be used when a SIF reference object not available.</p>
 			</Description>
-		    <Type name="xs:string"></Type>
+			<Type name="xs:normalizedString"></Type>
+		</Item>
+    <Item>
+      <Element>DoNotShareWithPurpose</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Why is this information is not to be shared?</p>
+      </Description>
+      <Type name="xs:string"/>
+    </Item>
+    <Item>
+      <Element>DoNotShareWithRole</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Role of the information to be shared?</p>
+      </Description>
+      <Type name="xs:string"/>
+    </Item>
+    <Item>
+      <Element>DoNotShareWithComments</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>Comments associated with Sharing arrangement</p>
+      </Description>
+      <Type name="xs:string"/>
+    </Item>
+    <Item>
+      <Element>DoNotShareWithURL</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>URL Associated with Share</p>
+      </Description>
+      <Type name="xs:anyURI"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="ApplicableLawListType" type="true" dm="true">
+    <Item>
+      <Element>ApplicableLawListType</Element>
+      <Characteristics/>
+      <Description>
+        <p>.</p>
+      </Description>
+    </Item>
+    <Item>
+      <Element>ApplicableLaw</Element>
+      <Characteristics>OR</Characteristics>
+      <Description>
+        <p/>
+      </Description>
+      <Type name="ApplicableLawType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="ApplicableLawType" type="true" dm="true">
+    <Item>
+      <Element>ApplicableLawType</Element>
+      <Characteristics/>
+      <Description>
+        <p>.</p>
+      </Description>
+    </Item>
+    <Item>
+      <Element>ApplicableCountry</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>We can type this, list of countries?</p>
+      </Description>
+      <Type name="xs:normalizedString"/>
+    </Item>
+    <Item>
+      <Element>ApplicableLawName</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>The name of the law that must be observed for this individual.</p>
+      </Description>
+      <Type name="xs:normalizedString"/>
+    </Item>
+    <Item>
+      <Element>ApplicableLawURL</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p/>
+      </Description>
+      <Type name="xs:anyURI"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="PermissionToParticipateListType" type="true" dm="true">
+    <Item>
+      <Element>PermissionToParticipateListType</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p/>
+      </Description>
+      <List mode="List"/>
+    </Item>
+    <Item>
+      <Element>PermissionToParticipate</Element>
+      <Characteristics>OR</Characteristics>
+      <Description>
+        <p>The .</p>
+      </Description>
+      <Type ref="CommonTypes" name="PermissionToParticipateType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="PermissionToParticipateType" type="true" dm="true">
+    <Item>
+      <Element>PermissionToParticipateType</Element>
+      <Characteristics/>
+      <Description>
+        <p/>
+      </Description>
+    </Item>
+    <Item>
+      <Element>PermissionCategory</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>What is the category of permission</p>
+      </Description>
+      <Type name="xs:normalizedString"/>
+    </Item>
+    <Item>
+      <Element>Permission</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>What is the Permission?</p>
+      </Description>
+      <Type name="xs:string"/>
+    </Item>
+    <Item>
+      <Element>PermissionValue</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>Permission or not?</p>
+      </Description>
+      <Values>
+        <Value>
+          <Code>Y</Code>
+          <Text>Yes</Text>
+        </Value>
+        <Value>
+          <Code>N</Code>
+          <Text>No</Text>
+        </Value>
+        <Value>
+          <Code>U</Code>
+          <Text>Unknown</Text>
+        </Value>
+      </Values>
+    </Item>
+    <Item>
+      <Element>PermissionStartDate</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>Start Date Associated with Permission</p>
+      </Description>
+      <Type name="xs:date"/>
+    </Item>
+    <Item>
+      <Element>PermissionEndDate</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>End Date Associated with Permission</p>
+      </Description>
+      <Type name="xs:date"/>
+    </Item>
+    <Item>
+      <Element>PermissionGranteeRefId</Element>
+      <Characteristics>O</Characteristics>
+      <Description>RefId of the person granting permission if known.</Description>
+      <Type ref="CommonTypes" name="IdRefType"/>
+    </Item>
+		<Item>
+			<Element>PermissionGranteeObjectTypeName</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+			  <p>The name of the object referenced.</p>
+			</Description>
+			<Type name="xs:normalizedString"></Type>
+		</Item>      
+    <Item>
+			<Element>PermissionGranteeName</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+			  <p>The name of the person. Only to be used when a SIF reference object not available.</p>
+			</Description>
+			<Type name="xs:normalizedString"></Type>
 		</Item>
 		<Item>
-		   <Element>ShareWithComments</Element>
-		   <Characteristics>M</Characteristics>
-		   <Description>
-			 <p>Comments associated with Sharing arrangement</p>
-		   </Description>
-		   <Type name="xs:string"></Type>
+			<Element>PermissionGranteeRelationship</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+			  <p>The relationship of the person. Only to be used when a SIF reference object not available.</p>
+			</Description>
+			<Type name="xs:normalizedString"></Type>
+		</Item>
+    <Item>
+      <Element>PermissionComments</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>Comments Associated with Permission</p>
+      </Description>
+      <Type name="xs:string"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="NeverShareWithListType" type="true" dm="true">
+    <Item>
+      <Element>NeverShareWithListType</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A list of parties and data sharing permissions.</p>
+      </Description>
+      <List mode="List"/>
+    </Item>
+    <Item>
+      <Element>NeverShareWith</Element>
+      <Characteristics>OR</Characteristics>
+      <Description>
+        <p>The .</p>
+      </Description>
+      <Type ref="CommonTypes" name="NeverShareWithType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="NeverShareWithType" type="true" dm="true">
+    <Item>
+      <Element>NeverShareWithType</Element>
+      <Characteristics/>
+      <Description>
+        <p>Information about data sharing.</p>
+      </Description>
+    </Item>
+    <Item>
+      <Element>NeverShareWithParty</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Who data should never be shared with?</p>
+      </Description>
+      <Type name="xs:normalizedString"/>
+    </Item>
+    <Item>
+      <Element>NeverShareWithRefId</Element>
+      <Characteristics>O</Characteristics>
+      <Description>RefId of entity never to be shared with if known.</Description>
+      <Type ref="CommonTypes" name="IdRefType"/>
+    </Item>
+		<Item>
+			<Element>NeverShareWithObjectTypeName</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+			  <p>The name of the object referenced.</p>
+			</Description>
+			<Type name="xs:normalizedString"></Type>
+		</Item>    
+    <Item>
+      <Element>NeverShareWithLocalId</Element>
+      <Characteristics>O</Characteristics>
+      <Description>LocalId of entity never to be shared with if known.</Description>
+      <Type ref="CommonTypes" name="LocalIdType"/>
+    </Item>
+		<Item>
+			<Element>NeverShareWithName</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+			  <p>The name of the person/body. Only to be used when a SIF reference object not available.</p>
+			</Description>
+			<Type name="xs:normalizedString"></Type>
 		</Item>
 		<Item>
-		   <Element>PermissionToOnShare</Element>
-		   <Characteristics>M</Characteristics>
-		   <Description>
-			 <p>Can this information be shared with other parties?</p>
-		   </Description>
-		   <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"/>
+			<Element>NeverShareWithRelationship</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+			  <p>The relationship of the person/body. Only to be used when a SIF reference object not available.</p>
+			</Description>
+			<Type name="xs:normalizedString"></Type>
 		</Item>
-		
-		<Item>
-		   <Element>ShareWithURL</Element>
-		   <Characteristics>M</Characteristics>
-		   <Description>
-			 <p>URL Associated with Share</p>
-		   </Description>
-		   <Type name="xs:anyURI"></Type>
-		</Item>
-		   	
- </CommonElement> 
-   
-             
-<CommonElement name="ApplicableLawListType" type="true" dm="true">
-	<Item>
-		<Element>ApplicableLawListType</Element>
-		<Characteristics/>
-		<Description>
-			<p>.</p>
-		</Description>
-	</Item>
-	<Item>
-	   <Element>ApplicableLaw</Element>
-	   <Characteristics>OR</Characteristics>
-	   <Description>
-		 <p></p>
-	   </Description>
-	   <Type name="ApplicableLawType"></Type>
-	</Item>  
-</CommonElement>
-
-<CommonElement name="ApplicableLawType" type="true" dm="true">  
-	   <Item>
-		<Element>ApplicableLawType</Element>
-		<Characteristics/>
-		<Description>
-			<p>.</p>
-		</Description>
-		</Item>
-		<Item>
-		   <Element>ApplicableCountry</Element>
-		   <Characteristics>M</Characteristics>
-		   <Description>
-			<p></p>
-		   </Description>
-		   <Type name="xs:normalizedString"></Type>
-		</Item>  
-		<Item>
-		   <Element>ApplicableLawName</Element>
-		   <Characteristics>M</Characteristics>
-		   <Description>
-			<p></p>
-		   </Description>
-		   <Type name="xs:normalizedString"></Type>
-		</Item>  
-		<Item>
-		   <Element>ApplicableLawURL</Element>
-		   <Characteristics>O</Characteristics>
-		   <Description>
-			<p></p>
-		   </Description>
-		   <Type name="xs:anyURI"></Type>
-		</Item>  
-</CommonElement>  -->
+    <Item>
+      <Element>NeverShareWithPurpose</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Purpose of information never to be shared?</p>
+      </Description>
+      <Type name="xs:string"/>
+    </Item>
+    <Item>
+      <Element>NeverShareWithRole</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Role of information never to be shared?</p>
+      </Description>
+      <Type name="xs:string"/>
+    </Item>
+    <Item>
+      <Element>NeverShareWithComments</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>Comments associated with Sharing arrangement</p>
+      </Description>
+      <Type name="xs:string"/>
+    </Item>
+    <Item>
+      <Element>NeverShareWithURL</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>URL Associated with Share</p>
+      </Description>
+      <Type name="xs:anyURI"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="GenericYesNoType" type="true" dm="true">
+    <Item>
+      <Element>GenericYesNoType</Element>
+      <Description>
+        <p>Yes/No codeset for the P-POD.</p>
+      </Description>
+      <Values>
+        <Value>
+          <Code>Y</Code>
+          <Text>Yes</Text>
+        </Value>
+        <Value>
+          <Code>N</Code>
+          <Text>No</Text>
+        </Value>
+        <Value>
+          <Code>U</Code>
+          <Text>Unknown</Text>
+        </Value>
+      </Values>
+    </Item>
+  </CommonElement>
   
  <!-- End of PPOD Types -->
  
