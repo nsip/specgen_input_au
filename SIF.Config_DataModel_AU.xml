@@ -202,16 +202,33 @@
 			<xsltOutputFile>OpenAPI_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>	
-			
-		<xsltTransformation>
-			<xsltInputFile>98_Xslt\dmToExamplesSBP.xsl</xsltInputFile>
-			<xsltOutputDir>JSON\SBP</xsltOutputDir>
-			<xsltOutputFile>examples_AU_3.4.8.yaml</xsltOutputFile>
-			<yamlToJson>true</yamlToJson>
-		</xsltTransformation>
+<!--- now run Use Cases -->			
+<xsltTransformation>
+	<xsltInputFile>98_Xslt\dmToExamples.xsl</xsltInputFile>
+	<xsltParameterList>
+		<xsltParameter>
+			<xsltName>sifObjectList</xsltName>
+			<xsltValue>'StudentAttendanceTimeList,StudentAttendanceSummary,StudentDailyAttendance,StudentPeriodAttendance,SessionInfo,CalendarDate,CalendarSummary'</xsltValue>
+		</xsltParameter>
+	</xsltParameterList>
+	<xsltOutputDir>JSON</xsltOutputDir>
+	<xsltOutputFile>ATTEND/examples_AU_3.4.8.yaml</xsltOutputFile>
+	<yamlToJson>true</yamlToJson>
+</xsltTransformation>
+
 		
 		<xsltTransformation>
-			<xsltInputFile>98_Xslt\dmToSBPAPI.xsl</xsltInputFile>
+			<xsltInputFile>98_Xslt\dmToOpenAPI.xsl</xsltInputFile>
+			<xsltParameterList>
+			<xsltParameter>
+				<xsltName>sifObjectList</xsltName>
+				<xsltValue>'StudentAttendanceTimeList,StudentAttendanceSummary,StudentDailyAttendance,StudentPeriodAttendance,SessionInfo,CalendarDate,CalendarSummary'</xsltValue>
+			</xsltParameter>
+			<xsltParameter>
+				<xsltName>sifObjectGroupList</xsltName>
+				<xsltValue>'SIF AU Student Baseline Profile (SBP) and supporting objects'</xsltValue>
+			</xsltParameter>
+			</xsltParameterList>
 			<xsltOutputDir>JSON\SBP</xsltOutputDir>
 			<xsltOutputFile>SBPAPI_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
@@ -248,14 +265,30 @@
 		
 		<!-- Attendance -->
 		<xsltTransformation>
-			<xsltInputFile>98_Xslt\dmToExamplesAtt.xsl</xsltInputFile>
+			<xsltInputFile>98_Xslt\dmToExamples.xsl</xsltInputFile>
+			<xsltParameterList>
+				<xsltParameter>
+					<xsltName>sifObjectList</xsltName>
+					<xsltValue>'StudentAttendanceTimeList,StudentAttendanceSummary,StudentDailyAttendance,StudentPeriodAttendance,SessionInfo,CalendarDate,CalendarSummary'</xsltValue>
+				</xsltParameter>
+			</xsltParameterList>
 			<xsltOutputDir>JSON\ATTEND</xsltOutputDir>
 			<xsltOutputFile>examples_AU_3.4.8.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 		
 		<xsltTransformation>
-			<xsltInputFile>98_Xslt\dmToAttendanceAPI.xsl</xsltInputFile>
+			<xsltInputFile>98_Xslt\dmToOpenAPI.xsl</xsltInputFile>
+						<xsltParameterList>
+				<xsltParameter>
+					<xsltName>sifObjectList</xsltName>
+					<xsltValue>'StudentAttendanceTimeList,StudentAttendanceSummary,StudentDailyAttendance,StudentPeriodAttendance,SessionInfo,CalendarDate,CalendarSummary'</xsltValue>
+				</xsltParameter>
+				<xsltParameter>
+					<xsltName>sifObjectGroupList</xsltName>
+					<xsltValue>'Attendance'</xsltValue>
+				</xsltParameter>
+			</xsltParameterList>
 			<xsltOutputDir>JSON\ATTEND</xsltOutputDir>
 			<xsltOutputFile>ATTENDAPI_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
@@ -291,14 +324,30 @@
 		
 				<!-- Finance -->
 		<xsltTransformation>
-			<xsltInputFile>98_Xslt\dmToExamplesFinance.xsl</xsltInputFile>
+			<xsltInputFile>98_Xslt\dmToExamples.xsl</xsltInputFile>
+			<xsltParameterList>
+				<xsltParameter>
+					<xsltName>sifObjectList</xsltName>
+					<xsltValue>'Invoice,FinancialAccount,ChargedLocationInfo,PaymentReceipt,PurchaseOrder,VendorInfo,Journal,Debtor'</xsltValue>
+				</xsltParameter>
+			</xsltParameterList>
 			<xsltOutputDir>JSON\Finance</xsltOutputDir>
 			<xsltOutputFile>examples_AU_3.4.8.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 		
 		<xsltTransformation>
-			<xsltInputFile>98_Xslt\dmToFinanceOpenAPI.xsl</xsltInputFile>
+			<xsltInputFile>98_Xslt\dmToOpenAPI.xsl</xsltInputFile>
+			<xsltParameterList>
+				<xsltParameter>
+					<xsltName>sifObjectList</xsltName>
+					<xsltValue>'Invoice,FinancialAccount,ChargedLocationInfo,PaymentReceipt,PurchaseOrder,VendorInfo,Journal,Debtor'</xsltValue>
+				</xsltParameter>
+				<xsltParameter>
+					<xsltName>sifObjectGroupList</xsltName>
+					<xsltValue>'Finance'</xsltValue>
+				</xsltParameter>
+			</xsltParameterList>
 			<xsltOutputDir>JSON\Finance</xsltOutputDir>
 			<xsltOutputFile>FinanceOpenAPI_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
