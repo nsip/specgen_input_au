@@ -202,7 +202,8 @@
 				<AttendanceCode>
 					<Code>102</Code>
 				</AttendanceCode>
-				<AttendanceStatus>02</AttendanceStatus>  
+				<AttendanceStatus>02</AttendanceStatus>
+				<Date>2002-11-01</Date> 
 				<TimetablePeriod>P1</TimetablePeriod>
 				<DayId>1</DayId>
 				<StartTime>09:00:00</StartTime>
@@ -226,6 +227,7 @@
 					<Code>100</Code>
 				</AttendanceCode>
 				<AttendanceStatus>NA</AttendanceStatus>
+				<Date>2002-11-01</Date>
 				<TimetablePeriod>P2</TimetablePeriod>
 				<DayId>1</DayId>
 				<StartTime>10:00:00</StartTime>
@@ -245,7 +247,8 @@
 				<AttendanceCode>
 					<Code>101</Code>
 				</AttendanceCode>
-				<AttendanceStatus>01</AttendanceStatus>				
+				<AttendanceStatus>01</AttendanceStatus>
+				<Date>2002-11-01</Date>				
 				<TimetablePeriod>P3</TimetablePeriod>
 				<DayId>1</DayId>
 				<StartTime>11:00:00</StartTime>
@@ -269,6 +272,7 @@
 					<Code>100</Code>
 				</AttendanceCode>
 				<AttendanceStatus>NA</AttendanceStatus>
+				<Date>2002-11-01</Date>
 				<TimetablePeriod>P4</TimetablePeriod>
 				<DayId>1</DayId>
 				<StartTime>13:00:00</StartTime>
@@ -289,6 +293,7 @@
 					<Code>100</Code>
 				</AttendanceCode>
 				<AttendanceStatus>NA</AttendanceStatus>
+				<Date>2002-11-01</Date>
 				<TimetablePeriod>P5</TimetablePeriod>
 				<DayId>1</DayId>
 				<StartTime>14:00:00</StartTime>

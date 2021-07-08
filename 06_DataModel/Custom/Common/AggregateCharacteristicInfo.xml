@@ -83,6 +83,7 @@
   <xhtml:Example xmlns="" name="AggregateCharacteristicInfo">
     <AggregateCharacteristicInfo RefId="06AF1D69-FB06-4AB3-8898-3505714F18FB">
       <Description>Sex</Description>
+      <Definition>Gender or Sex</Definition>
       <ElementName>StudentPersonal/PersonInfo/Demographics/Sex</ElementName>
     </AggregateCharacteristicInfo>
   </xhtml:Example>

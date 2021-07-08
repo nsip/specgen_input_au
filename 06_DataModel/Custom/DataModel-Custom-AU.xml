@@ -25,9 +25,8 @@
 		<xi:include parse="text" href="Common/PersonPicture.xml"/>
 		<xi:include parse="text" href="Common/Identity.xml"/>
 
-				<!--P POD -->
-				<!-- NOT FOR RELEASE IN 3.4.6
-		<xi:include parse="text" href="Common/PersonPrivacyObligation.xml"/>  -->
+				<!--P POD Added for 3.4.9 Release - conceptual model will need updating here too -->
+		<xi:include parse="text" href="Common/PersonPrivacyObligationDocument.xml"/>  
 	</Group>
 
 	<Group name="Activity">

@@ -190,6 +190,7 @@
           <SequenceNumber>0</SequenceNumber>
 	  <TestItemContent>
             <NAPTestItemLocalId>NAPLAN-2017-0001-Reading-A-00-00</NAPTestItemLocalId>
+            <ItemName>Reading Unit A</ItemName>
             <ItemType>MC</ItemType>
     <Subdomain>Letters</Subdomain>
     <ItemDescriptor>Descriptor #1</ItemDescriptor>
@@ -227,6 +228,7 @@
           <SequenceNumber>1</SequenceNumber>
 	  <TestItemContent>
             <NAPTestItemLocalId>NAPLAN-2017-0001-Reading-A-00-01</NAPTestItemLocalId>
+            <ItemName>Reading Unit A</ItemName>
             <ItemType>MC</ItemType>
     <Subdomain>Letters</Subdomain>
     <ItemDescriptor>Descriptor #1</ItemDescriptor>
@@ -264,6 +266,7 @@
           <SequenceNumber>2</SequenceNumber>
 	  <TestItemContent>
             <NAPTestItemLocalId>NAPLAN-2017-0001-Reading-A-00-02</NAPTestItemLocalId>
+            <ItemName>Reading Unit A</ItemName>
             <ItemType>SP</ItemType>
     <Subdomain>Letters</Subdomain>
     <ItemDescriptor>Descriptor #1</ItemDescriptor>
@@ -300,6 +303,7 @@
           <SequenceNumber>3</SequenceNumber>
 	  <TestItemContent>
             <NAPTestItemLocalId>NAPLAN-2017-0001-Reading-A-00-03</NAPTestItemLocalId>
+            <ItemName>Reading Unit A</ItemName>
             <ItemType>MC</ItemType>
     <Subdomain>Letters</Subdomain>
     <ItemDescriptor>Descriptor #1</ItemDescriptor>
@@ -337,6 +341,7 @@
           <SequenceNumber>4</SequenceNumber>
 	  <TestItemContent>
             <NAPTestItemLocalId>NAPLAN-2017-0001-Reading-A-00-04</NAPTestItemLocalId>
+            <ItemName>Reading Unit A</ItemName>
             <ItemType>IO</ItemType>
     <Subdomain>Letters</Subdomain>
     <ItemDescriptor>Descriptor #1</ItemDescriptor>
@@ -373,6 +378,7 @@
           <SequenceNumber>5</SequenceNumber>
 	  <TestItemContent>
             <NAPTestItemLocalId>NAPLAN-2017-0001-Reading-A-00-05</NAPTestItemLocalId>
+            <ItemName>Reading Unit A</ItemName>
             <ItemType>MC</ItemType>
     <Subdomain>Letters</Subdomain>
     <ItemDescriptor>Descriptor #1</ItemDescriptor>
@@ -410,6 +416,7 @@
           <SequenceNumber>6</SequenceNumber>
 	  <TestItemContent>
             <NAPTestItemLocalId>NAPLAN-2017-0001-Reading-A-00-06</NAPTestItemLocalId>
+            <ItemName>Reading Unit A</ItemName>
             <ItemType>MC</ItemType>
     <Subdomain>Letters</Subdomain>
     <ItemDescriptor>Descriptor #1</ItemDescriptor>
@@ -447,6 +454,7 @@
           <SequenceNumber>7</SequenceNumber>
 	  <TestItemContent>
             <NAPTestItemLocalId>NAPLAN-2017-0001-Reading-A-00-07</NAPTestItemLocalId>
+            <ItemName>Reading Unit A</ItemName>
             <ItemType>IGM</ItemType>
     <Subdomain>Letters</Subdomain>
     <ItemDescriptor>Descriptor #1</ItemDescriptor>
@@ -483,6 +491,7 @@
           <SequenceNumber>8</SequenceNumber>
 	  <TestItemContent>
             <NAPTestItemLocalId>NAPLAN-2017-0001-Reading-A-00-08</NAPTestItemLocalId>
+            <ItemName>Reading Unit A</ItemName>
             <ItemType>MC</ItemType>
     <Subdomain>Letters</Subdomain>
     <ItemDescriptor>Descriptor #1</ItemDescriptor>
@@ -520,6 +529,7 @@
           <SequenceNumber>9</SequenceNumber>
 	  <TestItemContent>
             <NAPTestItemLocalId>NAPLAN-2017-0001-Reading-A-00-09</NAPTestItemLocalId>
+            <ItemName>Reading Unit A</ItemName>
             <ItemType>TE</ItemType>
     <Subdomain>Letters</Subdomain>
     <ItemDescriptor>Descriptor #1</ItemDescriptor>
@@ -556,6 +566,7 @@
           <SequenceNumber>10</SequenceNumber>
 	  <TestItemContent>
             <NAPTestItemLocalId>NAPLAN-2017-0001-Reading-A-00-10</NAPTestItemLocalId>
+            <ItemName>Reading Unit A</ItemName>
             <ItemType>PO</ItemType>
     <Subdomain>Letters</Subdomain>
     <ItemDescriptor>Descriptor #1</ItemDescriptor>
@@ -592,6 +603,7 @@
           <SequenceNumber>11</SequenceNumber>
 	  <TestItemContent>
             <NAPTestItemLocalId>NAPLAN-2017-0001-Reading-A-00-11</NAPTestItemLocalId>
+            <ItemName>Reading Unit A</ItemName>
             <ItemType>MC</ItemType>
     <Subdomain>Letters</Subdomain>
     <ItemDescriptor>Descriptor #1</ItemDescriptor>
