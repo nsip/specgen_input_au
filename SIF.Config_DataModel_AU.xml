@@ -9,7 +9,7 @@
 		<inputDocument>SIF_DataModel.xml</inputDocument>
 		<sifNamespace>http://www.sifassociation.org/datamodel/au/3.4</sifNamespace>
 		<localizationCode>au</localizationCode>
-		<schemaVersion>3.4.8</schemaVersion>
+		<schemaVersion>3.4.9</schemaVersion>
 		
 		<!-- Comment this one out to leave out JSON Tabs -->
 		
@@ -17,8 +17,8 @@
 		
 		<resolveExtensions>false</resolveExtensions>
  
- 		<isDraft>false</isDraft>
-
+ 		<isDraft>true</isDraft>
+        <examplesValidatorFile>XSD\SIF_MessageNoIncludes\SIF_Message.xsd</examplesValidatorFile>
  
 	</globalSettings>
 	
@@ -28,7 +28,7 @@
 		<htmlDocument>
 			<singleDocument>false</singleDocument>
 			<rootDocumentFileName>index.html</rootDocumentFileName>
-			<rootTitle>SIF Implementation Specification (Australia) 3.4.8</rootTitle>
+			<rootTitle>SIF Implementation Specification (Australia) 3.4.9</rootTitle>
 			<documentType>DataModel</documentType>
 		</htmlDocument>
 		
@@ -36,7 +36,7 @@
 		<htmlDocument>
 			<singleDocument>true</singleDocument>
 			<rootDocumentFileName>ImplementationSpecification.html</rootDocumentFileName>
-			<rootTitle>SIF Implementation Specification (Australia) 3.4.8</rootTitle>
+			<rootTitle>SIF Implementation Specification (Australia) 3.4.9</rootTitle>
 			<documentType>DataModel</documentType>
 		</htmlDocument>
 		
@@ -163,7 +163,7 @@
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToExamples.xsl</xsltInputFile>
 			<xsltOutputDir>JSON</xsltOutputDir>
-			<xsltOutputFile>examples_AU_3.4.8.yaml</xsltOutputFile>
+			<xsltOutputFile>examples_AU_3.4.9.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 		
@@ -206,7 +206,7 @@
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToExamplesSBP.xsl</xsltInputFile>
 			<xsltOutputDir>JSON\SBP</xsltOutputDir>
-			<xsltOutputFile>examples_AU_3.4.8.yaml</xsltOutputFile>
+			<xsltOutputFile>examples_AU_3.4.9.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 		
@@ -250,7 +250,7 @@
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToExamplesAtt.xsl</xsltInputFile>
 			<xsltOutputDir>JSON\ATTEND</xsltOutputDir>
-			<xsltOutputFile>examples_AU_3.4.8.yaml</xsltOutputFile>
+			<xsltOutputFile>examples_AU_3.4.9.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 		
