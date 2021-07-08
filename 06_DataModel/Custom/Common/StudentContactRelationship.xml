@@ -121,7 +121,16 @@
     </Description>
     <Type ref="CodeSets" name="AUCodeSetsSourceCodeTypeType"></Type>
   </Item>
-  
+  <Item>
+    <Element>FeePercentage</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Medium</privacyRating>
+    <Description>
+      <p>Percentage of school fees paid by the specified student contact for the specified student. </p>
+    </Description>
+    <Type ref="CommonTypes" name="StudentContactFeePercentageType"></Type>
+  </Item>
+ 
   <Item>
     <Element>SchoolInfoRefId</Element>
     <Description>GUID that identifies a school associated with the relationship.</Description>
@@ -177,6 +186,10 @@
       <MainlySpeaksEnglishAtHome>U</MainlySpeaksEnglishAtHome>
         <ContactSequence>1</ContactSequence>
         <ContactSequenceSource>P</ContactSequenceSource>
+		<FeePercentage>
+		  <Curriculum>90.0</Curriculum>
+		  <Other>10.0</Other>
+		</FeePercentage>
       </StudentContactRelationship>
 
   </xhtml:Example>

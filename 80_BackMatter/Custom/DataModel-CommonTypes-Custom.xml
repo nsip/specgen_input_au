@@ -12672,6 +12672,22 @@
 		<Type name="xs:normalizedString"/>
 	</Item>
 	<Item>
+		<Element>VisaNumber</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Visa number if one exists</p>
+		</Description>
+		<Type name="xs:token"/>
+	</Item>
+	<Item>
+		<Element>VisaGrantDate</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Grant Date of Visa if one exists</p>
+		</Description>
+		<Type name="xs:date"/>
+	</Item>
+	<Item>
 		<Element>VisaExpiryDate</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
@@ -12792,6 +12808,9 @@
 			<PermanentResident>P</PermanentResident>
 			<VisaSubClass>101</VisaSubClass>
 			<VisaStatisticalCode>05</VisaStatisticalCode>
+			<VisaNumber>987654321</VisaNumber>
+			<VisaGrantDate>2020-01-01</VisaGrantDate>
+			<VisaExpiryDate>2029-01-01</VisaExpiryDate>
 			<Passport>
 				<Number>9</Number>
 				<ExpiryDate>2030-12-11</ExpiryDate>
@@ -13813,6 +13832,39 @@
 		<Element>TimeElement</Element>
 		<Characteristics>OR</Characteristics>
 		<Type ref="CommonTypes" name="TimeElementType"/>
+	</Item>
+</CommonElement>
+
+<CommonElement name="StudentContactFeePercentageType" type="true" dm="true">
+	<Item>
+		<Element>StudentContactFeePercentageType</Element>
+		<Description>
+			<p>Percentage of school fees paid by a student contact for a student.</p>
+		</Description>
+	</Item>
+  	<Item>
+		<Element>Curriculum</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Percentage of curriculum-related school fees paid by a student contact for a student.</p>
+		</Description>
+		<Type name="xs:decimal"></Type>
+		<Facets>
+		  <xs:minInclusive value="0"/>
+		  <xs:maxInclusive value="100"/>
+		</Facets>
+	</Item>
+  	<Item>
+		<Element>Other</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Percentage of other school fees paid by a student contact for a student.</p>
+		</Description>
+		<Type name="xs:decimal"></Type>
+		<Facets>
+		  <xs:minInclusive value="0"/>
+		  <xs:maxInclusive value="100"/>
+		</Facets>
 	</Item>
 </CommonElement>
 

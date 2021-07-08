@@ -106,6 +106,35 @@
     </Description>
     <Type name="xs:normalizedString"></Type>
   </Item>
+  <Item>
+    <Element>BSB</Element>    
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Debtor's BSB number.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  
+  <Item>
+    <Element>AccountNumber</Element>    
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Debtor's account number.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  
+  <Item>
+    <Element>AccountName</Element>    
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Debtor's account name.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
   <Item>   
     <Element>LocalCodeList</Element>
     <Characteristics>O</Characteristics>
@@ -141,6 +170,9 @@
       <BillingName>Flintstone Family Trust</BillingName>
       <BillingNote>Do not invoice under parent's real name.</BillingNote>
       <Discount>10.0</Discount>
+	  <BSB>12121212</BSB>
+	  <AccountNumber>34343434</AccountNumber>
+	  <AccountName>Flintstone Inc.</AccountName>
     </Debtor>
     
   </xhtml:Example>
