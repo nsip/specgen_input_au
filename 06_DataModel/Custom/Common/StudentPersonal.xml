@@ -63,6 +63,15 @@
 		</Description>
 		<Type ref="CommonTypes" name="StateProvinceIdType"/>
 	</Item>
+	<Item>
+		<Element>UniqueStudentIdentifier</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+			<p>The Commonwealth-assigned USI identifier for this student.</p>
+		</Description>
+		<Type name="xs:token"></Type>
+	</Item>
     
 	<Item>
 		<Element>ElectronicIdList</Element>
@@ -308,6 +317,7 @@
 			</MedicalAlertMessages>
 			<LocalId>S1234567</LocalId>
 			<StateProvinceId>ABC1234</StateProvinceId>
+			<UniqueStudentIdentifier>12345678</UniqueStudentIdentifier>
 			<ElectronicIdList>
 				<ElectronicId Type="03">ZZZZZZ21</ElectronicId>
 				<ElectronicId Type="03">ZZZZZZ22</ElectronicId>
@@ -390,7 +400,11 @@
 							<VisaStatisticalCode>05</VisaStatisticalCode>
 						  </VisaSubClass>
 					</VisaSubClassList>
-
+					<Passport>
+						<Number>9</Number>
+						<ExpiryDate>2030-12-11</ExpiryDate>
+						<Country>4111</Country>
+					</Passport>
 				</Demographics>
 				<AddressList>
 					<Address Type="0123" Role="2382">

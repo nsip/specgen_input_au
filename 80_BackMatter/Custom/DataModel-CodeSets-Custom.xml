@@ -2909,6 +2909,10 @@
 				<Code>Spec/Sec</Code>
 				<Text>Special/Secondary Combined</Text>
 			</Value>									
+            <Value>
+				<Code>SpecialAssisstance</Code>
+				<Text>Special Assistance</Text>
+			</Value>									
 			<Value>
 				<Code>Prim</Code>
 				<Text>Primary</Text>

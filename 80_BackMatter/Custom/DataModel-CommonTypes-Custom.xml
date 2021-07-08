@@ -3280,7 +3280,7 @@
 		</Description>
 		<Type name="xs:integer"></Type>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example name="LocalCode Example" xmlns="">
 			<LocalCode>
 				<LocalisedCode>0921</LocalisedCode>
 				<Description>Serbia Montenegro</Description>
@@ -4109,7 +4109,7 @@
 		</Description>
 		<Type ref="CommonTypes" name="PhoneNumberType"/>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example  name="EntityContactInfo Example" xmlns="">
 		<EntityContactInfo>
 			<Name Type="LGL">
 				<FamilyName>Woodall</FamilyName>
@@ -11430,7 +11430,7 @@
 		</Description>
 		<Type ref="CommonTypes" name="YearLevelType"/>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns=""  name="YearLevels Example">
 		<YearLevels>
 			<YearLevel>
 				<Code>5</Code>
@@ -11455,7 +11455,7 @@
 		</Description>
 		<Type name="xs:anyURI"/>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="SchoolURL Example">
 		<SchoolURL>http://www.lincolnhs.edu</SchoolURL>
 	</xhtml:Example>
 </CommonElement>
@@ -11499,7 +11499,7 @@
 		</Description>
 		<Type ref="CommonTypes" name="EmailListType"/>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="PrincipalInfo Example">
 		<PrincipalInfo>
 			<ContactName Type="LGL">
 				<Title>Mr</Title>
@@ -11568,7 +11568,7 @@
 		<Type ref="CommonTypes" name="SchoolContactType"/>
 	</Item>
 	
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="SchoolContactList Example">
 		<SchoolContactList>
 			<SchoolContact>
 				<PublishInDirectory>Y</PublishInDirectory>
@@ -11607,7 +11607,7 @@
 		</Description>
 		<Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"/>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="PublishInDirectory Example">
 		<PublishInDirectory>Y</PublishInDirectory>
 	</xhtml:Example>
 </CommonElement>
@@ -11682,7 +11682,7 @@
 		</Description>
 		<Type ref="CommonTypes" name="PhoneNumberListType"/>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="ContactInfo Example">
 		<ContactInfo>
 			<Name Type="LGL">
 				<FamilyName>Woodall</FamilyName>
@@ -12187,7 +12187,7 @@
 		</Description>
 		<Type ref="CommonTypes" name="EmailType"/>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="EmailList Example">
 		<EmailList>
 			<Email Type="01">contact@sifinfo.org</Email>
 			<Email Type="02">info@sifinfo.org</Email>
@@ -12213,7 +12213,7 @@
 		</Description>
 		<Type ref="CodeSets" name="AUCodeSetsEmailTypeType"/>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="Email Example">
 		<Email Type="01">contact@sifinfo.org</Email>
 	</xhtml:Example>
 </CommonElement>
@@ -12233,7 +12233,7 @@
 		</Description>
 		<Type ref="CommonTypes" complex="extension" name="PhoneNumberType"/>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="PhoneNumberList Example">
 		<PhoneNumberList>
 			<PhoneNumber Type="0096">
 				<Number>(03) 9543 2000</Number>
@@ -12293,7 +12293,7 @@
 		</Description>
 	    <Type name="xs:unsignedInt"/>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="PhoneNumber Example">
 		<PhoneNumber Type="0096">
 			<Number>(03) 9543 2000</Number>
 			<Extension>245</Extension>
@@ -12308,7 +12308,7 @@
 		</Description>
 		<Type ref="CodeSets" name="AUCodeSetsStandardAustralianClassificationOfCountriesSACCType"/>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="Country Example">
 		<Country>1101</Country>
 	</xhtml:Example>
 </CommonElement>
@@ -12351,7 +12351,7 @@
 			<xs:maxInclusive value="180"/>
 		</Facets>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="GridLocation Example">
 		<GridLocation>
 			<Latitude>41.850000</Latitude>
 			<Longitude>-87.650000</Longitude>
@@ -12369,7 +12369,7 @@
 		</Description>
 		<Type ref="CodeSets" name="AUCodeSetsOperationalStatusType"/>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="OperationalStatus Example">
 		<OperationalStatus>O</OperationalStatus>
 	</xhtml:Example>
 </CommonElement>
@@ -12384,7 +12384,7 @@
 			<Type name="xs:token"/>
 		</Union>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="StateProvince Example">
 		<StateProvince>ACT</StateProvince>
 	</xhtml:Example>
 </CommonElement>
@@ -12400,7 +12400,7 @@
 		</Description>
 		<Type name="xs:gYear"/>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="SchoolYear Example">
 		<SchoolYear>2005</SchoolYear>
 	</xhtml:Example>
 </CommonElement>
@@ -12418,7 +12418,7 @@
 		<Characteristics>MR</Characteristics>
 		<Type ref="CommonTypes" name="ElectronicIdType"/>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="ElectronicIdList Example">
 		<ElectronicIdList>
 			<ElectronicId Type="01">206654</ElectronicId>
 			<ElectronicId Type="03">1234</ElectronicId>
@@ -12443,7 +12443,7 @@
 		</Description>
 		<Type ref="CodeSets" name="AUCodeSetsElectronicIdTypeType"/>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="ElectronicId Example">
 		<ElectronicId Type="01">206654</ElectronicId>
 	</xhtml:Example>
 </CommonElement>
@@ -12465,7 +12465,7 @@
 		</Description>
 		<Type ref="CommonTypes" complex="extension" name="OtherNameType"/>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="OtherNames Example">
 		<OtherNames>
 			<Name Type="AKA">
 				<FamilyName>Anderson</FamilyName>
@@ -12688,6 +12688,14 @@
 		<Type ref="CommonTypes" name="VisaSubClassListType"/>
 	</Item>
 	<Item>
+		<Element>Passport</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Information about individual's passport. applicable in particular to overseas students</p>
+		</Description>
+		<Type ref="CommonTypes" name="PassportType"/>
+	</Item>
+	<Item>
 		<Element>LBOTE</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
@@ -12784,7 +12792,51 @@
 			<PermanentResident>P</PermanentResident>
 			<VisaSubClass>101</VisaSubClass>
 			<VisaStatisticalCode>05</VisaStatisticalCode>
+			<Passport>
+				<Number>9</Number>
+				<ExpiryDate>2030-12-11</ExpiryDate>
+				<Country>4111</Country>
+			</Passport>
 		</Demographics>
+	</xhtml:Example>
+</CommonElement>
+<CommonElement name="PassportType" type="true" dm="true">
+	<Item>
+		<Element>PassportType</Element>
+		<Description>
+			<p>Information about an individual's passport.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>Number</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Passport number.</p>
+		</Description>
+		<Type name="xs:token"></Type>
+	</Item>
+	<Item>
+		<Element>ExpiryDate</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Passport expiry date.</p>
+		</Description>
+		<Type name="xs:date"></Type>
+	</Item>
+	<Item>
+		<Element>Country</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Passport country.</p>
+		</Description>
+		<Type ref="CommonTypes" name="CountryType"/>
+	</Item>
+	<xhtml:Example xmlns="" name="Passport Example">
+		<Passport>
+			<Number>9</Number>
+			<ExpiryDate>2030-12-11</ExpiryDate>
+			<Country>4111</Country>
+		</Passport>
 	</xhtml:Example>
 </CommonElement>
 <CommonElement name="EnglishProficiencyType" type="true" dm="true">
@@ -12805,7 +12857,7 @@
 		<Characteristics>O</Characteristics>
 		<Type ref="CommonTypes" name="OtherCodeListType"/>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="EnglishProficiency Example">
 		<EnglishProficiency>
 			<Code>9</Code>
 		</EnglishProficiency>
@@ -12821,7 +12873,7 @@
 		<Characteristics>MR</Characteristics>
 		<Type ref="CommonTypes" name="LanguageBaseType"/>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="LanguageList Example">
 		<LanguageList>
 			<Language>
 				<Code>1201</Code>
@@ -12843,7 +12895,7 @@
 		</Description>
 		<Type name="xs:date"/>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="BirthDate Example">
 		<BirthDate>1970-08-11</BirthDate>
 	</xhtml:Example>
 </CommonElement>
@@ -12859,7 +12911,7 @@
 		</Description>
 		<Type name="xs:gYear"/>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="ProjectedGraduationYear Example">
 		<ProjectedGraduationYear>2006</ProjectedGraduationYear>
 	</xhtml:Example>
 </CommonElement>
@@ -12875,7 +12927,7 @@
 		</Description>
 		<Type name="xs:gYear"/>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="OnTimeGraduationYear Example">
 		<OnTimeGraduationYear>2006</OnTimeGraduationYear>
 	</xhtml:Example>
 </CommonElement>
@@ -12902,7 +12954,7 @@
     </Description>
 		<Type ref="CommonTypes" name="OtherCodeListType"/>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="Relationship Example">
 		<Relationship>
 			<Code>01</Code>
 		</Relationship>
@@ -12916,7 +12968,7 @@
 		</Description>
 		<Type ref="CodeSets" name="AUCodeSetsSchoolEducationLevelTypeType"/>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="EducationLevel Example">
 		<EducationalLevel>3</EducationalLevel>
 	</xhtml:Example>
 </CommonElement>
@@ -12928,7 +12980,7 @@
 		</Description>
 		<Type ref="CommonTypes" name="PartialDateType"/>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="GraduationDate Example">
 		<GraduationDate>2005-05-27</GraduationDate>
 	</xhtml:Example>
 </CommonElement>
@@ -12952,7 +13004,7 @@
 		</Description>
 		<Type ref="CodeSets" name="AUCodeSetsNameUsageTypeType"/>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="Name Example">
 		<Name Type="LGL">
 			<FamilyName>Woodall</FamilyName>
 			<GivenName>Charles</GivenName>
@@ -12972,7 +13024,7 @@
 		<Characteristics/>
 		<Type name="xs:normalizedString"/>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="HomeroomNumber Example">
 		<HomeroomNumber>A-204</HomeroomNumber>
 	</xhtml:Example>
 </CommonElement>
@@ -13103,7 +13155,7 @@
       there are use cases when that is not the case.
     </Description>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="TimeElement Example">
 		<TimeElement>
 			<Type>Full school year</Type>
 			<Code>01</Code>
@@ -13238,7 +13290,7 @@
 		</Description>
 		<Type ref="CommonTypes" name="TimeElementListType"/>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="LifeCycle Example">
 		<LifeCycle>
 			<Created>
 				<DateTime>2006-08-13T09:00:00-05:00</DateTime>
@@ -13405,7 +13457,7 @@
 			</Value>
 		</Values>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="OtherCodeList Example">
 		<OtherCodeList>
 			<OtherCode Codeset="Local">S</OtherCode>
 			<OtherCode Codeset="Text">Semester</OtherCode>
@@ -13458,7 +13510,7 @@
 		<Characteristics>O</Characteristics>
 		<Type ref="CommonTypes" name="OtherCodeListType"/>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="ProgramStatus Example">
 		<ProgramStatus>
 			<Code>S004</Code>
 		</ProgramStatus>
@@ -13481,7 +13533,7 @@
 		</Description>
 		<Type ref="CommonTypes" name="SubjectAreaType"/>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="SubjectAreaList Example">
 		<SubjectAreaList>
 			<SubjectArea>
 				<Code>05</Code>
@@ -13534,7 +13586,7 @@
 		<Characteristics>O</Characteristics>
 		<Type ref="CommonTypes" name="OtherCodeListType"/>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="SubjectArea Example">
 		<SubjectArea>
 			<Code>05</Code>
 			<OtherCodeList>
@@ -13566,7 +13618,7 @@
 		</Description>
 		<Type ref="CommonTypes" name="SubjectAreaType"/>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="ACStrandSubjectArea Example">
 		<ACStrandSubjectArea>
 			<ACStrand>M</ACStrand>
 			<SubjectArea>
@@ -13676,7 +13728,7 @@
 			</Value>
 		</Values>
 	</Item>
-	<xhtml:Example xmlns="" skipValidate="true">
+	<xhtml:Example xmlns="" skipValidate="true" name="SIF_ExtendedElements Example">
 		<SIF_ExtendedElements>
 			<SIF_ExtendedElement Name="ApplicationSubmissionStatus">4</SIF_ExtendedElement>
 			<SIF_ExtendedElement Name="DynamicXml">
