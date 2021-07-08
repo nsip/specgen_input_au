@@ -12759,6 +12759,22 @@
 		</Description>
 		<Type name="xs:normalizedString"/>
 	</Item>	
+	<Item>
+		<Element>MedicarePositionNumber</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Person's Medicare position number. Exchange only with permission to do so.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>	
+	<Item>
+		<Element>MedicareCardHolder</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Person's Medicare Card Holder name. Exchange only with permission to do so.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>	
 	<xhtml:Example name="Demographics Example" xmlns="">
 		<Demographics>
 			<IndigenousStatus>3</IndigenousStatus>
@@ -12816,6 +12832,9 @@
 				<ExpiryDate>2030-12-11</ExpiryDate>
 				<Country>4111</Country>
 			</Passport>
+			<MedicareNumber>6574839</MedicareNumber>
+			<MedicarePositionNumber>2</MedicarePositionNumber>
+			<MedicareCardHolder>Pete Best</MedicareCardHolder>
 		</Demographics>
 	</xhtml:Example>
 </CommonElement>

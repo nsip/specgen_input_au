@@ -10035,5 +10035,29 @@
 			</Value>			
 		</Values>
 	</CodeSet>							
+	<CodeSet>
+		<Intro>
+			<p>Preferred method of correspondence</p>
+		</Intro>
+		<ID>Correspondence Method</ID>
+		<Values>
+			<Value>
+				<Code>Mailing</Code>
+				<Text>Postal, using main mailing address on file</Text>
+			</Value>
+			<Value>
+				<Code>AltMailing</Code>
+				<Text>Postal, using alternate mailing address on file</Text>
+			</Value>
+			<Value>
+				<Code>Email</Code>
+				<Text>Email</Text>
+			</Value>
+			<Value>
+				<Code>Phone</Code>
+				<Text>Phone</Text>
+			</Value>			
+		</Values>
+	</CodeSet>							
 	
 </Grouping>
