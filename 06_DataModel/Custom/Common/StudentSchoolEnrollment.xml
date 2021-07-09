@@ -102,6 +102,16 @@
     </Description>
      <Type ref="CommonTypes" name="SchoolYearType"></Type>
   </Item>
+    <Item>
+    <Element>IntendedEntryDate</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>The date when an enrollment is planned to be valid; this may be distinct from the actual entry date.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+
   <Item>
     <Element>EntryDate</Element>
     <Characteristics>M</Characteristics>

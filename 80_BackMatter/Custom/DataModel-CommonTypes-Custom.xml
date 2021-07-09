@@ -12775,6 +12775,14 @@
 		</Description>
 		<Type name="xs:normalizedString"/>
 	</Item>	
+	<Item>
+		<Element>PrivateHealthInsurance</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Details of person's private health insurance.</p>
+		</Description>
+		<Type ref="CommonTypes" name="PrivateHealthInsuranceType"/>
+	</Item>	
 	<xhtml:Example name="Demographics Example" xmlns="">
 		<Demographics>
 			<IndigenousStatus>3</IndigenousStatus>
@@ -12835,8 +12843,36 @@
 			<MedicareNumber>6574839</MedicareNumber>
 			<MedicarePositionNumber>2</MedicarePositionNumber>
 			<MedicareCardHolder>Pete Best</MedicareCardHolder>
+			<PrivateHealthInsurance>
+			    <Company>Medibank Private</Company>
+				<Number>324</Number>
+			</PrivateHealthInsurance>
 		</Demographics>
 	</xhtml:Example>
+</CommonElement>
+<CommonElement name="PrivateHealthInsuranceType" type="true" dm="true">
+	<Item>
+		<Element>PrivateHealthInsuranceType</Element>
+		<Description>
+			<p>Information about an individual's private health insurance.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>Company</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Private Health insurer.</p>
+		</Description>
+		<Type name="xs:token"></Type>
+	</Item>
+	<Item>
+		<Element>Number</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Private health insurance number.</p>
+		</Description>
+		<Type name="xs:token"></Type>
+	</Item>
 </CommonElement>
 <CommonElement name="PassportType" type="true" dm="true">
 	<Item>
