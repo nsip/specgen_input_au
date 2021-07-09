@@ -235,6 +235,15 @@
 		<Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"/>
 	</Item>
 	<Item>
+		<Element>IndependentStudent</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Medium</privacyRating>
+		<Description>
+			<p>Student is living independently of any parent, guardian or carer, is able to make decisions on their own behalf, and is responsible for their own education.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"/>
+	</Item>
+	<Item>
 		<Element>Sensitive</Element>
 		<Characteristics>O</Characteristics>
 		<privacyRating>High</privacyRating>
@@ -472,6 +481,7 @@
 			<IntegrationAide>N</IntegrationAide>
 			<EducationSupport>N</EducationSupport>
 			<HomeSchooledStudent>N</HomeSchooledStudent>
+			<IndependentStudent>N</IndependentStudent>
 			<Sensitive>N</Sensitive>
 			<LocalCodeList>
 				<LocalCode>

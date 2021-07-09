@@ -180,6 +180,28 @@
     </Description>
     <Type name="xs:string"></Type>
   </Item>
+ <Item>
+    <Element>TermSpan</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>
+        The term span that this grade was assigned for.
+      </p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsSessionTypeType"></Type>
+  </Item>
+ <Item>
+    <Element>SchoolYear</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>
+        The academic school year for which the grade was assigned.
+      </p>
+    </Description>
+    <Type ref="CommonTypes" name="SchoolYearType"></Type>
+  </Item>
   <Item>   
     <Element>LocalCodeList</Element>
     <Characteristics>O</Characteristics>
@@ -209,6 +231,8 @@
         <Letter>C</Letter>
         <Narrative>Johnny is only achieving average performance.</Narrative>
       </Grade>
-    </StudentGrade>
+ 	  <TermSpan>0828</TermSpan>
+	  <SchoolYear>2021</SchoolYear>
+   </StudentGrade>
   </xhtml:Example>
 </DataObject>

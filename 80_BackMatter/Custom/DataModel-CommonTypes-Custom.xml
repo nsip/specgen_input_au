@@ -4909,7 +4909,23 @@
 		</Description>
 		<Type name="xs:string"></Type>  
   	</Item>
-  
+	
+    <Item>
+  	   	<Element>Date</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+		  <p>Date of follow up.</p>
+		</Description>
+		<Type name="xs:date"></Type>  
+  	</Item>
+ 	<xhtml:Example xmlns="" name="FollowUpAction Example">
+		<FollowUpAction>
+			<WellbeingResponseRefId>23E34B35-9D75-101A-8C3D-00AA001A1652</WellbeingResponseRefId>
+			<FollowUpDetails>Follow up with the student</FollowUpDetails>
+			<FollowUpActionCategory>Discussion</FollowUpActionCategory>
+			<Date>2001-06-01</Date>
+		</FollowUpAction>
+	</xhtml:Example>
  </CommonElement>
  
  
@@ -13922,5 +13938,78 @@
 		</Facets>
 	</Item>
 </CommonElement>
-
+<CommonElement name="WorkingWithChildrenCheckType" type="true" dm="true">
+	<Item>
+		<Element>WorkingWithChildrenCheckType</Element>
+		<Description>
+			<p>Evidence that an individual has been checked formally as authorised to work with children.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>StateTerritory</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>State or territory that has performed the check.</p>
+		</Description>
+		<Type ref="CommonTypes" name="StateProvinceType"/>
+	</Item>
+	<Item>
+		<Element>Number</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Number assigned the individual for the check.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>HolderName</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>
+        Name of the individual as registered by the agency performing the check.
+      </p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>Type</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>
+        Type of check performed for the individual.
+      </p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>Reasons</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>
+        Rationale associated with the determination made by the agency performing the check.
+      </p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>ExpiryDate</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>
+        Expiry date for the check.
+      </p>
+		</Description>
+		<Type name="xs:date"/>
+	</Item>
+	<xhtml:Example xmlns="" name="WorkingWithChildrenCheck Example">
+		<WorkingWithChildrenCheck>
+			<StateTerritory>ACT</StateTerritory>
+			<Number>ABC123</Number>
+			<HolderName>John Doe</HolderName>
+			<Type>Playground supervision</Type>
+			<Reasons>The agency made this determination for undisclosed reasons.</Reasons>
+			<ExpiryDate>2030-01-02</ExpiryDate>
+		</WorkingWithChildrenCheck>
+	</xhtml:Example>
+</CommonElement>
 </IncludeGroup>
