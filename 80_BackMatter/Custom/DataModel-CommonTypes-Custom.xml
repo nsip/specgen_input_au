@@ -12712,6 +12712,22 @@
 		<Type name="xs:date"/>
 	</Item>
 	<Item>
+		<Element>VisaConditions</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Conditions listed on visa by Immigration Department</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>VisaStudyEntitlement</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Student's study entitlement as given by Immigration Department</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsVisaStudyEntitlementType"/>
+	</Item>
+	<Item>
 		<Element>VisaSubClassList</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
@@ -12851,6 +12867,8 @@
 			<VisaNumber>987654321</VisaNumber>
 			<VisaGrantDate>2020-01-01</VisaGrantDate>
 			<VisaExpiryDate>2029-01-01</VisaExpiryDate>
+			<VisaConditions>Holder of subclass 101</VisaConditions>
+			<VisaStudyEntitlement>Limited</VisaStudyEntitlement>
 			<Passport>
 				<Number>9</Number>
 				<ExpiryDate>2030-12-11</ExpiryDate>

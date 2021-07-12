@@ -10059,5 +10059,25 @@
 			</Value>			
 		</Values>
 	</CodeSet>							
-	
+	<CodeSet>
+		<Intro>
+			<p>Visa-Holder study entitlement. Source VEVO</p>
+		</Intro>
+		<ID>Visa Study Entitlement</ID>
+		<Values>
+			<Value>
+				<Code>Nil</Code>
+				<Text>No entitlement to study</Text>
+			</Value>
+			<Value>
+				<Code>Unlimited</Code>
+				<Text>Unlimited entitlement to study</Text>
+			</Value>
+			<Value>
+				<Code>Limited</Code>
+				<Text>Limited entitlement to study</Text>
+			</Value>
+		</Values>
+	</CodeSet>							
+
 </Grouping>
