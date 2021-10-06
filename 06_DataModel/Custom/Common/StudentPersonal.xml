@@ -64,11 +64,11 @@
 		<Type ref="CommonTypes" name="StateProvinceIdType"/>
 	</Item>
 	<Item>
-		<Element>UniqueStudentIdentifier</Element>
+		<Element>NationalUniqueStudentIdentifier</Element>
 		<Characteristics>O</Characteristics>
 		<privacyRating>High</privacyRating>
 		<Description>
-			<p>The Commonwealth-assigned USI identifier for this student.</p>
+			<p>The Commonwealth-assigned National Unique Student Identifier (USI) for this student.</p>
 		</Description>
 		<Type name="xs:token"></Type>
 	</Item>
@@ -326,7 +326,7 @@
 			</MedicalAlertMessages>
 			<LocalId>S1234567</LocalId>
 			<StateProvinceId>ABC1234</StateProvinceId>
-			<UniqueStudentIdentifier>12345678</UniqueStudentIdentifier>
+			<NationalUniqueStudentIdentifier>12345678</NationalUniqueStudentIdentifier>
 			<ElectronicIdList>
 				<ElectronicId Type="03">ZZZZZZ21</ElectronicId>
 				<ElectronicId Type="03">ZZZZZZ22</ElectronicId>

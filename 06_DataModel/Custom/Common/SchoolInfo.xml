@@ -50,6 +50,15 @@
     </Description>
     <Type name="xs:normalizedString"></Type>
   </Item>
+  <Item>
+    <Element>ParentCommonwealthId</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Commonwealth identifier for the parent school to this campus. Used to differentiate the original Australian Government school identifiers, which applied to school locations, from the new Australian Government school identifiers as of 2021, which only apply to schools.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
    <Item>
     <Element>ACARAId</Element>
     <Characteristics>O</Characteristics>
@@ -447,11 +456,11 @@
       <LocalId>01011234</LocalId>
       <StateProvinceId>01011234</StateProvinceId>
       <CommonwealthId>012345</CommonwealthId>
+      <ParentCommonwealthId>012346</ParentCommonwealthId>
       <SchoolName>Lincoln Secondary College</SchoolName>
       <LEAInfoRefId>73648462-8886-24AA-5294-BC6380173276</LEAInfoRefId>
       <OtherLEA SIF_RefObject="LEAInfo">AA648462-8886-24AA-5294-BC638017320B</OtherLEA>
-      <SchoolDistrict> Southern Metropolitan Region</SchoolDistrict>
-
+      <SchoolDistrict>Southern Metropolitan Region</SchoolDistrict>
       <SchoolType>Pri/Sec</SchoolType>
       <SchoolFocusList>
         <SchoolFocus>01</SchoolFocus>

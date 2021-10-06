@@ -6,54 +6,80 @@
          xmlns="http://sifassociation.org/SpecGen">
 	
 	<p>This release contains the following significant updates and extensions to the SIF specification.</p>
-	<h3>Additions/Changes since 3.4.7 August, 2020</h3>
+	<h3>Additions/Changes since 3.4.8 March, 2021</h3>
 	<h4>New Objects</h4>
 	<ul>
-		<li>No new objects were added for this release.</li>
+		<li>PersonPrivacyObligationDocument object added for this release. 
+		This object contains information about the person's data and privacy obligations as well as permissions and consent associated with it.
+
+</li>
 	</ul>
 	<h4>New Elements</h4>
 	<ul>
-		<li>Deceased Flag added to indicate deceased status of a person at request of CEM.</li>
-		<li>Travel Mode added to StudentSchoolEnrollment.</li>
+		<li><code>SchoolInfo/ParentCommonwealthID</code>, requested by ACARA: used to differentiate the original Australian Government school identifiers, which applied to school locations, from the new Australian Government school identifiers as of 2021, which only apply to schools.</li>
+		<li><code>StudentPersonal/NationalUniqueStudentIdentifier</code>, requested by QLD DoE: support of national Unique Student Identifier initiative.</li>
+		<li><code>StudentPersonal/IndependentStudent</code>, requested by QLD DoE: identifty students responsible for their own education.</li>
+		<li><code>StudentPersonal/Passport</code>, requested by QLD DoE: support for international students.</li>
+		<li><code>DemographicsType/VisaNumber</code>, <code>DemographicsType/VisaGrantDate</code>, 
+		<code>DemographicsType/VisaStudyEntitlement</code>, <code>DemographicsType/VisaCondtions</code>, 
+		requested by QLD DoE: support for international students. (Information sourced from VEVO.)</li>
+		<li><code>StudentContactPersonal/Employment</code>, <code>StudentContactPersonal/Workplace</code>,
+		requested by QLD DoE: student background data collection.</li>
+		<li><code>Debtor/BSB</code>, <code>Debtor/AccountNumber</code>, <code>Debtor/AccountName</code>,
+		requested by QLD DoE: charging parents and guardians with school fees.</li>
+		<li><code>StudentContactPersonal/WorkingWithChildrenCheck</code>,
+		requested by QLD DoE: confirm eligibility of student contacts to perform ad hoc work on behalf of school (e.g. homestays).</li>
+		<li><code>StudentContactRelationship/FeePercentage</code>,
+		requested by QLD DoE: capture proportion of student fees paid by a particular student contact.</li>
+		<li><code>StudentContactRelationship/CorrespondenceMethod</code>,
+		requested by QLD DoE: preferred method of correspondence for a student contact in relation to a student.</li>
+		<li><code>DemographicsType/MedicarePositionNumber</code>, <code>DemographicsType/MedicareCardHolder</code>, 
+		<code>DemographicsType/PrivateHealthInsurance</code>,
+		requested by QLD DoE: capture medical insurance information about students.</li>
+		<li><code>WellbeingCharacteristic/PreferredHospital</code>,
+		requested by QLD DoE: capture medical care arrangements for a particular medical condition for a student.</li>
+		<li><code>StudentSchoolEnrollment/IntendedEntryDate</code>,
+		requested by QLD DoE: capture date that student is intended to enrol, as distinct from the date that they actually enrol.</li>
+		<li><code>WellbeingEvent/FollowUpActionList/FollowUpAction/Date</code>,
+		requested by QLD DoE: capture date that a follow up action in student wellbeing occured.</li>
+		<li><code>StudentGrade/TermSpan</code>, <code>StudentGrade/SchoolYear</code>,
+		requested by QLD DoE: capture temporal scope of a student grade.</li>
 	</ul>
 	
 	<h4>New Types</h4>
 	<ul>
-	<li>New Types: a) HomeRoomType and; b)StaffRefIdType added to correct Venetian Blind typing.</li>
-	<li>New Types added for Venetian Blind typing of SystemRole and ResourceUseage Objects.</li>
-	<li>TravelDetailsContainerType and SchoolTravelType added to support CEM requirements around student travel arrangements.</li>
-    </ul>
-	<h4>New Enumerations</h4>
-	<ul><li>New enumeration added to the Sex Code Set to represent Victorian legislation. Value added;  4 - Self-described</li></ul>
+	<li><code>WorkingWithChildrenCheckType</code>, requested by QLD DoE: 
+	encode eligibility to perform work wth children on behalf of school (e.g. homestays)</li>
+ 	<li><code>StudentContactFeePercentageType</code>, requested by QLD DoE: 
+	encode proportion of student fees paid by a particular student contact</li>
+	<li><code>PrivateHealthInsuranceType</code>, requested by QLD DoE: 
+	encode private medical insurance information</li>
+  </ul>
 	
-	<h4>New CodeSets added to support CEM Travel mode additions</h4>
+	<h4>New CodeSets</h4>
 	<ul>	
-		<li>Travel Mode - Introduced by CEM to indicate mode of travel of the student to/from school.</li>
-		<li>Accompaniment - Introduced by CEM to indicate whether or not the student is accompanied to/from school.</li>
+		<li><code>Visa Study Entitlement</code>, requested by QLD DoE: support for international students. (Information sourced from VEVO.)</li>
+		<li><code>Correspondence Method</code>, requested by QLD DoE: correspondence media.</li>
+	</ul>
+
+	<h4>Additions to CodeSets</h4>
+	<ul>	
+		<li>Addition to <code>School Level</code>—<code>SpecialAssistance</code>, requested by CEO Melbourne: aligned with Education Act. 
+		Accounts for discrepancy in Census reporting: these are Special schools as listed by ACARA, but they have regular year levels unlike Special schools.</li>
+		<li>Addition to <code>Attendance Code</code>—<code>626</code>, <code>Prep Transition day</code>. Used to capture day that Prep students are not required to be in attendance, as part of Prep Transition.</li>
+		<li>Addition to <code>Federal Electorates</code>—<code>219</code> (Hawke). Codes for Victoria renumbered following ABS practice. <code>514</code> (Stirling) will be retained until it is abolished at the next federal election.</li>
+		<li>Addition to <code>ISO 4217 Currency Names And Code Elements</code>—<code>UYW, VED</code>, added to ISO 4217.</li>
 	</ul>
 
 	<h4>Other Changes</h4>
 	<ul>
-		<li>SystemRole and ResourceUsage Objects have been reformatted to Venetian Blind.</li>
+		<li>Change to label of codeset <code>OperationalStatus</code> value <code>P</code>, from <code>Pending</code> to <code>Proposed</code>.</li>
  	</ul>
    	
 	<h4>Corrections</h4>
 	<ul>
-		<h5>Several Types used in the AG Collections were changed to xs:unsignedInt as they are required to be positive integers.</h5>
-		<li>Stats Collection (Attendance) - DaysInReferencePeriod, PossibleSchoolDays, AttendanceLess90Percent,	AttendanceGTE90Percent, PossibleSchoolDaysGT90PercentAttendance </li>
-		<li>Census collection: Student Reporting: Headcount, CensusAge;	Staff Reporting: Headcount; StudentSchoolEnrollment: CensusAge - was listed as a decimal, it is required to be a positive integer for AG reporting.</li>
-        <h5>Code set corrections were as follows:</h5>
-        <li>a) Correction of the description of NAP Jurisdiction enumerations.  Western Australia listed twice.  Code Set updated.</li>
-        <li>b) Correction of ill-formed value in LearningStandardItem Relationship Types enumeration set.</li>
+		<li></li>
 
    </ul>
-   <h4>Deletions</h4>
-   <ul>
-   <p>The following deletions have been enacted on request from the AG:</p>
-   <li>AddressCollection: ReportingAuthorityCommonwealthId,	EntityLevel, SchoolInfoRefId, LocalId, StateProvinceId,	ACARAId</li>
-   <li>CensusCollection:  ReportingAuthorityCommonwealthId,	EntityLevel </li>
-   <li>FinancialQuestionnaireCollection:  ReportingAuthorityCommonwealthId,	EntityLevel, SchoolInfoRefId, LocalId, StateProvinceId, ACARAId</li>
-   <li>StudentAttendanceCollection:	ReportingAuthorityCommonwealthId, EntityLevel, SchoolInfoRefId, LocalId, StateProvinceId, ACARAId</li>
-   </ul>
-
+   
 </Section>

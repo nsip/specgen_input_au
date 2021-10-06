@@ -1181,6 +1181,10 @@
 				<Text>Remote learning</Text>
 			</Value>		
 			<Value>
+				<Code>626</Code>
+				<Text>Prep Transition day</Text>
+			</Value>		
+			<Value>
 				<Code>699</Code>
 				<Text>Educational - further details not available</Text>
 			</Value>				
@@ -3610,7 +3614,7 @@
 			</Value>
 			<Value>
 				<Code>P</Code>
-				<Text>Pending</Text>
+				<Text>Proposed</Text>
 			</Value>
 			<Value>
 				<Code>S</Code>
@@ -3625,7 +3629,8 @@
 	</CodeSet>
 	<CodeSet>
 		<Intro>
-			<p>Federal Electorates from the Australian Electoral Commission; https://www.aec.gov.au/profiles/index.htm, loaded using 2019 electorates from the coding description of Commonwealth Electoral Divisions, ABS https://www.abs.gov.au/ausstats/abs@.nsf/Lookup/by%20Subject/1270.0.55.003~July%202017~Main%20Features~Commonwealth%20Electoral%20Divisions%20(CEDs)~6</p>
+			<p>Federal Electorates from the Australian Electoral Commission; https://www.aec.gov.au/profiles/index.htm, loaded using 2021 electorates from the coding description of Commonwealth Electoral Divisions, ABS https://www.abs.gov.au/ausstats/abs@.nsf/Lookup/by%20Subject/1270.0.55.003~July%202017~Main%20Features~Commonwealth%20Electoral%20Divisions%20(CEDs)~6</p>
+			<p>Note: as of SIF 3.4.5, the codeset is not stable, and reflects only current electorates; they are renumbered by state as electorates are added and withdrawn.</p>
 		</Intro>
 		<ID>Federal Electorate</ID>
        <Values><Value><Code>101</Code><Text>Banks</Text></Value>
@@ -3694,26 +3699,27 @@
 <Value><Code>216</Code><Text>Gippsland</Text></Value>
 <Value><Code>217</Code><Text>Goldstein</Text></Value>
 <Value><Code>218</Code><Text>Gorton</Text></Value>
-<Value><Code>219</Code><Text>Higgins</Text></Value>
-<Value><Code>220</Code><Text>Holt</Text></Value>
-<Value><Code>221</Code><Text>Hotham</Text></Value>
-<Value><Code>222</Code><Text>Indi</Text></Value>
-<Value><Code>223</Code><Text>Isaacs</Text></Value>
-<Value><Code>224</Code><Text>Jagajaga</Text></Value>
-<Value><Code>225</Code><Text>Kooyong</Text></Value>
-<Value><Code>226</Code><Text>Lalor</Text></Value>
-<Value><Code>227</Code><Text>La Trobe</Text></Value>
-<Value><Code>228</Code><Text>Macnamara</Text></Value>
-<Value><Code>229</Code><Text>Mallee</Text></Value>
-<Value><Code>230</Code><Text>Maribyrnong</Text></Value>
-<Value><Code>231</Code><Text>McEwen</Text></Value>
-<Value><Code>232</Code><Text>Melbourne</Text></Value>
-<Value><Code>233</Code><Text>Menzies</Text></Value>
-<Value><Code>234</Code><Text>Monash</Text></Value>
-<Value><Code>235</Code><Text>Nicholls</Text></Value>
-<Value><Code>236</Code><Text>Scullin</Text></Value>
-<Value><Code>237</Code><Text>Wannon</Text></Value>
-<Value><Code>238</Code><Text>Wills</Text></Value>
+<Value><Code>219</Code><Text>Hawke</Text></Value>
+<Value><Code>220</Code><Text>Higgins</Text></Value>
+<Value><Code>221</Code><Text>Holt</Text></Value>
+<Value><Code>222</Code><Text>Hotham</Text></Value>
+<Value><Code>223</Code><Text>Indi</Text></Value>
+<Value><Code>224</Code><Text>Isaacs</Text></Value>
+<Value><Code>225</Code><Text>Jagajaga</Text></Value>
+<Value><Code>226</Code><Text>Kooyong</Text></Value>
+<Value><Code>227</Code><Text>Lalor</Text></Value>
+<Value><Code>228</Code><Text>La Trobe</Text></Value>
+<Value><Code>229</Code><Text>Macnamara</Text></Value>
+<Value><Code>230</Code><Text>Mallee</Text></Value>
+<Value><Code>231</Code><Text>Maribyrnong</Text></Value>
+<Value><Code>232</Code><Text>McEwen</Text></Value>
+<Value><Code>233</Code><Text>Melbourne</Text></Value>
+<Value><Code>234</Code><Text>Menzies</Text></Value>
+<Value><Code>235</Code><Text>Monash</Text></Value>
+<Value><Code>236</Code><Text>Nicholls</Text></Value>
+<Value><Code>237</Code><Text>Scullin</Text></Value>
+<Value><Code>238</Code><Text>Wannon</Text></Value>
+<Value><Code>239</Code><Text>Wills</Text></Value>
 <Value><Code>297</Code><Text>Migratory - Offshore - Shipping (Vic.)</Text></Value>
 <Value><Code>301</Code><Text>Blair</Text></Value>
 <Value><Code>302</Code><Text>Bonner</Text></Value>
