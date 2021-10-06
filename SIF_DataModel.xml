@@ -91,6 +91,15 @@
 			<dd>
 				JSON-PESC Examples 3.4.6<a href="JSON/siftest.pretty.json"> (json)</a>
 			</dd> -->
+			<dt>Open API</dt>
+			<dd>
+			    <ul>
+				<li><a href="JSON/">Open API JSON and YAML files for entire specification</a></li>
+				<li><a href="JSON/ATTEND">Open API JSON and YAML files for Attendance</a></li>
+				<li><a href="JSON/Finance">Open API JSON and YAML files for Finance</a></li>
+				<li><a href="JSON/SBP">Open API JSON and YAML files for Student Baseline Profile</a></li>
+				</ul>
+			</dd>
 
 
 		</dl>
