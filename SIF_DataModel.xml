@@ -95,23 +95,9 @@
 			<dd>
 				JSON-PESC Examples 3.4.6<a href="JSON/siftest.pretty.json"> (json)</a>
 			</dd> -->
-			<dt>Open API</dt>
+			<dt>OpenAPI</dt>
 			<dd>
-			    <ul>
-				<li><a href="JSON/">Open API JSON and YAML files for entire specification</a></li>
-				<li><a href="JSON/Activity">Open API JSON and YAML files for Activity</a></li>
-				<li><a href="JSON/AggregatedStatistics">Open API JSON and YAML files for Aggregated Statistics</a></li>
-				<li><a href="JSON/ATTEND">Open API JSON and YAML files for Attendance</a></li>
-				<li><a href="JSON/AustralianGovernmentCollections">Open API JSON and YAML files for Australian Government Collections</a></li>
-				<li><a href="JSON/ClassroomAssessment">Open API JSON and YAML files for Classroom Assessment</a></li>
-				<li><a href="JSON/Finance">Open API JSON and YAML files for Finance</a></li>
-				<li><a href="JSON/LearningStandards">Open API JSON and YAML files for Learning Standards</a></li>
-				<li><a href="JSON/NAPLAN">Open API JSON and YAML files for NAPLAN</a></li>
-				<li><a href="JSON/SBP">Open API JSON and YAML files for Student Baseline Profile</a></li>
-				<li><a href="JSON/Timetabling">Open API JSON and YAML files for Timetabling and Resource Booking</a></li>
-				<li><a href="JSON/Wellbeing">Open API JSON and YAML files for Wellbeing</a></li>
-				<li><a href="JSON/FutureDeprecation">Open API JSON and YAML files for objects for Future Deprecation</a></li>
-				</ul>
+				<a href="JSON/OpenAPI.zip">OpenAPI &amp; JSON Schemas Files Archive</a>
 			</dd>
 
 
