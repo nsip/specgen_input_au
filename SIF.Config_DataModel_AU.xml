@@ -216,7 +216,7 @@
 			<xsltParameterList>
 				<xsltParameter>
 					<xsltName>sifObjectList</xsltName>
-					<xsltValue>'SchoolInfo,LEAInfo,StaffAssignment,StaffPersonal,StudentPersonal,StudentSchoolEnrollment,StudentContactPersonal,StudentContactRelationship,PersonPicture,Identity,PersonPrivacyObligationDocument'</xsltValue>
+					<xsltValue>SchoolInfo,LEAInfo,StaffAssignment,StaffPersonal,StudentPersonal,StudentSchoolEnrollment,StudentContactPersonal,StudentContactRelationship,PersonPicture,Identity,PersonPrivacyObligationDocument</xsltValue>
 				</xsltParameter>
 			</xsltParameterList>
 			<xsltOutputDir>JSON\SBP</xsltOutputDir>
@@ -229,7 +229,7 @@
 			<xsltParameterList>
 			<xsltParameter>
 				<xsltName>sifObjectList</xsltName>
-				<xsltValue>'SchoolInfo,LEAInfo,StaffAssignment,StaffPersonal,StudentPersonal,StudentSchoolEnrollment,StudentContactPersonal,StudentContactRelationship,PersonPicture,Identity,PersonPrivacyObligationDocument'</xsltValue>
+				<xsltValue>SchoolInfo,LEAInfo,StaffAssignment,StaffPersonal,StudentPersonal,StudentSchoolEnrollment,StudentContactPersonal,StudentContactRelationship,PersonPicture,Identity,PersonPrivacyObligationDocument</xsltValue>
 			</xsltParameter>
 			<xsltParameter>
 				<xsltName>sifObjectGroupList</xsltName>
@@ -276,7 +276,7 @@
 			<xsltParameterList>
 				<xsltParameter>
 					<xsltName>sifObjectList</xsltName>
-					<xsltValue>'StudentAttendanceTimeList,StudentAttendanceSummary,StudentDailyAttendance,StudentPeriodAttendance,SessionInfo,CalendarDate,CalendarSummary'</xsltValue>
+					<xsltValue>StudentAttendanceTimeList,StudentAttendanceSummary,StudentDailyAttendance,StudentPeriodAttendance,SessionInfo,CalendarDate,CalendarSummary</xsltValue>
 				</xsltParameter>
 			</xsltParameterList>
 			<xsltOutputDir>JSON\ATTEND</xsltOutputDir>
@@ -289,7 +289,7 @@
 						<xsltParameterList>
 				<xsltParameter>
 					<xsltName>sifObjectList</xsltName>
-					<xsltValue>'StudentAttendanceTimeList,StudentAttendanceSummary,StudentDailyAttendance,StudentPeriodAttendance,SessionInfo,CalendarDate,CalendarSummary'</xsltValue>
+					<xsltValue>StudentAttendanceTimeList,StudentAttendanceSummary,StudentDailyAttendance,StudentPeriodAttendance,SessionInfo,CalendarDate,CalendarSummary</xsltValue>
 				</xsltParameter>
 				<xsltParameter>
 					<xsltName>sifObjectGroupList</xsltName>
@@ -335,7 +335,7 @@
 			<xsltParameterList>
 				<xsltParameter>
 					<xsltName>sifObjectList</xsltName>
-					<xsltValue>'Invoice,FinancialAccount,ChargedLocationInfo,PaymentReceipt,PurchaseOrder,VendorInfo,Journal,Debtor'</xsltValue>
+					<xsltValue>Invoice,FinancialAccount,ChargedLocationInfo,PaymentReceipt,PurchaseOrder,VendorInfo,Journal,Debtor</xsltValue>
 				</xsltParameter>
 			</xsltParameterList>
 			<xsltOutputDir>JSON\Finance</xsltOutputDir>
@@ -348,7 +348,7 @@
 			<xsltParameterList>
 				<xsltParameter>
 					<xsltName>sifObjectList</xsltName>
-					<xsltValue>'Invoice,FinancialAccount,ChargedLocationInfo,PaymentReceipt,PurchaseOrder,VendorInfo,Journal,Debtor'</xsltValue>
+					<xsltValue>Invoice,FinancialAccount,ChargedLocationInfo,PaymentReceipt,PurchaseOrder,VendorInfo,Journal,Debtor</xsltValue>
 				</xsltParameter>
 				<xsltParameter>
 					<xsltName>sifObjectGroupList</xsltName>
@@ -394,7 +394,7 @@
 			<xsltParameterList>
 				<xsltParameter>
 					<xsltName>sifObjectList</xsltName>
-					<xsltValue>'Activity,SchoolPrograms,StudentActivityInfo,StudentActivityParticipation,StudentParticipation'</xsltValue>
+					<xsltValue>Activity,SchoolPrograms,StudentActivityInfo,StudentActivityParticipation,StudentParticipation</xsltValue>
 				</xsltParameter>
 			</xsltParameterList>
 			<xsltOutputDir>JSON\Activity</xsltOutputDir>
@@ -407,7 +407,7 @@
 			<xsltParameterList>
 				<xsltParameter>
 					<xsltName>sifObjectList</xsltName>
-					<xsltValue>'Activity,SchoolPrograms,StudentActivityInfo,StudentActivityParticipation,StudentParticipation'</xsltValue>
+					<xsltValue>Activity,SchoolPrograms,StudentActivityInfo,StudentActivityParticipation,StudentParticipation</xsltValue>
 				</xsltParameter>
 				<xsltParameter>
 					<xsltName>sifObjectGroupList</xsltName>
@@ -453,7 +453,7 @@
 			<xsltParameterList>
 				<xsltParameter>
 					<xsltName>sifObjectList</xsltName>
-					<xsltValue>'AggregateCharacteristicInfo,AggregateStatisticFact,AggregateStatisticInfo'</xsltValue>
+					<xsltValue>AggregateCharacteristicInfo,AggregateStatisticFact,AggregateStatisticInfo</xsltValue>
 				</xsltParameter>
 			</xsltParameterList>
 			<xsltOutputDir>JSON\AggregatedStatistics</xsltOutputDir>
@@ -466,7 +466,7 @@
 			<xsltParameterList>
 				<xsltParameter>
 					<xsltName>sifObjectList</xsltName>
-					<xsltValue>'AggregateCharacteristicInfo,AggregateStatisticFact,AggregateStatisticInfo'</xsltValue>
+					<xsltValue>AggregateCharacteristicInfo,AggregateStatisticFact,AggregateStatisticInfo</xsltValue>
 				</xsltParameter>
 				<xsltParameter>
 					<xsltName>sifObjectGroupList</xsltName>
@@ -512,7 +512,7 @@
 			<xsltParameterList>
 				<xsltParameter>
 					<xsltName>sifObjectList</xsltName>
-					<xsltValue>'AddressCollection,CensusCollection,CollectionRound,CollectionStatus,FinancialQuestionnaireCollection,StudentAttendanceCollection'</xsltValue>
+					<xsltValue>AddressCollection,CensusCollection,CollectionRound,CollectionStatus,FinancialQuestionnaireCollection,StudentAttendanceCollection</xsltValue>
 				</xsltParameter>
 			</xsltParameterList>
 			<xsltOutputDir>JSON\AustralianGovernmentCollections</xsltOutputDir>
@@ -525,7 +525,7 @@
 			<xsltParameterList>
 				<xsltParameter>
 					<xsltName>sifObjectList</xsltName>
-					<xsltValue>'AddressCollection,CensusCollection,CollectionRound,CollectionStatus,FinancialQuestionnaireCollection,StudentAttendanceCollection'</xsltValue>
+					<xsltValue>AddressCollection,CensusCollection,CollectionRound,CollectionStatus,FinancialQuestionnaireCollection,StudentAttendanceCollection</xsltValue>
 				</xsltParameter>
 				<xsltParameter>
 					<xsltName>sifObjectGroupList</xsltName>
@@ -571,7 +571,7 @@
 			<xsltParameterList>
 				<xsltParameter>
 					<xsltName>sifObjectList</xsltName>
-					<xsltValue>'GradingAssignment,GradingAssignmentScore,MarkValueInfo,StudentGrade,StudentScoreJudgementAgainstStandard,TermInfo'</xsltValue>
+					<xsltValue>GradingAssignment,GradingAssignmentScore,MarkValueInfo,StudentGrade,StudentScoreJudgementAgainstStandard,TermInfo</xsltValue>
 				</xsltParameter>
 			</xsltParameterList>
 			<xsltOutputDir>JSON\ClassroomAssessment</xsltOutputDir>
@@ -584,7 +584,7 @@
 			<xsltParameterList>
 				<xsltParameter>
 					<xsltName>sifObjectList</xsltName>
-					<xsltValue>'GradingAssignment,GradingAssignmentScore,MarkValueInfo,StudentGrade,StudentScoreJudgementAgainstStandard,TermInfo'</xsltValue>
+					<xsltValue>GradingAssignment,GradingAssignmentScore,MarkValueInfo,StudentGrade,StudentScoreJudgementAgainstStandard,TermInfo</xsltValue>
 				</xsltParameter>
 				<xsltParameter>
 					<xsltName>sifObjectGroupList</xsltName>
@@ -630,7 +630,7 @@
 			<xsltParameterList>
 				<xsltParameter>
 					<xsltName>sifObjectList</xsltName>
-					<xsltValue>'LearningResource,LearningResourcePackage,LearningStandardDocument,LearningStandardItem'</xsltValue>
+					<xsltValue>LearningResource,LearningResourcePackage,LearningStandardDocument,LearningStandardItem</xsltValue>
 				</xsltParameter>
 			</xsltParameterList>
 			<xsltOutputDir>JSON\LearningStandards</xsltOutputDir>
@@ -643,7 +643,7 @@
 			<xsltParameterList>
 				<xsltParameter>
 					<xsltName>sifObjectList</xsltName>
-					<xsltValue>'LearningResource,LearningResourcePackage,LearningStandardDocument,LearningStandardItem'</xsltValue>
+					<xsltValue>LearningResource,LearningResourcePackage,LearningStandardDocument,LearningStandardItem</xsltValue>
 				</xsltParameter>
 				<xsltParameter>
 					<xsltName>sifObjectGroupList</xsltName>
@@ -689,7 +689,7 @@
 			<xsltParameterList>
 				<xsltParameter>
 					<xsltName>sifObjectList</xsltName>
-					<xsltValue>'NAPCodeFrame,NAPEventStudentLink,NAPStudentResponseSet,NAPTest,NAPTestItem,NAPTestlet,NAPTestScoreSummary'</xsltValue>
+					<xsltValue>NAPCodeFrame,NAPEventStudentLink,NAPStudentResponseSet,NAPTest,NAPTestItem,NAPTestlet,NAPTestScoreSummary</xsltValue>
 				</xsltParameter>
 			</xsltParameterList>
 			<xsltOutputDir>JSON\NAPLAN</xsltOutputDir>
@@ -702,7 +702,7 @@
 			<xsltParameterList>
 				<xsltParameter>
 					<xsltName>sifObjectList</xsltName>
-					<xsltValue>'NAPCodeFrame,NAPEventStudentLink,NAPStudentResponseSet,NAPTest,NAPTestItem,NAPTestlet,NAPTestScoreSummary'</xsltValue>
+					<xsltValue>NAPCodeFrame,NAPEventStudentLink,NAPStudentResponseSet,NAPTest,NAPTestItem,NAPTestlet,NAPTestScoreSummary</xsltValue>
 				</xsltParameter>
 				<xsltParameter>
 					<xsltName>sifObjectGroupList</xsltName>
@@ -748,7 +748,7 @@
 			<xsltParameterList>
 				<xsltParameter>
 					<xsltName>sifObjectList</xsltName>
-					<xsltValue>'EquipmentInfo,LibraryPatronStatus,ResourceBooking,RoomInfo,ScheduledActivity,SchoolCourseInfo,SectionInfo,StudentSectionEnrollment,TeachingGroup,TimeTable,TimeTableCell,TimeTableContainer,TimeTableSubject'</xsltValue>
+					<xsltValue>EquipmentInfo,LibraryPatronStatus,ResourceBooking,RoomInfo,ScheduledActivity,SchoolCourseInfo,SectionInfo,StudentSectionEnrollment,TeachingGroup,TimeTable,TimeTableCell,TimeTableContainer,TimeTableSubject</xsltValue>
 				</xsltParameter>
 			</xsltParameterList>
 			<xsltOutputDir>JSON\Timetabling</xsltOutputDir>
@@ -761,7 +761,7 @@
 			<xsltParameterList>
 				<xsltParameter>
 					<xsltName>sifObjectList</xsltName>
-					<xsltValue>'EquipmentInfo,LibraryPatronStatus,ResourceBooking,RoomInfo,ScheduledActivity,SchoolCourseInfo,SectionInfo,StudentSectionEnrollment,TeachingGroup,TimeTable,TimeTableCell,TimeTableContainer,TimeTableSubject'</xsltValue>
+					<xsltValue>EquipmentInfo,LibraryPatronStatus,ResourceBooking,RoomInfo,ScheduledActivity,SchoolCourseInfo,SectionInfo,StudentSectionEnrollment,TeachingGroup,TimeTable,TimeTableCell,TimeTableContainer,TimeTableSubject</xsltValue>
 				</xsltParameter>
 				<xsltParameter>
 					<xsltName>sifObjectGroupList</xsltName>
@@ -807,7 +807,7 @@
 			<xsltParameterList>
 				<xsltParameter>
 					<xsltName>sifObjectList</xsltName>
-					<xsltValue>'PersonalisedPlan,WellbeingAlert,WellbeingAppeal,WellbeingCharacteristic,WellbeingEvent,WellbeingPersonLink,WellbeingResponse'</xsltValue>
+					<xsltValue>PersonalisedPlan,WellbeingAlert,WellbeingAppeal,WellbeingCharacteristic,WellbeingEvent,WellbeingPersonLink,WellbeingResponse</xsltValue>
 				</xsltParameter>
 			</xsltParameterList>
 			<xsltOutputDir>JSON\Wellbeing</xsltOutputDir>
@@ -820,7 +820,7 @@
 			<xsltParameterList>
 				<xsltParameter>
 					<xsltName>sifObjectList</xsltName>
-					<xsltValue>'PersonalisedPlan,WellbeingAlert,WellbeingAppeal,WellbeingCharacteristic,WellbeingEvent,WellbeingPersonLink,WellbeingResponse'</xsltValue>
+					<xsltValue>PersonalisedPlan,WellbeingAlert,WellbeingAppeal,WellbeingCharacteristic,WellbeingEvent,WellbeingPersonLink,WellbeingResponse</xsltValue>
 				</xsltParameter>
 				<xsltParameter>
 					<xsltName>sifObjectGroupList</xsltName>
@@ -866,7 +866,7 @@
 			<xsltParameterList>
 				<xsltParameter>
 					<xsltName>sifObjectList</xsltName>
-					<xsltValue>'ResourceUsage,SystemRole'</xsltValue>
+					<xsltValue>ResourceUsage,SystemRole</xsltValue>
 				</xsltParameter>
 			</xsltParameterList>
 			<xsltOutputDir>JSON\FutureDeprecation</xsltOutputDir>
@@ -879,7 +879,7 @@
 			<xsltParameterList>
 				<xsltParameter>
 					<xsltName>sifObjectList</xsltName>
-					<xsltValue>'ResourceUsage,SystemRole'</xsltValue>
+					<xsltValue>ResourceUsage,SystemRole</xsltValue>
 				</xsltParameter>
 				<xsltParameter>
 					<xsltName>sifObjectGroupList</xsltName>
