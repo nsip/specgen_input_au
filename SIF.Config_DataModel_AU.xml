@@ -211,28 +211,25 @@
 		</xsltTransformation>
 <!--- now run Use Cases -->		
 		<!-- SBP -->
-	
-<xsltTransformation>
-	<xsltInputFile>98_Xslt\dmToExamples.xsl</xsltInputFile>
-	<xsltParameterList>
-		<xsltParameter>
-			<xsltName>sifObjectList</xsltName>
-			<xsltValue>'StudentAttendanceTimeList,StudentAttendanceSummary,StudentDailyAttendance,StudentPeriodAttendance,SessionInfo,CalendarDate,CalendarSummary'</xsltValue>
-		</xsltParameter>
-	</xsltParameterList>
-	<xsltOutputDir>JSON</xsltOutputDir>
-	<xsltOutputFile>ATTEND/examples_AU_3.4.9.yaml</xsltOutputFile>
-	<yamlToJson>true</yamlToJson>
-</xsltTransformation>
-
-				<!-- SBP -->
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToExamples.xsl</xsltInputFile>
+			<xsltParameterList>
+				<xsltParameter>
+					<xsltName>sifObjectList</xsltName>
+					<xsltValue>'SchoolInfo,LEAInfo,StaffAssignment,StaffPersonal,StudentPersonal,StudentSchoolEnrollment,StudentContactPersonal,StudentContactRelationship,PersonPicture,Identity,PersonPrivacyObligationDocument'</xsltValue>
+				</xsltParameter>
+			</xsltParameterList>
+			<xsltOutputDir>JSON\SBP</xsltOutputDir>
+			<xsltOutputFile>examples_AU_3.4.9.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
 
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToOpenAPI.xsl</xsltInputFile>
 			<xsltParameterList>
 			<xsltParameter>
 				<xsltName>sifObjectList</xsltName>
-				<xsltValue>'StudentAttendanceTimeList,StudentAttendanceSummary,StudentDailyAttendance,StudentPeriodAttendance,SessionInfo,CalendarDate,CalendarSummary'</xsltValue>
+				<xsltValue>'SchoolInfo,LEAInfo,StaffAssignment,StaffPersonal,StudentPersonal,StudentSchoolEnrollment,StudentContactPersonal,StudentContactRelationship,PersonPicture,Identity,PersonPrivacyObligationDocument'</xsltValue>
 			</xsltParameter>
 			<xsltParameter>
 				<xsltName>sifObjectGroupList</xsltName>
@@ -296,7 +293,7 @@
 				</xsltParameter>
 				<xsltParameter>
 					<xsltName>sifObjectGroupList</xsltName>
-					<xsltValue>'Attendance'</xsltValue>
+					<xsltValue>'Student Attendance objects'</xsltValue>
 				</xsltParameter>
 			</xsltParameterList>
 			<xsltOutputDir>JSON\ATTEND</xsltOutputDir>
@@ -768,7 +765,7 @@
 				</xsltParameter>
 				<xsltParameter>
 					<xsltName>sifObjectGroupList</xsltName>
-					<xsltValue>'Timetabling'</xsltValue>
+					<xsltValue>'Timetabling and Resource Booking'</xsltValue>
 				</xsltParameter>
 			</xsltParameterList>
 			<xsltOutputDir>JSON\Timetabling</xsltOutputDir>
@@ -886,7 +883,7 @@
 				</xsltParameter>
 				<xsltParameter>
 					<xsltName>sifObjectGroupList</xsltName>
-					<xsltValue>'FutureDeprecation'</xsltValue>
+					<xsltValue>'Object for Future Deprecation'</xsltValue>
 				</xsltParameter>
 			</xsltParameterList>
 			<xsltOutputDir>JSON\FutureDeprecation</xsltOutputDir>
