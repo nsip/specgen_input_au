@@ -115,24 +115,44 @@
   <Item>
     <Element>ConsentToSharingOfData</Element>
     <Characteristics>M</Characteristics>
-    <privacyRating>Medium</privacyRating>
+    <privacyRating>Extreme</privacyRating>
     <Description/>
     <Type ref="CommonTypes" name="ConsentToSharingOfDataContainerType"/>
   </Item>
   <Item>
     <Element>PermissionToParticipateList</Element>
     <Characteristics>M</Characteristics>
-    <privacyRating>Medium</privacyRating>
+    <privacyRating>Extreme</privacyRating>
     <Description/>
     <Type ref="CommonTypes" name="PermissionToParticipateListType"/>
   </Item>
   <Item>
     <Element>ApplicableLawList</Element>
     <Characteristics>O</Characteristics>
-    <privacyRating>Medium</privacyRating>
+    <privacyRating>Extreme</privacyRating>
     <Description/>
     <Type ref="CommonTypes" name="ApplicableLawListType"/>
   </Item>
+   <Item>   
+    <Element>LocalCodeList</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Extreme</privacyRating>
+    <Type ref="CommonTypes" name="LocalCodeListType"></Type>
+  </Item>
+
+  <Item>   
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+ 	<privacyRating>Extreme</privacyRating>
+   <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+ 	<privacyRating>Extreme</privacyRating>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item> 
   <xhtml:Example xmlns="" name="PersonPrivacyObligationDocument">
     <PersonPrivacyObligationDocument RefId="D3E34B35-9D75-101A-8C3D-00AA001A1652">
       <!-- Do we want this as an Element/Attribute or 2 elements?? -->

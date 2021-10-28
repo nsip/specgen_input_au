@@ -111,7 +111,7 @@
    <Item>   
     <Element>LocalCodeList</Element>
     <Characteristics>O</Characteristics>
-    <privacyRating>High</privacyRating>
+    <privacyRating>Low</privacyRating>
 	 <Description>
       <p>List of Local Codes.</p>
     </Description>
