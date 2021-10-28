@@ -44,6 +44,10 @@
 		requested by QLD DoE: capture date that a follow up action in student wellbeing occured.</li>
 		<li><code>StudentGrade/TermSpan</code>, <code>StudentGrade/SchoolYear</code>,
 		requested by QLD DoE: capture temporal scope of a student grade.</li>
+		<li><code>CensusCollection/LocalCodeList</code>, 
+		added for consistency with rest of data model.</li>
+		<li><code>CampusContainerType/ParentSchoolRefId</code>, requested by CEO Melbourne,
+		to allow SchoolInfo object for a campus to be linked via RefId to a SchoolInfo object for a parent school.</li>
 	</ul>
 	
 	<h4>New Types</h4>

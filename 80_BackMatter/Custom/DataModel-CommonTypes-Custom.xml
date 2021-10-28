@@ -8376,6 +8376,14 @@
 		<Type name="xs:normalizedString"/>
 	</Item>
 	<Item>
+		<Element>ParentSchoolRefId</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Parent School RefId may be supplied if this Campus is not the Admin Campus.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
 		<Element>SchoolCampusId</Element>
 		<Characteristics>M</Characteristics>
 		<Description>

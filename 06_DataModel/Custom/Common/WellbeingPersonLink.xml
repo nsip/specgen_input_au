@@ -96,6 +96,7 @@
   	<Item>
   	   	<Element>PersonRefId</Element>
 		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
 		<Description>
 		  <p>The RefId of the Person involved in the event, can be supplied if the Person is already a staff, student or student contact. </p>
 		</Description>
@@ -104,6 +105,7 @@
   	  <Item>
     <Attribute>SIF_RefObject</Attribute>
     <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
     <Description>
       <p>
         The type of SIF object that the <code>PersonRefId</code> attribute identifies.
@@ -125,6 +127,7 @@
   <Item>
   	   	<Element>ShortName</Element>
 		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
 		<Description>
 		  <p>Optional free text name for a person, usually only used where the person does not have a personal record with a RefId e.g Is not represented in a StudentPersonal, StaffPersonal or StudentContactPersonal object.</p>
 		</Description>
@@ -134,6 +137,7 @@
   	<Item>
   	   	<Element>HowInvolved</Element>
 		<Characteristics>O</Characteristics>
+		<privacyRating>High</privacyRating>
 		<Description>
 		  <p>Optional free text detailing involvement.</p>
 		</Description>
