@@ -213,12 +213,12 @@
 		<!-- SBP -->
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToExamples.xsl</xsltInputFile>
-			<xsltParams>
+			<xsltParamList>
 				<xsltParam>
-					<xsltParamName>sifObjectList</xsltParamName>
-					<xsltParamValue>SchoolInfo,LEAInfo,StaffAssignment,StaffPersonal,StudentPersonal,StudentSchoolEnrollment,StudentContactPersonal,StudentContactRelationship,PersonPicture,Identity,PersonPrivacyObligationDocument</xsltParamValue>
+					<xsltName>sifObjectList</xsltName>
+					<xsltValue>SchoolInfo,LEAInfo,StaffAssignment,StaffPersonal,StudentPersonal,StudentSchoolEnrollment,StudentContactPersonal,StudentContactRelationship,PersonPicture,Identity,PersonPrivacyObligationDocument</xsltValue>
 				</xsltParam>
-			</xsltParams>
+			</xsltParamList>
 			<xsltOutputDir>JSON\SBP</xsltOutputDir>
 			<xsltOutputFile>examples_AU_3.4.9.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
@@ -226,16 +226,16 @@
 
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToOpenAPI.xsl</xsltInputFile>
-			<xsltParams>
+			<xsltParamList>
 			<xsltParam>
-				<xsltParamName>sifObjectList</xsltParamName>
-				<xsltParamValue>SchoolInfo,LEAInfo,StaffAssignment,StaffPersonal,StudentPersonal,StudentSchoolEnrollment,StudentContactPersonal,StudentContactRelationship,PersonPicture,Identity,PersonPrivacyObligationDocument</xsltParamValue>
+				<xsltName>sifObjectList</xsltName>
+				<xsltValue>SchoolInfo,LEAInfo,StaffAssignment,StaffPersonal,StudentPersonal,StudentSchoolEnrollment,StudentContactPersonal,StudentContactRelationship,PersonPicture,Identity,PersonPrivacyObligationDocument</xsltValue>
 			</xsltParam>
 			<xsltParam>
-				<xsltParamName>sifObjectGroupList</xsltParamName>
-				<xsltParamValue>'SIF AU Student Baseline Profile (SBP) and supporting objects'</xsltParamValue>
+				<xsltName>sifObjectGroupList</xsltName>
+				<xsltValue>'SIF AU Student Baseline Profile (SBP) and supporting objects'</xsltValue>
 			</xsltParam>
-			</xsltParams>
+			</xsltParamList>
 			<xsltOutputDir>JSON\SBP</xsltOutputDir>
 			<xsltOutputFile>SBPAPI_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
@@ -273,12 +273,12 @@
 		<!-- Attendance -->
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToExamples.xsl</xsltInputFile>
-			<xsltParams>
+			<xsltParamList>
 				<xsltParam>
-					<xsltParamName>sifObjectList</xsltParamName>
-					<xsltParamValue>StudentAttendanceTimeList,StudentAttendanceSummary,StudentDailyAttendance,StudentPeriodAttendance,SessionInfo,CalendarDate,CalendarSummary</xsltParamValue>
+					<xsltName>sifObjectList</xsltName>
+					<xsltValue>StudentAttendanceTimeList,StudentAttendanceSummary,StudentDailyAttendance,StudentPeriodAttendance,SessionInfo,CalendarDate,CalendarSummary</xsltValue>
 				</xsltParam>
-			</xsltParams>
+			</xsltParamList>
 			<xsltOutputDir>JSON\ATTEND</xsltOutputDir>
 			<xsltOutputFile>examples_AU_3.4.9.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
@@ -286,16 +286,16 @@
 		
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToOpenAPI.xsl</xsltInputFile>
-						<xsltParams>
+						<xsltParamList>
 				<xsltParam>
-					<xsltParamName>sifObjectList</xsltParamName>
-					<xsltParamValue>StudentAttendanceTimeList,StudentAttendanceSummary,StudentDailyAttendance,StudentPeriodAttendance,SessionInfo,CalendarDate,CalendarSummary</xsltParamValue>
+					<xsltName>sifObjectList</xsltName>
+					<xsltValue>StudentAttendanceTimeList,StudentAttendanceSummary,StudentDailyAttendance,StudentPeriodAttendance,SessionInfo,CalendarDate,CalendarSummary</xsltValue>
 				</xsltParam>
 				<xsltParam>
-					<xsltParamName>sifObjectGroupList</xsltParamName>
-					<xsltParamValue>'Student Attendance objects'</xsltParamValue>
+					<xsltName>sifObjectGroupList</xsltName>
+					<xsltValue>'Student Attendance objects'</xsltValue>
 				</xsltParam>
-			</xsltParams>
+			</xsltParamList>
 			<xsltOutputDir>JSON\ATTEND</xsltOutputDir>
 			<xsltOutputFile>ATTENDAPI_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
@@ -332,12 +332,12 @@
 				<!-- Finance -->
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToExamples.xsl</xsltInputFile>
-			<xsltParams>
+			<xsltParamList>
 				<xsltParam>
-					<xsltParamName>sifObjectList</xsltParamName>
-					<xsltParamValue>Invoice,FinancialAccount,ChargedLocationInfo,PaymentReceipt,PurchaseOrder,VendorInfo,Journal,Debtor</xsltParamValue>
+					<xsltName>sifObjectList</xsltName>
+					<xsltValue>Invoice,FinancialAccount,ChargedLocationInfo,PaymentReceipt,PurchaseOrder,VendorInfo,Journal,Debtor</xsltValue>
 				</xsltParam>
-			</xsltParams>
+			</xsltParamList>
 			<xsltOutputDir>JSON\Finance</xsltOutputDir>
 			<xsltOutputFile>examples_AU_3.4.9.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
@@ -345,16 +345,16 @@
 		
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToOpenAPI.xsl</xsltInputFile>
-			<xsltParams>
+			<xsltParamList>
 				<xsltParam>
-					<xsltParamName>sifObjectList</xsltParamName>
-					<xsltParamValue>Invoice,FinancialAccount,ChargedLocationInfo,PaymentReceipt,PurchaseOrder,VendorInfo,Journal,Debtor</xsltParamValue>
+					<xsltName>sifObjectList</xsltName>
+					<xsltValue>Invoice,FinancialAccount,ChargedLocationInfo,PaymentReceipt,PurchaseOrder,VendorInfo,Journal,Debtor</xsltValue>
 				</xsltParam>
 				<xsltParam>
-					<xsltParamName>sifObjectGroupList</xsltParamName>
-					<xsltParamValue>'Finance'</xsltParamValue>
+					<xsltName>sifObjectGroupList</xsltName>
+					<xsltValue>'Finance'</xsltValue>
 				</xsltParam>
-			</xsltParams>
+			</xsltParamList>
 			<xsltOutputDir>JSON\Finance</xsltOutputDir>
 			<xsltOutputFile>FinanceOpenAPI_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
@@ -391,12 +391,12 @@
 						<!-- Activity -->
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToExamples.xsl</xsltInputFile>
-			<xsltParams>
+			<xsltParamList>
 				<xsltParam>
-					<xsltParamName>sifObjectList</xsltParamName>
-					<xsltParamValue>Activity,SchoolPrograms,StudentActivityInfo,StudentActivityParticipation,StudentParticipation</xsltParamValue>
+					<xsltName>sifObjectList</xsltName>
+					<xsltValue>Activity,SchoolPrograms,StudentActivityInfo,StudentActivityParticipation,StudentParticipation</xsltValue>
 				</xsltParam>
-			</xsltParams>
+			</xsltParamList>
 			<xsltOutputDir>JSON\Activity</xsltOutputDir>
 			<xsltOutputFile>examples_AU_3.4.9.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
@@ -404,16 +404,16 @@
 		
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToOpenAPI.xsl</xsltInputFile>
-			<xsltParams>
+			<xsltParamList>
 				<xsltParam>
-					<xsltParamName>sifObjectList</xsltParamName>
-					<xsltParamValue>Activity,SchoolPrograms,StudentActivityInfo,StudentActivityParticipation,StudentParticipation</xsltParamValue>
+					<xsltName>sifObjectList</xsltName>
+					<xsltValue>Activity,SchoolPrograms,StudentActivityInfo,StudentActivityParticipation,StudentParticipation</xsltValue>
 				</xsltParam>
 				<xsltParam>
-					<xsltParamName>sifObjectGroupList</xsltParamName>
-					<xsltParamValue>'Activity'</xsltParamValue>
+					<xsltName>sifObjectGroupList</xsltName>
+					<xsltValue>'Activity'</xsltValue>
 				</xsltParam>
-			</xsltParams>
+			</xsltParamList>
 			<xsltOutputDir>JSON\Activity</xsltOutputDir>
 			<xsltOutputFile>ActivityOpenAPI_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
@@ -450,12 +450,12 @@
 						<!-- AggregatedStatistics -->
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToExamples.xsl</xsltInputFile>
-			<xsltParams>
+			<xsltParamList>
 				<xsltParam>
-					<xsltParamName>sifObjectList</xsltParamName>
-					<xsltParamValue>AggregateCharacteristicInfo,AggregateStatisticFact,AggregateStatisticInfo</xsltParamValue>
+					<xsltName>sifObjectList</xsltName>
+					<xsltValue>AggregateCharacteristicInfo,AggregateStatisticFact,AggregateStatisticInfo</xsltValue>
 				</xsltParam>
-			</xsltParams>
+			</xsltParamList>
 			<xsltOutputDir>JSON\AggregatedStatistics</xsltOutputDir>
 			<xsltOutputFile>examples_AU_3.4.9.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
@@ -463,16 +463,16 @@
 		
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToOpenAPI.xsl</xsltInputFile>
-			<xsltParams>
+			<xsltParamList>
 				<xsltParam>
-					<xsltParamName>sifObjectList</xsltParamName>
-					<xsltParamValue>AggregateCharacteristicInfo,AggregateStatisticFact,AggregateStatisticInfo</xsltParamValue>
+					<xsltName>sifObjectList</xsltName>
+					<xsltValue>AggregateCharacteristicInfo,AggregateStatisticFact,AggregateStatisticInfo</xsltValue>
 				</xsltParam>
 				<xsltParam>
-					<xsltParamName>sifObjectGroupList</xsltParamName>
-					<xsltParamValue>'AggregatedStatistics'</xsltParamValue>
+					<xsltName>sifObjectGroupList</xsltName>
+					<xsltValue>'AggregatedStatistics'</xsltValue>
 				</xsltParam>
-			</xsltParams>
+			</xsltParamList>
 			<xsltOutputDir>JSON\AggregatedStatistics</xsltOutputDir>
 			<xsltOutputFile>AggregatedStatisticsOpenAPI_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
@@ -509,12 +509,12 @@
 		<!-- AustralianGovernmentCollections -->
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToExamples.xsl</xsltInputFile>
-			<xsltParams>
+			<xsltParamList>
 				<xsltParam>
-					<xsltParamName>sifObjectList</xsltParamName>
-					<xsltParamValue>AddressCollection,CensusCollection,CollectionRound,CollectionStatus,FinancialQuestionnaireCollection,StudentAttendanceCollection</xsltParamValue>
+					<xsltName>sifObjectList</xsltName>
+					<xsltValue>AddressCollection,CensusCollection,CollectionRound,CollectionStatus,FinancialQuestionnaireCollection,StudentAttendanceCollection</xsltValue>
 				</xsltParam>
-			</xsltParams>
+			</xsltParamList>
 			<xsltOutputDir>JSON\AustralianGovernmentCollections</xsltOutputDir>
 			<xsltOutputFile>examples_AU_3.4.9.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
@@ -522,16 +522,16 @@
 		
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToOpenAPI.xsl</xsltInputFile>
-			<xsltParams>
+			<xsltParamList>
 				<xsltParam>
-					<xsltParamName>sifObjectList</xsltParamName>
-					<xsltParamValue>AddressCollection,CensusCollection,CollectionRound,CollectionStatus,FinancialQuestionnaireCollection,StudentAttendanceCollection</xsltParamValue>
+					<xsltName>sifObjectList</xsltName>
+					<xsltValue>AddressCollection,CensusCollection,CollectionRound,CollectionStatus,FinancialQuestionnaireCollection,StudentAttendanceCollection</xsltValue>
 				</xsltParam>
 				<xsltParam>
-					<xsltParamName>sifObjectGroupList</xsltParamName>
-					<xsltParamValue>'AustralianGovernmentCollections'</xsltParamValue>
+					<xsltName>sifObjectGroupList</xsltName>
+					<xsltValue>'AustralianGovernmentCollections'</xsltValue>
 				</xsltParam>
-			</xsltParams>
+			</xsltParamList>
 			<xsltOutputDir>JSON\AustralianGovernmentCollections</xsltOutputDir>
 			<xsltOutputFile>AustralianGovernmentCollectionsOpenAPI_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
@@ -568,12 +568,12 @@
 		<!-- ClassroomAssessment -->
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToExamples.xsl</xsltInputFile>
-			<xsltParams>
+			<xsltParamList>
 				<xsltParam>
-					<xsltParamName>sifObjectList</xsltParamName>
-					<xsltParamValue>GradingAssignment,GradingAssignmentScore,MarkValueInfo,StudentGrade,StudentScoreJudgementAgainstStandard,TermInfo</xsltParamValue>
+					<xsltName>sifObjectList</xsltName>
+					<xsltValue>GradingAssignment,GradingAssignmentScore,MarkValueInfo,StudentGrade,StudentScoreJudgementAgainstStandard,TermInfo</xsltValue>
 				</xsltParam>
-			</xsltParams>
+			</xsltParamList>
 			<xsltOutputDir>JSON\ClassroomAssessment</xsltOutputDir>
 			<xsltOutputFile>examples_AU_3.4.9.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
@@ -581,16 +581,16 @@
 		
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToOpenAPI.xsl</xsltInputFile>
-			<xsltParams>
+			<xsltParamList>
 				<xsltParam>
-					<xsltParamName>sifObjectList</xsltParamName>
-					<xsltParamValue>GradingAssignment,GradingAssignmentScore,MarkValueInfo,StudentGrade,StudentScoreJudgementAgainstStandard,TermInfo</xsltParamValue>
+					<xsltName>sifObjectList</xsltName>
+					<xsltValue>GradingAssignment,GradingAssignmentScore,MarkValueInfo,StudentGrade,StudentScoreJudgementAgainstStandard,TermInfo</xsltValue>
 				</xsltParam>
 				<xsltParam>
-					<xsltParamName>sifObjectGroupList</xsltParamName>
-					<xsltParamValue>'ClassroomAssessment'</xsltParamValue>
+					<xsltName>sifObjectGroupList</xsltName>
+					<xsltValue>'ClassroomAssessment'</xsltValue>
 				</xsltParam>
-			</xsltParams>
+			</xsltParamList>
 			<xsltOutputDir>JSON\ClassroomAssessment</xsltOutputDir>
 			<xsltOutputFile>ClassroomAssessmentOpenAPI_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
@@ -627,12 +627,12 @@
 		<!-- LearningStandards -->
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToExamples.xsl</xsltInputFile>
-			<xsltParams>
+			<xsltParamList>
 				<xsltParam>
-					<xsltParamName>sifObjectList</xsltParamName>
-					<xsltParamValue>LearningResource,LearningResourcePackage,LearningStandardDocument,LearningStandardItem</xsltParamValue>
+					<xsltName>sifObjectList</xsltName>
+					<xsltValue>LearningResource,LearningResourcePackage,LearningStandardDocument,LearningStandardItem</xsltValue>
 				</xsltParam>
-			</xsltParams>
+			</xsltParamList>
 			<xsltOutputDir>JSON\LearningStandards</xsltOutputDir>
 			<xsltOutputFile>examples_AU_3.4.9.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
@@ -640,16 +640,16 @@
 		
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToOpenAPI.xsl</xsltInputFile>
-			<xsltParams>
+			<xsltParamList>
 				<xsltParam>
-					<xsltParamName>sifObjectList</xsltParamName>
-					<xsltParamValue>LearningResource,LearningResourcePackage,LearningStandardDocument,LearningStandardItem</xsltParamValue>
+					<xsltName>sifObjectList</xsltName>
+					<xsltValue>LearningResource,LearningResourcePackage,LearningStandardDocument,LearningStandardItem</xsltValue>
 				</xsltParam>
 				<xsltParam>
-					<xsltParamName>sifObjectGroupList</xsltParamName>
-					<xsltParamValue>'LearningStandards'</xsltParamValue>
+					<xsltName>sifObjectGroupList</xsltName>
+					<xsltValue>'LearningStandards'</xsltValue>
 				</xsltParam>
-			</xsltParams>
+			</xsltParamList>
 			<xsltOutputDir>JSON\LearningStandards</xsltOutputDir>
 			<xsltOutputFile>LearningStandardsOpenAPI_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
@@ -686,12 +686,12 @@
 		<!-- NAPLAN -->
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToExamples.xsl</xsltInputFile>
-			<xsltParams>
+			<xsltParamList>
 				<xsltParam>
-					<xsltParamName>sifObjectList</xsltParamName>
-					<xsltParamValue>NAPCodeFrame,NAPEventStudentLink,NAPStudentResponseSet,NAPTest,NAPTestItem,NAPTestlet,NAPTestScoreSummary</xsltParamValue>
+					<xsltName>sifObjectList</xsltName>
+					<xsltValue>NAPCodeFrame,NAPEventStudentLink,NAPStudentResponseSet,NAPTest,NAPTestItem,NAPTestlet,NAPTestScoreSummary</xsltValue>
 				</xsltParam>
-			</xsltParams>
+			</xsltParamList>
 			<xsltOutputDir>JSON\NAPLAN</xsltOutputDir>
 			<xsltOutputFile>examples_AU_3.4.9.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
@@ -699,16 +699,16 @@
 		
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToOpenAPI.xsl</xsltInputFile>
-			<xsltParams>
+			<xsltParamList>
 				<xsltParam>
-					<xsltParamName>sifObjectList</xsltParamName>
-					<xsltParamValue>NAPCodeFrame,NAPEventStudentLink,NAPStudentResponseSet,NAPTest,NAPTestItem,NAPTestlet,NAPTestScoreSummary</xsltParamValue>
+					<xsltName>sifObjectList</xsltName>
+					<xsltValue>NAPCodeFrame,NAPEventStudentLink,NAPStudentResponseSet,NAPTest,NAPTestItem,NAPTestlet,NAPTestScoreSummary</xsltValue>
 				</xsltParam>
 				<xsltParam>
-					<xsltParamName>sifObjectGroupList</xsltParamName>
-					<xsltParamValue>'NAPLAN'</xsltParamValue>
+					<xsltName>sifObjectGroupList</xsltName>
+					<xsltValue>'NAPLAN'</xsltValue>
 				</xsltParam>
-			</xsltParams>
+			</xsltParamList>
 			<xsltOutputDir>JSON\NAPLAN</xsltOutputDir>
 			<xsltOutputFile>NAPLANOpenAPI_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
@@ -745,12 +745,12 @@
 		<!-- Timetabling and Resource Scheduling -->
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToExamples.xsl</xsltInputFile>
-			<xsltParams>
+			<xsltParamList>
 				<xsltParam>
-					<xsltParamName>sifObjectList</xsltParamName>
-					<xsltParamValue>EquipmentInfo,LibraryPatronStatus,ResourceBooking,RoomInfo,ScheduledActivity,SchoolCourseInfo,SectionInfo,StudentSectionEnrollment,TeachingGroup,TimeTable,TimeTableCell,TimeTableContainer,TimeTableSubject</xsltParamValue>
+					<xsltName>sifObjectList</xsltName>
+					<xsltValue>EquipmentInfo,LibraryPatronStatus,ResourceBooking,RoomInfo,ScheduledActivity,SchoolCourseInfo,SectionInfo,StudentSectionEnrollment,TeachingGroup,TimeTable,TimeTableCell,TimeTableContainer,TimeTableSubject</xsltValue>
 				</xsltParam>
-			</xsltParams>
+			</xsltParamList>
 			<xsltOutputDir>JSON\Timetabling</xsltOutputDir>
 			<xsltOutputFile>examples_AU_3.4.9.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
@@ -758,16 +758,16 @@
 		
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToOpenAPI.xsl</xsltInputFile>
-			<xsltParams>
+			<xsltParamList>
 				<xsltParam>
-					<xsltParamName>sifObjectList</xsltParamName>
-					<xsltParamValue>EquipmentInfo,LibraryPatronStatus,ResourceBooking,RoomInfo,ScheduledActivity,SchoolCourseInfo,SectionInfo,StudentSectionEnrollment,TeachingGroup,TimeTable,TimeTableCell,TimeTableContainer,TimeTableSubject</xsltParamValue>
+					<xsltName>sifObjectList</xsltName>
+					<xsltValue>EquipmentInfo,LibraryPatronStatus,ResourceBooking,RoomInfo,ScheduledActivity,SchoolCourseInfo,SectionInfo,StudentSectionEnrollment,TeachingGroup,TimeTable,TimeTableCell,TimeTableContainer,TimeTableSubject</xsltValue>
 				</xsltParam>
 				<xsltParam>
-					<xsltParamName>sifObjectGroupList</xsltParamName>
-					<xsltParamValue>'Timetabling and Resource Booking'</xsltParamValue>
+					<xsltName>sifObjectGroupList</xsltName>
+					<xsltValue>'Timetabling and Resource Booking'</xsltValue>
 				</xsltParam>
-			</xsltParams>
+			</xsltParamList>
 			<xsltOutputDir>JSON\Timetabling</xsltOutputDir>
 			<xsltOutputFile>TimetablingOpenAPI_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
@@ -804,12 +804,12 @@
 		<!-- Wellbeing -->
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToExamples.xsl</xsltInputFile>
-			<xsltParams>
+			<xsltParamList>
 				<xsltParam>
-					<xsltParamName>sifObjectList</xsltParamName>
-					<xsltParamValue>PersonalisedPlan,WellbeingAlert,WellbeingAppeal,WellbeingCharacteristic,WellbeingEvent,WellbeingPersonLink,WellbeingResponse</xsltParamValue>
+					<xsltName>sifObjectList</xsltName>
+					<xsltValue>PersonalisedPlan,WellbeingAlert,WellbeingAppeal,WellbeingCharacteristic,WellbeingEvent,WellbeingPersonLink,WellbeingResponse</xsltValue>
 				</xsltParam>
-			</xsltParams>
+			</xsltParamList>
 			<xsltOutputDir>JSON\Wellbeing</xsltOutputDir>
 			<xsltOutputFile>examples_AU_3.4.9.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
@@ -817,16 +817,16 @@
 		
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToOpenAPI.xsl</xsltInputFile>
-			<xsltParams>
+			<xsltParamList>
 				<xsltParam>
-					<xsltParamName>sifObjectList</xsltParamName>
-					<xsltParamValue>PersonalisedPlan,WellbeingAlert,WellbeingAppeal,WellbeingCharacteristic,WellbeingEvent,WellbeingPersonLink,WellbeingResponse</xsltParamValue>
+					<xsltName>sifObjectList</xsltName>
+					<xsltValue>PersonalisedPlan,WellbeingAlert,WellbeingAppeal,WellbeingCharacteristic,WellbeingEvent,WellbeingPersonLink,WellbeingResponse</xsltValue>
 				</xsltParam>
 				<xsltParam>
-					<xsltParamName>sifObjectGroupList</xsltParamName>
-					<xsltParamValue>'Wellbeing'</xsltParamValue>
+					<xsltName>sifObjectGroupList</xsltName>
+					<xsltValue>'Wellbeing'</xsltValue>
 				</xsltParam>
-			</xsltParams>
+			</xsltParamList>
 			<xsltOutputDir>JSON\Wellbeing</xsltOutputDir>
 			<xsltOutputFile>WellbeingOpenAPI_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
@@ -863,12 +863,12 @@
 		<!-- For Future Deprecation -->
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToExamples.xsl</xsltInputFile>
-			<xsltParams>
+			<xsltParamList>
 				<xsltParam>
-					<xsltParamName>sifObjectList</xsltParamName>
-					<xsltParamValue>ResourceUsage,SystemRole</xsltParamValue>
+					<xsltName>sifObjectList</xsltName>
+					<xsltValue>ResourceUsage,SystemRole</xsltValue>
 				</xsltParam>
-			</xsltParams>
+			</xsltParamList>
 			<xsltOutputDir>JSON\FutureDeprecation</xsltOutputDir>
 			<xsltOutputFile>examples_AU_3.4.9.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
@@ -876,16 +876,16 @@
 		
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToOpenAPI.xsl</xsltInputFile>
-			<xsltParams>
+			<xsltParamList>
 				<xsltParam>
-					<xsltParamName>sifObjectList</xsltParamName>
-					<xsltParamValue>ResourceUsage,SystemRole</xsltParamValue>
+					<xsltName>sifObjectList</xsltName>
+					<xsltValue>ResourceUsage,SystemRole</xsltValue>
 				</xsltParam>
 				<xsltParam>
-					<xsltParamName>sifObjectGroupList</xsltParamName>
-					<xsltParamValue>'Object for Future Deprecation'</xsltParamValue>
+					<xsltName>sifObjectGroupList</xsltName>
+					<xsltValue>'Object for Future Deprecation'</xsltValue>
 				</xsltParam>
-			</xsltParams>
+			</xsltParamList>
 			<xsltOutputDir>JSON\FutureDeprecation</xsltOutputDir>
 			<xsltOutputFile>FutureDeprecationOpenAPI_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
