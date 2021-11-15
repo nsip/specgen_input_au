@@ -85,7 +85,7 @@
     <Description>
       <p>Text describing employment.</p>
     </Description>
-    <Type ref="CodeSets" name="xs:normalizedString"></Type>
+    <Type name="xs:normalizedString"></Type>
   </Item>
  <Item>
     <Element>Workplace</Element>
@@ -94,7 +94,7 @@
     <Description>
       <p>Workplace of Contact.</p>
     </Description>
-    <Type ref="CodeSets" name="xs:normalizedString"></Type>
+    <Type name="xs:normalizedString"></Type>
   </Item><Item>
     <Element>WorkingWithChildrenCheck</Element>
     <Characteristics>O</Characteristics>
