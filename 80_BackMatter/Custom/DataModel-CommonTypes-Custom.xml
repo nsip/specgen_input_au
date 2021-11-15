@@ -8381,7 +8381,7 @@
 		<Description>
 			<p>Parent School RefId may be supplied if this Campus is not the Admin Campus.</p>
 		</Description>
-		<Type name="xs:normalizedString"/>
+		<Type ref="CommonTypes" name="IdRefType"></Type>
 	</Item>
 	<Item>
 		<Element>SchoolCampusId</Element>
@@ -14018,6 +14018,36 @@
 		<Type name="xs:normalizedString"/>
 	</Item>
 	<Item>
+		<Element>Determination</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>
+        Determination made by the agency.
+      </p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>CheckDate</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>
+        Date on which the check was performed.
+      </p>
+		</Description>
+		<Type name="xs:date"/>
+	</Item>
+	<Item>
+		<Element>DeterminationDate</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>
+        Date on which the determination (clearance or rejection) was issued.
+      </p>
+		</Description>
+		<Type name="xs:date"/>
+	</Item>
+	<Item>
 		<Element>ExpiryDate</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
@@ -14034,6 +14064,9 @@
 			<HolderName>John Doe</HolderName>
 			<Type>Playground supervision</Type>
 			<Reasons>The agency made this determination for undisclosed reasons.</Reasons>
+			<Determination>Approved</Determination>
+			<CheckDate>2020-01-02</CheckDate>
+			<DeterminationDate>2020-01-09</DeterminationDate>
 			<ExpiryDate>2030-01-02</ExpiryDate>
 		</WorkingWithChildrenCheck>
 	</xhtml:Example>

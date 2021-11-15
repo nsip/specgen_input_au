@@ -122,13 +122,13 @@
     <Type ref="CodeSets" name="AUCodeSetsSourceCodeTypeType"></Type>
   </Item>
    <Item>
-    <Element>CorrespondenceMethod</Element>
+    <Element>ContactMethod</Element>
     <Characteristics>O</Characteristics>
 	<privacyRating>Medium</privacyRating>
     <Description>
       <p>Preferred correspondence method nominated by parent to send invoices, statements and so forth. </p>
     </Description>
-    <Type ref="CodeSets" name="AUCodeSetsCorrespondenceMethodType"></Type>
+    <Type ref="CodeSets" name="AUCodeSetsContactMethodType"></Type>
   </Item>
   <Item>
     <Element>FeePercentage</Element>
@@ -195,7 +195,7 @@
       <MainlySpeaksEnglishAtHome>U</MainlySpeaksEnglishAtHome>
         <ContactSequence>1</ContactSequence>
         <ContactSequenceSource>P</ContactSequenceSource>
-        <CorrespondenceMethod>AltMailing</CorrespondenceMethod>
+        <ContactMethod>AltMailing</ContactMethod>
 		<FeePercentage>
 		  <Curriculum>90.0</Curriculum>
 		  <Other>10.0</Other>

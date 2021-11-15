@@ -1246,7 +1246,7 @@
 			</Value>
 			<Value>
 				<Code>904</Code>
-				<Text>Staff Meeting</Text>
+				<Text>Staff Meeting (VIC: Student Free)</Text>
 			</Value>
 			<Value>
 				<Code>905</Code>
@@ -10043,9 +10043,9 @@
 	</CodeSet>							
 	<CodeSet>
 		<Intro>
-			<p>Preferred method of correspondence</p>
+			<p>Preferred method of contact</p>
 		</Intro>
-		<ID>Correspondence Method</ID>
+		<ID>Contact Method</ID>
 		<Values>
 			<Value>
 				<Code>Mailing</Code>
@@ -10062,6 +10062,10 @@
 			<Value>
 				<Code>Phone</Code>
 				<Text>Phone</Text>
+			</Value>			
+			<Value>
+				<Code>ParentPortal</Code>
+				<Text>Contact via Parent Portal</Text>
 			</Value>			
 		</Values>
 	</CodeSet>							

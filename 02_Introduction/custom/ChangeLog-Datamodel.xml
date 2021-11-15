@@ -19,7 +19,7 @@
 		<li><code>SchoolInfo/ParentCommonwealthID</code>, requested by ACARA: used to differentiate the original Australian Government school identifiers, which applied to school locations, from the new Australian Government school identifiers as of 2021, which only apply to schools.</li>
 		<li><code>StudentPersonal/NationalUniqueStudentIdentifier</code>, requested by QLD DoE: support of national Unique Student Identifier initiative.</li>
 		<li><code>StudentPersonal/IndependentStudent</code>, requested by QLD DoE: identifty students responsible for their own education.</li>
-		<li><code>StudentPersonal/Passport</code>, requested by QLD DoE: support for international students.</li>
+		<li><code>DemographicsType/Passport</code>, requested by QLD DoE: support for international students.</li>
 		<li><code>DemographicsType/VisaNumber</code>, <code>DemographicsType/VisaGrantDate</code>, 
 		<code>DemographicsType/VisaStudyEntitlement</code>, <code>DemographicsType/VisaCondtions</code>, 
 		requested by QLD DoE: support for international students. (Information sourced from VEVO.)</li>
@@ -31,7 +31,7 @@
 		requested by QLD DoE: confirm eligibility of student contacts to perform ad hoc work on behalf of school (e.g. homestays).</li>
 		<li><code>StudentContactRelationship/FeePercentage</code>,
 		requested by QLD DoE: capture proportion of student fees paid by a particular student contact.</li>
-		<li><code>StudentContactRelationship/CorrespondenceMethod</code>,
+		<li><code>StudentContactRelationship/ContactMethod</code>,
 		requested by QLD DoE: preferred method of correspondence for a student contact in relation to a student.</li>
 		<li><code>DemographicsType/MedicarePositionNumber</code>, <code>DemographicsType/MedicareCardHolder</code>, 
 		<code>DemographicsType/PrivateHealthInsurance</code>,
@@ -52,7 +52,7 @@
 	
 	<h4>New Types</h4>
 	<ul>
-	<li><code>WorkingWithChildrenCheckType</code>, requested by QLD DoE: 
+	<li><code>WorkingWithChildrenCheckType</code>, requested by QLD DoE, further suggestions from Systemic: 
 	encode eligibility to perform work wth children on behalf of school (e.g. homestays)</li>
  	<li><code>StudentContactFeePercentageType</code>, requested by QLD DoE: 
 	encode proportion of student fees paid by a particular student contact</li>
@@ -63,7 +63,7 @@
 	<h4>New CodeSets</h4>
 	<ul>	
 		<li><code>Visa Study Entitlement</code>, requested by QLD DoE: support for international students. (Information sourced from VEVO.)</li>
-		<li><code>Correspondence Method</code>, requested by QLD DoE: correspondence media.</li>
+		<li><code>Contact Method</code>, requested by QLD DoE: communications media for contacting persons.</li>
 	</ul>
 
 	<h4>Additions to CodeSets</h4>
