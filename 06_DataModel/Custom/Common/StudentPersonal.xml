@@ -63,6 +63,15 @@
 		</Description>
 		<Type ref="CommonTypes" name="StateProvinceIdType"/>
 	</Item>
+	<Item>
+		<Element>NationalUniqueStudentIdentifier</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>High</privacyRating>
+		<Description>
+			<p>The Commonwealth-assigned National Unique Student Identifier (USI) for this student.</p>
+		</Description>
+		<Type name="xs:token"></Type>
+	</Item>
     
 	<Item>
 		<Element>ElectronicIdList</Element>
@@ -226,6 +235,15 @@
 		<Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"/>
 	</Item>
 	<Item>
+		<Element>IndependentStudent</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Medium</privacyRating>
+		<Description>
+			<p>Student is living independently of any parent, guardian or carer, is able to make decisions on their own behalf, and is responsible for their own education.</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"/>
+	</Item>
+	<Item>
 		<Element>Sensitive</Element>
 		<Characteristics>O</Characteristics>
 		<privacyRating>High</privacyRating>
@@ -308,6 +326,7 @@
 			</MedicalAlertMessages>
 			<LocalId>S1234567</LocalId>
 			<StateProvinceId>ABC1234</StateProvinceId>
+			<NationalUniqueStudentIdentifier>12345678</NationalUniqueStudentIdentifier>
 			<ElectronicIdList>
 				<ElectronicId Type="03">ZZZZZZ21</ElectronicId>
 				<ElectronicId Type="03">ZZZZZZ22</ElectronicId>
@@ -390,7 +409,11 @@
 							<VisaStatisticalCode>05</VisaStatisticalCode>
 						  </VisaSubClass>
 					</VisaSubClassList>
-
+					<Passport>
+						<Number>9</Number>
+						<ExpiryDate>2030-12-11</ExpiryDate>
+						<Country>4111</Country>
+					</Passport>
 				</Demographics>
 				<AddressList>
 					<Address Type="0123" Role="2382">
@@ -458,6 +481,7 @@
 			<IntegrationAide>N</IntegrationAide>
 			<EducationSupport>N</EducationSupport>
 			<HomeSchooledStudent>N</HomeSchooledStudent>
+			<IndependentStudent>N</IndependentStudent>
 			<Sensitive>N</Sensitive>
 			<LocalCodeList>
 				<LocalCode>

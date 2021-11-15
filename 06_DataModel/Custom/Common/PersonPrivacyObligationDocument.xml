@@ -1,0 +1,399 @@
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="PersonPrivacyObligationDocument">
+  <Key>@RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>PersonPrivacyObligationDocument</Element>
+    <privacyRating>Extreme</privacyRating>
+    <Description>
+      <p>This object contains information about the person's data and privacy obligations as well as permissions and consent associated with it.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <privacyRating>Extreme</privacyRating>
+    <Description>
+      <p>The ID (GUID) that uniquely identifies this object.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"/>
+  </Item>
+  <Item>
+    <Element>ParentRefId</Element>
+    <Characteristics>M</Characteristics>
+    <privacyRating>High</privacyRating>
+    <Description>
+      <p>The GUID of the personal object to which this privacy obligation object is linked</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"/>
+  </Item>
+  <Item>
+    <Element>ParentObjectTypeName</Element>
+    <Characteristics>M</Characteristics>
+    <privacyRating>High</privacyRating>
+    <Description>
+      <p>The name of the object reference. </p>
+    </Description>
+    <Values>
+      <Value>
+        <Code>StudentPersonal</Code>
+      </Value>
+      <Value>
+        <Code>StaffPersonal</Code>
+      </Value>
+      <Value>
+        <Code>StudentContactPersonal</Code>
+      </Value>
+    </Values>
+  </Item>
+  <Item>
+    <Element>SchoolYear</Element>
+    <Characteristics>M</Characteristics>
+    <privacyRating>Medium</privacyRating>
+    <Description>
+      <p>
+        School year for which this information is applicable, expressed as the four-digit year in which the school year
+        ends (e.g. <code>2020</code>).
+      </p>
+    </Description>
+    <Type ref="CommonTypes" name="SchoolYearType"/>
+  </Item>
+  <Item>
+    <Element>StartDate</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Medium</privacyRating>
+    <Description>
+      <p>Start Date applicabile if not applicable for the whole School Year.</p>
+    </Description>
+    <Type name="xs:date"/>
+  </Item>
+  <Item>
+    <Element>EndDate</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Medium</privacyRating>
+    <Description>
+      <p>End Date applicabile if not applicable for the whole School Year.</p>
+    </Description>
+    <Type name="xs:date"/>
+  </Item>
+  <Item>
+    <Element>SettingLocationList</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Medium</privacyRating>
+    <Description>
+      <p>List of locations where this privacy list applies.</p>
+    </Description>
+    <Type ref="CommonTypes" name="SettingLocationListType"/>
+  </Item>
+  <Item>
+    <Element>ContactForRequestsRefId</Element>
+    <Characteristics>M</Characteristics>
+    <privacyRating>Medium</privacyRating>
+    <Description>
+      <p>The GUID of the personal object for the person who needs to be contacted for data sharing requests.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"/>
+  </Item>
+  <Item>
+    <Element>ContactForRequestsObjectTypeName</Element>
+    <Characteristics>M</Characteristics>
+    <privacyRating>High</privacyRating>
+    <Description>
+      <p>The name of the object reference.</p>
+    </Description>
+    <Values>
+      <Value>
+        <Code>StudentPersonal</Code>
+      </Value>
+      <Value>
+        <Code>StaffPersonal</Code>
+      </Value>
+      <Value>
+        <Code>StudentContactPersonal</Code>
+      </Value>
+    </Values>
+  </Item>
+  <Item>
+    <Element>ConsentToSharingOfData</Element>
+    <Characteristics>M</Characteristics>
+    <privacyRating>Extreme</privacyRating>
+    <Description/>
+    <Type ref="CommonTypes" name="ConsentToSharingOfDataContainerType"/>
+  </Item>
+  <Item>
+    <Element>PermissionToParticipateList</Element>
+    <Characteristics>M</Characteristics>
+    <privacyRating>Extreme</privacyRating>
+    <Description/>
+    <Type ref="CommonTypes" name="PermissionToParticipateListType"/>
+  </Item>
+  <Item>
+    <Element>ApplicableLawList</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Extreme</privacyRating>
+    <Description/>
+    <Type ref="CommonTypes" name="ApplicableLawListType"/>
+  </Item>
+   <Item>   
+    <Element>LocalCodeList</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>Extreme</privacyRating>
+    <Type ref="CommonTypes" name="LocalCodeListType"></Type>
+  </Item>
+
+  <Item>   
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+ 	<privacyRating>Extreme</privacyRating>
+   <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+ 	<privacyRating>Extreme</privacyRating>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item> 
+  <xhtml:Example xmlns="" name="PersonPrivacyObligationDocument">
+    <PersonPrivacyObligationDocument RefId="D3E34B35-9D75-101A-8C3D-00AA001A1652">
+      <!-- Do we want this as an Element/Attribute or 2 elements?? -->
+      <ParentRefId>AA648462-8886-24AA-5294-BC638017320B</ParentRefId>
+      <ParentObjectTypeName>StudentPersonal</ParentObjectTypeName>
+      <SchoolYear>2020</SchoolYear>
+      <StartDate>2020-02-01</StartDate>
+      <EndDate>2020-12-01</EndDate>
+      <SettingLocationList>
+        <SettingLocation>
+          <SettingLocationName>Taylors College</SettingLocationName>
+          <SettingLocationType>School</SettingLocationType>
+          <SettingLocationRefId>D3E34B35-9D75-101A-8C3D-00AA001A1654</SettingLocationRefId>
+          <SettingLocationObjectTypeName>SchoolInfo</SettingLocationObjectTypeName>
+        </SettingLocation>
+        <SettingLocation>
+          <SettingLocationName>Another School</SettingLocationName>
+          <SettingLocationType>School</SettingLocationType>
+          <SettingLocationRefId>E6E34B35-9D75-101A-8C3D-01AA001A1655</SettingLocationRefId>
+          <SettingLocationObjectTypeName>SchoolInfo</SettingLocationObjectTypeName>
+        </SettingLocation>
+      </SettingLocationList>
+      <ContactForRequestsRefId>C4E34B35-9D75-101A-8C3D-00AA001A1653</ContactForRequestsRefId>
+      <ContactForRequestsObjectTypeName>StudentContactPersonal</ContactForRequestsObjectTypeName>
+      <ConsentToSharingOfData>
+        <!-- Specific e.g. Directory, militarty, NON-Specific - medical, vendors,-->
+        <!-- academic but not behavioural -->
+        <!-- for vendors this is domain or object specific -->
+        <!-- Domain Specific -= as is 0-->
+        <DataDomainObligationList>
+          <!-- Domains of information that are willing to be shared and who with -->
+          <DataDomainObligation>
+            <DataDomain>Assessment</DataDomain>
+            <DomainComments>Can also share NAPLAN results.</DomainComments>
+            <ShareWithList>
+              <ShareWith>
+                <ShareWithParty>Assessment Vendors</ShareWithParty>
+                <ShareWithRefId>AA648462-8886-24AA-5294-BC638017320C</ShareWithRefId>
+                <ShareWithObjectTypeName>StudentContactPersonal</ShareWithObjectTypeName>
+                <ShareWithLocalId/>
+                <ShareWithPurpose>Assessment reporting</ShareWithPurpose>
+                <ShareWithRole>Vendor</ShareWithRole>
+                <ShareWithComments>A comment</ShareWithComments>
+                <PermissionToOnShare>N</PermissionToOnShare>
+                <ShareWithURL>www.assessmentworld.com</ShareWithURL>
+              </ShareWith>
+              <ShareWith>
+                <ShareWithParty>Military</ShareWithParty>
+                <ShareWithRefId>AA648462-8886-24AA-5294-BC638017320C</ShareWithRefId>
+                <ShareWithObjectTypeName>StudentContactPersonal</ShareWithObjectTypeName>
+                <ShareWithLocalId/>
+                <ShareWithPurpose>entrance requirement</ShareWithPurpose>
+                <ShareWithRole>Military</ShareWithRole>
+                <ShareWithComments>A comment</ShareWithComments>
+                <PermissionToOnShare>N</PermissionToOnShare>
+                <ShareWithURL>www.military.com</ShareWithURL>
+              </ShareWith>
+            </ShareWithList>
+          </DataDomainObligation>
+          <DataDomainObligation>
+            <DataDomain>Attendance</DataDomain>
+            <DomainComments>Share with other schools.</DomainComments>
+            <ShareWithList>
+              <ShareWith>
+                <ShareWithParty>Assessment Vendors</ShareWithParty>
+                <ShareWithRefId>D3E34B35-9D75-101A-8C3D-00AA001A1651</ShareWithRefId>
+                <ShareWithObjectTypeName>StudentContactPersonal</ShareWithObjectTypeName>
+                <ShareWithLocalId/>
+                <ShareWithPurpose>Assessment reporting</ShareWithPurpose>
+                <ShareWithRole>Vendor</ShareWithRole>
+                <ShareWithComments>A comment</ShareWithComments>
+                <PermissionToOnShare>N</PermissionToOnShare>
+                <ShareWithURL>www.assessmentworld.com</ShareWithURL>
+              </ShareWith>
+              <ShareWith>
+                <ShareWithParty>Military</ShareWithParty>
+                <ShareWithRefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</ShareWithRefId>
+                <ShareWithObjectTypeName>StudentContactPersonal</ShareWithObjectTypeName>
+                <ShareWithLocalId/>
+                <ShareWithPurpose>entrance requirement</ShareWithPurpose>
+                <ShareWithRole>Military</ShareWithRole>
+                <ShareWithComments>A comment</ShareWithComments> 
+                <PermissionToOnShare>N</PermissionToOnShare>
+                <ShareWithURL>www.military.com</ShareWithURL>
+              </ShareWith>
+            </ShareWithList>
+            <DoNotShareWithList>
+              <DoNotShareWith>
+                <DoNotShareWithParty>John Wilbur Loavel</DoNotShareWithParty>
+                <DoNotShareWithRefId>B3E34B35-9D75-101A-8C3D-00AA001A1655</DoNotShareWithRefId>
+                <DoNotShareWithObjectTypeName>StudentContactPersonal</DoNotShareWithObjectTypeName>
+                <DoNotShareWithLocalId/>
+                <DoNotShareWithPurpose>Father</DoNotShareWithPurpose>
+                <DoNotShareWithRole>Parent</DoNotShareWithRole>
+                <DoNotShareWithComments>Student assessment information is not to be shared with the father.</DoNotShareWithComments>
+              </DoNotShareWith>
+            </DoNotShareWithList>
+          </DataDomainObligation>
+          <!-- Domains of information that are willing to be shared and who with -->
+          <DataDomainObligation>
+            <DataDomain>Assessment</DataDomain>
+            <DomainComments>Can also share NAPLAN results.</DomainComments>
+            <ShareWithList>
+              <ShareWith>
+                <ShareWithParty>Assessment Vendors</ShareWithParty>
+                <ShareWithPurpose>Assessment reporting</ShareWithPurpose>
+                <ShareWithRole>Assessment</ShareWithRole>
+                <ShareWithComments>A comment</ShareWithComments>
+                <PermissionToOnShare>N</PermissionToOnShare>
+                <ShareWithURL>www.assessmentworld.com</ShareWithURL>
+              </ShareWith>
+              <ShareWith>
+                <ShareWithParty>Military</ShareWithParty>
+                <ShareWithPurpose>entrance requirement</ShareWithPurpose>
+                <ShareWithRole>Military</ShareWithRole>
+                <ShareWithComments>A comment</ShareWithComments>
+                <PermissionToOnShare>N</PermissionToOnShare>
+                <ShareWithURL>www.military.com</ShareWithURL>
+              </ShareWith>
+            </ShareWithList>
+            <DoNotShareWithList>
+              <DoNotShareWith>
+                <DoNotShareWithParty>John Wilbur Loavel</DoNotShareWithParty>
+                <DoNotShareWithPurpose>Father</DoNotShareWithPurpose>
+                <DoNotShareWithRole>Parent</DoNotShareWithRole>
+                <DoNotShareWithComments>Student assessment information is not to be shared with the father.</DoNotShareWithComments>
+              </DoNotShareWith>
+            </DoNotShareWithList>
+          </DataDomainObligation>
+          <DataDomainObligation>
+            <DataDomain>Attendance</DataDomain>
+            <DomainComments>Share with other schools.</DomainComments>
+            <ShareWithList>
+              <ShareWith>
+                <ShareWithParty>School XYZ</ShareWithParty>
+                <ShareWithPurpose>Attendance reporting</ShareWithPurpose>
+                <ShareWithRole>A Role</ShareWithRole>
+                <ShareWithComments>A comment</ShareWithComments>
+                <PermissionToOnShare>Y</PermissionToOnShare>
+                <ShareWithURL>www.XYZ.edu.au</ShareWithURL>
+              </ShareWith>
+              <ShareWith>
+                <ShareWithParty>School ABC</ShareWithParty>
+                <ShareWithPurpose>Attendance reporting</ShareWithPurpose>
+                <ShareWithRole>A Role</ShareWithRole>
+                <ShareWithComments>A comment</ShareWithComments>
+                <PermissionToOnShare>Y</PermissionToOnShare>
+                <ShareWithURL>www.ABC.edu.au</ShareWithURL>
+              </ShareWith>
+            </ShareWithList>
+            <DoNotShareWithList>
+              <DoNotShareWith>
+                <DoNotShareWithParty>John Wilbur Loavel</DoNotShareWithParty>
+                <DoNotShareWithRefId>F3E34B35-9D75-101A-8C3D-00AA001A1655</DoNotShareWithRefId>
+                <DoNotShareWithObjectTypeName>StudentContactPersonal</DoNotShareWithObjectTypeName>
+                <DoNotShareWithLocalId/>
+                <DoNotShareWithPurpose>Father</DoNotShareWithPurpose>
+                <DoNotShareWithRole>Parent</DoNotShareWithRole>
+                <DoNotShareWithComments>Student attendance information is not to be shared with the father.</DoNotShareWithComments>
+                <DoNotShareWithURL/>
+              </DoNotShareWith>
+            </DoNotShareWithList>
+          </DataDomainObligation>
+        </DataDomainObligationList>
+        <!--This indicates a higher level and overrides share/do not share information at specific domains -->
+        <NeverShareWithList>
+          <NeverShareWith>
+            <NeverShareWithParty>Media</NeverShareWithParty>
+            <NeverShareWithRefId>D3E34B35-9D75-101A-8C3D-00AA001A1655</NeverShareWithRefId>
+            <NeverShareWithObjectTypeName>StudentContactPersonal</NeverShareWithObjectTypeName>
+            <NeverShareWithLocalId/>
+            <NeverShareWithPurpose>Never Share</NeverShareWithPurpose>
+            <NeverShareWithRole>Company</NeverShareWithRole>
+            <NeverShareWithComments>Student and/or family information is not to be shared with the Media.</NeverShareWithComments>
+            <NeverShareWithURL>www.Mediaworld.com</NeverShareWithURL>
+          </NeverShareWith>
+        </NeverShareWithList>
+      </ConsentToSharingOfData>
+      <PermissionToParticipateList>
+        <PermissionToParticipate>
+          <!-- Permissions -->
+          <!--Code of Conduct, BikeRiding, Walk to or from school, excursions Where do I get a list-->
+          <!-- Ride to, Walk to, Excursoions, specific or general?, parents, overnight, camps -->
+          <PermissionCategory>Travel</PermissionCategory>
+          <Permission>WalkHome</Permission>
+          <PermissionValue>Y</PermissionValue>
+          <PermissionStartDate>2020-01-01</PermissionStartDate>
+          <PermissionEndDate>2020-12-31</PermissionEndDate>
+          <PermissionGranteeName>Sarah Lain Loavel</PermissionGranteeName>
+          <PermissionGranteeRelationship>Mother</PermissionGranteeRelationship>
+          <PermissionComments>Only with a sibling.</PermissionComments>
+        </PermissionToParticipate>
+        <PermissionToParticipate>
+          <!-- Permissions -->
+          <!--Code of Conduct, BikeRiding, Walk to or from school, excursions Where do I get a list-->
+          <!-- Ride to, Walk to, Excursoions, specific or general?, parents, overnight, camps -->
+          <PermissionCategory>Travel</PermissionCategory>
+          <Permission>RideBikeHome</Permission>
+          <PermissionValue>N</PermissionValue>
+          <PermissionStartDate>2020-01-01</PermissionStartDate>
+          <PermissionEndDate>2020-12-31</PermissionEndDate>
+          <PermissionComments>Only with a sibling.</PermissionComments>
+        </PermissionToParticipate>
+        <PermissionToParticipate>
+          <!-- Permissions -->
+          <!--Code of Conduct, BikeRiding, Walk to or from school, excursions Where do I get a list-->
+          <!-- Ride to, Walk to, Excursoions, specific or general?, parents, overnight, camps -->
+          <PermissionCategory>Excursions</PermissionCategory>
+          <Permission>Attend Excursions General</Permission>
+          <PermissionValue>Y</PermissionValue>
+          <PermissionStartDate>2020-01-01</PermissionStartDate>
+          <PermissionEndDate>2020-12-31</PermissionEndDate>
+          <PermissionComments>Optional Comment</PermissionComments>
+        </PermissionToParticipate>
+        <PermissionToParticipate>
+          <!-- Permissions -->
+          <!--Code of Conduct, BikeRiding, Walk to or from school, excursions Where do I get a list-->
+          <!-- Ride to, Walk to, Excursoions, specific or general?, parents, overnight, camps -->
+          <PermissionCategory>Excursions</PermissionCategory>
+          <Permission>Overnight Camps</Permission>
+          <PermissionValue>N</PermissionValue>
+          <PermissionStartDate>2020-01-01</PermissionStartDate>
+          <PermissionEndDate>2020-12-31</PermissionEndDate>
+          <PermissionComments>Optional Comment</PermissionComments>
+        </PermissionToParticipate>
+      </PermissionToParticipateList>
+      <ApplicableLawList>
+        <ApplicableLaw>
+          <ApplicableCountry>AU</ApplicableCountry>
+          <!--Which code set?  Does it need to be international? -->
+          <ApplicableLawName>APP1</ApplicableLawName>
+          <ApplicableLawURL>http://www.vic.priv.contract.edu.au</ApplicableLawURL>
+        </ApplicableLaw>
+        <ApplicableLaw>
+          <ApplicableCountry>AU</ApplicableCountry>
+          <!--Which code set?  Does it need to be international? -->
+          <ApplicableLawName>APP2</ApplicableLawName>
+          <ApplicableLawURL>http://www.vic.priv.contract.edu.au</ApplicableLawURL>
+        </ApplicableLaw>
+      </ApplicableLawList>
+    </PersonPrivacyObligationDocument>
+  </xhtml:Example>
+</DataObject>
+

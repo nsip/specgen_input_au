@@ -3280,7 +3280,7 @@
 		</Description>
 		<Type name="xs:integer"></Type>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example name="LocalCode Example" xmlns="">
 			<LocalCode>
 				<LocalisedCode>0921</LocalisedCode>
 				<Description>Serbia Montenegro</Description>
@@ -3395,184 +3395,645 @@
 	</CommonElement>
 	
   <!-- Added for PPOD - PersonPrivacyObligation -->
-  <!--
-    <CommonElement name="DataDomainObligationListType" type="true" dm="true">
-		<Item>
-			<Element>DataDomainObligationListType</Element>
-			<Characteristics>O</Characteristics>
-			<Description>
-				<p></p>
-			</Description>
-			<List mode="List"/>
-		</Item>
-		<Item>
-			<Element>DataDomainObligation</Element>
-			<Characteristics>OR</Characteristics>
-			<Description>
-				<p></p>
-			</Description>
-			<Type ref="CommonTypes" name="DataDomainObligationType"/>
-		</Item>
-	</CommonElement>
-	
-	<CommonElement name="DataDomainObligationType" type="true" dm="true">
-			<Item>
-			<Element>DataDomainObligationType</Element>
-			<Characteristics/>
-			<Description>
-				<p>.</p>
-			</Description>
-		</Item>
-		<Item>
-		   <Element>DataDomain</Element>
-		   <Characteristics>M</Characteristics>
-		   <Description>
-			 <p></p>
-		   </Description>
-		   <Type name="xs:string"></Type>
-  		</Item>  
-
-		<Item>
-		   <Element>DomainComments</Element>
-		   <Characteristics>M</Characteristics>
-		   <Description>
-			 <p>Comments associated with data obligation.</p>
-		   </Description>
-		   <Type name="xs:string"></Type>
-		</Item>
-		<Item>
-			<Element>ShareWithList</Element>
-			<Characteristics>O</Characteristics>
-			<Description>
-			 <p></p>
-			</Description>
-		    <Type ref="CommonTypes" name="ShareWithListType"/>
-		</Item>
-	</CommonElement>
-	
-	<CommonElement name="ShareWithListType" type="true" dm="true">
-		<Item>
-			<Element>ShareWithListType</Element>
-			<Characteristics>O</Characteristics>
-			<Description>
-				<p>A list of parties and data sharing permissions.</p>
-			</Description>
-			<List mode="List"/>
-		</Item>
-		<Item>
-			<Element>ShareWith</Element>
-			<Characteristics>OR</Characteristics>
-			<Description>
-				<p>The FQItem being reported on.</p>
-			</Description>
-			<Type ref="CommonTypes" name="ShareWithType"/>
-		</Item>
-	</CommonElement>
-	
-	<CommonElement name="ShareWithType" type="true" dm="true">
-		<Item>
-			<Element>ShareWithType</Element>
-			<Characteristics/>
-			<Description>
-				<p>Information about data sharing.</p>
-			</Description>
-		</Item>
-		<Item>
-		   <Element>ShareWithParty</Element>
-		   <Characteristics>M</Characteristics>
-		   <Description>
-			 <p>Who data could be shared with?</p>
-		   </Description>
-		   <Type name="xs:normalizedString"></Type>
-  		</Item>  
-		<Item>
-			<Element>Purpose</Element>
-			<Characteristics>M</Characteristics>
-			<Description>
-			 <p>Why is this information to be shared?</p>
-			</Description>
-		    <Type name="xs:string"></Type>
-		</Item>
-		<Item>
-		   <Element>ShareWithComments</Element>
-		   <Characteristics>M</Characteristics>
-		   <Description>
-			 <p>Comments associated with Sharing arrangement</p>
-		   </Description>
-		   <Type name="xs:string"></Type>
-		</Item>
-		<Item>
-		   <Element>PermissionToOnShare</Element>
-		   <Characteristics>M</Characteristics>
-		   <Description>
-			 <p>Can this information be shared with other parties?</p>
-		   </Description>
-		   <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"/>
-		</Item>
-		
-		<Item>
-		   <Element>ShareWithURL</Element>
-		   <Characteristics>M</Characteristics>
-		   <Description>
-			 <p>URL Associated with Share</p>
-		   </Description>
-		   <Type name="xs:anyURI"></Type>
-		</Item>
-		   	
- </CommonElement> 
-   
-             
-<CommonElement name="ApplicableLawListType" type="true" dm="true">
-	<Item>
-		<Element>ApplicableLawListType</Element>
-		<Characteristics/>
+   <!-- P-POD -->
+  <CommonElement name="SettingLocationListType" type="true" dm="true">
+    <Item>
+      <Element>SettingLocationListType</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p/>
+      </Description>
+      <List mode="List"/>
+    </Item>
+    <Item>
+      <Element>SettingLocation</Element>
+      <Characteristics>MR</Characteristics>
+      <Description>
+        <p/>
+      </Description>
+      <Type ref="CommonTypes" name="SettingLocationType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="SettingLocationType" type="true">
+    <Intro>
+      <p> This element initially supports describing specific physical locations where the P-POD applied.</p>
+    </Intro>
+    <Item>
+      <Element>SettingLocationType</Element>
+    </Item>
+    <Item>
+      <Element>SettingLocationName</Element>
+      <Characteristics>O</Characteristics>
+      <Description>Name of the location.</Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Element>SettingLocationType</Element>
+      <Characteristics>O</Characteristics>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Element>SettingLocationRefId</Element>
+      <Characteristics>O</Characteristics>
+      <Description> RefId of the location object if the location is a SIF Object such as <code>SchoolInfo</code>. </Description>
+      <Type ref="CommonTypes" name="IdRefType"/>
+    </Item>
+    <Item>
+      <Element>SettingLocationObjectTypeName</Element>
+      <Characteristics>M</Characteristics>
+      <Description> Type of SIF Object <code>SettingLocationRefId</code> points to. </Description>
+      <Type name="xs:token"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="ConsentToSharingOfDataContainerType" type="true" dm="true">
+    <Item>
+      <Element>ConsentToSharingOfDataContainerType</Element>
+      <Characteristics>M</Characteristics>
+      <Description>Container for sharing of data</Description>
+    </Item>
+    <Item>
+      <Element>DataDomainObligationList</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p/>
+      </Description>
+      <Type ref="CommonTypes" name="DataDomainObligationListType"/>
+    </Item>
+    <Item>
+      <Element>NeverShareWithList</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p/>
+      </Description>
+      <Type ref="CommonTypes" name="NeverShareWithListType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="DataDomainObligationListType" type="true" dm="true">
+    <Item>
+      <Element>DataDomainObligationListType</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p/>
+      </Description>
+      <List mode="List"/>
+    </Item>
+    <Item>
+      <Element>DataDomainObligation</Element>
+      <Characteristics>OR</Characteristics>
+      <Description>
+        <p/>
+      </Description>
+      <Type ref="CommonTypes" name="DataDomainObligationType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="DataDomainObligationType" type="true" dm="true">
+    <Item>
+      <Element>DataDomainObligationType</Element>
+      <Characteristics/>
+      <Description>
+        <p>.</p>
+      </Description>
+    </Item>
+    <Item>
+      <Element>DataDomain</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p/>
+      </Description>
+      <Type name="xs:string"/>
+    </Item>
+    <Item>
+      <Element>DomainComments</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Comments associated with data obligation.</p>
+      </Description>
+      <Type name="xs:string"/>
+    </Item>
+    <Item>
+      <Element>ShareWithList</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p/>
+      </Description>
+      <Type ref="CommonTypes" name="ShareWithListType"/>
+    </Item>
+    <Item>
+      <Element>DoNotShareWithList</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p/>
+      </Description>
+      <Type ref="CommonTypes" name="DoNotShareWithListType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="ShareWithListType" type="true" dm="true">
+    <Item>
+      <Element>ShareWithListType</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A list of parties and data sharing permissions.</p>
+      </Description>
+      <List mode="List"/>
+    </Item>
+    <Item>
+      <Element>ShareWith</Element>
+      <Characteristics>OR</Characteristics>
+      <Description>
+        <p>The .</p>
+      </Description>
+      <Type ref="CommonTypes" name="ShareWithType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="ShareWithType" type="true" dm="true">
+    <Item>
+      <Element>ShareWithType</Element>
+      <Characteristics/>
+      <Description>
+        <p>Information about data sharing.</p>
+      </Description>
+    </Item>
+    <Item>
+      <Element>ShareWithParty</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Who data could be shared with?</p>
+      </Description>
+      <Type name="xs:normalizedString"/>
+    </Item>
+    <Item>
+      <Element>ShareWithRefId</Element>
+      <Characteristics>O</Characteristics>
+      <Description>RefId of entity data to be shared with if known.</Description>
+      <Type ref="CommonTypes" name="IdRefType"/>
+    </Item>
+    <Item>
+		<Element>ShareWithObjectTypeName</Element>
+		<Characteristics>O</Characteristics>
 		<Description>
-			<p>.</p>
+		  <p>The name of the object referenced.</p>
 		</Description>
-	</Item>
-	<Item>
-	   <Element>ApplicableLaw</Element>
-	   <Characteristics>OR</Characteristics>
-	   <Description>
-		 <p></p>
-	   </Description>
-	   <Type name="ApplicableLawType"></Type>
-	</Item>  
-</CommonElement>
-
-<CommonElement name="ApplicableLawType" type="true" dm="true">  
-	   <Item>
-		<Element>ApplicableLawType</Element>
-		<Characteristics/>
-		<Description>
-			<p>.</p>
-		</Description>
+		<Type name="xs:normalizedString"></Type>
+		</Item>
+    <Item>
+      <Element>ShareWithLocalId</Element>
+      <Characteristics>O</Characteristics>
+      <Description>LocalId of entity data to be shared with if known.</Description>
+      <Type ref="CommonTypes" name="LocalIdType"/>
+    </Item>
+		<Item>
+			<Element>ShareWithName</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+			  <p>The name of the person/body. Only to be used when a SIF reference object not available.</p>
+			</Description>
+			<Type name="xs:normalizedString"></Type>
 		</Item>
 		<Item>
-		   <Element>ApplicableCountry</Element>
-		   <Characteristics>M</Characteristics>
-		   <Description>
-			<p></p>
-		   </Description>
-		   <Type name="xs:normalizedString"></Type>
-		</Item>  
+			<Element>ShareWithRelationship</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+			  <p>The relationship of the person/body. Only to be used when a SIF reference object not available.</p>
+			</Description>
+			<Type name="xs:normalizedString"></Type>
+		</Item>
+    <Item>
+      <Element>ShareWithPurpose</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Why is this information to be shared?</p>
+      </Description>
+      <Type name="xs:string"/>
+    </Item>
+    <Item>
+      <Element>ShareWithRole</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Role of the information to be shared?</p>
+      </Description>
+      <Type name="xs:string"/>
+    </Item>
+    <Item>
+      <Element>ShareWithComments</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>Comments associated with Sharing arrangement</p>
+      </Description>
+      <Type name="xs:string"/>
+    </Item>
+    <Item>
+      <Element>PermissionToOnShare</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Can this information be shared with other parties?</p>
+      </Description>
+      <Type ref="CodeSets" name="GenericYesNoType"/>
+    </Item>
+    <Item>
+      <Element>ShareWithURL</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>URL Associated with Share</p>
+      </Description>
+      <Type name="xs:anyURI"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="DoNotShareWithListType" type="true" dm="true">
+    <Item>
+      <Element>DoNotShareWithListType</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A list of parties and data sharing permissions.</p>
+      </Description>
+      <List mode="List"/>
+    </Item>
+    <Item>
+      <Element>DoNotShareWith</Element>
+      <Characteristics>OR</Characteristics>
+      <Description>
+        <p>The .</p>
+      </Description>
+      <Type ref="CommonTypes" name="DoNotShareWithType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="DoNotShareWithType" type="true" dm="true">
+    <Item>
+      <Element>DoNotShareWithType</Element>
+      <Characteristics/>
+      <Description>
+        <p>Information about data sharing.</p>
+      </Description>
+    </Item>
+    <Item>
+      <Element>DoNotShareWithParty</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Who data should not be shared with? (Can we agree on a broadlist that can be typed for enumeration?)</p>
+      </Description>
+      <Type name="xs:normalizedString"/>
+    </Item>
+    <Item>
+      <Element>DoNotShareWithRefId</Element>
+      <Characteristics>O</Characteristics>
+      <Description>RefId of entity date not to be shared with if known.</Description>
+      <Type ref="CommonTypes" name="IdRefType"/>
+    </Item>
 		<Item>
-		   <Element>ApplicableLawName</Element>
-		   <Characteristics>M</Characteristics>
-		   <Description>
-			<p></p>
-		   </Description>
-		   <Type name="xs:normalizedString"></Type>
-		</Item>  
+			<Element>DoNotShareWithObjectTypeName</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+			  <p>The name of the object referenced.</p>
+			</Description>
+			<Type name="xs:normalizedString"></Type>
+		</Item>    
+    <Item>
+      <Element>DoNotShareWithLocalId</Element>
+      <Characteristics>O</Characteristics>
+      <Description>LocalId of entity data not to be shared with if known.</Description>
+      <Type ref="CommonTypes" name="LocalIdType"/>
+    </Item>
 		<Item>
-		   <Element>ApplicableLawURL</Element>
-		   <Characteristics>O</Characteristics>
-		   <Description>
-			<p></p>
-		   </Description>
-		   <Type name="xs:anyURI"></Type>
-		</Item>  
-</CommonElement>  -->
+			<Element>DoNotShareWithName</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+			  <p>The name of the person/body. Only to be used when a SIF reference object not available.</p>
+			</Description>
+			<Type name="xs:normalizedString"></Type>
+		</Item>
+		<Item>
+			<Element>DoNotShareWithRelationship</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+			  <p>The relationship of the person/body. Only to be used when a SIF reference object not available.</p>
+			</Description>
+			<Type name="xs:normalizedString"></Type>
+		</Item>
+    <Item>
+      <Element>DoNotShareWithPurpose</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Why is this information is not to be shared?</p>
+      </Description>
+      <Type name="xs:string"/>
+    </Item>
+    <Item>
+      <Element>DoNotShareWithRole</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Role of the information to be shared?</p>
+      </Description>
+      <Type name="xs:string"/>
+    </Item>
+    <Item>
+      <Element>DoNotShareWithComments</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>Comments associated with Sharing arrangement</p>
+      </Description>
+      <Type name="xs:string"/>
+    </Item>
+    <Item>
+      <Element>DoNotShareWithURL</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>URL Associated with Share</p>
+      </Description>
+      <Type name="xs:anyURI"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="ApplicableLawListType" type="true" dm="true">
+    <Item>
+      <Element>ApplicableLawListType</Element>
+      <Characteristics/>
+      <Description>
+        <p>.</p>
+      </Description>
+    </Item>
+    <Item>
+      <Element>ApplicableLaw</Element>
+      <Characteristics>OR</Characteristics>
+      <Description>
+        <p/>
+      </Description>
+      <Type name="ApplicableLawType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="ApplicableLawType" type="true" dm="true">
+    <Item>
+      <Element>ApplicableLawType</Element>
+      <Characteristics/>
+      <Description>
+        <p>.</p>
+      </Description>
+    </Item>
+    <Item>
+      <Element>ApplicableCountry</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>We can type this, list of countries?</p>
+      </Description>
+      <Type name="xs:normalizedString"/>
+    </Item>
+    <Item>
+      <Element>ApplicableLawName</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>The name of the law that must be observed for this individual.</p>
+      </Description>
+      <Type name="xs:normalizedString"/>
+    </Item>
+    <Item>
+      <Element>ApplicableLawURL</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p/>
+      </Description>
+      <Type name="xs:anyURI"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="PermissionToParticipateListType" type="true" dm="true">
+    <Item>
+      <Element>PermissionToParticipateListType</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p/>
+      </Description>
+      <List mode="List"/>
+    </Item>
+    <Item>
+      <Element>PermissionToParticipate</Element>
+      <Characteristics>OR</Characteristics>
+      <Description>
+        <p>The .</p>
+      </Description>
+      <Type ref="CommonTypes" name="PermissionToParticipateType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="PermissionToParticipateType" type="true" dm="true">
+    <Item>
+      <Element>PermissionToParticipateType</Element>
+      <Characteristics/>
+      <Description>
+        <p/>
+      </Description>
+    </Item>
+    <Item>
+      <Element>PermissionCategory</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>What is the category of permission</p>
+      </Description>
+      <Type name="xs:normalizedString"/>
+    </Item>
+    <Item>
+      <Element>Permission</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>What is the Permission?</p>
+      </Description>
+      <Type name="xs:string"/>
+    </Item>
+    <Item>
+      <Element>PermissionValue</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>Permission or not?</p>
+      </Description>
+      <Values>
+        <Value>
+          <Code>Y</Code>
+          <Text>Yes</Text>
+        </Value>
+        <Value>
+          <Code>N</Code>
+          <Text>No</Text>
+        </Value>
+        <Value>
+          <Code>U</Code>
+          <Text>Unknown</Text>
+        </Value>
+      </Values>
+    </Item>
+    <Item>
+      <Element>PermissionStartDate</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>Start Date Associated with Permission</p>
+      </Description>
+      <Type name="xs:date"/>
+    </Item>
+    <Item>
+      <Element>PermissionEndDate</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>End Date Associated with Permission</p>
+      </Description>
+      <Type name="xs:date"/>
+    </Item>
+    <Item>
+      <Element>PermissionGranteeRefId</Element>
+      <Characteristics>O</Characteristics>
+      <Description>RefId of the person granting permission if known.</Description>
+      <Type ref="CommonTypes" name="IdRefType"/>
+    </Item>
+		<Item>
+			<Element>PermissionGranteeObjectTypeName</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+			  <p>The name of the object referenced.</p>
+			</Description>
+			<Type name="xs:normalizedString"></Type>
+		</Item>      
+    <Item>
+			<Element>PermissionGranteeName</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+			  <p>The name of the person. Only to be used when a SIF reference object not available.</p>
+			</Description>
+			<Type name="xs:normalizedString"></Type>
+		</Item>
+		<Item>
+			<Element>PermissionGranteeRelationship</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+			  <p>The relationship of the person. Only to be used when a SIF reference object not available.</p>
+			</Description>
+			<Type name="xs:normalizedString"></Type>
+		</Item>
+    <Item>
+      <Element>PermissionComments</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>Comments Associated with Permission</p>
+      </Description>
+      <Type name="xs:string"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="NeverShareWithListType" type="true" dm="true">
+    <Item>
+      <Element>NeverShareWithListType</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A list of parties and data sharing permissions.</p>
+      </Description>
+      <List mode="List"/>
+    </Item>
+    <Item>
+      <Element>NeverShareWith</Element>
+      <Characteristics>OR</Characteristics>
+      <Description>
+        <p>The .</p>
+      </Description>
+      <Type ref="CommonTypes" name="NeverShareWithType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="NeverShareWithType" type="true" dm="true">
+    <Item>
+      <Element>NeverShareWithType</Element>
+      <Characteristics/>
+      <Description>
+        <p>Information about data sharing.</p>
+      </Description>
+    </Item>
+    <Item>
+      <Element>NeverShareWithParty</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Who data should never be shared with?</p>
+      </Description>
+      <Type name="xs:normalizedString"/>
+    </Item>
+    <Item>
+      <Element>NeverShareWithRefId</Element>
+      <Characteristics>O</Characteristics>
+      <Description>RefId of entity never to be shared with if known.</Description>
+      <Type ref="CommonTypes" name="IdRefType"/>
+    </Item>
+		<Item>
+			<Element>NeverShareWithObjectTypeName</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+			  <p>The name of the object referenced.</p>
+			</Description>
+			<Type name="xs:normalizedString"></Type>
+		</Item>    
+    <Item>
+      <Element>NeverShareWithLocalId</Element>
+      <Characteristics>O</Characteristics>
+      <Description>LocalId of entity never to be shared with if known.</Description>
+      <Type ref="CommonTypes" name="LocalIdType"/>
+    </Item>
+		<Item>
+			<Element>NeverShareWithName</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+			  <p>The name of the person/body. Only to be used when a SIF reference object not available.</p>
+			</Description>
+			<Type name="xs:normalizedString"></Type>
+		</Item>
+		<Item>
+			<Element>NeverShareWithRelationship</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+			  <p>The relationship of the person/body. Only to be used when a SIF reference object not available.</p>
+			</Description>
+			<Type name="xs:normalizedString"></Type>
+		</Item>
+    <Item>
+      <Element>NeverShareWithPurpose</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Purpose of information never to be shared?</p>
+      </Description>
+      <Type name="xs:string"/>
+    </Item>
+    <Item>
+      <Element>NeverShareWithRole</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Role of information never to be shared?</p>
+      </Description>
+      <Type name="xs:string"/>
+    </Item>
+    <Item>
+      <Element>NeverShareWithComments</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>Comments associated with Sharing arrangement</p>
+      </Description>
+      <Type name="xs:string"/>
+    </Item>
+    <Item>
+      <Element>NeverShareWithURL</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>URL Associated with Share</p>
+      </Description>
+      <Type name="xs:anyURI"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="GenericYesNoType" type="true" dm="true">
+    <Item>
+      <Element>GenericYesNoType</Element>
+      <Description>
+        <p>Yes/No codeset for the P-POD.</p>
+      </Description>
+      <Values>
+        <Value>
+          <Code>Y</Code>
+          <Text>Yes</Text>
+        </Value>
+        <Value>
+          <Code>N</Code>
+          <Text>No</Text>
+        </Value>
+        <Value>
+          <Code>U</Code>
+          <Text>Unknown</Text>
+        </Value>
+      </Values>
+    </Item>
+  </CommonElement>
   
  <!-- End of PPOD Types -->
  
@@ -3648,7 +4109,7 @@
 		</Description>
 		<Type ref="CommonTypes" name="PhoneNumberType"/>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example  name="EntityContactInfo Example" xmlns="">
 		<EntityContactInfo>
 			<Name Type="LGL">
 				<FamilyName>Woodall</FamilyName>
@@ -4448,7 +4909,23 @@
 		</Description>
 		<Type name="xs:string"></Type>  
   	</Item>
-  
+	
+    <Item>
+  	   	<Element>Date</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+		  <p>Date of follow up.</p>
+		</Description>
+		<Type name="xs:date"></Type>  
+  	</Item>
+ 	<xhtml:Example xmlns="" name="FollowUpAction Example">
+		<FollowUpAction>
+			<WellbeingResponseRefId>23E34B35-9D75-101A-8C3D-00AA001A1652</WellbeingResponseRefId>
+			<FollowUpDetails>Follow up with the student</FollowUpDetails>
+			<FollowUpActionCategory>Discussion</FollowUpActionCategory>
+			<Date>2001-06-01</Date>
+		</FollowUpAction>
+	</xhtml:Example>
  </CommonElement>
  
  
@@ -7899,6 +8376,14 @@
 		<Type name="xs:normalizedString"/>
 	</Item>
 	<Item>
+		<Element>ParentSchoolRefId</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Parent School RefId may be supplied if this Campus is not the Admin Campus.</p>
+		</Description>
+		<Type ref="CommonTypes" name="IdRefType"></Type>
+	</Item>
+	<Item>
 		<Element>SchoolCampusId</Element>
 		<Characteristics>M</Characteristics>
 		<Description>
@@ -10969,7 +11454,7 @@
 		</Description>
 		<Type ref="CommonTypes" name="YearLevelType"/>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns=""  name="YearLevels Example">
 		<YearLevels>
 			<YearLevel>
 				<Code>5</Code>
@@ -10994,7 +11479,7 @@
 		</Description>
 		<Type name="xs:anyURI"/>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="SchoolURL Example">
 		<SchoolURL>http://www.lincolnhs.edu</SchoolURL>
 	</xhtml:Example>
 </CommonElement>
@@ -11038,7 +11523,7 @@
 		</Description>
 		<Type ref="CommonTypes" name="EmailListType"/>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="PrincipalInfo Example">
 		<PrincipalInfo>
 			<ContactName Type="LGL">
 				<Title>Mr</Title>
@@ -11107,7 +11592,7 @@
 		<Type ref="CommonTypes" name="SchoolContactType"/>
 	</Item>
 	
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="SchoolContactList Example">
 		<SchoolContactList>
 			<SchoolContact>
 				<PublishInDirectory>Y</PublishInDirectory>
@@ -11146,7 +11631,7 @@
 		</Description>
 		<Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"/>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="PublishInDirectory Example">
 		<PublishInDirectory>Y</PublishInDirectory>
 	</xhtml:Example>
 </CommonElement>
@@ -11221,7 +11706,7 @@
 		</Description>
 		<Type ref="CommonTypes" name="PhoneNumberListType"/>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="ContactInfo Example">
 		<ContactInfo>
 			<Name Type="LGL">
 				<FamilyName>Woodall</FamilyName>
@@ -11726,7 +12211,7 @@
 		</Description>
 		<Type ref="CommonTypes" name="EmailType"/>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="EmailList Example">
 		<EmailList>
 			<Email Type="01">contact@sifinfo.org</Email>
 			<Email Type="02">info@sifinfo.org</Email>
@@ -11752,7 +12237,7 @@
 		</Description>
 		<Type ref="CodeSets" name="AUCodeSetsEmailTypeType"/>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="Email Example">
 		<Email Type="01">contact@sifinfo.org</Email>
 	</xhtml:Example>
 </CommonElement>
@@ -11772,7 +12257,7 @@
 		</Description>
 		<Type ref="CommonTypes" complex="extension" name="PhoneNumberType"/>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="PhoneNumberList Example">
 		<PhoneNumberList>
 			<PhoneNumber Type="0096">
 				<Number>(03) 9543 2000</Number>
@@ -11832,7 +12317,7 @@
 		</Description>
 	    <Type name="xs:unsignedInt"/>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="PhoneNumber Example">
 		<PhoneNumber Type="0096">
 			<Number>(03) 9543 2000</Number>
 			<Extension>245</Extension>
@@ -11847,7 +12332,7 @@
 		</Description>
 		<Type ref="CodeSets" name="AUCodeSetsStandardAustralianClassificationOfCountriesSACCType"/>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="Country Example">
 		<Country>1101</Country>
 	</xhtml:Example>
 </CommonElement>
@@ -11890,7 +12375,7 @@
 			<xs:maxInclusive value="180"/>
 		</Facets>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="GridLocation Example">
 		<GridLocation>
 			<Latitude>41.850000</Latitude>
 			<Longitude>-87.650000</Longitude>
@@ -11908,7 +12393,7 @@
 		</Description>
 		<Type ref="CodeSets" name="AUCodeSetsOperationalStatusType"/>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="OperationalStatus Example">
 		<OperationalStatus>O</OperationalStatus>
 	</xhtml:Example>
 </CommonElement>
@@ -11923,7 +12408,7 @@
 			<Type name="xs:token"/>
 		</Union>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="StateProvince Example">
 		<StateProvince>ACT</StateProvince>
 	</xhtml:Example>
 </CommonElement>
@@ -11939,7 +12424,7 @@
 		</Description>
 		<Type name="xs:gYear"/>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="SchoolYear Example">
 		<SchoolYear>2005</SchoolYear>
 	</xhtml:Example>
 </CommonElement>
@@ -11957,7 +12442,7 @@
 		<Characteristics>MR</Characteristics>
 		<Type ref="CommonTypes" name="ElectronicIdType"/>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="ElectronicIdList Example">
 		<ElectronicIdList>
 			<ElectronicId Type="01">206654</ElectronicId>
 			<ElectronicId Type="03">1234</ElectronicId>
@@ -11982,7 +12467,7 @@
 		</Description>
 		<Type ref="CodeSets" name="AUCodeSetsElectronicIdTypeType"/>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="ElectronicId Example">
 		<ElectronicId Type="01">206654</ElectronicId>
 	</xhtml:Example>
 </CommonElement>
@@ -12004,7 +12489,7 @@
 		</Description>
 		<Type ref="CommonTypes" complex="extension" name="OtherNameType"/>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="OtherNames Example">
 		<OtherNames>
 			<Name Type="AKA">
 				<FamilyName>Anderson</FamilyName>
@@ -12211,6 +12696,22 @@
 		<Type name="xs:normalizedString"/>
 	</Item>
 	<Item>
+		<Element>VisaNumber</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Visa number if one exists</p>
+		</Description>
+		<Type name="xs:token"/>
+	</Item>
+	<Item>
+		<Element>VisaGrantDate</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Grant Date of Visa if one exists</p>
+		</Description>
+		<Type name="xs:date"/>
+	</Item>
+	<Item>
 		<Element>VisaExpiryDate</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
@@ -12219,12 +12720,36 @@
 		<Type name="xs:date"/>
 	</Item>
 	<Item>
+		<Element>VisaConditions</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Conditions listed on visa by Immigration Department</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>VisaStudyEntitlement</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Student's study entitlement as given by Immigration Department</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsVisaStudyEntitlementType"/>
+	</Item>
+	<Item>
 		<Element>VisaSubClassList</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
 			<p>List of Visa details if more than one exists.</p>
 		</Description>
 		<Type ref="CommonTypes" name="VisaSubClassListType"/>
+	</Item>
+	<Item>
+		<Element>Passport</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Information about individual's passport. applicable in particular to overseas students</p>
+		</Description>
+		<Type ref="CommonTypes" name="PassportType"/>
 	</Item>
 	<Item>
 		<Element>LBOTE</Element>
@@ -12273,6 +12798,30 @@
 			<p>Person's Medicare number. Exchange only with permission to do so.</p>
 		</Description>
 		<Type name="xs:normalizedString"/>
+	</Item>	
+	<Item>
+		<Element>MedicarePositionNumber</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Person's Medicare position number. Exchange only with permission to do so.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>	
+	<Item>
+		<Element>MedicareCardHolder</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Person's Medicare Card Holder name. Exchange only with permission to do so.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>	
+	<Item>
+		<Element>PrivateHealthInsurance</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Details of person's private health insurance.</p>
+		</Description>
+		<Type ref="CommonTypes" name="PrivateHealthInsuranceType"/>
 	</Item>	
 	<xhtml:Example name="Demographics Example" xmlns="">
 		<Demographics>
@@ -12323,7 +12872,87 @@
 			<PermanentResident>P</PermanentResident>
 			<VisaSubClass>101</VisaSubClass>
 			<VisaStatisticalCode>05</VisaStatisticalCode>
+			<VisaNumber>987654321</VisaNumber>
+			<VisaGrantDate>2020-01-01</VisaGrantDate>
+			<VisaExpiryDate>2029-01-01</VisaExpiryDate>
+			<VisaConditions>Holder of subclass 101</VisaConditions>
+			<VisaStudyEntitlement>Limited</VisaStudyEntitlement>
+			<Passport>
+				<Number>9</Number>
+				<ExpiryDate>2030-12-11</ExpiryDate>
+				<Country>4111</Country>
+			</Passport>
+			<MedicareNumber>6574839</MedicareNumber>
+			<MedicarePositionNumber>2</MedicarePositionNumber>
+			<MedicareCardHolder>Pete Best</MedicareCardHolder>
+			<PrivateHealthInsurance>
+			    <Company>Medibank Private</Company>
+				<Number>324</Number>
+			</PrivateHealthInsurance>
 		</Demographics>
+	</xhtml:Example>
+</CommonElement>
+<CommonElement name="PrivateHealthInsuranceType" type="true" dm="true">
+	<Item>
+		<Element>PrivateHealthInsuranceType</Element>
+		<Description>
+			<p>Information about an individual's private health insurance.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>Company</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Private Health insurer.</p>
+		</Description>
+		<Type name="xs:token"></Type>
+	</Item>
+	<Item>
+		<Element>Number</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Private health insurance number.</p>
+		</Description>
+		<Type name="xs:token"></Type>
+	</Item>
+</CommonElement>
+<CommonElement name="PassportType" type="true" dm="true">
+	<Item>
+		<Element>PassportType</Element>
+		<Description>
+			<p>Information about an individual's passport.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>Number</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Passport number.</p>
+		</Description>
+		<Type name="xs:token"></Type>
+	</Item>
+	<Item>
+		<Element>ExpiryDate</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Passport expiry date.</p>
+		</Description>
+		<Type name="xs:date"></Type>
+	</Item>
+	<Item>
+		<Element>Country</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Passport country.</p>
+		</Description>
+		<Type ref="CommonTypes" name="CountryType"/>
+	</Item>
+	<xhtml:Example xmlns="" name="Passport Example">
+		<Passport>
+			<Number>9</Number>
+			<ExpiryDate>2030-12-11</ExpiryDate>
+			<Country>4111</Country>
+		</Passport>
 	</xhtml:Example>
 </CommonElement>
 <CommonElement name="EnglishProficiencyType" type="true" dm="true">
@@ -12344,7 +12973,7 @@
 		<Characteristics>O</Characteristics>
 		<Type ref="CommonTypes" name="OtherCodeListType"/>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="EnglishProficiency Example">
 		<EnglishProficiency>
 			<Code>9</Code>
 		</EnglishProficiency>
@@ -12360,7 +12989,7 @@
 		<Characteristics>MR</Characteristics>
 		<Type ref="CommonTypes" name="LanguageBaseType"/>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="LanguageList Example">
 		<LanguageList>
 			<Language>
 				<Code>1201</Code>
@@ -12382,7 +13011,7 @@
 		</Description>
 		<Type name="xs:date"/>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="BirthDate Example">
 		<BirthDate>1970-08-11</BirthDate>
 	</xhtml:Example>
 </CommonElement>
@@ -12398,7 +13027,7 @@
 		</Description>
 		<Type name="xs:gYear"/>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="ProjectedGraduationYear Example">
 		<ProjectedGraduationYear>2006</ProjectedGraduationYear>
 	</xhtml:Example>
 </CommonElement>
@@ -12414,7 +13043,7 @@
 		</Description>
 		<Type name="xs:gYear"/>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="OnTimeGraduationYear Example">
 		<OnTimeGraduationYear>2006</OnTimeGraduationYear>
 	</xhtml:Example>
 </CommonElement>
@@ -12441,7 +13070,7 @@
     </Description>
 		<Type ref="CommonTypes" name="OtherCodeListType"/>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="Relationship Example">
 		<Relationship>
 			<Code>01</Code>
 		</Relationship>
@@ -12455,7 +13084,7 @@
 		</Description>
 		<Type ref="CodeSets" name="AUCodeSetsSchoolEducationLevelTypeType"/>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="EducationLevel Example">
 		<EducationalLevel>3</EducationalLevel>
 	</xhtml:Example>
 </CommonElement>
@@ -12467,7 +13096,7 @@
 		</Description>
 		<Type ref="CommonTypes" name="PartialDateType"/>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="GraduationDate Example">
 		<GraduationDate>2005-05-27</GraduationDate>
 	</xhtml:Example>
 </CommonElement>
@@ -12491,7 +13120,7 @@
 		</Description>
 		<Type ref="CodeSets" name="AUCodeSetsNameUsageTypeType"/>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="Name Example">
 		<Name Type="LGL">
 			<FamilyName>Woodall</FamilyName>
 			<GivenName>Charles</GivenName>
@@ -12511,7 +13140,7 @@
 		<Characteristics/>
 		<Type name="xs:normalizedString"/>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="HomeroomNumber Example">
 		<HomeroomNumber>A-204</HomeroomNumber>
 	</xhtml:Example>
 </CommonElement>
@@ -12642,7 +13271,7 @@
       there are use cases when that is not the case.
     </Description>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="TimeElement Example">
 		<TimeElement>
 			<Type>Full school year</Type>
 			<Code>01</Code>
@@ -12777,7 +13406,7 @@
 		</Description>
 		<Type ref="CommonTypes" name="TimeElementListType"/>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="LifeCycle Example">
 		<LifeCycle>
 			<Created>
 				<DateTime>2006-08-13T09:00:00-05:00</DateTime>
@@ -12944,7 +13573,7 @@
 			</Value>
 		</Values>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="OtherCodeList Example">
 		<OtherCodeList>
 			<OtherCode Codeset="Local">S</OtherCode>
 			<OtherCode Codeset="Text">Semester</OtherCode>
@@ -12997,7 +13626,7 @@
 		<Characteristics>O</Characteristics>
 		<Type ref="CommonTypes" name="OtherCodeListType"/>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="ProgramStatus Example">
 		<ProgramStatus>
 			<Code>S004</Code>
 		</ProgramStatus>
@@ -13020,7 +13649,7 @@
 		</Description>
 		<Type ref="CommonTypes" name="SubjectAreaType"/>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="SubjectAreaList Example">
 		<SubjectAreaList>
 			<SubjectArea>
 				<Code>05</Code>
@@ -13073,7 +13702,7 @@
 		<Characteristics>O</Characteristics>
 		<Type ref="CommonTypes" name="OtherCodeListType"/>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="SubjectArea Example">
 		<SubjectArea>
 			<Code>05</Code>
 			<OtherCodeList>
@@ -13105,7 +13734,7 @@
 		</Description>
 		<Type ref="CommonTypes" name="SubjectAreaType"/>
 	</Item>
-	<xhtml:Example xmlns="">
+	<xhtml:Example xmlns="" name="ACStrandSubjectArea Example">
 		<ACStrandSubjectArea>
 			<ACStrand>M</ACStrand>
 			<SubjectArea>
@@ -13215,7 +13844,7 @@
 			</Value>
 		</Values>
 	</Item>
-	<xhtml:Example xmlns="" skipValidate="true">
+	<xhtml:Example xmlns="" skipValidate="true" name="SIF_ExtendedElements Example">
 		<SIF_ExtendedElements>
 			<SIF_ExtendedElement Name="ApplicationSubmissionStatus">4</SIF_ExtendedElement>
 			<SIF_ExtendedElement Name="DynamicXml">
@@ -13303,4 +13932,143 @@
 	</Item>
 </CommonElement>
 
+<CommonElement name="StudentContactFeePercentageType" type="true" dm="true">
+	<Item>
+		<Element>StudentContactFeePercentageType</Element>
+		<Description>
+			<p>Percentage of school fees paid by a student contact for a student.</p>
+		</Description>
+	</Item>
+  	<Item>
+		<Element>Curriculum</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Percentage of curriculum-related school fees paid by a student contact for a student.</p>
+		</Description>
+		<Type name="xs:decimal"></Type>
+		<Facets>
+		  <xs:minInclusive value="0"/>
+		  <xs:maxInclusive value="100"/>
+		</Facets>
+	</Item>
+  	<Item>
+		<Element>Other</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Percentage of other school fees paid by a student contact for a student.</p>
+		</Description>
+		<Type name="xs:decimal"></Type>
+		<Facets>
+		  <xs:minInclusive value="0"/>
+		  <xs:maxInclusive value="100"/>
+		</Facets>
+	</Item>
+</CommonElement>
+<CommonElement name="WorkingWithChildrenCheckType" type="true" dm="true">
+	<Item>
+		<Element>WorkingWithChildrenCheckType</Element>
+		<Description>
+			<p>Evidence that an individual has been checked formally as authorised to work with children.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>StateTerritory</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>State or territory that has performed the check.</p>
+		</Description>
+		<Type ref="CommonTypes" name="StateProvinceType"/>
+	</Item>
+	<Item>
+		<Element>Number</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Number assigned the individual for the check.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>HolderName</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>
+        Name of the individual as registered by the agency performing the check.
+      </p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>Type</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>
+        Type of check performed for the individual.
+      </p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>Reasons</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>
+        Rationale associated with the determination made by the agency performing the check.
+      </p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>Determination</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>
+        Determination made by the agency.
+      </p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>CheckDate</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>
+        Date on which the check was performed.
+      </p>
+		</Description>
+		<Type name="xs:date"/>
+	</Item>
+	<Item>
+		<Element>DeterminationDate</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>
+        Date on which the determination (clearance or rejection) was issued.
+      </p>
+		</Description>
+		<Type name="xs:date"/>
+	</Item>
+	<Item>
+		<Element>ExpiryDate</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>
+        Expiry date for the check.
+      </p>
+		</Description>
+		<Type name="xs:date"/>
+	</Item>
+	<xhtml:Example xmlns="" name="WorkingWithChildrenCheck Example">
+		<WorkingWithChildrenCheck>
+			<StateTerritory>ACT</StateTerritory>
+			<Number>ABC123</Number>
+			<HolderName>John Doe</HolderName>
+			<Type>Playground supervision</Type>
+			<Reasons>The agency made this determination for undisclosed reasons.</Reasons>
+			<Determination>Approved</Determination>
+			<CheckDate>2020-01-02</CheckDate>
+			<DeterminationDate>2020-01-09</DeterminationDate>
+			<ExpiryDate>2030-01-02</ExpiryDate>
+		</WorkingWithChildrenCheck>
+	</xhtml:Example>
+</CommonElement>
 </IncludeGroup>

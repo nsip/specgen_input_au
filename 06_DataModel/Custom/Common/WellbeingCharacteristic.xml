@@ -180,6 +180,16 @@
     <Type name="xs:string"></Type>
   </Item>
   
+      <Item>
+    <Element>PreferredHospital</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Medium</privacyRating>
+    <Description>
+      <p>Hospital preference nominated for a particular medical condition.</p>
+    </Description>
+    <Type name="xs:string"></Type>
+  </Item>
+ 
     <Item>
     <Element>EmergencyResponsePlan</Element>
     <Characteristics>O</Characteristics>
@@ -265,6 +275,7 @@
       <WellbeingCharacteristicEndDate>2017-11-10</WellbeingCharacteristicEndDate>
       <WellbeingCharacteristicNotes>This Student has a special need.</WellbeingCharacteristicNotes>
       <WellbeingCharacteristicCategory>S</WellbeingCharacteristicCategory>
+	  <PreferredHospital>St. Aloysius'</PreferredHospital>
     </WellbeingCharacteristic>
 
   </xhtml:Example>

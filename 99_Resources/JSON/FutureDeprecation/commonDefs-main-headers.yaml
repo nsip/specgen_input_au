@@ -1,0 +1,1596 @@
+components:
+  schemas:
+ 
+    # /////////////////////////////////
+    # // Admin Response Definitions //
+    # ////////////////////////////////
+    adminDirectiveResponse:
+      adminDirectives:
+        description: Admin Directive Response to 'changes since' request to an adminDirective endpoint.  
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                adminDirectives:
+                  type: object
+                  description: >-
+                    List of admin directives.
+                  $ref: 'jsonSchemaCreate_IN.yaml#/definitions/adminDirectiveCollection'
+            examples: 
+              pesc: 
+                summary: PESC notation
+                value: 
+                  adminDirectives:
+                    - adminDirective:
+                        id: a8c3c3e3-4b35-9d75-101d-00aa001a1652
+                        timestamp: '2021-06-18T01:04:42.283Z'
+                        timeout: P2D
+                        serviceName: StudentPersonals
+                        method: Refresh
+                        methodParameters:
+                          - methodParameter:
+                              paramName: RefId
+                              paramValue: b72f2d4-7a83-4297-a71f-8b5fb26cbf14
+                              comparisonType: EQUAL
+                          - methodParameter:
+                              paramName: 'DOB:Year'
+                              paramValue: '2010'
+                              comparisonType: GREATER
+                          - methodParameter:
+                              paramName: RequireIsolation
+                              paramValue: 'TRUE'
+              goessner: 
+                summary: Goessner notation
+                value: 
+                  adminDirectives:
+                    - adminDirective:
+                        "@id": a8c3c3e3-4b35-9d75-101d-00aa001a1652
+                        timestamp: '2021-06-18T01:04:42.283Z'
+                        timeout: P2D
+                        serviceName: StudentPersonals
+                        method: Refresh
+                        methodParameters:
+                          - methodParameter:
+                              paramName: RefId
+                              paramValue: b72f2d4-7a83-4297-a71f-8b5fb26cbf14
+                              comparisonType: EQUAL
+                          - methodParameter:
+                              paramName: 'DOB:Year'
+                              paramValue: '2010'
+                              comparisonType: GREATER
+                          - methodParameter:
+                              paramName: RequireIsolation
+                              paramValue: 'TRUE'
+          application/xml:
+            schema:
+              type: object
+              properties:
+                error:
+                  type: object
+                  description: >-
+                    List of admin directives.
+                  $ref: 'jsonSchemaCreate_IN.yaml#/definitions/adminDirectiveCollection'
+            example: >-
+              <adminDirective id="a8c3c3e3-4b35-9d75-101d-00aa001a1652">
+                <timestamp>2021-06-18T01:04:42.283Z</timestamp>
+                <timeout>P2D</timeout> 
+                <serviceName>StudentPersonals</serviceName>
+                <method>Refresh</method>
+                <methodParameters>
+                  <methodParameter>
+                    <paramName>RefId</paramName>
+                    <paramValue>5b72f2d4-7a83-4297-a71f-8b5fb26cbf14</paramValue>
+                    <comparisonType>EQUAL</comparisonType>
+                  </methodParameter>
+                  <methodParameter>
+                    <paramName>DOB:Year</paramName>
+                    <paramValue>2010</paramValue>
+                    <comparisonType>GREATER</comparisonType>
+                  </methodParameter>
+                  <methodParameter>
+                    <paramName>RequireIsolation</paramName>
+                    <paramValue>TRUE</paramValue>
+                  </methodParameter>
+                </methodParameters>
+              </adminDirective>
+        headers:
+          'changesSinceMarker':
+            $ref: '#/components/schemas/httpHeaders/response/changesSinceMarkerGet'
+          'content-type':
+            $ref: '#/components/schemas/httpHeaders/response/content-type'
+          'messageType':
+            $ref: '#/components/schemas/httpHeaders/response/messageType'
+          'responseAction':
+            $ref: '#/components/schemas/httpHeaders/response/responseAction'
+          'serviceType':
+            $ref: '#/components/schemas/httpHeaders/response/serviceType'
+          'serviceSubType':
+            $ref: '#/components/schemas/httpHeaders/response/serviceSubType'
+
+    # ////////////////////////////////
+    # // Batch Response Definitions //
+    # ///////////////////////////////
+    multipleResponses:
+
+      updateMultiSchema:
+        properties:
+          updateResponse:
+            type: object
+            description: >-
+              Update Response if request HTTP Header methodOverride=UPDATE  
+            $ref: 'jsonSchemaCreate_IN.yaml#/definitions/updateResponseCollection'
+    
+      deleteMultiSchema:
+        properties:
+          deleteResponse:
+            type: object
+            description: >-
+              Delete Response if request HTTP Header methodOverride=DELETE  
+            $ref: 'jsonSchemaCreate_IN.yaml#/definitions/deleteResponseCollection'
+    
+      createMultiSchema:
+        properties:
+          createResponse:
+            type: object
+            description: >-
+              Create Response
+            $ref: 'jsonSchemaCreate_IN.yaml#/definitions/createResponseCollection'
+    
+      updateMultiExamples:
+        pesc: 
+          summary: PESC - Batch Update Response
+          value: 
+            updateResponse:
+              updates:
+                - update:
+                    id: df789e1c-dfe7-4c18-8ef0-d907b81ea61e
+                    statusCode: '200'
+                - update:
+                    id: 41953aaa-2811-11e6-b67b-9e71128cae77
+                    statusCode: '404'
+                    error:
+                      id: 6f789e1c-dfe7-4c18-8ef0-d907b81ea61e
+                      code: '404'
+                      scope: Provider
+                      message: Data for the given ID does not exist.
+                - update:
+                    id: ff789e1c-dfe7-4c18-8ef0-d907b81ea61e
+                    statusCode: '200'
+        goessner: 
+          summary: Goessner - Batch Update Response
+          value: 
+            updateResponse:
+              updates:
+                - update:
+                    "@id": df789e1c-dfe7-4c18-8ef0-d907b81ea61e
+                    "@statusCode": '200'
+                - update:
+                    "@id": 41953aaa-2811-11e6-b67b-9e71128cae77
+                    "@statusCode": '404'
+                    error:
+                      "@id": 6f789e1c-dfe7-4c18-8ef0-d907b81ea61e
+                      code: '404'
+                      scope: Provider
+                      message: Data for the given ID does not exist.
+                - update:
+                    "@id": ff789e1c-dfe7-4c18-8ef0-d907b81ea61e
+                    "@statusCode": '200'
+        xml: 
+          summary: XML - Batch Update Response
+          value: >-
+            <updateResponse>
+              <updates>
+                <update id="df789e1c-dfe7-4c18-8ef0-d907b81ea61e" statusCode="200"/>
+                <update id="41953aaa-2811-11e6-b67b-9e71128cae77" statusCode="404">
+                  <error id="6f789e1c-dfe7-4c18-8ef0-d907b81ea61e">
+                    <code>404</code>
+                    <scope>Provider</scope>
+                    <message>Data for the given ID does not exist.</message>
+                  </error>
+                </update>
+                <update id="ff789e1c-dfe7-4c18-8ef0-d907b81ea61e" statusCode="200"/>
+              </updates>
+            </updateResponse>
+    
+      deleteMultiExamples:
+        pesc: 
+          summary: PESC - Batch Delete Response
+          value: 
+            deletes:
+              - delete:
+                  id: df789e1c-dfe7-4c18-8ef0-d907b81ea61e
+                  statusCode: '204'
+              - delete:
+                  id: 41953aaa-2811-11e6-b67b-9e71128cae77
+                  statusCode: '404'
+                  error:
+                    id: 6f789e1c-dfe7-4c18-8ef0-d907b81ea61e
+                    code: '404'
+                    scope: Provider
+                    message: Data for the given ID does not exist.
+              - delete:
+                  id: ff789e1c-dfe7-4c18-8ef0-d907b81ea61e
+                  statusCode: '204'
+        goessner: 
+          summary: Goessner - Batch Delete Response
+          value: 
+            deletes:
+              - delete:
+                  "@id": df789e1c-dfe7-4c18-8ef0-d907b81ea61e
+                  "@statusCode": '204'
+              - delete:
+                  "@id": 41953aaa-2811-11e6-b67b-9e71128cae77
+                  "@statusCode": '404'
+                  error:
+                    "@id": 6f789e1c-dfe7-4c18-8ef0-d907b81ea61e
+                    code: '404'
+                    scope: Provider
+                    message: Data for the given ID does not exist.
+              - delete:
+                  "@id": ff789e1c-dfe7-4c18-8ef0-d907b81ea61e
+                  "@statusCode": '204'
+        xml:  
+          summary: XML - Batch Delete Response
+          value: >-
+            <deleteResponse>
+              <deletes>
+                <delete id="df789e1c-dfe7-4c18-8ef0-d907b81ea61e" statusCode="204"/>
+                <delete id="41953aaa-2811-11e6-b67b-9e71128cae77" statusCode="404">
+                  <error id="6f789e1c-dfe7-4c18-8ef0-d907b81ea61e">
+                    <code>404</code>
+                    <scope>Provider</scope>
+                    <message>Data for the given ID does not exist.</message>
+                  </error>
+                </delete>
+                <delete id="ff789e1c-dfe7-4c18-8ef0-d907b81ea61e" statusCode="204"/>
+              </deletes>
+            </deleteResponse>
+    
+      createMultiExamples:
+        pesc: 
+          summary: PESC - Batch Create Response
+          value: 
+            createResponse:
+              creates:
+                - create:
+                    id: df789e1c-dfe7-4c18-8ef0-d907b81ea61e
+                    advisoryId: '3'
+                    statusCode: '201'
+                - create:
+                    advisoryId: '1'
+                    statusCode: '400'
+                    error:
+                      id: 6f789e1c-dfe7-4c18-8ef0-d907b81ea61e
+                      code: '400'
+                      scope: Provider
+                      message: Mandatory data is missing.
+                - create:
+                    id: ff789e1c-dfe7-4c18-8ef0-d907b81ea61e
+                    advisoryId: '2'
+                    statusCode: '201'
+        goessner: 
+          summary: Goessner - Batch Create Response
+          value: 
+            createResponse:
+              creates:
+                - create:
+                    "@id": df789e1c-dfe7-4c18-8ef0-d907b81ea61e
+                    "@advisoryId": '3'
+                    "@statusCode": '201'
+                - create:
+                    "@advisoryId": '1'
+                    "@statusCode": '400'
+                    error:
+                      "@id": 6f789e1c-dfe7-4c18-8ef0-d907b81ea61e
+                      code: '400'
+                      scope: Provider
+                      message: Mandatory data is missing.
+                - create:
+                    "@id": ff789e1c-dfe7-4c18-8ef0-d907b81ea61e
+                    "@advisoryId": '2'
+                    "@statusCode": '201'
+        xml: 
+          summary: XML - Batch Create Response
+          value: >-
+            <createResponse>
+              <creates>
+                <create id="df789e1c-dfe7-4c18-8ef0-d907b81ea61e" advisoryId="3" statusCode="201"/>
+                <create advisoryId="1" statusCode="400">
+                  <error id="6f789e1c-dfe7-4c18-8ef0-d907b81ea61e">
+                    <code>400</code>
+                    <scope>Provider</scope>
+                    <message>Mandatory data is missing.</message>
+                  </error>
+                </create>
+                <create id="ff789e1c-dfe7-4c18-8ef0-d907b81ea61e"  advisoryId="2" statusCode="201"/>
+              </creates>
+            </createResponse>
+    
+      #//
+      #// Batch PUT Response 
+      #//
+      batchPutResponse:
+        description: Response to Batch Update or Delete request.
+        content:
+          application/json:
+            schema:
+              oneOf:
+                - $ref: '#/components/schemas/multipleResponses/updateMultiSchema'
+                  title: updateResponse
+                - $ref: '#/components/schemas/multipleResponses/deleteMultiSchema'
+                  title: deleteResponse
+            examples:
+              pescUpdate:   
+                $ref: '#/components/schemas/multipleResponses/updateMultiExamples/pesc'
+              goessnerUpdate:   
+                $ref: '#/components/schemas/multipleResponses/updateMultiExamples/goessner'
+              pescDelete:   
+                $ref: '#/components/schemas/multipleResponses/deleteMultiExamples/pesc'
+              goessnerDelete:   
+                $ref: '#/components/schemas/multipleResponses/deleteMultiExamples/goessner'
+          application/xml:
+            schema:
+              oneOf:
+                - $ref: '#/components/schemas/multipleResponses/updateMultiSchema'
+                  title: updateResponse
+                - $ref: '#/components/schemas/multipleResponses/deleteMultiSchema'
+                  title: deleteResponse
+            examples:
+              xmlUpdate:   
+                $ref: '#/components/schemas/multipleResponses/updateMultiExamples/xml'
+              xmlDelete:   
+                $ref: '#/components/schemas/multipleResponses/deleteMultiExamples/xml'
+    
+        headers:
+          'content-type':
+            $ref: '#/components/schemas/httpHeaders/response/content-type'
+          'messageType':
+            $ref: '#/components/schemas/httpHeaders/response/messageType'
+          'responseAction':
+            $ref: '#/components/schemas/httpHeaders/response/responseAction'
+          'serviceType':
+            $ref: '#/components/schemas/httpHeaders/response/serviceType'
+ 
+      #//
+      #// Batch Post Response 
+      #//
+      batchPostResponse:
+        description: Response to Multiple Create Request
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/multipleResponses/createMultiSchema'
+            examples:
+              pescCreate:   
+                $ref: '#/components/schemas/multipleResponses/createMultiExamples/pesc'
+              goessnerCreate:   
+                $ref: '#/components/schemas/multipleResponses/createMultiExamples/goessner'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/multipleResponses/createMultiSchema'
+            examples:
+              xmlCreate:   
+                $ref: '#/components/schemas/multipleResponses/createMultiExamples/xml'
+        headers:
+          'content-type':
+            $ref: '#/components/schemas/httpHeaders/response/content-type'
+          'messageType':
+            $ref: '#/components/schemas/httpHeaders/response/messageType'
+          'responseAction':
+            $ref: '#/components/schemas/httpHeaders/response/responseAction'
+          'serviceType':
+            $ref: '#/components/schemas/httpHeaders/response/serviceType'
+    
+    # ///////////////////////////////
+    # // Batch Request Definitions //
+    # ///////////////////////////////
+    multipleRequests:
+      deleteMultiSchema:
+        properties:
+          deleteRequest:
+            type: object
+            description: >-
+              Delete Request if request HTTP Header methodOverride=DELETE  
+            $ref: 'jsonSchemaCreate_IN.yaml#/definitions/deleteRequestCollection'
+    
+      deleteMultiExamples:
+        pesc: 
+          summary: PESC - Batch Delete Request
+          value:
+            deleteRequest:
+              deletes:
+                - delete:
+                    id: df789e1c-dfe7-4c18-8ef0-d907b81ea61e
+                - delete:
+                    id: 41953aaa-2811-11e6-b67b-9e71128cae77
+                - delete:
+                    id: ff789e1c-dfe7-4c18-8ef0-d907b81ea61e
+        goessner: 
+          summary: Goessner - Batch Delete Request
+          value: 
+            deleteRequest:
+              deletes:
+                - delete:
+                    "@id": df789e1c-dfe7-4c18-8ef0-d907b81ea61e
+                - delete:
+                    "@id": 41953aaa-2811-11e6-b67b-9e71128cae77
+                - delete:
+                    "@id": ff789e1c-dfe7-4c18-8ef0-d907b81ea61e
+        xml:  
+          summary: XML - Batch Delete Request
+          value: >-
+            <deleteRequest>
+              <deletes>
+                <delete id="df789e1c-dfe7-4c18-8ef0-d907b81ea61e"/>
+                <delete id="41953aaa-2811-11e6-b67b-9e71128cae77"/>
+                <delete id="ff789e1c-dfe7-4c18-8ef0-d907b81ea61e"/>
+              </deletes>
+            </deleteRequest>
+    
+    # ///////////////////////
+    # // Error Definitions //
+    # ///////////////////////
+    errorResponses:
+      responses:
+        400:
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: object
+                    description: >-
+                      Error Message
+                    $ref: 'jsonSchemaCreate_IN.yaml#/definitions/error'
+              examples: 
+                pesc: 
+                  summary: PESC notation
+                  value: 
+                    error: 
+                      id: 5b72f2d4-7a83-4297-a71f-8b5fb26cbf14
+                      code: '400'
+                      scope: Provider
+                      message: Bad Request
+                      description: Version problems or error specific to a particular object type, such as the omission of a mandatory element or an unsupported query or an unsupported order clause.
+                goessner: 
+                  summary: Goessner notation
+                  value: 
+                    error: 
+                      "@id": 5b72f2d4-7a83-4297-a71f-8b5fb26cbf14
+                      code: '400'
+                      scope: Provider
+                      message: Bad Request
+                      description: Version problems or error specific to a particular object type, such as the omission of a mandatory element or an unsupported query or an unsupported order clause.
+            application/xml:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: object
+                    description: >-
+                      Error Message
+                    $ref: 'jsonSchemaCreate_IN.yaml#/definitions/error'
+              example: >-
+                <error id="5b72f2d4-7a83-4297-a71f-8b5fb26cbf14">
+                  <code>400</code>
+                  <scope>Provider</scope>
+                  <message>Bad Request</message>
+                  <description>Version problems or error specific to a particular object type, such as the omission of a mandatory element or an unsupported query or an unsupported order clause.</description>
+                </error>
+          headers:
+            'content-type':
+              $ref: '#/components/schemas/httpHeaders/response/content-type'
+            'messageType':
+              $ref: '#/components/schemas/httpHeaders/response/messageType'
+            'responseAction':
+              $ref: '#/components/schemas/httpHeaders/response/responseAction'
+            'serviceType':
+              $ref: '#/components/schemas/httpHeaders/response/serviceType'
+        401:
+          description: Authorisation failed.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: object
+                    description: >-
+                      Error Message
+                    $ref: 'jsonSchemaCreate_IN.yaml#/definitions/error'
+              examples: 
+                pesc: 
+                  summary: PESC notation
+                  value: 
+                    error: 
+                      id: 5b72f2d4-7a83-4297-a71f-8b5fb26cbf14
+                      code: '401'
+                      scope: Provider
+                      message: Authorisation failed.
+                      description: Invalid or missing 'Authorization' HTTP Header.
+                goessner: 
+                  summary: Goessner notation
+                  value: 
+                    error: 
+                      "@id": 5b72f2d4-7a83-4297-a71f-8b5fb26cbf14
+                      code: '401'
+                      scope: Provider
+                      message: Authorisation failed.
+                      description: Invalid or missing 'Authorization' HTTP Header.
+            application/xml:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: object
+                    description: >-
+                      Error Message
+                    $ref: 'jsonSchemaCreate_IN.yaml#/definitions/error'
+              example: >-
+                <error id="5b72f2d4-7a83-4297-a71f-8b5fb26cbf14">
+                  <code>401</code>
+                  <scope>Provider</scope>
+                  <message>Authorisation failed.</message>
+                  <description>Invalid or missing 'Authorization' HTTP Header.</description>
+                </error>
+          headers:
+            'content-type':
+              $ref: '#/components/schemas/httpHeaders/response/content-type'
+            'messageType':
+              $ref: '#/components/schemas/httpHeaders/response/messageType'
+            'responseAction':
+              $ref: '#/components/schemas/httpHeaders/response/responseAction'
+            'serviceType':
+              $ref: '#/components/schemas/httpHeaders/response/serviceType'
+        403:
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: object
+                    description: >-
+                      Error Message
+                    $ref: 'jsonSchemaCreate_IN.yaml#/definitions/error'
+              examples: 
+                pesc: 
+                  summary: PESC notation
+                  value: 
+                    error: 
+                      id: 5b72f2d4-7a83-4297-a71f-8b5fb26cbf14
+                      code: '403'
+                      scope: Provider
+                      message: Forbidden
+                      description: This operation is not enabled for your adapter.
+                goessner: 
+                  summary: Goessner notation
+                  value: 
+                    error: 
+                      "@id": 5b72f2d4-7a83-4297-a71f-8b5fb26cbf14
+                      code: '403'
+                      scope: Provider
+                      message: Forbidden
+                      description: This operation is not enabled for your adapter.
+            application/xml:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: object
+                    description: >-
+                      Error Message
+                    $ref: 'jsonSchemaCreate_IN.yaml#/definitions/error'
+              example: >-
+                <error id="5b72f2d4-7a83-4297-a71f-8b5fb26cbf14">
+                  <code>403</code>
+                  <scope>Provider</scope>
+                  <message>Forbidden</message>
+                  <description>This operation is not enabled for your adapter.</description>
+                </error>
+          headers:
+            'content-type':
+              $ref: '#/components/schemas/httpHeaders/response/content-type'
+            'messageType':
+              $ref: '#/components/schemas/httpHeaders/response/messageType'
+            'responseAction':
+              $ref: '#/components/schemas/httpHeaders/response/responseAction'
+            'serviceType':
+              $ref: '#/components/schemas/httpHeaders/response/serviceType'
+        404:
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: object
+                    description: >-
+                      Error Message
+                    $ref: 'jsonSchemaCreate_IN.yaml#/definitions/error'
+              examples: 
+                pesc: 
+                  summary: PESC notation
+                  value: 
+                    error: 
+                      id: 5b72f2d4-7a83-4297-a71f-8b5fb26cbf14
+                      code: '404'
+                      scope: Provider
+                      message: Not Found
+                      description: Object ID does not correspond to an existing object. This can occur for Query as well as Update or Delete operations. No Service Provider has been found to match the parameters (Zone, Context, Service name) in the Request.
+                goessner: 
+                  summary: Goessner notation
+                  value: 
+                    error: 
+                      "@id": 5b72f2d4-7a83-4297-a71f-8b5fb26cbf14
+                      code: '404'
+                      scope: Provider
+                      message: Not Found
+                      description: Object ID does not correspond to an existing object. This can occur for Query as well as Update or Delete operations. No Service Provider has been found to match the parameters (Zone, Context, Service name) in the Request.
+            application/xml:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: object
+                    description: >-
+                      Error Message
+                    $ref: 'jsonSchemaCreate_IN.yaml#/definitions/error'
+              example: >-
+                <error id="5b72f2d4-7a83-4297-a71f-8b5fb26cbf14">
+                  <code>404</code>
+                  <scope>Provider</scope>
+                  <message>Not Found</message>
+                  <description>Object ID does not correspond to an existing object. This can occur for Query as well as Update or Delete operations. No Service Provider has been found to match the parameters (Zone, Context, Service name) in the Request.</description>
+                </error>
+          headers:
+            'content-type':
+              $ref: '#/components/schemas/httpHeaders/response/content-type'
+            'messageType':
+              $ref: '#/components/schemas/httpHeaders/response/messageType'
+            'responseAction':
+              $ref: '#/components/schemas/httpHeaders/response/responseAction'
+            'serviceType':
+              $ref: '#/components/schemas/httpHeaders/response/serviceType'
+        405:
+          description: Method not Allowed
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: object
+                    description: >-
+                      Error Message
+                    $ref: 'jsonSchemaCreate_IN.yaml#/definitions/error'
+              examples: 
+                pesc: 
+                  summary: PESC notation
+                  value: 
+                    error: 
+                      id: 5b72f2d4-7a83-4297-a71f-8b5fb26cbf14
+                      code: '405'
+                      scope: Provider
+                      message: Method not Allowed
+                      description: Paged Query Request issued to Object URL rather than Object List URL.
+                goessner: 
+                  summary: Goessner notation
+                  value: 
+                    error: 
+                      "@id": 5b72f2d4-7a83-4297-a71f-8b5fb26cbf14
+                      code: '405'
+                      scope: Provider
+                      message: Method not Allowed
+                      description: Paged Query Request issued to Object URL rather than Object List URL.
+            application/xml:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: object
+                    description: >-
+                      Error Message
+                    $ref: 'jsonSchemaCreate_IN.yaml#/definitions/error'
+              example: >-
+                <error id="5b72f2d4-7a83-4297-a71f-8b5fb26cbf14">
+                  <code>405</code>
+                  <scope>Provider</scope>
+                  <message>Method not Allowed</message>
+                  <description>Paged Query Request issued to Object URL rather than Object List URL.</description>
+                </error>
+          headers:
+            'content-type':
+              $ref: '#/components/schemas/httpHeaders/response/content-type'
+            'messageType':
+              $ref: '#/components/schemas/httpHeaders/response/messageType'
+            'responseAction':
+              $ref: '#/components/schemas/httpHeaders/response/responseAction'
+            'serviceType':
+              $ref: '#/components/schemas/httpHeaders/response/serviceType'
+        409:
+          description: State Conflict
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: object
+                    description: >-
+                      Error Message
+                    $ref: 'jsonSchemaCreate_IN.yaml#/definitions/error'
+              examples: 
+                pesc: 
+                  summary: PESC notation
+                  value: 
+                    error: 
+                      id: 5b72f2d4-7a83-4297-a71f-8b5fb26cbf14
+                      code: '409'
+                      scope: Provider
+                      message: State Conflict
+                      description: An attempt has been made to create an existing object.
+                goessner: 
+                  summary: Goessner notation
+                  value: 
+                    error: 
+                      "@id": 5b72f2d4-7a83-4297-a71f-8b5fb26cbf14
+                      code: '409'
+                      scope: Provider
+                      message: State Conflict
+                      description: An attempt has been made to create an existing object.
+            application/xml:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: object
+                    description: >-
+                      Error Message
+                    $ref: 'jsonSchemaCreate_IN.yaml#/definitions/error'
+              example: >-
+                <error id="5b72f2d4-7a83-4297-a71f-8b5fb26cbf14">
+                  <code>409</code>
+                  <scope>Provider</scope>
+                  <message>State Conflict</message>
+                  <description>An attempt has been made to create an existing object.</description>
+                </error>
+          headers:
+            'content-type':
+              $ref: '#/components/schemas/httpHeaders/response/content-type'
+            'messageType':
+              $ref: '#/components/schemas/httpHeaders/response/messageType'
+            'responseAction':
+              $ref: '#/components/schemas/httpHeaders/response/responseAction'
+            'serviceType':
+              $ref: '#/components/schemas/httpHeaders/response/serviceType'
+        410:
+          description: Gone
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: object
+                    description: >-
+                      Error Message
+                    $ref: 'jsonSchemaCreate_IN.yaml#/definitions/error'
+              examples: 
+                pesc: 
+                  summary: PESC notation
+                  value: 
+                    error: 
+                      id: 5b72f2d4-7a83-4297-a71f-8b5fb26cbf14
+                      code: '410'
+                      scope: Provider
+                      message: Gone
+                      description: Used for query functionality where the Changes Since opaque marker or Paged navigationId provided by the consumer is no longer valid.
+                goessner: 
+                  summary: Goessner notation
+                  value: 
+                    error: 
+                      "@id": 5b72f2d4-7a83-4297-a71f-8b5fb26cbf14
+                      code: '410'
+                      scope: Provider
+                      message: Gone
+                      description: Used for query functionality where the Changes Since opaque marker or Paged navigationId provided by the consumer is no longer valid.
+            application/xml:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: object
+                    description: >-
+                      Error Message
+                    $ref: 'jsonSchemaCreate_IN.yaml#/definitions/error'
+              example: >-
+                <error id="5b72f2d4-7a83-4297-a71f-8b5fb26cbf14">
+                  <code>410</code>
+                  <scope>Provider</scope>
+                  <message>Gone</message>
+                  <description>Used for query functionality where the Changes Since opaque marker or Paged navigationId provided by the consumer is no longer valid.</description>
+                </error>
+          headers:
+            'content-type':
+              $ref: '#/components/schemas/httpHeaders/response/content-type'
+            'messageType':
+              $ref: '#/components/schemas/httpHeaders/response/messageType'
+            'responseAction':
+              $ref: '#/components/schemas/httpHeaders/response/responseAction'
+            'serviceType':
+              $ref: '#/components/schemas/httpHeaders/response/serviceType'
+        412:
+          description: Precondition Failed
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: object
+                    description: >-
+                      Error Message
+                    $ref: 'jsonSchemaCreate_IN.yaml#/definitions/error'
+              examples: 
+                pesc: 
+                  summary: PESC notation
+                  value: 
+                    error: 
+                      id: 5b72f2d4-7a83-4297-a71f-8b5fb26cbf14
+                      code: '412'
+                      scope: Provider
+                      message: Precondition Failed
+                      description: An attempt has been made to modify an object when the Requester was not basing the modification on the latest version.
+                goessner: 
+                  summary: Goessner notation
+                  value: 
+                    error: 
+                      "@id": 5b72f2d4-7a83-4297-a71f-8b5fb26cbf14
+                      code: '412'
+                      scope: Provider
+                      message: Precondition Failed
+                      description: An attempt has been made to modify an object when the Requester was not basing the modification on the latest version.
+            application/xml:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: object
+                    description: >-
+                      Error Message
+                    $ref: 'jsonSchemaCreate_IN.yaml#/definitions/error'
+              example: >-
+                <error id="5b72f2d4-7a83-4297-a71f-8b5fb26cbf14">
+                  <code>412</code>
+                  <scope>Provider</scope>
+                  <message>Precondition Failed</message>
+                  <description>An attempt has been made to modify an object when the Requester was not basing the modification on the latest version.</description>
+                </error>
+          headers:
+            'content-type':
+              $ref: '#/components/schemas/httpHeaders/response/content-type'
+            'messageType':
+              $ref: '#/components/schemas/httpHeaders/response/messageType'
+            'responseAction':
+              $ref: '#/components/schemas/httpHeaders/response/responseAction'
+            'serviceType':
+              $ref: '#/components/schemas/httpHeaders/response/serviceType'
+        413:
+          description: Response or request payload too large. 
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: object
+                    description: >-
+                      Error Message
+                    $ref: 'jsonSchemaCreate_IN.yaml#/definitions/error'
+              examples: 
+                pesc: 
+                  summary: PESC notation
+                  value: 
+                    error: 
+                      id: 5b72f2d4-7a83-4297-a71f-8b5fb26cbf14
+                      code: '413'
+                      scope: Provider
+                      message: Response too large
+                      description: A non-paged Query returning all objects was too large for the Service Provider (or Broker) to include in a single Response.
+                goessner: 
+                  summary: Goessner notation
+                  value: 
+                    error: 
+                      "@id": 5b72f2d4-7a83-4297-a71f-8b5fb26cbf14
+                      code: '413'
+                      scope: Provider
+                      message: Response too large
+                      description: A non-paged Query returning all objects was too large for the Service Provider (or Broker) to include in a single Response.
+            application/xml:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: object
+                    description: >-
+                      Error Message
+                    $ref: 'jsonSchemaCreate_IN.yaml#/definitions/error'
+              example: >-
+                <error id="5b72f2d4-7a83-4297-a71f-8b5fb26cbf14">
+                  <code>413</code>
+                  <scope>Provider</scope>
+                  <message>Response too large</message>
+                  <description>A non-paged Query returning all objects was too large for the Service Provider (or Broker) to include in a single Response.</description>
+                </error>
+          headers:
+            'content-type':
+              $ref: '#/components/schemas/httpHeaders/response/content-type'
+            'messageType':
+              $ref: '#/components/schemas/httpHeaders/response/messageType'
+            'responseAction':
+              $ref: '#/components/schemas/httpHeaders/response/responseAction'
+            'serviceType':
+              $ref: '#/components/schemas/httpHeaders/response/serviceType'
+        415:
+          description: Unsupported Media Type
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: object
+                    description: >-
+                      Error Message
+                    $ref: 'jsonSchemaCreate_IN.yaml#/definitions/error'
+              examples: 
+                pesc: 
+                  summary: PESC notation
+                  value: 
+                    error: 
+                      id: 5b72f2d4-7a83-4297-a71f-8b5fb26cbf14
+                      code: '415'
+                      scope: Provider
+                      message: Unsupported Media Type
+                      description: The request entity has a media type which the server or resource does not support. For example, the client requestd application/json but the server only supports application/xml.
+                goessner: 
+                  summary: Goessner notation
+                  value: 
+                    error: 
+                      "@id": 5b72f2d4-7a83-4297-a71f-8b5fb26cbf14
+                      code: '415'
+                      scope: Provider
+                      message: Unsupported Media Type
+                      description: The request entity has a media type which the server or resource does not support. For example, the client requestd application/json but the server only supports application/xml.
+            application/xml:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: object
+                    description: >-
+                      Error Message
+                    $ref: 'jsonSchemaCreate_IN.yaml#/definitions/error'
+              example: >-
+                <error id="5b72f2d4-7a83-4297-a71f-8b5fb26cbf14">
+                  <code>415</code>
+                  <scope>Provider</scope>
+                  <message>Unsupported Media Type</message>
+                  <description>The request entity has a media type which the server or resource does not support. For example, the client requestd application/json but the server only supports application/xml.</description>
+                </error>
+          headers:
+            'content-type':
+              $ref: '#/components/schemas/httpHeaders/response/content-type'
+            'messageType':
+              $ref: '#/components/schemas/httpHeaders/response/messageType'
+            'responseAction':
+              $ref: '#/components/schemas/httpHeaders/response/responseAction'
+            'serviceType':
+              $ref: '#/components/schemas/httpHeaders/response/serviceType'
+        500:
+          description: Internal Service Error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: object
+                    description: >-
+                      Error Message
+                    $ref: 'jsonSchemaCreate_IN.yaml#/definitions/error'
+              examples: 
+                pesc: 
+                  summary: PESC notation
+                  value: 
+                    error: 
+                      id: 5b72f2d4-7a83-4297-a71f-8b5fb26cbf14
+                      code: '500'
+                      scope: Provider
+                      message: Internal Service Error
+                      description: An unexpected error occurred in servicing the Request.
+                goessner: 
+                  summary: Goessner notation
+                  value: 
+                    error: 
+                      "@id": 5b72f2d4-7a83-4297-a71f-8b5fb26cbf14
+                      code: '500'
+                      scope: Provider
+                      message: Internal Service Error
+                      description: An unexpected error occurred in servicing the Request.
+            application/xml:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: object
+                    description: >-
+                      Error Message
+                    $ref: 'jsonSchemaCreate_IN.yaml#/definitions/error'
+              example: >-
+                <error id="5b72f2d4-7a83-4297-a71f-8b5fb26cbf14">
+                  <code>500</code>
+                  <scope>Provider</scope>
+                  <message>Internal Service Error</message>
+                  <description>An unexpected error occurred in servicing the Request.</description>
+                </error>
+          headers:
+            'content-type':
+              $ref: '#/components/schemas/httpHeaders/response/content-type'
+            'messageType':
+              $ref: '#/components/schemas/httpHeaders/response/messageType'
+            'responseAction':
+              $ref: '#/components/schemas/httpHeaders/response/responseAction'
+            'serviceType':
+              $ref: '#/components/schemas/httpHeaders/response/serviceType'
+        501:
+          description: Not Implemented
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: object
+                    description: >-
+                      Error Message
+                    $ref: 'jsonSchemaCreate_IN.yaml#/definitions/error'
+              examples: 
+                pesc: 
+                  summary: PESC notation
+                  value: 
+                    error: 
+                      id: 5b72f2d4-7a83-4297-a71f-8b5fb26cbf14
+                      code: '501'
+                      scope: Provider
+                      message: Not Implemented
+                      description: The server either does not recognize the request method, or it lacks the ability to fulfil the request. Usually this implies future availability (e.g., a new feature of a web-service API).
+                goessner: 
+                  summary: Goessner notation
+                  value: 
+                    error: 
+                      "@id": 5b72f2d4-7a83-4297-a71f-8b5fb26cbf14
+                      code: '501'
+                      scope: Provider
+                      message: Not Implemented
+                      description: The server either does not recognize the request method, or it lacks the ability to fulfil the request. Usually this implies future availability (e.g., a new feature of a web-service API).
+            application/xml:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: object
+                    description: >-
+                      Error Message
+                    $ref: 'jsonSchemaCreate_IN.yaml#/definitions/error'
+              example: >-
+                <error id="5b72f2d4-7a83-4297-a71f-8b5fb26cbf14">
+                  <code>501</code>
+                  <scope>Provider</scope>
+                  <message>Not Implemented</message>
+                  <description>The server either does not recognize the request method, or it lacks the ability to fulfil the request. Usually this implies future availability (e.g., a new feature of a web-service API).</description>
+                </error>
+          headers:
+            'content-type':
+              $ref: '#/components/schemas/httpHeaders/response/content-type'
+            'messageType':
+              $ref: '#/components/schemas/httpHeaders/response/messageType'
+            'responseAction':
+              $ref: '#/components/schemas/httpHeaders/response/responseAction'
+            'serviceType':
+              $ref: '#/components/schemas/httpHeaders/response/serviceType'
+        503:
+          description: Service Unavailable
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: object
+                    description: >-
+                      Error Message
+                    $ref: 'jsonSchemaCreate_IN.yaml#/definitions/error'
+              examples: 
+                pesc: 
+                  summary: PESC notation
+                  value: 
+                    error: 
+                      id: 5b72f2d4-7a83-4297-a71f-8b5fb26cbf14
+                      code: '503'
+                      scope: Provider
+                      message: Service Unavailable
+                      description: Returned only for Consumer Requests requiring an immediate Response. This error indicates that the expected Service processing time for the Request is great enough that the Consumer must reissue it as a Request requiring a delayed Response.
+                goessner: 
+                  summary: Goessner notation
+                  value: 
+                    error: 
+                      "@id": 5b72f2d4-7a83-4297-a71f-8b5fb26cbf14
+                      code: '503'
+                      scope: Provider
+                      message: Service Unavailable
+                      description: Returned only for Consumer Requests requiring an immediate Response. This error indicates that the expected Service processing time for the Request is great enough that the Consumer must reissue it as a Request requiring a delayed Response.
+            application/xml:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: object
+                    description: >-
+                      Error Message
+                    $ref: 'jsonSchemaCreate_IN.yaml#/definitions/error'
+              example: >-
+                <error id="5b72f2d4-7a83-4297-a71f-8b5fb26cbf14">
+                  <code>503</code>
+                  <scope>Provider</scope>
+                  <message>Service Unavailable</message>
+                  <description>Returned only for Consumer Requests requiring an immediate Response. This error indicates that the expected Service processing time for the Request is great enough that the Consumer must reissue it as a Request requiring a delayed Response.</description>
+                </error>
+          headers:
+            'content-type':
+              $ref: '#/components/schemas/httpHeaders/response/content-type'
+            'messageType':
+              $ref: '#/components/schemas/httpHeaders/response/messageType'
+            'responseAction':
+              $ref: '#/components/schemas/httpHeaders/response/responseAction'
+            'serviceType':
+              $ref: '#/components/schemas/httpHeaders/response/serviceType'
+    
+    # /////////////////////////////////
+    # // Query Parameter Definitions //
+    # /////////////////////////////////
+    queryParameters:
+      changesSinceMarker:
+        in: query
+        name: changesSinceMarker
+        description: >-
+          Required if a changes since request is performed.
+        required: false
+        schema:
+          type: string
+      order:
+        in: query
+        name: order
+        description: >-
+          Orders the result set by one or more specified elements and directions. Use xPath notation. Must be URL encoded.
+        required: false
+        schema:
+          type: string
+      where:
+        in: query
+        name: where
+        description: >-
+          A restricted XPATH expression that qualifies which among the set of all objects supplied by the Provider will satisfy the query and be returned. Must be URL encoded.
+        required: false
+        schema:
+          type: string
+    
+    # ////////////////////////////////
+    # // HTTP Header Definitions //
+    # ////////////////////////////////
+    httpHeaders:
+    
+      # ////////////////////////////////
+      # // Request Header Definitions //
+      # ////////////////////////////////
+      request:
+        authorization:
+          name: authorization
+          in: header
+          description: >-
+            Authorization header. Typical values are Basic+token or SIF_HMACSHA256+token.
+          required: true
+          schema:
+            type: string
+        accept:
+          name: accept
+          in: header
+          description: >-
+            The mime type of the response. Typical values are application/xml or application/json. If not provided it will default to application/xml.
+          required: false
+          schema:
+            type: string
+        requestType:
+          name: requestType
+          in: header
+          description: >-
+            One of IMMEDIATE or DELAYED. If not set, it defaults to IMMEDIATE.
+          required: false
+          schema:
+            type: string
+        accept-encoding:
+          name: accept-encoding
+          in: header
+          description: >-
+            Indicate what payload encoding is accepted in the response. Valid values are: identity (not compressed) or gzip (compressed).
+          required: false
+          schema:
+            type: string
+        accept-profile:
+          name: accept-profile
+          in: header
+          description: >-
+            Indicate what payload datamodel schema(s) is/are accepted in the response. Example: urn:sif:data/au/3.4.4. Indicates SIF AU v3.4.4 is accepted.
+          required: false
+          schema:
+            type: string
+        applicationKey:
+          name: applicationKey
+          in: header
+          description: >-
+            If the Application Key is not contained in the Authorization header, then this header must convey this key together with the authentication.
+          required: false
+          schema:
+            type: string
+        authenticatedUser:
+          name: authenticatedUser
+          in: header
+          description: >-
+            Set to the users identification (depending on the authentication used) when verified by the middleware. The receiving Service Provider can trust this field by confirming the middleware’s credentials.
+          required: false
+          schema:
+            type: string
+        connectionId:
+          name: connectionId
+          in: header
+          description: >-
+            Identifies the established connection over which the next message in the Queue is being requested and delivered. This must be a unique unsigned integer ranging in value from 0 to one less than the current value of maxConcurrentConnections. Must be included only when the consumer utilizes multiple connections to the same queue.
+          required: false
+          schema:
+            type: string
+        content-encoding:
+          name: content-encoding
+          in: header
+          description: >-
+            Indicate the payload encoding. Valid values are: identity (not compressed) or gzip (compressed).
+          required: false
+          schema:
+            type: string
+        content-type:
+          name: content-type
+          in: header
+          description: >-
+            Tells the receiver the mime type of the payload body. Supported generally, however SIF data models are generally conveyed with types application/json or application/xml (default). If not provided application/xml must be assumed.
+          required: false
+          schema:
+            type: string
+        content-profile:
+          name: content-profile
+          in: header
+          description: >-
+            Used to indicate the data model schema used in the payload. Example: urn:sif:data/au/3.4.4. Indicates SIF AU v3.4.4 is used.
+          required: false
+          schema:
+            type: string
+        ETag:
+          name: ETag
+          in: header
+          description: >-
+            If it is returned in a Response, the Consumer may include it the next time it issues any Query to that Service Provider, so that the Service Provider can determine whether it needs to respond to the query by means of query the data store of it cached values can be used.
+          required: false
+          schema:
+            type: string
+        fingerprint:
+          name: fingerprint
+          in: header
+          description: >-
+            A unique environment identifier that can be safely shared with others. In order not to compromise security it MUST NOT match the environment’s refId, sessionToken, userToken, or applicationKey.
+          required: false
+          schema:
+            type: string
+        generatorId:
+          name: generatorId
+          in: header
+          description: >-
+            The optional identification token of the 'generator' of this request or event (ex: the administrative clerk who entered in the data that was responsible for generating a Create request).
+          required: false
+          schema:
+            type: string
+        messageId:
+          name: messageId
+          in: header
+          description: >-
+            UUID that uniquely identifies the message that carries it.
+          required: false
+          schema:
+            type: string
+        messageType:
+          name: messageType
+          in: header
+          description: >-
+            One of: EVENT/REQUEST/RESPONSE/ERROR. If not provided, it will default to REQUEST.
+          required: false
+          schema:
+            type: string
+        methodOverridePut:
+          name: methodOverride
+          in: header
+          description: >-
+            Included in an HTTP PUT message when it is conveying a multiple delete request, since an HTTP DELETE is not allowed to have a payload. Valid values are DELETE or UPDATE. If not provided  UPDATE is assumed.
+          required: false
+          schema:
+            type: string
+        methodOverridePost:
+          name: methodOverride
+          in: header
+          description: >-
+            Required if the HTTP POST message shall be conveyed as a QBE request. For a QBE request it must be set to 'GET'. In this case the response will be a collection of the data model's object. If not provided, or set to 'POST', then the request is conveyed as a multi-create and the response will be a multi-create response. Valid values are GET (QBE) or POST (Create). 
+          required: false
+          schema:
+            type: string
+        mustUseAdvisory:
+          name: mustUseAdvisory
+          in: header
+          description: >-
+            Informs the Service Provider that if the "suggested" RefId in the Request cannot be assigned to the new object, the Request should be rejected. Valid values are true and false. Used in Create requests to Object Services.
+          required: false
+          schema:
+            type: string
+        navigationId:
+          name: navigationId
+          in: header
+          description: >-
+            Informs the Service Provider that if the "suggested" RefId in the Request cannot be assigned to the new object, the Request should be rejected. Valid values are true and false. Used in Create requests to Object Services.
+          required: false
+          schema:
+            type: string
+        navigationPage:
+          name: navigationPage
+          in: header
+          description: >-
+            The number of the Page to be returned. If it is outside the range of results (which does not constitute an error) an HTTP Response with a code of 204 (No Content) will be returned. The first page is indicated with the value 1 (i.e. navigationPage=1).
+          required: false
+          schema:
+            type: string
+        navigationPageSize:
+          name: navigationPageSize
+          in: header
+          description: >-
+            This is included in every Paged Query Request and indicates the number of Objects to be returned in the corresponding Response Page. If the Page Size specified is too large for the Service or Environments Provider to supply, an Error with code 413 (Response too large) will be returned.
+          required: false
+          schema:
+            type: string
+        queryIntention:
+          name: queryIntention
+          in: header
+          description: >-
+            If the Consumer intends to follow up with further Paged Queries after this one, this field must be included in the Paged Query Request. Valid values are: ALL/ONE-OFF/NO-CACHING
+          required: false
+          schema:
+            type: string
+        queueId:
+          name: queueId
+          in: header
+          description: >-
+            Contains the identity of one of the Consumer’s assigned Queues to which the delayed Response or Job Object Events from the Service Provider related to this request must be routed.
+          required: false
+          schema:
+            type: string
+        replacement:
+          name: replacement
+          in: header
+          description: >-
+            Set to FULL (current values of all object elements) or PARTIAL (only elements whose values have changed). If not set, it is defaulted to PARTIAL.
+          required: false
+          schema:
+            type: string
+        requestId:
+          name: requestId
+          in: header
+          description: >-
+            A Consumer specified 'token' that uniquely identifies every delayed Request issued by the Consumer. It could be as simple as a monotonically increasing integer. Used to correlate the delayed (asynchronous) Response with the original Request. It could be as simple as a monotonically increasing integer.
+          required: false
+          schema:
+            type: string
+        requestAction:
+          name: requestAction
+          in: header
+          description: >-
+            Indicates what the request is trying to do. Valid values for each HTTP operations are: POST=CREATE, PUT=UPDATE, DELETE=DELETE, GET=QUERY, HEAD=HEAD.
+          required: false
+          schema:
+            type: string
+        serviceType:
+          name: serviceType
+          in: header
+          description: >-
+            One of: UTILITY, OBJECT, FUNCTIONAL, SERVICEPATH, XQUERYTEMPLATE, SERVICE. If not provided, it will default to OBJECT
+          required: false
+          schema:
+            type: string
+        serviceSubType:
+          name: serviceSubType
+          in: header
+          description: >-
+            Only applicable if serviceType is OBJECT or FUNCTIONAL. Indicates 'adminDirective' endpoint of the given service shall be called rather than the base service. Valid value is 'adminDirective'.
+          required: false
+          schema:
+            type: string
+        sourceName:
+          name: sourceName
+          in: header
+          description: >-
+            The applicationKey is added by Brokered Architecture to all Requests before forwarding to the Service Provider.
+          required: false
+          schema:
+            type: string
+        timestamp:
+          name: timestamp
+          in: header
+          description: >-
+            Date and Time of message creation (in ISO-8601). If not need for authentication, may be omitted in the request. If needed, only for requests this value may be provided as a URL query parameter instead of a header.
+          required: false
+          schema:
+            type: string
+    
+      # ////////////////////////////////
+      # // Response Header Definitions //
+      # ////////////////////////////////
+      response:
+        accept:
+          name: accept
+          schema:
+            type: string
+          description: >-
+            Optional: Indicates to the caller what the provider accepts. Typical values are application/xml or application/json. Often provided when a HTTP code 415 is returned.
+        content-type:
+          name: content-type
+          schema:
+            type: string
+          description: >-
+            Mime type of response body. Example: application/json, application/xml
+        content-profile:
+          name: content-profile
+          schema:
+            type: string
+          description: >-
+            Optional: Used to indicate the data model schema used in the payload. Example: urn:sif:data/au/3.4.4. Indicates SIF AU v3.4.4 is used.
+        changesSinceMarkerGet:
+          name: changesSinceMarker
+          schema:
+            type: string
+          description: >-
+            If the changesSinceMarker request was performed. The first response page will contain the new changesSinceMarker value.
+        changesSinceMarkerHead:
+          name: changesSinceMarker
+          schema:
+            type: string
+          description: >-
+            If a changesSinceMarker is returned then it indicates that this functionality is supported by this endpoint.
+        content-encoding:
+          name: content-encoding
+          schema:
+            type: string
+          description: >-
+            MIndicate the payload encoding. Valid values are: identity (not compressed) or gzip (compressed).
+        environmentURI:
+          name: environmentURI
+          schema:
+            type: string
+          description: >-
+            May be returned by the provider where the environment is pre-provisioned.
+        ETag:
+          name: ETag
+          schema:
+            type: string
+          description: >-
+            If it is returned in a Response, the Consumer may include it the next time it issues any Query to that Service Provider, so that the Service Provider can determine whether it needs to respond to the query by means of query the data store of it cached values can be used.
+        fingerprint:
+          name: fingerprint
+          schema:
+            type: string
+          description: >-
+            A unique environment identifier that can be safely shared with others. In order not to compromise security it MUST NOT match the environment’s refId, sessionToken, userToken, or applicationKey.
+        messageId:
+          name: messageId
+          schema:
+            type: string
+          description: >-
+            Required: UUID that uniquely identifies the message that carries it.
+        messageType:
+          name: messageType
+          schema:
+            type: string
+          description: >-
+            Required: One of: RESPONSE or ERROR. If returned HTTP status code is higher than 300 it is expected to be ERROR otherwise RESPONSE.
+        navigationCount:
+          name: navigationCount
+          schema:
+            type: string
+          description: >-
+            Optional: The total number of objects in the set of results generated by the initial Paged Query that is associated with the returned navigationId.
+        navigationId:
+          name: navigationId
+          schema:
+            type: string
+          description: >-
+            Optional: Identifies state maintained in the Service Provider for the Consumer issuing the Paged Query Request. If returned, the Consumer must supply the navigationId value when requesting subsequent Pages of that object type from that Service Provider.
+        navigationLastPage:
+          name: navigationLastPage
+          schema:
+            type: string
+          description: >-
+            Optional: Included by the service provider as an aid for the Consumer in detecting when to stop issuing Paged Query Requests.
+        navigationPage:
+          name: navigationPage
+          schema:
+            type: string
+          description: >-
+            Required if the consumer issued a paged query and a page is returned. It indicates which page is being returned.
+        navigationPageSize:
+          name: navigationPageSize
+          schema:
+            type: string
+          description: >-
+            Required if the consumer issued a paged query and a page is returned. It indicates the actual number of objects on the returned Page.
+        relativeServicePath:
+          name: relativeServicePath
+          schema:
+            type: string
+          description: >-
+            Required for DELAYED responses. Replicates all information contained in the segments of the Request URL. Inlcudes query parameter and matrix parameters.
+        requestId:
+          name: requestId
+          schema:
+            type: string
+          description: >-
+            Required for DELAYED responses. Used to correlate the delayed (asynchronous) Response with the original Request
+        responseAction:
+          name: responseAction
+          schema:
+            type: string
+          description: >-
+            Required: This must exactly match the requestAction value contained in the HTTP header of the Request being responded to. Valid values are: CREATE, UPDATE, DELETE, QUERY or HEAD
+        serviceType:
+          name: serviceType
+          schema:
+            type: string
+          description: >-
+            Optional: Indicates the service type of the response. Valid values are UTILITY, OBJECT, FUNCTIONAL, SERVICEPATH, XQUERYTEMPLATE, SERVICE. Default: OBJECT.
+        serviceSubType:
+          name: serviceSubType
+          in: header
+          description: >-
+            Only applicable if serviceType is OBJECT or FUNCTIONAL. Indicates that the response if for the 'adminDirective' endpoint of the given service rather than the base service. Valid value is 'adminDirective'.
+          required: false
+          schema:
+            type: string
+        timestamp:
+          name: timestamp
+          schema:
+            type: string
+          description: >-
+            Required: Date / Time of message creation (in ISO-8601 format which is also used as the basis of xs:dateTime).
+        vary:
+          name: vary
+          schema:
+            type: string
+          description: >-
+            Optional: This HTTP Header can be set by the provider to indicate that it supports compression. It would only be set by the endpoint provider if the caller request uses uncompressed payloads. It wwould indicate to the caller that the provide could deal with compression. In such a case the HTTP header 'vary' would take the following value: vary: Accept-Encoding
+    

@@ -9,7 +9,7 @@
 		<inputDocument>SIF_DataModel.xml</inputDocument>
 		<sifNamespace>http://www.sifassociation.org/datamodel/au/3.4</sifNamespace>
 		<localizationCode>au</localizationCode>
-		<schemaVersion>3.4.8</schemaVersion>
+		<schemaVersion>3.4.9</schemaVersion>
 		
 		<!-- Comment this one out to leave out JSON Tabs -->
 		
@@ -17,8 +17,8 @@
 		
 		<resolveExtensions>false</resolveExtensions>
  
- 		<isDraft>false</isDraft>
-
+ 		<isDraft>true</isDraft>
+        <examplesValidatorFile>XSD\SIF_MessageNoIncludes\SIF_Message.xsd</examplesValidatorFile>
  
 	</globalSettings>
 	
@@ -28,7 +28,7 @@
 		<htmlDocument>
 			<singleDocument>false</singleDocument>
 			<rootDocumentFileName>index.html</rootDocumentFileName>
-			<rootTitle>SIF Implementation Specification (Australia) 3.4.8</rootTitle>
+			<rootTitle>SIF Implementation Specification (Australia) 3.4.9</rootTitle>
 			<documentType>DataModel</documentType>
 		</htmlDocument>
 		
@@ -36,7 +36,7 @@
 		<htmlDocument>
 			<singleDocument>true</singleDocument>
 			<rootDocumentFileName>ImplementationSpecification.html</rootDocumentFileName>
-			<rootTitle>SIF Implementation Specification (Australia) 3.4.8</rootTitle>
+			<rootTitle>SIF Implementation Specification (Australia) 3.4.9</rootTitle>
 			<documentType>DataModel</documentType>
 		</htmlDocument>
 		
@@ -163,28 +163,28 @@
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToExamples.xsl</xsltInputFile>
 			<xsltOutputDir>JSON</xsltOutputDir>
-			<xsltOutputFile>examples_AU_3.4.8.yaml</xsltOutputFile>
+			<xsltOutputFile>Full/examples_AU_3.4.9.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 		
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToJsonSchemaCreate.xsl</xsltInputFile>
 			<xsltOutputDir>JSON</xsltOutputDir>
-			<xsltOutputFile>jsonSchemaCreate_AU.yaml</xsltOutputFile>
+			<xsltOutputFile>Full/jsonSchemaCreate_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 		
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdate.xsl</xsltInputFile>
 			<xsltOutputDir>JSON</xsltOutputDir>
-			<xsltOutputFile>jsonSchemaUpdate_AU.yaml</xsltOutputFile>
+			<xsltOutputFile>Full/jsonSchemaUpdate_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToJsonSchemaCreateStrict.xsl</xsltInputFile>
 			<xsltOutputDir>JSON</xsltOutputDir>
-			<xsltOutputFile>jsonSchemaCreate-strict_AU.yaml</xsltOutputFile>
+			<xsltOutputFile>Full/jsonSchemaCreate-strict_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 
@@ -192,26 +192,50 @@
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdateStrict.xsl</xsltInputFile>
 			<xsltOutputDir>JSON</xsltOutputDir>
-			<xsltOutputFile>jsonSchemaUpdate-strict_AU.yaml</xsltOutputFile>
+			<xsltOutputFile>Full/jsonSchemaUpdate-strict_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
  
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToOpenAPI.xsl</xsltInputFile>
 			<xsltOutputDir>JSON</xsltOutputDir>
-			<xsltOutputFile>OpenAPI_AU.yaml</xsltOutputFile>
+			<xsltOutputFile>Full/OpenAPI_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>	
 			
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToExamplesSBP.xsl</xsltInputFile>
 			<xsltOutputDir>JSON\SBP</xsltOutputDir>
-			<xsltOutputFile>examples_AU_3.4.8.yaml</xsltOutputFile>
+			<xsltOutputFile>examples_AU_3.4.9.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
-		
+<!--- now run Use Cases -->		
+		<!-- SBP -->
 		<xsltTransformation>
-			<xsltInputFile>98_Xslt\dmToSBPAPI.xsl</xsltInputFile>
+			<xsltInputFile>98_Xslt\dmToExamples.xsl</xsltInputFile>
+			<xsltParamList>
+				<xsltParam>
+					<xsltName>sifObjectList</xsltName>
+					<xsltValue>SchoolInfo,LEAInfo,StaffAssignment,StaffPersonal,StudentPersonal,StudentSchoolEnrollment,StudentContactPersonal,StudentContactRelationship,PersonPicture,Identity,PersonPrivacyObligationDocument</xsltValue>
+				</xsltParam>
+			</xsltParamList>
+			<xsltOutputDir>JSON\SBP</xsltOutputDir>
+			<xsltOutputFile>examples_AU_3.4.9.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToOpenAPI.xsl</xsltInputFile>
+			<xsltParamList>
+			<xsltParam>
+				<xsltName>sifObjectList</xsltName>
+				<xsltValue>SchoolInfo,LEAInfo,StaffAssignment,StaffPersonal,StudentPersonal,StudentSchoolEnrollment,StudentContactPersonal,StudentContactRelationship,PersonPicture,Identity,PersonPrivacyObligationDocument</xsltValue>
+			</xsltParam>
+			<xsltParam>
+				<xsltName>sifObjectGroupList</xsltName>
+				<xsltValue>'SIF AU Student Baseline Profile (SBP) and supporting objects'</xsltValue>
+			</xsltParam>
+			</xsltParamList>
 			<xsltOutputDir>JSON\SBP</xsltOutputDir>
 			<xsltOutputFile>SBPAPI_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
@@ -248,14 +272,30 @@
 		
 		<!-- Attendance -->
 		<xsltTransformation>
-			<xsltInputFile>98_Xslt\dmToExamplesAtt.xsl</xsltInputFile>
+			<xsltInputFile>98_Xslt\dmToExamples.xsl</xsltInputFile>
+			<xsltParamList>
+				<xsltParam>
+					<xsltName>sifObjectList</xsltName>
+					<xsltValue>StudentAttendanceTimeList,StudentAttendanceSummary,StudentDailyAttendance,StudentPeriodAttendance,SessionInfo,CalendarDate,CalendarSummary</xsltValue>
+				</xsltParam>
+			</xsltParamList>
 			<xsltOutputDir>JSON\ATTEND</xsltOutputDir>
-			<xsltOutputFile>examples_AU_3.4.8.yaml</xsltOutputFile>
+			<xsltOutputFile>examples_AU_3.4.9.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 		
 		<xsltTransformation>
-			<xsltInputFile>98_Xslt\dmToAttendanceAPI.xsl</xsltInputFile>
+			<xsltInputFile>98_Xslt\dmToOpenAPI.xsl</xsltInputFile>
+						<xsltParamList>
+				<xsltParam>
+					<xsltName>sifObjectList</xsltName>
+					<xsltValue>StudentAttendanceTimeList,StudentAttendanceSummary,StudentDailyAttendance,StudentPeriodAttendance,SessionInfo,CalendarDate,CalendarSummary</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>sifObjectGroupList</xsltName>
+					<xsltValue>'Student Attendance objects'</xsltValue>
+				</xsltParam>
+			</xsltParamList>
 			<xsltOutputDir>JSON\ATTEND</xsltOutputDir>
 			<xsltOutputFile>ATTENDAPI_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
@@ -288,6 +328,600 @@
 			<xsltOutputFile>jsonSchemaUpdate-strict_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
+		
+				<!-- Finance -->
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToExamples.xsl</xsltInputFile>
+			<xsltParamList>
+				<xsltParam>
+					<xsltName>sifObjectList</xsltName>
+					<xsltValue>Invoice,FinancialAccount,ChargedLocationInfo,PaymentReceipt,PurchaseOrder,VendorInfo,Journal,Debtor</xsltValue>
+				</xsltParam>
+			</xsltParamList>
+			<xsltOutputDir>JSON\Finance</xsltOutputDir>
+			<xsltOutputFile>examples_AU_3.4.9.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToOpenAPI.xsl</xsltInputFile>
+			<xsltParamList>
+				<xsltParam>
+					<xsltName>sifObjectList</xsltName>
+					<xsltValue>Invoice,FinancialAccount,ChargedLocationInfo,PaymentReceipt,PurchaseOrder,VendorInfo,Journal,Debtor</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>sifObjectGroupList</xsltName>
+					<xsltValue>'Finance'</xsltValue>
+				</xsltParam>
+			</xsltParamList>
+			<xsltOutputDir>JSON\Finance</xsltOutputDir>
+			<xsltOutputFile>FinanceOpenAPI_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+	 	<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaCreate.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\Finance</xsltOutputDir>
+			<xsltOutputFile>jsonSchemaCreate_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdate.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\Finance</xsltOutputDir>
+			<xsltOutputFile>jsonSchemaUpdate_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaCreateStrict.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\Finance</xsltOutputDir>
+			<xsltOutputFile>jsonSchemaCreate-strict_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdateStrict.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\Finance</xsltOutputDir>
+			<xsltOutputFile>jsonSchemaUpdate-strict_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+						<!-- Activity -->
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToExamples.xsl</xsltInputFile>
+			<xsltParamList>
+				<xsltParam>
+					<xsltName>sifObjectList</xsltName>
+					<xsltValue>Activity,SchoolPrograms,StudentActivityInfo,StudentActivityParticipation,StudentParticipation</xsltValue>
+				</xsltParam>
+			</xsltParamList>
+			<xsltOutputDir>JSON\Activity</xsltOutputDir>
+			<xsltOutputFile>examples_AU_3.4.9.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToOpenAPI.xsl</xsltInputFile>
+			<xsltParamList>
+				<xsltParam>
+					<xsltName>sifObjectList</xsltName>
+					<xsltValue>Activity,SchoolPrograms,StudentActivityInfo,StudentActivityParticipation,StudentParticipation</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>sifObjectGroupList</xsltName>
+					<xsltValue>'Activity'</xsltValue>
+				</xsltParam>
+			</xsltParamList>
+			<xsltOutputDir>JSON\Activity</xsltOutputDir>
+			<xsltOutputFile>ActivityOpenAPI_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+	 	<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaCreate.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\Activity</xsltOutputDir>
+			<xsltOutputFile>jsonSchemaCreate_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdate.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\Activity</xsltOutputDir>
+			<xsltOutputFile>jsonSchemaUpdate_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaCreateStrict.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\Activity</xsltOutputDir>
+			<xsltOutputFile>jsonSchemaCreate-strict_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdateStrict.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\Activity</xsltOutputDir>
+			<xsltOutputFile>jsonSchemaUpdate-strict_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+						<!-- AggregatedStatistics -->
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToExamples.xsl</xsltInputFile>
+			<xsltParamList>
+				<xsltParam>
+					<xsltName>sifObjectList</xsltName>
+					<xsltValue>AggregateCharacteristicInfo,AggregateStatisticFact,AggregateStatisticInfo</xsltValue>
+				</xsltParam>
+			</xsltParamList>
+			<xsltOutputDir>JSON\AggregatedStatistics</xsltOutputDir>
+			<xsltOutputFile>examples_AU_3.4.9.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToOpenAPI.xsl</xsltInputFile>
+			<xsltParamList>
+				<xsltParam>
+					<xsltName>sifObjectList</xsltName>
+					<xsltValue>AggregateCharacteristicInfo,AggregateStatisticFact,AggregateStatisticInfo</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>sifObjectGroupList</xsltName>
+					<xsltValue>'AggregatedStatistics'</xsltValue>
+				</xsltParam>
+			</xsltParamList>
+			<xsltOutputDir>JSON\AggregatedStatistics</xsltOutputDir>
+			<xsltOutputFile>AggregatedStatisticsOpenAPI_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+	 	<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaCreate.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\AggregatedStatistics</xsltOutputDir>
+			<xsltOutputFile>jsonSchemaCreate_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdate.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\AggregatedStatistics</xsltOutputDir>
+			<xsltOutputFile>jsonSchemaUpdate_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaCreateStrict.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\AggregatedStatistics</xsltOutputDir>
+			<xsltOutputFile>jsonSchemaCreate-strict_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdateStrict.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\AggregatedStatistics</xsltOutputDir>
+			<xsltOutputFile>jsonSchemaUpdate-strict_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+		<!-- AustralianGovernmentCollections -->
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToExamples.xsl</xsltInputFile>
+			<xsltParamList>
+				<xsltParam>
+					<xsltName>sifObjectList</xsltName>
+					<xsltValue>AddressCollection,CensusCollection,CollectionRound,CollectionStatus,FinancialQuestionnaireCollection,StudentAttendanceCollection</xsltValue>
+				</xsltParam>
+			</xsltParamList>
+			<xsltOutputDir>JSON\AustralianGovernmentCollections</xsltOutputDir>
+			<xsltOutputFile>examples_AU_3.4.9.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToOpenAPI.xsl</xsltInputFile>
+			<xsltParamList>
+				<xsltParam>
+					<xsltName>sifObjectList</xsltName>
+					<xsltValue>AddressCollection,CensusCollection,CollectionRound,CollectionStatus,FinancialQuestionnaireCollection,StudentAttendanceCollection</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>sifObjectGroupList</xsltName>
+					<xsltValue>'AustralianGovernmentCollections'</xsltValue>
+				</xsltParam>
+			</xsltParamList>
+			<xsltOutputDir>JSON\AustralianGovernmentCollections</xsltOutputDir>
+			<xsltOutputFile>AustralianGovernmentCollectionsOpenAPI_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+	 	<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaCreate.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\AustralianGovernmentCollections</xsltOutputDir>
+			<xsltOutputFile>jsonSchemaCreate_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdate.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\AustralianGovernmentCollections</xsltOutputDir>
+			<xsltOutputFile>jsonSchemaUpdate_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaCreateStrict.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\AustralianGovernmentCollections</xsltOutputDir>
+			<xsltOutputFile>jsonSchemaCreate-strict_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdateStrict.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\AustralianGovernmentCollections</xsltOutputDir>
+			<xsltOutputFile>jsonSchemaUpdate-strict_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+				
+		<!-- ClassroomAssessment -->
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToExamples.xsl</xsltInputFile>
+			<xsltParamList>
+				<xsltParam>
+					<xsltName>sifObjectList</xsltName>
+					<xsltValue>GradingAssignment,GradingAssignmentScore,MarkValueInfo,StudentGrade,StudentScoreJudgementAgainstStandard,TermInfo</xsltValue>
+				</xsltParam>
+			</xsltParamList>
+			<xsltOutputDir>JSON\ClassroomAssessment</xsltOutputDir>
+			<xsltOutputFile>examples_AU_3.4.9.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToOpenAPI.xsl</xsltInputFile>
+			<xsltParamList>
+				<xsltParam>
+					<xsltName>sifObjectList</xsltName>
+					<xsltValue>GradingAssignment,GradingAssignmentScore,MarkValueInfo,StudentGrade,StudentScoreJudgementAgainstStandard,TermInfo</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>sifObjectGroupList</xsltName>
+					<xsltValue>'ClassroomAssessment'</xsltValue>
+				</xsltParam>
+			</xsltParamList>
+			<xsltOutputDir>JSON\ClassroomAssessment</xsltOutputDir>
+			<xsltOutputFile>ClassroomAssessmentOpenAPI_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+	 	<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaCreate.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\ClassroomAssessment</xsltOutputDir>
+			<xsltOutputFile>jsonSchemaCreate_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdate.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\ClassroomAssessment</xsltOutputDir>
+			<xsltOutputFile>jsonSchemaUpdate_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaCreateStrict.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\ClassroomAssessment</xsltOutputDir>
+			<xsltOutputFile>jsonSchemaCreate-strict_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdateStrict.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\ClassroomAssessment</xsltOutputDir>
+			<xsltOutputFile>jsonSchemaUpdate-strict_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+		<!-- LearningStandards -->
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToExamples.xsl</xsltInputFile>
+			<xsltParamList>
+				<xsltParam>
+					<xsltName>sifObjectList</xsltName>
+					<xsltValue>LearningResource,LearningResourcePackage,LearningStandardDocument,LearningStandardItem</xsltValue>
+				</xsltParam>
+			</xsltParamList>
+			<xsltOutputDir>JSON\LearningStandards</xsltOutputDir>
+			<xsltOutputFile>examples_AU_3.4.9.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToOpenAPI.xsl</xsltInputFile>
+			<xsltParamList>
+				<xsltParam>
+					<xsltName>sifObjectList</xsltName>
+					<xsltValue>LearningResource,LearningResourcePackage,LearningStandardDocument,LearningStandardItem</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>sifObjectGroupList</xsltName>
+					<xsltValue>'LearningStandards'</xsltValue>
+				</xsltParam>
+			</xsltParamList>
+			<xsltOutputDir>JSON\LearningStandards</xsltOutputDir>
+			<xsltOutputFile>LearningStandardsOpenAPI_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+	 	<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaCreate.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\LearningStandards</xsltOutputDir>
+			<xsltOutputFile>jsonSchemaCreate_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdate.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\LearningStandards</xsltOutputDir>
+			<xsltOutputFile>jsonSchemaUpdate_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaCreateStrict.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\LearningStandards</xsltOutputDir>
+			<xsltOutputFile>jsonSchemaCreate-strict_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdateStrict.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\LearningStandards</xsltOutputDir>
+			<xsltOutputFile>jsonSchemaUpdate-strict_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+		<!-- NAPLAN -->
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToExamples.xsl</xsltInputFile>
+			<xsltParamList>
+				<xsltParam>
+					<xsltName>sifObjectList</xsltName>
+					<xsltValue>NAPCodeFrame,NAPEventStudentLink,NAPStudentResponseSet,NAPTest,NAPTestItem,NAPTestlet,NAPTestScoreSummary</xsltValue>
+				</xsltParam>
+			</xsltParamList>
+			<xsltOutputDir>JSON\NAPLAN</xsltOutputDir>
+			<xsltOutputFile>examples_AU_3.4.9.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToOpenAPI.xsl</xsltInputFile>
+			<xsltParamList>
+				<xsltParam>
+					<xsltName>sifObjectList</xsltName>
+					<xsltValue>NAPCodeFrame,NAPEventStudentLink,NAPStudentResponseSet,NAPTest,NAPTestItem,NAPTestlet,NAPTestScoreSummary</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>sifObjectGroupList</xsltName>
+					<xsltValue>'NAPLAN'</xsltValue>
+				</xsltParam>
+			</xsltParamList>
+			<xsltOutputDir>JSON\NAPLAN</xsltOutputDir>
+			<xsltOutputFile>NAPLANOpenAPI_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+	 	<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaCreate.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\NAPLAN</xsltOutputDir>
+			<xsltOutputFile>jsonSchemaCreate_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdate.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\NAPLAN</xsltOutputDir>
+			<xsltOutputFile>jsonSchemaUpdate_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaCreateStrict.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\NAPLAN</xsltOutputDir>
+			<xsltOutputFile>jsonSchemaCreate-strict_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdateStrict.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\NAPLAN</xsltOutputDir>
+			<xsltOutputFile>jsonSchemaUpdate-strict_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+
+		<!-- Timetabling and Resource Scheduling -->
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToExamples.xsl</xsltInputFile>
+			<xsltParamList>
+				<xsltParam>
+					<xsltName>sifObjectList</xsltName>
+					<xsltValue>EquipmentInfo,LibraryPatronStatus,ResourceBooking,RoomInfo,ScheduledActivity,SchoolCourseInfo,SectionInfo,StudentSectionEnrollment,TeachingGroup,TimeTable,TimeTableCell,TimeTableContainer,TimeTableSubject</xsltValue>
+				</xsltParam>
+			</xsltParamList>
+			<xsltOutputDir>JSON\Timetabling</xsltOutputDir>
+			<xsltOutputFile>examples_AU_3.4.9.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToOpenAPI.xsl</xsltInputFile>
+			<xsltParamList>
+				<xsltParam>
+					<xsltName>sifObjectList</xsltName>
+					<xsltValue>EquipmentInfo,LibraryPatronStatus,ResourceBooking,RoomInfo,ScheduledActivity,SchoolCourseInfo,SectionInfo,StudentSectionEnrollment,TeachingGroup,TimeTable,TimeTableCell,TimeTableContainer,TimeTableSubject</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>sifObjectGroupList</xsltName>
+					<xsltValue>'Timetabling and Resource Booking'</xsltValue>
+				</xsltParam>
+			</xsltParamList>
+			<xsltOutputDir>JSON\Timetabling</xsltOutputDir>
+			<xsltOutputFile>TimetablingOpenAPI_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+	 	<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaCreate.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\Timetabling</xsltOutputDir>
+			<xsltOutputFile>jsonSchemaCreate_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdate.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\Timetabling</xsltOutputDir>
+			<xsltOutputFile>jsonSchemaUpdate_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaCreateStrict.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\Timetabling</xsltOutputDir>
+			<xsltOutputFile>jsonSchemaCreate-strict_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdateStrict.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\Timetabling</xsltOutputDir>
+			<xsltOutputFile>jsonSchemaUpdate-strict_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+
+		<!-- Wellbeing -->
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToExamples.xsl</xsltInputFile>
+			<xsltParamList>
+				<xsltParam>
+					<xsltName>sifObjectList</xsltName>
+					<xsltValue>PersonalisedPlan,WellbeingAlert,WellbeingAppeal,WellbeingCharacteristic,WellbeingEvent,WellbeingPersonLink,WellbeingResponse</xsltValue>
+				</xsltParam>
+			</xsltParamList>
+			<xsltOutputDir>JSON\Wellbeing</xsltOutputDir>
+			<xsltOutputFile>examples_AU_3.4.9.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToOpenAPI.xsl</xsltInputFile>
+			<xsltParamList>
+				<xsltParam>
+					<xsltName>sifObjectList</xsltName>
+					<xsltValue>PersonalisedPlan,WellbeingAlert,WellbeingAppeal,WellbeingCharacteristic,WellbeingEvent,WellbeingPersonLink,WellbeingResponse</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>sifObjectGroupList</xsltName>
+					<xsltValue>'Wellbeing'</xsltValue>
+				</xsltParam>
+			</xsltParamList>
+			<xsltOutputDir>JSON\Wellbeing</xsltOutputDir>
+			<xsltOutputFile>WellbeingOpenAPI_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+	 	<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaCreate.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\Wellbeing</xsltOutputDir>
+			<xsltOutputFile>jsonSchemaCreate_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdate.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\Wellbeing</xsltOutputDir>
+			<xsltOutputFile>jsonSchemaUpdate_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaCreateStrict.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\Wellbeing</xsltOutputDir>
+			<xsltOutputFile>jsonSchemaCreate-strict_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdateStrict.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\Wellbeing</xsltOutputDir>
+			<xsltOutputFile>jsonSchemaUpdate-strict_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+
+		<!-- For Future Deprecation -->
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToExamples.xsl</xsltInputFile>
+			<xsltParamList>
+				<xsltParam>
+					<xsltName>sifObjectList</xsltName>
+					<xsltValue>ResourceUsage,SystemRole</xsltValue>
+				</xsltParam>
+			</xsltParamList>
+			<xsltOutputDir>JSON\FutureDeprecation</xsltOutputDir>
+			<xsltOutputFile>examples_AU_3.4.9.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToOpenAPI.xsl</xsltInputFile>
+			<xsltParamList>
+				<xsltParam>
+					<xsltName>sifObjectList</xsltName>
+					<xsltValue>ResourceUsage,SystemRole</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>sifObjectGroupList</xsltName>
+					<xsltValue>'Object for Future Deprecation'</xsltValue>
+				</xsltParam>
+			</xsltParamList>
+			<xsltOutputDir>JSON\FutureDeprecation</xsltOutputDir>
+			<xsltOutputFile>FutureDeprecationOpenAPI_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+	 	<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaCreate.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\FutureDeprecation</xsltOutputDir>
+			<xsltOutputFile>jsonSchemaCreate_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdate.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\FutureDeprecation</xsltOutputDir>
+			<xsltOutputFile>jsonSchemaUpdate_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaCreateStrict.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\FutureDeprecation</xsltOutputDir>
+			<xsltOutputFile>jsonSchemaCreate-strict_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdateStrict.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\FutureDeprecation</xsltOutputDir>
+			<xsltOutputFile>jsonSchemaUpdate-strict_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+
+
+
+
 		
 	</xsltTransformations>
 </sifSpecificationGeneratorConfig>

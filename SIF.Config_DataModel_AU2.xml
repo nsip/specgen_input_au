@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sifSpecificationGeneratorConfig 
+	xmlns="http://www.sifassociation.org/sifSpecificationGenerator/1.0" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.sifassociation.org/sifSpecificationGenerator/1.0  
+	sifSpecificationGeneratorConfig.xsd">	
+	
+	<globalSettings>
+		<inputDocument>SIF_DataModel.xml</inputDocument>
+		<sifNamespace>http://www.sifassociation.org/datamodel/au/3.4</sifNamespace>
+		<localizationCode>au</localizationCode>
+		<schemaVersion>3.4.8</schemaVersion>
+		
+		<!-- Comment this one out to leave out JSON Tabs -->
+		
+	    <jsonExamplesXslt>98_Xslt/sif2jsonspecgen.xslt</jsonExamplesXslt> 
+		
+		<resolveExtensions>false</resolveExtensions>
+ 
+ 		<isDraft>false</isDraft>
+
+ 
+	</globalSettings>
+	
+	<htmlDocuments>
+	
+		<!-- document 1: many documents-->
+		<htmlDocument>
+			<singleDocument>false</singleDocument>
+			<rootDocumentFileName>index.html</rootDocumentFileName>
+			<rootTitle>SIF Implementation Specification (Australia) 3.4.8</rootTitle>
+			<documentType>DataModel</documentType>
+		</htmlDocument>
+		
+		<!-- document 2: Single document-->
+		<htmlDocument>
+			<singleDocument>true</singleDocument>
+			<rootDocumentFileName>ImplementationSpecification.html</rootDocumentFileName>
+			<rootTitle>SIF Implementation Specification (Australia) 3.4.8</rootTitle>
+			<documentType>DataModel</documentType>
+		</htmlDocument>
+		
+	</htmlDocuments>
+	
+  
+	<xsdDocuments>
+	
+		<xsdDocument>
+			<xsdTitle>SIF_MessageNoIncludes</xsdTitle>
+			<diagram>true</diagram>
+			<isDataModelXsd>false</isDataModelXsd>
+			<singleSchema>true</singleSchema>
+			<annotate>false</annotate>
+			<listWithKeyConstraints>false</listWithKeyConstraints>
+			<isSifMessage2Xsd>false</isSifMessage2Xsd>
+		</xsdDocument>
+		
+		<xsdDocument>
+			<xsdTitle>SIF_MessageNoIncludesAnnotated</xsdTitle>
+			<diagram>false</diagram>
+			<isDataModelXsd>false</isDataModelXsd>
+			<singleSchema>true</singleSchema>
+			<annotate>true</annotate>
+			<listWithKeyConstraints>false</listWithKeyConstraints>
+			<isSifMessage2Xsd>false</isSifMessage2Xsd>
+		</xsdDocument>
+		
+		<xsdDocument>
+			<xsdTitle>SIF_Message</xsdTitle>
+			<diagram>false</diagram>
+			<isDataModelXsd>false</isDataModelXsd>
+			<singleSchema>false</singleSchema>
+			<annotate>false</annotate>
+			<listWithKeyConstraints>false</listWithKeyConstraints>
+			<isSifMessage2Xsd>false</isSifMessage2Xsd>
+		</xsdDocument>
+		
+		<xsdDocument>
+			<xsdTitle>SIF_MessageAnnotated</xsdTitle>
+			<diagram>false</diagram>
+			<isDataModelXsd>false</isDataModelXsd>
+			<singleSchema>false</singleSchema>
+			<annotate>true</annotate>
+			<listWithKeyConstraints>false</listWithKeyConstraints>
+			<isSifMessage2Xsd>false</isSifMessage2Xsd>
+		</xsdDocument>
+		
+		<xsdDocument>
+			<xsdTitle>DataModelNoIncludes</xsdTitle>
+			<diagram>false</diagram>
+			<isDataModelXsd>true</isDataModelXsd>
+			<singleSchema>true</singleSchema>
+			<annotate>false</annotate>
+			<listWithKeyConstraints>false</listWithKeyConstraints>
+			<isSifMessage2Xsd>false</isSifMessage2Xsd>
+		</xsdDocument>
+		
+		<xsdDocument>
+			<xsdTitle>DataModelNoIncludesAnnotated</xsdTitle>
+			<diagram>false</diagram>
+			<isDataModelXsd>true</isDataModelXsd>
+			<singleSchema>true</singleSchema>
+			<annotate>true</annotate>
+			<listWithKeyConstraints>false</listWithKeyConstraints>
+			<isSifMessage2Xsd>false</isSifMessage2Xsd>
+		</xsdDocument>
+		
+		<xsdDocument>
+			<xsdTitle>DataModel</xsdTitle>
+			<diagram>false</diagram>
+			<isDataModelXsd>true</isDataModelXsd>
+			<singleSchema>false</singleSchema>
+			<annotate>false</annotate>
+			<listWithKeyConstraints>false</listWithKeyConstraints>
+			<isSifMessage2Xsd>false</isSifMessage2Xsd>
+		</xsdDocument>
+		
+		<xsdDocument>
+			<xsdTitle>DataModelAnnotated</xsdTitle>
+			<diagram>false</diagram>
+			<isDataModelXsd>true</isDataModelXsd>
+			<singleSchema>false</singleSchema>
+			<annotate>true</annotate>
+			<listWithKeyConstraints>false</listWithKeyConstraints>
+			<isSifMessage2Xsd>false</isSifMessage2Xsd>
+		</xsdDocument>
+ 
+	</xsdDocuments>	
+ 	 
+	<!-- Other outputs built using XSLT -->
+	<!--
+	
+	<xsltTransformations>
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchema.xsl</xsltInputFile>
+
+			<xsltOutputDir>JSON</xsltOutputDir>
+			<xsltOutputFile>jsonSchema.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>		
+ 
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToSwagger.xsl</xsltInputFile>
+
+			<xsltOutputDir>JSON</xsltOutputDir>
+			<xsltOutputFile>swagger.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>		 
+
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToOpenApi.xsl</xsltInputFile>
+
+			<xsltOutputDir>JSON</xsltOutputDir>
+			<xsltOutputFile>OpenAPI.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>		
+	</xsltTransformations>  -->
+	
+		<!-- Other outputs built using XSLT -->
+	 	 
+	<xsltTransformations>
+		
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToExamples.xsl</xsltInputFile>
+			<xsltOutputDir>JSON</xsltOutputDir>
+			<xsltOutputFile>examples_AU_3.4.8.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaCreate.xsl</xsltInputFile>
+			<xsltOutputDir>JSON</xsltOutputDir>
+			<xsltOutputFile>jsonSchemaCreate_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdate.xsl</xsltInputFile>
+			<xsltOutputDir>JSON</xsltOutputDir>
+			<xsltOutputFile>jsonSchemaUpdate_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaCreateStrict.xsl</xsltInputFile>
+			<xsltOutputDir>JSON</xsltOutputDir>
+			<xsltOutputFile>jsonSchemaCreate-strict_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+
+
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdateStrict.xsl</xsltInputFile>
+			<xsltOutputDir>JSON</xsltOutputDir>
+			<xsltOutputFile>jsonSchemaUpdate-strict_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+ 
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToOpenAPI.xsl</xsltInputFile>
+			<xsltOutputDir>JSON</xsltOutputDir>
+			<xsltOutputFile>OpenAPI_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>	
+			
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToExamplesSBP.xsl</xsltInputFile>
+			<xsltParamList>
+				<xsltParam>
+					<xsltParamName>sifObjectList</xsltParamName> 
+					<xsltParamValue>StudentPersonal,StudentSchoolEnrollment</xsltParamValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltParamName>sifObjectGroup</xsltParamName> 
+					<xsltParamValue>SBP</xsltParamValue>
+				</xsltParam>
+			</xsltParamList>
+			<xsltOutputDir>JSON\SBP</xsltOutputDir>
+			<xsltOutputFile>examples_AU_3.4.8.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToSBPAPI.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\SBP</xsltOutputDir>
+			<xsltOutputFile>SBPAPI_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+		<!-- These need to be either transformed or copied to the SBP directory -->
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaCreate.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\SBP</xsltOutputDir>
+			<xsltOutputFile>jsonSchemaCreate_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdate.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\SBP</xsltOutputDir>
+			<xsltOutputFile>jsonSchemaUpdate_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaCreateStrict.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\SBP</xsltOutputDir>
+			<xsltOutputFile>jsonSchemaCreate-strict_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdateStrict.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\SBP</xsltOutputDir>
+			<xsltOutputFile>jsonSchemaUpdate-strict_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+		<!-- Attendance -->
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToExamplesAtt.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\ATTEND</xsltOutputDir>
+			<xsltOutputFile>examples_AU_3.4.8.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToAttendanceAPI.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\ATTEND</xsltOutputDir>
+			<xsltOutputFile>ATTENDAPI_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+	 	<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaCreate.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\ATTEND</xsltOutputDir>
+			<xsltOutputFile>jsonSchemaCreate_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdate.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\ATTEND</xsltOutputDir>
+			<xsltOutputFile>jsonSchemaUpdate_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaCreateStrict.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\ATTEND</xsltOutputDir>
+			<xsltOutputFile>jsonSchemaCreate-strict_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdateStrict.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\ATTEND</xsltOutputDir>
+			<xsltOutputFile>jsonSchemaUpdate-strict_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+	</xsltTransformations>
+</sifSpecificationGeneratorConfig>

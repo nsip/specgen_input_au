@@ -62,6 +62,8 @@
 		<!-- ============================================================================= -->
 		<!-- Add schema defs, example defs, request defs and response defs for each object -->
 		<!-- ============================================================================= -->
+		<xsl:text>components:&#x0a;</xsl:text>
+		<xsl:text>  schemas:&#x0a;</xsl:text>
 		<xsl:apply-templates select=".//specgen:DataObjects" mode="requestPayloadDefinitions"/>
 		<xsl:apply-templates select=".//specgen:DataObjects" mode="responsePayloadDefinitions"/>
 		<xsl:apply-templates select=".//specgen:DataObjects" mode="schemaDefinitions"/>
@@ -126,10 +128,10 @@
 	<!-- ==================================== -->
 	<xsl:template match="specgen:DataObjects" mode="requestPayloadDefinitions">
 		<xsl:text>&#x0a;</xsl:text>
-		<xsl:text># /////////////////////////////////&#x0a;</xsl:text>
-		<xsl:text># // Request Payload Definitions //&#x0a;</xsl:text>
-		<xsl:text># /////////////////////////////////&#x0a;</xsl:text>
-		<xsl:text>requestPayloads:&#x0a;</xsl:text>
+		<xsl:text>    # /////////////////////////////////&#x0a;</xsl:text>
+		<xsl:text>    # // Request Payload Definitions //&#x0a;</xsl:text>
+		<xsl:text>    # /////////////////////////////////&#x0a;</xsl:text>
+		<xsl:text>    requestPayloads:&#x0a;</xsl:text>
 		<xsl:apply-templates select=".//specgen:DataObject" mode="requestPayloadDefinitions"/>
 	</xsl:template>
 
@@ -139,9 +141,9 @@
 			<xsl:variable name="excludeOps" select="specgen:OpenAPI/specgen:ExcludeOperations"/>
 	
 			<xsl:if test="not(contains($excludeOps,'ALL'))">
-				<xsl:text>  #//&#x0a;</xsl:text>
-				<xsl:value-of select="concat('  #// ', @name, '&#x0a;')"/>
-				<xsl:text>  #//&#x0a;</xsl:text>
+				<xsl:text>      #//&#x0a;</xsl:text>
+				<xsl:value-of select="concat('      #// ', @name, '&#x0a;')"/>
+				<xsl:text>      #//&#x0a;</xsl:text>
 				<xsl:apply-templates select="." mode="payloadDefinition">
 					<xsl:with-param name="schemaID">create</xsl:with-param>
 					<xsl:with-param name="objectName"><xsl:value-of select="@name"/></xsl:with-param>
@@ -172,10 +174,10 @@
 	<!-- ===================================== -->
 	<xsl:template match="specgen:DataObjects" mode="responsePayloadDefinitions">
 		<xsl:text>&#x0a;</xsl:text>
-		<xsl:text># //////////////////////////////////&#x0a;</xsl:text>
-		<xsl:text># // Response Payload Definitions //&#x0a;</xsl:text>
-		<xsl:text># //////////////////////////////////&#x0a;</xsl:text>
-		<xsl:text>responsePayloads:&#x0a;</xsl:text>
+		<xsl:text>    # //////////////////////////////////&#x0a;</xsl:text>
+		<xsl:text>    # // Response Payload Definitions //&#x0a;</xsl:text>
+		<xsl:text>    # //////////////////////////////////&#x0a;</xsl:text>
+		<xsl:text>    responsePayloads:&#x0a;</xsl:text>
 		<xsl:apply-templates select=".//specgen:DataObject" mode="responsePayloadDefinitions"/>
 	</xsl:template>
 
@@ -184,9 +186,9 @@
 			<xsl:variable name="excludeOps" select="specgen:OpenAPI/specgen:ExcludeOperations"/>
 	
 			<xsl:if test="not(contains($excludeOps,'ALL'))">
-				<xsl:text>  #//&#x0a;</xsl:text>
-				<xsl:value-of select="concat('  #// ', @name, '&#x0a;')"/>
-				<xsl:text>  #//&#x0a;</xsl:text>
+				<xsl:text>      #//&#x0a;</xsl:text>
+				<xsl:value-of select="concat('      #// ', @name, '&#x0a;')"/>
+				<xsl:text>      #//&#x0a;</xsl:text>
 				
 				<!-- 
 					Single Object Create Info
@@ -198,7 +200,7 @@
 	
 				<!-- Response Headers -->
 				<xsl:apply-templates select="." mode="addResponseHeaders">
-					<xsl:with-param name="pfx"><xsl:text>    </xsl:text></xsl:with-param>
+					<xsl:with-param name="pfx"><xsl:text>        </xsl:text></xsl:with-param>
 					<xsl:with-param name="excludeHeaders">
 						<xsl:value-of select="concat(specgen:OpenAPI/specgen:GetSingle/specgen:ExcludeResponseHTTPHeaders, ',accept, accept-encoding, accept-profile, changesSinceMarkerHead,changesSinceMarkerGet, ETag, navigationCount, navigationId, navigationLastPage, navigationPage, navigationPageSize')"/>
 					</xsl:with-param>
@@ -215,7 +217,7 @@
 	
 				<!-- Response Headers -->
 				<xsl:apply-templates select="." mode="addResponseHeaders">
-					<xsl:with-param name="pfx"><xsl:text>    </xsl:text></xsl:with-param>
+					<xsl:with-param name="pfx"><xsl:text>        </xsl:text></xsl:with-param>
 					<xsl:with-param name="excludeHeaders">
 						<xsl:value-of select="concat(specgen:OpenAPI/specgen:PutSingle/specgen:ExcludeResponseHTTPHeaders, ',accept, accept-encoding, accept-profile, changesSinceMarkerHead,changesSinceMarkerGet, ETag, navigationCount, navigationId, navigationLastPage, navigationPage, navigationPageSize')"/>
 					</xsl:with-param>
@@ -231,7 +233,7 @@
 				</xsl:apply-templates>
 				<!-- Response Headers -->
 				<xsl:apply-templates select="." mode="addResponseHeaders">
-					<xsl:with-param name="pfx"><xsl:text>    </xsl:text></xsl:with-param>
+					<xsl:with-param name="pfx"><xsl:text>        </xsl:text></xsl:with-param>
 					<xsl:with-param name="excludeHeaders">
 						<xsl:value-of select="concat(specgen:OpenAPI/specgen:GetBatch/specgen:ExcludeResponseHTTPHeaders, ',changesSinceMarkerHead')"/>
 					</xsl:with-param>
@@ -248,7 +250,7 @@
 				</xsl:apply-templates>
 				<!-- Response Headers -->
 				<xsl:apply-templates select="." mode="addResponseHeaders">
-					<xsl:with-param name="pfx"><xsl:text>    </xsl:text></xsl:with-param>
+					<xsl:with-param name="pfx"><xsl:text>        </xsl:text></xsl:with-param>
 					<xsl:with-param name="excludeHeaders">
 						<xsl:value-of select="concat(specgen:OpenAPI/specgen:GetBatch/specgen:ExcludeResponseHTTPHeaders, ',changesSinceMarkerHead')"/>
 					</xsl:with-param>
@@ -273,76 +275,84 @@
 		<xsl:param name="addBatchDeleletRequest"/>
 
 		<xsl:if test="$isQBE = 'true'">
-			<xsl:value-of select="concat('  ', $schemaID, $objectName, 'QBE:&#x0a;')"/>
-			<xsl:value-of select="concat('    description: Payload for Multiple POST request for ', $objectName, '&#x0a;')"/>
+			<xsl:value-of select="concat('      ', $schemaID, $objectName, 'QBE:&#x0a;')"/>
+			<xsl:value-of select="concat('        description: Payload for Multiple POST request for ', $objectName, '&#x0a;')"/>
 		</xsl:if>
 		<xsl:if test="not($isQBE = 'true')">
-			<xsl:value-of select="concat('  ', $schemaID, $objectName, ':&#x0a;')"/>
-			<xsl:value-of select="concat('    description: Payload for ', $objectName, '&#x0a;')"/>
+			<xsl:value-of select="concat('      ', $schemaID, $objectName, ':&#x0a;')"/>
+			<xsl:value-of select="concat('        description: Payload for ', $objectName, '&#x0a;')"/>
 		</xsl:if>
-		<xsl:text>    content:&#x0a;</xsl:text>
-		<xsl:text>      application/json:&#x0a;</xsl:text>
-		<xsl:text>        schema:&#x0a;</xsl:text>
+		<xsl:text>        content:&#x0a;</xsl:text>
+		<xsl:text>          application/json:&#x0a;</xsl:text>
+		<xsl:text>            schema:&#x0a;</xsl:text>
 		
 		<xsl:if test="$isQBE = 'true'">
-			<xsl:text>          oneOf:&#x0a;</xsl:text>
-			<xsl:value-of select="concat('            - $ref: ''commonDefs.yaml#/multipleResponses/createMultiSchema', '''&#x0a;')"/>
-			<xsl:value-of select="concat('            - $ref: ''#/schemaDefinitions/', $schemaID, 'Schema', $objectName, '''&#x0a;')"/>
+			<xsl:text>              oneOf:&#x0a;</xsl:text>
+			<xsl:value-of select="concat('                - $ref: ''#/components/schemas/schemaDefinitions/', $schemaID, 'Schema', $objectName, '''&#x0a;')"/>
+			<xsl:value-of select="concat('                  title: ', $objectName, '&#x0a;')"/>
+			<xsl:value-of select="concat('                - $ref: ''commonDefs.yaml#/components/schemas/multipleResponses/createMultiSchema', '''&#x0a;')"/>
+			<xsl:value-of select="concat('                  title: createRequest', '&#x0a;')"/>
 		</xsl:if>
 		<xsl:if test="not($isQBE = 'true')">
 		  <xsl:if test="not($addBatchDeleletRequest = 'true')">
-			<xsl:value-of select="concat('          $ref: ''#/schemaDefinitions/', $schemaID, 'Schema', $objectName, '''&#x0a;')"/>
+			<xsl:value-of select="concat('              $ref: ''#/components/schemas/schemaDefinitions/', $schemaID, 'Schema', $objectName, '''&#x0a;')"/>
 		  </xsl:if>
 		  <xsl:if test="$addBatchDeleletRequest = 'true'">
-			<xsl:text>          oneOf:&#x0a;</xsl:text>
-			<xsl:value-of select="concat('            - $ref: ''#/schemaDefinitions/', $schemaID, 'Schema', $objectName, '''&#x0a;')"/>
-			<xsl:value-of select="concat('            - $ref: ''commonDefs.yaml#/multipleRequests/deleteMultiSchema', '''&#x0a;')"/>
+			<xsl:text>              oneOf:&#x0a;</xsl:text>
+			<xsl:value-of select="concat('                - $ref: ''#/components/schemas/schemaDefinitions/', $schemaID, 'Schema', $objectName, '''&#x0a;')"/>
+			<xsl:value-of select="concat('                  title: ', $objectName, '&#x0a;')"/>
+			<xsl:value-of select="concat('                - $ref: ''commonDefs.yaml#/components/schemas/multipleRequests/deleteMultiSchema', '''&#x0a;')"/>
+			<xsl:value-of select="concat('                  title: deleteRequest', '&#x0a;')"/>
 		  </xsl:if>
 		</xsl:if>
-		<xsl:text>        examples:&#x0a;</xsl:text>
+		<xsl:text>            examples:&#x0a;</xsl:text>
 		<xsl:if test="$isQBE = 'true'">
-			<xsl:value-of select="concat('          qbe', 'PESC:', '&#x0a;')"/>
-			<xsl:value-of select="concat('            $ref: ''commonDefs.yaml#/multipleResponses/createMultiExamples/pesc', '''&#x0a;')"/>
-			<xsl:value-of select="concat('          qbe', 'Goessner:', '&#x0a;')"/>
-			<xsl:value-of select="concat('            $ref: ''commonDefs.yaml#/multipleResponses/createMultiExamples/goessner', '''&#x0a;')"/>
+			<xsl:value-of select="concat('              qbe', 'PESC:', '&#x0a;')"/>
+			<xsl:value-of select="concat('                $ref: ''commonDefs.yaml#/components/schemas/multipleResponses/createMultiExamples/pesc', '''&#x0a;')"/>
+			<xsl:value-of select="concat('              qbe', 'Goessner:', '&#x0a;')"/>
+			<xsl:value-of select="concat('                $ref: ''commonDefs.yaml#/components/schemas/multipleResponses/createMultiExamples/goessner', '''&#x0a;')"/>
 		</xsl:if>		
-		<xsl:value-of select="concat('          ', $schemaID, 'PESC:', '&#x0a;')"/>
-		<xsl:value-of select="concat('            $ref: ''', $exampleFileName, '#/objectExamples/', $objectName, '/pesc''&#x0a;')"/>
-		<xsl:value-of select="concat('          ', $schemaID, 'Goessner:', '&#x0a;')"/>
-		<xsl:value-of select="concat('            $ref: ''', $exampleFileName, '#/objectExamples/', $objectName, '/goessner''&#x0a;')"/>
+		<xsl:value-of select="concat('              ', $schemaID, 'PESC:', '&#x0a;')"/>
+		<xsl:value-of select="concat('                $ref: ''', $exampleFileName, '#/objectExamples/', $objectName, '/pesc''&#x0a;')"/>
+		<xsl:value-of select="concat('              ', $schemaID, 'Goessner:', '&#x0a;')"/>
+		<xsl:value-of select="concat('                $ref: ''', $exampleFileName, '#/objectExamples/', $objectName, '/goessner''&#x0a;')"/>
 	  	<xsl:if test="$addBatchDeleletRequest = 'true'">
-			<xsl:value-of select="concat('          ', 'deletePESC:', '&#x0a;')"/>
-			<xsl:value-of select="concat('            $ref: ''commonDefs.yaml#/multipleRequests/deleteMultiExamples/pesc', '''&#x0a;')"/>
-			<xsl:value-of select="concat('          ', 'deleteGoessner:', '&#x0a;')"/>
-			<xsl:value-of select="concat('            $ref: ''commonDefs.yaml#/multipleRequests/deleteMultiExamples/goessner', '''&#x0a;')"/>
+			<xsl:value-of select="concat('              ', 'deletePESC:', '&#x0a;')"/>
+			<xsl:value-of select="concat('                $ref: ''commonDefs.yaml#/components/schemas/multipleRequests/deleteMultiExamples/pesc', '''&#x0a;')"/>
+			<xsl:value-of select="concat('              ', 'deleteGoessner:', '&#x0a;')"/>
+			<xsl:value-of select="concat('                $ref: ''commonDefs.yaml#/components/schemas/multipleRequests/deleteMultiExamples/goessner', '''&#x0a;')"/>
 		</xsl:if>
-		<xsl:text>      application/xml:&#x0a;</xsl:text>
-		<xsl:text>        schema:&#x0a;</xsl:text>
+		<xsl:text>          application/xml:&#x0a;</xsl:text>
+		<xsl:text>            schema:&#x0a;</xsl:text>
 		<xsl:if test="$isQBE = 'true'">
-			<xsl:text>          oneOf:&#x0a;</xsl:text>
-			<xsl:value-of select="concat('            - $ref: ''commonDefs.yaml#/multipleResponses/createMultiSchema', '''&#x0a;')"/>
-			<xsl:value-of select="concat('            - $ref: ''#/schemaDefinitions/', $schemaID, 'Schema', $objectName, '''&#x0a;')"/>
+			<xsl:text>              oneOf:&#x0a;</xsl:text>
+			<xsl:value-of select="concat('                - $ref: ''#/components/schemas/schemaDefinitions/', $schemaID, 'Schema', $objectName, '''&#x0a;')"/>
+			<xsl:value-of select="concat('                  title: ', $objectName, '&#x0a;')"/>
+			<xsl:value-of select="concat('                - $ref: ''commonDefs.yaml#/components/schemas/multipleResponses/createMultiSchema', '''&#x0a;')"/>
+			<xsl:value-of select="concat('                  title: createRequest', '&#x0a;')"/>
 		</xsl:if>
 		<xsl:if test="not($isQBE = 'true')">
 		  <xsl:if test="not($addBatchDeleletRequest = 'true')">
-			<xsl:value-of select="concat('          $ref: ''#/schemaDefinitions/', $schemaID, 'Schema', $objectName, '''&#x0a;')"/>
+			<xsl:value-of select="concat('              $ref: ''#/components/schemas/schemaDefinitions/', $schemaID, 'Schema', $objectName, '''&#x0a;')"/>
 		  </xsl:if>
 		  <xsl:if test="$addBatchDeleletRequest = 'true'">
-			<xsl:text>          oneOf:&#x0a;</xsl:text>
-			<xsl:value-of select="concat('            - $ref: ''#/schemaDefinitions/', $schemaID, 'Schema', $objectName, '''&#x0a;')"/>
-			<xsl:value-of select="concat('            - $ref: ''commonDefs.yaml#/multipleRequests/deleteMultiSchema', '''&#x0a;')"/>
+			<xsl:text>              oneOf:&#x0a;</xsl:text>
+			<xsl:value-of select="concat('                - $ref: ''#/components/schemas/schemaDefinitions/', $schemaID, 'Schema', $objectName, '''&#x0a;')"/>
+			<xsl:value-of select="concat('                  title: ', $objectName, '&#x0a;')"/>
+			<xsl:value-of select="concat('                - $ref: ''commonDefs.yaml#/components/schemas/multipleRequests/deleteMultiSchema', '''&#x0a;')"/>
+			<xsl:value-of select="concat('                  title: deleteRequest', '&#x0a;')"/>
 		  </xsl:if>
 		</xsl:if>
-		<xsl:text>        examples:&#x0a;</xsl:text>
+		<xsl:text>            examples:&#x0a;</xsl:text>
 		<xsl:if test="$isQBE = 'true'">
-			<xsl:value-of select="concat('          qbe', 'XML:', '&#x0a;')"/>
-			<xsl:value-of select="concat('            $ref: ''commonDefs.yaml#/multipleResponses/createMultiExamples/xml', '''&#x0a;')"/>
+			<xsl:value-of select="concat('              qbe', 'XML:', '&#x0a;')"/>
+			<xsl:value-of select="concat('                $ref: ''commonDefs.yaml#/components/schemas/multipleResponses/createMultiExamples/xml', '''&#x0a;')"/>
 		</xsl:if>		
-		<xsl:value-of select="concat('          ', $schemaID, 'XML:', '&#x0a;')"/>
-		<xsl:value-of select="concat('            $ref: ''', $exampleFileName, '#/objectExamples/', $objectName, '/xml''&#x0a;')"/>
+		<xsl:value-of select="concat('              ', $schemaID, 'XML:', '&#x0a;')"/>
+		<xsl:value-of select="concat('                $ref: ''', $exampleFileName, '#/objectExamples/', $objectName, '/xml''&#x0a;')"/>
 	  	<xsl:if test="$addBatchDeleletRequest = 'true'">
-			<xsl:value-of select="concat('          ', 'deleteXML:', '&#x0a;')"/>
-			<xsl:value-of select="concat('            $ref: ''commonDefs.yaml#/multipleRequests/deleteMultiExamples/xml', '''&#x0a;')"/>
+			<xsl:value-of select="concat('              ', 'deleteXML:', '&#x0a;')"/>
+			<xsl:value-of select="concat('                $ref: ''commonDefs.yaml#/components/schemas/multipleRequests/deleteMultiExamples/xml', '''&#x0a;')"/>
 		</xsl:if>
 	</xsl:template>
 
@@ -351,10 +361,10 @@
 	<!-- =========================== -->
 	<xsl:template match="specgen:DataObjects" mode="schemaDefinitions">
 		<xsl:text>&#x0a;</xsl:text>
-		<xsl:text># ////////////////////////&#x0a;</xsl:text>
-		<xsl:text># // Schema Definitions //&#x0a;</xsl:text>
-		<xsl:text># ////////////////////////&#x0a;</xsl:text>
-		<xsl:text>schemaDefinitions:&#x0a;</xsl:text>
+		<xsl:text>    # ////////////////////////&#x0a;</xsl:text>
+		<xsl:text>    # // Schema Definitions //&#x0a;</xsl:text>
+		<xsl:text>    # ////////////////////////&#x0a;</xsl:text>
+		<xsl:text>    schemaDefinitions:&#x0a;</xsl:text>
 		<xsl:apply-templates select=".//specgen:DataObject" mode="schemaDefinitions"/>
 	</xsl:template>
 
@@ -363,9 +373,9 @@
 			<xsl:variable name="excludeOps" select="specgen:OpenAPI/specgen:ExcludeOperations"/>
 	
 			<xsl:if test="not(contains($excludeOps,'ALL'))">
-				<xsl:text>  #//&#x0a;</xsl:text>
-				<xsl:value-of select="concat('  #// ', @name, '&#x0a;')"/>
-				<xsl:text>  #//&#x0a;</xsl:text>
+				<xsl:text>      #//&#x0a;</xsl:text>
+				<xsl:value-of select="concat('      #// ', @name, '&#x0a;')"/>
+				<xsl:text>      #//&#x0a;</xsl:text>
 				<xsl:apply-templates select="." mode="singleSchemaDef"/>
 				<xsl:apply-templates select="." mode="collectionSchemaDef"/>
 			</xsl:if>
@@ -376,19 +386,19 @@
 	<!-- Template for producing info about Schema Defs for Single Objects -->
 	<!-- ================================================================ -->
 	<xsl:template match="specgen:DataObject" mode="singleSchemaDef">
-		<xsl:value-of select="concat('  updateSchema', @name, ':&#x0a;')"/>
-		<xsl:text>    properties:&#x0a;</xsl:text>
-		<xsl:value-of select="concat('      ', @name, ':&#x0a;')"/>
-		<xsl:text>        type: object&#x0a;</xsl:text>
-		<xsl:value-of select="concat('        description: >-', '&#x0a;', '          Payload definition for ', @name, '&#x0a;')"/>
-		<xsl:value-of select="concat('        $ref: ''jsonSchema', 'Update_', $sifLocale, '.yaml#/properties/', @name, '''&#x0a;')"/>
+		<xsl:value-of select="concat('      updateSchema', @name, ':&#x0a;')"/>
+		<xsl:text>        properties:&#x0a;</xsl:text>
+		<xsl:value-of select="concat('          ', @name, ':&#x0a;')"/>
+		<xsl:text>            type: object&#x0a;</xsl:text>
+		<xsl:value-of select="concat('            description: >-', '&#x0a;', '              Payload definition for ', @name, '&#x0a;')"/>
+		<xsl:value-of select="concat('            $ref: ''jsonSchema', 'Update_', $sifLocale, '.yaml#/definitions/', @name, '''&#x0a;')"/>
 		<xsl:text>&#x0a;</xsl:text>
-		<xsl:value-of select="concat('  createSchema', @name, ':&#x0a;')"/>
-		<xsl:text>    properties:&#x0a;</xsl:text>
-		<xsl:value-of select="concat('      ', @name, ':&#x0a;')"/>
-		<xsl:text>        type: object&#x0a;</xsl:text>
-		<xsl:value-of select="concat('        description: >-', '&#x0a;', '          Payload definition for ', @name, '&#x0a;')"/>
-		<xsl:value-of select="concat('        $ref: ''jsonSchema', 'Create_', $sifLocale, '.yaml#/properties/', @name, '''&#x0a;')"/>
+		<xsl:value-of select="concat('      createSchema', @name, ':&#x0a;')"/>
+		<xsl:text>        properties:&#x0a;</xsl:text>
+		<xsl:value-of select="concat('          ', @name, ':&#x0a;')"/>
+		<xsl:text>            type: object&#x0a;</xsl:text>
+		<xsl:value-of select="concat('            description: >-', '&#x0a;', '              Payload definition for ', @name, '&#x0a;')"/>
+		<xsl:value-of select="concat('            $ref: ''jsonSchema', 'Create_', $sifLocale, '.yaml#/definitions/', @name, '''&#x0a;')"/>
 		<xsl:text>&#x0a;</xsl:text>
 	</xsl:template>
 
@@ -396,30 +406,30 @@
 	<!-- Template for producing info about Schema Def for List Objects -->
 	<!-- ============================================================= -->
 	<xsl:template match="specgen:DataObject" mode="collectionSchemaDef">
-		<xsl:value-of select="concat('  updateSchema', @name, 's:&#x0a;')"/>
-		<xsl:text>    properties:&#x0a;</xsl:text>
-		<xsl:value-of select="concat('      ', @name, 's:&#x0a;')"/>
-		<xsl:text>        type: object&#x0a;</xsl:text>
-		<xsl:text>        description: >-&#x0a;</xsl:text>
-		<xsl:value-of select="concat('          A Collection of ', @name, ' objects&#x0a;')"/>
+		<xsl:value-of select="concat('      updateSchema', @name, 's:&#x0a;')"/>
 		<xsl:text>        properties:&#x0a;</xsl:text>
-		<xsl:value-of select="concat('          ', @name, ':&#x0a;')"/>
-		<xsl:text>            type: array&#x0a;</xsl:text>
-		<xsl:text>            items:&#x0a;</xsl:text>
-		<xsl:value-of select="concat('              $ref: ''jsonSchema', 'Update_', $sifLocale, '.yaml#/properties/', @name, '''&#x0a;')"/>
+		<xsl:value-of select="concat('          ', @name, 's:&#x0a;')"/>
+		<xsl:text>            type: object&#x0a;</xsl:text>
+		<xsl:text>            description: >-&#x0a;</xsl:text>
+		<xsl:value-of select="concat('              A Collection of ', @name, ' objects&#x0a;')"/>
+		<xsl:text>            properties:&#x0a;</xsl:text>
+		<xsl:value-of select="concat('              ', @name, ':&#x0a;')"/>
+		<xsl:text>                type: array&#x0a;</xsl:text>
+		<xsl:text>                items:&#x0a;</xsl:text>
+		<xsl:value-of select="concat('                  $ref: ''jsonSchema', 'Update_', $sifLocale, '.yaml#/definitions/', @name, '''&#x0a;')"/>
 		<xsl:text>&#x0a;</xsl:text>
 		
-		<xsl:value-of select="concat('  createSchema', @name, 's:&#x0a;')"/>
-		<xsl:text>    properties:&#x0a;</xsl:text>
-		<xsl:value-of select="concat('      ', @name, 's:&#x0a;')"/>
-		<xsl:text>        type: object&#x0a;</xsl:text>
-		<xsl:text>        description: >-&#x0a;</xsl:text>
-		<xsl:value-of select="concat('          A Collection of ', @name, ' objects&#x0a;')"/>
+		<xsl:value-of select="concat('      createSchema', @name, 's:&#x0a;')"/>
 		<xsl:text>        properties:&#x0a;</xsl:text>
-		<xsl:value-of select="concat('          ', @name, ':&#x0a;')"/>
-		<xsl:text>            type: array&#x0a;</xsl:text>
-		<xsl:text>            items:&#x0a;</xsl:text>
-		<xsl:value-of select="concat('              $ref: ''jsonSchema', 'Update_', $sifLocale, '.yaml#/properties/', @name, '''&#x0a;')"/>
+		<xsl:value-of select="concat('          ', @name, 's:&#x0a;')"/>
+		<xsl:text>            type: object&#x0a;</xsl:text>
+		<xsl:text>            description: >-&#x0a;</xsl:text>
+		<xsl:value-of select="concat('              A Collection of ', @name, ' objects&#x0a;')"/>
+		<xsl:text>            properties:&#x0a;</xsl:text>
+		<xsl:value-of select="concat('              ', @name, ':&#x0a;')"/>
+		<xsl:text>                type: array&#x0a;</xsl:text>
+		<xsl:text>                items:&#x0a;</xsl:text>
+		<xsl:value-of select="concat('                  $ref: ''jsonSchema', 'Create_', $sifLocale, '.yaml#/definitions/', @name, '''&#x0a;')"/>
 		<xsl:text>&#x0a;</xsl:text>
 	</xsl:template>
 
@@ -429,119 +439,120 @@
 	<xsl:template match="*" mode="addResponseHeaders">
 	    <xsl:param name="pfx"/>
 		<xsl:param name="excludeHeaders"/>
-<!-- 		
+
+<!-- -->		
 		<xsl:value-of select="concat($pfx, 'headers:&#x0a;')"/>
 		
 		<xsl:if test="not(contains($excludeHeaders, 'accept'))">
 			<xsl:value-of select="concat($pfx, '  ''accept'':&#x0a;')"/>
-			<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/httpHeaders/response/accept''&#x0a;')"/>
+			<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/components/schemas/httpHeaders/response/accept''&#x0a;')"/>
 		</xsl:if>
 
 		<xsl:if test="not(contains($excludeHeaders, 'content-type'))">
 			<xsl:value-of select="concat($pfx, '  ''content-type'':&#x0a;')"/>
-			<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/httpHeaders/response/content-type''&#x0a;')"/>
+			<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/components/schemas/httpHeaders/response/content-type''&#x0a;')"/>
 		</xsl:if>
 		
 		<xsl:if test="not(contains($excludeHeaders, 'content-encoding'))">
 			<xsl:value-of select="concat($pfx, '  ''content-encoding'':&#x0a;')"/>
-			<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/httpHeaders/response/content-encoding''&#x0a;')"/>
+			<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/components/schemas/httpHeaders/response/content-encoding''&#x0a;')"/>
 		</xsl:if>
 
 		<xsl:if test="not(contains($excludeHeaders, 'content-profile'))">
 			<xsl:value-of select="concat($pfx, '  ''content-profile'':&#x0a;')"/>
-			<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/httpHeaders/response/content-profile''&#x0a;')"/>
+			<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/components/schemas/httpHeaders/response/content-profile''&#x0a;')"/>
 		</xsl:if>
 
 		<xsl:if test="not(contains($excludeHeaders, 'changesSinceMarkerGet'))">
 			<xsl:value-of select="concat($pfx, '  ''changesSinceMarker'':&#x0a;')"/>
-			<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/httpHeaders/response/changesSinceMarkerGet''&#x0a;')"/>
+			<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/components/schemas/httpHeaders/response/changesSinceMarkerGet''&#x0a;')"/>
 		</xsl:if>
 
 		<xsl:if test="not(contains($excludeHeaders, 'changesSinceMarkerHead'))">
 			<xsl:value-of select="concat($pfx, '  ''changesSinceMarker'':&#x0a;')"/>
-			<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/httpHeaders/response/changesSinceMarkerHead''&#x0a;')"/>
+			<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/components/schemas/httpHeaders/response/changesSinceMarkerHead''&#x0a;')"/>
 		</xsl:if>
 		
 		<xsl:if test="not(contains($excludeHeaders, 'environmentURI'))">
 			<xsl:value-of select="concat($pfx, '  ''environmentURI'':&#x0a;')"/>
-			<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/httpHeaders/response/environmentURI''&#x0a;')"/>
+			<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/components/schemas/httpHeaders/response/environmentURI''&#x0a;')"/>
 		</xsl:if>
 
 		<xsl:if test="not(contains($excludeHeaders, 'ETag'))">
 			<xsl:value-of select="concat($pfx, '  ''ETag'':&#x0a;')"/>
-			<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/httpHeaders/response/ETag''&#x0a;')"/>
+			<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/components/schemas/httpHeaders/response/ETag''&#x0a;')"/>
 		</xsl:if>
 
 		<xsl:if test="not(contains($excludeHeaders, 'fingerprint'))">
 			<xsl:value-of select="concat($pfx, '  ''fingerprint'':&#x0a;')"/>
-			<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/httpHeaders/response/fingerprint''&#x0a;')"/>
+			<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/components/schemas/httpHeaders/response/fingerprint''&#x0a;')"/>
 		</xsl:if>
 
 		<xsl:if test="not(contains($excludeHeaders, 'messageId'))">
 			<xsl:value-of select="concat($pfx, '  ''messageId'':&#x0a;')"/>
-			<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/httpHeaders/response/messageId''&#x0a;')"/>
+			<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/components/schemas/httpHeaders/response/messageId''&#x0a;')"/>
 		</xsl:if>
 		
 		<xsl:if test="not(contains($excludeHeaders, 'messageType'))">
 			<xsl:value-of select="concat($pfx, '  ''messageType'':&#x0a;')"/>
-			<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/httpHeaders/response/messageType''&#x0a;')"/>
+			<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/components/schemas/httpHeaders/response/messageType''&#x0a;')"/>
 		</xsl:if>
 
 		<xsl:if test="not(contains($excludeHeaders, 'navigationCount'))">
 			<xsl:value-of select="concat($pfx, '  ''navigationCount'':&#x0a;')"/>
-			<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/httpHeaders/response/navigationCount''&#x0a;')"/>
+			<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/components/schemas/httpHeaders/response/navigationCount''&#x0a;')"/>
 		</xsl:if>
 
 		<xsl:if test="not(contains($excludeHeaders, 'navigationId'))">
 			<xsl:value-of select="concat($pfx, '  ''navigationId'':&#x0a;')"/>
-			<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/httpHeaders/response/navigationId''&#x0a;')"/>
+			<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/components/schemas/httpHeaders/response/navigationId''&#x0a;')"/>
 		</xsl:if>
 
 		<xsl:if test="not(contains($excludeHeaders, 'navigationLastPage'))">
 			<xsl:value-of select="concat($pfx, '  ''navigationLastPage'':&#x0a;')"/>
-			<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/httpHeaders/response/navigationLastPage''&#x0a;')"/>
+			<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/components/schemas/httpHeaders/response/navigationLastPage''&#x0a;')"/>
 		</xsl:if>
 
 		<xsl:if test="not(contains($excludeHeaders, 'navigationPage'))">
 			<xsl:value-of select="concat($pfx, '  ''navigationPage'':&#x0a;')"/>
-			<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/httpHeaders/response/navigationPage''&#x0a;')"/>
+			<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/components/schemas/httpHeaders/response/navigationPage''&#x0a;')"/>
 		</xsl:if>
 
 		<xsl:if test="not(contains($excludeHeaders, 'navigationPageSize'))">
 			<xsl:value-of select="concat($pfx, '  ''navigationPageSize'':&#x0a;')"/>
-			<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/httpHeaders/response/navigationPageSize''&#x0a;')"/>
+			<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/components/schemas/httpHeaders/response/navigationPageSize''&#x0a;')"/>
 		</xsl:if>
 
 		<xsl:if test="not(contains($excludeHeaders, 'relativeServicePath'))">
 			<xsl:value-of select="concat($pfx, '  ''relativeServicePath'':&#x0a;')"/>
-			<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/httpHeaders/response/relativeServicePath''&#x0a;')"/>
+			<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/components/schemas/httpHeaders/response/relativeServicePath''&#x0a;')"/>
 		</xsl:if>
 
 		<xsl:if test="not(contains($excludeHeaders, 'requestId'))">
 			<xsl:value-of select="concat($pfx, '  ''requestId'':&#x0a;')"/>
-			<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/httpHeaders/response/requestId''&#x0a;')"/>
+			<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/components/schemas/httpHeaders/response/requestId''&#x0a;')"/>
 		</xsl:if>
 		
 		<xsl:if test="not(contains($excludeHeaders, 'responseAction'))">
 			<xsl:value-of select="concat($pfx, '  ''responseAction'':&#x0a;')"/>
-			<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/httpHeaders/response/responseAction''&#x0a;')"/>
+			<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/components/schemas/httpHeaders/response/responseAction''&#x0a;')"/>
 		</xsl:if>
 		
 		<xsl:if test="not(contains($excludeHeaders, 'serviceType'))">
 			<xsl:value-of select="concat($pfx, '  ''serviceType'':&#x0a;')"/>
-			<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/httpHeaders/response/serviceType''&#x0a;')"/>
+			<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/components/schemas/httpHeaders/response/serviceType''&#x0a;')"/>
 		</xsl:if>
 		
 		<xsl:if test="not(contains($excludeHeaders, 'timestamp'))">
 			<xsl:value-of select="concat($pfx, '  ''timestamp'':&#x0a;')"/>
-			<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/httpHeaders/response/timestamp''&#x0a;')"/>
+			<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/components/schemas/httpHeaders/response/timestamp''&#x0a;')"/>
 		</xsl:if>
 		
 		<xsl:if test="not(contains($excludeHeaders, 'vary'))">
 			<xsl:value-of select="concat($pfx, '  ''vary'':&#x0a;')"/>
-			<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/httpHeaders/response/vary''&#x0a;')"/>
+			<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/components/schemas/httpHeaders/response/vary''&#x0a;')"/>
 		</xsl:if>
--->		
+<!-- -->		
 	</xsl:template>
 	
 	<xsl:template match="specgen:DataObjects" mode="paths">
@@ -905,7 +916,7 @@
 		<xsl:param name="schemaId"/>
 		<xsl:value-of select="concat('      operationId: ', $operationId, '&#x0a;')"/>
 		<xsl:text>      requestBody:&#x0a;</xsl:text>
-		<xsl:value-of select="concat('        $ref: ''#/requestPayloads/', $schemaId, @name, '''&#x0a;')"/>
+		<xsl:value-of select="concat('        $ref: ''#/components/schemas/requestPayloads/', $schemaId, @name, '''&#x0a;')"/>
 	</xsl:template>
 
     <xsl:template match="specgen:DataObject" mode="requestBodyList">
@@ -913,7 +924,7 @@
 		<xsl:param name="schemaId"/>
 		<xsl:value-of select="concat('      operationId: ', $operationId, '&#x0a;')"/>
 		<xsl:text>      requestBody:&#x0a;</xsl:text>
-		<xsl:value-of select="concat('        $ref: ''#/requestPayloads/', $schemaId, @name, 's''&#x0a;')"/>
+		<xsl:value-of select="concat('        $ref: ''#/components/schemas/requestPayloads/', $schemaId, @name, 's''&#x0a;')"/>
 	</xsl:template>
 
     <xsl:template match="specgen:DataObject" mode="responsesSingle">
@@ -922,7 +933,7 @@
 		
 		<xsl:text>      responses:&#x0a;</xsl:text>
 		<xsl:value-of select="concat('        ''', $returnCode , ''':&#x0a;')"/>
-		<xsl:value-of select="concat('          $ref: ''#/responsePayloads/', $schemaId, @name, '''&#x0a;')"/>
+		<xsl:value-of select="concat('          $ref: ''#/components/schemas/responsePayloads/', $schemaId, @name, '''&#x0a;')"/>
 	</xsl:template>
 
     <xsl:template match="specgen:DataObject" mode="responsesList">
@@ -930,7 +941,7 @@
 		
 		<xsl:text>      responses:&#x0a;</xsl:text>
         <xsl:text>        '200':&#x0a;</xsl:text>
-		<xsl:value-of select="concat('          $ref: ''#/responsePayloads/create', @name, 's''&#x0a;')"/>
+		<xsl:value-of select="concat('          $ref: ''#/components/schemas/responsePayloads/create', @name, 's''&#x0a;')"/>
 		<xsl:if test="$includeAccepted">
             <xsl:text>        '202':&#x0a;</xsl:text>
             <xsl:text>          description: Accepted. Returned for DELAYED requests. No payload.&#x0a;</xsl:text>
@@ -944,7 +955,7 @@
 		<xsl:param name="includeAccepted" as="xs:boolean"/>
 		<xsl:text>      responses:&#x0a;</xsl:text>
 		<xsl:value-of select="concat('        ''', '200', '''', ':&#x0a;')"/>
-		<xsl:value-of select="concat('          $ref: ', '''', 'commonDefs.yaml#/multipleResponses/batchPutResponse''', '&#x0a;')"/>
+		<xsl:value-of select="concat('          $ref: ', '''', 'commonDefs.yaml#/components/schemas/multipleResponses/batchPutResponse''', '&#x0a;')"/>
 		<xsl:if test="$includeAccepted">
             <xsl:text>        '202':&#x0a;</xsl:text>
             <xsl:text>          description: Accepted. Returned for DELAYED requests. No payload.&#x0a;</xsl:text>
@@ -960,10 +971,10 @@
 		<xsl:text>      responses:&#x0a;</xsl:text>
 		<xsl:value-of select="concat('        ''', '200', '''', ':&#x0a;')"/>
 		<xsl:if test="$qbeSupported">
-			<xsl:value-of select="concat('          $ref: ', '''', '#/responsePayloads/create', @name, 'sQBE', '''&#x0a;')"/>
+			<xsl:value-of select="concat('          $ref: ', '''', '#/components/schemas/responsePayloads/create', @name, 'sQBE', '''&#x0a;')"/>
 		</xsl:if>
 		<xsl:if test="not($qbeSupported)">
-			<xsl:value-of select="concat('          $ref: ', '''', 'commonDefs.yaml#/multipleResponses/batchPostResponse''', '&#x0a;')"/>
+			<xsl:value-of select="concat('          $ref: ', '''', 'commonDefs.yaml#/components/schemas/multipleResponses/batchPostResponse''', '&#x0a;')"/>
 		</xsl:if>
 		<xsl:if test="$includeAccepted">
             <xsl:text>        '202':&#x0a;</xsl:text>
@@ -1273,7 +1284,7 @@
     <!-- ================================================= -->
 	<xsl:template match="specgen:DataObject" mode="addRequestHTTPHeaderRef">
 		<xsl:param name="hdrName"/>
-		<xsl:value-of select="concat('      - $ref: ', '''', 'commonDefs.yaml#/httpHeaders/request/', $hdrName,'''', '&#x0a;')"/>
+		<xsl:value-of select="concat('      - $ref: ', '''', 'commonDefs.yaml#/components/schemas/httpHeaders/request/', $hdrName,'''', '&#x0a;')"/>
 	</xsl:template>
 
     <!-- ================================================== -->
@@ -1281,7 +1292,7 @@
     <!-- ================================================== -->
 	<xsl:template match="specgen:DataObject" mode="addQueryParameterRef">
 		<xsl:param name="paramName"/>
-		<xsl:value-of select="concat('      - $ref: ', '''', 'commonDefs.yaml#/queryParameters/', $paramName,'''', '&#x0a;')"/>
+		<xsl:value-of select="concat('      - $ref: ', '''', 'commonDefs.yaml#/components/schemas/queryParameters/', $paramName,'''', '&#x0a;')"/>
 	</xsl:template>
 
     <!-- ======================================= -->
@@ -1290,7 +1301,7 @@
 	<xsl:template match="specgen:DataObject" mode="addErrorCodeRef">
 		<xsl:param name="errorCode"/>
 		<xsl:value-of select="concat('        ''', $errorCode,'''', ':&#x0a;')"/>
-		<xsl:value-of select="concat('          $ref: ', '''', 'commonDefs.yaml#/errorResponses/responses/', $errorCode,'''', '&#x0a;')"/>
+		<xsl:value-of select="concat('          $ref: ', '''', 'commonDefs.yaml#/components/schemas/errorResponses/responses/', $errorCode,'''', '&#x0a;')"/>
 	</xsl:template>
 
 	<!-- Bring Description, Intro or Text mixed content elements across with all its embedded html -->

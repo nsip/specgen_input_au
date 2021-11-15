@@ -42,7 +42,11 @@
 			<dd>
 				<xi:include parse="text"  href="90_Properties_DataModel/SIF-Specification-Navigation-Latest Version.xml"/>
 			</dd>
-			<dt>Schemas</dt>
+			<dt>API Documentation</dt>
+			<dd>
+			<a href="ServiceDocs/index.html">Data Model Services</a>
+			</dd>
+			<dt>XML Schemas</dt>
 			<dd>
 				<a href="XSD/SIF_MessageNoIncludes/SIF_Message.xsd">SIF_Message (single file, non-annotated)</a>
 				<a href="XSD/SIF_MessageNoIncludes.zip">(ZIP archive)</a>
@@ -91,6 +95,10 @@
 			<dd>
 				JSON-PESC Examples 3.4.6<a href="JSON/siftest.pretty.json"> (json)</a>
 			</dd> -->
+			<dt>OpenAPI</dt>
+			<dd>
+				<a href="JSON/OpenAPI.zip">OpenAPI &amp; JSON Schemas Files Archive</a>
+			</dd>
 
 
 		</dl>

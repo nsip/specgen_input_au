@@ -89,16 +89,30 @@
 			</xsl:if>
 		</xsl:if>
 
+		<xsl:variable name="desc">
+			<xsl:apply-templates select="specgen:Item[1]/specgen:Description"/>
+		</xsl:variable>
+
 		<!-- DataObject maybe extension of a base type -->
-		<xsl:if test="specgen:Item[1]/specgen:Type[@complex]">
+		<!--xsl:text>#DEBUG: DataObject maybe extension of a base type - check for specgen:Item[1]/specgen:Type[@complex]&#x0a;</xsl:text-->
+		<!--xsl:if test="specgen:Item[1]/specgen:Type[@complex]"-->
+		<xsl:if test="specgen:Item[1]/specgen:Type/@complex">
+			<!--xsl:text>#DEBUG: check: true&#x0a;</xsl:text-->
 			<xsl:value-of select="concat('    type: object&#x0a;',
-										 '    allOf:&#x0a;',
+			                             '    description: &gt;-&#x0a;',
+			                             '      ', $desc, '&#x0a;',
+										 '#   allOfA:&#x0a;',
+										 '    $ref: ''#/definitions/', xfn:chopType(specgen:Item[1]/specgen:Type/@name), '''&#x0a;')"/>
+			<!--xsl:value-of select="concat('    type: object&#x0a;',
+										 '    allOfA:&#x0a;',
 										 '    - $ref: ''#/definitions/', xfn:chopType(specgen:Item[1]/specgen:Type/@name), '''&#x0a;',
-										 '    - properties:&#x0a;')"/>
+										 '    - properties:&#x0a;')"/-->
 		</xsl:if>
 
 		<!-- DataObject may not be an extension -->
-		<xsl:if test="not(specgen:Item[1]/specgen:Type[@complex])">
+		<!--xsl:if test="not(specgen:Item[1]/specgen:Type[@complex])"-->
+		<xsl:if test="not(specgen:Item[1]/specgen:Type/@complex)">
+			<!--xsl:text>#DEBUG: check: false&#x0a;</xsl:text-->
 			<xsl:text>    type: object&#x0a;</xsl:text>
 			<xsl:if test="count(specgen:Item) gt 1">
 				<xsl:text>    properties:&#x0a;</xsl:text>
@@ -108,8 +122,15 @@
 		<!-- Work out the indent for properties -->
 		<xsl:variable name="objIndent">
 			<xsl:choose>
-				<xsl:when test="specgen:Item[1]/specgen:Type[@complex]"><xsl:text>          </xsl:text></xsl:when>
-				<xsl:otherwise><xsl:text>      </xsl:text></xsl:otherwise>
+				<!--xsl:when test="specgen:Item[1]/specgen:Type[@complex]"-->
+				<xsl:when test="specgen:Item[1]/specgen:Type/@complex">
+				    <!--xsl:text>#DEBUG: Work out the indent - true&#x0a;          </xsl:text-->
+				    <xsl:text>          </xsl:text>
+				</xsl:when>
+				<xsl:otherwise>
+				    <!--xsl:text>#DEBUG: Work out the indent - false&#x0a;      </xsl:text-->
+				    <xsl:text>      </xsl:text>
+				</xsl:otherwise>
 			</xsl:choose>
 		</xsl:variable>
 
@@ -117,32 +138,39 @@
 			<xsl:with-param name="indent" select="$objIndent"/>
 		</xsl:apply-templates>
 
-		<xsl:variable name="desc">
+		<!--xsl:variable name="desc">
 			<xsl:apply-templates select="specgen:Item[1]/specgen:Description"/>
-		</xsl:variable>
-		<xsl:if test="string-length($desc) gt 0">
-			<xsl:value-of select="concat('    description: &gt;-&#x0a;      ', $desc, '&#x0a;')"/>
+		</xsl:variable-->
+		<!--xsl:if test="not(specgen:Item[1]/specgen:Type[@complex])"-->
+		<xsl:if test="not(specgen:Item[1]/specgen:Type/@complex)">
+			<xsl:if test="string-length($desc) gt 0">
+				<xsl:value-of select="concat('    description: &gt;-&#x0a;      ', $desc, '&#x0a;')"/>
+			</xsl:if>
+			<!--xsl:text>#DEBUG: not(specgen:Item[1]/specgen:Type[@complex] - true - add desc if available&#x0a;</xsl:text-->
 		</xsl:if>
 	</xsl:template>
 	
-
-
-
 	<!-- Common type is empty extension of another type -->
 	<xsl:template match="specgen:CommonElement[count(specgen:Item) eq 1 and
 						 specgen:Item[1]/specgen:Type/@complex eq 'extension']">
 		<xsl:text>&#x0a;  # /////////////////////////////// empty extn ///////////////////////////&#x0a;</xsl:text>
-		<xsl:value-of select="concat('  ', xfn:chopType(@name), ':&#x0a;',
-									 '		  allOf:&#x0a;',
-							         '      - $ref: ''#/definitions/', xfn:chopType(specgen:Item[1]/specgen:Type/@name), '''&#x0a;',
-									 '      - type: object&#x0a;')"/>
-
-
 		<xsl:variable name="desc">
 			<xsl:apply-templates select="specgen:Item[1]/specgen:Description"/>
 		</xsl:variable>
+		
 		<xsl:if test="string-length($desc) gt 0">
-			<xsl:value-of select="concat('      - description: &gt;-&#x0a;          ', $desc, '&#x0a;')"/>
+			<xsl:value-of select="concat('  ', xfn:chopType(@name), ':&#x0a;',
+										 '#     allOfB:&#x0a;',
+										 '      type: object&#x0a;',
+										 '      description: &gt;-&#x0a;',
+										 '        ', $desc, '&#x0a;',
+								         '      $ref: ''#/definitions/', xfn:chopType(specgen:Item[1]/specgen:Type/@name), '''&#x0a;')"/>
+		</xsl:if>
+		<xsl:if test="string-length($desc) eq 0">
+			<xsl:value-of select="concat('  ', xfn:chopType(@name), ':&#x0a;',
+										 '#     allOfB:&#x0a;',
+										 '      type: object&#x0a;',
+								         '      $ref: ''#/definitions/', xfn:chopType(specgen:Item[1]/specgen:Type/@name), '''&#x0a;')"/>
 		</xsl:if>
 	</xsl:template>
 
@@ -176,8 +204,15 @@
 									 '    type: object&#x0a;',
 									 '    properties:&#x0a;',
 									 '      value:&#x0a;',
+									 '#        allOfC:&#x0a;',
+									 '        $ref: ''#/definitions/', xfn:chopType(specgen:Item[1]/specgen:Type/@name), '''&#x0a;')"/>
+
+		<!--xsl:value-of select="concat('  ', xfn:chopType(@name), ':&#x0a;',
+									 '    type: object&#x0a;',
+									 '    properties:&#x0a;',
+									 '      value:&#x0a;',
 									 '        allOf:&#x0a;',
-									 '          - $ref: ''#/definitions/', xfn:chopType(specgen:Item[1]/specgen:Type/@name), '''&#x0a;')"/>
+									 '          - $ref: ''#/definitions/', xfn:chopType(specgen:Item[1]/specgen:Type/@name), '''&#x0a;')"/-->
 
 		<xsl:apply-templates select="specgen:Item[position() gt 1]">
 			<xsl:with-param name="indent" select="'      '"/>
@@ -188,7 +223,8 @@
 		</xsl:variable>
 		<xsl:if test="string-length($desc) gt 0">
 			<!--xsl:value-of select="concat('      - description: &gt;-&#x0a;          ', $desc, '&#x0a;')"/-->
-			<xsl:value-of select="concat('      description: &gt;-&#x0a;        ', $desc, '&#x0a;')"/>
+			<xsl:value-of select="concat('    description: &gt;-&#x0a;'
+			                            ,'      ', $desc, '&#x0a;')"/>
 		</xsl:if>
 	</xsl:template>
 
@@ -268,15 +304,24 @@
 						 not(specgen:Item[1]/specgen:Type/@complex eq 'extension')]">
 		<xsl:text>&#x0a;  # ////////////////////////////// another type ///////////////////////////////&#x0a;</xsl:text>
 		<xsl:value-of select="concat('  ', xfn:chopType(@name), ':&#x0a;')"/>
-		<xsl:text>    allOf:&#x0a;</xsl:text>
+		<!--xsl:text>    allOf:&#x0a;</xsl:text-->
+		<xsl:text>#    allOfD:&#x0a;</xsl:text>
+		<xsl:apply-templates select="specgen:Item[1]/specgen:Type">
+			<xsl:with-param name="indent" select="'    '"/>
+		</xsl:apply-templates>
+
+		<xsl:text>    description: &gt;-&#x0a;      </xsl:text>
+		<xsl:apply-templates select="specgen:Item[1]/specgen:Description"/><xsl:text>&#x0a;</xsl:text>
 
 		<!-- Pickup Type ref -->
+		<!-- 
 		<xsl:apply-templates select="specgen:Item[1]/specgen:Type">
 			<xsl:with-param name="indent" select="'    - '"/>
 		</xsl:apply-templates>
 
 		<xsl:text>    - description: &gt;-&#x0a;        </xsl:text>
 		<xsl:apply-templates select="specgen:Item[1]/specgen:Description"/><xsl:text>&#x0a;</xsl:text>
+		-->
 	</xsl:template>
 	
 	<!-- Common type is a list (implicit or explict), with repeatable choice (hetrogynous list) -->
@@ -329,16 +374,22 @@
 		</xsl:if>
 		
 		<xsl:text>    type: object&#x0a;</xsl:text>
+
+<!--  		
+		<xsl:value-of select="concat('#DEBUG: is list required: ', $mandatoryFields, '&#x0a;')"/>
+		<xsl:value-of select="concat('#DEBUG: Item 2 (list items): ', specgen:Item[position() = 2]/specgen:Characteristics, '&#x0a;')"/>
+-->		
 		<xsl:if test="$mandatoryFields = 'required'">
-			<xsl:if test="specgen:Item[contains(specgen:Characteristics, 'M')]">
+			<xsl:if test="specgen:Item[contains(specgen:Characteristics, 'M')] and specgen:Item[position() = 2]/specgen:Characteristics = 'MR'">
+			<!--xsl:if test="specgen:Item[contains(specgen:Characteristics, 'M')]"-->
 				<xsl:text>    required:&#x0a;</xsl:text>
 				<xsl:apply-templates select="specgen:Item[position() gt 1]" mode="required"/>
 			</xsl:if>
 		</xsl:if>				
 		<xsl:text>    properties:&#x0a;</xsl:text>
 		<xsl:value-of select="concat('      ', specgen:Item[2]/specgen:Element, ':&#x0a;')"/>
-		<xsl:text>       type: array&#x0a;</xsl:text>
-		<xsl:text>       items:&#x0a;</xsl:text>
+		<xsl:text>        type: array&#x0a;</xsl:text>
+		<xsl:text>        items:&#x0a;</xsl:text>
 
 		<!-- What kind of thing is each list member? -->
 		<xsl:choose>
@@ -424,10 +475,18 @@
 			<xsl:value-of select="concat('    description: &gt;-&#x0a;      ', $desc, '&#x0a;')"/>
 		</xsl:if>
 
-		<!-- Simple and extended Types -->
-		<xsl:apply-templates select="specgen:Item[1]/specgen:Type">
-			<xsl:with-param name="indent" select="'    '"/>
-		</xsl:apply-templates>
+		<!-- Simple and extended Types but not complex sub-type of style <Type><otherstuff></Type> -->
+		
+		<!-- 
+			Make sure we only apply the template if we deal with something like <Type ...></Type> (no child nodes)
+			In cases where we have <Type><otherstuff></Type> then we do not want set the type as it is covered
+			somewhere else.
+		-->
+		<xsl:if test="count(specgen:Item[1]/specgen:Type/node()) = 0">
+			<xsl:apply-templates select="specgen:Item[1]/specgen:Type">
+				<xsl:with-param name="indent" select="'    '"/>
+			</xsl:apply-templates>
+		</xsl:if>
 		
 		<xsl:apply-templates select="specgen:Item[1]/specgen:Facets/xs:*">
 			<xsl:with-param name="indent" select="'    '"/>
@@ -487,50 +546,17 @@
 			<!-- Item is repeatable -->
 			<xsl:when test="contains(specgen:Characteristics,  'R')">
 				<xsl:value-of select="concat($indent, '  type: array&#x0a;', $indent, '  items:&#x0a;')"/>
-				<xsl:value-of select="concat($indent, '  - allOf:&#x0a;')"/>
+				<xsl:value-of select="concat('#', $indent, '  - allOfG:&#x0a;')"/>
 
 				<!-- $ref -->
+<!--xsl:text>#"specgen:Type A</xsl:text-->
+
 				<xsl:apply-templates select="specgen:Type">
-					<xsl:with-param name="indent" select="concat($indent, '    - ')"/>
+					<xsl:with-param name="indent" select="concat($indent, '    ')"/>
 				</xsl:apply-templates>
 
 				<xsl:if test="normalize-space(specgen:Description) ne ''">
-					<xsl:value-of select="concat($indent, '    - description: &gt;-&#x0a;', $indent, '        ')"/>
-					<xsl:apply-templates select="specgen:Description"/><xsl:text>&#x0a;</xsl:text>
-
-					<!-- If the Item is a codeset then include (at least some of) the values in the description -->
-					<xsl:if test="specgen:Type/@ref eq 'CodeSets'">
-						<xsl:variable name="codeSetId">
-							<xsl:value-of select="xfn:chopType(substring-after(specgen:Type/@name, 'CodeSets'))"/>
-						</xsl:variable>
-						<xsl:variable name="codeSetGroupId">
-							<xsl:value-of select="substring-before(specgen:Type/@name, $codeSetId)"/>
-						</xsl:variable>
-						<xsl:value-of select="concat($indent, '        &lt;ul&gt;&#x0a;')"/>
-						<xsl:apply-templates select="//specgen:Appendix[ends-with(@name, 'Code Sets')]/specgen:CodeSets//specgen:Grouping[@code = $codeSetGroupId]//specgen:CodeSet[replace(replace(specgen:ID, ' ',''), '-', '') = $codeSetId]/specgen:Values/specgen:Value[position() &lt;= $enumCount]" mode="descr">
-							<xsl:with-param name="indent" select="concat($indent, '        ')"/>
-						</xsl:apply-templates>
-						<xsl:value-of select="concat($indent, '        &lt;/ul&gt;&#x0a;')"/>
-						<xsl:if test="count(//specgen:Appendix[ends-with(@name, 'Code Sets')]/specgen:CodeSets//specgen:Grouping[@code = $codeSetGroupId]//specgen:CodeSet[replace(replace(specgen:ID, ' ',''), '-', '') = $codeSetId]/specgen:Values/specgen:Value) &gt; $enumCount">
-							<xsl:value-of select="concat($indent, '          plus ', 
-														count(//specgen:Appendix[ends-with(@name, 'Code Sets')]/specgen:CodeSets//specgen:Grouping[@code = $codeSetGroupId]//specgen:CodeSet[replace(replace(specgen:ID, ' ',''), '-', '') = $codeSetId]/specgen:Values/specgen:Value) - $enumCount, 
-														' more value(s) at &lt;a href=',$q,
-														$extDocURLBase, 'CodeSets.html#', specgen:Type/@name, $q, '&gt;',
-														specgen:Type/@name, '&lt;a&gt;&#x0a;')"/>
-						</xsl:if>
-					</xsl:if>
-				</xsl:if>
-			</xsl:when>
-			<xsl:otherwise>
-				<xsl:value-of select="concat($indent, '  allOf:&#x0a;')"/>
-		
-				<!-- $ref -->
-				<xsl:apply-templates select="specgen:Type">
-					<xsl:with-param name="indent" select="concat($indent, '  - ')"/>
-				</xsl:apply-templates>
-				
-				<xsl:if test="normalize-space(specgen:Description) ne ''">
-					<xsl:value-of select="concat($indent, '  - description: &gt;-&#x0a;', $indent, '      ')"/>
+					<xsl:value-of select="concat($indent, '    description: &gt;-&#x0a;', $indent, '      ')"/>
 					<xsl:apply-templates select="specgen:Description"/><xsl:text>&#x0a;</xsl:text>
 
 					<!-- If the Item is a codeset then include (at least some of) the values in the description -->
@@ -555,21 +581,61 @@
 						</xsl:if>
 					</xsl:if>
 				</xsl:if>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:value-of select="concat($indent, '  type: object&#x0a;')"/>
+				<xsl:if test="normalize-space(specgen:Description) ne ''">
+					<xsl:value-of select="concat($indent, '  description: &gt;-&#x0a;', $indent, '    ')"/>
+					<xsl:apply-templates select="specgen:Description"/><xsl:text>&#x0a;</xsl:text>
 
+					<!-- If the Item is a codeset then include (at least some of) the values in the description -->
+					<xsl:if test="specgen:Type/@ref eq 'CodeSets'">
+						<xsl:variable name="codeSetId">
+							<xsl:value-of select="xfn:chopType(substring-after(specgen:Type/@name, 'CodeSets'))"/>
+						</xsl:variable>
+						<xsl:variable name="codeSetGroupId">
+							<xsl:value-of select="substring-before(specgen:Type/@name, $codeSetId)"/>
+						</xsl:variable>
+						<xsl:value-of select="concat($indent, '    &lt;ul&gt;&#x0a;')"/>
+						<xsl:apply-templates select="//specgen:Appendix[ends-with(@name, 'Code Sets')]/specgen:CodeSets//specgen:Grouping[@code = $codeSetGroupId]//specgen:CodeSet[replace(replace(specgen:ID, ' ',''), '-', '') = $codeSetId]/specgen:Values/specgen:Value[position() &lt;= $enumCount]" mode="descr">
+							<xsl:with-param name="indent" select="concat($indent, '    ')"/>
+						</xsl:apply-templates>
+						<xsl:value-of select="concat($indent, '    &lt;/ul&gt;&#x0a;')"/>
+						<xsl:if test="count(//specgen:Appendix[ends-with(@name, 'Code Sets')]/specgen:CodeSets//specgen:Grouping[@code = $codeSetGroupId]//specgen:CodeSet[replace(replace(specgen:ID, ' ',''), '-', '') = $codeSetId]/specgen:Values/specgen:Value) &gt; $enumCount">
+							<xsl:value-of select="concat($indent, '      plus ', 
+														count(//specgen:Appendix[ends-with(@name, 'Code Sets')]/specgen:CodeSets//specgen:Grouping[@code = $codeSetGroupId]//specgen:CodeSet[replace(replace(specgen:ID, ' ',''), '-', '') = $codeSetId]/specgen:Values/specgen:Value) - $enumCount, 
+														' more value(s) at &lt;a href=',$q,
+														$extDocURLBase, 'CodeSets.html#', specgen:Type/@name, $q, '&gt;',
+														specgen:Type/@name, '&lt;a&gt;&#x0a;')"/>
+						</xsl:if>
+					</xsl:if>
+				</xsl:if>
+				
+				<!-- $ref -->
+				<!--xsl:text>#"specgen:Type B</xsl:text-->
+				<!-- type is already set as 'object' at the begining of the "xsl:otherwise" node. -->
+
+                <!-- Only apply for non-extensions... -->
+                <xsl:if test="not(specgen:Type/@complex eq 'extension')">
+					<xsl:apply-templates select="specgen:Type">
+						<xsl:with-param name="indent" select="concat($indent, '  ')"/>
+					</xsl:apply-templates>
+				</xsl:if>
 				<!-- Can a named type also have Values -->
 				<xsl:apply-templates select="specgen:Values">
-					<xsl:with-param name="indent" select="concat($indent, '  ')"/>
+					<xsl:with-param name="indent" select="concat($indent, '')"/>
 				</xsl:apply-templates>
 
 				<!-- Facets need different indents -->
 				<xsl:apply-templates select="specgen:Facets/xs:*">
-					<xsl:with-param name="indent" select="concat($indent, '  ')"/>
+					<xsl:with-param name="indent" select="concat($indent, '')"/>
 				</xsl:apply-templates>
 
 				<!-- Item might be an attribute -->
 				<xsl:if test="specgen:Attribute"> 
-					<xsl:value-of select="concat($indent, '  - xml:&#x0a;', $indent, '      attribute: true&#x0a;')"/>
+					<xsl:value-of select="concat($indent, '  xml:&#x0a;', $indent, '    attribute: true&#x0a;')"/>
 				</xsl:if>
+
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:template>
@@ -602,12 +668,12 @@
 	<!-- Item is Typed, but it's an unnamed type -->
 	<xsl:template match="specgen:Item[specgen:Type and not(specgen:Type/@ref)]">
 		<xsl:param name="indent"/>
-		
 		<xsl:value-of select="concat($indent, specgen:Element|specgen:Attribute, ':&#x0a;')"/>
 	
 		<!-- $ref -->
 		<xsl:choose>
 			<xsl:when test="specgen:Type/@name ne ''">
+<!--xsl:text>#"specgen:Type C</xsl:text-->
 				<xsl:apply-templates select="specgen:Type">
 					<xsl:with-param name="indent" select="$indent"/>
 				</xsl:apply-templates>
@@ -683,13 +749,14 @@
 	<!-- Type is of named type -->
 	<xsl:template match="specgen:Type[not(@complex) and @name ne '' and not(starts-with(@name, 'xs:'))]">
 		<xsl:param name="indent"/>
-		<xsl:value-of select="concat($indent, '$ref: ''#/definitions/', xfn:chopType(@name), '''&#x0a;')"/>
+		<xsl:value-of select="concat($indent,'$ref: ''#/definitions/', xfn:chopType(@name), '''&#x0a;')"/>
 	</xsl:template>
 
 	<!-- Un-named type, so inline object -->
 	<xsl:template match="specgen:Type">
 		<xsl:param name="indent"/>
-		<xsl:value-of select="concat($indent, '  type: object&#x0a;')"/>
+		<!--xsl:value-of select="concat($indent, '  typeXYZ: object&#x0a;')"/-->
+		<xsl:value-of select="concat($indent, 'type: object&#x0a;')"/>
 	</xsl:template>
 
 	
@@ -754,9 +821,19 @@
 			</xsl:otherwise>
 		</xsl:choose>
 
-		<xsl:apply-templates select="specgen:Text" mode="enum">
-			<xsl:with-param name="indent" select="$indent"/>
-		</xsl:apply-templates>
+		<!--
+			If there is no Text we use the Value as the 'title' to ensure nicely rendered enumerations/codesets
+		 -->
+		<xsl:choose>
+        	<xsl:when test="xfn:empty(specgen:Text)">
+				<xsl:value-of select="concat($indent, '  title: ', specgen:Code, '&#x0a;')"/>
+        	</xsl:when>
+        	<xsl:otherwise>
+				<xsl:apply-templates select="specgen:Text" mode="enum">
+					<xsl:with-param name="indent" select="$indent"/>
+				</xsl:apply-templates>
+        	</xsl:otherwise>
+        </xsl:choose>
 
 		<xsl:apply-templates select="specgen:Description" mode="enum">
 			<xsl:with-param name="indent" select="$indent"/>
@@ -881,5 +958,12 @@
 			<xsl:value-of select="$value2"/>
 		</xsl:if>
 	</xsl:function>
+	
+	<!-- returns true if value is not set or empty -->
+	<xsl:function name="xfn:empty" as="xs:boolean">
+		<xsl:param name="value"/>
+		<xsl:sequence select="not($value != '')" />
+	</xsl:function>
+	
 	
 </xsl:stylesheet>

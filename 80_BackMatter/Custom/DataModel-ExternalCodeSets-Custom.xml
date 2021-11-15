@@ -615,13 +615,21 @@
         <Code>UYU</Code>
         <Text>Peso Uruguayo</Text>
       </Value>      
+	  <Value>
+        <Code>UYW</Code>
+        <Text>Uruguayan Unidad Previsional</Text>
+      </Value>      
       <Value>
         <Code>UZS</Code>
         <Text>Uzbekistan Sum</Text>
       </Value>
       <Value>
+        <Code>VED</Code>
+        <Text>Venezuelan Bolivar (redenominated)</Text>
+      </Value>
+      <Value>
         <Code>VES</Code>
-        <Text>Bolivar</Text>
+        <Text>Venezuelan Bolivar</Text>
       </Value>
       <Value>
         <Code>VND</Code>

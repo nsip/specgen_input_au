@@ -51,7 +51,7 @@
     </Description>
     <Type ref="CommonTypes" name="PersonInfoType"></Type>
   </Item>
-  <Item>
+   <Item>
     <Element>EmploymentType</Element>
     <Characteristics>O</Characteristics>
 	<privacyRating>Medium</privacyRating>
@@ -60,7 +60,7 @@
     </Description>
     <Type ref="CodeSets" name="AUCodeSetsEmploymentTypeType"></Type>
   </Item>
-  <Item>
+   <Item>
     <Element>SchoolEducationalLevel</Element>
     <Characteristics>O</Characteristics>
 	<privacyRating>Medium</privacyRating>
@@ -78,7 +78,33 @@
     </Description>
     <Type ref="CodeSets" name="AUCodeSetsNonSchoolEducationType"></Type>
   </Item>
-  <Item>   
+<Item>
+    <Element>Employment</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Medium</privacyRating>
+    <Description>
+      <p>Text describing employment.</p>
+    </Description>
+    <Type ref="CodeSets" name="xs:normalizedString"></Type>
+  </Item>
+ <Item>
+    <Element>Workplace</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Medium</privacyRating>
+    <Description>
+      <p>Workplace of Contact.</p>
+    </Description>
+    <Type ref="CodeSets" name="xs:normalizedString"></Type>
+  </Item><Item>
+    <Element>WorkingWithChildrenCheck</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>High</privacyRating>
+    <Description>
+      <p>Eligibility of student contact to work with children. 
+	  Used when student contact is engaged by school on an ad hoc basis to engage with students, e.g. in homestays.</p>
+    </Description>
+    <Type ref="CommonTypes" name="WorkingWithChildrenCheckType"></Type>
+  </Item> <Item>   
     <Element>LocalCodeList</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>High</privacyRating>
@@ -211,7 +237,9 @@
       <EmploymentType>4</EmploymentType>
       <SchoolEducationalLevel>3</SchoolEducationalLevel>
         <NonSchoolEducation>6</NonSchoolEducation>
-      </StudentContactPersonal>
+		<Employment>Fletcher</Employment>
+ 		<Workplace>Bob's Arrows</Workplace>
+     </StudentContactPersonal>
 
   </xhtml:Example>
 </DataObject>

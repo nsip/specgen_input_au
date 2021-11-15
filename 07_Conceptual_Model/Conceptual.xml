@@ -211,6 +211,10 @@ For clarity, the conceptual model is broken up into use cases:</p>
 				<td>A Student participates in a Program</td>
 				<td>StudentPersonal, StudentParticipation, SchoolPrograms</td>
 			</tr>			
+			<tr>
+				<td>A Student participates in a Program</td>
+				<td>StudentPersonal, StudentParticipation, SchoolPrograms</td>
+			</tr>			
 		</tbody>
 	</table>
 	<h2>Account Provisioning</h2>
@@ -230,7 +234,7 @@ For clarity, the conceptual model is broken up into use cases:</p>
 	<tbody>
 		<tr>
 			<td>Identity</td>
-			<td>Itentity</td>
+			<td>Identity</td>
 		</tr>
 		<tr>
 			<td>System</td>
@@ -244,6 +248,10 @@ For clarity, the conceptual model is broken up into use cases:</p>
 			<td>Picture</td>
 			<td>PersonPicture</td>
 		</tr>
+		<tr>
+			<td>Obligations</td>
+			<td>PersonalPrivacyObligationDocument</td>
+		</tr>									
 	</tbody>
 	</table>
 	<h3>Relations</h3>
@@ -279,6 +287,10 @@ For clarity, the conceptual model is broken up into use cases:</p>
 			<tr>
 				<td>A Party has a role on a System</td>
 				<td>{StudentPersonal, StaffPersonal, StudentContactPersonal}, SystemRole</td>
+			</tr>	
+			<tr>
+				<td>Obligations apply to a Party</td>
+				<td>PersonalPrivacyObligationDocument, {StudentPersonal, StaffPersonal, StudentContactPersonal}</td>
 			</tr>	
 		</tbody>
 	</table>

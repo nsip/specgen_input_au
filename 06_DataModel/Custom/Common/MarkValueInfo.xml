@@ -172,10 +172,10 @@
 		<Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
 	</Item>
 	<xhtml:Example xmlns="" name="MarkValueInfo">
-	  <MarkValueInfo RefId="11737E21-4A7C-46BD-BA43-01CADCA75C87" >
-	  <SchoolInfoRefId>A137D78A-E00B-C744-EF90-F2871CEB90A2</SchoolInfoRefId>
-	  <Name>Letter Grades</Name>
-	  <ValidLetterMarkList>
+		<MarkValueInfo RefId="11737E21-4A7C-46BD-BA43-01CADCA75C87" >
+		  <SchoolInfoRefId>A137D78A-E00B-C744-EF90-F2871CEB90A2</SchoolInfoRefId>
+		  <Name>Letter Grades</Name>
+		  <ValidLetterMarkList>
 			<ValidLetterMark>
 			  <Code>A</Code>
 			  <NumericEquivalent>100</NumericEquivalent>
@@ -196,8 +196,8 @@
 			  <Code>F</Code>
 			  <NumericEquivalent>60</NumericEquivalent>
 			</ValidLetterMark>
-		</ValidLetterMarkList>
-
-		</MarkValueInfo>
+		 </ValidLetterMarkList>
+	     <Narrative>A Narrative about this Grade, letters and their numeric equivalent</Narrative>
+	  </MarkValueInfo>
 	</xhtml:Example>
 </DataObject>
