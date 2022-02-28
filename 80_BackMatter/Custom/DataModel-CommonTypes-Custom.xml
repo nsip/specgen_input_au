@@ -14071,4 +14071,406 @@
 		</WorkingWithChildrenCheck>
 	</xhtml:Example>
 </CommonElement>
+<CommonElement name="ReportingAuthorityListType" type="true" dm="true">
+	<Item>
+		<Element>ReportingAuthorityListType</Element>
+		<Description>
+			<p>A list of reporting authorities included in a collection or vertical reporting object.</p>
+		</Description>
+		<List mode="List">
+    </List>
+	</Item>
+	<Item>
+		<Element>ReportingAuthority</Element>
+		<Characteristics>MR</Characteristics>
+		<Type ref="CommonTypes" name="ReportingAuthorityType"/>
+	</Item>
+</CommonElement>
+<CommonElement name="ReportingAuthorityType" type="true" dm="true">
+	<Item>
+		<Element>ReportingAuthorityType</Element>
+		<Description>
+			<p>A reporting authority included in a collection or vertical reporting object.</p>
+		</Description>
+	</Item>
+ <Item>
+	  <Element>Name</Element>
+	  <Characteristics>M</Characteristics>
+	  <Description>Name of authority.</Description>
+	  <Type name="xs:normalizedString"></Type>
+  </Item>
+  
+  <Item>
+	  <Element>System</Element>
+	  <Characteristics>O</Characteristics>
+	  <Description>System of authority if Systemic.</Description>
+	  <Type name="xs:normalizedString"></Type>
+  </Item>
+  
+  <Item>
+    <Element>AuthorityId</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Identifier for the authority. The scope of the identifier will be set by the collection agency; for Commonwealth collections, it shall be the CommonwealthId.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+</CommonElement>
+<CommonElement name="SignatoryType" type="true" dm="true">
+	<Item>
+		<Element>SignatoryType</Element>
+		<Description>
+			<p>Personal details and signature of a party who signs off on an object as a binding endorsement.</p>
+		</Description>
+	</Item>
+ <Item>
+	  <Element>Name</Element>
+	  <Characteristics>M</Characteristics>
+	  <Description>Name of signatory.</Description>
+	  <Type name="xs:normalizedString"></Type>
+  </Item>
+  
+   <Item>
+    <Element>Role</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Role or position of signatory.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+ 
+    <Item>
+    <Element>Organisation</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Organisation or Company within which the signatory exercises their authority.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+
+   <Item>
+    <Element>Signature</Element>
+
+    <Characteristics>M</Characteristics>
+	<privacyRating>High</privacyRating>
+    <Description>
+      <p>
+        This element defines the signature of the signatory as an image. If SubmitterSignatureImageType is "URL", 
+		this is the location of the picture in <a href="References.html#JPEG">[JPEG]</a> format; if SubmitterSignatureImageType is "JPEG", 
+		this is the <a href="References.html#JPEG">[JPEG]</a> image data encoded using the Base64 Content-Transfer-Encoding defined in 
+		Section 6.8 of <a href="References.html#RFC2045">[RFC 2045]</a>.
+      </p>
+    </Description>
+    <Type ref="CommonTypes" name="URIOrBinaryType"/>
+  </Item>
+  
+  <Item>
+
+    <Element>SignatureImageType</Element>
+    <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>The way the Signature picture type is specified.</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsPictureSourceType"></Type>
+  </Item>
+ 
+  <Item>
+    <Element>Date</Element>
+    <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Date of the signature.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+ 
+ </CommonElement>
+ 
+ <CommonElement name="DepartureSchoolType" type="true" dm="true">
+	<Item>
+		<Element>DepartureSchoolType</Element>
+		<Description>
+			<p>Details of a school to identify it in the context of a departing student.</p>
+		</Description>
+	</Item>
+   <Item>
+    <Element>ACARAId</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>ACARA identifier for this school.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+ 
+  <Item>
+    <Element>Name</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Name of school.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  
+ <Item>
+    <Element>SchoolContactList</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>A list of contact persons associated with a school.</p>
+    </Description>
+    <Type ref="CommonTypes" name="SchoolContactListType"/>
+  </Item>
+
+</CommonElement>
+<CommonElement name="PreviousSchoolListType" type="true" dm="true">
+	<Item>
+		<Element>PreviousSchoolListType</Element>
+		<Description>
+			<p>A list of schools included in the context of a departing student.</p>
+		</Description>
+		<List mode="List">
+    </List>
+	</Item>
+	<Item>
+		<Element>PreviousSchool</Element>
+		<Characteristics>MR</Characteristics>
+		<Type ref="CommonTypes" name="PreviousSchoolType"/>
+	</Item>
+</CommonElement>
+<CommonElement name="PreviousSchoolType" type="true" dm="true">
+	<Item>
+		<Element>PreviousSchoolType</Element>
+		<Description>
+			<p>Truncated details of a school to identify it in the context of a departing student.</p>
+		</Description>
+	</Item>
+   <Item>
+    <Element>ACARAId</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>ACARA identifier for this school.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+ 
+  <Item>
+    <Element>Name</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Name of school.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+
+
+</CommonElement>
+<CommonElement name="NAPLANScoreListType" type="true" dm="true">
+	<Item>
+		<Element>NAPLANScoreListType</Element>
+		<Description>
+			<p>List of NAPLAN scores associated wih a student from a single assessment cycle.</p>
+		</Description>
+		<List mode="List">
+    </List>
+	</Item>
+	<Item>
+		<Element>NAPLANScore</Element>
+		<Characteristics>MR</Characteristics>
+		<Type ref="CommonTypes" name="NAPLANScoreType"/>
+	</Item>
+</CommonElement>
+
+<CommonElement name="NAPLANScoreType" type="true" dm="true">
+	<Item>
+		<Element>NAPLANScoreType</Element>
+		<Description>
+			<p>A NAPLAN score associated with a student and a domain from a single assessment cycle.</p>
+		</Description>
+	</Item>
+   <Item>
+    <Element>Domain</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Domain of the NAP test undertaken.</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsNAPTestDomainType"></Type>
+  </Item>
+  <Item>
+    <Element>ParticipationCode</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Participation status of the student for the NAP test.</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsNAPParticipationCodeType"></Type>
+  </Item>
+
+  <Item>
+    <Element>DomainScore</Element>
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>Overall score received in the NAP test. Contents are not populated if this is an empty object
+	  (sanctioned abandonment or refusal).</p>
+    </Description>
+	<Type ref="CommonTypes" name="DomainScoreType"/>
+  </Item>
+
+</CommonElement>
+
+<CommonElement name="NCCDListType" type="true" dm="true">
+	<Item>
+		<Element>NCCDListType</Element>
+		<Description>
+			<p>List of applicable disability categories for a student from the Nationally Consistent Collection of Data.</p>
+		</Description>
+		<List mode="List">
+    </List>
+	</Item>
+	<Item>
+		<Element>NCCD</Element>
+		<Characteristics>MR</Characteristics>
+		<Type ref="CommonTypes" name="NCCDType"/>
+	</Item>
+</CommonElement>
+
+<CommonElement name="NCCDType" type="true" dm="true">
+	<Item>
+		<Element>NCCDType</Element>
+		<Description>
+			<p>Disability category for a student from the Nationally Consistent Collection of Data.</p>
+		</Description>
+	</Item>
+   <Item>
+    <Element>LevelOfAdjustment</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Level of adjustment required for a student.</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsNCCDAdjustmentType"></Type>
+  </Item>
+  <Item>
+    <Element>CategoryOfDisability</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Category of disability for a student.</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsNCCDDisabilityType"></Type>
+  </Item>
+</CommonElement>
+
+<CommonElement name="LBOTEAndLanguageType" type="true" dm="true">
+	<Item>
+		<Element>LBOTEAndLanguageType</Element>
+		<Description>
+			<p>Language Background Other Than English, and languages spoken.</p>
+		</Description>
+	</Item>
+   <Item>
+    <Element>Status</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Student has Language Background Other Than English.</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
+  </Item>
+  <Item>
+    <Element>LanguageList</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>List of languages an individual uses to communicate.</p>
+    </Description>
+	<Type ref="CommonTypes" name="LanguageListType"/>
+  </Item>
+</CommonElement>
+
+<CommonElement name="EducationalAssessmentListType" type="true" dm="true">
+	<Item>
+		<Element>EducationalAssessmentListType</Element>
+		<Description>
+			<p>List of relevant educational assesssments the student has undertaken.</p>
+		</Description>
+		<List mode="List">
+    </List>
+	</Item>
+	<Item>
+		<Element>NCCD</Element>
+		<Characteristics>MR</Characteristics>
+		<Type ref="CommonTypes" name="EducationalAssessmentType"/>
+	</Item>
+</CommonElement>
+
+<CommonElement name="EducationalAssessmentType" type="true" dm="true">
+	<Item>
+		<Element>EducationalAssessmentType</Element>
+		<Description>
+			<p>An educational assessment that a student has undertaken.</p>
+		</Description>
+	</Item>
+   <Item>
+    <Element>Name</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Name of assessment.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  <Item>
+    <Element>Content</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Results of assessment.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+</CommonElement>
+
+<CommonElement name="STDNGradeListType" type="true" dm="true">
+	<Item>
+		<Element>STDNGradeListType</Element>
+		<Description>
+			<p>List of A-E Grades most recently received by student.</p>
+		</Description>
+		<List mode="List">
+    </List>
+	</Item>
+	<Item>
+		<Element>StudentGrade</Element>
+		<Characteristics>MR</Characteristics>
+		<Type ref="CommonTypes" name="STDNGradeType"/>
+	</Item>
+</CommonElement>
+
+<CommonElement name="STDNGradeType" type="true" dm="true">
+	<Item>
+		<Element>STDNGradeType</Element>
+		<Description>
+			<p>A-E Grade received by student.</p>
+		</Description>
+	</Item>
+   <Item>
+    <Element>Subject</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The scope of the StudentGrade; e.g. subject matter. Should be used if no TeachingGroup is associated with the grade.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  <Item>
+    <Element>LearningArea</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Learning area against which the grade was given.</p>
+    </Description>
+	<Type ref="CommonTypes" name="ACStrandSubjectAreaType"/>
+  </Item>
+  <Item>
+    <Element>Grade</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Overall grade that the student has received.</p>
+    </Description>
+	<Type ref="CommonTypes" name="GradeType"/>
+  </Item>
+</CommonElement>
 </IncludeGroup>

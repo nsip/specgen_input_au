@@ -9,7 +9,7 @@
 		<inputDocument>SIF_DataModel.xml</inputDocument>
 		<sifNamespace>http://www.sifassociation.org/datamodel/au/3.4</sifNamespace>
 		<localizationCode>au</localizationCode>
-		<schemaVersion>3.4.9</schemaVersion>
+		<schemaVersion>3.4.10</schemaVersion>
 		
 		<!-- Comment this one out to leave out JSON Tabs -->
 		
@@ -28,7 +28,7 @@
 		<htmlDocument>
 			<singleDocument>false</singleDocument>
 			<rootDocumentFileName>index.html</rootDocumentFileName>
-			<rootTitle>SIF Implementation Specification (Australia) 3.4.9</rootTitle>
+			<rootTitle>SIF Implementation Specification (Australia) 3.4.10</rootTitle>
 			<documentType>DataModel</documentType>
 		</htmlDocument>
 		
@@ -36,7 +36,7 @@
 		<htmlDocument>
 			<singleDocument>true</singleDocument>
 			<rootDocumentFileName>ImplementationSpecification.html</rootDocumentFileName>
-			<rootTitle>SIF Implementation Specification (Australia) 3.4.9</rootTitle>
+			<rootTitle>SIF Implementation Specification (Australia) 3.4.10</rootTitle>
 			<documentType>DataModel</documentType>
 		</htmlDocument>
 		
@@ -512,7 +512,7 @@
 			<xsltParamList>
 				<xsltParam>
 					<xsltName>sifObjectList</xsltName>
-					<xsltValue>AddressCollection,CensusCollection,CollectionRound,CollectionStatus,FinancialQuestionnaireCollection,StudentAttendanceCollection</xsltValue>
+					<xsltValue>AddressCollection,CensusCollection,CollectionRound,CollectionStatus,FinancialQuestionnaireCollection,StudentAttendanceCollection,CollectionAcquittal</xsltValue>
 				</xsltParam>
 			</xsltParamList>
 			<xsltOutputDir>JSON\AustralianGovernmentCollections</xsltOutputDir>
@@ -525,7 +525,7 @@
 			<xsltParamList>
 				<xsltParam>
 					<xsltName>sifObjectList</xsltName>
-					<xsltValue>AddressCollection,CensusCollection,CollectionRound,CollectionStatus,FinancialQuestionnaireCollection,StudentAttendanceCollection</xsltValue>
+					<xsltValue>AddressCollection,CensusCollection,CollectionRound,CollectionStatus,FinancialQuestionnaireCollection,StudentAttendanceCollection,CollectionAcquittal</xsltValue>
 				</xsltParam>
 				<xsltParam>
 					<xsltName>sifObjectGroupList</xsltName>
@@ -820,7 +820,7 @@
 			<xsltParamList>
 				<xsltParam>
 					<xsltName>sifObjectList</xsltName>
-					<xsltValue>PersonalisedPlan,WellbeingAlert,WellbeingAppeal,WellbeingCharacteristic,WellbeingEvent,WellbeingPersonLink,WellbeingResponse</xsltValue>
+					<xsltValue>PersonalisedPlan,WellbeingAlert,WellbeingAppeal,WellbeingCharacteristic,WellbeingEvent,WellbeingPersonLink,WellbeingResponse,StudentDataTransferNote</xsltValue>
 				</xsltParam>
 				<xsltParam>
 					<xsltName>sifObjectGroupList</xsltName>

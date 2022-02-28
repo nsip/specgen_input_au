@@ -183,6 +183,7 @@
 		<xi:include parse="text" href="Common/PersonalisedPlan.xml"/>
 		<xi:include parse="text" href="Common/WellbeingCharacteristic.xml"/>
 		<xi:include parse="text" href="Common/WellbeingPersonLink.xml"/>
+		<xi:include parse="text" href="AU/StudentDataTransferNote.xml"/>
 
 
 	</Group>
@@ -202,6 +203,7 @@
 		<xi:include parse="text" href="AU/StudentAttendanceCollection.xml"/>
 		<xi:include parse="text" href="AU/CensusCollection.xml"/>
 		<xi:include parse="text" href="AU/CollectionRound.xml"/>
+		<xi:include parse="text" href="AU/CollectionAcquittal.xml"/>
 
 
 
