@@ -14473,4 +14473,30 @@
 	<Type ref="CommonTypes" name="GradeType"/>
   </Item>
 </CommonElement>
+
+<CommonElement name="FlagAndDetailsType" type="true" dm="true">
+	<Item>
+		<Element>FlagAndDetailsType</Element>
+		<Description>
+			<p>Flag for a sensitive issue, with optional details.</p>
+		</Description>
+	</Item>
+   <Item>
+    <Element>Flag</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Flag that a sensitive issue has been raised.</p>
+    </Description>
+    <Type name="xs:boolean"></Type>
+  </Item>
+  <Item>
+    <Element>Details</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Details of the sensitive issue.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+ 
+</CommonElement>
 </IncludeGroup>

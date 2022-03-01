@@ -226,6 +226,96 @@
 		</Description>
 		<Type ref="CommonTypes" name="STDNGradeListType"/>		
 	</Item>
+	
+	<Item>
+		<Element>DisciplinaryAbsences</Element>
+		<Characteristics>O</Characteristics>
+	    <privacyRating>High</privacyRating>
+		<Description>
+			<p>Flag for disciplinary absences, indicating request for follow-up discussion.</p>
+		</Description>
+		<Type ref="CommonTypes" name="FlagAndDetailsType"/>		
+	</Item>
+
+	<Item>
+		<Element>Health</Element>
+		<Characteristics>O</Characteristics>
+	    <privacyRating>High</privacyRating>
+		<Description>
+			<p>Flag for health issues, indicating request for follow-up discussion.</p>
+		</Description>
+		<Type ref="CommonTypes" name="FlagAndDetailsType"/>		
+	</Item>
+
+	<Item>
+		<Element>Talents</Element>
+		<Characteristics>O</Characteristics>
+	    <privacyRating>High</privacyRating>
+		<Description>
+			<p>Flag for talents, indicating request for follow-up discussion.</p>
+		</Description>
+		<Type ref="CommonTypes" name="FlagAndDetailsType"/>		
+	</Item>
+
+	<Item>
+		<Element>EducationPlan</Element>
+		<Characteristics>O</Characteristics>
+	    <privacyRating>High</privacyRating>
+		<Description>
+			<p>Flag for an education plan, indicating request for follow-up discussion.</p>
+		</Description>
+		<Type ref="CommonTypes" name="FlagAndDetailsType"/>		
+	</Item>
+
+	<Item>
+		<Element>Behaviour</Element>
+		<Characteristics>O</Characteristics>
+	    <privacyRating>High</privacyRating>
+		<Description>
+			<p>Flag for behaviour issues, indicating request for follow-up discussion.</p>
+		</Description>
+		<Type ref="CommonTypes" name="FlagAndDetailsType"/>		
+	</Item>
+
+	<Item>
+		<Element>CareerGuidance</Element>
+		<Characteristics>O</Characteristics>
+	    <privacyRating>High</privacyRating>
+		<Description>
+			<p>Flag for career guidance issues, indicating request for follow-up discussion.</p>
+		</Description>
+		<Type ref="CommonTypes" name="FlagAndDetailsType"/>		
+	</Item>
+
+	<Item>
+		<Element>YoungCarer</Element>
+		<Characteristics>O</Characteristics>
+	    <privacyRating>High</privacyRating>
+		<Description>
+			<p>Flag for young carer issues, indicating request for follow-up discussion.</p>
+		</Description>
+		<Type ref="CommonTypes" name="FlagAndDetailsType"/>		
+	</Item>
+
+	<Item>
+		<Element>Counselling</Element>
+		<Characteristics>O</Characteristics>
+	    <privacyRating>High</privacyRating>
+		<Description>
+			<p>Flag for counselling issues, indicating request for follow-up discussion.</p>
+		</Description>
+		<Type ref="CommonTypes" name="FlagAndDetailsType"/>		
+	</Item>
+
+	<Item>
+		<Element>Acceleration</Element>
+		<Characteristics>O</Characteristics>
+	    <privacyRating>High</privacyRating>
+		<Description>
+			<p>Flag for acceleration issues, indicating request for follow-up discussion.</p>
+		</Description>
+		<Type ref="CommonTypes" name="FlagAndDetailsType"/>		
+	</Item>
 
 <Item>   
     <Element>LocalCodeList</Element>
@@ -444,6 +534,42 @@
 	  </Grade>
 	</StudentGrade>
   </StudentGradeList>
+  <DisciplinaryAbsences>
+    <Flag>true</Flag>
+	<Details>There are disciplinary absence issues to discuss</Details>
+  </DisciplinaryAbsences>
+   <Health>
+    <Flag>true</Flag>
+	<Details>There are health issues to discuss</Details>
+  </Health>
+   <Talents>
+    <Flag>true</Flag>
+	<Details>There are talents issues to discuss</Details>
+  </Talents>
+   <EducationPlan>
+    <Flag>true</Flag>
+	<Details>There is an education plan to discuss</Details>
+  </EducationPlan>
+  <Behaviour>
+    <Flag>true</Flag>
+	<Details>There are behaviour issues issues to discuss</Details>
+  </Behaviour>
+  <CareerGuidance>
+    <Flag>true</Flag>
+	<Details>There are career guidance issues to discuss</Details>
+  </CareerGuidance>
+  <YoungCarer>
+    <Flag>true</Flag>
+	<Details>There are young carer issues to discuss</Details>
+  </YoungCarer>
+ <Counselling>
+    <Flag>true</Flag>
+	<Details>There are counselling issues to discuss</Details>
+  </Counselling>
+ <Acceleration>
+    <Flag>true</Flag>
+	<Details>There are acceleration issues to discuss</Details>
+  </Acceleration>
  </StudentDataTransferNote>
       </xhtml:Example> 
    
