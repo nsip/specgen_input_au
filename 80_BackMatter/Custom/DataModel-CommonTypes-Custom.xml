@@ -14394,7 +14394,7 @@
     </List>
 	</Item>
 	<Item>
-		<Element>NCCD</Element>
+		<Element>EducationalAssessment</Element>
 		<Characteristics>MR</Characteristics>
 		<Type ref="CommonTypes" name="EducationalAssessmentType"/>
 	</Item>

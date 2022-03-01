@@ -29,7 +29,7 @@
 	  <Element>Name</Element>
 	  <Characteristics>M</Characteristics>
 	  <privacyRating>High</privacyRating>
-	  <Description>The name of the person. Note: Type attribute value of LGL must be used here.</Description>
+	  <Description><p>The name of the person. Note: Type attribute value of LGL must be used here.</p></Description>
 	  <Type ref="CommonTypes" name="NameOfRecordType"></Type>
   </Item>
   
@@ -37,7 +37,7 @@
 	  <Element>Gender</Element>
 	  <Characteristics>M</Characteristics>
 	  <privacyRating>High</privacyRating>
-	  <Description>The distinction "male"/"female"/"intersex"/"self-described", as reported by the person.</Description>
+	  <Description><p>The distinction "male"/"female"/"intersex"/"self-described", as reported by the person.</p></Description>
 	  <Type ref="CodeSets" name="AUCodeSetsSexCodeType"/>
   </Item>
   
@@ -45,7 +45,7 @@
 	  <Element>BirthDate</Element>
 	  <Characteristics>M</Characteristics>
 	  <privacyRating>High</privacyRating>
-	  <Description>The person's date of birth.</Description>
+	  <Description><p>The person's date of birth.</p></Description>
 	  <Type ref="CommonTypes" name="BirthDateType"/>
   </Item>
   
@@ -53,7 +53,7 @@
 	  <Element>PlaceOfBirth</Element>
 	  <Characteristics>O</Characteristics>
 	  <privacyRating>High</privacyRating>
-	  <Description>The person's place of birth -- such as village, town, city, etc.</Description>
+	  <Description><p>The person's place of birth -- such as village, town, city, etc.</p></Description>
 	  <Type name="xs:normalizedString"/>
   </Item>
   
@@ -515,7 +515,7 @@
 	  <Subject>Australian History: Gold and Iron</Subject>
 	  <LearningArea>
 	    <ACStrand>H</ACStrand>
-	  <SubjectArea>Australian History</SubjectArea>
+	  <SubjectArea><Code>Australian History</Code></SubjectArea>
 	  </LearningArea>
 	  <Grade>
 	    <Letter>B</Letter>
