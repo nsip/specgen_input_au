@@ -526,7 +526,7 @@
 	  <Subject>World History: Revolutions</Subject>
 	  <LearningArea>
 	    <ACStrand>H</ACStrand>
-	  <SubjectArea>World History</SubjectArea>
+	  <SubjectArea><Code>World History</Code></SubjectArea>
 	  </LearningArea>
 	  <Grade>
 	    <Letter>A</Letter>
