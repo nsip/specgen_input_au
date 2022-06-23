@@ -10096,9 +10096,9 @@
 		<ID>NCCD Adjustment</ID>
 		<Values>
 			<Value>
-				<Code>Support</Code>
-				<Text>Support</Text>
-			</Value>
+				<Code>QDTP</Code>
+				<Text>Support provided within Quality Differentiated Teaching Practice</Text>
+				</Value>
 			<Value>
 				<Code>Supplementary</Code>
 				<Text>Supplementary</Text>
@@ -10110,6 +10110,10 @@
 			<Value>
 				<Code>Extensive</Code>
 				<Text>Extensive</Text>
+			</Value>
+			<Value>
+				<Code>None</Code>
+				<Text>None</Text>
 			</Value>
 		</Values>
 	</CodeSet>							
@@ -10133,8 +10137,12 @@
 				<Text>Sensory</Text>
 			</Value>
 			<Value>
-				<Code>Social/Emotional</Code>
-				<Text>Social/Emotional</Text>
+				<Code>Social-Emotional</Code>
+				<Text>Social-Emotional</Text>
+			</Value>
+			<Value>
+				<Code>None</Code>
+				<Text>None</Text>
 			</Value>
 		</Values>
 	</CodeSet>							

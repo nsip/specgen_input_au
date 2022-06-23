@@ -6,7 +6,7 @@
          xmlns="http://sifassociation.org/SpecGen">
 	
 	<p>This release contains the following significant updates and extensions to the SIF specification.</p>
-	<h3>Additions/Changes since 3.4.8 March, 2021</h3>
+	<h3>Additions/Changes since 3.4.9 November, 2021</h3>
 	<h4>New Objects</h4>
 	<ul>
 		<li>PersonPrivacyObligationDocument object added for this release. 
@@ -16,68 +16,26 @@
 	</ul>
 	<h4>New Elements</h4>
 	<ul>
-		<li><code>SchoolInfo/ParentCommonwealthID</code>, requested by ACARA: used to differentiate the original Australian Government school identifiers, which applied to school locations, from the new Australian Government school identifiers as of 2021, which only apply to schools.</li>
-		<li><code>StudentPersonal/NationalUniqueStudentIdentifier</code>, requested by QLD DoE: support of national Unique Student Identifier initiative.</li>
-		<li><code>StudentPersonal/IndependentStudent</code>, requested by QLD DoE: identifty students responsible for their own education.</li>
-		<li><code>DemographicsType/Passport</code>, requested by QLD DoE: support for international students.</li>
-		<li><code>DemographicsType/VisaNumber</code>, <code>DemographicsType/VisaGrantDate</code>, 
-		<code>DemographicsType/VisaStudyEntitlement</code>, <code>DemographicsType/VisaCondtions</code>, 
-		requested by QLD DoE: support for international students. (Information sourced from VEVO.)</li>
-		<li><code>StudentContactPersonal/Employment</code>, <code>StudentContactPersonal/Workplace</code>,
-		requested by QLD DoE: student background data collection.</li>
-		<li><code>Debtor/BSB</code>, <code>Debtor/AccountNumber</code>, <code>Debtor/AccountName</code>,
-		requested by QLD DoE: charging parents and guardians with school fees.</li>
-		<li><code>StudentContactPersonal/WorkingWithChildrenCheck</code>,
-		requested by QLD DoE: confirm eligibility of student contacts to perform ad hoc work on behalf of school (e.g. homestays).</li>
-		<li><code>StudentContactRelationship/FeePercentage</code>,
-		requested by QLD DoE: capture proportion of student fees paid by a particular student contact.</li>
-		<li><code>StudentContactRelationship/ContactMethod</code>,
-		requested by QLD DoE: preferred method of correspondence for a student contact in relation to a student.</li>
-		<li><code>DemographicsType/MedicarePositionNumber</code>, <code>DemographicsType/MedicareCardHolder</code>, 
-		<code>DemographicsType/PrivateHealthInsurance</code>,
-		requested by QLD DoE: capture medical insurance information about students.</li>
-		<li><code>WellbeingCharacteristic/PreferredHospital</code>,
-		requested by QLD DoE: capture medical care arrangements for a particular medical condition for a student.</li>
-		<li><code>StudentSchoolEnrollment/IntendedEntryDate</code>,
-		requested by QLD DoE: capture date that student is intended to enrol, as distinct from the date that they actually enrol.</li>
-		<li><code>WellbeingEvent/FollowUpActionList/FollowUpAction/Date</code>,
-		requested by QLD DoE: capture date that a follow up action in student wellbeing occured.</li>
-		<li><code>StudentGrade/TermSpan</code>, <code>StudentGrade/SchoolYear</code>,
-		requested by QLD DoE: capture temporal scope of a student grade.</li>
-		<li><code>CensusCollection/LocalCodeList</code>, 
-		added for consistency with rest of data model.</li>
-		<li><code>CampusContainerType/ParentSchoolRefId</code>, requested by CEO Melbourne,
-		to allow SchoolInfo object for a campus to be linked via RefId to a SchoolInfo object for a parent school.</li>
+		<li><code>ScheduledActivity/ActivityEndDate</code>, requested by QLD DoE: used to represent multi-day excursions.</li>
 	</ul>
 	
 	<h4>New Types</h4>
 	<ul>
-	<li><code>WorkingWithChildrenCheckType</code>, requested by QLD DoE, further suggestions from Systemic: 
-	encode eligibility to perform work wth children on behalf of school (e.g. homestays)</li>
- 	<li><code>StudentContactFeePercentageType</code>, requested by QLD DoE: 
-	encode proportion of student fees paid by a particular student contact</li>
-	<li><code>PrivateHealthInsuranceType</code>, requested by QLD DoE: 
-	encode private medical insurance information</li>
   </ul>
 	
 	<h4>New CodeSets</h4>
 	<ul>	
-		<li><code>Visa Study Entitlement</code>, requested by QLD DoE: support for international students. (Information sourced from VEVO.)</li>
-		<li><code>Contact Method</code>, requested by QLD DoE: communications media for contacting persons.</li>
+	<li>Added <code>NCCD Disability</code>, to systematise representation of disability in the specification and for use in Student Data Transfer Protocol. (Information sourced from NCCD.)</li>
 	</ul>
 
 	<h4>Additions to CodeSets</h4>
 	<ul>	
-		<li>Addition to <code>School Level</code>—<code>SpecialAssistance</code>, requested by CEO Melbourne: aligned with Education Act. 
-		Accounts for discrepancy in Census reporting: these are Special schools as listed by ACARA, but they have regular year levels unlike Special schools.</li>
-		<li>Addition to <code>Attendance Code</code>—<code>626</code>, <code>Prep Transition day</code>. Used to capture day that Prep students are not required to be in attendance, as part of Prep Transition.</li>
-		<li>Addition to <code>Federal Electorates</code>—<code>219</code> (Hawke). Codes for Victoria renumbered following ABS practice. <code>514</code> (Stirling) will be retained until it is abolished at the next federal election.</li>
-		<li>Addition to <code>ISO 4217 Currency Names And Code Elements</code>—<code>UYW, VED</code>, added to ISO 4217.</li>
 	</ul>
 
 	<h4>Other Changes</h4>
 	<ul>
-		<li>Change to label of codeset <code>OperationalStatus</code> value <code>P</code>, from <code>Pending</code> to <code>Proposed</code>.</li>
+	<li>Refactor <code>StudentSchoolEnrollment/DisabilityCategory</code> to use the new <code>NCCD Disability</code> codeset.</li>
+ 	<li>Refactor <code>StudentSchoolEnrollment/DisabilityLevelOfAdjustment</code> to use the new <code>NCCD Adustment</code> codeset.</li>
  	</ul>
    	
 	<h4>Corrections</h4>

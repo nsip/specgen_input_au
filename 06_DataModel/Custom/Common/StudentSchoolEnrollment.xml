@@ -469,20 +469,7 @@
 		<Description>
 			<p>Level of Adjustment made for a student's disability.</p>
 		</Description>
-		<Values>
-        <Value>
-			<Code>QDTP</Code>
-        </Value>
-        <Value>
-			<Code>Supplementary</Code>
-		</Value>
-        <Value>
-			<Code>Substantial</Code>
-		</Value>
-        <Value>
-			<Code>Extensive</Code>
-		</Value>
-       </Values>
+		<Type ref="CodeSets" name="AUCodeSetsNCCDAdjustmentType"></Type>
 	</Item>
 	<Item>
 		<Element>DisabilityCategory</Element>
@@ -491,27 +478,14 @@
 		<Description>
 			<p>Category of a student's disability.</p>
 		</Description>
-		<Values>
-        <Value>
-			<Code>Physical</Code>
-        </Value>
-        <Value>
-			<Code>Cognitive</Code>
-		</Value>
-        <Value>
-			<Code>Social-Emotional</Code>
-		</Value>
-        <Value>
-			<Code>Sensory</Code>
-		</Value>
-       </Values>
+    <Type ref="CodeSets" name="AUCodeSetsNCCDDisabilityType"></Type>
 	</Item>
     <Item>
     	<Element>CensusAge</Element>
 		<Characteristics>O</Characteristics>
 		<privacyRating>High</privacyRating>
 		<Description>
-			<p>Age of the StudentCalculated for Non-gov Census reporting.</p>
+			<p>Age of the Student. Calculated for Non-gov Census reporting.</p>
 		</Description>
 		<Type name="xs:unsignedInt"/>
     </Item>	

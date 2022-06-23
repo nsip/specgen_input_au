@@ -204,7 +204,7 @@
 		<xi:include parse="text" href="AU/CensusCollection.xml"/>
 		<xi:include parse="text" href="AU/CollectionRound.xml"/>
 		<xi:include parse="text" href="AU/CollectionAcquittal.xml"/>
-
+		<xi:include parse="text" href="AU/CollectionDeclaration.xml"/>
 
 
 	</Group>

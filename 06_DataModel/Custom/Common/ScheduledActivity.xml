@@ -86,6 +86,16 @@
     <Type name="xs:date"></Type>
   </Item>
   
+  <Item>
+    <Element>ActivityEndDate</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Date for which a multi-day activity is scheduled to end.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+  
     <Item>
     <Element>StartTime</Element>
     <Characteristics>M</Characteristics>

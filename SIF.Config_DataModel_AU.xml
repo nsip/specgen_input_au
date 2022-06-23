@@ -512,7 +512,7 @@
 			<xsltParamList>
 				<xsltParam>
 					<xsltName>sifObjectList</xsltName>
-					<xsltValue>AddressCollection,CensusCollection,CollectionRound,CollectionStatus,FinancialQuestionnaireCollection,StudentAttendanceCollection,CollectionAcquittal</xsltValue>
+					<xsltValue>AddressCollection,CensusCollection,CollectionRound,CollectionStatus,FinancialQuestionnaireCollection,StudentAttendanceCollection,CollectionAcquittal,CollectionDeclaration</xsltValue>
 				</xsltParam>
 			</xsltParamList>
 			<xsltOutputDir>JSON\AustralianGovernmentCollections</xsltOutputDir>
@@ -525,7 +525,7 @@
 			<xsltParamList>
 				<xsltParam>
 					<xsltName>sifObjectList</xsltName>
-					<xsltValue>AddressCollection,CensusCollection,CollectionRound,CollectionStatus,FinancialQuestionnaireCollection,StudentAttendanceCollection,CollectionAcquittal</xsltValue>
+					<xsltValue>AddressCollection,CensusCollection,CollectionRound,CollectionStatus,FinancialQuestionnaireCollection,StudentAttendanceCollection,CollectionAcquittal,CollectionDeclaration</xsltValue>
 				</xsltParam>
 				<xsltParam>
 					<xsltName>sifObjectGroupList</xsltName>
@@ -807,7 +807,7 @@
 			<xsltParamList>
 				<xsltParam>
 					<xsltName>sifObjectList</xsltName>
-					<xsltValue>PersonalisedPlan,WellbeingAlert,WellbeingAppeal,WellbeingCharacteristic,WellbeingEvent,WellbeingPersonLink,WellbeingResponse</xsltValue>
+					<xsltValue>PersonalisedPlan,WellbeingAlert,WellbeingAppeal,WellbeingCharacteristic,WellbeingEvent,WellbeingPersonLink,WellbeingResponse,StudentDataTransferNote</xsltValue>
 				</xsltParam>
 			</xsltParamList>
 			<xsltOutputDir>JSON\Wellbeing</xsltOutputDir>

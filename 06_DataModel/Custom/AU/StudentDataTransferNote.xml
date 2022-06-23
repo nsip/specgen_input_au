@@ -35,7 +35,7 @@
   
   <Item>
 	  <Element>Gender</Element>
-	  <Characteristics>M</Characteristics>
+	  <Characteristics>O</Characteristics>
 	  <privacyRating>High</privacyRating>
 	  <Description><p>The distinction "male"/"female"/"intersex"/"self-described", as reported by the person.</p></Description>
 	  <Type ref="CodeSets" name="AUCodeSetsSexCodeType"/>
@@ -68,7 +68,7 @@
 	</Item>
 	<Item>
 		<Element>CountryOfBirth</Element>
-		<Characteristics>O</Characteristics>
+		<Characteristics>M</Characteristics>
 	    <privacyRating>High</privacyRating>
 		<Description>
 			<p>The person's country of birth.</p>
@@ -128,6 +128,16 @@
 	</Item>
 
 	<Item>
+		<Element>FollowupRequest</Element>
+		<Characteristics>O</Characteristics>
+	    <privacyRating>High</privacyRating>
+		<Description>
+			<p>Follow-up discussion with departure school is requested. Does not specify reason for request.</p>
+		</Description>
+	  <Type name="xs:boolean"/>
+	</Item>
+
+	<Item>
 		<Element>AtRisk</Element>
 		<Characteristics>O</Characteristics>
 	    <privacyRating>High</privacyRating>
@@ -138,7 +148,7 @@
 	</Item>
 
  	<Item>
-		<Element>AttendanceFlag</Element>
+		<Element>Attendance</Element>
 		<Characteristics>O</Characteristics>
 	    <privacyRating>High</privacyRating>
 		<Description>
@@ -184,7 +194,7 @@
 		<Description>
 			<p>Language Background Other Than English.</p>
 		</Description>
-		<Type ref="CommonTypes" name="LBOTEAndLanguageType"/>
+     <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
 	</Item>
 
 	<Item>
@@ -226,96 +236,7 @@
 		</Description>
 		<Type ref="CommonTypes" name="STDNGradeListType"/>		
 	</Item>
-	
-	<Item>
-		<Element>DisciplinaryAbsences</Element>
-		<Characteristics>O</Characteristics>
-	    <privacyRating>High</privacyRating>
-		<Description>
-			<p>Flag for disciplinary absences, indicating request for follow-up discussion.</p>
-		</Description>
-		<Type ref="CommonTypes" name="FlagAndDetailsType"/>		
-	</Item>
 
-	<Item>
-		<Element>Health</Element>
-		<Characteristics>O</Characteristics>
-	    <privacyRating>High</privacyRating>
-		<Description>
-			<p>Flag for health issues, indicating request for follow-up discussion.</p>
-		</Description>
-		<Type ref="CommonTypes" name="FlagAndDetailsType"/>		
-	</Item>
-
-	<Item>
-		<Element>Talents</Element>
-		<Characteristics>O</Characteristics>
-	    <privacyRating>High</privacyRating>
-		<Description>
-			<p>Flag for talents, indicating request for follow-up discussion.</p>
-		</Description>
-		<Type ref="CommonTypes" name="FlagAndDetailsType"/>		
-	</Item>
-
-	<Item>
-		<Element>EducationPlan</Element>
-		<Characteristics>O</Characteristics>
-	    <privacyRating>High</privacyRating>
-		<Description>
-			<p>Flag for an education plan, indicating request for follow-up discussion.</p>
-		</Description>
-		<Type ref="CommonTypes" name="FlagAndDetailsType"/>		
-	</Item>
-
-	<Item>
-		<Element>Behaviour</Element>
-		<Characteristics>O</Characteristics>
-	    <privacyRating>High</privacyRating>
-		<Description>
-			<p>Flag for behaviour issues, indicating request for follow-up discussion.</p>
-		</Description>
-		<Type ref="CommonTypes" name="FlagAndDetailsType"/>		
-	</Item>
-
-	<Item>
-		<Element>CareerGuidance</Element>
-		<Characteristics>O</Characteristics>
-	    <privacyRating>High</privacyRating>
-		<Description>
-			<p>Flag for career guidance issues, indicating request for follow-up discussion.</p>
-		</Description>
-		<Type ref="CommonTypes" name="FlagAndDetailsType"/>		
-	</Item>
-
-	<Item>
-		<Element>YoungCarer</Element>
-		<Characteristics>O</Characteristics>
-	    <privacyRating>High</privacyRating>
-		<Description>
-			<p>Flag for young carer issues, indicating request for follow-up discussion.</p>
-		</Description>
-		<Type ref="CommonTypes" name="FlagAndDetailsType"/>		
-	</Item>
-
-	<Item>
-		<Element>Counselling</Element>
-		<Characteristics>O</Characteristics>
-	    <privacyRating>High</privacyRating>
-		<Description>
-			<p>Flag for counselling issues, indicating request for follow-up discussion.</p>
-		</Description>
-		<Type ref="CommonTypes" name="FlagAndDetailsType"/>		
-	</Item>
-
-	<Item>
-		<Element>Acceleration</Element>
-		<Characteristics>O</Characteristics>
-	    <privacyRating>High</privacyRating>
-		<Description>
-			<p>Flag for acceleration issues, indicating request for follow-up discussion.</p>
-		</Description>
-		<Type ref="CommonTypes" name="FlagAndDetailsType"/>		
-	</Item>
 
 <Item>   
     <Element>LocalCodeList</Element>
@@ -417,7 +338,6 @@
 	  <ParticipationCode>P</ParticipationCode>
  <DomainScore>
     <ScaledScoreValue>440.00</ScaledScoreValue>
-    <ScaledScoreStandardError>22.17</ScaledScoreStandardError>
     <StudentDomainBand>6</StudentDomainBand>
     <StudentProficiency>Proficient</StudentProficiency>
   </DomainScore>
@@ -431,7 +351,6 @@
 	  <ParticipationCode>P</ParticipationCode>
 <DomainScore>
     <ScaledScoreValue>440.00</ScaledScoreValue>
-    <ScaledScoreStandardError>22.17</ScaledScoreStandardError>
     <StudentDomainBand>6</StudentDomainBand>
     <StudentProficiency>Proficient</StudentProficiency>
   </DomainScore>
@@ -441,7 +360,6 @@
 	  <ParticipationCode>P</ParticipationCode>
 <DomainScore>
     <ScaledScoreValue>440.00</ScaledScoreValue>
-    <ScaledScoreStandardError>22.17</ScaledScoreStandardError>
     <StudentDomainBand>6</StudentDomainBand>
     <StudentProficiency>Proficient</StudentProficiency>
   </DomainScore>
@@ -453,40 +371,26 @@
  </NAPLANScoreList>
  <NCCDList>
    <NCCD>
-     <LevelOfAdjustment>Support</LevelOfAdjustment>
+     <LevelOfAdjustment>QDTP</LevelOfAdjustment>
 	 <CategoryOfDisability>Physical</CategoryOfDisability>
    </NCCD>
    <NCCD>
      <LevelOfAdjustment>Extensive</LevelOfAdjustment>
-	 <CategoryOfDisability>Social/Emotional</CategoryOfDisability>
+	 <CategoryOfDisability>Social-Emotional</CategoryOfDisability>
    </NCCD>
  </NCCDList>
+ <FollowupRequest>true</FollowupRequest>
  <AtRisk>true</AtRisk>
- <AttendanceFlag>false</AttendanceFlag>
+ <Attendance>false</Attendance>
  <NationalUniqueStudentIdentifier>0001001</NationalUniqueStudentIdentifier>
  <YearLevel>
     <Code>10</Code>
   </YearLevel>
   <IndigenousStatus>1</IndigenousStatus>
-  <LBOTE> 
-    <Status>Y</Status>
-  <LanguageList>
-    <Language>
-      <Code>0001</Code>
-      <LanguageType>1</LanguageType>
-    </Language>
-     <Language>
-      <Code>6518</Code>
-      <LanguageType>2</LanguageType>
-    </Language>
- </LanguageList>
-  </LBOTE>
+  <LBOTE>Y</LBOTE>
 <VisaStatus>
     <Code>101</Code>
 	<VisaExpiryDate>2025-12-31</VisaExpiryDate>
-	<ATEExpiryDate>2022-12-31</ATEExpiryDate>
-	<ATEStartDate>2022-01-01</ATEStartDate>
-	<VisaStatisticalCode>003</VisaStatisticalCode>
  </VisaStatus>
    <OtherNames>
     <Name Type="AKA">
@@ -534,42 +438,6 @@
 	  </Grade>
 	</StudentGrade>
   </StudentGradeList>
-  <DisciplinaryAbsences>
-    <Flag>true</Flag>
-	<Details>There are disciplinary absence issues to discuss</Details>
-  </DisciplinaryAbsences>
-   <Health>
-    <Flag>true</Flag>
-	<Details>There are health issues to discuss</Details>
-  </Health>
-   <Talents>
-    <Flag>true</Flag>
-	<Details>There are talents issues to discuss</Details>
-  </Talents>
-   <EducationPlan>
-    <Flag>true</Flag>
-	<Details>There is an education plan to discuss</Details>
-  </EducationPlan>
-  <Behaviour>
-    <Flag>true</Flag>
-	<Details>There are behaviour issues issues to discuss</Details>
-  </Behaviour>
-  <CareerGuidance>
-    <Flag>true</Flag>
-	<Details>There are career guidance issues to discuss</Details>
-  </CareerGuidance>
-  <YoungCarer>
-    <Flag>true</Flag>
-	<Details>There are young carer issues to discuss</Details>
-  </YoungCarer>
- <Counselling>
-    <Flag>true</Flag>
-	<Details>There are counselling issues to discuss</Details>
-  </Counselling>
- <Acceleration>
-    <Flag>true</Flag>
-	<Details>There are acceleration issues to discuss</Details>
-  </Acceleration>
  </StudentDataTransferNote>
       </xhtml:Example> 
    

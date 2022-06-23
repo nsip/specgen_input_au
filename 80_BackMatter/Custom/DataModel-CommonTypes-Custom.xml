@@ -2126,24 +2126,9 @@
 			<Element>DisabilityLevelOfAdjustment</Element>
 			<Characteristics>M</Characteristics>
 			<Description>
-				<p>Disability Level of Adjustment	Level of adjustment for students with disability using the Nationally Consistent Collection of Data on Students with Disability (NCCD) model.None if there is no adjustment.</p>
+				<p>Level of adjustment for students with disability using the Nationally Consistent Collection of Data on Students with Disability (NCCD) model. None if there is no adjustment.</p>
 			</Description>
-			<Values>
-			<Value>
-				<Code>QDTP</Code>
-				<Description>support provided within Quality Differentiated Teaching Practice</Description>
-			</Value>
-			<Value>
-				<Code>Supplementary</Code>
-			</Value>
-			<Value>
-				<Code>Substantial</Code>
-			</Value>
-			<Value>
-				<Code>Extensive</Code>
-			</Value>
-			<Value><Code>None</Code></Value>
-		   </Values>
+			<Type ref="CodeSets" name="AUCodeSetsNCCDAdjustmentType"></Type>
 		</Item>
 		<Item>
 			<Element>DisabilityCategory</Element>
@@ -2151,21 +2136,7 @@
 			<Description>
 				<p>Category for students with disability using the Nationally Consistent Collection of Data on Students with Disability (NCCD) model. None if no disability.</p>
 			</Description>
-			<Values>
-			<Value>
-				<Code>Physical</Code>
-			</Value>
-			<Value>
-				<Code>Cognitive</Code>
-			</Value>
-			<Value>
-				<Code>Social-Emotional</Code>
-			</Value>
-			<Value>
-				<Code>Sensory</Code>
-			</Value>
-			<Value><Code>None</Code></Value>
-		   </Values>
+			<Type ref="CodeSets" name="AUCodeSetsNCCDDisabilityType"></Type>
 		</Item>
 		<Item>
 			<Element>FTE</Element>
@@ -14198,18 +14169,35 @@
 	</Item>
    <Item>
     <Element>ACARAId</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>C</Characteristics>
     <Description>
       <p>ACARA identifier for this school.</p>
     </Description>
     <Type name="xs:normalizedString"></Type>
   </Item>
- 
+   <Item>
+    <Element>CommonwealthId</Element>
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>AGE ID identifier for this school.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+
   <Item>
     <Element>Name</Element>
     <Characteristics>M</Characteristics>
     <Description>
       <p>Name of school.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  
+    <Item>
+    <Element>City</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>City where school is located.</p>
     </Description>
     <Type name="xs:normalizedString"></Type>
   </Item>
@@ -14248,13 +14236,21 @@
 	</Item>
    <Item>
     <Element>ACARAId</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>C</Characteristics>
     <Description>
       <p>ACARA identifier for this school.</p>
     </Description>
     <Type name="xs:normalizedString"></Type>
   </Item>
- 
+    <Item>
+    <Element>CommonwealthId</Element>
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>AGE ID identifier for this school.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+
   <Item>
     <Element>Name</Element>
     <Characteristics>M</Characteristics>
@@ -14263,7 +14259,15 @@
     </Description>
     <Type name="xs:normalizedString"></Type>
   </Item>
-
+<Item>
+    <Element>City</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>City where school is located.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  
 
 </CommonElement>
 <CommonElement name="NAPLANScoreListType" type="true" dm="true">
@@ -14359,30 +14363,6 @@
   </Item>
 </CommonElement>
 
-<CommonElement name="LBOTEAndLanguageType" type="true" dm="true">
-	<Item>
-		<Element>LBOTEAndLanguageType</Element>
-		<Description>
-			<p>Language Background Other Than English, and languages spoken.</p>
-		</Description>
-	</Item>
-   <Item>
-    <Element>Status</Element>
-    <Characteristics>M</Characteristics>
-    <Description>
-      <p>Student has Language Background Other Than English.</p>
-    </Description>
-    <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
-  </Item>
-  <Item>
-    <Element>LanguageList</Element>
-    <Characteristics>O</Characteristics>
-    <Description>
-      <p>List of languages an individual uses to communicate.</p>
-    </Description>
-	<Type ref="CommonTypes" name="LanguageListType"/>
-  </Item>
-</CommonElement>
 
 <CommonElement name="EducationalAssessmentListType" type="true" dm="true">
 	<Item>
@@ -14474,29 +14454,5 @@
   </Item>
 </CommonElement>
 
-<CommonElement name="FlagAndDetailsType" type="true" dm="true">
-	<Item>
-		<Element>FlagAndDetailsType</Element>
-		<Description>
-			<p>Flag for a sensitive issue, with optional details.</p>
-		</Description>
-	</Item>
-   <Item>
-    <Element>Flag</Element>
-    <Characteristics>M</Characteristics>
-    <Description>
-      <p>Flag that a sensitive issue has been raised.</p>
-    </Description>
-    <Type name="xs:boolean"></Type>
-  </Item>
-  <Item>
-    <Element>Details</Element>
-    <Characteristics>O</Characteristics>
-    <Description>
-      <p>Details of the sensitive issue.</p>
-    </Description>
-    <Type name="xs:normalizedString"></Type>
-  </Item>
- 
-</CommonElement>
+
 </IncludeGroup>
