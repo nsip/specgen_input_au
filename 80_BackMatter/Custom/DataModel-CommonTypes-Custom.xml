@@ -13119,9 +13119,10 @@
 	<Item>
 		<Element>TimeElementType</Element>
 		<Description>
-			<p>A common metadata element designed to contain time data, both self-defined and by type.</p>
+			<p>A common metadata element designed to contain time data relating to the validity of the object.</p>
 		</Description>
 	</Item>
+	<!--
 	<Item>
 		<Element>Type</Element>
 		<Characteristics>M</Characteristics>
@@ -13209,6 +13210,7 @@
       Evening of 10/12/06
     </ItemExample>
 	</Item>
+	-->
 	<Item>
 		<Element>StartDateTime</Element>
 		<Characteristics>O</Characteristics>
@@ -13225,6 +13227,7 @@
 		</Description>
 		<Type name="xs:dateTime"/>
 	</Item>
+	
 	<Item>
 		<Element>SpanGaps</Element>
 		<Characteristics>O</Characteristics>
@@ -13244,10 +13247,12 @@
 	</Item>
 	<xhtml:Example xmlns="" name="TimeElement Example">
 		<TimeElement>
+		<!--
 			<Type>Full school year</Type>
 			<Code>01</Code>
 			<Name>2004/2005 School Year</Name>
 			<Value>2004-2005</Value>
+			-->
 			<StartDateTime>2004-09-01T08:00:00-05:00</StartDateTime>
 			<EndDateTime>2005-06-30T15:00:00-05:00</EndDateTime>
 			<SpanGaps>
@@ -13717,6 +13722,7 @@
 		</ACStrandSubjectArea>
 	</xhtml:Example>
 </CommonElement>
+<!--
 <CommonElement name="EducationFilterType" type="true" dm="true">
 	<Intro>
 		<p>
@@ -13762,6 +13768,7 @@
 		</EducationFilter>
 	</xhtml:Example>
 </CommonElement>
+-->
 <CommonElement name="SIF_ExtendedElementsType" type="true" dm="true">
 	<Intro>
 		<p>
@@ -13880,6 +13887,15 @@
 		<Type ref="CommonTypes" name="LifeCycleType"/>
 	</Item>
 	<Item>
+		<Element>ETag</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Used to manage versioning of object under race conditions (multiple clients posting versions of the same object)</p>
+		</Description>
+		<Type name="xs:token"/>
+	</Item>
+	<!--
+	<Item>
 		<Element>EducationFilter</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
@@ -13887,6 +13903,7 @@
 		</Description>
 		<Type ref="CommonTypes" name="EducationFilterType"/>
 	</Item>
+	-->
 </CommonElement>
 
 <CommonElement name="TimeElementListType" type="true" dm="true">
@@ -14453,6 +14470,21 @@
 	<Type ref="CommonTypes" name="GradeType"/>
   </Item>
 </CommonElement>
+
+			<CommonElement type="true" name='FTEType'>
+			<Item>
+				<Element>FTEType</Element>
+				<Description>
+			<p>Full-Time Equivalent as expressed in most instances in SIF-AU, as a decimal digit between 0 and 1 with two significant decimal places.
+			Expresed as a string for round-tripping with JSON</p>
+		</Description>
+				<Type name='xs:token'/>
+				<Facets>
+				<xs:pattern value="0|1|1.00?|0\.[0-9][0-9]?"/>
+				<!--<xs:pattern value='[0-9A-F]{32}'/>-->
+				</Facets>
+			</Item>
+		</CommonElement>
 
 
 </IncludeGroup>
