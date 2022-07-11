@@ -138,11 +138,13 @@
 	</Item>
 
 	<Item>
-		<Element>AtRisk</Element>
+		<Element>ChildSubjectToOrders</Element>
 		<Characteristics>O</Characteristics>
 	    <privacyRating>High</privacyRating>
 		<Description>
-			<p>Student is at risk, and follow-up discussion with departure school is requested.</p>
+			<p>Legal orders or arrangements that give child protection departments some responsibility for a child's welfare
+			or more specifically, a child aged 0-17 on a care and protection order or other formal arrangement, or children
+			aged 18 or under who were discharged from those care and protection orders/arrangements. Follow-up discussion with departure school is requested.</p>
 		</Description>
 	  <Type name="xs:boolean"/>
 	</Item>
@@ -152,7 +154,7 @@
 		<Characteristics>O</Characteristics>
 	    <privacyRating>High</privacyRating>
 		<Description>
-			<p>Student has attendance issues, and follow-up discussion with departure school is requested.</p>
+			<p>Student has attendance under the 80% absences threshold tracked by existing Commonwealth reporting. Follow-up discussion with departure school is requested.</p>
 		</Description>
 	  <Type name="xs:boolean"/>
 	</Item>
@@ -380,7 +382,7 @@
    </NCCD>
  </NCCDList>
  <FollowupRequest>true</FollowupRequest>
- <AtRisk>true</AtRisk>
+ <ChildSubjectToOrders>true</ChildSubjectToOrders>
  <Attendance>false</Attendance>
  <NationalUniqueStudentIdentifier>0001001</NationalUniqueStudentIdentifier>
  <YearLevel>
