@@ -9,23 +9,26 @@
 	<h3>Additions/Changes since 3.4.9 November, 2021</h3>
 	<h4>New Objects</h4>
 	<ul>
-		<li>PersonPrivacyObligationDocument object added for this release. 
-		This object contains information about the person's data and privacy obligations as well as permissions and consent associated with it.
+		<li><code>StudentDataTransferNote</code> object added for this release. 
+		This object serves to communicate student movements between schools via a national Student Data Transfer Exchange.
 
 </li>
 	</ul>
 	<h4>New Elements</h4>
 	<ul>
 		<li><code>ScheduledActivity/ActivityEndDate</code>, requested by QLD DoE: used to represent multi-day excursions.</li>
+		<li><code>StudentPersonal/CategoryOfDisability</code>, for tracking of disability as an equity cohort among students, without depending on NCCD classification specific to a student enrollment.</li>
 	</ul>
 	
 	<h4>New Types</h4>
 	<ul>
+	<li>Added <code>FTE Type</code> as string encoding of FTEs with two digit precision, to ensure JSON round-tripping without loss of precision.</li>
   </ul>
 	
 	<h4>New CodeSets</h4>
 	<ul>	
-	<li>Added <code>NCCD Disability</code>, to systematise representation of disability in the specification and for use in Student Data Transfer Protocol. (Information sourced from NCCD.)</li>
+	<li>Added <code>NCCD Disability</code>, to systematise representation of disability in the specification and for use in Student Data Transfer Protocol. 
+	(Information sourced from NCCD.)</li>
 	</ul>
 
 	<h4>Additions to CodeSets</h4>
@@ -35,7 +38,14 @@
 	<h4>Other Changes</h4>
 	<ul>
 	<li>Refactor <code>StudentSchoolEnrollment/DisabilityCategory</code> to use the new <code>NCCD Disability</code> codeset.</li>
- 	<li>Refactor <code>StudentSchoolEnrollment/DisabilityLevelOfAdjustment</code> to use the new <code>NCCD Adustment</code> codeset.</li>
+ 	<li>Refactor <code>StudentSchoolEnrollment/DisabilityLevelOfAdjustment</code> to use the new <code>NCCD Adjustment</code> codeset.</li>
+	<li>Update <code>StaffAssignment/JobFTE</code>, <code>StudentSchoolEnrollment/FTE</code>, <code>StudentParticipation/StudentSpecialEducationFTE</code>, <code>StudentAttendanceSummary/FTE</code>, 
+	<code>StaffAssignmentMostRecentContainerType/PrimaryFTE</code>, <code>StaffAssignmentMostRecentContainerType/SecondaryFTE</code>, <code>CensusSudentType/FTE</code>, 
+	<code>StudentMostRecentContainerType/FTE</code> to use the new <code>FTE Type</code> type, as a string rather than a decimal, in order to ensure JSON round-tripping without loss of precision.</li> 
+	<li>Update <code>TermInfo/RelativeDuration</code>, <code>StatsCohortType/AttendanceDays</code>, <code>CensusStaffType/PrimaryFTE</code>, <code>CensusStaffType/SecondaryFTE</code>, 
+	<code>CensusStaffType/JobFTE</code>, <code>AttendanceInfoType/AttendanceValue</code>   
+	to be strings with regular expression facets rather than decimals with precision facets, 
+	in order to ensure JSON round-tripping without loss of precision.</li>
  	</ul>
    	
 	<h4>Corrections</h4>

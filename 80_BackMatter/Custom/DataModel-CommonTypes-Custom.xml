@@ -1234,10 +1234,9 @@
 			<Description>
 				<p>Sum of attendance days for all students in the cohort during the reference period. Must be less than or equal to the number of Possible School Days. Can include partial attendance days. The field must not be comma delimited.</p>
 			</Description>
-			<Type name="xs:decimal"></Type>
-			<Facets>
-			  <xs:minInclusive value="0"/>
-			  <xs:fractionDigits value="2"/>
+			<Type name='xs:token'/>
+				<Facets>
+				<xs:pattern value="[0-9]+|[0-9]+\.[0-9][0-9]?"/>
 			</Facets>
 		</Item>
 		<Item>
@@ -1881,25 +1880,21 @@
 		<Description>
 		  <p>For each member of the cohort, on a full-time-equivalent basis, the proportion of the staff member’s job that goes toward supporting the primary school component of the location. For staff at combined (primary and secondary) locations, this field plus the secondary FTE field equals the total FTE for the staff member’s job. (Format is x.x, with a full time workload being equal to 1 FTE. Primary FTE plus Secondary FTE should not exceed 1.</p>
 		</Description>
-		<Type name="xs:decimal"></Type>
-		<Facets>
-		  <xs:minInclusive value="0"/>
-		  <xs:maxInclusive value="1"/>
-		  <xs:fractionDigits value="1"/>
-		</Facets>
-	</Item>
+		<Type name='xs:token'/>
+				<Facets>
+				<xs:pattern value="0|1|1.0|0\.[0-9]"/>
+				</Facets>	
+		</Item>
 	<Item>
 		<Element>SecondaryFTE</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
 		  <p>For each member of the cohort, on a full-time-equivalent basis, the proportion of the staff member’s job that goes toward supporting the primary school component of the location. For staff at combined (primary and secondary) locations, this field plus the secondary FTE field equals the total FTE for the staff member’s job. (Format is x.x, with a full time workload being equal to 1 FTE. Primary FTE plus Secondary FTE should not exceed 1.</p>
 		</Description>
-	 	<Type name="xs:decimal"></Type>
-		<Facets>
-		  <xs:minInclusive value="0"/>
-		   <xs:maxInclusive value="1"/> 
-		  <xs:fractionDigits value="1"/>
-		</Facets>
+		<Type name='xs:token'/>
+				<Facets>
+				<xs:pattern value="0|1|1.0|0\.[0-9]"/>
+				</Facets>	
 	 </Item>
 	<Item>
 			<Element>JobFTE</Element>
@@ -1907,12 +1902,10 @@
 			<Description>
 			  <p>The full-time-equivalent measure of the job for each member of the cohort. (Format is x.x, with a full time workload being equal to 1 FTE.) Note: This field is used instead of Primary FTE and Secondary FTE, where the client is a system or diocese office and is not a school location where primary or secondary education is delivered.</p>
 			</Description>
-			<Type name="xs:decimal"></Type>
-			<Facets>
-			  <xs:minInclusive value="0"/>
-			  <!--<xs:maxInclusive value="1"/> -->
-			  <xs:fractionDigits value="1"/>
-			</Facets>
+		<Type name='xs:token'/>
+				<Facets>
+				<xs:pattern value="[0-9]+|[0-9]+\.[0-9]"/>
+				</Facets>	
  	</Item>
 
 		  <!-- Leave off StaffAssignment - no unit level for first release
@@ -1949,12 +1942,7 @@
 		<Description>
 		  <p>Full-time job equivalent ratio associated with teaching at the Primary level. (Format is x.xx; an employee who is full-time and who is 50% of their time on this assignment would be represented as 0.50)</p>
 		</Description>
-		<Type name="xs:decimal"></Type>
-		<Facets>
-		  <xs:minInclusive value="0"/>
-		  <xs:maxInclusive value="1"/>
-		  <xs:fractionDigits value="2"/>
-		</Facets>
+			     <Type ref="CommonTypes" name="FTE"/>
 	</Item>
 	<Item>
 		<Element>SecondaryFTE</Element>
@@ -1962,12 +1950,7 @@
 		<Description>
 		  <p>Full-time job equivalent ratio associated with teaching at the Secondary level. (Format is x.xx; an employee who is full-time and who is 50% of their time on this assignment would be represented as 0.50)</p>
 		</Description>
-		<Type name="xs:decimal"></Type>
-		<Facets>
-		  <xs:minInclusive value="0"/>
-		  <xs:maxInclusive value="1"/>
-		  <xs:fractionDigits value="2"/>
-		</Facets>
+			     <Type ref="CommonTypes" name="FTE"/>
 	 </Item>
 </CommonElement>	
  <CommonElement name="CensusStudentListType" type= "true" dm="true">
@@ -2144,12 +2127,7 @@
 			<Description>
 				<p>Full-time equivalent for the student cohort e.g. a cohort of students who attend 50% of time would be represented as 0.5.</p>
 			</Description>
-			<Type name="xs:decimal"/>
-			<Facets>
-				<xs:minInclusive value="0"/>
-				<xs:maxInclusive value="1"/>
-				<xs:fractionDigits value="2"/>
-			</Facets>
+				     <Type ref="CommonTypes" name="FTE"/>
 		</Item> 
 		<Item>
 			<Element>Headcount</Element>
@@ -7734,12 +7712,10 @@
         Amount of the school day in which the student should be in attendance (Format is x.x; a student who should be in attendance a full day would be represented as 1.0).  If <code>CountsTowardAttendance</code> equals <code>Yes</code> then <code>AttendanceValue</code> must be greater than zero.
       </p>
     </Description>
-    <Type name="xs:decimal"></Type>
-    <Facets>
-      <xs:minInclusive value="0"/>
-      <xs:maxInclusive value="1"/>
-      <xs:fractionDigits value="1"/>
-    </Facets>
+		<Type name='xs:token'/>
+				<Facets>
+				<xs:pattern value="0|1|1.0|0\.[0-9]"/>
+		</Facets>	
   </Item>
 </CommonElement>
 
@@ -7999,12 +7975,7 @@
 		<Description>
 			<p>Full-time equivalent numeric value of the student's course load during this enrollment, expressed in decimal form, where 1.00 represents a full-time enrollment.</p>
 		</Description>
-		<Type name="xs:decimal"/>
-		<Facets>
-			<xs:minInclusive value="0"/>
-			<xs:maxInclusive value="1"/>
-			<xs:fractionDigits value="2"/>
-		</Facets>
+			     <Type ref="CommonTypes" name="FTE"/>
 	</Item>
 	<Item>
 		<Element>Parent1Language</Element>
@@ -14471,20 +14442,19 @@
   </Item>
 </CommonElement>
 
-			<CommonElement type="true" name='FTEType'>
+<CommonElement type="true" name='FTEType'>
 			<Item>
 				<Element>FTEType</Element>
-				<Description>
+			<Description>
 			<p>Full-Time Equivalent as expressed in most instances in SIF-AU, as a decimal digit between 0 and 1 with two significant decimal places.
 			Expresed as a string for round-tripping with JSON</p>
-		</Description>
+			</Description>
 				<Type name='xs:token'/>
 				<Facets>
 				<xs:pattern value="0|1|1.00?|0\.[0-9][0-9]?"/>
-				<!--<xs:pattern value='[0-9A-F]{32}'/>-->
 				</Facets>
 			</Item>
-		</CommonElement>
+</CommonElement>
 
 
 </IncludeGroup>

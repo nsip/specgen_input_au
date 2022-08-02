@@ -271,12 +271,7 @@
     <Description>
       <p>Calculated ratio of time the student is in a special ed setting.  Values range from 0.00 to 1.00.  If the student is in a special ed setting 25% of the time, the value is .25; if 100% of the time, the value is 1.00.</p>
     </Description>
-    <Type name="xs:decimal"></Type>
-    <Facets>
-      <xs:minInclusive value="0"/>
-      <xs:maxInclusive value="1"/>
-      <xs:fractionDigits value="2"/>
-    </Facets>
+    	     <Type ref="CommonTypes" name="FTE"/>
   </Item>
   
   <Item>

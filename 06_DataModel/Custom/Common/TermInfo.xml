@@ -84,12 +84,10 @@
     <Description>
       <p>Portion of the school year represented by this term, expressed in decimal form precise to 4 decimal places (e.g., 0.1333).</p>
     </Description>
-    <Type name="xs:decimal"/>
-    <Facets>
-      <xs:minInclusive value="0"/>
-      <xs:maxInclusive value="1"/>
-      <xs:fractionDigits value="4"/>
-    </Facets>
+				<Type name='xs:token'/>
+				<Facets>
+				<xs:pattern value="0|1|1.0?0?0?0?|0\.[0-9][0-9]?[0-9]?[0-9]?"/>
+				</Facets>
   </Item>
   <Item>
     <Element>TermCode</Element>

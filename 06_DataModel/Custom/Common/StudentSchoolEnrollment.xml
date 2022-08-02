@@ -304,12 +304,7 @@
     <Description> 
       <p>Full-time equivalent numeric value of the student's course load during this enrollment, expressed in decimal form, where 1.00 represents a full-time enrollment.</p>
     </Description>
-    <Type name="xs:decimal"></Type>
-    <Facets>
-      <xs:minInclusive value="0"/>
-      <xs:maxInclusive value="1"/>
-      <xs:fractionDigits value="2"/>
-    </Facets>
+    	     <Type ref="CommonTypes" name="FTE"/>
   </Item>
   <Item>
     <Element>FTPTStatus</Element>
