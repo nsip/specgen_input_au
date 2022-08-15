@@ -101,7 +101,7 @@
       </CommonElement-->
       
  <!-- Added for 3.4.8 for Venetian Blind patterning in the ResourceUsage Object -->
- 
+ <!-- Removed 3.5.0
  <CommonElement name="ResourceUsageContentTypeType" type="true" dm="true">
   <Item>
     <Element>ResourceUsageContentTypeType</Element>
@@ -269,7 +269,7 @@
    	<Type name="xs:normalizedString"></Type>
   </Item>  
   </CommonElement>
-  
+-->  
   <CommonElement name="HomeroomType" type="true" dm="true">
 	  <Item>
 		<Element>HomeroomType</Element>
@@ -317,7 +317,7 @@
  </CommonElement>
  
   <!-- Added for 3.4.8 for Venetian Blind patterning in the SystemRole Object -->
-  
+  <!-- Removed 3.5.0
     <CommonElement name="SystemRoleObjectRefIdType" type="true" dm="true">
       <Item>
       <Element>SystemRoleObjectRefIdType</Element>
@@ -513,6 +513,8 @@
       <Type ref="CommonTypes" name="SystemRoleScopeRefIdType"></Type>
     </Item>
   </CommonElement>
+ -->
+ 
  
  <!-- Added for CEM Travel Details 3.4.8 --> 
     <!--
@@ -13093,7 +13095,7 @@
 			<p>A common metadata element designed to contain time data relating to the validity of the object.</p>
 		</Description>
 	</Item>
-	<!--
+	<!-- removed as part of Metadata cleanup 3.5.0
 	<Item>
 		<Element>Type</Element>
 		<Characteristics>M</Characteristics>
@@ -13186,7 +13188,7 @@
 		<Element>StartDateTime</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
-			<p>StartDateTime</p>
+			<p>Start Date associated with object (e.g. for object validity)</p>
 		</Description>
 		<Type name="xs:dateTime"/>
 	</Item>
@@ -13194,7 +13196,7 @@
 		<Element>EndDateTime</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
-			<p>EndDateTime</p>
+			<p>End Date associated with object (e.g. for object validity)</p>
 		</Description>
 		<Type name="xs:dateTime"/>
 	</Item>
@@ -13211,7 +13213,7 @@
 		<Characteristics>M</Characteristics>
 		<Type name="xs:boolean"/>
 		<Description>
-      This element allows for the system to tag an object as being explicitly current.
+      This element allows for the system to tag an object as being explicitly current at the time it is sent.
       Although the baseline assumption in SIF is that objects are always current (default value is typically <code>true</code>),
       there are use cases when that is not the case.
     </Description>
@@ -13228,10 +13230,12 @@
 			<EndDateTime>2005-06-30T15:00:00-05:00</EndDateTime>
 			<SpanGaps>
 				<SpanGap>
+				<!--
 					<Type>Holiday</Type>
 					<Code>02</Code>
 					<Name>2005 Winter Break</Name>
 					<Value>2005 Winter Break</Value>
+				-->
 					<StartDateTime>2005-02-21T15:00:00-05:00</StartDateTime>
 					<EndDateTime>2005-02-25T08:00:00-05:00</EndDateTime>
 				</SpanGap>
@@ -13254,7 +13258,7 @@
        <Element>SpanGap</Element>
        <Characteristics>OR</Characteristics>
        <Description>
-         This structure duplicates much of the structure of <code>TimeElement</code> and is designed to represent a gap in the parent time period
+         This structure is designed to represent a gap in the parent time period
       defined by <code>StartDateTime</code> and <code>EndDateTime</code> above
        </Description>
        <Type ref="CommonTypes" name="SpanGapType"/>
@@ -13264,47 +13268,104 @@
     	<Item>
 		<Element>SpanGapType</Element>
 		<Description>
-      This structure duplicates much of the structure of <code>TimeElement</code> and is designed to represent a gap in the parent time period
+      This structure is designed to represent a gap in the parent time period
       defined by <code>StartDateTime</code> and <code>EndDateTime</code> above.
     </Description>
 	</Item>
+	<!-- removed as part of metadata rationalisation 3.5.0
 	<Item>
 		<Element>Type</Element>
 		<Characteristics>M</Characteristics>
-		<Description>
-			<p>Type</p>
-		</Description>
 		<Type name="xs:normalizedString"/>
+		<Description>
+			<p>
+        This element is designed to contain the time period of a time gap attached to an object.
+        Very long periods (school year, quarter, etc.) and very small periods (second, millisecond, etc.) can be defined.
+        This element provides a scoping description of the time metadata enclosed.
+      </p>
+			<p>
+        Because the educational environment varies so greatly we are including here a suggested but not prescriptive list of values.
+        Although there may be unique needs for values not covered here&#x2014;and we may have missed a major one&#x2014;a best practice would be
+        to utilize the examples here to enhance interoperability.
+      </p>
+		</Description>
+		<ItemExample>
+      Full school year
+    </ItemExample>
+		<ItemExample>
+      Mini-term
+    </ItemExample>
+		<ItemExample>
+      Long session
+    </ItemExample>
+		<ItemExample>
+      Other
+    </ItemExample>
+		<ItemExample>
+      Semester
+    </ItemExample>
+		<ItemExample>
+      Trimester
+    </ItemExample>
+		<ItemExample>
+      Quarter
+    </ItemExample>
+		<ItemExample>
+      Spring Vacation
+    </ItemExample>
+		<ItemExample>
+      Summer Term
+    </ItemExample>
+		<ItemExample>
+      Intercession
+    </ItemExample>
+		<ItemExample>
+      Holiday
+    </ItemExample>
 	</Item>
 	<Item>
 		<Element>Code</Element>
 		<Characteristics>M</Characteristics>
-		<Description>
-			<p>Code</p>
-		</Description>
 		<Type name="xs:token"/>
+		<Description>
+      This element provides a place for the application to send structured data (code values, unique identifier, timestamps).
+      This code value can, depending upon the use case agreement between agents, be used to qualify the data in the <code>Value</code> element.
+    </Description>
+		<ItemExample>2007SY</ItemExample>
+		<ItemExample>2006.FallConferences</ItemExample>
 	</Item>
 	<Item>
 		<Element>Name</Element>
 		<Characteristics>M</Characteristics>
-		<Description>
-			<p>Name</p>
-		</Description>
 		<Type name="xs:normalizedString"/>
+		<Description>
+      Contains a human-readable description of the value in <code>Value</code>.
+    </Description>
+		<ItemExample>
+      Class of '07
+    </ItemExample>
+		<ItemExample>
+      Fall 2007 Parent-Teacher Conferences
+    </ItemExample>
 	</Item>
 	<Item>
 		<Element>Value</Element>
 		<Characteristics>M</Characteristics>
-		<Description>
-			<p>Value</p>
-		</Description>
 		<Type name="xs:normalizedString"/>
+		<Description>Contains a human-readable value.</Description>
+		<ItemExample>
+      2007
+    </ItemExample>
+		<ItemExample>
+      Evening of 10/12/06
+    </ItemExample>
 	</Item>
+	-->
 	<Item>
 		<Element>StartDateTime</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
-			<p>StartDate and Time</p>
+			<p>Start Date and Time of gap in timespan</p>
 		</Description>
 		<Type name="xs:dateTime"/>
 	</Item>
@@ -13312,7 +13373,7 @@
 		<Element>EndDateTime</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
-			<p>EndDate and Time</p>
+			<p>End Date and Time of gap in timespan</p>
 		</Description>
 		<Type name="xs:dateTime"/>
 	</Item>
@@ -13693,7 +13754,7 @@
 		</ACStrandSubjectArea>
 	</xhtml:Example>
 </CommonElement>
-<!--
+<!-- Removed as part of metadata rationalisation 3.5.0
 <CommonElement name="EducationFilterType" type="true" dm="true">
 	<Intro>
 		<p>
@@ -13865,7 +13926,7 @@
 		</Description>
 		<Type name="xs:token"/>
 	</Item>
-	<!--
+	<!-- removed as part of metadata rationalisation 3.5.0
 	<Item>
 		<Element>EducationFilter</Element>
 		<Characteristics>O</Characteristics>

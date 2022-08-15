@@ -14,11 +14,28 @@
 
 </li>
 	</ul>
+	
+			<h4>Removed Objects</h4>
+	<ul>
+		<li><code>ResourceUsage</code></li>
+		<li><code>SystemRole</code></li>
+	</ul>
+
+
 	<h4>New Elements</h4>
 	<ul>
 		<li><code>ScheduledActivity/ActivityEndDate</code>, requested by QLD DoE: used to represent multi-day excursions.</li>
 		<li><code>StudentPersonal/CategoryOfDisability</code>, for tracking of disability as an equity cohort among students, without depending on NCCD classification specific to a student enrollment.</li>
+		<li><code>SIF_MetadataType/ETag</code>, added as long-standing request by QLD DoE to prevent collision between data object updates under race conditions.</li>
 	</ul>
+	
+		<h4>Removed Elements</h4>
+	<ul>
+		<li><code>SIF_MetadataType/EducationFilter</code>, <code>TimeElementType/Type</code>,  <code>TimeElementType/Code</code>,  <code>TimeElementType/Name</code>,  <code>TimeElementType/Value</code>,
+		<code>SpanGapType/Type</code>,  <code>SpanGapType/Code</code>,  <code>SpanGapType/Name</code>,  <code>SpanGapType/Value</code>,
+		removed as part of SIF Metadata rationalisation.</li>
+	</ul>
+
 	
 	<h4>New Types</h4>
 	<ul>

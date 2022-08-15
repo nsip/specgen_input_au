@@ -208,9 +208,12 @@
 
 
 	</Group>
-	<Group name = "Z - For Future Deprecation">
+	<!--
+	<Group name = "Z - For Future Deprecation">-->
 	<!-- Remove only for API generation  -->
+	<!--
 			<xi:include parse="text" href="Common/SystemRole.xml"/>
 			<xi:include parse="text" href="Common/ResourceUsage.xml"/> 
 	</Group>
+	-->
 </IncludeGroup>
