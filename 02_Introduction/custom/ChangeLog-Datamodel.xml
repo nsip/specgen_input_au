@@ -40,7 +40,10 @@
 	<h4>New Types</h4>
 	<ul>
 	<li>Added <code>FTE Type</code> as string encoding of FTEs with two digit precision, to ensure JSON round-tripping without loss of precision.</li>
-  </ul>
+	<li>Added <code>NAPLANScoreWithYearsType</code>, <code>NAPLANScoreWithYearsListType</code> to support publishing NAPLAN results along with the test level and the year the test was administered,
+	for use in Student Data Transfer Protocol.</li>
+ 	<li>Added <code>NCCDType</code>, <code>NCCDListType</code> to support capturing NCCD assessment along with the date of the assessment, for use in Student Data Transfer Protocol.</li>
+ </ul>
 	
 	<h4>New CodeSets</h4>
 	<ul>	

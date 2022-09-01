@@ -111,11 +111,10 @@
 		<Characteristics>O</Characteristics>
 	    <privacyRating>High</privacyRating>
 		<Description>
-			<p>Scores student has attained in most recent NAPLAN assessment.</p>
+			<p>Scores student has attained in most recent NAPLAN assessment, with test levels and years tests were administered.</p>
 		</Description>
-		<Type ref="CommonTypes" name="NAPLANScoreListType"/>
+		<Type ref="CommonTypes" name="NAPLANScoreWithYearsListType"/>
 	</Item>
-	<!-- Go back and revisit obligations on DomainScore elements in light of feedback on what scores can be published -->
 
  	<Item>
 		<Element>NCCDList</Element>
@@ -343,6 +342,8 @@
     <StudentDomainBand>6</StudentDomainBand>
     <StudentProficiency>Proficient</StudentProficiency>
   </DomainScore>
+    <TestLevel><Code>3</Code></TestLevel>
+	<TestYear>2017</TestYear>
 	</NAPLANScore>
      <NAPLANScore>
 	  <Domain>Numeracy</Domain>
@@ -375,6 +376,7 @@
    <NCCD>
      <LevelOfAdjustment>QDTP</LevelOfAdjustment>
 	 <CategoryOfDisability>Physical</CategoryOfDisability>
+	 <DateOfAssessment>2020-03-02</DateOfAssessment>
    </NCCD>
    <NCCD>
      <LevelOfAdjustment>Extensive</LevelOfAdjustment>

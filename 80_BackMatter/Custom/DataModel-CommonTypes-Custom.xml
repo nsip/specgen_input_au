@@ -14371,6 +14371,77 @@
 
 </CommonElement>
 
+<CommonElement name="NAPLANScoreWithYearsListType" type="true" dm="true">
+	<Item>
+		<Element>NAPLANScoreWithYearsListType</Element>
+		<Description>
+			<p>List of NAPLAN scores associated wih a student from a single assessment cycle,
+			enriched by test level and year of testing.</p>
+		</Description>
+		<List mode="List">
+    </List>
+	</Item>
+	<Item>
+		<Element>NAPLANScore</Element>
+		<Characteristics>MR</Characteristics>
+		<Type ref="CommonTypes" name="NAPLANScoreWithYearsType"/>
+	</Item>
+</CommonElement>
+
+<CommonElement name="NAPLANScoreWithYearsType" type="true" dm="true">
+	<Item>
+		<Element>NAPLANScoreWithYearsType</Element>
+		<Description>
+			<p>A NAPLAN score associated with a student and a domain from a single assessment cycle,
+			enriched by test level and year of testing. If the year of testing is not given, the
+			most recent year of testing is assumed.</p>
+		</Description>
+	</Item>
+   <Item>
+    <Element>Domain</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Domain of the NAP test undertaken.</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsNAPTestDomainType"></Type>
+  </Item>
+  <Item>
+    <Element>ParticipationCode</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Participation status of the student for the NAP test.</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsNAPParticipationCodeType"></Type>
+  </Item>
+
+  <Item>
+    <Element>DomainScore</Element>
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>Overall score received in the NAP test. Contents are not populated if this is an empty object
+	  (sanctioned abandonment or refusal).</p>
+    </Description>
+	<Type ref="CommonTypes" name="DomainScoreType"/>
+  </Item>
+  <Item>
+    <Element>TestLevel</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Values: 3, 5, 7, 9. The test level that the student had registered for.</p>
+    </Description>
+    <Type ref="CommonTypes" name="YearLevelType"></Type>
+  </Item>
+  <Item>
+    <Element>TestYear</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Year that testing took place, e.g. 2017.</p>
+    </Description>
+    <Type ref="CommonTypes" name="SchoolYearType"></Type>
+  </Item>
+
+</CommonElement>
+
 <CommonElement name="NCCDListType" type="true" dm="true">
 	<Item>
 		<Element>NCCDListType</Element>
@@ -14409,6 +14480,14 @@
       <p>Category of disability for a student.</p>
     </Description>
     <Type ref="CodeSets" name="AUCodeSetsNCCDDisabilityType"></Type>
+  </Item>
+  <Item>
+    <Element>DateOfAssessment</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Date that the assessment was made.</p>
+    </Description>
+    <Type name='xs:date'/>
   </Item>
 </CommonElement>
 
