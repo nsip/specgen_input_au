@@ -1185,6 +1185,10 @@
 				<Text>Prep Transition day</Text>
 			</Value>		
 			<Value>
+				<Code>627</Code>
+				<Text>Modified Timetable (Reduced Hours)</Text>
+			</Value>		
+			<Value>
 				<Code>699</Code>
 				<Text>Educational - further details not available</Text>
 			</Value>				

@@ -1884,7 +1884,7 @@
 		</Description>
 		<Type name='xs:token'/>
 				<Facets>
-				<xs:pattern value="0|1|1.0|0\.[0-9]"/>
+				<xs:pattern value="0|1|1\.0|0\.[0-9]"/>
 				</Facets>	
 		</Item>
 	<Item>
@@ -1895,7 +1895,7 @@
 		</Description>
 		<Type name='xs:token'/>
 				<Facets>
-				<xs:pattern value="0|1|1.0|0\.[0-9]"/>
+				<xs:pattern value="0|1|1\.0|0\.[0-9]"/>
 				</Facets>	
 	 </Item>
 	<Item>
@@ -7716,7 +7716,7 @@
     </Description>
 		<Type name='xs:token'/>
 				<Facets>
-				<xs:pattern value="0|1|1.0|0\.[0-9]"/>
+				<xs:pattern value="0|1|1\.0|0\.[0-9]"/>
 		</Facets>	
   </Item>
 </CommonElement>
@@ -14591,7 +14591,7 @@
 			</Description>
 				<Type name='xs:token'/>
 				<Facets>
-				<xs:pattern value="0|1|1.00?|0\.[0-9][0-9]?"/>
+				<xs:pattern value="0|1|1\.00?|0\.[0-9][0-9]?"/>
 				</Facets>
 			</Item>
 </CommonElement>
