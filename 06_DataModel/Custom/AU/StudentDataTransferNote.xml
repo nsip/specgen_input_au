@@ -87,6 +87,16 @@
 	</Item>
 
 	<Item>
+		<Element>ArrivalSchool</Element>
+		<Characteristics>M</Characteristics>
+	    <privacyRating>High</privacyRating>
+		<Description>
+			<p>The school that the student is arriving to.</p>
+		</Description>
+		<Type ref="CommonTypes" name="ArrivalSchoolType"/>
+	</Item>
+
+	<Item>
 		<Element>DepartureSchool</Element>
 		<Characteristics>M</Characteristics>
 	    <privacyRating>High</privacyRating>
@@ -278,6 +288,10 @@
     <CountryOfCitizenship>8104</CountryOfCitizenship>
     <CountryOfCitizenship>1101</CountryOfCitizenship>
   </CountriesOfCitizenship>
+  <ArrivalSchool>
+    <CommonwealthId>12345</CommonwealthId>
+	<Name>Buchanan Secondary College</Name>
+  </ArrivalSchool>
   <DepartureSchool>
     <ACARAId>30000</ACARAId>
 	<Name>Lincoln Secondary College</Name>

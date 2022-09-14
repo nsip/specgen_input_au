@@ -14209,11 +14209,56 @@
  
  </CommonElement>
  
+ <CommonElement name="ArrivalSchoolType" type="true" dm="true">
+	<Item>
+		<Element>ArrivalSchoolType</Element>
+		<Description>
+			<p>Details of a school to identify it as the school requesting details of a student in the Student Data Transfer Protocol.</p>
+		</Description>
+	</Item>
+   <Item>
+    <Element>ACARAId</Element>
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>ACARA identifier for this school.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+   <Item>
+    <Element>CommonwealthId</Element>
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>AGE ID identifier for this school.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+
+  <Item>
+    <Element>Name</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Name of school.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  
+    <Item>
+    <Element>City</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>City where school is located.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  
+
+</CommonElement>
+ 
  <CommonElement name="DepartureSchoolType" type="true" dm="true">
 	<Item>
 		<Element>DepartureSchoolType</Element>
 		<Description>
-			<p>Details of a school to identify it in the context of a departing student.</p>
+			<p>Details of a school to identify as the school a student is departing from.</p>
 		</Description>
 	</Item>
    <Item>
