@@ -1,0 +1,170 @@
+<DataObject name="CollectionDeclaration"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xmlns:xi="http://www.w3.org/2001/XInclude"
+			xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	
+            xmlns="http://sifassociation.org/SpecGen">
+
+  <Key>@RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>CollectionDeclaration</Element>
+	<privacyRating>High</privacyRating>
+    <Description>
+      <p>Object providing a record of the declaration of a collection object submitted as part of vertical reporting. The object is in the first instance provided for the 
+	  Australian Government collection objects, but is intended to be generalisable to other collections requiring declarations.</p>
+     </Description>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+	<privacyRating>High</privacyRating>
+    <Description>
+      <p>GUID for this Declaration. The application that owns this object is responsible for generating this unique Id.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+ <Item>
+	  <Element>ReportingAuthorityList</Element>
+	  <Characteristics>M</Characteristics>
+	  <privacyRating>High</privacyRating>
+	  <Description><p>Authorities represented in the collection covered by the declaration.</p></Description>
+	  <Type ref="CommonTypes" name="ReportingAuthorityListType"></Type>
+  </Item>
+  
+   <Item>
+	  <Element>SubmittingAuthority</Element>
+	  <Characteristics>O</Characteristics>
+	  <privacyRating>High</privacyRating>
+	  <Description><p>Authority submitting the data for declaration on behalf of the reporting authorities, if distinct from the reporting authorities.</p></Description>
+	  <Type ref="CommonTypes" name="ReportingAuthorityType"></Type>
+  </Item>
+  
+  <Item>
+	  <Element>SubmittedBy</Element>
+	  <Characteristics>O</Characteristics>
+	  <privacyRating>High</privacyRating>
+	  <Description><p>Personal details and signature of submitter.</p></Description>
+	  <Type ref="CommonTypes" name="SignatoryType"></Type>
+  </Item>
+ 
+
+
+  <Item>
+    <Element>Recipient</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Recipient of the declaration. By default, this is inferrable from the Collection identifier.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item> 
+  
+  <Item>
+  	  <Element>Collection</Element>
+	  <Characteristics>O</Characteristics>
+	  <privacyRating>Low</privacyRating>
+	  <Description><p>The type of Collection being reported on. The value is set by the collection agency; for Commonwealth collections, it shall be AGCollectionType.</p></Description>
+	  <Union>
+	  <Type ref="CodeSets" name="AUCodeSetsAGCollectionType"></Type>
+	  <Type name="xs:normalizedString"></Type>
+	  </Union>	  
+  </Item>
+  
+   <Item>
+	  <Element>CollectionYear</Element>
+	  <Characteristics>M</Characteristics>
+	  <privacyRating>Low</privacyRating>
+	  <Description><p>Data Year</p></Description>
+	  <Type ref="CommonTypes" name="SchoolYearType"></Type>
+  </Item>
+  
+  <Item>
+  	  <Element>RoundCode</Element>
+	  <Characteristics>O</Characteristics>
+	  <privacyRating>Low</privacyRating>
+	  <Description><p>Which Round of the collection is this submission for?</p></Description>
+	  <Type name="xs:normalizedString"></Type>
+  </Item>
+  
+
+  <Item>
+  	  <Element>Declaration</Element>
+	  <Characteristics>M</Characteristics>
+	  <privacyRating>Low</privacyRating>
+	  <Description><p>Declaration that is being made by the submitter, as legally binding text.</p></Description>
+	  <Type name="xs:normalizedString"></Type>
+  </Item>
+
+
+ <Item>   
+    <Element>LocalCodeList</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>High</privacyRating>
+    <Type ref="CommonTypes" name="LocalCodeListType"></Type>
+  </Item>
+   
+  <Item>   
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>High</privacyRating>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>High</privacyRating>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+
+<xhtml:Example xmlns="" name="CollectionDeclaration">
+<CollectionDeclaration RefId="D3E34B35-9D75-101A-8C3D-00AA001A1663">
+  <ReportingAuthorityList>
+	<ReportingAuthority>
+		<Name>St Joseph's Primary School, Leonville</Name>
+		<System>Catholic</System>
+		<AuthorityId>42732</AuthorityId>
+	</ReportingAuthority>
+	<ReportingAuthority>
+		<Name>St Mary's Primary School, Leonville</Name>
+		<System>Catholic</System>
+		<AuthorityId>42733</AuthorityId>
+	</ReportingAuthority>
+  </ReportingAuthorityList>  
+ <SubmittingAuthority>
+		<Name>Paramatta Diocese</Name>
+		<System>Catholic</System>
+		<AuthorityId>423</AuthorityId>
+  </SubmittingAuthority>
+  <SubmittedBy>
+    <Name>Fred Nurk</Name>
+	<Role>General Manager</Role>
+	<Organisation>Catholic Schools NSW</Organisation>
+	<Signature>https://www.example.com/nurk.jpg</Signature>
+	<SignatureImageType>01</SignatureImageType>
+	<Date>2022-03-01</Date>
+  </SubmittedBy>
+  <Recipient>NSW Education Department</Recipient>
+  <Collection>STATS</Collection>
+  <CollectionYear>2022</CollectionYear>
+  <RoundCode>1</RoundCode>
+  <Declaration>
+  &lt;h1&gt;FINANCIAL ACCOUNTABILITY CERTIFICATION – 2022&lt;/h1&gt;
+  
+  &lt;p&gt;In receiving the NSW SRS Entitlement in respect of the NSW Government in 2022, on behalf of St Joseph's Primary School, Leonville and St Mary's Primary School, Leonville,
+  Catholic Schools NSW agrees to spend, or commit to spend, these funds on any of the identified Educational Purposes listed in the letter.&lt;/p&gt;
+  
+  &lt;ol&gt;&lt;li&gt;I certify that the school/school authority does not and will not operate for profit within the meaning of Section 83C of the &lt;i&gt;Education Act 1990&lt;/i&gt;.&lt;/li&gt;
+  &lt;li&gt;I certify that the school/school authority agrees to abide by any applicable guidelines or directions that may be issued from time to time pursuant to the 
+  &lt;i&gt;Education Act 1990&lt;/i&gt; and &lt;i&gt;Education Regulation 2017&lt;/i&gt;.&lt;/li&gt;&lt;/ol&gt;
+  </Declaration>
+
+</CollectionDeclaration>
+</xhtml:Example>
+
+</DataObject>
+
+
+

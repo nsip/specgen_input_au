@@ -14491,7 +14491,7 @@
 	<Item>
 		<Element>NCCDListType</Element>
 		<Description>
-			<p>List of applicable disability categories for a student from the Nationally Consistent Collection of Data.</p>
+			<p>List of disability assessments for a student from the Nationally Consistent Collection of Data.</p>
 		</Description>
 		<List mode="List">
     </List>
@@ -14507,7 +14507,7 @@
 	<Item>
 		<Element>NCCDType</Element>
 		<Description>
-			<p>Disability category for a student from the Nationally Consistent Collection of Data.</p>
+			<p>Disability assessment for a student from the Nationally Consistent Collection of Data.</p>
 		</Description>
 	</Item>
    <Item>
@@ -14520,13 +14520,23 @@
   </Item>
   <Item>
     <Element>CategoryOfDisability</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
     <Description>
-      <p>Category of disability for a student.</p>
+      <p>Nominal category of disability for a student. If multiple categories were considered, this is the category with the highest
+	  level of adjustment, which the student assessment is classified under. At least one of <code>CategoryOfDisability</code>
+	  or <code>DisabilityCategoryConsideredList</code> must be present.</p>
     </Description>
     <Type ref="CodeSets" name="AUCodeSetsNCCDDisabilityType"></Type>
   </Item>
   <Item>
+    <Element>DisabilityCategoryConsideredList</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Categories of disability considered for a student in the NCCD assessment.</p>
+    </Description>
+    <Type ref="CommonTypes" name="DisabilityCategoryListType"></Type>
+  </Item>
+ <Item>
     <Element>DateOfAssessment</Element>
     <Characteristics>O</Characteristics>
     <Description>
@@ -14534,6 +14544,22 @@
     </Description>
     <Type name='xs:date'/>
   </Item>
+</CommonElement>
+
+<CommonElement name="DisabilityCategoryListType" type="true" dm="true">
+	<Item>
+		<Element>DisabilityCategoryListType</Element>
+		<Description>
+			<p>Categories of disability considered for a student in the NCCD assessment.</p>
+		</Description>
+		<List mode="List">
+    </List>
+	</Item>
+	<Item>
+		<Element>DisabilityCategoryConsidered</Element>
+		<Characteristics>MR</Characteristics>
+		<Type ref="CodeSets" name="AUCodeSetsNCCDDisabilityType"></Type>
+	</Item>
 </CommonElement>
 
 

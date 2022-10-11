@@ -7,9 +7,9 @@
 	
 	<globalSettings>
 		<inputDocument>SIF_DataModel.xml</inputDocument>
-		<sifNamespace>http://www.sifassociation.org/datamodel/au/3.4</sifNamespace>
+		<sifNamespace>http://www.sifassociation.org/datamodel/au/3.5</sifNamespace>
 		<localizationCode>au</localizationCode>
-		<schemaVersion>3.4.10</schemaVersion>
+		<schemaVersion>3.5.0</schemaVersion>
 		
 		<!-- Comment this one out to leave out JSON Tabs -->
 		
@@ -17,7 +17,7 @@
 		
 		<resolveExtensions>false</resolveExtensions>
  
- 		<isDraft>true</isDraft>
+ 		<isDraft>false</isDraft>
         <examplesValidatorFile>XSD\SIF_MessageNoIncludes\SIF_Message.xsd</examplesValidatorFile>
  
 	</globalSettings>
@@ -28,7 +28,7 @@
 		<htmlDocument>
 			<singleDocument>false</singleDocument>
 			<rootDocumentFileName>index.html</rootDocumentFileName>
-			<rootTitle>SIF Implementation Specification (Australia) 3.4.10</rootTitle>
+			<rootTitle>SIF Implementation Specification (Australia) 3.5.0</rootTitle>
 			<documentType>DataModel</documentType>
 		</htmlDocument>
 		
@@ -36,7 +36,7 @@
 		<htmlDocument>
 			<singleDocument>true</singleDocument>
 			<rootDocumentFileName>ImplementationSpecification.html</rootDocumentFileName>
-			<rootTitle>SIF Implementation Specification (Australia) 3.4.10</rootTitle>
+			<rootTitle>SIF Implementation Specification (Australia) 3.5.0</rootTitle>
 			<documentType>DataModel</documentType>
 		</htmlDocument>
 		
@@ -163,7 +163,7 @@
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToExamples.xsl</xsltInputFile>
 			<xsltOutputDir>JSON</xsltOutputDir>
-			<xsltOutputFile>Full/examples_AU_3.4.9.yaml</xsltOutputFile>
+			<xsltOutputFile>Full/examples_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 		
@@ -206,7 +206,7 @@
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToExamplesSBP.xsl</xsltInputFile>
 			<xsltOutputDir>JSON\SBP</xsltOutputDir>
-			<xsltOutputFile>examples_AU_3.4.9.yaml</xsltOutputFile>
+			<xsltOutputFile>examples_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 <!--- now run Use Cases -->		
@@ -220,7 +220,7 @@
 				</xsltParam>
 			</xsltParamList>
 			<xsltOutputDir>JSON\SBP</xsltOutputDir>
-			<xsltOutputFile>examples_AU_3.4.9.yaml</xsltOutputFile>
+			<xsltOutputFile>examples_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 
@@ -280,7 +280,7 @@
 				</xsltParam>
 			</xsltParamList>
 			<xsltOutputDir>JSON\ATTEND</xsltOutputDir>
-			<xsltOutputFile>examples_AU_3.4.9.yaml</xsltOutputFile>
+			<xsltOutputFile>examples_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 		
@@ -339,7 +339,7 @@
 				</xsltParam>
 			</xsltParamList>
 			<xsltOutputDir>JSON\Finance</xsltOutputDir>
-			<xsltOutputFile>examples_AU_3.4.9.yaml</xsltOutputFile>
+			<xsltOutputFile>examples_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 		
@@ -398,7 +398,7 @@
 				</xsltParam>
 			</xsltParamList>
 			<xsltOutputDir>JSON\Activity</xsltOutputDir>
-			<xsltOutputFile>examples_AU_3.4.9.yaml</xsltOutputFile>
+			<xsltOutputFile>examples_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 		
@@ -457,7 +457,7 @@
 				</xsltParam>
 			</xsltParamList>
 			<xsltOutputDir>JSON\AggregatedStatistics</xsltOutputDir>
-			<xsltOutputFile>examples_AU_3.4.9.yaml</xsltOutputFile>
+			<xsltOutputFile>examples_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 		
@@ -516,7 +516,7 @@
 				</xsltParam>
 			</xsltParamList>
 			<xsltOutputDir>JSON\AustralianGovernmentCollections</xsltOutputDir>
-			<xsltOutputFile>examples_AU_3.4.9.yaml</xsltOutputFile>
+			<xsltOutputFile>examples_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 		
@@ -575,7 +575,7 @@
 				</xsltParam>
 			</xsltParamList>
 			<xsltOutputDir>JSON\ClassroomAssessment</xsltOutputDir>
-			<xsltOutputFile>examples_AU_3.4.9.yaml</xsltOutputFile>
+			<xsltOutputFile>examples_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 		
@@ -634,7 +634,7 @@
 				</xsltParam>
 			</xsltParamList>
 			<xsltOutputDir>JSON\LearningStandards</xsltOutputDir>
-			<xsltOutputFile>examples_AU_3.4.9.yaml</xsltOutputFile>
+			<xsltOutputFile>examples_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 		
@@ -693,7 +693,7 @@
 				</xsltParam>
 			</xsltParamList>
 			<xsltOutputDir>JSON\NAPLAN</xsltOutputDir>
-			<xsltOutputFile>examples_AU_3.4.9.yaml</xsltOutputFile>
+			<xsltOutputFile>examples_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 		
@@ -752,7 +752,7 @@
 				</xsltParam>
 			</xsltParamList>
 			<xsltOutputDir>JSON\Timetabling</xsltOutputDir>
-			<xsltOutputFile>examples_AU_3.4.9.yaml</xsltOutputFile>
+			<xsltOutputFile>examples_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 		
@@ -811,7 +811,7 @@
 				</xsltParam>
 			</xsltParamList>
 			<xsltOutputDir>JSON\Wellbeing</xsltOutputDir>
-			<xsltOutputFile>examples_AU_3.4.9.yaml</xsltOutputFile>
+			<xsltOutputFile>examples_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 		
@@ -861,6 +861,7 @@
 		</xsltTransformation>
 
 		<!-- For Future Deprecation -->
+<!--
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToExamples.xsl</xsltInputFile>
 			<xsltParamList>
@@ -870,7 +871,7 @@
 				</xsltParam>
 			</xsltParamList>
 			<xsltOutputDir>JSON\FutureDeprecation</xsltOutputDir>
-			<xsltOutputFile>examples_AU_3.4.9.yaml</xsltOutputFile>
+			<xsltOutputFile>examples_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 		
@@ -918,7 +919,7 @@
 			<xsltOutputFile>jsonSchemaUpdate-strict_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
-
+-->
 
 
 

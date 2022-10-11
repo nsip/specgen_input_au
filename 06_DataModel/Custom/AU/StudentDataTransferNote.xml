@@ -13,6 +13,9 @@
 	<privacyRating>High</privacyRating>
     <Description>
       <p>Object for Student Data Transfer Note, to communicate student movements between schools via a national Student Data Transfer Exchange.</p>
+	  <p>NOTE: as of the release of SIF-AU 3.5.0, the payload of the Student Data Transfer Protocol has not been approved by AESOC, and this
+	  object is being released as the current understanding of what it will contain. The object will be revised in future releases of SIF-AU if 
+	  any changes to the payload are approved before it is finalised.</p>
      </Description>
   </Item>
   <Item>
@@ -88,20 +91,20 @@
 
 	<Item>
 		<Element>ArrivalSchool</Element>
-		<Characteristics>M</Characteristics>
+		<Characteristics>O</Characteristics>
 	    <privacyRating>High</privacyRating>
 		<Description>
-			<p>The school that the student is arriving to.</p>
+			<p>The school that the student is arriving to. Mandatory in an initial request from the arrival school.</p>
 		</Description>
 		<Type ref="CommonTypes" name="ArrivalSchoolType"/>
 	</Item>
 
 	<Item>
 		<Element>DepartureSchool</Element>
-		<Characteristics>M</Characteristics>
+		<Characteristics>O</Characteristics>
 	    <privacyRating>High</privacyRating>
 		<Description>
-			<p>The school that the student has departed from.</p>
+			<p>The school that the student has departed from.  Mandatory in an initial request from the arrival school.</p>
 		</Description>
 		<Type ref="CommonTypes" name="DepartureSchoolType"/>
 	</Item>
@@ -390,13 +393,13 @@
    <NCCD>
      <LevelOfAdjustment>QDTP</LevelOfAdjustment>
 	 <CategoryOfDisability>Physical</CategoryOfDisability>
+	 <DisabilityCategoryConsideredList>
+		<DisabilityCategoryConsidered>Physical</DisabilityCategoryConsidered>
+		<DisabilityCategoryConsidered>Social-Emotional</DisabilityCategoryConsidered>
+	 </DisabilityCategoryConsideredList>
 	 <DateOfAssessment>2020-03-02</DateOfAssessment>
    </NCCD>
-   <NCCD>
-     <LevelOfAdjustment>Extensive</LevelOfAdjustment>
-	 <CategoryOfDisability>Social-Emotional</CategoryOfDisability>
-   </NCCD>
- </NCCDList>
+  </NCCDList>
  <FollowupRequest>true</FollowupRequest>
  <ChildSubjectToOrders>true</ChildSubjectToOrders>
  <Attendance>false</Attendance>
