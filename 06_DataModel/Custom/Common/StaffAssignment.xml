@@ -102,7 +102,7 @@
     <Description>
       <p>Full-time job equivalent ratio for this assignment. (Format is x.xx; an employee who is full-time and who is 50% of their time on this assignment would be represented as 0.50)</p>
     </Description>
-	     <Type ref="CommonTypes" name="FTE"/>
+	     <Type ref="CommonTypes" name="FTEType"/>
   </Item>
   <Item>
     <Element>JobFunction</Element>

@@ -1944,7 +1944,7 @@
 		<Description>
 		  <p>Full-time job equivalent ratio associated with teaching at the Primary level. (Format is x.xx; an employee who is full-time and who is 50% of their time on this assignment would be represented as 0.50)</p>
 		</Description>
-			     <Type ref="CommonTypes" name="FTE"/>
+			     <Type ref="CommonTypes" name="FTEType"/>
 	</Item>
 	<Item>
 		<Element>SecondaryFTE</Element>
@@ -1952,7 +1952,7 @@
 		<Description>
 		  <p>Full-time job equivalent ratio associated with teaching at the Secondary level. (Format is x.xx; an employee who is full-time and who is 50% of their time on this assignment would be represented as 0.50)</p>
 		</Description>
-			     <Type ref="CommonTypes" name="FTE"/>
+			     <Type ref="CommonTypes" name="FTEType"/>
 	 </Item>
 </CommonElement>	
  <CommonElement name="CensusStudentListType" type= "true" dm="true">
@@ -2129,7 +2129,7 @@
 			<Description>
 				<p>Full-time equivalent for the student cohort e.g. a cohort of students who attend 50% of time would be represented as 0.5.</p>
 			</Description>
-				     <Type ref="CommonTypes" name="FTE"/>
+				     <Type ref="CommonTypes" name="FTEType"/>
 		</Item> 
 		<Item>
 			<Element>Headcount</Element>
@@ -7977,7 +7977,7 @@
 		<Description>
 			<p>Full-time equivalent numeric value of the student's course load during this enrollment, expressed in decimal form, where 1.00 represents a full-time enrollment.</p>
 		</Description>
-			     <Type ref="CommonTypes" name="FTE"/>
+			     <Type ref="CommonTypes" name="FTEType"/>
 	</Item>
 	<Item>
 		<Element>Parent1Language</Element>
@@ -14653,7 +14653,7 @@
   </Item>
 </CommonElement>
 
-<CommonElement type="true" name='FTEType'>
+<CommonElement type="true" name='FTEType' dm="true">
 			<Item>
 				<Element>FTEType</Element>
 			<Description>

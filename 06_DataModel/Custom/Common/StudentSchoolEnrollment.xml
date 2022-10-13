@@ -304,7 +304,7 @@
     <Description> 
       <p>Full-time equivalent numeric value of the student's course load during this enrollment, expressed in decimal form, where 1.00 represents a full-time enrollment.</p>
     </Description>
-    	     <Type ref="CommonTypes" name="FTE"/>
+    	     <Type ref="CommonTypes" name="FTEType"/>
   </Item>
   <Item>
     <Element>FTPTStatus</Element>
