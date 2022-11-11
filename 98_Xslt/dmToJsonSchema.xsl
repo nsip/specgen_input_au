@@ -201,10 +201,13 @@
 						 count(specgen:Item[position() gt 1]) eq count(specgen:Item[specgen:Attribute]) ]" priority="2">
 		<xsl:text>&#x0a;  # //////////////////////// attr extn /////////////////////////////////////&#x0a;</xsl:text>
 		<xsl:value-of select="concat('  ', xfn:chopType(@name), ':&#x0a;',
-									 '    type: object&#x0a;',
 									 '    allOf:&#x0a;',
-									 '      - $ref: ''#/definitions/', xfn:chopType(specgen:Item[1]/specgen:Type/@name), '''&#x0a;')',
-									 '    properties:&#x0a;"/>
+									 '      - $ref: ''#/definitions/', xfn:chopType(specgen:Item[1]/specgen:Type/@name), '''&#x0a;',
+									 '      - type: object&#x0a;',
+									 '        properties:&#x0a;')"/>
+
+
+
 
                                                                          <!-- NN 20221110: this is what Stuart had done, commenting out the block beneath. allOfC is spurious, and so is "value" in this context
                                                                            <xsl:value-of select="concat('  ', xfn:chopType(@name), ':&#x0a;',
@@ -223,7 +226,7 @@
 									 '          - $ref: ''#/definitions/', xfn:chopType(specgen:Item[1]/specgen:Type/@name), '''&#x0a;')"/-->
 
 		<xsl:apply-templates select="specgen:Item[position() gt 1]">
-			<xsl:with-param name="indent" select="'      '"/>
+			<xsl:with-param name="indent" select="'          '"/>
 		</xsl:apply-templates>
 
 		<xsl:variable name="desc">

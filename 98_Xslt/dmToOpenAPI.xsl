@@ -21,7 +21,7 @@
 	</xsl:variable>
 
 	<xsl:variable name="exampleFileName">
-		<xsl:value-of select="concat('examples_', $sifLocale, '_' , $sifVersion, '.yaml')"/>
+		<xsl:value-of select="concat('examples_', $sifLocale, '.yaml')"/>
 	</xsl:variable>
 	
 	<xsl:template match="/specgen:SIFSpecification">

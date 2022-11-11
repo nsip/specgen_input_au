@@ -93,9 +93,9 @@
 		<xsl:text>    pesc:&#x0a;</xsl:text>
 		<xsl:value-of select="concat('      summary: PESC notation for ', @name, 's&#x0a;')"/>
 		<xsl:text>      value:&#x0a;</xsl:text>
-		<xsl:value-of select="concat('        {', $q, @name, 's', $q, ': {')"/>
-		<xsl:apply-templates select="xhtml:Example[lower-case(@intl)=lower-case($sifLocale) or not(@intl)][1]/*" mode="detect"/>
-		<xsl:text>}}</xsl:text>
+		<xsl:value-of select="concat('        {', $q, @name, 's', $q, ': {', $q, @name, $q, ': [')"/>
+		<xsl:apply-templates select="xhtml:Example[lower-case(@intl)=lower-case($sifLocale) or not(@intl)][1]/*" mode="obj-content"/>
+		<xsl:text>]}}</xsl:text>
 		<xsl:text>&#x0a;</xsl:text>
 		<xsl:text>    goessner:&#x0a;</xsl:text>
 		<xsl:value-of select="concat('      summary: Goessner notation for ', @name, 's&#x0a;')"/>
