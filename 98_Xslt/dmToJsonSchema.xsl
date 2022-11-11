@@ -202,10 +202,18 @@
 		<xsl:text>&#x0a;  # //////////////////////// attr extn /////////////////////////////////////&#x0a;</xsl:text>
 		<xsl:value-of select="concat('  ', xfn:chopType(@name), ':&#x0a;',
 									 '    type: object&#x0a;',
+									 '    allOf:&#x0a;',
+									 '      - $ref: ''#/definitions/', xfn:chopType(specgen:Item[1]/specgen:Type/@name), '''&#x0a;')',
+									 '    properties:&#x0a;"/>
+
+                                                                         <!-- NN 20221110: this is what Stuart had done, commenting out the block beneath. allOfC is spurious, and so is "value" in this context
+                                                                           <xsl:value-of select="concat('  ', xfn:chopType(@name), ':&#x0a;',
+									 '    type: object&#x0a;',
 									 '    properties:&#x0a;',
 									 '      value:&#x0a;',
 									 '#        allOfC:&#x0a;',
-									 '        $ref: ''#/definitions/', xfn:chopType(specgen:Item[1]/specgen:Type/@name), '''&#x0a;')"/>
+                                                                           '        $ref: ''#/definitions/', xfn:chopType(specgen:Item[1]/specgen:Type/@name), '''&#x0a;')"/>
+                                                                         -->
 
 		<!--xsl:value-of select="concat('  ', xfn:chopType(@name), ':&#x0a;',
 									 '    type: object&#x0a;',
