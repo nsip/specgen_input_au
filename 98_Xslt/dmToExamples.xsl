@@ -218,7 +218,7 @@
 						<!--xsl:value-of select="concat($pfx2, '&lt;', name(), '&gt;', normalize-space(.),'&lt;/', name(), '&gt;&#x0a;')"/--> 
 						<xsl:value-of select="concat($pfx2, '&lt;', name())"/> 
 						<xsl:apply-templates select="@*[not(namespace-uri() = 'http://json.org/')]" mode="attribs" />
-						<xsl:value-of select="concat('&gt;', normalize-space(.),'&lt;/', name(), '&gt;&#x0a;')"/> 
+						<xsl:value-of select="concat('&gt;', xfn:preserve-entities(normalize-space(.)),'&lt;/', name(), '&gt;&#x0a;')"/> 
 					</xsl:otherwise>
 				</xsl:choose>
 			</xsl:when>
@@ -273,5 +273,15 @@
 		<xsl:param name="valueToCheck"/>
 		<xsl:sequence select="xfn:empty($listOfValues) or contains($listOfValues, $valueToCheck)" />
 	</xsl:function>
+	
+	
+<!-- NN 20221121. Yes, I do feel dirty for doing this... I can't use xsl:character-map and xsl:output, 
+because &lt; &gt; is being used elsewhere in this stylesheet to build up XML markup. -->	
+	<xsl:function name="xfn:preserve-entities">
+  <xsl:param name="pText" as="xs:string"/>
+  <xsl:sequence select=
+  "replace(replace(replace($pText, '&amp;', '&amp;amp;'), '&lt;', '&amp;lt;'), '&gt;', '&amp;gt;')"/>
+ </xsl:function>
+
 
 </xsl:stylesheet>
