@@ -12,9 +12,9 @@
     <Element>ScheduledActivity</Element>
 	<privacyRating>Low</privacyRating>
     <Description>
-        <p>
-        This object provides a broader range of scheduled activities than just normal teaching classes (as covered by SessionInfo).
-      </p>
+        <p>This object provides a broader range of scheduled activities than just normal teaching classes (as covered by SessionInfo).
+      It allows both cyclical and non-cyclical events to be created and shared, with optional alignment to a cyclical
+	  timetable grid (<code>TimeTable</code>, <code>TimeTableCell</code>) </p>
     </Description>
   </Item>
 
@@ -41,7 +41,8 @@
     <Characteristics>O</Characteristics>
 	<privacyRating>Low</privacyRating>
     <Description>
-      <p>An optional Id (GUID) for the timetable cell that this activity is scheduled in. Instances of cyclical classroom sessions will have this element, but one-off events such as excursions will not use this element.</p>
+      <p>An optional Id (GUID) for the timetable cell that this activity is scheduled in. Instances of cyclical classroom sessions will have this element, 
+	  but one-off events such as excursions will not use this element.</p>
     </Description>
     <Type ref="CommonTypes" name="IdRefType"></Type>
   </Item>
@@ -51,7 +52,7 @@
     <Characteristics>O</Characteristics>
 	<privacyRating>Low</privacyRating>
     <Description>
-      <p>Day Id.</p>
+      <p>Day Id, for recurring cyclical days in a timetable: aligns to <code>TimeTableCell/DayId</code>.</p>
     </Description>
     <Type ref="CommonTypes" name="LocalIdType"></Type>
   </Item>
@@ -61,7 +62,7 @@
     <Characteristics>O</Characteristics>
 	<privacyRating>Low</privacyRating>
     <Description>
-      <p>Period Id within the Day Id</p>
+      <p>Period Id within the Day Id, for recurring cyclical days in a timetable: aligns to <code>TimeTableCell/PeriodId</code>.</p>
     </Description>
     <Type ref="CommonTypes" name="LocalIdType"></Type>
   </Item>
@@ -101,7 +102,8 @@
     <Characteristics>M</Characteristics>
 	<privacyRating>Low</privacyRating>
     <Description>
-      <p>Starting time for activity. This element is mandatory even if the object is used for preplanning excursions: a tentative or notional date and time should be provided if a finalised date is not available.</p>
+      <p>Starting time for activity. This element is mandatory even if the object is used for preplanning excursions: 
+	  a tentative or notional date and time should be provided if a finalised date is not available, or applicable (e.g. 0:00 AM).</p>
     </Description>
     <Type name='xs:time'/>
   </Item>
@@ -111,7 +113,8 @@
     <Characteristics>M</Characteristics>
 	<privacyRating>Low</privacyRating>
     <Description>
-      <p>Finish time for activity. This element is mandatory even if the object is used for preplanning excursions: a tentative or notional date and time should be provided if a finalised date is not available.</p>
+      <p>Finish time for activity. This element is mandatory even if the object is used for preplanning excursions: 
+	  a tentative or notional date and time should be provided if a finalised date is not available, or applicable (e.g. 0:00 AM).</p>
     </Description>
     <Type name='xs:time'/>
   </Item>
@@ -250,11 +253,39 @@
     <Characteristics>O</Characteristics>
 	<privacyRating>Low</privacyRating>
     <Description>
-      <p>This flag should be used to indicate whether or not this ScheduledActivity overrides a previous ScheduledActivity. In any initial provisioning this element should NOT be provided.</p>
+      <p>This flag should be used to indicate whether or not this ScheduledActivity overrides a previous ScheduledActivity (as a replacement instance, instead of a PUT update
+	  to an existing ScheduledActivity object). In any initial provisioning this element should NOT be provided.</p>
     </Description>
     <Type ref="CommonTypes" name="ScheduledActivityOverrideType"></Type>
   </Item>
-     
+ 
+  <Item>
+    <Element>OverridePatch</Element>
+
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>If this ScheduledActivity overrides a previous ScheduledActivity, this flag indicates whether the object contents are interpeted as a patch, or an replacement
+	  of the previous object's elements. In the former case, any elements not provided in this instance are preserved from the previous instance; in the latter,
+	  none of the previous object's elements are preserved. As is standard with patches, if this flag is true, a list needs to be updated in its entirety, and can only be
+	  deleted via an empty list instance (e.g. <code>&lt;RoomList/&gt;</code> to delete the list of rooms from the object.)</p>
+    </Description>
+    <Type name="xs:boolean"></Type>
+  </Item>
+
+ <Item>
+    <Element>TimeTableChangeReasonList</Element>
+
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Rationale behind the updates provided in this object, if this object instance is used to update a previous ScheduledActivity or TimeTableCell.
+	  The reasons given will help the receiving system make sense of the update.</p>
+    </Description>
+    <Type ref="CommonTypes" name="TimeTableChangeReasonListType"></Type>
+  </Item>
+
+ 
   <Item>   
     <Element>LocalCodeList</Element>
     <Characteristics>O</Characteristics>
@@ -313,6 +344,16 @@
      <TeachingGroupRefId>EB79C3D1-FF19-11D7-8513-8B604A511DAD</TeachingGroupRefId>
      <TeachingGroupRefId>B2345163-8474-6B38-7459-000F84723A00</TeachingGroupRefId>
    </TeachingGroupList>
+   <TimeTableChangeReasonList>
+     <TimeTableChangeReason>
+	   <TimeTableChangeType>TeacherAbsence</TimeTableChangeType>
+	   <TimeTableChangeNotes>SL</TimeTableChangeNotes>
+     </TimeTableChangeReason>
+     <TimeTableChangeReason>
+	   <TimeTableChangeType>RoomRemoval</TimeTableChangeType>
+	   <TimeTableChangeNotes>GL</TimeTableChangeNotes>
+     </TimeTableChangeReason>
+   </TimeTableChangeReasonList>
  </ScheduledActivity> 
 
   </xhtml:Example>

@@ -12,7 +12,8 @@
 	<privacyRating>Low</privacyRating>
     <Description>
       <p>
-        The purpose of this object is to define a schedule or Time Table structure/skeleton for the school.  The Time Table is produced by the Time Tabling software.  Once the Time Table is produced, the time tabling software creates the schedule based on business rules and constraints to fit into the time table structure.
+        The purpose of this object is to define a schedule or Time Table structure/skeleton for the school.  The Time Table is produced by the Time Tabling software.  
+		Once the Time Table is produced, the time tabling software creates the schedule based on business rules and constraints to fit into the time table structure.
       </p>
 
       <p>
@@ -31,6 +32,10 @@
         Having local ids that link the parent objects with the child object can simplify the agent design.
         Generally it is suggested to use the appropriate RefIds whenever possible and only use local ids if there is no other way to use RefIds.
       </p>
+	  <p>In order to align the timetable day cycle to specific calendar dates, use <code>ScheduledActivity/ActivityDate</code> in conjunction with <code>ScheduledActivity/DayId</code>,
+	  referencing the TimeTable involved via <code>ScheduledActivity/TimeTableRefId</code>. 
+	  <code>ScheduledActivity/TimeTableChangeReasonList/TimeTableChangeReason/TimeTableChangeType = "Mapping"</code> is used to indicate that the <code>ScheduledActivity</code>
+	  object communicates such an alignment.</p>
     </Description>
   </Item>
   <Item>

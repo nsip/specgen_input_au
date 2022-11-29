@@ -14667,5 +14667,48 @@
 			</Item>
 </CommonElement>
 
+<CommonElement type="true" name='TimeTableChangeReasonListType' dm="true">
+			<Item>
+				<Element>TimeTableChangeReasonListType</Element>
+			<Description>
+			<p>Rationale behind the updates provided in a ScheduledActivity object, if it is being used to update a previous ScheduledActivity or TimeTableCell.</p>
+			</Description>
+		<List mode="List">
+    </List>
+			</Item>
+	<Item>
+		<Element>TimeTableChangeReason</Element>
+		<Characteristics>MR</Characteristics>
+		<Type ref="CommonTypes" name="TimeTableChangeReasonType"/>
+	</Item>
+</CommonElement>
+
+<CommonElement type="true" name='TimeTableChangeReasonType' dm="true">
+			<Item>
+				<Element>TimeTableChangeReasonType</Element>
+			<Description>
+			<p>One of the applicable rationales behind the updates provided in a ScheduledActivity object, if it is being used to update a previous ScheduledActivity or TimeTableCell.
+			Each such rationale is described with a single codeset value.</p>
+			</Description>
+			</Item>
+	<Item>
+		<Element>TimeTableChangeType</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The type of rationale behind the update.</p>
+			</Description>		
+    <Type ref="CodeSets" name='AUCodeSetsTimeTableChangeTypeType'/>
+	</Item>
+	<Item>
+		<Element>TimeTableChangeNotes</Element>
+		<Characteristics>O</Characteristics>
+			<Description>
+			<p>Free text description of the specific update, with additional information. This can include a school-assigned code for the update rationale.</p>
+			</Description>	  
+			<Type name="xs:normalizedString"></Type>
+	</Item>
+</CommonElement>
+
+
 
 </IncludeGroup>
