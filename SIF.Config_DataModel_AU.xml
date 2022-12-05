@@ -198,10 +198,21 @@
  
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToOpenAPI.xsl</xsltInputFile>
+			<xsltParamList>
+				<xsltParam>
+					<xsltName>includeAllHeaders</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAdminDirectives</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+			</xsltParamList>
 			<xsltOutputDir>JSON</xsltOutputDir>
 			<xsltOutputFile>Full/OpenAPI_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>	
+
 			
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToExamplesSBP.xsl</xsltInputFile>
@@ -235,6 +246,14 @@
 				<xsltName>sifObjectGroupList</xsltName>
 				<xsltValue>'SIF AU Student Baseline Profile (SBP) and supporting objects'</xsltValue>
 			</xsltParam>
+				<xsltParam>
+					<xsltName>includeAllHeaders</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAdminDirectives</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
 			</xsltParamList>
 			<xsltOutputDir>JSON\SBP</xsltOutputDir>
 			<xsltOutputFile>SBPAPI_AU.yaml</xsltOutputFile>
@@ -295,6 +314,14 @@
 					<xsltName>sifObjectGroupList</xsltName>
 					<xsltValue>'Student Attendance objects'</xsltValue>
 				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAllHeaders</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAdminDirectives</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
 			</xsltParamList>
 			<xsltOutputDir>JSON\ATTEND</xsltOutputDir>
 			<xsltOutputFile>ATTENDAPI_AU.yaml</xsltOutputFile>
@@ -353,6 +380,14 @@
 				<xsltParam>
 					<xsltName>sifObjectGroupList</xsltName>
 					<xsltValue>'Finance'</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAllHeaders</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAdminDirectives</xsltName>
+					<xsltValue>true</xsltValue>
 				</xsltParam>
 			</xsltParamList>
 			<xsltOutputDir>JSON\Finance</xsltOutputDir>
@@ -413,6 +448,14 @@
 					<xsltName>sifObjectGroupList</xsltName>
 					<xsltValue>'Activity'</xsltValue>
 				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAllHeaders</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAdminDirectives</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
 			</xsltParamList>
 			<xsltOutputDir>JSON\Activity</xsltOutputDir>
 			<xsltOutputFile>ActivityOpenAPI_AU.yaml</xsltOutputFile>
@@ -471,6 +514,14 @@
 				<xsltParam>
 					<xsltName>sifObjectGroupList</xsltName>
 					<xsltValue>'AggregatedStatistics'</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAllHeaders</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAdminDirectives</xsltName>
+					<xsltValue>true</xsltValue>
 				</xsltParam>
 			</xsltParamList>
 			<xsltOutputDir>JSON\AggregatedStatistics</xsltOutputDir>
@@ -531,6 +582,14 @@
 					<xsltName>sifObjectGroupList</xsltName>
 					<xsltValue>'AustralianGovernmentCollections'</xsltValue>
 				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAllHeaders</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAdminDirectives</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
 			</xsltParamList>
 			<xsltOutputDir>JSON\AustralianGovernmentCollections</xsltOutputDir>
 			<xsltOutputFile>AustralianGovernmentCollectionsOpenAPI_AU.yaml</xsltOutputFile>
@@ -589,6 +648,14 @@
 				<xsltParam>
 					<xsltName>sifObjectGroupList</xsltName>
 					<xsltValue>'ClassroomAssessment'</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAllHeaders</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAdminDirectives</xsltName>
+					<xsltValue>true</xsltValue>
 				</xsltParam>
 			</xsltParamList>
 			<xsltOutputDir>JSON\ClassroomAssessment</xsltOutputDir>
@@ -649,6 +716,14 @@
 					<xsltName>sifObjectGroupList</xsltName>
 					<xsltValue>'LearningStandards'</xsltValue>
 				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAllHeaders</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAdminDirectives</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
 			</xsltParamList>
 			<xsltOutputDir>JSON\LearningStandards</xsltOutputDir>
 			<xsltOutputFile>LearningStandardsOpenAPI_AU.yaml</xsltOutputFile>
@@ -707,6 +782,14 @@
 				<xsltParam>
 					<xsltName>sifObjectGroupList</xsltName>
 					<xsltValue>'NAPLAN'</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAllHeaders</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAdminDirectives</xsltName>
+					<xsltValue>true</xsltValue>
 				</xsltParam>
 			</xsltParamList>
 			<xsltOutputDir>JSON\NAPLAN</xsltOutputDir>
@@ -767,6 +850,14 @@
 					<xsltName>sifObjectGroupList</xsltName>
 					<xsltValue>'Timetabling and Resource Booking'</xsltValue>
 				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAllHeaders</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAdminDirectives</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
 			</xsltParamList>
 			<xsltOutputDir>JSON\Timetabling</xsltOutputDir>
 			<xsltOutputFile>TimetablingOpenAPI_AU.yaml</xsltOutputFile>
@@ -825,6 +916,14 @@
 				<xsltParam>
 					<xsltName>sifObjectGroupList</xsltName>
 					<xsltValue>'Wellbeing'</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAllHeaders</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAdminDirectives</xsltName>
+					<xsltValue>true</xsltValue>
 				</xsltParam>
 			</xsltParamList>
 			<xsltOutputDir>JSON\Wellbeing</xsltOutputDir>

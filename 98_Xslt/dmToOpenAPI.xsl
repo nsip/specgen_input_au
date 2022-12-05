@@ -32,6 +32,7 @@
 
 	<xsl:variable name="exampleFileName">
 		<xsl:value-of select="concat('examples_', $sifLocale, '.yaml')"/>
+	</xsl:variable>
 	<xsl:variable name="generationTimestamp">
 		<xsl:value-of select="current-dateTime()"/>
 	</xsl:variable>
