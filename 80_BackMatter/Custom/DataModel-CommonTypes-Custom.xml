@@ -12469,7 +12469,9 @@
 		<Element>Sex</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
-			<p>'Sex' is the distinction 'male'/'female'/'intersex', as reported by the person</p>
+			<p>Gender identity as reported by the person: male, female, intersex, or self-defined (e.g. non-binary) 
+			(The element name "Sex" is a legacy term, and this element has been understood to refer to gender identity, 
+			"as reported by the person", rather than biology, since the inception of SIF-AU as v1.0 in 2009.)</p>
 		</Description>
 		<Type ref="CodeSets" name="AUCodeSetsSexCodeType"/>
 	</Item>
