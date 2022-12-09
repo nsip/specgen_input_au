@@ -7,9 +7,9 @@
 	
 	<globalSettings>
 		<inputDocument>SIF_DataModel.xml</inputDocument>
-		<sifNamespace>http://www.sifassociation.org/datamodel/au/3.4</sifNamespace>
+		<sifNamespace>http://www.sifassociation.org/datamodel/au/3.5</sifNamespace>
 		<localizationCode>au</localizationCode>
-		<schemaVersion>3.4.9</schemaVersion>
+		<schemaVersion>3.5.0</schemaVersion>
 		
 		<!-- Comment this one out to leave out JSON Tabs -->
 		
@@ -17,7 +17,7 @@
 		
 		<resolveExtensions>false</resolveExtensions>
  
- 		<isDraft>true</isDraft>
+ 		<isDraft>false</isDraft>
         <examplesValidatorFile>XSD\SIF_MessageNoIncludes\SIF_Message.xsd</examplesValidatorFile>
  
 	</globalSettings>
@@ -28,7 +28,7 @@
 		<htmlDocument>
 			<singleDocument>false</singleDocument>
 			<rootDocumentFileName>index.html</rootDocumentFileName>
-			<rootTitle>SIF Implementation Specification (Australia) 3.4.9</rootTitle>
+			<rootTitle>SIF Implementation Specification (Australia) 3.5.0</rootTitle>
 			<documentType>DataModel</documentType>
 		</htmlDocument>
 		
@@ -36,7 +36,7 @@
 		<htmlDocument>
 			<singleDocument>true</singleDocument>
 			<rootDocumentFileName>ImplementationSpecification.html</rootDocumentFileName>
-			<rootTitle>SIF Implementation Specification (Australia) 3.4.9</rootTitle>
+			<rootTitle>SIF Implementation Specification (Australia) 3.5.0</rootTitle>
 			<documentType>DataModel</documentType>
 		</htmlDocument>
 		
@@ -163,7 +163,7 @@
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToExamples.xsl</xsltInputFile>
 			<xsltOutputDir>JSON</xsltOutputDir>
-			<xsltOutputFile>Full/examples_AU_3.4.9.yaml</xsltOutputFile>
+			<xsltOutputFile>Full/examples_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 		
@@ -198,15 +198,26 @@
  
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToOpenAPI.xsl</xsltInputFile>
+			<xsltParamList>
+				<xsltParam>
+					<xsltName>includeAllHeaders</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAdminDirectives</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+			</xsltParamList>
 			<xsltOutputDir>JSON</xsltOutputDir>
 			<xsltOutputFile>Full/OpenAPI_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>	
+
 			
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToExamplesSBP.xsl</xsltInputFile>
 			<xsltOutputDir>JSON\SBP</xsltOutputDir>
-			<xsltOutputFile>examples_AU_3.4.9.yaml</xsltOutputFile>
+			<xsltOutputFile>examples_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 <!--- now run Use Cases -->		
@@ -220,7 +231,7 @@
 				</xsltParam>
 			</xsltParamList>
 			<xsltOutputDir>JSON\SBP</xsltOutputDir>
-			<xsltOutputFile>examples_AU_3.4.9.yaml</xsltOutputFile>
+			<xsltOutputFile>examples_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 
@@ -235,6 +246,14 @@
 				<xsltName>sifObjectGroupList</xsltName>
 				<xsltValue>'SIF AU Student Baseline Profile (SBP) and supporting objects'</xsltValue>
 			</xsltParam>
+				<xsltParam>
+					<xsltName>includeAllHeaders</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAdminDirectives</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
 			</xsltParamList>
 			<xsltOutputDir>JSON\SBP</xsltOutputDir>
 			<xsltOutputFile>SBPAPI_AU.yaml</xsltOutputFile>
@@ -280,7 +299,7 @@
 				</xsltParam>
 			</xsltParamList>
 			<xsltOutputDir>JSON\ATTEND</xsltOutputDir>
-			<xsltOutputFile>examples_AU_3.4.9.yaml</xsltOutputFile>
+			<xsltOutputFile>examples_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 		
@@ -294,6 +313,14 @@
 				<xsltParam>
 					<xsltName>sifObjectGroupList</xsltName>
 					<xsltValue>'Student Attendance objects'</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAllHeaders</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAdminDirectives</xsltName>
+					<xsltValue>true</xsltValue>
 				</xsltParam>
 			</xsltParamList>
 			<xsltOutputDir>JSON\ATTEND</xsltOutputDir>
@@ -339,7 +366,7 @@
 				</xsltParam>
 			</xsltParamList>
 			<xsltOutputDir>JSON\Finance</xsltOutputDir>
-			<xsltOutputFile>examples_AU_3.4.9.yaml</xsltOutputFile>
+			<xsltOutputFile>examples_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 		
@@ -353,6 +380,14 @@
 				<xsltParam>
 					<xsltName>sifObjectGroupList</xsltName>
 					<xsltValue>'Finance'</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAllHeaders</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAdminDirectives</xsltName>
+					<xsltValue>true</xsltValue>
 				</xsltParam>
 			</xsltParamList>
 			<xsltOutputDir>JSON\Finance</xsltOutputDir>
@@ -398,7 +433,7 @@
 				</xsltParam>
 			</xsltParamList>
 			<xsltOutputDir>JSON\Activity</xsltOutputDir>
-			<xsltOutputFile>examples_AU_3.4.9.yaml</xsltOutputFile>
+			<xsltOutputFile>examples_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 		
@@ -412,6 +447,14 @@
 				<xsltParam>
 					<xsltName>sifObjectGroupList</xsltName>
 					<xsltValue>'Activity'</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAllHeaders</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAdminDirectives</xsltName>
+					<xsltValue>true</xsltValue>
 				</xsltParam>
 			</xsltParamList>
 			<xsltOutputDir>JSON\Activity</xsltOutputDir>
@@ -457,7 +500,7 @@
 				</xsltParam>
 			</xsltParamList>
 			<xsltOutputDir>JSON\AggregatedStatistics</xsltOutputDir>
-			<xsltOutputFile>examples_AU_3.4.9.yaml</xsltOutputFile>
+			<xsltOutputFile>examples_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 		
@@ -471,6 +514,14 @@
 				<xsltParam>
 					<xsltName>sifObjectGroupList</xsltName>
 					<xsltValue>'AggregatedStatistics'</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAllHeaders</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAdminDirectives</xsltName>
+					<xsltValue>true</xsltValue>
 				</xsltParam>
 			</xsltParamList>
 			<xsltOutputDir>JSON\AggregatedStatistics</xsltOutputDir>
@@ -512,11 +563,11 @@
 			<xsltParamList>
 				<xsltParam>
 					<xsltName>sifObjectList</xsltName>
-					<xsltValue>AddressCollection,CensusCollection,CollectionRound,CollectionStatus,FinancialQuestionnaireCollection,StudentAttendanceCollection</xsltValue>
+					<xsltValue>AddressCollection,CensusCollection,CollectionRound,CollectionStatus,FinancialQuestionnaireCollection,StudentAttendanceCollection,CollectionAcquittal,CollectionDeclaration</xsltValue>
 				</xsltParam>
 			</xsltParamList>
 			<xsltOutputDir>JSON\AustralianGovernmentCollections</xsltOutputDir>
-			<xsltOutputFile>examples_AU_3.4.9.yaml</xsltOutputFile>
+			<xsltOutputFile>examples_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 		
@@ -525,11 +576,19 @@
 			<xsltParamList>
 				<xsltParam>
 					<xsltName>sifObjectList</xsltName>
-					<xsltValue>AddressCollection,CensusCollection,CollectionRound,CollectionStatus,FinancialQuestionnaireCollection,StudentAttendanceCollection</xsltValue>
+					<xsltValue>AddressCollection,CensusCollection,CollectionRound,CollectionStatus,FinancialQuestionnaireCollection,StudentAttendanceCollection,CollectionAcquittal,CollectionDeclaration</xsltValue>
 				</xsltParam>
 				<xsltParam>
 					<xsltName>sifObjectGroupList</xsltName>
 					<xsltValue>'AustralianGovernmentCollections'</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAllHeaders</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAdminDirectives</xsltName>
+					<xsltValue>true</xsltValue>
 				</xsltParam>
 			</xsltParamList>
 			<xsltOutputDir>JSON\AustralianGovernmentCollections</xsltOutputDir>
@@ -575,7 +634,7 @@
 				</xsltParam>
 			</xsltParamList>
 			<xsltOutputDir>JSON\ClassroomAssessment</xsltOutputDir>
-			<xsltOutputFile>examples_AU_3.4.9.yaml</xsltOutputFile>
+			<xsltOutputFile>examples_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 		
@@ -589,6 +648,14 @@
 				<xsltParam>
 					<xsltName>sifObjectGroupList</xsltName>
 					<xsltValue>'ClassroomAssessment'</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAllHeaders</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAdminDirectives</xsltName>
+					<xsltValue>true</xsltValue>
 				</xsltParam>
 			</xsltParamList>
 			<xsltOutputDir>JSON\ClassroomAssessment</xsltOutputDir>
@@ -634,7 +701,7 @@
 				</xsltParam>
 			</xsltParamList>
 			<xsltOutputDir>JSON\LearningStandards</xsltOutputDir>
-			<xsltOutputFile>examples_AU_3.4.9.yaml</xsltOutputFile>
+			<xsltOutputFile>examples_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 		
@@ -648,6 +715,14 @@
 				<xsltParam>
 					<xsltName>sifObjectGroupList</xsltName>
 					<xsltValue>'LearningStandards'</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAllHeaders</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAdminDirectives</xsltName>
+					<xsltValue>true</xsltValue>
 				</xsltParam>
 			</xsltParamList>
 			<xsltOutputDir>JSON\LearningStandards</xsltOutputDir>
@@ -693,7 +768,7 @@
 				</xsltParam>
 			</xsltParamList>
 			<xsltOutputDir>JSON\NAPLAN</xsltOutputDir>
-			<xsltOutputFile>examples_AU_3.4.9.yaml</xsltOutputFile>
+			<xsltOutputFile>examples_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 		
@@ -707,6 +782,14 @@
 				<xsltParam>
 					<xsltName>sifObjectGroupList</xsltName>
 					<xsltValue>'NAPLAN'</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAllHeaders</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAdminDirectives</xsltName>
+					<xsltValue>true</xsltValue>
 				</xsltParam>
 			</xsltParamList>
 			<xsltOutputDir>JSON\NAPLAN</xsltOutputDir>
@@ -752,7 +835,7 @@
 				</xsltParam>
 			</xsltParamList>
 			<xsltOutputDir>JSON\Timetabling</xsltOutputDir>
-			<xsltOutputFile>examples_AU_3.4.9.yaml</xsltOutputFile>
+			<xsltOutputFile>examples_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 		
@@ -766,6 +849,14 @@
 				<xsltParam>
 					<xsltName>sifObjectGroupList</xsltName>
 					<xsltValue>'Timetabling and Resource Booking'</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAllHeaders</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAdminDirectives</xsltName>
+					<xsltValue>true</xsltValue>
 				</xsltParam>
 			</xsltParamList>
 			<xsltOutputDir>JSON\Timetabling</xsltOutputDir>
@@ -807,11 +898,11 @@
 			<xsltParamList>
 				<xsltParam>
 					<xsltName>sifObjectList</xsltName>
-					<xsltValue>PersonalisedPlan,WellbeingAlert,WellbeingAppeal,WellbeingCharacteristic,WellbeingEvent,WellbeingPersonLink,WellbeingResponse</xsltValue>
+					<xsltValue>PersonalisedPlan,WellbeingAlert,WellbeingAppeal,WellbeingCharacteristic,WellbeingEvent,WellbeingPersonLink,WellbeingResponse,StudentDataTransferNote</xsltValue>
 				</xsltParam>
 			</xsltParamList>
 			<xsltOutputDir>JSON\Wellbeing</xsltOutputDir>
-			<xsltOutputFile>examples_AU_3.4.9.yaml</xsltOutputFile>
+			<xsltOutputFile>examples_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 		
@@ -820,11 +911,19 @@
 			<xsltParamList>
 				<xsltParam>
 					<xsltName>sifObjectList</xsltName>
-					<xsltValue>PersonalisedPlan,WellbeingAlert,WellbeingAppeal,WellbeingCharacteristic,WellbeingEvent,WellbeingPersonLink,WellbeingResponse</xsltValue>
+					<xsltValue>PersonalisedPlan,WellbeingAlert,WellbeingAppeal,WellbeingCharacteristic,WellbeingEvent,WellbeingPersonLink,WellbeingResponse,StudentDataTransferNote</xsltValue>
 				</xsltParam>
 				<xsltParam>
 					<xsltName>sifObjectGroupList</xsltName>
 					<xsltValue>'Wellbeing'</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAllHeaders</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAdminDirectives</xsltName>
+					<xsltValue>true</xsltValue>
 				</xsltParam>
 			</xsltParamList>
 			<xsltOutputDir>JSON\Wellbeing</xsltOutputDir>
@@ -861,6 +960,7 @@
 		</xsltTransformation>
 
 		<!-- For Future Deprecation -->
+<!--
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToExamples.xsl</xsltInputFile>
 			<xsltParamList>
@@ -870,7 +970,7 @@
 				</xsltParam>
 			</xsltParamList>
 			<xsltOutputDir>JSON\FutureDeprecation</xsltOutputDir>
-			<xsltOutputFile>examples_AU_3.4.9.yaml</xsltOutputFile>
+			<xsltOutputFile>examples_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 		
@@ -918,7 +1018,7 @@
 			<xsltOutputFile>jsonSchemaUpdate-strict_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
-
+-->
 
 
 

@@ -381,6 +381,8 @@ components:
             $ref: '#/components/schemas/httpHeaders/response/content-encoding'
           'content-profile':
             $ref: '#/components/schemas/httpHeaders/response/content-profile'
+          'dataPrivacyMarker':
+            $ref: '#/components/schemas/httpHeaders/response/dataPrivacyMarkerBatchPutResponse'
           'environmentURI':
             $ref: '#/components/schemas/httpHeaders/response/environmentURI'
           'fingerprint':
@@ -1616,6 +1618,22 @@ components:
           required: false
           schema:
             type: string
+        dataPrivacyMarkerStd:
+          name: dataPrivacyMarker
+          in: header
+          description: >-
+            Conditional: If privacy services are in place and enforced then the respective adapter must include this HTTP header in each request or event.
+          required: false
+          schema:
+            type: string
+        dataPrivacyMarkerBatchPutRequest:
+          name: dataPrivacyMarker
+          in: header
+          description: >-
+            Conditional: If privacy services are in place and enforced then the respective adapter must include this HTTP header in each request for an UPDATE or event. For a DELETE it is not required however.
+          required: false
+          schema:
+            type: string
         ETag:
           name: ETag
           in: header
@@ -1817,6 +1835,20 @@ components:
             type: string
           description: >-
             MIndicate the payload encoding. Valid values are: identity (not compressed) or gzip (compressed).
+        dataPrivacyMarkerStd:
+          name: dataPrivacyMarker
+          schema:
+            type: string
+          description: >-
+            Conditional: If privacy services are in place and enforced then the respective adapter must include this HTTP header in each response or event.
+        dataPrivacyMarkerBatchPutResponse:
+          name: dataPrivacyMarker
+          in: header
+          description: >-
+            Conditional: If privacy services are in place and enforced then the respective adapter must include this HTTP header in each response for an UPDATE or event. For a DELETE it is not required however.
+          required: false
+          schema:
+            type: string
         environmentURI:
           name: environmentURI
           schema:

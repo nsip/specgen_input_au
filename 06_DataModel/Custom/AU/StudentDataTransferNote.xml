@@ -1,0 +1,465 @@
+<DataObject name="StudentDataTransferNote"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xmlns:xi="http://www.w3.org/2001/XInclude"
+			xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	
+            xmlns="http://sifassociation.org/SpecGen">
+
+  <Key>@RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>StudentDataTransferNote</Element>
+	<privacyRating>High</privacyRating>
+    <Description>
+      <p>Object for Student Data Transfer Note, to communicate student movements between schools via a national Student Data Transfer Exchange.</p>
+	  <p>NOTE: as of the release of SIF-AU 3.5.0, the payload of the Student Data Transfer Protocol has not been approved by AESOC, and this
+	  object is being released as the current understanding of what it will contain. The object will be revised in future releases of SIF-AU if 
+	  any changes to the payload are approved before it is finalised.</p>
+     </Description>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+	<privacyRating>High</privacyRating>
+    <Description>
+      <p>GUID for this object. The application that owns this object is responsible for generating this unique Id.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+  
+  <Item>
+	  <Element>Name</Element>
+	  <Characteristics>M</Characteristics>
+	  <privacyRating>High</privacyRating>
+	  <Description><p>The name of the person. Note: Type attribute value of LGL must be used here.</p></Description>
+	  <Type ref="CommonTypes" name="NameOfRecordType"></Type>
+  </Item>
+  
+  <Item>
+	  <Element>Gender</Element>
+	  <Characteristics>O</Characteristics>
+	  <privacyRating>High</privacyRating>
+	  <Description><p>The distinction "male"/"female"/"intersex"/"self-described", as reported by the person.</p></Description>
+	  <Type ref="CodeSets" name="AUCodeSetsSexCodeType"/>
+  </Item>
+  
+  <Item>
+	  <Element>BirthDate</Element>
+	  <Characteristics>M</Characteristics>
+	  <privacyRating>High</privacyRating>
+	  <Description><p>The person's date of birth.</p></Description>
+	  <Type ref="CommonTypes" name="BirthDateType"/>
+  </Item>
+  
+  <Item>
+	  <Element>PlaceOfBirth</Element>
+	  <Characteristics>O</Characteristics>
+	  <privacyRating>High</privacyRating>
+	  <Description><p>The person's place of birth -- such as village, town, city, etc.</p></Description>
+	  <Type name="xs:normalizedString"/>
+  </Item>
+  
+ 	<Item>
+		<Element>StateOfBirth</Element>
+		<Characteristics>O</Characteristics>
+	    <privacyRating>High</privacyRating>
+		<Description>
+			<p>The person's state of birth.</p>
+		</Description>
+		<Type ref="CommonTypes" name="StateProvinceType"/>
+	</Item>
+	<Item>
+		<Element>CountryOfBirth</Element>
+		<Characteristics>M</Characteristics>
+	    <privacyRating>High</privacyRating>
+		<Description>
+			<p>The person's country of birth.</p>
+		</Description>
+		<Type ref="CommonTypes" name="CountryType"/>
+	</Item>
+  
+ 	<Item>
+		<Element>CountriesOfCitizenship</Element>
+		<Characteristics>O</Characteristics>
+	    <privacyRating>High</privacyRating>
+		<Description>
+			<p>The person's countries of citizenship.</p>
+		</Description>
+		<Type ref="CommonTypes" name="CountryListType"/>
+	</Item>
+
+	<Item>
+		<Element>ArrivalSchool</Element>
+		<Characteristics>O</Characteristics>
+	    <privacyRating>High</privacyRating>
+		<Description>
+			<p>The school that the student is arriving to. Mandatory in an initial request from the arrival school.</p>
+		</Description>
+		<Type ref="CommonTypes" name="ArrivalSchoolType"/>
+	</Item>
+
+	<Item>
+		<Element>DepartureSchool</Element>
+		<Characteristics>O</Characteristics>
+	    <privacyRating>High</privacyRating>
+		<Description>
+			<p>The school that the student has departed from.  Mandatory in an initial request from the arrival school.</p>
+		</Description>
+		<Type ref="CommonTypes" name="DepartureSchoolType"/>
+	</Item>
+
+ 	<Item>
+		<Element>PreviousSchoolList</Element>
+		<Characteristics>O</Characteristics>
+	    <privacyRating>High</privacyRating>
+		<Description>
+			<p>Previous schools that the student has attended.</p>
+		</Description>
+		<Type ref="CommonTypes" name="PreviousSchoolListType"/>
+	</Item>
+
+  	<Item>
+		<Element>NAPLANScoreList</Element>
+		<Characteristics>O</Characteristics>
+	    <privacyRating>High</privacyRating>
+		<Description>
+			<p>Scores student has attained in most recent NAPLAN assessment, with test levels and years tests were administered.</p>
+		</Description>
+		<Type ref="CommonTypes" name="NAPLANScoreWithYearsListType"/>
+	</Item>
+
+ 	<Item>
+		<Element>NCCDList</Element>
+		<Characteristics>O</Characteristics>
+	    <privacyRating>High</privacyRating>
+		<Description>
+			<p>List of applicable disability categories for the student from the Nationally Consistent Collection of Data.</p>
+		</Description>
+		<Type ref="CommonTypes" name="NCCDListType"/>
+	</Item>
+
+	<Item>
+		<Element>FollowupRequest</Element>
+		<Characteristics>O</Characteristics>
+	    <privacyRating>High</privacyRating>
+		<Description>
+			<p>Follow-up discussion with departure school is requested. Does not specify reason for request.</p>
+		</Description>
+	  <Type name="xs:boolean"/>
+	</Item>
+
+	<Item>
+		<Element>ChildSubjectToOrders</Element>
+		<Characteristics>O</Characteristics>
+	    <privacyRating>High</privacyRating>
+		<Description>
+			<p>Legal orders or arrangements that give child protection departments some responsibility for a child's welfare
+			or more specifically, a child aged 0-17 on a care and protection order or other formal arrangement, or children
+			aged 18 or under who were discharged from those care and protection orders/arrangements. Follow-up discussion with departure school is requested.</p>
+		</Description>
+	  <Type name="xs:boolean"/>
+	</Item>
+
+ 	<Item>
+		<Element>Attendance</Element>
+		<Characteristics>O</Characteristics>
+	    <privacyRating>High</privacyRating>
+		<Description>
+			<p>Student has attendance under the 80% absences threshold tracked by existing Commonwealth reporting. Follow-up discussion with departure school is requested.</p>
+		</Description>
+	  <Type name="xs:boolean"/>
+	</Item>
+
+	<Item>
+		<Element>NationalUniqueStudentIdentifier</Element>
+		<Characteristics>O</Characteristics>
+	    <privacyRating>High</privacyRating>
+		<Description>
+			<p>The Commonwealth-assigned National Unique Student Identifier (USI) for this student.</p>
+		</Description>
+	  <Type name="xs:token"/>
+	</Item>
+
+	<Item>
+		<Element>YearLevel</Element>
+		<Characteristics>M</Characteristics>
+	    <privacyRating>High</privacyRating>
+		<Description>
+			<p>Year or academic level of student.</p>
+		</Description>
+		<Type ref="CommonTypes" name="YearLevelType"/>
+	</Item>
+
+	<Item>
+		<Element>IndigenousStatus</Element>
+		<Characteristics>O</Characteristics>
+	    <privacyRating>High</privacyRating>
+		<Description>
+			<p>Whether or not the person identifies themselves as being of Aboriginal and/or Torres Strait Islander descent.</p>
+		</Description>
+	  <Type ref="CodeSets" name="AUCodeSetsIndigenousStatusType"/>
+	</Item>
+
+	<Item>
+		<Element>LBOTE</Element>
+		<Characteristics>O</Characteristics>
+	    <privacyRating>High</privacyRating>
+		<Description>
+			<p>Language Background Other Than English.</p>
+		</Description>
+     <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
+	</Item>
+
+	<Item>
+		<Element>VisaStatus</Element>
+		<Characteristics>O</Characteristics>
+	    <privacyRating>High</privacyRating>
+		<Description>
+			<p>Visa status of student.</p>
+		</Description>
+		<Type ref="CommonTypes" name="VisaSubClassType"/>
+	</Item>
+
+	<Item>
+		<Element>OtherNames</Element>
+		<Characteristics>O</Characteristics>
+	    <privacyRating>High</privacyRating>
+		<Description>
+			<p>Other or previous names of student.</p>
+		</Description>
+		<Type ref="CommonTypes" name="OtherNamesType"/>
+	</Item>
+
+	<Item>
+		<Element>EducationalAssessmentList</Element>
+		<Characteristics>O</Characteristics>
+	    <privacyRating>High</privacyRating>
+		<Description>
+			<p>List of relevant educational assesssments the student has undertaken, other than NAPLAN.</p>
+		</Description>
+		<Type ref="CommonTypes" name="EducationalAssessmentListType"/>
+	</Item>
+
+	<Item>
+		<Element>StudentGradeList</Element>
+		<Characteristics>O</Characteristics>
+	    <privacyRating>High</privacyRating>
+		<Description>
+			<p>List of A-E Grades most recently received by student.</p>
+		</Description>
+		<Type ref="CommonTypes" name="STDNGradeListType"/>		
+	</Item>
+
+
+<Item>   
+    <Element>LocalCodeList</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>High</privacyRating>
+    <Type ref="CommonTypes" name="LocalCodeListType"></Type>
+  </Item>
+  
+  <Item>   
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>High</privacyRating>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <privacyRating>High</privacyRating>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+  
+ <xhtml:Example xmlns="" name="StudentDataTransferNote Example">  
+<StudentDataTransferNote RefId="D3E34B35-9D75-101A-8C3D-00AA001A1654">
+  <Name Type="LGL">
+    <FamilyName>Smith</FamilyName>
+    <GivenName>Fred</GivenName>
+    <MiddleName>Ebenezer</MiddleName>
+	<PreferredFamilyName>Smith</PreferredFamilyName>
+	<PreferredGivenName>Freddy</PreferredGivenName>
+  </Name>
+  <Gender>1</Gender>
+  <BirthDate>2010-03-01</BirthDate>
+  <PlaceOfBirth>Clayton</PlaceOfBirth>
+  <StateOfBirth>VIC</StateOfBirth>
+  <CountryOfBirth>1101</CountryOfBirth>
+ <CountriesOfCitizenship>
+    <CountryOfCitizenship>8104</CountryOfCitizenship>
+    <CountryOfCitizenship>1101</CountryOfCitizenship>
+  </CountriesOfCitizenship>
+  <ArrivalSchool>
+    <CommonwealthId>12345</CommonwealthId>
+	<Name>Buchanan Secondary College</Name>
+  </ArrivalSchool>
+  <DepartureSchool>
+    <ACARAId>30000</ACARAId>
+	<Name>Lincoln Secondary College</Name>
+  <SchoolContactList>
+    <SchoolContact>
+      <PublishInDirectory>Y</PublishInDirectory>
+      <ContactInfo>
+        <Name Type="LGL">
+          <Title>Mr</Title>
+          <FamilyName>Miller</FamilyName>
+          <GivenName>James</GivenName>
+          <MiddleName>Mark</MiddleName>
+          <Suffix>Jr.</Suffix>
+          <FullName>Mr James Mark Miller Jr.</FullName>
+        </Name>
+        <PositionTitle>Business Manager</PositionTitle>
+        <Role>School Information Contact Point</Role>
+        <Address Type="0123" Role="012B">
+          <Street>
+            <Line1>23 Nicholson Street</Line1>
+          </Street>
+          <City>Carnegie</City>
+          <StateProvince>VIC</StateProvince>
+          <Country>1101</Country>
+          <PostalCode>3004</PostalCode>
+          <GridLocation>
+            <Latitude>23.9876</Latitude>
+            <Longitude>-98.8765</Longitude>
+          </GridLocation>
+        </Address>
+        <EmailList>
+          <Email Type="01">jmiller@lsc.vic.edu.au</Email>
+          <Email Type="02">jmiller@yahoo.com.au</Email>
+        </EmailList>
+        <PhoneNumberList>
+          <PhoneNumber Type="0096">
+            <Number>03 9637-2000</Number>
+            <Extension>72345</Extension>
+            <ListedStatus>Y</ListedStatus>
+          </PhoneNumber>
+        </PhoneNumberList>
+      </ContactInfo>
+    </SchoolContact>
+  </SchoolContactList> 
+  </DepartureSchool>
+  <PreviousSchoolList>
+  <PreviousSchool>
+    <ACARAId>30001</ACARAId>
+	<Name>Lincoln Primary School</Name>
+  </PreviousSchool> 
+  <PreviousSchool>
+    <ACARAId>30002</ACARAId>
+	<Name>Buchanan Primary School</Name>
+  </PreviousSchool> 
+  </PreviousSchoolList>
+  <NAPLANScoreList>
+    <NAPLANScore>
+	  <Domain>Grammar and Punctuation</Domain>
+	  <ParticipationCode>P</ParticipationCode>
+ <DomainScore>
+    <ScaledScoreValue>440.00</ScaledScoreValue>
+    <StudentDomainBand>6</StudentDomainBand>
+    <StudentProficiency>Proficient</StudentProficiency>
+  </DomainScore>
+    <TestLevel><Code>3</Code></TestLevel>
+	<TestYear>2017</TestYear>
+	</NAPLANScore>
+     <NAPLANScore>
+	  <Domain>Numeracy</Domain>
+	  <ParticipationCode>E</ParticipationCode>
+	</NAPLANScore>
+    <NAPLANScore>
+	  <Domain>Reading</Domain>
+	  <ParticipationCode>P</ParticipationCode>
+<DomainScore>
+    <ScaledScoreValue>440.00</ScaledScoreValue>
+    <StudentDomainBand>6</StudentDomainBand>
+    <StudentProficiency>Proficient</StudentProficiency>
+  </DomainScore>
+	</NAPLANScore>
+    <NAPLANScore>
+	  <Domain>Spelling</Domain>
+	  <ParticipationCode>P</ParticipationCode>
+<DomainScore>
+    <ScaledScoreValue>440.00</ScaledScoreValue>
+    <StudentDomainBand>6</StudentDomainBand>
+    <StudentProficiency>Proficient</StudentProficiency>
+  </DomainScore>
+	</NAPLANScore>
+    <NAPLANScore>
+	  <Domain>Writing</Domain>
+	  <ParticipationCode>X</ParticipationCode>
+	</NAPLANScore>
+ </NAPLANScoreList>
+ <NCCDList>
+   <NCCD>
+     <LevelOfAdjustment>QDTP</LevelOfAdjustment>
+	 <CategoryOfDisability>Physical</CategoryOfDisability>
+	 <DisabilityCategoryConsideredList>
+		<DisabilityCategoryConsidered>Physical</DisabilityCategoryConsidered>
+		<DisabilityCategoryConsidered>Social-Emotional</DisabilityCategoryConsidered>
+	 </DisabilityCategoryConsideredList>
+	 <DateOfAssessment>2020-03-02</DateOfAssessment>
+   </NCCD>
+  </NCCDList>
+ <FollowupRequest>true</FollowupRequest>
+ <ChildSubjectToOrders>true</ChildSubjectToOrders>
+ <Attendance>false</Attendance>
+ <NationalUniqueStudentIdentifier>0001001</NationalUniqueStudentIdentifier>
+ <YearLevel>
+    <Code>10</Code>
+  </YearLevel>
+  <IndigenousStatus>1</IndigenousStatus>
+  <LBOTE>Y</LBOTE>
+<VisaStatus>
+    <Code>101</Code>
+	<VisaExpiryDate>2025-12-31</VisaExpiryDate>
+ </VisaStatus>
+   <OtherNames>
+    <Name Type="AKA">
+      <FamilyName>Anderson</FamilyName>
+      <GivenName>Samuel</GivenName>
+      <FullName>Samuel Anderson</FullName>
+    </Name>
+    <Name Type="PRF">
+      <FamilyName>Rowinski</FamilyName>
+      <GivenName>Sam</GivenName>
+      <FullName>Sam Rowinski</FullName>
+    </Name>
+  </OtherNames>
+  <EducationalAssessmentList>
+    <EducationalAssessment>
+	  <Name>PAT</Name>
+	  <Content>PAT scores for student...</Content>
+    </EducationalAssessment>
+     <EducationalAssessment>
+	  <Name>SAT</Name>
+	  <Content>SAT scores for student...</Content>
+    </EducationalAssessment>
+  </EducationalAssessmentList>
+  <StudentGradeList>
+    <StudentGrade>
+	  <Subject>Australian History: Gold and Iron</Subject>
+	  <LearningArea>
+	    <ACStrand>H</ACStrand>
+	  <SubjectArea><Code>Australian History</Code></SubjectArea>
+	  </LearningArea>
+	  <Grade>
+	    <Letter>B</Letter>
+		<Narrative>Could do better</Narrative>
+	  </Grade>
+	</StudentGrade>
+    <StudentGrade>
+	  <Subject>World History: Revolutions</Subject>
+	  <LearningArea>
+	    <ACStrand>H</ACStrand>
+	  <SubjectArea><Code>World History</Code></SubjectArea>
+	  </LearningArea>
+	  <Grade>
+	    <Letter>A</Letter>
+		<Narrative>Could not do better</Narrative>
+	  </Grade>
+	</StudentGrade>
+  </StudentGradeList>
+ </StudentDataTransferNote>
+      </xhtml:Example> 
+   
+  </DataObject>

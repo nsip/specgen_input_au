@@ -95,18 +95,50 @@ components:
                 </methodParameters>
               </adminDirective>
         headers:
-          'changesSinceMarker':
-            $ref: '#/components/schemas/httpHeaders/response/changesSinceMarkerGet'
+          'accept':
+            $ref: '#/components/schemas/httpHeaders/response/accept'
           'content-type':
             $ref: '#/components/schemas/httpHeaders/response/content-type'
+          'content-encoding':
+            $ref: '#/components/schemas/httpHeaders/response/content-encoding'
+          'content-profile':
+            $ref: '#/components/schemas/httpHeaders/response/content-profile'
+          'changesSinceMarker':
+            $ref: '#/components/schemas/httpHeaders/response/changesSinceMarkerGet'
+          'environmentURI':
+            $ref: '#/components/schemas/httpHeaders/response/environmentURI'
+          'ETag':
+            $ref: '#/components/schemas/httpHeaders/response/ETag'
+          'fingerprint':
+            $ref: '#/components/schemas/httpHeaders/response/fingerprint'
+          'messageId':
+            $ref: '#/components/schemas/httpHeaders/response/messageId'
           'messageType':
             $ref: '#/components/schemas/httpHeaders/response/messageType'
+          'navigationCount':
+            $ref: '#/components/schemas/httpHeaders/response/navigationCount'
+          'navigationId':
+            $ref: '#/components/schemas/httpHeaders/response/navigationId'
+          'navigationLastPage':
+            $ref: '#/components/schemas/httpHeaders/response/navigationLastPage'
+          'navigationPage':
+            $ref: '#/components/schemas/httpHeaders/response/navigationPage'
+          'navigationPageSize':
+            $ref: '#/components/schemas/httpHeaders/response/navigationPageSize'
+          'relativeServicePath':
+            $ref: '#/components/schemas/httpHeaders/response/relativeServicePath'
+          'requestId':
+            $ref: '#/components/schemas/httpHeaders/response/requestId'
           'responseAction':
             $ref: '#/components/schemas/httpHeaders/response/responseAction'
           'serviceType':
             $ref: '#/components/schemas/httpHeaders/response/serviceType'
           'serviceSubType':
             $ref: '#/components/schemas/httpHeaders/response/serviceSubType'
+          'timestamp':
+            $ref: '#/components/schemas/httpHeaders/response/timestamp'
+          'vary':
+            $ref: '#/components/schemas/httpHeaders/response/vary'
 
     # ////////////////////////////////
     # // Batch Response Definitions //
@@ -345,12 +377,32 @@ components:
         headers:
           'content-type':
             $ref: '#/components/schemas/httpHeaders/response/content-type'
+          'content-encoding':
+            $ref: '#/components/schemas/httpHeaders/response/content-encoding'
+          'content-profile':
+            $ref: '#/components/schemas/httpHeaders/response/content-profile'
+          'dataPrivacyMarker':
+            $ref: '#/components/schemas/httpHeaders/response/dataPrivacyMarkerBatchPutResponse'
+          'environmentURI':
+            $ref: '#/components/schemas/httpHeaders/response/environmentURI'
+          'fingerprint':
+            $ref: '#/components/schemas/httpHeaders/response/fingerprint'
+          'messageId':
+            $ref: '#/components/schemas/httpHeaders/response/messageId'
           'messageType':
             $ref: '#/components/schemas/httpHeaders/response/messageType'
+          'relativeServicePath':
+            $ref: '#/components/schemas/httpHeaders/response/relativeServicePath'
+          'requestId':
+            $ref: '#/components/schemas/httpHeaders/response/requestId'
           'responseAction':
             $ref: '#/components/schemas/httpHeaders/response/responseAction'
           'serviceType':
             $ref: '#/components/schemas/httpHeaders/response/serviceType'
+          'timestamp':
+            $ref: '#/components/schemas/httpHeaders/response/timestamp'
+          'vary':
+            $ref: '#/components/schemas/httpHeaders/response/vary'
  
       #//
       #// Batch Post Response 
@@ -375,12 +427,30 @@ components:
         headers:
           'content-type':
             $ref: '#/components/schemas/httpHeaders/response/content-type'
+          'content-encoding':
+            $ref: '#/components/schemas/httpHeaders/response/content-encoding'
+          'content-profile':
+            $ref: '#/components/schemas/httpHeaders/response/content-profile'
+          'environmentURI':
+            $ref: '#/components/schemas/httpHeaders/response/environmentURI'
+          'fingerprint':
+            $ref: '#/components/schemas/httpHeaders/response/fingerprint'
+          'messageId':
+            $ref: '#/components/schemas/httpHeaders/response/messageId'
           'messageType':
             $ref: '#/components/schemas/httpHeaders/response/messageType'
+          'relativeServicePath':
+            $ref: '#/components/schemas/httpHeaders/response/relativeServicePath'
+          'requestId':
+            $ref: '#/components/schemas/httpHeaders/response/requestId'
           'responseAction':
             $ref: '#/components/schemas/httpHeaders/response/responseAction'
           'serviceType':
             $ref: '#/components/schemas/httpHeaders/response/serviceType'
+          'timestamp':
+            $ref: '#/components/schemas/httpHeaders/response/timestamp'
+          'vary':
+            $ref: '#/components/schemas/httpHeaders/response/vary'
     
     # ///////////////////////////////
     # // Batch Request Definitions //
@@ -481,14 +551,34 @@ components:
                   <description>Version problems or error specific to a particular object type, such as the omission of a mandatory element or an unsupported query or an unsupported order clause.</description>
                 </error>
           headers:
+            'accept':
+              $ref: '#/components/schemas/httpHeaders/response/accept'
             'content-type':
               $ref: '#/components/schemas/httpHeaders/response/content-type'
+            'content-encoding':
+              $ref: '#/components/schemas/httpHeaders/response/content-encoding'
+            'content-profile':
+              $ref: '#/components/schemas/httpHeaders/response/content-profile'
+            'environmentURI':
+              $ref: '#/components/schemas/httpHeaders/response/environmentURI'
+            'fingerprint':
+              $ref: '#/components/schemas/httpHeaders/response/fingerprint'
+            'messageId':
+              $ref: '#/components/schemas/httpHeaders/response/messageId'
             'messageType':
               $ref: '#/components/schemas/httpHeaders/response/messageType'
+            'relativeServicePath':
+              $ref: '#/components/schemas/httpHeaders/response/relativeServicePath'
+            'requestId':
+              $ref: '#/components/schemas/httpHeaders/response/requestId'
             'responseAction':
               $ref: '#/components/schemas/httpHeaders/response/responseAction'
             'serviceType':
               $ref: '#/components/schemas/httpHeaders/response/serviceType'
+            'timestamp':
+              $ref: '#/components/schemas/httpHeaders/response/timestamp'
+            'vary':
+              $ref: '#/components/schemas/httpHeaders/response/vary'
         401:
           description: Authorisation failed.
           content:
@@ -537,14 +627,34 @@ components:
                   <description>Invalid or missing 'Authorization' HTTP Header.</description>
                 </error>
           headers:
+            'accept':
+              $ref: '#/components/schemas/httpHeaders/response/accept'
             'content-type':
               $ref: '#/components/schemas/httpHeaders/response/content-type'
+            'content-encoding':
+              $ref: '#/components/schemas/httpHeaders/response/content-encoding'
+            'content-profile':
+              $ref: '#/components/schemas/httpHeaders/response/content-profile'
+            'environmentURI':
+              $ref: '#/components/schemas/httpHeaders/response/environmentURI'
+            'fingerprint':
+              $ref: '#/components/schemas/httpHeaders/response/fingerprint'
+            'messageId':
+              $ref: '#/components/schemas/httpHeaders/response/messageId'
             'messageType':
               $ref: '#/components/schemas/httpHeaders/response/messageType'
+            'relativeServicePath':
+              $ref: '#/components/schemas/httpHeaders/response/relativeServicePath'
+            'requestId':
+              $ref: '#/components/schemas/httpHeaders/response/requestId'
             'responseAction':
               $ref: '#/components/schemas/httpHeaders/response/responseAction'
             'serviceType':
               $ref: '#/components/schemas/httpHeaders/response/serviceType'
+            'timestamp':
+              $ref: '#/components/schemas/httpHeaders/response/timestamp'
+            'vary':
+              $ref: '#/components/schemas/httpHeaders/response/vary'
         403:
           description: Forbidden
           content:
@@ -593,14 +703,34 @@ components:
                   <description>This operation is not enabled for your adapter.</description>
                 </error>
           headers:
+            'accept':
+              $ref: '#/components/schemas/httpHeaders/response/accept'
             'content-type':
               $ref: '#/components/schemas/httpHeaders/response/content-type'
+            'content-encoding':
+              $ref: '#/components/schemas/httpHeaders/response/content-encoding'
+            'content-profile':
+              $ref: '#/components/schemas/httpHeaders/response/content-profile'
+            'environmentURI':
+              $ref: '#/components/schemas/httpHeaders/response/environmentURI'
+            'fingerprint':
+              $ref: '#/components/schemas/httpHeaders/response/fingerprint'
+            'messageId':
+              $ref: '#/components/schemas/httpHeaders/response/messageId'
             'messageType':
               $ref: '#/components/schemas/httpHeaders/response/messageType'
+            'relativeServicePath':
+              $ref: '#/components/schemas/httpHeaders/response/relativeServicePath'
+            'requestId':
+              $ref: '#/components/schemas/httpHeaders/response/requestId'
             'responseAction':
               $ref: '#/components/schemas/httpHeaders/response/responseAction'
             'serviceType':
               $ref: '#/components/schemas/httpHeaders/response/serviceType'
+            'timestamp':
+              $ref: '#/components/schemas/httpHeaders/response/timestamp'
+            'vary':
+              $ref: '#/components/schemas/httpHeaders/response/vary'
         404:
           description: Not Found
           content:
@@ -649,14 +779,34 @@ components:
                   <description>Object ID does not correspond to an existing object. This can occur for Query as well as Update or Delete operations. No Service Provider has been found to match the parameters (Zone, Context, Service name) in the Request.</description>
                 </error>
           headers:
+            'accept':
+              $ref: '#/components/schemas/httpHeaders/response/accept'
             'content-type':
               $ref: '#/components/schemas/httpHeaders/response/content-type'
+            'content-encoding':
+              $ref: '#/components/schemas/httpHeaders/response/content-encoding'
+            'content-profile':
+              $ref: '#/components/schemas/httpHeaders/response/content-profile'
+            'environmentURI':
+              $ref: '#/components/schemas/httpHeaders/response/environmentURI'
+            'fingerprint':
+              $ref: '#/components/schemas/httpHeaders/response/fingerprint'
+            'messageId':
+              $ref: '#/components/schemas/httpHeaders/response/messageId'
             'messageType':
               $ref: '#/components/schemas/httpHeaders/response/messageType'
+            'relativeServicePath':
+              $ref: '#/components/schemas/httpHeaders/response/relativeServicePath'
+            'requestId':
+              $ref: '#/components/schemas/httpHeaders/response/requestId'
             'responseAction':
               $ref: '#/components/schemas/httpHeaders/response/responseAction'
             'serviceType':
               $ref: '#/components/schemas/httpHeaders/response/serviceType'
+            'timestamp':
+              $ref: '#/components/schemas/httpHeaders/response/timestamp'
+            'vary':
+              $ref: '#/components/schemas/httpHeaders/response/vary'
         405:
           description: Method not Allowed
           content:
@@ -705,14 +855,34 @@ components:
                   <description>Paged Query Request issued to Object URL rather than Object List URL.</description>
                 </error>
           headers:
+            'accept':
+              $ref: '#/components/schemas/httpHeaders/response/accept'
             'content-type':
               $ref: '#/components/schemas/httpHeaders/response/content-type'
+            'content-encoding':
+              $ref: '#/components/schemas/httpHeaders/response/content-encoding'
+            'content-profile':
+              $ref: '#/components/schemas/httpHeaders/response/content-profile'
+            'environmentURI':
+              $ref: '#/components/schemas/httpHeaders/response/environmentURI'
+            'fingerprint':
+              $ref: '#/components/schemas/httpHeaders/response/fingerprint'
+            'messageId':
+              $ref: '#/components/schemas/httpHeaders/response/messageId'
             'messageType':
               $ref: '#/components/schemas/httpHeaders/response/messageType'
+            'relativeServicePath':
+              $ref: '#/components/schemas/httpHeaders/response/relativeServicePath'
+            'requestId':
+              $ref: '#/components/schemas/httpHeaders/response/requestId'
             'responseAction':
               $ref: '#/components/schemas/httpHeaders/response/responseAction'
             'serviceType':
               $ref: '#/components/schemas/httpHeaders/response/serviceType'
+            'timestamp':
+              $ref: '#/components/schemas/httpHeaders/response/timestamp'
+            'vary':
+              $ref: '#/components/schemas/httpHeaders/response/vary'
         409:
           description: State Conflict
           content:
@@ -761,14 +931,34 @@ components:
                   <description>An attempt has been made to create an existing object.</description>
                 </error>
           headers:
+            'accept':
+              $ref: '#/components/schemas/httpHeaders/response/accept'
             'content-type':
               $ref: '#/components/schemas/httpHeaders/response/content-type'
+            'content-encoding':
+              $ref: '#/components/schemas/httpHeaders/response/content-encoding'
+            'content-profile':
+              $ref: '#/components/schemas/httpHeaders/response/content-profile'
+            'environmentURI':
+              $ref: '#/components/schemas/httpHeaders/response/environmentURI'
+            'fingerprint':
+              $ref: '#/components/schemas/httpHeaders/response/fingerprint'
+            'messageId':
+              $ref: '#/components/schemas/httpHeaders/response/messageId'
             'messageType':
               $ref: '#/components/schemas/httpHeaders/response/messageType'
+            'relativeServicePath':
+              $ref: '#/components/schemas/httpHeaders/response/relativeServicePath'
+            'requestId':
+              $ref: '#/components/schemas/httpHeaders/response/requestId'
             'responseAction':
               $ref: '#/components/schemas/httpHeaders/response/responseAction'
             'serviceType':
               $ref: '#/components/schemas/httpHeaders/response/serviceType'
+            'timestamp':
+              $ref: '#/components/schemas/httpHeaders/response/timestamp'
+            'vary':
+              $ref: '#/components/schemas/httpHeaders/response/vary'
         410:
           description: Gone
           content:
@@ -817,14 +1007,34 @@ components:
                   <description>Used for query functionality where the Changes Since opaque marker or Paged navigationId provided by the consumer is no longer valid.</description>
                 </error>
           headers:
+            'accept':
+              $ref: '#/components/schemas/httpHeaders/response/accept'
             'content-type':
               $ref: '#/components/schemas/httpHeaders/response/content-type'
+            'content-encoding':
+              $ref: '#/components/schemas/httpHeaders/response/content-encoding'
+            'content-profile':
+              $ref: '#/components/schemas/httpHeaders/response/content-profile'
+            'environmentURI':
+              $ref: '#/components/schemas/httpHeaders/response/environmentURI'
+            'fingerprint':
+              $ref: '#/components/schemas/httpHeaders/response/fingerprint'
+            'messageId':
+              $ref: '#/components/schemas/httpHeaders/response/messageId'
             'messageType':
               $ref: '#/components/schemas/httpHeaders/response/messageType'
+            'relativeServicePath':
+              $ref: '#/components/schemas/httpHeaders/response/relativeServicePath'
+            'requestId':
+              $ref: '#/components/schemas/httpHeaders/response/requestId'
             'responseAction':
               $ref: '#/components/schemas/httpHeaders/response/responseAction'
             'serviceType':
               $ref: '#/components/schemas/httpHeaders/response/serviceType'
+            'timestamp':
+              $ref: '#/components/schemas/httpHeaders/response/timestamp'
+            'vary':
+              $ref: '#/components/schemas/httpHeaders/response/vary'
         412:
           description: Precondition Failed
           content:
@@ -873,14 +1083,34 @@ components:
                   <description>An attempt has been made to modify an object when the Requester was not basing the modification on the latest version.</description>
                 </error>
           headers:
+            'accept':
+              $ref: '#/components/schemas/httpHeaders/response/accept'
             'content-type':
               $ref: '#/components/schemas/httpHeaders/response/content-type'
+            'content-encoding':
+              $ref: '#/components/schemas/httpHeaders/response/content-encoding'
+            'content-profile':
+              $ref: '#/components/schemas/httpHeaders/response/content-profile'
+            'environmentURI':
+              $ref: '#/components/schemas/httpHeaders/response/environmentURI'
+            'fingerprint':
+              $ref: '#/components/schemas/httpHeaders/response/fingerprint'
+            'messageId':
+              $ref: '#/components/schemas/httpHeaders/response/messageId'
             'messageType':
               $ref: '#/components/schemas/httpHeaders/response/messageType'
+            'relativeServicePath':
+              $ref: '#/components/schemas/httpHeaders/response/relativeServicePath'
+            'requestId':
+              $ref: '#/components/schemas/httpHeaders/response/requestId'
             'responseAction':
               $ref: '#/components/schemas/httpHeaders/response/responseAction'
             'serviceType':
               $ref: '#/components/schemas/httpHeaders/response/serviceType'
+            'timestamp':
+              $ref: '#/components/schemas/httpHeaders/response/timestamp'
+            'vary':
+              $ref: '#/components/schemas/httpHeaders/response/vary'
         413:
           description: Response or request payload too large. 
           content:
@@ -929,14 +1159,34 @@ components:
                   <description>A non-paged Query returning all objects was too large for the Service Provider (or Broker) to include in a single Response.</description>
                 </error>
           headers:
+            'accept':
+              $ref: '#/components/schemas/httpHeaders/response/accept'
             'content-type':
               $ref: '#/components/schemas/httpHeaders/response/content-type'
+            'content-encoding':
+              $ref: '#/components/schemas/httpHeaders/response/content-encoding'
+            'content-profile':
+              $ref: '#/components/schemas/httpHeaders/response/content-profile'
+            'environmentURI':
+              $ref: '#/components/schemas/httpHeaders/response/environmentURI'
+            'fingerprint':
+              $ref: '#/components/schemas/httpHeaders/response/fingerprint'
+            'messageId':
+              $ref: '#/components/schemas/httpHeaders/response/messageId'
             'messageType':
               $ref: '#/components/schemas/httpHeaders/response/messageType'
+            'relativeServicePath':
+              $ref: '#/components/schemas/httpHeaders/response/relativeServicePath'
+            'requestId':
+              $ref: '#/components/schemas/httpHeaders/response/requestId'
             'responseAction':
               $ref: '#/components/schemas/httpHeaders/response/responseAction'
             'serviceType':
               $ref: '#/components/schemas/httpHeaders/response/serviceType'
+            'timestamp':
+              $ref: '#/components/schemas/httpHeaders/response/timestamp'
+            'vary':
+              $ref: '#/components/schemas/httpHeaders/response/vary'
         415:
           description: Unsupported Media Type
           content:
@@ -985,14 +1235,34 @@ components:
                   <description>The request entity has a media type which the server or resource does not support. For example, the client requestd application/json but the server only supports application/xml.</description>
                 </error>
           headers:
+            'accept':
+              $ref: '#/components/schemas/httpHeaders/response/accept'
             'content-type':
               $ref: '#/components/schemas/httpHeaders/response/content-type'
+            'content-encoding':
+              $ref: '#/components/schemas/httpHeaders/response/content-encoding'
+            'content-profile':
+              $ref: '#/components/schemas/httpHeaders/response/content-profile'
+            'environmentURI':
+              $ref: '#/components/schemas/httpHeaders/response/environmentURI'
+            'fingerprint':
+              $ref: '#/components/schemas/httpHeaders/response/fingerprint'
+            'messageId':
+              $ref: '#/components/schemas/httpHeaders/response/messageId'
             'messageType':
               $ref: '#/components/schemas/httpHeaders/response/messageType'
+            'relativeServicePath':
+              $ref: '#/components/schemas/httpHeaders/response/relativeServicePath'
+            'requestId':
+              $ref: '#/components/schemas/httpHeaders/response/requestId'
             'responseAction':
               $ref: '#/components/schemas/httpHeaders/response/responseAction'
             'serviceType':
               $ref: '#/components/schemas/httpHeaders/response/serviceType'
+            'timestamp':
+              $ref: '#/components/schemas/httpHeaders/response/timestamp'
+            'vary':
+              $ref: '#/components/schemas/httpHeaders/response/vary'
         500:
           description: Internal Service Error
           content:
@@ -1041,14 +1311,34 @@ components:
                   <description>An unexpected error occurred in servicing the Request.</description>
                 </error>
           headers:
+            'accept':
+              $ref: '#/components/schemas/httpHeaders/response/accept'
             'content-type':
               $ref: '#/components/schemas/httpHeaders/response/content-type'
+            'content-encoding':
+              $ref: '#/components/schemas/httpHeaders/response/content-encoding'
+            'content-profile':
+              $ref: '#/components/schemas/httpHeaders/response/content-profile'
+            'environmentURI':
+              $ref: '#/components/schemas/httpHeaders/response/environmentURI'
+            'fingerprint':
+              $ref: '#/components/schemas/httpHeaders/response/fingerprint'
+            'messageId':
+              $ref: '#/components/schemas/httpHeaders/response/messageId'
             'messageType':
               $ref: '#/components/schemas/httpHeaders/response/messageType'
+            'relativeServicePath':
+              $ref: '#/components/schemas/httpHeaders/response/relativeServicePath'
+            'requestId':
+              $ref: '#/components/schemas/httpHeaders/response/requestId'
             'responseAction':
               $ref: '#/components/schemas/httpHeaders/response/responseAction'
             'serviceType':
               $ref: '#/components/schemas/httpHeaders/response/serviceType'
+            'timestamp':
+              $ref: '#/components/schemas/httpHeaders/response/timestamp'
+            'vary':
+              $ref: '#/components/schemas/httpHeaders/response/vary'
         501:
           description: Not Implemented
           content:
@@ -1097,14 +1387,34 @@ components:
                   <description>The server either does not recognize the request method, or it lacks the ability to fulfil the request. Usually this implies future availability (e.g., a new feature of a web-service API).</description>
                 </error>
           headers:
+            'accept':
+              $ref: '#/components/schemas/httpHeaders/response/accept'
             'content-type':
               $ref: '#/components/schemas/httpHeaders/response/content-type'
+            'content-encoding':
+              $ref: '#/components/schemas/httpHeaders/response/content-encoding'
+            'content-profile':
+              $ref: '#/components/schemas/httpHeaders/response/content-profile'
+            'environmentURI':
+              $ref: '#/components/schemas/httpHeaders/response/environmentURI'
+            'fingerprint':
+              $ref: '#/components/schemas/httpHeaders/response/fingerprint'
+            'messageId':
+              $ref: '#/components/schemas/httpHeaders/response/messageId'
             'messageType':
               $ref: '#/components/schemas/httpHeaders/response/messageType'
+            'relativeServicePath':
+              $ref: '#/components/schemas/httpHeaders/response/relativeServicePath'
+            'requestId':
+              $ref: '#/components/schemas/httpHeaders/response/requestId'
             'responseAction':
               $ref: '#/components/schemas/httpHeaders/response/responseAction'
             'serviceType':
               $ref: '#/components/schemas/httpHeaders/response/serviceType'
+            'timestamp':
+              $ref: '#/components/schemas/httpHeaders/response/timestamp'
+            'vary':
+              $ref: '#/components/schemas/httpHeaders/response/vary'
         503:
           description: Service Unavailable
           content:
@@ -1153,14 +1463,34 @@ components:
                   <description>Returned only for Consumer Requests requiring an immediate Response. This error indicates that the expected Service processing time for the Request is great enough that the Consumer must reissue it as a Request requiring a delayed Response.</description>
                 </error>
           headers:
+            'accept':
+              $ref: '#/components/schemas/httpHeaders/response/accept'
             'content-type':
               $ref: '#/components/schemas/httpHeaders/response/content-type'
+            'content-encoding':
+              $ref: '#/components/schemas/httpHeaders/response/content-encoding'
+            'content-profile':
+              $ref: '#/components/schemas/httpHeaders/response/content-profile'
+            'environmentURI':
+              $ref: '#/components/schemas/httpHeaders/response/environmentURI'
+            'fingerprint':
+              $ref: '#/components/schemas/httpHeaders/response/fingerprint'
+            'messageId':
+              $ref: '#/components/schemas/httpHeaders/response/messageId'
             'messageType':
               $ref: '#/components/schemas/httpHeaders/response/messageType'
+            'relativeServicePath':
+              $ref: '#/components/schemas/httpHeaders/response/relativeServicePath'
+            'requestId':
+              $ref: '#/components/schemas/httpHeaders/response/requestId'
             'responseAction':
               $ref: '#/components/schemas/httpHeaders/response/responseAction'
             'serviceType':
               $ref: '#/components/schemas/httpHeaders/response/serviceType'
+            'timestamp':
+              $ref: '#/components/schemas/httpHeaders/response/timestamp'
+            'vary':
+              $ref: '#/components/schemas/httpHeaders/response/vary'
     
     # /////////////////////////////////
     # // Query Parameter Definitions //
@@ -1285,6 +1615,22 @@ components:
           in: header
           description: >-
             Used to indicate the data model schema used in the payload. Example: urn:sif:data/au/3.4.4. Indicates SIF AU v3.4.4 is used.
+          required: false
+          schema:
+            type: string
+        dataPrivacyMarkerStd:
+          name: dataPrivacyMarker
+          in: header
+          description: >-
+            Conditional: If privacy services are in place and enforced then the respective adapter must include this HTTP header in each request or event.
+          required: false
+          schema:
+            type: string
+        dataPrivacyMarkerBatchPutRequest:
+          name: dataPrivacyMarker
+          in: header
+          description: >-
+            Conditional: If privacy services are in place and enforced then the respective adapter must include this HTTP header in each request for an UPDATE or event. For a DELETE it is not required however.
           required: false
           schema:
             type: string
@@ -1489,6 +1835,20 @@ components:
             type: string
           description: >-
             MIndicate the payload encoding. Valid values are: identity (not compressed) or gzip (compressed).
+        dataPrivacyMarkerStd:
+          name: dataPrivacyMarker
+          schema:
+            type: string
+          description: >-
+            Conditional: If privacy services are in place and enforced then the respective adapter must include this HTTP header in each response or event.
+        dataPrivacyMarkerBatchPutResponse:
+          name: dataPrivacyMarker
+          in: header
+          description: >-
+            Conditional: If privacy services are in place and enforced then the respective adapter must include this HTTP header in each response for an UPDATE or event. For a DELETE it is not required however.
+          required: false
+          schema:
+            type: string
         environmentURI:
           name: environmentURI
           schema:

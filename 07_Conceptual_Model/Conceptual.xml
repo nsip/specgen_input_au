@@ -5,7 +5,7 @@
 		 
          xmlns="http://sifassociation.org/SpecGen">
          
-	<h2>Conceptual Model 3.4.8</h2>
+	<h2>Conceptual Model</h2>
 	<p>The conceptual model is at the level of entities and relations between them; attributes are not listed. All objects in the Australian data model are represented; some objects are represented as relations between entities, rather than as distinct entities.
 For clarity, the conceptual model is broken up into use cases:</p>
 <ul>
@@ -57,11 +57,11 @@ For clarity, the conceptual model is broken up into use cases:</p>
 		</tr>
 		<tr>
 			<td>Student</td>
-			<td>StudentPersonal</td>
+			<td>StudentPersonal; StudentDataTransferNote</td>
 		</tr>
 		<tr>
 			<td><em>enrolls</em></td>
-			<td>StudentSchoolEnrollment</td>
+			<td>StudentSchoolEnrollment; StudentDataTransferNote</td>
 		</tr>
 		<tr>
 			<td>Teacher</td>
@@ -141,7 +141,7 @@ For clarity, the conceptual model is broken up into use cases:</p>
 		<tbody>
 			<tr>
 				<td>A Student is enrolled in a School</td>
-				<td>StudentPersonal, StudentSchoolEnrolment, SchoolInfo</td>
+				<td>StudentPersonal, StudentSchoolEnrolment, SchoolInfo; StudentDataTransferNote</td>
 			</tr>	
 			<tr>
 				<td>A Teacher is assigned a role in a School</td>
@@ -219,7 +219,6 @@ For clarity, the conceptual model is broken up into use cases:</p>
 	</table>
 	<h2>Account Provisioning</h2>
 	<p></p>
-	<p>Relations whose logical representation will be deprecated in SIF-AU 3.5 are marked in red.</p>
 	<p><img src="images/Conceptual_provisioning.png" alt="" /></p>	
 	
 	<h3>Entities</h3>
@@ -235,14 +234,6 @@ For clarity, the conceptual model is broken up into use cases:</p>
 		<tr>
 			<td>Identity</td>
 			<td>Identity</td>
-		</tr>
-		<tr>
-			<td>System</td>
-			<td>SystemRole</td>
-		</tr>
-		<tr>
-		<td><em>role</em></td>
-			<td>SystemRole</td>
 		</tr>
 		<tr>
 			<td>Picture</td>
@@ -284,10 +275,6 @@ For clarity, the conceptual model is broken up into use cases:</p>
 				<td>A Party asserts an Identity</td>
 				<td>{StudentPersonal, StaffPersonal, StudentContactPersonal}, Identity</td>
 			</tr>
-			<tr>
-				<td>A Party has a role on a System</td>
-				<td>{StudentPersonal, StaffPersonal, StudentContactPersonal}, SystemRole</td>
-			</tr>	
 			<tr>
 				<td>Obligations apply to a Party</td>
 				<td>PersonalPrivacyObligationDocument, {StudentPersonal, StaffPersonal, StudentContactPersonal}</td>
@@ -456,10 +443,6 @@ For clarity, the conceptual model is broken up into use cases:</p>
 			<td>EquipmentInfo</td>
 		</tr>	
 		<tr>
-			<td>Resource Usage</td>
-			<td>ResourceUseage</td>
-		</tr>	
-		<tr>
 			<td>Vendor</td>
 			<td>VendorInfo</td>
 		</tr>	
@@ -503,14 +486,6 @@ For clarity, the conceptual model is broken up into use cases:</p>
 			</tr>
 		</thead>
 		<tbody>
-			<tr>
-				<td>A Teacher engages in Resource Usage</td>
-				<td>StaffPersonal, ResourceUsage</td>
-			</tr>
-			<tr>
-				<td>A School pays for Resource Usage</td>
-				<td>SchoolInfo, ResourceUsage</td>
-			</tr>
 			<tr>
 				<td>A Teacher (Staff) raises a Purchase Order</td>
 				<td>StaffPersonal, PurchaseOrder</td>
@@ -629,7 +604,7 @@ For clarity, the conceptual model is broken up into use cases:</p>
 		</tr>	
 		<tr>
 			<td>NAP Results</td>
-			<td>NAPStudentResponseSet, <em>reporting object:</em> NAPTestScoreSummary</td>
+			<td>NAPStudentResponseSet; StudentDataTransferNote; <em>reporting object:</em> NAPTestScoreSummary</td>
 		</tr>	
 		<tr>
 			<td>NAP Codeframe</td>
@@ -677,7 +652,7 @@ For clarity, the conceptual model is broken up into use cases:</p>
 			</tr>
 			<tr>
 				<td>A Student achieves a NAP Result</td>
-				<td>StudentPersonal, NAPStudentResponseSet; <em>aggregated: </em>NAPTestScoreSummary</td>
+				<td>StudentPersonal, NAPStudentResponseSet; StudentDataTransferNote; <em>aggregated: </em>NAPTestScoreSummary</td>
 			</tr>
 			<tr>
 				<td>NAP Results are graded against a NAP Test</td>
@@ -704,7 +679,7 @@ For clarity, the conceptual model is broken up into use cases:</p>
 		</tr>
 		<tr>
 			<td>Student</td>
-			<td>StudentPersonal</td>
+			<td>StudentPersonal; StudentDataTransferNote</td>
 		</tr>
 		<tr>
 			<td>Teacher</td>
@@ -841,7 +816,7 @@ For clarity, the conceptual model is broken up into use cases:</p>
 	<tbody>
 		<tr>
 			<td>Student</td>
-			<td>StudentPersonal</td>
+			<td>StudentPersonal; StudentDataTransferNote</td>
 		</tr>
 		<tr>
 			<td>Teacher</td>
@@ -877,7 +852,7 @@ For clarity, the conceptual model is broken up into use cases:</p>
 		</tr>
 		<tr>
 			<td>Grade</td>
-			<td>StudentGrade, <em>reporting object:</em> StudentScoreJudgementAgainstStandard</td>
+			<td>StudentGrade; StudentDataTransferNote; <em>reporting object:</em> StudentScoreJudgementAgainstStandard</td>
 		</tr>
 
 	</tbody>
@@ -926,7 +901,7 @@ For clarity, the conceptual model is broken up into use cases:</p>
 			</tr>
 			<tr>
 				<td>A Student receives a Grade in a Class</td>
-				<td>{StudentGrade, StudentScoreJudgementAgainstStandard}, StudentPersonal, TeachingGroup</td>
+				<td>{StudentGrade, StudentScoreJudgementAgainstStandard}, StudentPersonal, TeachingGroup; StudentDataTransferNote</td>
 			</tr>
 			<tr>
 				<td>A Teacher marks a Grade</td>

@@ -1185,6 +1185,10 @@
 				<Text>Prep Transition day</Text>
 			</Value>		
 			<Value>
+				<Code>627</Code>
+				<Text>Modified Timetable (Reduced Hours)</Text>
+			</Value>		
+			<Value>
 				<Code>699</Code>
 				<Text>Educational - further details not available</Text>
 			</Value>				
@@ -10071,7 +10075,7 @@
 	</CodeSet>							
 	<CodeSet>
 		<Intro>
-			<p>Visa-Holder study entitlement. Source VEVO</p>
+			<p>Visa-Holder study entitlement. Source: VEVO</p>
 		</Intro>
 		<ID>Visa Study Entitlement</ID>
 		<Values>
@@ -10086,6 +10090,63 @@
 			<Value>
 				<Code>Limited</Code>
 				<Text>Limited entitlement to study</Text>
+			</Value>
+		</Values>
+	</CodeSet>							
+	<CodeSet>
+		<Intro>
+			<p>NCCD Level of adjustment. Source: https://www.nccd.edu.au/tools/nccd-quick-guide-0</p>
+		</Intro>
+		<ID>NCCD Adjustment</ID>
+		<Values>
+			<Value>
+				<Code>QDTP</Code>
+				<Text>Support provided within Quality Differentiated Teaching Practice</Text>
+				</Value>
+			<Value>
+				<Code>Supplementary</Code>
+				<Text>Supplementary</Text>
+			</Value>
+			<Value>
+				<Code>Substantial</Code>
+				<Text>Substantial</Text>
+			</Value>
+			<Value>
+				<Code>Extensive</Code>
+				<Text>Extensive</Text>
+			</Value>
+			<Value>
+				<Code>None</Code>
+				<Text>None</Text>
+			</Value>
+		</Values>
+	</CodeSet>							
+
+	<CodeSet>
+		<Intro>
+			<p>NCCD Category of disability. Source: https://www.nccd.edu.au/tools/nccd-quick-guide-0</p>
+		</Intro>
+		<ID>NCCD Disability</ID>
+		<Values>
+			<Value>
+				<Code>Physical</Code>
+				<Text>Physical</Text>
+			</Value>
+			<Value>
+				<Code>Cognitive</Code>
+				<Text>Cognitive</Text>
+			</Value>
+			<Value>
+				<Code>Sensory</Code>
+				<Text>Sensory</Text>
+			</Value>
+			<Value>
+				<Code>Social-Emotional</Code>
+				<Text>Social-Emotional</Text>
+			</Value>
+			<Value>
+				<Code>None</Code>
+				<Text>None</Text>
 			</Value>
 		</Values>
 	</CodeSet>							
