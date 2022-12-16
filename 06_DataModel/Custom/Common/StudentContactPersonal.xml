@@ -67,7 +67,9 @@
     <Description>
       <p>The highest level of education completed by the contact person.</p>
     </Description>
-    <Type ref="CommonTypes" name="EducationalLevelType"></Type>
+	<!-- NN 20221216 indirection of type to codeset is confusing JSON Schema generation
+    <Type ref="CommonTypes" name="EducationalLevelType"></Type> -->
+	<Type ref="CodeSets" name="AUCodeSetsSchoolEducationLevelTypeType"/>
   </Item>
   <Item>
     <Element>NonSchoolEducation</Element>

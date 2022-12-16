@@ -13022,6 +13022,7 @@
 		</Relationship>
 	</xhtml:Example>
 </CommonElement>
+<!-- NN 20221216 indication of type to codeset is confusing JSON Schema generation, avoiding this
 <CommonElement name="EducationalLevelType" type="true" dm="true">
 	<Item>
 		<Element>EducationalLevelType</Element>
@@ -13034,6 +13035,7 @@
 		<EducationalLevel>3</EducationalLevel>
 	</xhtml:Example>
 </CommonElement>
+-->
 <CommonElement name="GraduationDateType" type="true" dm="true">
 	<Item>
 		<Element>GraduationDateType</Element>
