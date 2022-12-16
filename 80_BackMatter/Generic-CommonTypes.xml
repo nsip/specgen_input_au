@@ -479,13 +479,14 @@
 			</Item>
 		</CommonElement>
 
+<!-- NN 20221216 delete: this is infrastructure remnant
 		<CommonElement type="true" name='MsgIdType'>
 			<Item>
 				<Element>MsgIdType</Element>
 				<Type name='GUIDType'/>
 <Description>A message identifier.</Description>
 			</Item>
-		</CommonElement>
+		</CommonElement>-->
 
 		<CommonElement type="true" name='RefIdType'>
 			<Item>

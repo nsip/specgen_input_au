@@ -313,6 +313,7 @@
      <TeachingGroupRefId>EB79C3D1-FF19-11D7-8513-8B604A511DAD</TeachingGroupRefId>
      <TeachingGroupRefId>B2345163-8474-6B38-7459-000F84723A00</TeachingGroupRefId>
    </TeachingGroupList>
+   <Override DateOfOverride="2020-02-02">Y</Override>
  </ScheduledActivity> 
 
   </xhtml:Example>

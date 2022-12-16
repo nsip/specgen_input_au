@@ -207,13 +207,7 @@
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>	
 
-			
-		<xsltTransformation>
-			<xsltInputFile>98_Xslt\dmToExamples.xsl</xsltInputFile>
-			<xsltOutputDir>JSON\SBP</xsltOutputDir>
-			<xsltOutputFile>examples_AU.yaml</xsltOutputFile>
-			<yamlToJson>true</yamlToJson>
-		</xsltTransformation>
+		
 <!--- now run Use Cases -->		
 		<!-- SBP -->
 		<xsltTransformation>
