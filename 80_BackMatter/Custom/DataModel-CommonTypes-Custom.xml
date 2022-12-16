@@ -9870,7 +9870,9 @@
 		<Description>
 			<p>Indicates whether or not this LEA contact's information should be published in a directory of LEA information.</p>
 		</Description>
-		<Type ref="CommonTypes" name="PublishInDirectoryType"/>
+		<!-- NN 20221216 Avoid type aliased to codeset, it compromises JSON Schema generation 
+		<Type ref="CommonTypes" name="PublishInDirectoryType"/> -->
+		<Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
 	</Item>
 	<Item>
 		<Element>ContactInfo</Element>
@@ -11506,7 +11508,8 @@
 		<Description>
 			<p>Indicates whether or not this school contact's information should be published in a directory of school information.</p>
 		</Description>
-		<Type ref="CommonTypes" name="PublishInDirectoryType"/>
+		<!-- NN 20221216 Avoid type aliased to codeset, it compromises JSON Schema generation 
+		<Type ref="CommonTypes" name="PublishInDirectoryType"/> -->
 	</Item>
 	<Item>
 		<Element>ContactInfo</Element>
@@ -11560,6 +11563,7 @@
 		</SchoolContactList>
 	</xhtml:Example>
 </CommonElement>
+<!-- NN 20221216 Avoid type aliased to codeset, it compromises JSON Schema generation 
 <CommonElement name="PublishInDirectoryType" type="true" dm="true">
 	<Intro>
 		<p>
@@ -11579,6 +11583,7 @@
 		<PublishInDirectory>Y</PublishInDirectory>
 	</xhtml:Example>
 </CommonElement>
+-->
 <CommonElement name="ContactInfoType" type="true" dm="true">
 	<Item>
 		<Element>ContactInfoType</Element>
