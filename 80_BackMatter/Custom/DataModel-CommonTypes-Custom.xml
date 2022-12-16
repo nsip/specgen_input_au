@@ -101,7 +101,7 @@
       </CommonElement-->
       
  <!-- Added for 3.4.8 for Venetian Blind patterning in the ResourceUsage Object -->
- 
+ <!-- Removed 3.5.0
  <CommonElement name="ResourceUsageContentTypeType" type="true" dm="true">
   <Item>
     <Element>ResourceUsageContentTypeType</Element>
@@ -269,7 +269,7 @@
    	<Type name="xs:normalizedString"></Type>
   </Item>  
   </CommonElement>
-  
+-->  
   <CommonElement name="HomeroomType" type="true" dm="true">
 	  <Item>
 		<Element>HomeroomType</Element>
@@ -317,7 +317,7 @@
  </CommonElement>
  
   <!-- Added for 3.4.8 for Venetian Blind patterning in the SystemRole Object -->
-  
+  <!-- Removed 3.5.0
     <CommonElement name="SystemRoleObjectRefIdType" type="true" dm="true">
       <Item>
       <Element>SystemRoleObjectRefIdType</Element>
@@ -513,6 +513,8 @@
       <Type ref="CommonTypes" name="SystemRoleScopeRefIdType"></Type>
     </Item>
   </CommonElement>
+ -->
+ 
  
  <!-- Added for CEM Travel Details 3.4.8 --> 
     <!--
@@ -1234,10 +1236,9 @@
 			<Description>
 				<p>Sum of attendance days for all students in the cohort during the reference period. Must be less than or equal to the number of Possible School Days. Can include partial attendance days. The field must not be comma delimited.</p>
 			</Description>
-			<Type name="xs:decimal"></Type>
-			<Facets>
-			  <xs:minInclusive value="0"/>
-			  <xs:fractionDigits value="2"/>
+			<Type name='xs:token'/>
+				<Facets>
+				<xs:pattern value="[0-9]+|[0-9]+\.[0-9][0-9]?"/>
 			</Facets>
 		</Item>
 		<Item>
@@ -1881,25 +1882,21 @@
 		<Description>
 		  <p>For each member of the cohort, on a full-time-equivalent basis, the proportion of the staff member’s job that goes toward supporting the primary school component of the location. For staff at combined (primary and secondary) locations, this field plus the secondary FTE field equals the total FTE for the staff member’s job. (Format is x.x, with a full time workload being equal to 1 FTE. Primary FTE plus Secondary FTE should not exceed 1.</p>
 		</Description>
-		<Type name="xs:decimal"></Type>
-		<Facets>
-		  <xs:minInclusive value="0"/>
-		  <xs:maxInclusive value="1"/>
-		  <xs:fractionDigits value="1"/>
-		</Facets>
-	</Item>
+		<Type name='xs:token'/>
+				<Facets>
+				<xs:pattern value="0|1|1\.0|0\.[0-9]"/>
+				</Facets>	
+		</Item>
 	<Item>
 		<Element>SecondaryFTE</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
 		  <p>For each member of the cohort, on a full-time-equivalent basis, the proportion of the staff member’s job that goes toward supporting the primary school component of the location. For staff at combined (primary and secondary) locations, this field plus the secondary FTE field equals the total FTE for the staff member’s job. (Format is x.x, with a full time workload being equal to 1 FTE. Primary FTE plus Secondary FTE should not exceed 1.</p>
 		</Description>
-	 	<Type name="xs:decimal"></Type>
-		<Facets>
-		  <xs:minInclusive value="0"/>
-		   <xs:maxInclusive value="1"/> 
-		  <xs:fractionDigits value="1"/>
-		</Facets>
+		<Type name='xs:token'/>
+				<Facets>
+				<xs:pattern value="0|1|1\.0|0\.[0-9]"/>
+				</Facets>	
 	 </Item>
 	<Item>
 			<Element>JobFTE</Element>
@@ -1907,12 +1904,10 @@
 			<Description>
 			  <p>The full-time-equivalent measure of the job for each member of the cohort. (Format is x.x, with a full time workload being equal to 1 FTE.) Note: This field is used instead of Primary FTE and Secondary FTE, where the client is a system or diocese office and is not a school location where primary or secondary education is delivered.</p>
 			</Description>
-			<Type name="xs:decimal"></Type>
-			<Facets>
-			  <xs:minInclusive value="0"/>
-			  <!--<xs:maxInclusive value="1"/> -->
-			  <xs:fractionDigits value="1"/>
-			</Facets>
+		<Type name='xs:token'/>
+				<Facets>
+				<xs:pattern value="[0-9]+|[0-9]+\.[0-9]"/>
+				</Facets>	
  	</Item>
 
 		  <!-- Leave off StaffAssignment - no unit level for first release
@@ -1949,12 +1944,7 @@
 		<Description>
 		  <p>Full-time job equivalent ratio associated with teaching at the Primary level. (Format is x.xx; an employee who is full-time and who is 50% of their time on this assignment would be represented as 0.50)</p>
 		</Description>
-		<Type name="xs:decimal"></Type>
-		<Facets>
-		  <xs:minInclusive value="0"/>
-		  <xs:maxInclusive value="1"/>
-		  <xs:fractionDigits value="2"/>
-		</Facets>
+			     <Type ref="CommonTypes" name="FTEType"/>
 	</Item>
 	<Item>
 		<Element>SecondaryFTE</Element>
@@ -1962,12 +1952,7 @@
 		<Description>
 		  <p>Full-time job equivalent ratio associated with teaching at the Secondary level. (Format is x.xx; an employee who is full-time and who is 50% of their time on this assignment would be represented as 0.50)</p>
 		</Description>
-		<Type name="xs:decimal"></Type>
-		<Facets>
-		  <xs:minInclusive value="0"/>
-		  <xs:maxInclusive value="1"/>
-		  <xs:fractionDigits value="2"/>
-		</Facets>
+			     <Type ref="CommonTypes" name="FTEType"/>
 	 </Item>
 </CommonElement>	
  <CommonElement name="CensusStudentListType" type= "true" dm="true">
@@ -2126,24 +2111,9 @@
 			<Element>DisabilityLevelOfAdjustment</Element>
 			<Characteristics>M</Characteristics>
 			<Description>
-				<p>Disability Level of Adjustment	Level of adjustment for students with disability using the Nationally Consistent Collection of Data on Students with Disability (NCCD) model.None if there is no adjustment.</p>
+				<p>Level of adjustment for students with disability using the Nationally Consistent Collection of Data on Students with Disability (NCCD) model. None if there is no adjustment.</p>
 			</Description>
-			<Values>
-			<Value>
-				<Code>QDTP</Code>
-				<Description>support provided within Quality Differentiated Teaching Practice</Description>
-			</Value>
-			<Value>
-				<Code>Supplementary</Code>
-			</Value>
-			<Value>
-				<Code>Substantial</Code>
-			</Value>
-			<Value>
-				<Code>Extensive</Code>
-			</Value>
-			<Value><Code>None</Code></Value>
-		   </Values>
+			<Type ref="CodeSets" name="AUCodeSetsNCCDAdjustmentType"></Type>
 		</Item>
 		<Item>
 			<Element>DisabilityCategory</Element>
@@ -2151,21 +2121,7 @@
 			<Description>
 				<p>Category for students with disability using the Nationally Consistent Collection of Data on Students with Disability (NCCD) model. None if no disability.</p>
 			</Description>
-			<Values>
-			<Value>
-				<Code>Physical</Code>
-			</Value>
-			<Value>
-				<Code>Cognitive</Code>
-			</Value>
-			<Value>
-				<Code>Social-Emotional</Code>
-			</Value>
-			<Value>
-				<Code>Sensory</Code>
-			</Value>
-			<Value><Code>None</Code></Value>
-		   </Values>
+			<Type ref="CodeSets" name="AUCodeSetsNCCDDisabilityType"></Type>
 		</Item>
 		<Item>
 			<Element>FTE</Element>
@@ -2173,12 +2129,7 @@
 			<Description>
 				<p>Full-time equivalent for the student cohort e.g. a cohort of students who attend 50% of time would be represented as 0.5.</p>
 			</Description>
-			<Type name="xs:decimal"/>
-			<Facets>
-				<xs:minInclusive value="0"/>
-				<xs:maxInclusive value="1"/>
-				<xs:fractionDigits value="2"/>
-			</Facets>
+				     <Type ref="CommonTypes" name="FTEType"/>
 		</Item> 
 		<Item>
 			<Element>Headcount</Element>
@@ -7763,12 +7714,10 @@
         Amount of the school day in which the student should be in attendance (Format is x.x; a student who should be in attendance a full day would be represented as 1.0).  If <code>CountsTowardAttendance</code> equals <code>Yes</code> then <code>AttendanceValue</code> must be greater than zero.
       </p>
     </Description>
-    <Type name="xs:decimal"></Type>
-    <Facets>
-      <xs:minInclusive value="0"/>
-      <xs:maxInclusive value="1"/>
-      <xs:fractionDigits value="1"/>
-    </Facets>
+		<Type name='xs:token'/>
+				<Facets>
+				<xs:pattern value="0|1|1\.0|0\.[0-9]"/>
+		</Facets>	
   </Item>
 </CommonElement>
 
@@ -8028,12 +7977,7 @@
 		<Description>
 			<p>Full-time equivalent numeric value of the student's course load during this enrollment, expressed in decimal form, where 1.00 represents a full-time enrollment.</p>
 		</Description>
-		<Type name="xs:decimal"/>
-		<Facets>
-			<xs:minInclusive value="0"/>
-			<xs:maxInclusive value="1"/>
-			<xs:fractionDigits value="2"/>
-		</Facets>
+			     <Type ref="CommonTypes" name="FTEType"/>
 	</Item>
 	<Item>
 		<Element>Parent1Language</Element>
@@ -12525,7 +12469,9 @@
 		<Element>Sex</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
-			<p>'Sex' is the distinction 'male'/'female'/'intersex', as reported by the person</p>
+			<p>Gender identity as reported by the person: male, female, intersex, or self-defined (e.g. non-binary) 
+			(The element name "Sex" is a legacy term, and this element has been understood to refer to gender identity, 
+			"as reported by the person", rather than biology, since the inception of SIF-AU as v1.0 in 2009.)</p>
 		</Description>
 		<Type ref="CodeSets" name="AUCodeSetsSexCodeType"/>
 	</Item>
@@ -13148,9 +13094,10 @@
 	<Item>
 		<Element>TimeElementType</Element>
 		<Description>
-			<p>A common metadata element designed to contain time data, both self-defined and by type.</p>
+			<p>A common metadata element designed to contain time data relating to the validity of the object.</p>
 		</Description>
 	</Item>
+	<!-- removed as part of Metadata cleanup 3.5.0
 	<Item>
 		<Element>Type</Element>
 		<Characteristics>M</Characteristics>
@@ -13238,11 +13185,12 @@
       Evening of 10/12/06
     </ItemExample>
 	</Item>
+	-->
 	<Item>
 		<Element>StartDateTime</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
-			<p>StartDateTime</p>
+			<p>Start Date associated with object (e.g. for object validity)</p>
 		</Description>
 		<Type name="xs:dateTime"/>
 	</Item>
@@ -13250,10 +13198,11 @@
 		<Element>EndDateTime</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
-			<p>EndDateTime</p>
+			<p>End Date associated with object (e.g. for object validity)</p>
 		</Description>
 		<Type name="xs:dateTime"/>
 	</Item>
+	
 	<Item>
 		<Element>SpanGaps</Element>
 		<Characteristics>O</Characteristics>
@@ -13266,25 +13215,29 @@
 		<Characteristics>M</Characteristics>
 		<Type name="xs:boolean"/>
 		<Description>
-      This element allows for the system to tag an object as being explicitly current.
+      This element allows for the system to tag an object as being explicitly current at the time it is sent.
       Although the baseline assumption in SIF is that objects are always current (default value is typically <code>true</code>),
       there are use cases when that is not the case.
     </Description>
 	</Item>
 	<xhtml:Example xmlns="" name="TimeElement Example">
 		<TimeElement>
+		<!--
 			<Type>Full school year</Type>
 			<Code>01</Code>
 			<Name>2004/2005 School Year</Name>
 			<Value>2004-2005</Value>
+			-->
 			<StartDateTime>2004-09-01T08:00:00-05:00</StartDateTime>
 			<EndDateTime>2005-06-30T15:00:00-05:00</EndDateTime>
 			<SpanGaps>
 				<SpanGap>
+				<!--
 					<Type>Holiday</Type>
 					<Code>02</Code>
 					<Name>2005 Winter Break</Name>
 					<Value>2005 Winter Break</Value>
+				-->
 					<StartDateTime>2005-02-21T15:00:00-05:00</StartDateTime>
 					<EndDateTime>2005-02-25T08:00:00-05:00</EndDateTime>
 				</SpanGap>
@@ -13307,7 +13260,7 @@
        <Element>SpanGap</Element>
        <Characteristics>OR</Characteristics>
        <Description>
-         This structure duplicates much of the structure of <code>TimeElement</code> and is designed to represent a gap in the parent time period
+         This structure is designed to represent a gap in the parent time period
       defined by <code>StartDateTime</code> and <code>EndDateTime</code> above
        </Description>
        <Type ref="CommonTypes" name="SpanGapType"/>
@@ -13317,47 +13270,104 @@
     	<Item>
 		<Element>SpanGapType</Element>
 		<Description>
-      This structure duplicates much of the structure of <code>TimeElement</code> and is designed to represent a gap in the parent time period
+      This structure is designed to represent a gap in the parent time period
       defined by <code>StartDateTime</code> and <code>EndDateTime</code> above.
     </Description>
 	</Item>
+	<!-- removed as part of metadata rationalisation 3.5.0
 	<Item>
 		<Element>Type</Element>
 		<Characteristics>M</Characteristics>
-		<Description>
-			<p>Type</p>
-		</Description>
 		<Type name="xs:normalizedString"/>
+		<Description>
+			<p>
+        This element is designed to contain the time period of a time gap attached to an object.
+        Very long periods (school year, quarter, etc.) and very small periods (second, millisecond, etc.) can be defined.
+        This element provides a scoping description of the time metadata enclosed.
+      </p>
+			<p>
+        Because the educational environment varies so greatly we are including here a suggested but not prescriptive list of values.
+        Although there may be unique needs for values not covered here&#x2014;and we may have missed a major one&#x2014;a best practice would be
+        to utilize the examples here to enhance interoperability.
+      </p>
+		</Description>
+		<ItemExample>
+      Full school year
+    </ItemExample>
+		<ItemExample>
+      Mini-term
+    </ItemExample>
+		<ItemExample>
+      Long session
+    </ItemExample>
+		<ItemExample>
+      Other
+    </ItemExample>
+		<ItemExample>
+      Semester
+    </ItemExample>
+		<ItemExample>
+      Trimester
+    </ItemExample>
+		<ItemExample>
+      Quarter
+    </ItemExample>
+		<ItemExample>
+      Spring Vacation
+    </ItemExample>
+		<ItemExample>
+      Summer Term
+    </ItemExample>
+		<ItemExample>
+      Intercession
+    </ItemExample>
+		<ItemExample>
+      Holiday
+    </ItemExample>
 	</Item>
 	<Item>
 		<Element>Code</Element>
 		<Characteristics>M</Characteristics>
-		<Description>
-			<p>Code</p>
-		</Description>
 		<Type name="xs:token"/>
+		<Description>
+      This element provides a place for the application to send structured data (code values, unique identifier, timestamps).
+      This code value can, depending upon the use case agreement between agents, be used to qualify the data in the <code>Value</code> element.
+    </Description>
+		<ItemExample>2007SY</ItemExample>
+		<ItemExample>2006.FallConferences</ItemExample>
 	</Item>
 	<Item>
 		<Element>Name</Element>
 		<Characteristics>M</Characteristics>
-		<Description>
-			<p>Name</p>
-		</Description>
 		<Type name="xs:normalizedString"/>
+		<Description>
+      Contains a human-readable description of the value in <code>Value</code>.
+    </Description>
+		<ItemExample>
+      Class of '07
+    </ItemExample>
+		<ItemExample>
+      Fall 2007 Parent-Teacher Conferences
+    </ItemExample>
 	</Item>
 	<Item>
 		<Element>Value</Element>
 		<Characteristics>M</Characteristics>
-		<Description>
-			<p>Value</p>
-		</Description>
 		<Type name="xs:normalizedString"/>
+		<Description>Contains a human-readable value.</Description>
+		<ItemExample>
+      2007
+    </ItemExample>
+		<ItemExample>
+      Evening of 10/12/06
+    </ItemExample>
 	</Item>
+	-->
 	<Item>
 		<Element>StartDateTime</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
-			<p>StartDate and Time</p>
+			<p>Start Date and Time of gap in timespan</p>
 		</Description>
 		<Type name="xs:dateTime"/>
 	</Item>
@@ -13365,7 +13375,7 @@
 		<Element>EndDateTime</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
-			<p>EndDate and Time</p>
+			<p>End Date and Time of gap in timespan</p>
 		</Description>
 		<Type name="xs:dateTime"/>
 	</Item>
@@ -13746,6 +13756,7 @@
 		</ACStrandSubjectArea>
 	</xhtml:Example>
 </CommonElement>
+<!-- Removed as part of metadata rationalisation 3.5.0
 <CommonElement name="EducationFilterType" type="true" dm="true">
 	<Intro>
 		<p>
@@ -13791,6 +13802,7 @@
 		</EducationFilter>
 	</xhtml:Example>
 </CommonElement>
+-->
 <CommonElement name="SIF_ExtendedElementsType" type="true" dm="true">
 	<Intro>
 		<p>
@@ -13909,6 +13921,15 @@
 		<Type ref="CommonTypes" name="LifeCycleType"/>
 	</Item>
 	<Item>
+		<Element>ETag</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Used to manage versioning of object under race conditions (multiple clients posting versions of the same object)</p>
+		</Description>
+		<Type name="xs:token"/>
+	</Item>
+	<!-- removed as part of metadata rationalisation 3.5.0
+	<Item>
 		<Element>EducationFilter</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
@@ -13916,6 +13937,7 @@
 		</Description>
 		<Type ref="CommonTypes" name="EducationFilterType"/>
 	</Item>
+	-->
 </CommonElement>
 
 <CommonElement name="TimeElementListType" type="true" dm="true">
@@ -14071,4 +14093,581 @@
 		</WorkingWithChildrenCheck>
 	</xhtml:Example>
 </CommonElement>
+<CommonElement name="ReportingAuthorityListType" type="true" dm="true">
+	<Item>
+		<Element>ReportingAuthorityListType</Element>
+		<Description>
+			<p>A list of reporting authorities included in a collection or vertical reporting object.</p>
+		</Description>
+		<List mode="List">
+    </List>
+	</Item>
+	<Item>
+		<Element>ReportingAuthority</Element>
+		<Characteristics>MR</Characteristics>
+		<Type ref="CommonTypes" name="ReportingAuthorityType"/>
+	</Item>
+</CommonElement>
+<CommonElement name="ReportingAuthorityType" type="true" dm="true">
+	<Item>
+		<Element>ReportingAuthorityType</Element>
+		<Description>
+			<p>A reporting authority included in a collection or vertical reporting object.</p>
+		</Description>
+	</Item>
+ <Item>
+	  <Element>Name</Element>
+	  <Characteristics>M</Characteristics>
+	  <Description>Name of authority.</Description>
+	  <Type name="xs:normalizedString"></Type>
+  </Item>
+  
+  <Item>
+	  <Element>System</Element>
+	  <Characteristics>O</Characteristics>
+	  <Description>System of authority if Systemic.</Description>
+	  <Type name="xs:normalizedString"></Type>
+  </Item>
+  
+  <Item>
+    <Element>AuthorityId</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Identifier for the authority. The scope of the identifier will be set by the collection agency; for Commonwealth collections, it shall be the CommonwealthId.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+</CommonElement>
+<CommonElement name="SignatoryType" type="true" dm="true">
+	<Item>
+		<Element>SignatoryType</Element>
+		<Description>
+			<p>Personal details and signature of a party who signs off on an object as a binding endorsement.</p>
+		</Description>
+	</Item>
+ <Item>
+	  <Element>Name</Element>
+	  <Characteristics>M</Characteristics>
+	  <Description>Name of signatory.</Description>
+	  <Type name="xs:normalizedString"></Type>
+  </Item>
+  
+   <Item>
+    <Element>Role</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Role or position of signatory.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+ 
+    <Item>
+    <Element>Organisation</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Organisation or Company within which the signatory exercises their authority.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+
+   <Item>
+    <Element>Signature</Element>
+
+    <Characteristics>M</Characteristics>
+	<privacyRating>High</privacyRating>
+    <Description>
+      <p>
+        This element defines the signature of the signatory as an image. If SubmitterSignatureImageType is "URL", 
+		this is the location of the picture in <a href="References.html#JPEG">[JPEG]</a> format; if SubmitterSignatureImageType is "JPEG", 
+		this is the <a href="References.html#JPEG">[JPEG]</a> image data encoded using the Base64 Content-Transfer-Encoding defined in 
+		Section 6.8 of <a href="References.html#RFC2045">[RFC 2045]</a>.
+      </p>
+    </Description>
+    <Type ref="CommonTypes" name="URIOrBinaryType"/>
+  </Item>
+  
+  <Item>
+
+    <Element>SignatureImageType</Element>
+    <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>The way the Signature picture type is specified.</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsPictureSourceType"></Type>
+  </Item>
+ 
+  <Item>
+    <Element>Date</Element>
+    <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Date of the signature.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+ 
+ </CommonElement>
+ 
+ <CommonElement name="ArrivalSchoolType" type="true" dm="true">
+	<Item>
+		<Element>ArrivalSchoolType</Element>
+		<Description>
+			<p>Details of a school to identify it as the school requesting details of a student in the Student Data Transfer Protocol.</p>
+		</Description>
+	</Item>
+   <Item>
+    <Element>ACARAId</Element>
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>ACARA identifier for this school.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+   <Item>
+    <Element>CommonwealthId</Element>
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>AGE ID identifier for this school.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+
+  <Item>
+    <Element>Name</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Name of school.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  
+    <Item>
+    <Element>City</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>City where school is located.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  
+
+</CommonElement>
+ 
+ <CommonElement name="DepartureSchoolType" type="true" dm="true">
+	<Item>
+		<Element>DepartureSchoolType</Element>
+		<Description>
+			<p>Details of a school to identify as the school a student is departing from.</p>
+		</Description>
+	</Item>
+   <Item>
+    <Element>ACARAId</Element>
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>ACARA identifier for this school.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+   <Item>
+    <Element>CommonwealthId</Element>
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>AGE ID identifier for this school.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+
+  <Item>
+    <Element>Name</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Name of school.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  
+    <Item>
+    <Element>City</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>City where school is located.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  
+ <Item>
+    <Element>SchoolContactList</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>A list of contact persons associated with a school.</p>
+    </Description>
+    <Type ref="CommonTypes" name="SchoolContactListType"/>
+  </Item>
+
+</CommonElement>
+<CommonElement name="PreviousSchoolListType" type="true" dm="true">
+	<Item>
+		<Element>PreviousSchoolListType</Element>
+		<Description>
+			<p>A list of schools included in the context of a departing student.</p>
+		</Description>
+		<List mode="List">
+    </List>
+	</Item>
+	<Item>
+		<Element>PreviousSchool</Element>
+		<Characteristics>MR</Characteristics>
+		<Type ref="CommonTypes" name="PreviousSchoolType"/>
+	</Item>
+</CommonElement>
+<CommonElement name="PreviousSchoolType" type="true" dm="true">
+	<Item>
+		<Element>PreviousSchoolType</Element>
+		<Description>
+			<p>Truncated details of a school to identify it in the context of a departing student.</p>
+		</Description>
+	</Item>
+   <Item>
+    <Element>ACARAId</Element>
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>ACARA identifier for this school.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+    <Item>
+    <Element>CommonwealthId</Element>
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>AGE ID identifier for this school.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+
+  <Item>
+    <Element>Name</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Name of school.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+<Item>
+    <Element>City</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>City where school is located.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  
+
+</CommonElement>
+<CommonElement name="NAPLANScoreListType" type="true" dm="true">
+	<Item>
+		<Element>NAPLANScoreListType</Element>
+		<Description>
+			<p>List of NAPLAN scores associated wih a student from a single assessment cycle.</p>
+		</Description>
+		<List mode="List">
+    </List>
+	</Item>
+	<Item>
+		<Element>NAPLANScore</Element>
+		<Characteristics>MR</Characteristics>
+		<Type ref="CommonTypes" name="NAPLANScoreType"/>
+	</Item>
+</CommonElement>
+
+<CommonElement name="NAPLANScoreType" type="true" dm="true">
+	<Item>
+		<Element>NAPLANScoreType</Element>
+		<Description>
+			<p>A NAPLAN score associated with a student and a domain from a single assessment cycle.</p>
+		</Description>
+	</Item>
+   <Item>
+    <Element>Domain</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Domain of the NAP test undertaken.</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsNAPTestDomainType"></Type>
+  </Item>
+  <Item>
+    <Element>ParticipationCode</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Participation status of the student for the NAP test.</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsNAPParticipationCodeType"></Type>
+  </Item>
+
+  <Item>
+    <Element>DomainScore</Element>
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>Overall score received in the NAP test. Contents are not populated if this is an empty object
+	  (sanctioned abandonment or refusal).</p>
+    </Description>
+	<Type ref="CommonTypes" name="DomainScoreType"/>
+  </Item>
+
+</CommonElement>
+
+<CommonElement name="NAPLANScoreWithYearsListType" type="true" dm="true">
+	<Item>
+		<Element>NAPLANScoreWithYearsListType</Element>
+		<Description>
+			<p>List of NAPLAN scores associated wih a student from a single assessment cycle,
+			enriched by test level and year of testing.</p>
+		</Description>
+		<List mode="List">
+    </List>
+	</Item>
+	<Item>
+		<Element>NAPLANScore</Element>
+		<Characteristics>MR</Characteristics>
+		<Type ref="CommonTypes" name="NAPLANScoreWithYearsType"/>
+	</Item>
+</CommonElement>
+
+<CommonElement name="NAPLANScoreWithYearsType" type="true" dm="true">
+	<Item>
+		<Element>NAPLANScoreWithYearsType</Element>
+		<Description>
+			<p>A NAPLAN score associated with a student and a domain from a single assessment cycle,
+			enriched by test level and year of testing. If the year of testing is not given, the
+			most recent year of testing is assumed.</p>
+		</Description>
+	</Item>
+   <Item>
+    <Element>Domain</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Domain of the NAP test undertaken.</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsNAPTestDomainType"></Type>
+  </Item>
+  <Item>
+    <Element>ParticipationCode</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Participation status of the student for the NAP test.</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsNAPParticipationCodeType"></Type>
+  </Item>
+
+  <Item>
+    <Element>DomainScore</Element>
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>Overall score received in the NAP test. Contents are not populated if this is an empty object
+	  (sanctioned abandonment or refusal).</p>
+    </Description>
+	<Type ref="CommonTypes" name="DomainScoreType"/>
+  </Item>
+  <Item>
+    <Element>TestLevel</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Values: 3, 5, 7, 9. The test level that the student had registered for.</p>
+    </Description>
+    <Type ref="CommonTypes" name="YearLevelType"></Type>
+  </Item>
+  <Item>
+    <Element>TestYear</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Year that testing took place, e.g. 2017.</p>
+    </Description>
+    <Type ref="CommonTypes" name="SchoolYearType"></Type>
+  </Item>
+
+</CommonElement>
+
+<CommonElement name="NCCDListType" type="true" dm="true">
+	<Item>
+		<Element>NCCDListType</Element>
+		<Description>
+			<p>List of disability assessments for a student from the Nationally Consistent Collection of Data.</p>
+		</Description>
+		<List mode="List">
+    </List>
+	</Item>
+	<Item>
+		<Element>NCCD</Element>
+		<Characteristics>MR</Characteristics>
+		<Type ref="CommonTypes" name="NCCDType"/>
+	</Item>
+</CommonElement>
+
+<CommonElement name="NCCDType" type="true" dm="true">
+	<Item>
+		<Element>NCCDType</Element>
+		<Description>
+			<p>Disability assessment for a student from the Nationally Consistent Collection of Data.</p>
+		</Description>
+	</Item>
+   <Item>
+    <Element>LevelOfAdjustment</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Level of adjustment required for a student.</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsNCCDAdjustmentType"></Type>
+  </Item>
+  <Item>
+    <Element>CategoryOfDisability</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Nominal category of disability for a student. If multiple categories were considered, this is the category with the highest
+	  level of adjustment, which the student assessment is classified under. At least one of <code>CategoryOfDisability</code>
+	  or <code>DisabilityCategoryConsideredList</code> must be present.</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsNCCDDisabilityType"></Type>
+  </Item>
+  <Item>
+    <Element>DisabilityCategoryConsideredList</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Categories of disability considered for a student in the NCCD assessment.</p>
+    </Description>
+    <Type ref="CommonTypes" name="DisabilityCategoryListType"></Type>
+  </Item>
+ <Item>
+    <Element>DateOfAssessment</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Date that the assessment was made.</p>
+    </Description>
+    <Type name='xs:date'/>
+  </Item>
+</CommonElement>
+
+<CommonElement name="DisabilityCategoryListType" type="true" dm="true">
+	<Item>
+		<Element>DisabilityCategoryListType</Element>
+		<Description>
+			<p>Categories of disability considered for a student in the NCCD assessment.</p>
+		</Description>
+		<List mode="List">
+    </List>
+	</Item>
+	<Item>
+		<Element>DisabilityCategoryConsidered</Element>
+		<Characteristics>MR</Characteristics>
+		<Type ref="CodeSets" name="AUCodeSetsNCCDDisabilityType"></Type>
+	</Item>
+</CommonElement>
+
+
+<CommonElement name="EducationalAssessmentListType" type="true" dm="true">
+	<Item>
+		<Element>EducationalAssessmentListType</Element>
+		<Description>
+			<p>List of relevant educational assesssments the student has undertaken.</p>
+		</Description>
+		<List mode="List">
+    </List>
+	</Item>
+	<Item>
+		<Element>EducationalAssessment</Element>
+		<Characteristics>MR</Characteristics>
+		<Type ref="CommonTypes" name="EducationalAssessmentType"/>
+	</Item>
+</CommonElement>
+
+<CommonElement name="EducationalAssessmentType" type="true" dm="true">
+	<Item>
+		<Element>EducationalAssessmentType</Element>
+		<Description>
+			<p>An educational assessment that a student has undertaken.</p>
+		</Description>
+	</Item>
+   <Item>
+    <Element>Name</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Name of assessment.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  <Item>
+    <Element>Content</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Results of assessment.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+</CommonElement>
+
+<CommonElement name="STDNGradeListType" type="true" dm="true">
+	<Item>
+		<Element>STDNGradeListType</Element>
+		<Description>
+			<p>List of A-E Grades most recently received by student.</p>
+		</Description>
+		<List mode="List">
+    </List>
+	</Item>
+	<Item>
+		<Element>StudentGrade</Element>
+		<Characteristics>MR</Characteristics>
+		<Type ref="CommonTypes" name="STDNGradeType"/>
+	</Item>
+</CommonElement>
+
+<CommonElement name="STDNGradeType" type="true" dm="true">
+	<Item>
+		<Element>STDNGradeType</Element>
+		<Description>
+			<p>A-E Grade received by student.</p>
+		</Description>
+	</Item>
+   <Item>
+    <Element>Subject</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The scope of the StudentGrade; e.g. subject matter. Should be used if no TeachingGroup is associated with the grade.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  <Item>
+    <Element>LearningArea</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Learning area against which the grade was given.</p>
+    </Description>
+	<Type ref="CommonTypes" name="ACStrandSubjectAreaType"/>
+  </Item>
+  <Item>
+    <Element>Grade</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Overall grade that the student has received.</p>
+    </Description>
+	<Type ref="CommonTypes" name="GradeType"/>
+  </Item>
+</CommonElement>
+
+<CommonElement type="true" name='FTEType' dm="true">
+			<Item>
+				<Element>FTEType</Element>
+			<Description>
+			<p>Full-Time Equivalent as expressed in most instances in SIF-AU, as a decimal digit between 0 and 1 with two significant decimal places.
+			Expresed as a string for round-tripping with JSON</p>
+			</Description>
+				<Type name='xs:token'/>
+				<Facets>
+				<xs:pattern value="0|1|1\.00?|0\.[0-9][0-9]?"/>
+				</Facets>
+			</Item>
+</CommonElement>
+
+
 </IncludeGroup>

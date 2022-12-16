@@ -206,6 +206,15 @@
 		</Description>
 		<Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"/>
 	</Item>
+	  <Item>
+    <Element>CategoryOfDisability</Element>
+    <Characteristics>O</Characteristics>
+ 		<privacyRating>High</privacyRating>
+   <Description>
+      <p>Category of disability for a student.</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsNCCDDisabilityType"></Type>
+  </Item>
 	<Item>
 		<Element>IntegrationAide</Element>
 		<Characteristics>O</Characteristics>

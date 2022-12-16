@@ -519,6 +519,21 @@
           </ContactInfo>
         </SchoolContact>
       </SchoolContactList>
+	  <AddressList>
+	             <Address Type="0123" Role="012B">
+              <Street>
+                <Line1>23 Nicholson Street</Line1>
+                </Street>
+                  <City>Carnegie</City>
+                  <StateProvince>VIC</StateProvince>
+                  <Country>1101</Country>
+                  <PostalCode>3004</PostalCode>
+                  <GridLocation>
+                    <Latitude>23.9876</Latitude>
+                    <Longitude>-98.8765</Longitude>
+                  </GridLocation>
+                </Address>
+	  </AddressList>
       <PhoneNumberList>
         <PhoneNumber Type="0096">
           <Number>03 9637-2000</Number>
