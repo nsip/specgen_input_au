@@ -207,6 +207,10 @@
 					<xsltName>includeAdminDirectives</xsltName>
 					<xsltValue>true</xsltValue>
 				</xsltParam>
+				<xsltParam>
+					<xsltName>omitVersionInExamplesFileName</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
 			</xsltParamList>
 			<xsltOutputDir>JSON</xsltOutputDir>
 			<xsltOutputFile>Full/OpenAPI_AU.yaml</xsltOutputFile>
@@ -252,6 +256,10 @@
 				</xsltParam>
 				<xsltParam>
 					<xsltName>includeAdminDirectives</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>omitVersionInExamplesFileName</xsltName>
 					<xsltValue>true</xsltValue>
 				</xsltParam>
 			</xsltParamList>
@@ -322,6 +330,10 @@
 					<xsltName>includeAdminDirectives</xsltName>
 					<xsltValue>true</xsltValue>
 				</xsltParam>
+				<xsltParam>
+					<xsltName>omitVersionInExamplesFileName</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
 			</xsltParamList>
 			<xsltOutputDir>JSON\ATTEND</xsltOutputDir>
 			<xsltOutputFile>ATTENDAPI_AU.yaml</xsltOutputFile>
@@ -387,6 +399,10 @@
 				</xsltParam>
 				<xsltParam>
 					<xsltName>includeAdminDirectives</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>omitVersionInExamplesFileName</xsltName>
 					<xsltValue>true</xsltValue>
 				</xsltParam>
 			</xsltParamList>
@@ -456,6 +472,10 @@
 					<xsltName>includeAdminDirectives</xsltName>
 					<xsltValue>true</xsltValue>
 				</xsltParam>
+				<xsltParam>
+					<xsltName>omitVersionInExamplesFileName</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
 			</xsltParamList>
 			<xsltOutputDir>JSON\Activity</xsltOutputDir>
 			<xsltOutputFile>ActivityOpenAPI_AU.yaml</xsltOutputFile>
@@ -521,6 +541,10 @@
 				</xsltParam>
 				<xsltParam>
 					<xsltName>includeAdminDirectives</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>omitVersionInExamplesFileName</xsltName>
 					<xsltValue>true</xsltValue>
 				</xsltParam>
 			</xsltParamList>
@@ -590,6 +614,10 @@
 					<xsltName>includeAdminDirectives</xsltName>
 					<xsltValue>true</xsltValue>
 				</xsltParam>
+				<xsltParam>
+					<xsltName>omitVersionInExamplesFileName</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
 			</xsltParamList>
 			<xsltOutputDir>JSON\AustralianGovernmentCollections</xsltOutputDir>
 			<xsltOutputFile>AustralianGovernmentCollectionsOpenAPI_AU.yaml</xsltOutputFile>
@@ -655,6 +683,10 @@
 				</xsltParam>
 				<xsltParam>
 					<xsltName>includeAdminDirectives</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>omitVersionInExamplesFileName</xsltName>
 					<xsltValue>true</xsltValue>
 				</xsltParam>
 			</xsltParamList>
@@ -724,6 +756,10 @@
 					<xsltName>includeAdminDirectives</xsltName>
 					<xsltValue>true</xsltValue>
 				</xsltParam>
+				<xsltParam>
+					<xsltName>omitVersionInExamplesFileName</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
 			</xsltParamList>
 			<xsltOutputDir>JSON\LearningStandards</xsltOutputDir>
 			<xsltOutputFile>LearningStandardsOpenAPI_AU.yaml</xsltOutputFile>
@@ -789,6 +825,10 @@
 				</xsltParam>
 				<xsltParam>
 					<xsltName>includeAdminDirectives</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>omitVersionInExamplesFileName</xsltName>
 					<xsltValue>true</xsltValue>
 				</xsltParam>
 			</xsltParamList>
@@ -858,6 +898,10 @@
 					<xsltName>includeAdminDirectives</xsltName>
 					<xsltValue>true</xsltValue>
 				</xsltParam>
+				<xsltParam>
+					<xsltName>omitVersionInExamplesFileName</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
 			</xsltParamList>
 			<xsltOutputDir>JSON\Timetabling</xsltOutputDir>
 			<xsltOutputFile>TimetablingOpenAPI_AU.yaml</xsltOutputFile>
@@ -923,6 +967,10 @@
 				</xsltParam>
 				<xsltParam>
 					<xsltName>includeAdminDirectives</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>omitVersionInExamplesFileName</xsltName>
 					<xsltValue>true</xsltValue>
 				</xsltParam>
 			</xsltParamList>
