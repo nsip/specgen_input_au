@@ -27762,8 +27762,11 @@ For clarity, the conceptual model is broken up into use cases:</p>
 
 <CommonElement name="DomainScoreSDTNType" type="true" dm="true">
 	<Item>
-		<Element>DomainScoreType</Element>
+		<Element>DomainScoreSDTNType</Element>
 		<Characteristics>O</Characteristics>
+		<Description>
+			<p>NAPLAN Domain Score container for Student Data Transfer Note, in which all elements are optional.</p>
+		</Description>
 	</Item>
 	
 	<Item>
