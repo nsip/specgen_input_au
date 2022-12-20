@@ -28427,7 +28427,7 @@ For clarity, the conceptual model is broken up into use cases:</p>
     <Description>
       <p>Gross amount to be billed, including any tax. Can be credit (e.g. for family credit notes, reimbursements, rebates).</p>
     </Description>
-    <Type ref="CommonTypes" name="MonetaryAmountType"></Type>
+    <Type ref="CommonTypes" name="MonetaryAmountType" complex="extension"></Type>
   </Item>
   
   <Item>
