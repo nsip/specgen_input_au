@@ -35768,7 +35768,7 @@ For clarity, the conceptual model is broken up into use cases:</p>
       <p>Overall score received in the NAP test. Contents are not populated if this is an empty object
 	  (sanctioned abandonment or refusal).</p>
     </Description>
-	<Type ref="CommonTypes" name="DomainScoreSTDNType" />
+	<Type ref="CommonTypes" name="DomainScoreSDTNType" />
   </Item>
   <Item>
     <Element>TestLevel</Element>
