@@ -3578,6 +3578,7 @@ In addition, if the payload contains the RefId/UUID only, the consumer must assu
     </Description>
      <Type ref="CommonTypes" name="SchoolYearType"></Type>
   </Item>
+  <!-- NN 20211221 refactor type -->
   <Item>
     <Element>PictureSource</Element>
 
@@ -3588,17 +3589,7 @@ In addition, if the payload contains the RefId/UUID only, the consumer must assu
         This element defines the picture. If the Type attribute is URL, this is the location of the picture in <a href="References.html#JPEG">[JPEG]</a> format; if Type is JPEG, this is the <a href="References.html#JPEG">[JPEG]</a> image data encoded using the Base64 Content-Transfer-Encoding defined in Section 6.8 of <a href="References.html#RFC2045">[RFC 2045]</a>.
       </p>
     </Description>
-    <Type ref="CommonTypes" name="URIOrBinaryType" />
-  </Item>
-  <Item>
-
-    <Attribute>Type</Attribute>
-    <Characteristics>M</Characteristics>
-	<privacyRating>Medium</privacyRating>
-    <Description>
-      <p>The way the picture is specified.</p>
-    </Description>
-    <Type ref="CodeSets" name="AUCodeSetsPictureSourceType"></Type>
+    <Type ref="CommonTypes" name="PictureSourceType" />
   </Item>
   <Item>
     <Element>OKToPublish</Element>
@@ -4438,6 +4429,7 @@ In addition, if the payload contains the RefId/UUID only, the consumer must assu
 		<Type name="xs:decimal" />
 	</Item>
 	
+	<!-- NN 20211221 refactored type -->
 	<Item>
 		<Element>Evaluation</Element>
 		<Characteristics>O</Characteristics>
@@ -4445,34 +4437,9 @@ In addition, if the payload contains the RefId/UUID only, the consumer must assu
 		<Description>
 			<p>Field for non-numeric types of grading and evaluation such as "narrative."</p>
 		</Description>
+		<Type ref="CommonTypes" name="ActivityEvaluationType" />
 	</Item>
 	
-	<Item>
-		<Attribute>EvaluationType</Attribute>
-		<Characteristics>M</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-			<p>A qualifier for what type of evaluation this is. Valid values are "Inline" and "RefId". Inline values are contained in the optional Description element, RefIds are contained in the AssessmentRefId element.</p>
-		</Description>
-		<Values>
-			<Value>
-				<Code>Inline</Code>
-			</Value>
-			<Value>
-				<Code>RefId</Code>
-			</Value>
-		</Values>
-	</Item>
-	
-	<Item>
-		<Element>/Description</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-			<p>A free text description of the evaluation to be used for this activity</p>
-		</Description>
-		<Type name="xs:string" />
-	</Item>
 	
 	<Item>
 		<Element>LearningResources</Element>
@@ -5295,6 +5262,7 @@ In addition, if the payload contains the RefId/UUID only, the consumer must assu
     <ItemExample>Total Enrollment</ItemExample>
     <ItemExample>Diploma Recipients</ItemExample>
   </Item>
+  <!-- NN 20221221 refactored type -->
   <Item>
     <Element>CalculationRule</Element>
     <Characteristics>O</Characteristics>
@@ -5302,28 +5270,9 @@ In addition, if the payload contains the RefId/UUID only, the consumer must assu
     <Description>
       <p>Rule for calculating the aggregate statistic</p>
     </Description>
-    <Type name="xs:string"></Type>
+     <Type ref="CommonTypes" name="CalculationRuleType"></Type>
   </Item>
-  <Item>
-    <Attribute>Type</Attribute>
-    <Characteristics>M</Characteristics>
-	<privacyRating>Low</privacyRating>
-    <Description></Description>
-    <Values>
-      <Value>
-        <Code>Description</Code>
-      </Value>
-      <Value>
-        <Code>Formula</Code>
-      </Value>
-      <Value>
-        <Code>URL</Code>
-      </Value>
-      <Value>
-        <Code>Other</Code>
-      </Value>
-    </Values>
-  </Item>
+
   <Item>
     <Element>ApprovalDate</Element>
     <Characteristics>O</Characteristics>
@@ -14016,6 +13965,7 @@ RATIONALE: History is essential for an informed citizenry and has always been a 
     <Type ref="CommonTypes" name="ContactsType"></Type>
   </Item>
   
+  <!-- NN 20221221 refactored type -->
   <Item> 
     <Element>Location</Element>
 
@@ -14024,17 +13974,7 @@ RATIONALE: History is essential for an informed citizenry and has always been a 
     <Description>
       <p>Description of location of resource, i.e. location in library or URL, community resource, outside resource supplier.</p>
     </Description>
-    <Type name="xs:string"></Type>
-  </Item>
-  <Item>
-
-    <Attribute>ReferenceType</Attribute>
-    <Characteristics>M</Characteristics>
-	<privacyRating>Low</privacyRating>
-    <Description>
-      <p>A qualifying attribute for the Location payload. If ReferenceType is "URI", the payload contains a web address where the resource can be found.</p>
-    </Description>
-    <Type name="xs:token"></Type>
+    <Type ref="CommonTypes" name="LearningResourceLocationType"></Type>
   </Item>
   
   
@@ -28482,38 +28422,16 @@ For clarity, the conceptual model is broken up into use cases:</p>
 		</Description>
 		<Type name="xs:date" />
 	</Item>
+	<!-- NN 20221221 refactored type -->
 	<Item>
 		<Element>Duration</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
 			<p>Time required to complete the activity.</p>
 		</Description>
-		<Type name="xs:unsignedInt" />
+		<Type ref="CommonTypes" name="DurationType"></Type>
 	</Item>
-		<Item>
-		<Attribute>Units</Attribute>
-		<Characteristics>M</Characteristics>
-		<Description>
-			<p>Unit of time of the Duration value. </p>
-		</Description>
-		<Values>
-			<Value>
-				<Code>week</Code>
-			</Value>
-			<Value>
-				<Code>day</Code>
-			</Value>
-			<Value>
-				<Code>hour</Code>
-			</Value>
-			<Value>
-				<Code>minute</Code>
-			</Value>
-			<Value>
-				<Code>second</Code>
-			</Value>
-		</Values>
-	</Item>
+
 	
 	<Item>
 		<Element>StartDate</Element>
@@ -35983,6 +35901,159 @@ For clarity, the conceptual model is broken up into use cases:</p>
 			</Item>
 </CommonElement>
 
+<!-- NN 20221221 -->
+<CommonElement type="true" name="PictureSourceType" dm="true">
+ <Item>
+    <Element>PictureSourceType</Element>
+
+    <Description>
+      <p>
+        This element defines the picture. If the Type attribute is URL, this is the location of the picture in <a href="References.html#JPEG">[JPEG]</a> format; if Type is JPEG, this is the <a href="References.html#JPEG">[JPEG]</a> image data encoded using the Base64 Content-Transfer-Encoding defined in Section 6.8 of <a href="References.html#RFC2045">[RFC 2045]</a>.
+      </p>
+    </Description>
+    <Type ref="CommonTypes" name="URIOrBinaryType" />
+  </Item>
+  <Item>
+
+    <Attribute>Type</Attribute>
+    <Characteristics>M</Characteristics>
+	<privacyRating>Medium</privacyRating>
+    <Description>
+      <p>The way the picture is specified.</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsPictureSourceType"></Type>
+  </Item>
+</CommonElement>
+
+<!-- NN 20221221 -->
+<CommonElement type="true" name="ActivityEvaluationType" dm="true">
+	<Item>
+		<Element>ActivityEvaluationType</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>Field for non-numeric types of grading and evaluation such as "narrative."</p>
+		</Description>
+	</Item>
+	
+	<Item>
+		<Attribute>EvaluationType</Attribute>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>A qualifier for what type of evaluation this is. Valid values are "Inline" and "RefId". Inline values are contained in the optional Description element, RefIds are contained in the AssessmentRefId element.</p>
+		</Description>
+		<Values>
+			<Value>
+				<Code>Inline</Code>
+			</Value>
+			<Value>
+				<Code>RefId</Code>
+			</Value>
+		</Values>
+	</Item>
+	
+	<Item>
+		<Element>Description</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>A free text description of the evaluation to be used for this activity</p>
+		</Description>
+		<Type name="xs:string" />
+	</Item>
+</CommonElement>
+
+<!-- NN 20221221 -->
+<CommonElement type="true" name="LearningResourceLocationType" dm="true">
+  <Item> 
+    <Element>LearningResourceLocationType</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Description of location of resource, i.e. location in library or URL, community resource, outside resource supplier.</p>
+    </Description>
+    <Type name="xs:string"></Type>
+  </Item>
+  <Item>
+
+    <Attribute>ReferenceType</Attribute>
+    <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>A qualifying attribute for the Location payload. If ReferenceType is "URI", the payload contains a web address where the resource can be found.</p>
+    </Description>
+    <Type name="xs:token"></Type>
+  </Item>
+ </CommonElement>
+ 
+<!-- NN 20221221 -->
+<CommonElement type="true" name="DurationType" dm="true">
+  	<Item>
+		<Element>DurationType</Element>
+		<Description>
+			<p>Time required to complete the activity.</p>
+		</Description>
+		<Type name="xs:unsignedInt" />
+	</Item>
+		<Item>
+		<Attribute>Units</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Unit of time of the Duration value. </p>
+		</Description>
+		<Values>
+			<Value>
+				<Code>week</Code>
+			</Value>
+			<Value>
+				<Code>day</Code>
+			</Value>
+			<Value>
+				<Code>hour</Code>
+			</Value>
+			<Value>
+				<Code>minute</Code>
+			</Value>
+			<Value>
+				<Code>second</Code>
+			</Value>
+		</Values>
+	</Item>
+ </CommonElement>
+	
+<!-- NN 20221221 -->
+<CommonElement type="true" name="CalculationRuleType" dm="true">
+	 <Item>
+    <Element>CalculationRuleType</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Rule for calculating the aggregate statistic</p>
+    </Description>
+    <Type name="xs:string"></Type>
+  </Item>
+  <Item>
+    <Attribute>Type</Attribute>
+    <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description></Description>
+    <Values>
+      <Value>
+        <Code>Description</Code>
+      </Value>
+      <Value>
+        <Code>Formula</Code>
+      </Value>
+      <Value>
+        <Code>URL</Code>
+      </Value>
+      <Value>
+        <Code>Other</Code>
+      </Value>
+    </Values>
+  </Item>
+ </CommonElement>
 
 </IncludeGroup>
 

@@ -298,6 +298,7 @@
   <DepartureSchool>
     <ACARAId>30000</ACARAId>
 	<Name>Lincoln Secondary College</Name>
+	<City>Lincoln</City>
   <SchoolContactList>
     <SchoolContact>
       <PublishInDirectory>Y</PublishInDirectory>
