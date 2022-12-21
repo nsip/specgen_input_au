@@ -508,7 +508,7 @@
 		<CommonElement type="true" name='TypedIdRefType'>
 			<Item>
 				<Element>TypedIdRefType</Element>
-				<Type name='RefIdType'/>
+				<Type name='RefIdType' ref="CommonTypes"/>
 				<Description>A typed reference to a RefId.</Description>
 			</Item>
 			<Item>
