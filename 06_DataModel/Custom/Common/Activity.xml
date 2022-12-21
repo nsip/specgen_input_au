@@ -183,6 +183,7 @@
 		<Type name="xs:decimal"/>
 	</Item>
 	
+	<!-- NN 20211221 refactored type -->
 	<Item>
 		<Element>Evaluation</Element>
 		<Characteristics>O</Characteristics>
@@ -190,34 +191,9 @@
 		<Description>
 			<p>Field for non-numeric types of grading and evaluation such as "narrative."</p>
 		</Description>
+		<Type ref="CommonTypes" name="ActivityEvaluationType"/>
 	</Item>
 	
-	<Item>
-		<Attribute>EvaluationType</Attribute>
-		<Characteristics>M</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-			<p>A qualifier for what type of evaluation this is. Valid values are "Inline" and "RefId". Inline values are contained in the optional Description element, RefIds are contained in the AssessmentRefId element.</p>
-		</Description>
-		<Values>
-			<Value>
-				<Code>Inline</Code>
-			</Value>
-			<Value>
-				<Code>RefId</Code>
-			</Value>
-		</Values>
-	</Item>
-	
-	<Item>
-		<Element>/Description</Element>
-		<Characteristics>O</Characteristics>
-		<privacyRating>Low</privacyRating>
-		<Description>
-			<p>A free text description of the evaluation to be used for this activity</p>
-		</Description>
-		<Type name="xs:string"/>
-	</Item>
 	
 	<Item>
 		<Element>LearningResources</Element>

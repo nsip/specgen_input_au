@@ -35,6 +35,7 @@
     <ItemExample>Total Enrollment</ItemExample>
     <ItemExample>Diploma Recipients</ItemExample>
   </Item>
+  <!-- NN 20221221 refactored type -->
   <Item>
     <Element>CalculationRule</Element>
     <Characteristics>O</Characteristics>
@@ -42,28 +43,9 @@
     <Description>
       <p>Rule for calculating the aggregate statistic</p>
     </Description>
-    <Type name="xs:string"></Type>
+     <Type ref="CommonTypes" name="CalculationRuleType"></Type>
   </Item>
-  <Item>
-    <Attribute>Type</Attribute>
-    <Characteristics>M</Characteristics>
-	<privacyRating>Low</privacyRating>
-    <Description></Description>
-    <Values>
-      <Value>
-        <Code>Description</Code>
-      </Value>
-      <Value>
-        <Code>Formula</Code>
-      </Value>
-      <Value>
-        <Code>URL</Code>
-      </Value>
-      <Value>
-        <Code>Other</Code>
-      </Value>
-    </Values>
-  </Item>
+
   <Item>
     <Element>ApprovalDate</Element>
     <Characteristics>O</Characteristics>

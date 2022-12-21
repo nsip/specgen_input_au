@@ -30822,6 +30822,17 @@ For clarity, the conceptual model is broken up into use cases:</p>
 		<Element>IdentityAssertion</Element>
 		<Characteristics>MR</Characteristics>
 		<Description>
+			<p>The identification string for this user</p>
+		</Description>
+		<Type ref="CommonTypes" name="IdentityAssertionType" />
+	</Item>
+</CommonElement>
+<!-- NN 20221221 -->
+<CommonElement name="IdentityAssertionType" type="true" dm="true">
+	<Item>
+		<Element>IdentityAssertionType</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
 			<p>The identification string for this user.</p>
 		</Description>
 		<Type name="xs:normalizedString" />
@@ -36480,6 +36491,21 @@ For clarity, the conceptual model is broken up into use cases:</p>
 <Description>A reference to a RefId.</Description>
 			</Item>
 		</CommonElement>
+
+		<!-- NN 20221221 Intended currently only for JSON Schema compatibility, not injected into SpecGen source -->
+		<CommonElement type="true" name="TypedIdRefType">
+			<Item>
+				<Element>TypedIdRefType</Element>
+				<Type name="RefIdType" ref="CommonTypes" />
+				<Description>A typed reference to a RefId.</Description>
+			</Item>
+			<Item>
+				<Attribute>SIF_RefObject</Attribute>
+				<Type name="xs:token" />
+				<Description>The type of object that this is a reference to.</Description>
+			</Item>
+		</CommonElement>
+
 
 		<CommonElement type="true" name="VersionType">
 			<Item>
