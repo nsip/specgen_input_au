@@ -505,10 +505,10 @@
 		</CommonElement>
 
 		<!-- NN 20221221 Intended currently only for JSON Schema compatibility, not injected into SpecGen source -->
-		<CommonElement type="true" name='TypedIdRefType' complex="extension">
+		<CommonElement type="true" name='TypedIdRefType'>
 			<Item>
 				<Element>TypedIdRefType</Element>
-				<Type name='RefIdType' ref="CommonTypes"/>
+				<Type name='RefIdType' ref="CommonTypes" complex="extension"/>
 				<Description>A typed reference to a RefId.</Description>
 			</Item>
 			<Item>
