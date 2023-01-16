@@ -3135,9 +3135,9 @@ In addition, if the payload contains the RefId/UUID only, the consumer must assu
     <Description>
       <p>The highest level of education completed by the contact person.</p>
     </Description>
-	<!-- NN 20221216 indirection of type to codeset is confusing JSON Schema generation
-    <Type ref="CommonTypes" name="EducationalLevelType"></Type> -->
-	<Type ref="CodeSets" name="AUCodeSetsSchoolEducationLevelTypeType" />
+	<!-- NN 20221216 indirection of type to codeset is confusing JSON Schema generation-->
+    <Type ref="CommonTypes" name="EducationalLevelType"></Type> 
+	<!--<Type ref="CodeSets" name="AUCodeSetsSchoolEducationLevelTypeType"/>-->
   </Item>
   <Item>
     <Element>NonSchoolEducation</Element>
@@ -31096,9 +31096,9 @@ For clarity, the conceptual model is broken up into use cases:</p>
 		<Description>
 			<p>Indicates whether or not this LEA contact's information should be published in a directory of LEA information.</p>
 		</Description>
-		<!-- NN 20221216 Avoid type aliased to codeset, it compromises JSON Schema generation 
-		<Type ref="CommonTypes" name="PublishInDirectoryType"/> -->
-		<Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
+		<!-- NN 20221216 Avoid type aliased to codeset, it compromises JSON Schema generation -->
+		<Type ref="CommonTypes" name="PublishInDirectoryType" />
+		<!--<Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>-->
 	</Item>
 	<Item>
 		<Element>ContactInfo</Element>
@@ -32734,8 +32734,8 @@ For clarity, the conceptual model is broken up into use cases:</p>
 		<Description>
 			<p>Indicates whether or not this school contact's information should be published in a directory of school information.</p>
 		</Description>
-		<!-- NN 20221216 Avoid type aliased to codeset, it compromises JSON Schema generation 
-		<Type ref="CommonTypes" name="PublishInDirectoryType"/> -->
+		<!-- NN 20221216 Avoid type aliased to codeset, it compromises JSON Schema generation  -->
+		<Type ref="CommonTypes" name="PublishInDirectoryType" /> 
 	</Item>
 	<Item>
 		<Element>ContactInfo</Element>
@@ -32789,7 +32789,7 @@ For clarity, the conceptual model is broken up into use cases:</p>
 		</SchoolContactList>
 	</xhtml:Example>
 </CommonElement>
-<!-- NN 20221216 Avoid type aliased to codeset, it compromises JSON Schema generation 
+<!-- NN 20221216 Avoid type aliased to codeset, it compromises JSON Schema generation -->
 <CommonElement name="PublishInDirectoryType" type="true" dm="true">
 	<Intro>
 		<p>
@@ -32799,17 +32799,17 @@ For clarity, the conceptual model is broken up into use cases:</p>
 	</Intro>
 	<Item>
 		<Element>PublishInDirectoryType</Element>
-		<Characteristics/>
+		<Characteristics />
 		<Description>
 			<p>Indicates whether or not information should be published in a directory.</p>
 		</Description>
-		<Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"/>
+		<Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType" />
 	</Item>
 	<xhtml:Example xmlns="" name="PublishInDirectory Example">
 		<PublishInDirectory>Y</PublishInDirectory>
 	</xhtml:Example>
 </CommonElement>
--->
+
 <CommonElement name="ContactInfoType" type="true" dm="true">
 	<Item>
 		<Element>ContactInfoType</Element>
@@ -34253,20 +34253,20 @@ For clarity, the conceptual model is broken up into use cases:</p>
 		</Relationship>
 	</xhtml:Example>
 </CommonElement>
-<!-- NN 20221216 indication of type to codeset is confusing JSON Schema generation, avoiding this
+<!-- NN 20221216 indication of type to codeset is confusing JSON Schema generation, avoiding this -->
 <CommonElement name="EducationalLevelType" type="true" dm="true">
 	<Item>
 		<Element>EducationalLevelType</Element>
 		<Description>
 			<p>A code representing the highest level of education completed by a person.</p>
 		</Description>
-		<Type ref="CodeSets" name="AUCodeSetsSchoolEducationLevelTypeType"/>
+		<Type ref="CodeSets" name="AUCodeSetsSchoolEducationLevelTypeType" />
 	</Item>
 	<xhtml:Example xmlns="" name="EducationLevel Example">
 		<EducationalLevel>3</EducationalLevel>
 	</xhtml:Example>
 </CommonElement>
--->
+
 <CommonElement name="GraduationDateType" type="true" dm="true">
 	<Item>
 		<Element>GraduationDateType</Element>
