@@ -345,10 +345,12 @@
   <PreviousSchool>
     <ACARAId>30001</ACARAId>
 	<Name>Lincoln Primary School</Name>
+	<City>Lincolnville</City>
   </PreviousSchool> 
   <PreviousSchool>
     <ACARAId>30002</ACARAId>
 	<Name>Buchanan Primary School</Name>
+	<City>Lincolnville</City>
   </PreviousSchool> 
   </PreviousSchoolList>
   <NAPLANScoreList>
