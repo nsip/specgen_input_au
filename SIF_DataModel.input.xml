@@ -3135,9 +3135,7 @@ In addition, if the payload contains the RefId/UUID only, the consumer must assu
     <Description>
       <p>The highest level of education completed by the contact person.</p>
     </Description>
-	<!-- NN 20221216 indirection of type to codeset is confusing JSON Schema generation-->
     <Type ref="CommonTypes" name="EducationalLevelType"></Type> 
-	<!--<Type ref="CodeSets" name="AUCodeSetsSchoolEducationLevelTypeType"/>-->
   </Item>
   <Item>
     <Element>NonSchoolEducation</Element>
@@ -4469,7 +4467,7 @@ In addition, if the payload contains the RefId/UUID only, the consumer must assu
 		<Type ref="CommonTypes" name="SIF_ExtendedElementsType" />
 	</Item>
 	<xhtml:Example name="Activity - Example 1" xmlns="">
-		<Activity RefId="C27E1FCF-C163-485F-BEF0-F36F18A0493A" xml:lang="en">
+		<Activity RefId="C27E1FCF-C163-485F-BEF0-F36F18A0493A">
 			<Title>Shakespeare Essay - Much Ado About Nothing</Title>
 			<Preamble>This is a very funny comedy - students should have passing familiarity with Shakespeare</Preamble>
 			<LearningStandards>
@@ -4498,7 +4496,7 @@ In addition, if the payload contains the RefId/UUID only, the consumer must assu
 		</Activity>
 	</xhtml:Example>
 	<xhtml:Example name="Activity - Example 2" xmlns="">
-		<Activity RefId="C27E1FCF-C163-485F-BEF0-F36F18A0493A" xml:lang="en">
+		<Activity RefId="C27E1FCF-C163-485F-BEF0-F36F18A0493A">
 			<Title>Shakespeare Essay - Much Ado About Nothing</Title>
 			<Preamble>This is a very funny comedy - students should have passing familiarity with Shakespeare</Preamble>
 			<SoftwareRequirementList>
@@ -18035,10 +18033,12 @@ RATIONALE: History is essential for an informed citizenry and has always been a 
   <PreviousSchool>
     <ACARAId>30001</ACARAId>
 	<Name>Lincoln Primary School</Name>
+	<City>Lincolnville</City>
   </PreviousSchool> 
   <PreviousSchool>
     <ACARAId>30002</ACARAId>
 	<Name>Buchanan Primary School</Name>
+	<City>Lincolnville</City>
   </PreviousSchool> 
   </PreviousSchoolList>
   <NAPLANScoreList>
@@ -31096,9 +31096,7 @@ For clarity, the conceptual model is broken up into use cases:</p>
 		<Description>
 			<p>Indicates whether or not this LEA contact's information should be published in a directory of LEA information.</p>
 		</Description>
-		<!-- NN 20221216 Avoid type aliased to codeset, it compromises JSON Schema generation -->
 		<Type ref="CommonTypes" name="PublishInDirectoryType" />
-		<!--<Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>-->
 	</Item>
 	<Item>
 		<Element>ContactInfo</Element>
@@ -32734,7 +32732,6 @@ For clarity, the conceptual model is broken up into use cases:</p>
 		<Description>
 			<p>Indicates whether or not this school contact's information should be published in a directory of school information.</p>
 		</Description>
-		<!-- NN 20221216 Avoid type aliased to codeset, it compromises JSON Schema generation  -->
 		<Type ref="CommonTypes" name="PublishInDirectoryType" /> 
 	</Item>
 	<Item>
@@ -32789,7 +32786,6 @@ For clarity, the conceptual model is broken up into use cases:</p>
 		</SchoolContactList>
 	</xhtml:Example>
 </CommonElement>
-<!-- NN 20221216 Avoid type aliased to codeset, it compromises JSON Schema generation -->
 <CommonElement name="PublishInDirectoryType" type="true" dm="true">
 	<Intro>
 		<p>
@@ -34253,7 +34249,6 @@ For clarity, the conceptual model is broken up into use cases:</p>
 		</Relationship>
 	</xhtml:Example>
 </CommonElement>
-<!-- NN 20221216 indication of type to codeset is confusing JSON Schema generation, avoiding this -->
 <CommonElement name="EducationalLevelType" type="true" dm="true">
 	<Item>
 		<Element>EducationalLevelType</Element>
