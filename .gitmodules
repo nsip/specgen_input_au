@@ -1,3 +1,6 @@
 [submodule "specgen_input_common"]
 	path = specgen_input_common
 	url = https://github.com/Access4Learning/specgen_input_common.git
+[submodule "specgen_input_infra"]
+	path = specgen_input_infra
+	url = https://github.com/Access4Learning/specgen_input_infra.git
