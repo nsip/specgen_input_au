@@ -167,48 +167,81 @@
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 		
+		<!-- NN 20221216 dmToJsonSchemaCreateStrict and dmToJsonSchemaUpdateStrict comply with OpenAPI 3.0
+		dmToJsonSchemaCreate and dmToJsonSchemaUpdate generate full JSON Schema, and are thus only
+		compliant with OpenAPI 3.1. (They only differ in their parameters currently.)  -->
+		
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaCreateStrict.xsl</xsltInputFile>
+			<xsltOutputDir>JSON</xsltOutputDir>
+			<xsltOutputFile>Full/jsonSchema_OpenAPI3.0_Create_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdateStrict.xsl</xsltInputFile>
+			<xsltOutputDir>JSON</xsltOutputDir>
+			<xsltOutputFile>Full/jsonSchema_OpenAPI3.0_Update_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToJsonSchemaCreate.xsl</xsltInputFile>
 			<xsltOutputDir>JSON</xsltOutputDir>
-			<xsltOutputFile>Full/jsonSchemaCreate_AU.yaml</xsltOutputFile>
+			<xsltOutputFile>Full/jsonSchema_OpenAPI3.1_Create_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 		
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdate.xsl</xsltInputFile>
 			<xsltOutputDir>JSON</xsltOutputDir>
-			<xsltOutputFile>Full/jsonSchemaUpdate_AU.yaml</xsltOutputFile>
+			<xsltOutputFile>Full/jsonSchema_OpenAPI3.1_Update_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 
 		<xsltTransformation>
-			<xsltInputFile>98_Xslt\dmToJsonSchemaCreateStrict.xsl</xsltInputFile>
+			<xsltInputFile>98_Xslt\dmToOpenAPI30.xsl</xsltInputFile>
+			<xsltParamList>
+				<xsltParam>
+					<xsltName>includeAllHeaders</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAdminDirectives</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>omitVersionInExamplesFileName</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+			</xsltParamList>
 			<xsltOutputDir>JSON</xsltOutputDir>
-			<xsltOutputFile>Full/jsonSchemaCreate-strict_AU.yaml</xsltOutputFile>
+			<xsltOutputFile>Full/OpenAPI3.0_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
-		</xsltTransformation>
-
+		</xsltTransformation>	
 
 		<xsltTransformation>
-			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdateStrict.xsl</xsltInputFile>
-			<xsltOutputDir>JSON</xsltOutputDir>
-			<xsltOutputFile>Full/jsonSchemaUpdate-strict_AU.yaml</xsltOutputFile>
-			<yamlToJson>true</yamlToJson>
-		</xsltTransformation>
- 
-		<xsltTransformation>
-			<xsltInputFile>98_Xslt\dmToOpenAPI.xsl</xsltInputFile>
+			<xsltInputFile>98_Xslt\dmToOpenAPI31.xsl</xsltInputFile>
+			<xsltParamList>
+				<xsltParam>
+					<xsltName>includeAllHeaders</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAdminDirectives</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>omitVersionInExamplesFileName</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+			</xsltParamList>
 			<xsltOutputDir>JSON</xsltOutputDir>
 			<xsltOutputFile>Full/OpenAPI_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>	
-			
-		<xsltTransformation>
-			<xsltInputFile>98_Xslt\dmToExamplesSBP.xsl</xsltInputFile>
-			<xsltOutputDir>JSON\SBP</xsltOutputDir>
-			<xsltOutputFile>examples_AU.yaml</xsltOutputFile>
-			<yamlToJson>true</yamlToJson>
-		</xsltTransformation>
+
+		
 <!--- now run Use Cases -->		
 		<!-- SBP -->
 		<xsltTransformation>
@@ -225,7 +258,7 @@
 		</xsltTransformation>
 
 		<xsltTransformation>
-			<xsltInputFile>98_Xslt\dmToOpenAPI.xsl</xsltInputFile>
+			<xsltInputFile>98_Xslt\dmToOpenAPI30.xsl</xsltInputFile>
 			<xsltParamList>
 			<xsltParam>
 				<xsltName>sifObjectList</xsltName>
@@ -235,6 +268,47 @@
 				<xsltName>sifObjectGroupList</xsltName>
 				<xsltValue>'SIF AU Student Baseline Profile (SBP) and supporting objects'</xsltValue>
 			</xsltParam>
+				<xsltParam>
+					<xsltName>includeAllHeaders</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAdminDirectives</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>omitVersionInExamplesFileName</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+			</xsltParamList>
+			<xsltOutputDir>JSON\SBP</xsltOutputDir>
+			<xsltOutputFile>SBPAPI3.0_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToOpenAPI31.xsl</xsltInputFile>
+			<xsltParamList>
+			<xsltParam>
+				<xsltName>sifObjectList</xsltName>
+				<xsltValue>SchoolInfo,LEAInfo,StaffAssignment,StaffPersonal,StudentPersonal,StudentSchoolEnrollment,StudentContactPersonal,StudentContactRelationship,PersonPicture,Identity,PersonPrivacyObligationDocument</xsltValue>
+			</xsltParam>
+			<xsltParam>
+				<xsltName>sifObjectGroupList</xsltName>
+				<xsltValue>'SIF AU Student Baseline Profile (SBP) and supporting objects'</xsltValue>
+			</xsltParam>
+				<xsltParam>
+					<xsltName>includeAllHeaders</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAdminDirectives</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>omitVersionInExamplesFileName</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
 			</xsltParamList>
 			<xsltOutputDir>JSON\SBP</xsltOutputDir>
 			<xsltOutputFile>SBPAPI_AU.yaml</xsltOutputFile>
@@ -243,33 +317,33 @@
 		
 		<!-- These need to be either transformed or copied to the SBP directory -->
 		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaCreateStrict.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\SBP</xsltOutputDir>
+			<xsltOutputFile>jsonSchema_OpenAPI3.0_Create_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdateStrict.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\SBP</xsltOutputDir>
+			<xsltOutputFile>jsonSchema_OpenAPI3.0_Update_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+
+		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToJsonSchemaCreate.xsl</xsltInputFile>
 			<xsltOutputDir>JSON\SBP</xsltOutputDir>
-			<xsltOutputFile>jsonSchemaCreate_AU.yaml</xsltOutputFile>
+			<xsltOutputFile>jsonSchema_OpenAPI3.1_Create_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 		
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdate.xsl</xsltInputFile>
 			<xsltOutputDir>JSON\SBP</xsltOutputDir>
-			<xsltOutputFile>jsonSchemaUpdate_AU.yaml</xsltOutputFile>
+			<xsltOutputFile>jsonSchema_OpenAPI3.1_Update_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 
-		<xsltTransformation>
-			<xsltInputFile>98_Xslt\dmToJsonSchemaCreateStrict.xsl</xsltInputFile>
-			<xsltOutputDir>JSON\SBP</xsltOutputDir>
-			<xsltOutputFile>jsonSchemaCreate-strict_AU.yaml</xsltOutputFile>
-			<yamlToJson>true</yamlToJson>
-		</xsltTransformation>
-
-		<xsltTransformation>
-			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdateStrict.xsl</xsltInputFile>
-			<xsltOutputDir>JSON\SBP</xsltOutputDir>
-			<xsltOutputFile>jsonSchemaUpdate-strict_AU.yaml</xsltOutputFile>
-			<yamlToJson>true</yamlToJson>
-		</xsltTransformation>
-		
 		<!-- Attendance -->
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToExamples.xsl</xsltInputFile>
@@ -285,7 +359,7 @@
 		</xsltTransformation>
 		
 		<xsltTransformation>
-			<xsltInputFile>98_Xslt\dmToOpenAPI.xsl</xsltInputFile>
+			<xsltInputFile>98_Xslt\dmToOpenAPI30.xsl</xsltInputFile>
 						<xsltParamList>
 				<xsltParam>
 					<xsltName>sifObjectList</xsltName>
@@ -295,6 +369,47 @@
 					<xsltName>sifObjectGroupList</xsltName>
 					<xsltValue>'Student Attendance objects'</xsltValue>
 				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAllHeaders</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAdminDirectives</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>omitVersionInExamplesFileName</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+			</xsltParamList>
+			<xsltOutputDir>JSON\ATTEND</xsltOutputDir>
+			<xsltOutputFile>ATTENDAPI3.0_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToOpenAPI31.xsl</xsltInputFile>
+						<xsltParamList>
+				<xsltParam>
+					<xsltName>sifObjectList</xsltName>
+					<xsltValue>StudentAttendanceTimeList,StudentAttendanceSummary,StudentDailyAttendance,StudentPeriodAttendance,SessionInfo,CalendarDate,CalendarSummary</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>sifObjectGroupList</xsltName>
+					<xsltValue>'Student Attendance objects'</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAllHeaders</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAdminDirectives</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>omitVersionInExamplesFileName</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
 			</xsltParamList>
 			<xsltOutputDir>JSON\ATTEND</xsltOutputDir>
 			<xsltOutputFile>ATTENDAPI_AU.yaml</xsltOutputFile>
@@ -302,32 +417,33 @@
 		</xsltTransformation>
 		
 	 	<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaCreateStrict.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\ATTEND</xsltOutputDir>
+			<xsltOutputFile>jsonSchema_OpenAPI3.0_Create_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdateStrict.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\ATTEND</xsltOutputDir>
+			<xsltOutputFile>jsonSchema_OpenAPI3.0_Update_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+
+	 	<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToJsonSchemaCreate.xsl</xsltInputFile>
 			<xsltOutputDir>JSON\ATTEND</xsltOutputDir>
-			<xsltOutputFile>jsonSchemaCreate_AU.yaml</xsltOutputFile>
+			<xsltOutputFile>jsonSchema_OpenAPI3.1_Create_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 		
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdate.xsl</xsltInputFile>
 			<xsltOutputDir>JSON\ATTEND</xsltOutputDir>
-			<xsltOutputFile>jsonSchemaUpdate_AU.yaml</xsltOutputFile>
+			<xsltOutputFile>jsonSchema_OpenAPI3.1_Update_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 
-		<xsltTransformation>
-			<xsltInputFile>98_Xslt\dmToJsonSchemaCreateStrict.xsl</xsltInputFile>
-			<xsltOutputDir>JSON\ATTEND</xsltOutputDir>
-			<xsltOutputFile>jsonSchemaCreate-strict_AU.yaml</xsltOutputFile>
-			<yamlToJson>true</yamlToJson>
-		</xsltTransformation>
-
-		<xsltTransformation>
-			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdateStrict.xsl</xsltInputFile>
-			<xsltOutputDir>JSON\ATTEND</xsltOutputDir>
-			<xsltOutputFile>jsonSchemaUpdate-strict_AU.yaml</xsltOutputFile>
-			<yamlToJson>true</yamlToJson>
-		</xsltTransformation>
 		
 				<!-- Finance -->
 		<xsltTransformation>
@@ -344,7 +460,7 @@
 		</xsltTransformation>
 		
 		<xsltTransformation>
-			<xsltInputFile>98_Xslt\dmToOpenAPI.xsl</xsltInputFile>
+			<xsltInputFile>98_Xslt\dmToOpenAPI30.xsl</xsltInputFile>
 			<xsltParamList>
 				<xsltParam>
 					<xsltName>sifObjectList</xsltName>
@@ -354,6 +470,47 @@
 					<xsltName>sifObjectGroupList</xsltName>
 					<xsltValue>'Finance'</xsltValue>
 				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAllHeaders</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAdminDirectives</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>omitVersionInExamplesFileName</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+			</xsltParamList>
+			<xsltOutputDir>JSON\Finance</xsltOutputDir>
+			<xsltOutputFile>FinanceOpenAPI3.0_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToOpenAPI31.xsl</xsltInputFile>
+			<xsltParamList>
+				<xsltParam>
+					<xsltName>sifObjectList</xsltName>
+					<xsltValue>Invoice,FinancialAccount,ChargedLocationInfo,PaymentReceipt,PurchaseOrder,VendorInfo,Journal,Debtor</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>sifObjectGroupList</xsltName>
+					<xsltValue>'Finance'</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAllHeaders</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAdminDirectives</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>omitVersionInExamplesFileName</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
 			</xsltParamList>
 			<xsltOutputDir>JSON\Finance</xsltOutputDir>
 			<xsltOutputFile>FinanceOpenAPI_AU.yaml</xsltOutputFile>
@@ -361,32 +518,33 @@
 		</xsltTransformation>
 		
 	 	<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaCreateStrict.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\Finance</xsltOutputDir>
+			<xsltOutputFile>jsonSchema_OpenAPI3.0_Create_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdateStrict.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\Finance</xsltOutputDir>
+			<xsltOutputFile>jsonSchema_OpenAPI3.0_Update_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+	 	<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToJsonSchemaCreate.xsl</xsltInputFile>
 			<xsltOutputDir>JSON\Finance</xsltOutputDir>
-			<xsltOutputFile>jsonSchemaCreate_AU.yaml</xsltOutputFile>
+			<xsltOutputFile>jsonSchema_OpenAPI3.1_Create_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 		
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdate.xsl</xsltInputFile>
 			<xsltOutputDir>JSON\Finance</xsltOutputDir>
-			<xsltOutputFile>jsonSchemaUpdate_AU.yaml</xsltOutputFile>
+			<xsltOutputFile>jsonSchema_OpenAPI3.1_Update_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 
-		<xsltTransformation>
-			<xsltInputFile>98_Xslt\dmToJsonSchemaCreateStrict.xsl</xsltInputFile>
-			<xsltOutputDir>JSON\Finance</xsltOutputDir>
-			<xsltOutputFile>jsonSchemaCreate-strict_AU.yaml</xsltOutputFile>
-			<yamlToJson>true</yamlToJson>
-		</xsltTransformation>
-
-		<xsltTransformation>
-			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdateStrict.xsl</xsltInputFile>
-			<xsltOutputDir>JSON\Finance</xsltOutputDir>
-			<xsltOutputFile>jsonSchemaUpdate-strict_AU.yaml</xsltOutputFile>
-			<yamlToJson>true</yamlToJson>
-		</xsltTransformation>
 		
 						<!-- Activity -->
 		<xsltTransformation>
@@ -403,7 +561,7 @@
 		</xsltTransformation>
 		
 		<xsltTransformation>
-			<xsltInputFile>98_Xslt\dmToOpenAPI.xsl</xsltInputFile>
+			<xsltInputFile>98_Xslt\dmToOpenAPI30.xsl</xsltInputFile>
 			<xsltParamList>
 				<xsltParam>
 					<xsltName>sifObjectList</xsltName>
@@ -413,6 +571,47 @@
 					<xsltName>sifObjectGroupList</xsltName>
 					<xsltValue>'Activity'</xsltValue>
 				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAllHeaders</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAdminDirectives</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>omitVersionInExamplesFileName</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+			</xsltParamList>
+			<xsltOutputDir>JSON\Activity</xsltOutputDir>
+			<xsltOutputFile>ActivityOpenAPI3.0_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToOpenAPI31.xsl</xsltInputFile>
+			<xsltParamList>
+				<xsltParam>
+					<xsltName>sifObjectList</xsltName>
+					<xsltValue>Activity,SchoolPrograms,StudentActivityInfo,StudentActivityParticipation,StudentParticipation</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>sifObjectGroupList</xsltName>
+					<xsltValue>'Activity'</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAllHeaders</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAdminDirectives</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>omitVersionInExamplesFileName</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
 			</xsltParamList>
 			<xsltOutputDir>JSON\Activity</xsltOutputDir>
 			<xsltOutputFile>ActivityOpenAPI_AU.yaml</xsltOutputFile>
@@ -420,33 +619,33 @@
 		</xsltTransformation>
 		
 	 	<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaCreateStrict.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\Activity</xsltOutputDir>
+			<xsltOutputFile>jsonSchema_OpenAPI3.0_Create_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdateStrict.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\Activity</xsltOutputDir>
+			<xsltOutputFile>jsonSchema_OpenAPI3.0_Update_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+
+	 	<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToJsonSchemaCreate.xsl</xsltInputFile>
 			<xsltOutputDir>JSON\Activity</xsltOutputDir>
-			<xsltOutputFile>jsonSchemaCreate_AU.yaml</xsltOutputFile>
+			<xsltOutputFile>jsonSchema_OpenAPI3.1_Create_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 		
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdate.xsl</xsltInputFile>
 			<xsltOutputDir>JSON\Activity</xsltOutputDir>
-			<xsltOutputFile>jsonSchemaUpdate_AU.yaml</xsltOutputFile>
+			<xsltOutputFile>jsonSchema_OpenAPI3.1_Update_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 
-		<xsltTransformation>
-			<xsltInputFile>98_Xslt\dmToJsonSchemaCreateStrict.xsl</xsltInputFile>
-			<xsltOutputDir>JSON\Activity</xsltOutputDir>
-			<xsltOutputFile>jsonSchemaCreate-strict_AU.yaml</xsltOutputFile>
-			<yamlToJson>true</yamlToJson>
-		</xsltTransformation>
-
-		<xsltTransformation>
-			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdateStrict.xsl</xsltInputFile>
-			<xsltOutputDir>JSON\Activity</xsltOutputDir>
-			<xsltOutputFile>jsonSchemaUpdate-strict_AU.yaml</xsltOutputFile>
-			<yamlToJson>true</yamlToJson>
-		</xsltTransformation>
-		
 						<!-- AggregatedStatistics -->
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToExamples.xsl</xsltInputFile>
@@ -462,7 +661,7 @@
 		</xsltTransformation>
 		
 		<xsltTransformation>
-			<xsltInputFile>98_Xslt\dmToOpenAPI.xsl</xsltInputFile>
+			<xsltInputFile>98_Xslt\dmToOpenAPI30.xsl</xsltInputFile>
 			<xsltParamList>
 				<xsltParam>
 					<xsltName>sifObjectList</xsltName>
@@ -472,40 +671,81 @@
 					<xsltName>sifObjectGroupList</xsltName>
 					<xsltValue>'AggregatedStatistics'</xsltValue>
 				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAllHeaders</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAdminDirectives</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>omitVersionInExamplesFileName</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+			</xsltParamList>
+			<xsltOutputDir>JSON\AggregatedStatistics</xsltOutputDir>
+			<xsltOutputFile>AggregatedStatisticsOpenAPI3.0_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToOpenAPI31.xsl</xsltInputFile>
+			<xsltParamList>
+				<xsltParam>
+					<xsltName>sifObjectList</xsltName>
+					<xsltValue>AggregateCharacteristicInfo,AggregateStatisticFact,AggregateStatisticInfo</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>sifObjectGroupList</xsltName>
+					<xsltValue>'AggregatedStatistics'</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAllHeaders</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAdminDirectives</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>omitVersionInExamplesFileName</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
 			</xsltParamList>
 			<xsltOutputDir>JSON\AggregatedStatistics</xsltOutputDir>
 			<xsltOutputFile>AggregatedStatisticsOpenAPI_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
+	
+	<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaCreateStrict.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\AggregatedStatistics</xsltOutputDir>
+			<xsltOutputFile>jsonSchema_OpenAPI3.0_Create_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
 		
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdateStrict.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\AggregatedStatistics</xsltOutputDir>
+			<xsltOutputFile>jsonSchema_OpenAPI3.0_Update_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+
 	 	<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToJsonSchemaCreate.xsl</xsltInputFile>
 			<xsltOutputDir>JSON\AggregatedStatistics</xsltOutputDir>
-			<xsltOutputFile>jsonSchemaCreate_AU.yaml</xsltOutputFile>
+			<xsltOutputFile>jsonSchema_OpenAPI3.1_Create_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 		
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdate.xsl</xsltInputFile>
 			<xsltOutputDir>JSON\AggregatedStatistics</xsltOutputDir>
-			<xsltOutputFile>jsonSchemaUpdate_AU.yaml</xsltOutputFile>
+			<xsltOutputFile>jsonSchema_OpenAPI3.1_Update_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 
-		<xsltTransformation>
-			<xsltInputFile>98_Xslt\dmToJsonSchemaCreateStrict.xsl</xsltInputFile>
-			<xsltOutputDir>JSON\AggregatedStatistics</xsltOutputDir>
-			<xsltOutputFile>jsonSchemaCreate-strict_AU.yaml</xsltOutputFile>
-			<yamlToJson>true</yamlToJson>
-		</xsltTransformation>
-
-		<xsltTransformation>
-			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdateStrict.xsl</xsltInputFile>
-			<xsltOutputDir>JSON\AggregatedStatistics</xsltOutputDir>
-			<xsltOutputFile>jsonSchemaUpdate-strict_AU.yaml</xsltOutputFile>
-			<yamlToJson>true</yamlToJson>
-		</xsltTransformation>
-		
 		<!-- AustralianGovernmentCollections -->
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToExamples.xsl</xsltInputFile>
@@ -521,7 +761,7 @@
 		</xsltTransformation>
 		
 		<xsltTransformation>
-			<xsltInputFile>98_Xslt\dmToOpenAPI.xsl</xsltInputFile>
+			<xsltInputFile>98_Xslt\dmToOpenAPI30.xsl</xsltInputFile>
 			<xsltParamList>
 				<xsltParam>
 					<xsltName>sifObjectList</xsltName>
@@ -531,6 +771,47 @@
 					<xsltName>sifObjectGroupList</xsltName>
 					<xsltValue>'AustralianGovernmentCollections'</xsltValue>
 				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAllHeaders</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAdminDirectives</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>omitVersionInExamplesFileName</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+			</xsltParamList>
+			<xsltOutputDir>JSON\AustralianGovernmentCollections</xsltOutputDir>
+			<xsltOutputFile>AustralianGovernmentCollectionsOpenAPI3.0_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToOpenAPI31.xsl</xsltInputFile>
+			<xsltParamList>
+				<xsltParam>
+					<xsltName>sifObjectList</xsltName>
+					<xsltValue>AddressCollection,CensusCollection,CollectionRound,CollectionStatus,FinancialQuestionnaireCollection,StudentAttendanceCollection,CollectionAcquittal,CollectionDeclaration</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>sifObjectGroupList</xsltName>
+					<xsltValue>'AustralianGovernmentCollections'</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAllHeaders</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAdminDirectives</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>omitVersionInExamplesFileName</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
 			</xsltParamList>
 			<xsltOutputDir>JSON\AustralianGovernmentCollections</xsltOutputDir>
 			<xsltOutputFile>AustralianGovernmentCollectionsOpenAPI_AU.yaml</xsltOutputFile>
@@ -538,33 +819,33 @@
 		</xsltTransformation>
 		
 	 	<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaCreateStrict.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\AustralianGovernmentCollections</xsltOutputDir>
+			<xsltOutputFile>jsonSchema_OpenAPI3.0_Create_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdateStrict.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\AustralianGovernmentCollections</xsltOutputDir>
+			<xsltOutputFile>jsonSchema_OpenAPI3.0_Update_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+
+	 	<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToJsonSchemaCreate.xsl</xsltInputFile>
 			<xsltOutputDir>JSON\AustralianGovernmentCollections</xsltOutputDir>
-			<xsltOutputFile>jsonSchemaCreate_AU.yaml</xsltOutputFile>
+			<xsltOutputFile>jsonSchema_OpenAPI3.1_Create_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 		
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdate.xsl</xsltInputFile>
 			<xsltOutputDir>JSON\AustralianGovernmentCollections</xsltOutputDir>
-			<xsltOutputFile>jsonSchemaUpdate_AU.yaml</xsltOutputFile>
+			<xsltOutputFile>jsonSchema_OpenAPI3.1_Update_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 
-		<xsltTransformation>
-			<xsltInputFile>98_Xslt\dmToJsonSchemaCreateStrict.xsl</xsltInputFile>
-			<xsltOutputDir>JSON\AustralianGovernmentCollections</xsltOutputDir>
-			<xsltOutputFile>jsonSchemaCreate-strict_AU.yaml</xsltOutputFile>
-			<yamlToJson>true</yamlToJson>
-		</xsltTransformation>
-
-		<xsltTransformation>
-			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdateStrict.xsl</xsltInputFile>
-			<xsltOutputDir>JSON\AustralianGovernmentCollections</xsltOutputDir>
-			<xsltOutputFile>jsonSchemaUpdate-strict_AU.yaml</xsltOutputFile>
-			<yamlToJson>true</yamlToJson>
-		</xsltTransformation>
-				
 		<!-- ClassroomAssessment -->
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToExamples.xsl</xsltInputFile>
@@ -580,7 +861,7 @@
 		</xsltTransformation>
 		
 		<xsltTransformation>
-			<xsltInputFile>98_Xslt\dmToOpenAPI.xsl</xsltInputFile>
+			<xsltInputFile>98_Xslt\dmToOpenAPI30.xsl</xsltInputFile>
 			<xsltParamList>
 				<xsltParam>
 					<xsltName>sifObjectList</xsltName>
@@ -590,6 +871,47 @@
 					<xsltName>sifObjectGroupList</xsltName>
 					<xsltValue>'ClassroomAssessment'</xsltValue>
 				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAllHeaders</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAdminDirectives</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>omitVersionInExamplesFileName</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+			</xsltParamList>
+			<xsltOutputDir>JSON\ClassroomAssessment</xsltOutputDir>
+			<xsltOutputFile>ClassroomAssessmentOpenAPI3.0_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToOpenAPI31.xsl</xsltInputFile>
+			<xsltParamList>
+				<xsltParam>
+					<xsltName>sifObjectList</xsltName>
+					<xsltValue>GradingAssignment,GradingAssignmentScore,MarkValueInfo,StudentGrade,StudentScoreJudgementAgainstStandard,TermInfo</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>sifObjectGroupList</xsltName>
+					<xsltValue>'ClassroomAssessment'</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAllHeaders</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAdminDirectives</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>omitVersionInExamplesFileName</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
 			</xsltParamList>
 			<xsltOutputDir>JSON\ClassroomAssessment</xsltOutputDir>
 			<xsltOutputFile>ClassroomAssessmentOpenAPI_AU.yaml</xsltOutputFile>
@@ -597,33 +919,33 @@
 		</xsltTransformation>
 		
 	 	<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaCreateStrict.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\ClassroomAssessment</xsltOutputDir>
+			<xsltOutputFile>jsonSchema_OpenAPI3.0_Create_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdateStrict.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\ClassroomAssessment</xsltOutputDir>
+			<xsltOutputFile>jsonSchema_OpenAPI3.0_Update_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+
+	 	<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToJsonSchemaCreate.xsl</xsltInputFile>
 			<xsltOutputDir>JSON\ClassroomAssessment</xsltOutputDir>
-			<xsltOutputFile>jsonSchemaCreate_AU.yaml</xsltOutputFile>
+			<xsltOutputFile>jsonSchema_OpenAPI3.1_Create_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 		
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdate.xsl</xsltInputFile>
 			<xsltOutputDir>JSON\ClassroomAssessment</xsltOutputDir>
-			<xsltOutputFile>jsonSchemaUpdate_AU.yaml</xsltOutputFile>
+			<xsltOutputFile>jsonSchema_OpenAPI3.1_Update_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 
-		<xsltTransformation>
-			<xsltInputFile>98_Xslt\dmToJsonSchemaCreateStrict.xsl</xsltInputFile>
-			<xsltOutputDir>JSON\ClassroomAssessment</xsltOutputDir>
-			<xsltOutputFile>jsonSchemaCreate-strict_AU.yaml</xsltOutputFile>
-			<yamlToJson>true</yamlToJson>
-		</xsltTransformation>
-
-		<xsltTransformation>
-			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdateStrict.xsl</xsltInputFile>
-			<xsltOutputDir>JSON\ClassroomAssessment</xsltOutputDir>
-			<xsltOutputFile>jsonSchemaUpdate-strict_AU.yaml</xsltOutputFile>
-			<yamlToJson>true</yamlToJson>
-		</xsltTransformation>
-		
 		<!-- LearningStandards -->
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToExamples.xsl</xsltInputFile>
@@ -639,7 +961,7 @@
 		</xsltTransformation>
 		
 		<xsltTransformation>
-			<xsltInputFile>98_Xslt\dmToOpenAPI.xsl</xsltInputFile>
+			<xsltInputFile>98_Xslt\dmToOpenAPI30.xsl</xsltInputFile>
 			<xsltParamList>
 				<xsltParam>
 					<xsltName>sifObjectList</xsltName>
@@ -649,6 +971,47 @@
 					<xsltName>sifObjectGroupList</xsltName>
 					<xsltValue>'LearningStandards'</xsltValue>
 				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAllHeaders</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAdminDirectives</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>omitVersionInExamplesFileName</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+			</xsltParamList>
+			<xsltOutputDir>JSON\LearningStandards</xsltOutputDir>
+			<xsltOutputFile>LearningStandardsOpenAPI3.0_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToOpenAPI31.xsl</xsltInputFile>
+			<xsltParamList>
+				<xsltParam>
+					<xsltName>sifObjectList</xsltName>
+					<xsltValue>LearningResource,LearningResourcePackage,LearningStandardDocument,LearningStandardItem</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>sifObjectGroupList</xsltName>
+					<xsltValue>'LearningStandards'</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAllHeaders</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAdminDirectives</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>omitVersionInExamplesFileName</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
 			</xsltParamList>
 			<xsltOutputDir>JSON\LearningStandards</xsltOutputDir>
 			<xsltOutputFile>LearningStandardsOpenAPI_AU.yaml</xsltOutputFile>
@@ -656,33 +1019,33 @@
 		</xsltTransformation>
 		
 	 	<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaCreateStrict.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\LearningStandards</xsltOutputDir>
+			<xsltOutputFile>jsonSchema_OpenAPI3.0_Create_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdateStrict.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\LearningStandards</xsltOutputDir>
+			<xsltOutputFile>jsonSchema_OpenAPI3.0_Update_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+
+	 	<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToJsonSchemaCreate.xsl</xsltInputFile>
 			<xsltOutputDir>JSON\LearningStandards</xsltOutputDir>
-			<xsltOutputFile>jsonSchemaCreate_AU.yaml</xsltOutputFile>
+			<xsltOutputFile>jsonSchema_OpenAPI3.1_Create_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 		
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdate.xsl</xsltInputFile>
 			<xsltOutputDir>JSON\LearningStandards</xsltOutputDir>
-			<xsltOutputFile>jsonSchemaUpdate_AU.yaml</xsltOutputFile>
+			<xsltOutputFile>jsonSchema_OpenAPI3.1_Update_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 
-		<xsltTransformation>
-			<xsltInputFile>98_Xslt\dmToJsonSchemaCreateStrict.xsl</xsltInputFile>
-			<xsltOutputDir>JSON\LearningStandards</xsltOutputDir>
-			<xsltOutputFile>jsonSchemaCreate-strict_AU.yaml</xsltOutputFile>
-			<yamlToJson>true</yamlToJson>
-		</xsltTransformation>
-
-		<xsltTransformation>
-			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdateStrict.xsl</xsltInputFile>
-			<xsltOutputDir>JSON\LearningStandards</xsltOutputDir>
-			<xsltOutputFile>jsonSchemaUpdate-strict_AU.yaml</xsltOutputFile>
-			<yamlToJson>true</yamlToJson>
-		</xsltTransformation>
-		
 		<!-- NAPLAN -->
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToExamples.xsl</xsltInputFile>
@@ -698,7 +1061,7 @@
 		</xsltTransformation>
 		
 		<xsltTransformation>
-			<xsltInputFile>98_Xslt\dmToOpenAPI.xsl</xsltInputFile>
+			<xsltInputFile>98_Xslt\dmToOpenAPI30.xsl</xsltInputFile>
 			<xsltParamList>
 				<xsltParam>
 					<xsltName>sifObjectList</xsltName>
@@ -708,6 +1071,47 @@
 					<xsltName>sifObjectGroupList</xsltName>
 					<xsltValue>'NAPLAN'</xsltValue>
 				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAllHeaders</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAdminDirectives</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>omitVersionInExamplesFileName</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+			</xsltParamList>
+			<xsltOutputDir>JSON\NAPLAN</xsltOutputDir>
+			<xsltOutputFile>NAPLANOpenAPI3.0_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToOpenAPI31.xsl</xsltInputFile>
+			<xsltParamList>
+				<xsltParam>
+					<xsltName>sifObjectList</xsltName>
+					<xsltValue>NAPCodeFrame,NAPEventStudentLink,NAPStudentResponseSet,NAPTest,NAPTestItem,NAPTestlet,NAPTestScoreSummary</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>sifObjectGroupList</xsltName>
+					<xsltValue>'NAPLAN'</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAllHeaders</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAdminDirectives</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>omitVersionInExamplesFileName</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
 			</xsltParamList>
 			<xsltOutputDir>JSON\NAPLAN</xsltOutputDir>
 			<xsltOutputFile>NAPLANOpenAPI_AU.yaml</xsltOutputFile>
@@ -715,30 +1119,30 @@
 		</xsltTransformation>
 		
 	 	<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaCreateStrict.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\NAPLAN</xsltOutputDir>
+			<xsltOutputFile>jsonSchema_OpenAPI3.0_Create_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdateStrict.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\NAPLAN</xsltOutputDir>
+			<xsltOutputFile>jsonSchema_OpenAPI3.0_Update_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+
+	 	<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToJsonSchemaCreate.xsl</xsltInputFile>
 			<xsltOutputDir>JSON\NAPLAN</xsltOutputDir>
-			<xsltOutputFile>jsonSchemaCreate_AU.yaml</xsltOutputFile>
+			<xsltOutputFile>jsonSchema_OpenAPI3.1_Create_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 		
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdate.xsl</xsltInputFile>
 			<xsltOutputDir>JSON\NAPLAN</xsltOutputDir>
-			<xsltOutputFile>jsonSchemaUpdate_AU.yaml</xsltOutputFile>
-			<yamlToJson>true</yamlToJson>
-		</xsltTransformation>
-
-		<xsltTransformation>
-			<xsltInputFile>98_Xslt\dmToJsonSchemaCreateStrict.xsl</xsltInputFile>
-			<xsltOutputDir>JSON\NAPLAN</xsltOutputDir>
-			<xsltOutputFile>jsonSchemaCreate-strict_AU.yaml</xsltOutputFile>
-			<yamlToJson>true</yamlToJson>
-		</xsltTransformation>
-
-		<xsltTransformation>
-			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdateStrict.xsl</xsltInputFile>
-			<xsltOutputDir>JSON\NAPLAN</xsltOutputDir>
-			<xsltOutputFile>jsonSchemaUpdate-strict_AU.yaml</xsltOutputFile>
+			<xsltOutputFile>jsonSchema_OpenAPI3.1_Update_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 
@@ -757,7 +1161,7 @@
 		</xsltTransformation>
 		
 		<xsltTransformation>
-			<xsltInputFile>98_Xslt\dmToOpenAPI.xsl</xsltInputFile>
+			<xsltInputFile>98_Xslt\dmToOpenAPI30.xsl</xsltInputFile>
 			<xsltParamList>
 				<xsltParam>
 					<xsltName>sifObjectList</xsltName>
@@ -767,6 +1171,47 @@
 					<xsltName>sifObjectGroupList</xsltName>
 					<xsltValue>'Timetabling and Resource Booking'</xsltValue>
 				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAllHeaders</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAdminDirectives</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>omitVersionInExamplesFileName</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+			</xsltParamList>
+			<xsltOutputDir>JSON\Timetabling</xsltOutputDir>
+			<xsltOutputFile>TimetablingOpenAPI3.0_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToOpenAPI31.xsl</xsltInputFile>
+			<xsltParamList>
+				<xsltParam>
+					<xsltName>sifObjectList</xsltName>
+					<xsltValue>EquipmentInfo,LibraryPatronStatus,ResourceBooking,RoomInfo,ScheduledActivity,SchoolCourseInfo,SectionInfo,StudentSectionEnrollment,TeachingGroup,TimeTable,TimeTableCell,TimeTableContainer,TimeTableSubject</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>sifObjectGroupList</xsltName>
+					<xsltValue>'Timetabling and Resource Booking'</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAllHeaders</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAdminDirectives</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>omitVersionInExamplesFileName</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
 			</xsltParamList>
 			<xsltOutputDir>JSON\Timetabling</xsltOutputDir>
 			<xsltOutputFile>TimetablingOpenAPI_AU.yaml</xsltOutputFile>
@@ -774,30 +1219,30 @@
 		</xsltTransformation>
 		
 	 	<xsltTransformation>
-			<xsltInputFile>98_Xslt\dmToJsonSchemaCreate.xsl</xsltInputFile>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaCreateStrict.xsl</xsltInputFile>
 			<xsltOutputDir>JSON\Timetabling</xsltOutputDir>
-			<xsltOutputFile>jsonSchemaCreate_AU.yaml</xsltOutputFile>
+			<xsltOutputFile>jsonSchema_OpenAPI3.0_Create_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 		
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdate.xsl</xsltInputFile>
 			<xsltOutputDir>JSON\Timetabling</xsltOutputDir>
-			<xsltOutputFile>jsonSchemaUpdate_AU.yaml</xsltOutputFile>
+			<xsltOutputFile>jsonSchema_OpenAPI3.0_Update_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 
-		<xsltTransformation>
-			<xsltInputFile>98_Xslt\dmToJsonSchemaCreateStrict.xsl</xsltInputFile>
+	 	<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaCreate.xsl</xsltInputFile>
 			<xsltOutputDir>JSON\Timetabling</xsltOutputDir>
-			<xsltOutputFile>jsonSchemaCreate-strict_AU.yaml</xsltOutputFile>
+			<xsltOutputFile>jsonSchema_OpenAPI3.1_Create_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
-
+		
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdateStrict.xsl</xsltInputFile>
 			<xsltOutputDir>JSON\Timetabling</xsltOutputDir>
-			<xsltOutputFile>jsonSchemaUpdate-strict_AU.yaml</xsltOutputFile>
+			<xsltOutputFile>jsonSchema_OpenAPI3.1_Update_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 
@@ -816,7 +1261,7 @@
 		</xsltTransformation>
 		
 		<xsltTransformation>
-			<xsltInputFile>98_Xslt\dmToOpenAPI.xsl</xsltInputFile>
+			<xsltInputFile>98_Xslt\dmToOpenAPI30.xsl</xsltInputFile>
 			<xsltParamList>
 				<xsltParam>
 					<xsltName>sifObjectList</xsltName>
@@ -826,6 +1271,47 @@
 					<xsltName>sifObjectGroupList</xsltName>
 					<xsltValue>'Wellbeing'</xsltValue>
 				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAllHeaders</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAdminDirectives</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>omitVersionInExamplesFileName</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+			</xsltParamList>
+			<xsltOutputDir>JSON\Wellbeing</xsltOutputDir>
+			<xsltOutputFile>WellbeingOpenAPI3.0_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToOpenAPI31.xsl</xsltInputFile>
+			<xsltParamList>
+				<xsltParam>
+					<xsltName>sifObjectList</xsltName>
+					<xsltValue>PersonalisedPlan,WellbeingAlert,WellbeingAppeal,WellbeingCharacteristic,WellbeingEvent,WellbeingPersonLink,WellbeingResponse,StudentDataTransferNote</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>sifObjectGroupList</xsltName>
+					<xsltValue>'Wellbeing'</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAllHeaders</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAdminDirectives</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+				<xsltParam>
+					<xsltName>omitVersionInExamplesFileName</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
 			</xsltParamList>
 			<xsltOutputDir>JSON\Wellbeing</xsltOutputDir>
 			<xsltOutputFile>WellbeingOpenAPI_AU.yaml</xsltOutputFile>
@@ -833,30 +1319,30 @@
 		</xsltTransformation>
 		
 	 	<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaCreateStrict.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\Wellbeing</xsltOutputDir>
+			<xsltOutputFile>jsonSchema_OpenAPI3.0_Create_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+		
+		<xsltTransformation>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdateStrict.xsl</xsltInputFile>
+			<xsltOutputDir>JSON\Wellbeing</xsltOutputDir>
+			<xsltOutputFile>jsonSchema_OpenAPI3.0_Update_AU.yaml</xsltOutputFile>
+			<yamlToJson>true</yamlToJson>
+		</xsltTransformation>
+
+	 	<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToJsonSchemaCreate.xsl</xsltInputFile>
 			<xsltOutputDir>JSON\Wellbeing</xsltOutputDir>
-			<xsltOutputFile>jsonSchemaCreate_AU.yaml</xsltOutputFile>
+			<xsltOutputFile>jsonSchema_OpenAPI3.1_Create_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 		
 		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdate.xsl</xsltInputFile>
 			<xsltOutputDir>JSON\Wellbeing</xsltOutputDir>
-			<xsltOutputFile>jsonSchemaUpdate_AU.yaml</xsltOutputFile>
-			<yamlToJson>true</yamlToJson>
-		</xsltTransformation>
-
-		<xsltTransformation>
-			<xsltInputFile>98_Xslt\dmToJsonSchemaCreateStrict.xsl</xsltInputFile>
-			<xsltOutputDir>JSON\Wellbeing</xsltOutputDir>
-			<xsltOutputFile>jsonSchemaCreate-strict_AU.yaml</xsltOutputFile>
-			<yamlToJson>true</yamlToJson>
-		</xsltTransformation>
-
-		<xsltTransformation>
-			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdateStrict.xsl</xsltInputFile>
-			<xsltOutputDir>JSON\Wellbeing</xsltOutputDir>
-			<xsltOutputFile>jsonSchemaUpdate-strict_AU.yaml</xsltOutputFile>
+			<xsltOutputFile>jsonSchema_OpenAPI3.1_Update_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 
@@ -893,30 +1379,16 @@
 		</xsltTransformation>
 		
 	 	<xsltTransformation>
-			<xsltInputFile>98_Xslt\dmToJsonSchemaCreate.xsl</xsltInputFile>
+			<xsltInputFile>98_Xslt\dmToJsonSchemaCreateStrict.xsl</xsltInputFile>
 			<xsltOutputDir>JSON\FutureDeprecation</xsltOutputDir>
 			<xsltOutputFile>jsonSchemaCreate_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 		
 		<xsltTransformation>
-			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdate.xsl</xsltInputFile>
-			<xsltOutputDir>JSON\FutureDeprecation</xsltOutputDir>
-			<xsltOutputFile>jsonSchemaUpdate_AU.yaml</xsltOutputFile>
-			<yamlToJson>true</yamlToJson>
-		</xsltTransformation>
-
-		<xsltTransformation>
-			<xsltInputFile>98_Xslt\dmToJsonSchemaCreateStrict.xsl</xsltInputFile>
-			<xsltOutputDir>JSON\FutureDeprecation</xsltOutputDir>
-			<xsltOutputFile>jsonSchemaCreate-strict_AU.yaml</xsltOutputFile>
-			<yamlToJson>true</yamlToJson>
-		</xsltTransformation>
-
-		<xsltTransformation>
 			<xsltInputFile>98_Xslt\dmToJsonSchemaUpdateStrict.xsl</xsltInputFile>
 			<xsltOutputDir>JSON\FutureDeprecation</xsltOutputDir>
-			<xsltOutputFile>jsonSchemaUpdate-strict_AU.yaml</xsltOutputFile>
+			<xsltOutputFile>jsonSchemaUpdate_AU.yaml</xsltOutputFile>
 			<yamlToJson>true</yamlToJson>
 		</xsltTransformation>
 -->

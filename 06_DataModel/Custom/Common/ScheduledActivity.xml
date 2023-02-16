@@ -52,7 +52,10 @@
     <Characteristics>O</Characteristics>
 	<privacyRating>Low</privacyRating>
     <Description>
-      <p>Day Id, for recurring cyclical days in a timetable: aligns to <code>TimeTableCell/DayId</code>.</p>
+      <p>Day Id, for recurring cyclical days in a timetable: aligns to <code>TimeTableCell/DayId</code>.
+      If <code>TimeTableChangeReasonList/TimeTableChangeReason</code> is given as <code>Mapping</code>
+      (i.e. the object is being published in order to align a cyclical timetable to a calendar date),
+      then the DayId must be provided, since that is what is being aligned to <code>ActivityDate</code>.</p>
     </Description>
     <Type ref="CommonTypes" name="LocalIdType"></Type>
   </Item>
@@ -354,6 +357,7 @@
 	   <TimeTableChangeNotes>GL</TimeTableChangeNotes>
      </TimeTableChangeReason>
    </TimeTableChangeReasonList>
+   <Override DateOfOverride="2020-02-02">Y</Override>
  </ScheduledActivity> 
 
   </xhtml:Example>
