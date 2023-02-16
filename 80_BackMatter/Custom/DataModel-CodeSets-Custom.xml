@@ -10151,4 +10151,38 @@
 		</Values>
 	</CodeSet>							
 
+	<CodeSet>
+		<Intro>
+			<p>Rationale for updating a timetable (e.g. via ScheduledActivity)</p>
+		</Intro>
+		<ID>Time Table Change Type</ID>
+		<Values>
+			<Value>
+				<Code>Mapping</Code>
+				<Text>Update defines a mapping between a timetable cyclical day and a calendar date</Text>
+			</Value>
+			<Value>
+				<Code>TeacherAbsence</Code>
+				<Text>Teacher is absent, update may also specify replacement teacher(s)</Text>
+			</Value>
+			<Value>
+				<Code>RoomRemoval</Code>
+				<Text>Remove room from timetabled activity, update may also specify replacement room(s)</Text>
+			</Value>
+			<Value>
+				<Code>StudentChange</Code>
+				<Text>Change the list of students included in the activity</Text>
+			</Value>
+			<Value>
+				<Code>Cancellation</Code>
+				<Text>Activity is cancelled, and not merely updated</Text>
+			</Value>
+			<Value>
+				<Code>Event</Code>
+				<Text>Cyclical activity is overridden with a one-off event, such as an excursion, incursion, exam, assembly, sport day or camp</Text>
+			</Value>
+		</Values>
+	</CodeSet>							
+
+
 </Grouping>
