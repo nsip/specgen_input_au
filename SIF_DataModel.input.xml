@@ -1,7 +1,7 @@
 ﻿<SIFSpecification xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="https://www.w3.org/1999/xhtml/" xmlns="http://sifassociation.org/SpecGen">				  
 
 	<BuildComment>
-		SIF Implementation Specification (Australia) 3.5.1
+		SIF Implementation Specification (Australia) 3.6.0
 
 
 		(April 40, 2023)
@@ -13,7 +13,7 @@
 	<TitlePage>
 		<h1>
 			Systems Interoperability Framework™<br />
-			SIF Implementation Specification (Australia) 3.5.1
+			SIF Implementation Specification (Australia) 3.6.0
 
 
 		</h1>
@@ -31,7 +31,7 @@
 		<dl>
 			<dt>This version:</dt>
 			<dd>
-				<a href="http://specification.sifassociation.org/Implementation/AU/3.5.1/1/index.html">http://specification.sifassociation.org/Implementation/AU/3.5.1/1/index.html</a>
+				<a href="http://specification.sifassociation.org/Implementation/AU/3.6.0/1/index.html">http://specification.sifassociation.org/Implementation/AU/3.6.0/1/index.html</a>
 			</dd>
 			<dt>Previous version:</dt>
 			<dd>
@@ -347,7 +347,7 @@ in the SIF Implementation Specification may include inaccuracies or typographica
   <Section name="Highlighted Additions/Changes" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns="http://sifassociation.org/SpecGen">
 	
 	<p>This release contains the following significant updates and extensions to the SIF specification.</p>
-	<h3>Additions/Changes since 3.4.9 November, 2021</h3>
+	<h3>Additions/Changes since 3.5.0 December, 2022</h3>
 	<h4>New Objects</h4>
 	<ul>
 		<li><code>StudentDataTransferNote</code> object added for this release. 
@@ -358,59 +358,75 @@ in the SIF Implementation Specification may include inaccuracies or typographica
 	
 			<h4>Removed Objects</h4>
 	<ul>
-		<li><code>ResourceUsage</code></li>
-		<li><code>SystemRole</code></li>
 	</ul>
 
 
 	<h4>New Elements</h4>
 	<ul>
-		<li><code>ScheduledActivity/ActivityEndDate</code>, requested by QLD DoE: used to represent multi-day excursions.</li>
-		<li><code>StudentPersonal/CategoryOfDisability</code>, for tracking of disability as an equity cohort among students, without depending on NCCD classification specific to a student enrollment.</li>
-		<li><code>SIF_MetadataType/ETag</code>, added as long-standing request by QLD DoE to prevent collision between data object updates under race conditions.</li>
+		<li><code>ScheduledActivity/TimeTableChangeReasonList</code>, requested by Timetabling Solutions,
+		to provide rationale for timetabling change published through <code>ScheduledActivity</code>, and
+		make it easier to process automatically.</li>
+		<li><code>ScheduledActivity/OverridePatch</code>, 
+		to indicate whether timetabling change published through <code>ScheduledActivity</code> is to be
+		processed as patch (omitted elements are preserved) or put (omitted elements are deleted).</li>
+		<li><code>Demographics/Gender</code>, to differentiate clearly between biological sex and
+		gender identity, and to align naming to current practice throughout the country.</li>
 	</ul>
 	
-		<h4>Removed Elements</h4>
-	<ul>
-		<li><code>SIF_MetadataType/EducationFilter</code>, <code>TimeElementType/Type</code>,  <code>TimeElementType/Code</code>,  <code>TimeElementType/Name</code>,  <code>TimeElementType/Value</code>,
-		<code>SpanGapType/Type</code>,  <code>SpanGapType/Code</code>,  <code>SpanGapType/Name</code>,  <code>SpanGapType/Value</code>,
-		removed as part of SIF Metadata rationalisation.</li>
-	</ul>
-
 	
 	<h4>New Types</h4>
 	<ul>
-	<li>Added <code>FTE Type</code> as string encoding of FTEs with two digit precision, to ensure JSON round-tripping without loss of precision.</li>
-	<li>Added <code>NAPLANScoreWithYearsType</code>, <code>NAPLANScoreWithYearsListType</code> to support publishing NAPLAN results along with the test level and the year the test was administered,
-	for use in Student Data Transfer Protocol.</li>
-	<li>Added <code>ArrivalSchoolType</code>, <code>DepartureSchoolType</code>, <code>PreviousSchoolListType</code>, <code>PreviousSchoolType</code>, 
-	<code>EducationalAssessmentListType</code>, <code>EducationalAssessmentType</code>, <code>STDNGradeListType</code>, <code>STDNGradeType</code>,
-	for use in Student Data Transfer Protocol.</li>
- 	<li>Added <code>NCCDType</code>, <code>NCCDListType</code> to support capturing NCCD assessment along with the date of the assessment, for use in Student Data Transfer Protocol.</li>
+	<li><code>Domain Score SDTN Type</code>, to allow the NAPLAN domain scores for a student to be published
+	as part of the Student Data Transfer Note payload while allowing more elements to be optional than for
+	the output of the National Assessment Platform (which the domain scores had been modelled for to date.)</li>
+	<li><code>Time Table Change Reason List Type</code> and <code>Time Table Change Reason Type</code>,
+	requested by Timetabling Solutions, to indicate the kinds
+	of change to timetabling being published through the <code>ScheduledActivity</code> object.</li>
+	<li>Aggressive refactoring of XML Element + Attribute combinations into distinct types, in order to make 
+	conversion to PESC JSON and back more straightforward:
+	results in new common types <code>Activity Evaluation Type</code> (from <code>Activity</code>), 
+	<code>Calculation Rule Type</code> (from <code>AggregateStaticticInfo</code>), <code>Learning Resource Location Type</code>
+	(from <code>Learning Resource</code>), <code>PictureSourceType</code> (from <code>PersonPicture</code>),
+	<code>Duration Type</code> (from common type <code>Activity Time Type</code>),
+	<code>Identity Assertion Type</code> (from common type <code>Identity Assertions Type</code>), 
+	<code>TypedIdRefType</code> (for all <code>RefIdType</code> + <code>@SIF_RefObject</code> combinations).</li>
  </ul>
 	
 	<h4>New CodeSets</h4>
 	<ul>	
-	<li>Added <code>NCCD Disability</code>, to systematise representation of disability in the specification and for use in Student Data Transfer Protocol. 
-	(Information sourced from NCCD.)</li>
+	<li>Added <code>Time Table Change Type</code>, requested by Timetabling Solutions, to indicate the kinds
+	of change to timetabling being published through the <code>ScheduledActivity</code> object.</li>
 	</ul>
 
 	<h4>Additions to CodeSets</h4>
 	<ul>	
-	<li>Addition to  <code>Attendance Code</code>—<code>627</code>, <code>Modified Timetable (Reduced Hours)</code>, requested by DET VIC as new absence category.</li>
+	<li>Added <code>Federal Electorates</code>—<code>219</code>, <code>Hawke</code>.</li>
 	</ul>
 
+	<h4>Removals/Deprecations from CodeSets</h4>
+	<ul>	
+	<li>Deprecated <code>Relationship to Student</code>—<code>03</code>, <code>Adoptive parent</code>, 
+	in favour of <code>Parent</code>, requested by DET VIC.</li>
+	<li>Removed <code>Federal Electorates</code>—<code>514</code>, <code>Stirling</code>, 
+	abolished at the 2022 federal election.</li>
+	</ul>
+
+
 	<h4>Other Changes</h4>
-	<ul>
-	<li>Refactor <code>StudentSchoolEnrollment/DisabilityCategory</code> to use the new <code>NCCD Disability</code> codeset.</li>
- 	<li>Refactor <code>StudentSchoolEnrollment/DisabilityLevelOfAdjustment</code> to use the new <code>NCCD Adjustment</code> codeset.</li>
-	<li>Update <code>StaffAssignment/JobFTE</code>, <code>StudentSchoolEnrollment/FTE</code>, <code>StudentParticipation/StudentSpecialEducationFTE</code>, <code>StudentAttendanceSummary/FTE</code>, 
-	<code>StaffAssignmentMostRecentContainerType/PrimaryFTE</code>, <code>StaffAssignmentMostRecentContainerType/SecondaryFTE</code>, <code>CensusSudentType/FTE</code>, 
-	<code>StudentMostRecentContainerType/FTE</code> to use the new <code>FTE Type</code> type, as a string rather than a decimal, in order to ensure JSON round-tripping without loss of precision.</li> 
-	<li>Update <code>TermInfo/RelativeDuration</code>, <code>StatsCohortType/AttendanceDays</code>, <code>CensusStaffType/PrimaryFTE</code>, <code>CensusStaffType/SecondaryFTE</code>, 
-	<code>CensusStaffType/JobFTE</code>, <code>AttendanceInfoType/AttendanceValue</code>   
-	to be strings with regular expression facets rather than decimals with precision facets, 
-	in order to ensure JSON round-tripping without loss of precision.</li>
+	<ul><li>Significant refactoring and debugging of OpenAPI version of standard, with fully validated
+	OpenAPI 3.0.4 version, restricted to PESC JSON output, and OpenAPI 3.1.0 version, intended for
+	online publishing.</li>
+	<li>Change to <code>Relationship to Student</code>—<code>00</code>, <code>Spouse</code>, 
+	updated to <code>Spouse/Partner</code> with annotation that it is expected to be rare,
+	requested by DET VIC.</li>
+	<li><code>Demographics/Sex</code> is redefined to mean biological sex; the use of the element
+	to date	to convey gender identity will henceforth be taken over by <code>Demographics/Gender</code>, 
+	in order to align naming to current practice.</li>
+	<li>Modelled <code>Monetary Amount Type</code> explicitly as an extension (i.e. an addition of an XML
+	attribute to a pre-existing type), for better translation to PESC JSON.</li>
+	<li>Documentation added to <code>TimeTable</code> and <code>ScheduledActivity</code> objects, following
+	proposal from Timetabling Solutions, on how to use <code>ScheduledActivity</code> to publish timetabling
+	changes, including indicating the start date of the timetabling cycle.</li>
  	</ul>
    	
 	<h4>Corrections</h4>
@@ -33741,12 +33757,26 @@ For clarity, the conceptual model is broken up into use cases:</p>
 		<Type ref="CodeSets" name="AUCodeSetsIndigenousStatusType" />
 	</Item>
 	<Item>
+		<Element>Gender</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Gender identity as reported by the person: male, female, intersex, or self-defined (e.g. non-binary).
+			(From SIF-AU v1.0 in 2009 up to SIF-AU 3.5.0 in December 2022, this value was expressed
+			through the element <code>Sex</code>. Renaming the element as of of SIF-AU 3.6.0 
+			brings SIF-AU in line with naming practice throughout the country.)</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsSexCodeType" />
+	</Item>
+	<Item>
 		<Element>Sex</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
-			<p>Gender identity as reported by the person: male, female, intersex, or self-defined (e.g. non-binary) 
-			(The element name "Sex" is a legacy term, and this element has been understood to refer to gender identity, 
-			"as reported by the person", rather than biology, since the inception of SIF-AU as v1.0 in 2009.)</p>
+			<p>The biological sex of the person. 
+			(From SIF-AU v1.0 in 2009 up to SIF-AU 3.5.0 in December 2022, this element has been understood 
+			to refer to gender identity, "as reported by the person", rather than biological sex.
+			As of SIF-AU 3.6.0, that value is expressed as <code>Gender</code> instead. We do not
+			anticipate that capturing biological sex as opposed to gender identity will be a frequent
+			requirement for school children, so that in effect <code>Gender</code> takes over from <code>Sex</code>.)</p>
 		</Description>
 		<Type ref="CodeSets" name="AUCodeSetsSexCodeType" />
 	</Item>
@@ -34047,6 +34077,7 @@ For clarity, the conceptual model is broken up into use cases:</p>
 	<xhtml:Example name="Demographics Example" xmlns="">
 		<Demographics>
 			<IndigenousStatus>3</IndigenousStatus>
+			<Gender>1</Gender>
 			<Sex>1</Sex>
 			<BirthDate>1990-09-26</BirthDate>
 			<Deceased>Y</Deceased>
@@ -43963,7 +43994,7 @@ For clarity, the conceptual model is broken up into use cases:</p>
 			</Value>
 			<Value>
 				<Code>03</Code>
-				<Text>Adoptive Parent</Text>
+				<Text>Adoptive Parent (DEPRECATED: 01 Parent is preferred)</Text>
 			</Value>
 			<Value>
 				<Code>04</Code>
@@ -44011,7 +44042,7 @@ For clarity, the conceptual model is broken up into use cases:</p>
 			</Value>
 			<Value>
 				<Code>00</Code>
-				<Text>Spouse</Text>
+				<Text>Spouse/Partner (expected to be rare)</Text>
 			</Value>
 			<Value>
 				<Code>32</Code>
