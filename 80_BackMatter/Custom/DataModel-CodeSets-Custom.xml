@@ -7209,7 +7209,7 @@
 			</Value>
 			<Value>
 				<Code>03</Code>
-				<Text>Adoptive Parent</Text>
+				<Text>Adoptive Parent (DEPRECATED: 01 Parent is preferred)</Text>
 			</Value>
 			<Value>
 				<Code>04</Code>
@@ -7257,7 +7257,7 @@
 			</Value>
 			<Value>
 				<Code>00</Code>
-				<Text>Spouse</Text>
+				<Text>Spouse/Partner (expected to be rare)</Text>
 			</Value>
 			<Value>
 				<Code>32</Code>

@@ -12537,12 +12537,26 @@
 		<Type ref="CodeSets" name="AUCodeSetsIndigenousStatusType"/>
 	</Item>
 	<Item>
+		<Element>Gender</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Gender identity as reported by the person: male, female, intersex, or self-defined (e.g. non-binary).
+			(From SIF-AU v1.0 in 2009 up to SIF-AU 3.5.0 in December 2022, this value was expressed
+			through the element <code>Sex</code>. Renaming the element as of of SIF-AU 3.6.0 
+			brings SIF-AU in line with naming practice throughout the country.)</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsSexCodeType"/>
+	</Item>
+	<Item>
 		<Element>Sex</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
-			<p>Gender identity as reported by the person: male, female, intersex, or self-defined (e.g. non-binary) 
-			(The element name "Sex" is a legacy term, and this element has been understood to refer to gender identity, 
-			"as reported by the person", rather than biology, since the inception of SIF-AU as v1.0 in 2009.)</p>
+			<p>The biological sex of the person. 
+			(From SIF-AU v1.0 in 2009 up to SIF-AU 3.5.0 in December 2022, this element has been understood 
+			to refer to gender identity, "as reported by the person", rather than biological sex.
+			As of SIF-AU 3.6.0, that value is expressed as <code>Gender</code> instead. We do not
+			anticipate that capturing biological sex as opposed to gender identity will be a frequent
+			requirement for school children, so that in effect <code>Gender</code> takes over from <code>Sex</code>.)</p>
 		</Description>
 		<Type ref="CodeSets" name="AUCodeSetsSexCodeType"/>
 	</Item>
@@ -12843,6 +12857,7 @@
 	<xhtml:Example name="Demographics Example" xmlns="">
 		<Demographics>
 			<IndigenousStatus>3</IndigenousStatus>
+			<Gender>1</Gender>
 			<Sex>1</Sex>
 			<BirthDate>1990-09-26</BirthDate>
 			<Deceased>Y</Deceased>

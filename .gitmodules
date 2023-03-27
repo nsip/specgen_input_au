@@ -4,3 +4,6 @@
 [submodule "specgen_input_infra"]
 	path = specgen_input_infra
 	url = https://github.com/Access4Learning/specgen_input_infra.git
+[submodule "sifxml2pescjson_source"]
+	path = sifxml2pescjson_source
+	url = https://github.com/nsip/sifxml2pescjson_source.git

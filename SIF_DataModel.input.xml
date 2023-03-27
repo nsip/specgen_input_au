@@ -1,10 +1,10 @@
 ﻿<SIFSpecification xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="https://www.w3.org/1999/xhtml/" xmlns="http://sifassociation.org/SpecGen">				  
 
 	<BuildComment>
-		SIF Implementation Specification (Australia) 3.5.0
+		SIF Implementation Specification (Australia) 3.5.1
 
 
-		(November 40, 2022)
+		(April 40, 2023)
 		
 		Infrastructure Version: v3
 	</BuildComment>
@@ -13,12 +13,12 @@
 	<TitlePage>
 		<h1>
 			Systems Interoperability Framework™<br />
-			SIF Implementation Specification (Australia) 3.5.0
+			SIF Implementation Specification (Australia) 3.5.1
 
 
 		</h1>
 		<h2>
-			November 40, 2022
+			April 40, 2023
 		</h2>
 		<br />
 		<br />
@@ -31,11 +31,11 @@
 		<dl>
 			<dt>This version:</dt>
 			<dd>
-				<a href="http://specification.sifassociation.org/Implementation/AU/3.5.0/index.html">http://specification.sifassociation.org/Implementation/AU/3.5.0/index.html</a>
+				<a href="http://specification.sifassociation.org/Implementation/AU/3.5.1/1/index.html">http://specification.sifassociation.org/Implementation/AU/3.5.1/1/index.html</a>
 			</dd>
 			<dt>Previous version:</dt>
 			<dd>
-				<a href="http://specification.sifassociation.org/Implementation/AU/3.4.9/">http://specification.sifassociation.org/Implementation/AU/3.4.9/</a>
+				<a href="http://specification.sifassociation.org/Implementation/AU/3.5.0/">http://specification.sifassociation.org/Implementation/AU/3.5.0/</a>
 			</dd>
 			<dt>Latest version:</dt>
 			<dd>
@@ -106,7 +106,7 @@
 		<a href="ImplementationSpecification.xls">Excel spreadsheet</a>.</p>
 		<br />
 		<br />
-		<p>Copyright ©2022 <a href="http://www.sifassociation.org">
+		<p>Copyright ©2023 <a href="http://www.sifassociation.org">
 				Systems Interoperability Framework (SIF™) Association</a>.  All Rights Reserved.
 		</p>
 	</TitlePage>
@@ -6017,7 +6017,8 @@ In addition, if the payload contains the RefId/UUID only, the consumer must assu
 	<privacyRating>Low</privacyRating>
     <Description>
       <p>
-        The purpose of this object is to define a schedule or Time Table structure/skeleton for the school.  The Time Table is produced by the Time Tabling software.  Once the Time Table is produced, the time tabling software creates the schedule based on business rules and constraints to fit into the time table structure.
+        The purpose of this object is to define a schedule or Time Table structure/skeleton for the school.  The Time Table is produced by the Time Tabling software.  
+		Once the Time Table is produced, the time tabling software creates the schedule based on business rules and constraints to fit into the time table structure.
       </p>
 
       <p>
@@ -6036,6 +6037,10 @@ In addition, if the payload contains the RefId/UUID only, the consumer must assu
         Having local ids that link the parent objects with the child object can simplify the agent design.
         Generally it is suggested to use the appropriate RefIds whenever possible and only use local ids if there is no other way to use RefIds.
       </p>
+	  <p>In order to align the timetable day cycle to specific calendar dates, use <code>ScheduledActivity/ActivityDate</code> in conjunction with <code>ScheduledActivity/DayId</code>,
+	  referencing the TimeTable involved via <code>ScheduledActivity/TimeTableRefId</code>. 
+	  <code>ScheduledActivity/TimeTableChangeReasonList/TimeTableChangeReason/TimeTableChangeType = "Mapping"</code> is used to indicate that the <code>ScheduledActivity</code>
+	  object communicates such an alignment.</p>
     </Description>
   </Item>
   <Item>
@@ -7565,9 +7570,9 @@ In addition, if the payload contains the RefId/UUID only, the consumer must assu
     <Element>ScheduledActivity</Element>
 	<privacyRating>Low</privacyRating>
     <Description>
-        <p>
-        This object provides a broader range of scheduled activities than just normal teaching classes (as covered by SessionInfo).
-      </p>
+        <p>This object provides a broader range of scheduled activities than just normal teaching classes (as covered by SessionInfo).
+      It allows both cyclical and non-cyclical events to be created and shared, with optional alignment to a cyclical
+	  timetable grid (<code>TimeTable</code>, <code>TimeTableCell</code>) </p>
     </Description>
   </Item>
 
@@ -7594,7 +7599,8 @@ In addition, if the payload contains the RefId/UUID only, the consumer must assu
     <Characteristics>O</Characteristics>
 	<privacyRating>Low</privacyRating>
     <Description>
-      <p>An optional Id (GUID) for the timetable cell that this activity is scheduled in. Instances of cyclical classroom sessions will have this element, but one-off events such as excursions will not use this element.</p>
+      <p>An optional Id (GUID) for the timetable cell that this activity is scheduled in. Instances of cyclical classroom sessions will have this element, 
+	  but one-off events such as excursions will not use this element.</p>
     </Description>
     <Type ref="CommonTypes" name="IdRefType"></Type>
   </Item>
@@ -7604,7 +7610,10 @@ In addition, if the payload contains the RefId/UUID only, the consumer must assu
     <Characteristics>O</Characteristics>
 	<privacyRating>Low</privacyRating>
     <Description>
-      <p>Day Id.</p>
+      <p>Day Id, for recurring cyclical days in a timetable: aligns to <code>TimeTableCell/DayId</code>.
+      If <code>TimeTableChangeReasonList/TimeTableChangeReason</code> is given as <code>Mapping</code>
+      (i.e. the object is being published in order to align a cyclical timetable to a calendar date),
+      then the DayId must be provided, since that is what is being aligned to <code>ActivityDate</code>.</p>
     </Description>
     <Type ref="CommonTypes" name="LocalIdType"></Type>
   </Item>
@@ -7614,7 +7623,7 @@ In addition, if the payload contains the RefId/UUID only, the consumer must assu
     <Characteristics>O</Characteristics>
 	<privacyRating>Low</privacyRating>
     <Description>
-      <p>Period Id within the Day Id</p>
+      <p>Period Id within the Day Id, for recurring cyclical days in a timetable: aligns to <code>TimeTableCell/PeriodId</code>.</p>
     </Description>
     <Type ref="CommonTypes" name="LocalIdType"></Type>
   </Item>
@@ -7654,7 +7663,8 @@ In addition, if the payload contains the RefId/UUID only, the consumer must assu
     <Characteristics>M</Characteristics>
 	<privacyRating>Low</privacyRating>
     <Description>
-      <p>Starting time for activity. This element is mandatory even if the object is used for preplanning excursions: a tentative or notional date and time should be provided if a finalised date is not available.</p>
+      <p>Starting time for activity. This element is mandatory even if the object is used for preplanning excursions: 
+	  a tentative or notional date and time should be provided if a finalised date is not available, or applicable (e.g. 0:00 AM).</p>
     </Description>
     <Type name="xs:time" />
   </Item>
@@ -7664,7 +7674,8 @@ In addition, if the payload contains the RefId/UUID only, the consumer must assu
     <Characteristics>M</Characteristics>
 	<privacyRating>Low</privacyRating>
     <Description>
-      <p>Finish time for activity. This element is mandatory even if the object is used for preplanning excursions: a tentative or notional date and time should be provided if a finalised date is not available.</p>
+      <p>Finish time for activity. This element is mandatory even if the object is used for preplanning excursions: 
+	  a tentative or notional date and time should be provided if a finalised date is not available, or applicable (e.g. 0:00 AM).</p>
     </Description>
     <Type name="xs:time" />
   </Item>
@@ -7803,11 +7814,39 @@ In addition, if the payload contains the RefId/UUID only, the consumer must assu
     <Characteristics>O</Characteristics>
 	<privacyRating>Low</privacyRating>
     <Description>
-      <p>This flag should be used to indicate whether or not this ScheduledActivity overrides a previous ScheduledActivity. In any initial provisioning this element should NOT be provided.</p>
+      <p>This flag should be used to indicate whether or not this ScheduledActivity overrides a previous ScheduledActivity (as a replacement instance, instead of a PUT update
+	  to an existing ScheduledActivity object). In any initial provisioning this element should NOT be provided.</p>
     </Description>
     <Type ref="CommonTypes" name="ScheduledActivityOverrideType"></Type>
   </Item>
-     
+ 
+  <Item>
+    <Element>OverridePatch</Element>
+
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>If this ScheduledActivity overrides a previous ScheduledActivity, this flag indicates whether the object contents are interpeted as a patch, or an replacement
+	  of the previous object's elements. In the former case, any elements not provided in this instance are preserved from the previous instance; in the latter,
+	  none of the previous object's elements are preserved. As is standard with patches, if this flag is true, a list needs to be updated in its entirety, and can only be
+	  deleted via an empty list instance (e.g. <code>&lt;RoomList/&gt;</code> to delete the list of rooms from the object.)</p>
+    </Description>
+    <Type name="xs:boolean"></Type>
+  </Item>
+
+ <Item>
+    <Element>TimeTableChangeReasonList</Element>
+
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Rationale behind the updates provided in this object, if this object instance is used to update a previous ScheduledActivity or TimeTableCell.
+	  The reasons given will help the receiving system make sense of the update.</p>
+    </Description>
+    <Type ref="CommonTypes" name="TimeTableChangeReasonListType"></Type>
+  </Item>
+
+ 
   <Item>   
     <Element>LocalCodeList</Element>
     <Characteristics>O</Characteristics>
@@ -7867,8 +7906,17 @@ In addition, if the payload contains the RefId/UUID only, the consumer must assu
      <TeachingGroupRefId>B2345163-8474-6B38-7459-000F84723A00</TeachingGroupRefId>
    </TeachingGroupList>
    <Override DateOfOverride="2020-02-02">Y</Override>
+   <TimeTableChangeReasonList>
+     <TimeTableChangeReason>
+	   <TimeTableChangeType>TeacherAbsence</TimeTableChangeType>
+	   <TimeTableChangeNotes>SL</TimeTableChangeNotes>
+     </TimeTableChangeReason>
+     <TimeTableChangeReason>
+	   <TimeTableChangeType>RoomRemoval</TimeTableChangeType>
+	   <TimeTableChangeNotes>GL</TimeTableChangeNotes>
+     </TimeTableChangeReason>
+   </TimeTableChangeReasonList>
  </ScheduledActivity> 
-
   </xhtml:Example>
 </DataObject>
 
@@ -35897,6 +35945,49 @@ For clarity, the conceptual model is broken up into use cases:</p>
 			</Item>
 </CommonElement>
 
+<CommonElement type="true" name="TimeTableChangeReasonListType" dm="true">
+			<Item>
+				<Element>TimeTableChangeReasonListType</Element>
+			<Description>
+			<p>Rationale behind the updates provided in a ScheduledActivity object, if it is being used to update a previous ScheduledActivity or TimeTableCell.</p>
+			</Description>
+		<List mode="List">
+    </List>
+			</Item>
+	<Item>
+		<Element>TimeTableChangeReason</Element>
+		<Characteristics>MR</Characteristics>
+		<Type ref="CommonTypes" name="TimeTableChangeReasonType" />
+	</Item>
+</CommonElement>
+
+<CommonElement type="true" name="TimeTableChangeReasonType" dm="true">
+			<Item>
+				<Element>TimeTableChangeReasonType</Element>
+			<Description>
+			<p>One of the applicable rationales behind the updates provided in a ScheduledActivity object, if it is being used to update a previous ScheduledActivity or TimeTableCell.
+			Each such rationale is described with a single codeset value.</p>
+			</Description>
+			</Item>
+	<Item>
+		<Element>TimeTableChangeType</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The type of rationale behind the update.</p>
+			</Description>		
+    <Type ref="CodeSets" name="AUCodeSetsTimeTableChangeTypeType" />
+	</Item>
+	<Item>
+		<Element>TimeTableChangeNotes</Element>
+		<Characteristics>O</Characteristics>
+			<Description>
+			<p>Free text description of the specific update, with additional information. This can include a school-assigned code for the update rationale.</p>
+			</Description>	  
+			<Type name="xs:normalizedString"></Type>
+	</Item>
+</CommonElement>
+
+
 <!-- NN 20221221 -->
 <CommonElement type="true" name="PictureSourceType" dm="true">
  <Item>
@@ -46813,6 +46904,40 @@ For clarity, the conceptual model is broken up into use cases:</p>
 			</Value>
 		</Values>
 	</CodeSet>							
+
+	<CodeSet>
+		<Intro>
+			<p>Rationale for updating a timetable (e.g. via ScheduledActivity)</p>
+		</Intro>
+		<ID>Time Table Change Type</ID>
+		<Values>
+			<Value>
+				<Code>Mapping</Code>
+				<Text>Update defines a mapping between a timetable cyclical day and a calendar date</Text>
+			</Value>
+			<Value>
+				<Code>TeacherAbsence</Code>
+				<Text>Teacher is absent, update may also specify replacement teacher(s)</Text>
+			</Value>
+			<Value>
+				<Code>RoomRemoval</Code>
+				<Text>Remove room from timetabled activity, update may also specify replacement room(s)</Text>
+			</Value>
+			<Value>
+				<Code>StudentChange</Code>
+				<Text>Change the list of students included in the activity</Text>
+			</Value>
+			<Value>
+				<Code>Cancellation</Code>
+				<Text>Activity is cancelled, and not merely updated</Text>
+			</Value>
+			<Value>
+				<Code>Event</Code>
+				<Text>Cyclical activity is overridden with a one-off event, such as an excursion, incursion, exam, assembly, sport day or camp</Text>
+			</Value>
+		</Values>
+	</CodeSet>							
+
 
 </Grouping>
 		  
