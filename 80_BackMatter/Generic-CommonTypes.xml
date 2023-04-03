@@ -479,13 +479,14 @@
 			</Item>
 		</CommonElement>
 
+<!-- NN 20221216 delete: this is infrastructure remnant
 		<CommonElement type="true" name='MsgIdType'>
 			<Item>
 				<Element>MsgIdType</Element>
 				<Type name='GUIDType'/>
 <Description>A message identifier.</Description>
 			</Item>
-		</CommonElement>
+		</CommonElement>-->
 
 		<CommonElement type="true" name='RefIdType'>
 			<Item>
@@ -502,6 +503,21 @@
 <Description>A reference to a RefId.</Description>
 			</Item>
 		</CommonElement>
+
+		<!-- NN 20221221 Intended currently only for JSON Schema compatibility, not injected into SpecGen source -->
+		<CommonElement type="true" name='TypedIdRefType'>
+			<Item>
+				<Element>TypedIdRefType</Element>
+				<Type name='RefIdType' ref="CommonTypes"/>
+				<Description>A typed reference to a RefId.</Description>
+			</Item>
+			<Item>
+				<Attribute>SIF_RefObject</Attribute>
+				<Type name='xs:token'/>
+				<Description>The type of object that this is a reference to.</Description>
+			</Item>
+		</CommonElement>
+
 
 		<CommonElement type="true" name='VersionType'>
 			<Item>

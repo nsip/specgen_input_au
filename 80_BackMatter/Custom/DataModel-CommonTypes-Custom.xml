@@ -6545,6 +6545,87 @@
 	
  </CommonElement>      
 
+<CommonElement name="DomainScoreSDTNType" type="true" dm="true">
+	<Item>
+		<Element>DomainScoreSDTNType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>NAPLAN Domain Score container for Student Data Transfer Note, in which all elements are optional.</p>
+		</Description>
+	</Item>
+	
+	<Item>
+		<Element>RawScore</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Raw Total score across all Marked Student Responses for the Domain.</p>
+		</Description>
+		<Type name="xs:decimal"></Type>
+   </Item>
+   <Item>
+		<Element>ScaledScoreValue</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Weighted Likelihood Estimate for Domain, commonly known as scaled score.</p>
+		</Description>
+		<Type name="xs:decimal"></Type>
+   </Item>
+       <Item>
+		<Element>ScaledScoreLogitValue</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Student ability for Domain in logits at 0.5 probability level.</p>
+		</Description>
+		<Type name="xs:decimal"></Type>
+   </Item>
+   
+   <Item>
+		<Element>ScaledScoreStandardError</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Standard Error for Domain Scaled Score for this student.</p>
+		</Description>
+		<Type name="xs:decimal"></Type>
+   </Item>
+   
+    <Item>
+		<Element>ScaledScoreLogitStandardError</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Standard Error for Domain Scaled Score for this student in logits.</p>
+		</Description>
+		<Type name="xs:decimal"></Type>
+   </Item>
+   
+    <Item>
+		<Element>StudentDomainBand</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The integer value of the performance band that the student's score is in for the NAP test domain.</p>
+		</Description>
+		<Type name="xs:integer"></Type>
+   </Item>
+   
+   <Item>
+		<Element>StudentProficiency</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The Skill Progression Level that the student's score is in for the NAP test domain.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	
+    <Item>
+		<Element>PlausibleScaledValueList</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>List of Plausible values used for reporting to determine cut off points, there are 5 per student per domain.</p>
+		</Description>
+		<Type ref="CommonTypes" name="PlausibleScaledValueListType"/>
+	</Item>
+	
+ </CommonElement>      
+
    
   <CommonElement name="NAPWritingRubricListType" type="true" dm="true">
 	<Item>
@@ -7131,7 +7212,7 @@
     <Description>
       <p>Gross amount to be billed, including any tax. Can be credit (e.g. for family credit notes, reimbursements, rebates).</p>
     </Description>
-    <Type ref="CommonTypes" name="MonetaryAmountType"></Type>
+    <Type ref="CommonTypes" name="MonetaryAmountType" complex="extension"></Type>
   </Item>
   
   <Item>
@@ -7186,38 +7267,16 @@
 		</Description>
 		<Type name="xs:date"/>
 	</Item>
+	<!-- NN 20221221 refactored type -->
 	<Item>
 		<Element>Duration</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
 			<p>Time required to complete the activity.</p>
 		</Description>
-		<Type name="xs:unsignedInt"/>
+		<Type ref="CommonTypes" name="DurationType"></Type>
 	</Item>
-		<Item>
-		<Attribute>Units</Attribute>
-		<Characteristics>M</Characteristics>
-		<Description>
-			<p>Unit of time of the Duration value.&#160;</p>
-		</Description>
-		<Values>
-			<Value>
-				<Code>week</Code>
-			</Value>
-			<Value>
-				<Code>day</Code>
-			</Value>
-			<Value>
-				<Code>hour</Code>
-			</Value>
-			<Value>
-				<Code>minute</Code>
-			</Value>
-			<Value>
-				<Code>second</Code>
-			</Value>
-		</Values>
-	</Item>
+
 	
 	<Item>
 		<Element>StartDate</Element>
@@ -9526,6 +9585,17 @@
 		<Element>IdentityAssertion</Element>
 		<Characteristics>MR</Characteristics>
 		<Description>
+			<p>The identification string for this user</p>
+		</Description>
+		<Type ref="CommonTypes" name="IdentityAssertionType"/>
+	</Item>
+</CommonElement>
+<!-- NN 20221221 -->
+<CommonElement name="IdentityAssertionType" type="true" dm="true">
+	<Item>
+		<Element>IdentityAssertionType</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
 			<p>The identification string for this user.</p>
 		</Description>
 		<Type name="xs:normalizedString"/>
@@ -11506,7 +11576,7 @@
 		<Description>
 			<p>Indicates whether or not this school contact's information should be published in a directory of school information.</p>
 		</Description>
-		<Type ref="CommonTypes" name="PublishInDirectoryType"/>
+		<Type ref="CommonTypes" name="PublishInDirectoryType"/> 
 	</Item>
 	<Item>
 		<Element>ContactInfo</Element>
@@ -11579,6 +11649,7 @@
 		<PublishInDirectory>Y</PublishInDirectory>
 	</xhtml:Example>
 </CommonElement>
+
 <CommonElement name="ContactInfoType" type="true" dm="true">
 	<Item>
 		<Element>ContactInfoType</Element>
@@ -12466,12 +12537,26 @@
 		<Type ref="CodeSets" name="AUCodeSetsIndigenousStatusType"/>
 	</Item>
 	<Item>
+		<Element>Gender</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Gender identity as reported by the person: male, female, intersex, or self-defined (e.g. non-binary).
+			(From SIF-AU v1.0 in 2009 up to SIF-AU 3.5.0 in December 2022, this value was expressed
+			through the element <code>Sex</code>. Renaming the element as of of SIF-AU 3.6.0 
+			brings SIF-AU in line with naming practice throughout the country.)</p>
+		</Description>
+		<Type ref="CodeSets" name="AUCodeSetsSexCodeType"/>
+	</Item>
+	<Item>
 		<Element>Sex</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
-			<p>Gender identity as reported by the person: male, female, intersex, or self-defined (e.g. non-binary) 
-			(The element name "Sex" is a legacy term, and this element has been understood to refer to gender identity, 
-			"as reported by the person", rather than biology, since the inception of SIF-AU as v1.0 in 2009.)</p>
+			<p>The biological sex of the person. 
+			(From SIF-AU v1.0 in 2009 up to SIF-AU 3.5.0 in December 2022, this element has been understood 
+			to refer to gender identity, "as reported by the person", rather than biological sex.
+			As of SIF-AU 3.6.0, that value is expressed as <code>Gender</code> instead. We do not
+			anticipate that capturing biological sex as opposed to gender identity will be a frequent
+			requirement for school children, so that in effect <code>Gender</code> takes over from <code>Sex</code>.)</p>
 		</Description>
 		<Type ref="CodeSets" name="AUCodeSetsSexCodeType"/>
 	</Item>
@@ -12772,6 +12857,7 @@
 	<xhtml:Example name="Demographics Example" xmlns="">
 		<Demographics>
 			<IndigenousStatus>3</IndigenousStatus>
+			<Gender>1</Gender>
 			<Sex>1</Sex>
 			<BirthDate>1990-09-26</BirthDate>
 			<Deceased>Y</Deceased>
@@ -13034,6 +13120,7 @@
 		<EducationalLevel>3</EducationalLevel>
 	</xhtml:Example>
 </CommonElement>
+
 <CommonElement name="GraduationDateType" type="true" dm="true">
 	<Item>
 		<Element>GraduationDateType</Element>
@@ -14468,7 +14555,7 @@
       <p>Overall score received in the NAP test. Contents are not populated if this is an empty object
 	  (sanctioned abandonment or refusal).</p>
     </Description>
-	<Type ref="CommonTypes" name="DomainScoreType"/>
+	<Type ref="CommonTypes" name="DomainScoreSDTNType"/>
   </Item>
   <Item>
     <Element>TestLevel</Element>
@@ -14669,5 +14756,201 @@
 			</Item>
 </CommonElement>
 
+<CommonElement type="true" name='TimeTableChangeReasonListType' dm="true">
+			<Item>
+				<Element>TimeTableChangeReasonListType</Element>
+			<Description>
+			<p>Rationale behind the updates provided in a ScheduledActivity object, if it is being used to update a previous ScheduledActivity or TimeTableCell.</p>
+			</Description>
+		<List mode="List">
+    </List>
+			</Item>
+	<Item>
+		<Element>TimeTableChangeReason</Element>
+		<Characteristics>MR</Characteristics>
+		<Type ref="CommonTypes" name="TimeTableChangeReasonType"/>
+	</Item>
+</CommonElement>
+
+<CommonElement type="true" name='TimeTableChangeReasonType' dm="true">
+			<Item>
+				<Element>TimeTableChangeReasonType</Element>
+			<Description>
+			<p>One of the applicable rationales behind the updates provided in a ScheduledActivity object, if it is being used to update a previous ScheduledActivity or TimeTableCell.
+			Each such rationale is described with a single codeset value.</p>
+			</Description>
+			</Item>
+	<Item>
+		<Element>TimeTableChangeType</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The type of rationale behind the update.</p>
+			</Description>		
+    <Type ref="CodeSets" name='AUCodeSetsTimeTableChangeTypeType'/>
+	</Item>
+	<Item>
+		<Element>TimeTableChangeNotes</Element>
+		<Characteristics>O</Characteristics>
+			<Description>
+			<p>Free text description of the specific update, with additional information. This can include a school-assigned code for the update rationale.</p>
+			</Description>	  
+			<Type name="xs:normalizedString"></Type>
+	</Item>
+</CommonElement>
+
+
+<!-- NN 20221221 -->
+<CommonElement type="true" name='PictureSourceType' dm="true">
+ <Item>
+    <Element>PictureSourceType</Element>
+
+    <Description>
+      <p>
+        This element defines the picture. If the Type attribute is URL, this is the location of the picture in <a href="References.html#JPEG">[JPEG]</a> format; if Type is JPEG, this is the <a href="References.html#JPEG">[JPEG]</a> image data encoded using the Base64 Content-Transfer-Encoding defined in Section 6.8 of <a href="References.html#RFC2045">[RFC 2045]</a>.
+      </p>
+    </Description>
+    <Type ref="CommonTypes" name="URIOrBinaryType"/>
+  </Item>
+  <Item>
+
+    <Attribute>Type</Attribute>
+    <Characteristics>M</Characteristics>
+	<privacyRating>Medium</privacyRating>
+    <Description>
+      <p>The way the picture is specified.</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsPictureSourceType"></Type>
+  </Item>
+</CommonElement>
+
+<!-- NN 20221221 -->
+<CommonElement type="true" name='ActivityEvaluationType' dm="true">
+	<Item>
+		<Element>ActivityEvaluationType</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>Field for non-numeric types of grading and evaluation such as "narrative."</p>
+		</Description>
+	</Item>
+	
+	<Item>
+		<Attribute>EvaluationType</Attribute>
+		<Characteristics>M</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>A qualifier for what type of evaluation this is. Valid values are "Inline" and "RefId". Inline values are contained in the optional Description element, RefIds are contained in the AssessmentRefId element.</p>
+		</Description>
+		<Values>
+			<Value>
+				<Code>Inline</Code>
+			</Value>
+			<Value>
+				<Code>RefId</Code>
+			</Value>
+		</Values>
+	</Item>
+	
+	<Item>
+		<Element>Description</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>A free text description of the evaluation to be used for this activity</p>
+		</Description>
+		<Type name="xs:string"/>
+	</Item>
+</CommonElement>
+
+<!-- NN 20221221 -->
+<CommonElement type="true" name='LearningResourceLocationType' dm="true">
+  <Item> 
+    <Element>LearningResourceLocationType</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Description of location of resource, i.e. location in library or URL, community resource, outside resource supplier.</p>
+    </Description>
+    <Type name="xs:string"></Type>
+  </Item>
+  <Item>
+
+    <Attribute>ReferenceType</Attribute>
+    <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>A qualifying attribute for the Location payload. If ReferenceType is "URI", the payload contains a web address where the resource can be found.</p>
+    </Description>
+    <Type name="xs:token"></Type>
+  </Item>
+ </CommonElement>
+ 
+<!-- NN 20221221 -->
+<CommonElement type="true" name='DurationType' dm="true">
+  	<Item>
+		<Element>DurationType</Element>
+		<Description>
+			<p>Time required to complete the activity.</p>
+		</Description>
+		<Type name="xs:unsignedInt"/>
+	</Item>
+		<Item>
+		<Attribute>Units</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Unit of time of the Duration value.&#160;</p>
+		</Description>
+		<Values>
+			<Value>
+				<Code>week</Code>
+			</Value>
+			<Value>
+				<Code>day</Code>
+			</Value>
+			<Value>
+				<Code>hour</Code>
+			</Value>
+			<Value>
+				<Code>minute</Code>
+			</Value>
+			<Value>
+				<Code>second</Code>
+			</Value>
+		</Values>
+	</Item>
+ </CommonElement>
+	
+<!-- NN 20221221 -->
+<CommonElement type="true" name='CalculationRuleType' dm="true">
+	 <Item>
+    <Element>CalculationRuleType</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Rule for calculating the aggregate statistic</p>
+    </Description>
+    <Type name="xs:string"></Type>
+  </Item>
+  <Item>
+    <Attribute>Type</Attribute>
+    <Characteristics>M</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description></Description>
+    <Values>
+      <Value>
+        <Code>Description</Code>
+      </Value>
+      <Value>
+        <Code>Formula</Code>
+      </Value>
+      <Value>
+        <Code>URL</Code>
+      </Value>
+      <Value>
+        <Code>Other</Code>
+      </Value>
+    </Values>
+  </Item>
+ </CommonElement>
 
 </IncludeGroup>

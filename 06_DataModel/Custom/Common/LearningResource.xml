@@ -70,6 +70,7 @@
     <Type ref="CommonTypes" name="ContactsType"></Type>
   </Item>
   
+  <!-- NN 20221221 refactored type -->
   <Item> 
     <Element>Location</Element>
 
@@ -78,17 +79,7 @@
     <Description>
       <p>Description of location of resource, i.e. location in library or URL, community resource, outside resource supplier.</p>
     </Description>
-    <Type name="xs:string"></Type>
-  </Item>
-  <Item>
-
-    <Attribute>ReferenceType</Attribute>
-    <Characteristics>M</Characteristics>
-	<privacyRating>Low</privacyRating>
-    <Description>
-      <p>A qualifying attribute for the Location payload. If ReferenceType is "URI", the payload contains a web address where the resource can be found.</p>
-    </Description>
-    <Type name="xs:token"></Type>
+    <Type ref="CommonTypes" name="LearningResourceLocationType"></Type>
   </Item>
   
   

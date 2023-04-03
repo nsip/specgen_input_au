@@ -67,7 +67,7 @@
     <Description>
       <p>The highest level of education completed by the contact person.</p>
     </Description>
-    <Type ref="CommonTypes" name="EducationalLevelType"></Type>
+    <Type ref="CommonTypes" name="EducationalLevelType"></Type> 
   </Item>
   <Item>
     <Element>NonSchoolEducation</Element>
