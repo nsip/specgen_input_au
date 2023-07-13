@@ -348,17 +348,14 @@ in the SIF Implementation Specification may include inaccuracies or typographica
 	
 	<p>This release contains the following significant updates and extensions to the SIF specification.</p>
 	<h3>Additions/Changes since 3.5.0 December, 2022</h3>
+	<!--
 	<h4>New Objects</h4>
 	<ul>
-		<li><code>StudentDataTransferNote</code> object added for this release. 
-		This object serves to communicate student movements between schools via a national Student Data Transfer Exchange.
-
-</li>
 	</ul>
 	
 			<h4>Removed Objects</h4>
 	<ul>
-	</ul>
+	</ul>-->
 
 
 	<h4>New Elements</h4>
