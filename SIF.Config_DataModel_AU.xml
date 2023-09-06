@@ -5,11 +5,12 @@
 	xsi:schemaLocation="http://www.sifassociation.org/sifSpecificationGenerator/1.0  
 	sifSpecificationGeneratorConfig.xsd">	
 	
+	<!-- !!! ALSO UPDATE 90_Properties/* , 90_Properties_DataModel/* -->
 	<globalSettings>
 		<inputDocument>SIF_DataModel.xml</inputDocument>
-		<sifNamespace>http://www.sifassociation.org/datamodel/au/3.5</sifNamespace>
+		<sifNamespace>http://www.sifassociation.org/datamodel/au/3.6</sifNamespace>
 		<localizationCode>au</localizationCode>
-		<schemaVersion>3.5.0</schemaVersion>
+		<schemaVersion>3.6.0</schemaVersion>
 		
 		<!-- Comment this one out to leave out JSON Tabs -->
 		
@@ -28,7 +29,7 @@
 		<htmlDocument>
 			<singleDocument>false</singleDocument>
 			<rootDocumentFileName>index.html</rootDocumentFileName>
-			<rootTitle>SIF Implementation Specification (Australia) 3.5.0</rootTitle>
+			<rootTitle>SIF Implementation Specification (Australia) 3.6.0</rootTitle>
 			<documentType>DataModel</documentType>
 		</htmlDocument>
 		
@@ -36,7 +37,7 @@
 		<htmlDocument>
 			<singleDocument>true</singleDocument>
 			<rootDocumentFileName>ImplementationSpecification.html</rootDocumentFileName>
-			<rootTitle>SIF Implementation Specification (Australia) 3.5.0</rootTitle>
+			<rootTitle>SIF Implementation Specification (Australia) 3.6.0</rootTitle>
 			<documentType>DataModel</documentType>
 		</htmlDocument>
 		

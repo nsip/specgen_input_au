@@ -6,7 +6,7 @@
          xmlns="http://sifassociation.org/SpecGen">
 	
 	<p>This release contains the following significant updates and extensions to the SIF specification.</p>
-	<h3>Additions/Changes since 3.5.0 December, 2022</h3>
+	<h3>Additions/Changes since 3.6.0 May, 2023</h3>
 	<!--
 	<h4>New Objects</h4>
 	<ul>
@@ -19,75 +19,43 @@
 
 	<h4>New Elements</h4>
 	<ul>
-		<li><code>ScheduledActivity/TimeTableChangeReasonList</code>, requested by Timetabling Solutions,
-		to provide rationale for timetabling change published through <code>ScheduledActivity</code>, and
-		make it easier to process automatically.</li>
-		<li><code>ScheduledActivity/OverridePatch</code>, 
-		to indicate whether timetabling change published through <code>ScheduledActivity</code> is to be
-		processed as patch (omitted elements are preserved) or put (omitted elements are deleted).</li>
-		<li><code>Demographics/Gender</code>, to differentiate clearly between biological sex and
-		gender identity, and to align naming to current practice throughout the country.</li>
+		<li><code>StudentScoreJudgementAgainstStandard/Grade</code>, 
+		<code>StudentScoreJudgementAgainstStandard/TeacherJudgement</code>, requested by DET NSW,
+		to allow a broader range of evaluations for student performance against a learning standard
+		than just a numeric score.</li>
 	</ul>
 	
 	
 	<h4>New Types</h4>
 	<ul>
-	<li><code>Domain Score SDTN Type</code>, to allow the NAPLAN domain scores for a student to be published
-	as part of the Student Data Transfer Note payload while allowing more elements to be optional than for
-	the output of the National Assessment Platform (which the domain scores had been modelled for to date.)</li>
-	<li><code>Time Table Change Reason List Type</code> and <code>Time Table Change Reason Type</code>,
-	requested by Timetabling Solutions, to indicate the kinds
-	of change to timetabling being published through the <code>ScheduledActivity</code> object.</li>
-	<li>Aggressive refactoring of XML Element + Attribute combinations into distinct types, in order to make 
-	conversion to PESC JSON and back more straightforward:
-	results in new common types <code>Activity Evaluation Type</code> (from <code>Activity</code>), 
-	<code>Calculation Rule Type</code> (from <code>AggregateStaticticInfo</code>), <code>Learning Resource Location Type</code>
-	(from <code>Learning Resource</code>), <code>PictureSourceType</code> (from <code>PersonPicture</code>),
-	<code>Duration Type</code> (from common type <code>Activity Time Type</code>),
-	<code>Identity Assertion Type</code> (from common type <code>Identity Assertions Type</code>), 
-	<code>TypedIdRefType</code> (for all <code>RefIdType</code> + <code>@SIF_RefObject</code> combinations).</li>
+	<li>None.</li>
  </ul>
 	
 	<h4>New CodeSets</h4>
 	<ul>	
-	<li>Added <code>Time Table Change Type</code>, requested by Timetabling Solutions, to indicate the kinds
-	of change to timetabling being published through the <code>ScheduledActivity</code> object.</li>
+	<li>None.</li>
 	</ul>
 
 	<h4>Additions to CodeSets</h4>
 	<ul>	
-	<li>Added <code>Federal Electorates</code>&#x2014;<code>219</code>, <code>Hawke</code>.</li>
+	<li><code>4217 Currency Names And Code Elements</code>: added <code>SLE</code>: Leone (new),
+	.</li>
 	</ul>
 
 	<h4>Removals/Deprecations from CodeSets</h4>
 	<ul>	
-	<li>Deprecated <code>Relationship to Student</code>&#x2014;<code>03</code>, <code>Adoptive parent</code>, 
-	in favour of <code>Parent</code>, requested by DET VIC.</li>
-	<li>Removed <code>Federal Electorates</code>&#x2014;<code>514</code>, <code>Stirling</code>, 
-	abolished at the 2022 federal election.</li>
+	<li>None.</li>
 	</ul>
 
 
 	<h4>Other Changes</h4>
-	<ul><li>Significant refactoring and debugging of OpenAPI version of standard, with fully validated
-	OpenAPI 3.0.4 version, restricted to PESC JSON output, and OpenAPI 3.1.0 version, intended for
-	online publishing.</li>
-	<li>Change to <code>Relationship to Student</code>&#x2014;<code>00</code>, <code>Spouse</code>, 
-	updated to <code>Spouse/Partner</code> with annotation that it is expected to be rare,
-	requested by DET VIC.</li>
-	<li><code>Demographics/Sex</code> is redefined to mean biological sex; the use of the element
-	to date	to convey gender identity will henceforth be taken over by <code>Demographics/Gender</code>, 
-	in order to align naming to current practice.</li>
-	<li>Modelled <code>Monetary Amount Type</code> explicitly as an extension (i.e. an addition of an XML
-	attribute to a pre-existing type), for better translation to PESC JSON.</li>
-	<li>Documentation added to <code>TimeTable</code> and <code>ScheduledActivity</code> objects, following
-	proposal from Timetabling Solutions, on how to use <code>ScheduledActivity</code> to publish timetabling
-	changes, including indicating the start date of the timetabling cycle.</li>
+	<ul><li><code>Visa Sub Class</code>: tidied presentation, use consistently "(No longer isssued)"
+	for discontinued Visas.</li>
  	</ul>
    	
 	<h4>Corrections</h4>
 	<ul>
-		<li></li>
+		<li>None.</li>
 
    </ul>
    

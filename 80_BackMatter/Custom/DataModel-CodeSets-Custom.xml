@@ -6850,17 +6850,36 @@
 		</Intro>
 		<ID>Visa Sub Class</ID>
 		<Values>
-<Value><Code>459</Code><Text>Sponsored Business Visitor (short stay) (repealed)</Text></Value>
-<Value><Code>679</Code><Text>Sponsored Family Visitor (short stay) (repealed)</Text></Value>
+
+
+<Value><Code>10</Code><Text>Bridging visa A - BVA</Text></Value>
+<Value><Code>20</Code><Text>Bridging visa B - BVB</Text></Value>
+<Value><Code>30</Code><Text>Bridging visa C - BVC</Text></Value>
+<Value><Code>40</Code><Text>Bridging visa D - BVD (No longer issued)</Text></Value>
+<Value><Code>41</Code><Text>Bridging (Non-Applicant) D (No longer issued) </Text></Value>
 <Value><Code>42</Code><Text>Bridging Visa Class A (No longer issued)</Text></Value>
+<Value><Code>50</Code><Text>Bridging (General) - BE</Text></Value>
+<Value><Code>51</Code><Text>Bridging (Protection Visa Applicant) – BVE</Text></Value>
 <Value><Code>60</Code><Text>Bridging Visa F (No longer issued)</Text></Value>
 <Value><Code>70</Code><Text>Removal Pending Bridging Visa (No longer issued)</Text></Value>
+<Value><Code>100</Code><Text>Partner (Migrant) visa</Text></Value>
+<Value><Code>101</Code><Text>Child visa</Text></Value>
+<Value><Code>102</Code><Text>Adoption visa</Text></Value>
+<Value><Code>103</Code><Text>Parent visa</Text></Value>
 <Value><Code>104</Code><Text>Preferential family (No longer issued)</Text></Value>
 <Value><Code>105</Code><Text>Skilled - Australian Linked (No longer issued)</Text></Value>
 <Value><Code>106</Code><Text>Regional-linked (No longer issued)</Text></Value>
 <Value><Code>110</Code><Text>Interdependency (No longer issued)</Text></Value>
 <Value><Code>113</Code><Text>Aged Parent (No longer issued)</Text></Value>
+<Value><Code>114</Code><Text>Aged Dependent Relative visa</Text></Value>
+<Value><Code>115</Code><Text>Remaining Relative visa</Text></Value>
+<Value><Code>116</Code><Text>Carer visa</Text></Value>
+<Value><Code>117</Code><Text>Orphan Relative</Text></Value>
 <Value><Code>118</Code><Text>Designated Parent (No longer issued)</Text></Value>
+<Value><Code>119</Code><Text>Regional Sponsor Migration Scheme (No longer issued)</Text></Value>
+<Value><Code>120</Code><Text>Labour Agreement visa (No longer issued)</Text></Value>
+<Value><Code>121</Code><Text>Employer Nomination Scheme (No longer issued)</Text></Value>
+<Value><Code>124</Code><Text>Distinguished Talent visa (No longer issued)</Text></Value>
 <Value><Code>125</Code><Text>Distinguished talent and special service - independent (No longer issued)</Text></Value>
 <Value><Code>126</Code><Text>Independent (No longer issued)</Text></Value>
 <Value><Code>127</Code><Text>Business Owner (No longer issued)</Text></Value>
@@ -6868,125 +6887,31 @@
 <Value><Code>129</Code><Text>State/Territory sponsored business owner  (No longer issued)</Text></Value>
 <Value><Code>130</Code><Text>State/Territory Sponsored Senior Executive  (No longer issued)</Text></Value>
 <Value><Code>131</Code><Text>Investment-linked (No longer issued)</Text></Value>
+<Value><Code>132</Code><Text>Business Talent (Permanent) visa (No longer issued)</Text></Value>
 <Value><Code>134</Code><Text>Skill Matching (No longer issued)</Text></Value>
 <Value><Code>135</Code><Text>State/Territory nominated independent (No longer issued)</Text></Value>
 <Value><Code>136</Code><Text>Skilled - Independent (No longer issued)</Text></Value>
 <Value><Code>137</Code><Text>Skilled - State/Territory nominated independent (No longer issued)</Text></Value>
 <Value><Code>138</Code><Text>Skilled - Australian sponsored (No longer issued)</Text></Value>
 <Value><Code>139</Code><Text>Skilled Designated Area-sponsored (No longer issued)</Text></Value>
+<Value><Code>143</Code><Text>Contributory Parent visa</Text></Value>
 <Value><Code>150</Code><Text>Former citizen (No longer issued)</Text></Value>
+<Value><Code>151</Code><Text>Former Resident visa</Text></Value>
 <Value><Code>152</Code><Text>Family of NZ citizen (No longer issued)</Text></Value>
 <Value><Code>154</Code><Text>Resident Return (No longer issued)</Text></Value>
-<Value><Code>156</Code><Text>One Year Resident Return (No longer Issued)</Text></Value>
-<Value><Code>159</Code><Text>Provisional resident return (No longer issued)</Text></Value>
-<Value><Code>208</Code><Text>East Timorese in Portugal, Macau or Mozambique (No longer issued)</Text></Value>
-<Value><Code>209</Code><Text>Citizen of former Yugoslavia - displaced person (No longer issued)</Text></Value>
-<Value><Code>210</Code><Text>Minorities of former USSR (No longer issued)</Text></Value>
-<Value><Code>211</Code><Text>Burmese in Burma (No longer issued)</Text></Value>
-<Value><Code>212</Code><Text>Sudanese (No longer issued)</Text></Value>
-<Value><Code>213</Code><Text>Burmese in Thailand (No longer issued)</Text></Value>
-<Value><Code>214</Code><Text>Cambodian (No longer issued)</Text></Value>
-<Value><Code>215</Code><Text>Sri Lankan - special assistance (No longer issued)</Text></Value>
-<Value><Code>216</Code><Text>Ahmadi (No longer issued)</Text></Value>
-<Value><Code>217</Code><Text>Vietnamese (No longer issued)</Text></Value>
-<Value><Code>302</Code><Text>Emergency (Permanent Visa Applicant) (No longer issued)</Text></Value>
-<Value><Code>303</Code><Text>Emergency (Temporary Visa Applicant) (No longer issued)</Text></Value>
-<Value><Code>310</Code><Text>Interdependency (provisional) (No longer issued)</Text></Value>
-<Value><Code>412</Code><Text>Independent Executive (No longer issued)</Text></Value>
-<Value><Code>413</Code><Text>Business Executive (No longer issued)</Text></Value>
-<Value><Code>414</Code><Text>Business Specialist (No longer issued)</Text></Value>
-<Value><Code>418</Code><Text>Educational (No longer issued)</Text></Value>
-<Value><Code>424</Code><Text>Public lecturer (No longer issued)</Text></Value>
-<Value><Code>425</Code><Text>Family relationship (No longer issued)</Text></Value>
-<Value><Code>427</Code><Text>Domestic worker - executive (No longer issued)</Text></Value>
-<Value><Code>430</Code><Text>Supported dependant (No longer issued)</Text></Value>
-<Value><Code>432</Code><Text>Expatriate (No longer issued)</Text></Value>
-<Value><Code>435</Code><Text>Sri Lankan (No longer issued)</Text></Value>
-<Value><Code>442</Code><Text>Occupational Trainee (No longer issued)</Text></Value>
-<Value><Code>443</Code><Text>Citizens of former Yugoslavia (No longer issued)</Text></Value>
-<Value><Code>445</Code><Text>Dependent Child (No longer issued)</Text></Value>
-<Value><Code>446</Code><Text>Confirmatory (Temporary) (No longer issued)</Text></Value>
-<Value><Code>447</Code><Text>Secondary Movement Offshore Entry (Temporary) (No longer issued)</Text></Value>
-<Value><Code>448</Code><Text>Kosovar Safe Haven (No longer issued)</Text></Value>
-<Value><Code>449</Code><Text>Humanitarian Stay (Temporary) (No longer issued)</Text></Value>
-<Value><Code>450</Code><Text>Resolution of Status - Family member (Temporary) (No longer issued)</Text></Value>
-<Value><Code>451</Code><Text>Secondary Movement Relocation (Temporary) (No longer issued)</Text></Value>
-<Value><Code>470</Code><Text>Professional Development (No longer issued)</Text></Value>
-<Value><Code>471</Code><Text>Trade Skills Training (No longer issued)</Text></Value>
-<Value><Code>497</Code><Text>Graduate - Skilled (No longer issued)</Text></Value>
-<Value><Code>499</Code><Text>Olympic (Support) (No longer issued)</Text></Value>
-<Value><Code>560</Code><Text>Student (No longer issued)</Text></Value>
-<Value><Code>562</Code><Text>Iranian Postgraduate Student (No longer issued)</Text></Value>
-<Value><Code>563</Code><Text>Iranian Postgraduate Student Dependent (No longer issued)</Text></Value>
-<Value><Code>686</Code><Text>Tourist - Long Stay (No longer issued)</Text></Value>
-<Value><Code>695</Code><Text>Temporary Provisional - Pending return (No longer issued)</Text></Value>
-<Value><Code>773</Code><Text>Border (No longer issued)</Text></Value>
-<Value><Code>785</Code><Text>Temporary Protection (No longer issued)</Text></Value>
-<Value><Code>786</Code><Text>Temporary (Humanitarian Concern) (No longer issued)</Text></Value>
-<Value><Code>800</Code><Text>Territorial Asylum (No longer issued)</Text></Value>
-<Value><Code>805</Code><Text>Skilled (No longer issued)</Text></Value>
-<Value><Code>806</Code><Text>Family (No longer issued)</Text></Value>
-<Value><Code>814</Code><Text>Interdependency (No longer issued)</Text></Value>
-<Value><Code>819</Code><Text>Aged Parent (No longer issued)</Text></Value>
-<Value><Code>826</Code><Text>Interdependency (No longer issued)</Text></Value>
-<Value><Code>828</Code><Text>TEP Processing (No longer issued)</Text></Value>
-<Value><Code>831</Code><Text>Prospective marriage spouse (No longer issued)</Text></Value>
-<Value><Code>832</Code><Text>Close Ties (No longer issued)</Text></Value>
-<Value><Code>833</Code><Text>Certain unlawful non-citizens (No longer issued)</Text></Value>
-<Value><Code>834</Code><Text>Permanent resident of Norfolk Island (No longer issued)</Text></Value>
-<Value><Code>840</Code><Text>Business Owner (No longer issued)</Text></Value>
-<Value><Code>841</Code><Text>Senior Executive (No longer issued)</Text></Value>
-<Value><Code>842</Code><Text>State/Territory sponsored business owner (No longer issued)</Text></Value>
-<Value><Code>843</Code><Text>State/Territory sponsored senior executive (No longer issued)</Text></Value>
-<Value><Code>844</Code><Text>Investment-linked (No longer issued)</Text></Value>
-<Value><Code>850</Code><Text>Resolution Status (Temporary) (No longer issued)</Text></Value>
-<Value><Code>851</Code><Text>Resolution of Status (No longer issued)</Text></Value>
-<Value><Code>852</Code><Text>Witness Protection (No longer issued)</Text></Value>
-<Value><Code>859</Code><Text>Designated Parent (No longer issued)</Text></Value>
-<Value><Code>861</Code><Text>Skilled - Onshore Independent New Zealand Citizen (No longer issued)</Text></Value>
-<Value><Code>862</Code><Text>Skilled Australian-sponsored New Zealand Citizen (No longer issued)</Text></Value>
-<Value><Code>863</Code><Text>Skilled Designated Area-sponsored New Zealand Citizen (No longer issued)</Text></Value>
-<Value><Code>870</Code><Text>Sponsored Parent (Temporary)</Text></Value>
-<Value><Code>880</Code><Text>Skilled - Independent Overseas Student (No longer issued)</Text></Value>
-<Value><Code>881</Code><Text>Skilled - Australian-sponsored Overseas Student (No longer issued)</Text></Value>
-<Value><Code>882</Code><Text>Skilled - Designated Area-sponsored Overseas Student (No longer issued)</Text></Value>
-<Value><Code>883</Code><Text>Skilled Designated Area Sponsored (Residence) (No longer issued)</Text></Value>
-<Value><Code>944</Code><Text>APEC Travel Authority (No longer issued)</Text></Value>
-<Value><Code>995</Code><Text>Diplomatic (Temporary) (No longer issued)</Text></Value>
-<Value><Code>998</Code><Text>Declaratory (No longer issued)</Text></Value>
-<Value><Code>10</Code><Text>Bridging visa A - BVA</Text></Value>
-<Value><Code>20</Code><Text>Bridging visa B - BVB</Text></Value>
-<Value><Code>30</Code><Text>Bridging visa C - BVC</Text></Value>
-<Value><Code>40</Code><Text>Bridging visa D - BVD (No longer issued)</Text></Value>
-<Value><Code>41</Code><Text>Bridging (Non-Applicant) D (No longer issued) </Text></Value>
-<Value><Code>50</Code><Text>Bridging (General) - BE</Text></Value>
-<Value><Code>51</Code><Text>Bridging (Protection Visa Applicant) – BVE</Text></Value>
-<Value><Code>100</Code><Text>Partner (Migrant) visa</Text></Value>
-<Value><Code>101</Code><Text>Child visa</Text></Value>
-<Value><Code>102</Code><Text>Adoption visa</Text></Value>
-<Value><Code>103</Code><Text>Parent visa</Text></Value>
-<Value><Code>114</Code><Text>Aged Dependent Relative visa</Text></Value>
-<Value><Code>115</Code><Text>Remaining Relative visa</Text></Value>
-<Value><Code>116</Code><Text>Carer visa</Text></Value>
-<Value><Code>117</Code><Text>Orphan Relative</Text></Value>
-<Value><Code>119</Code><Text>Repealed - Regional Sponsor Migration Scheme</Text></Value>
-<Value><Code>120</Code><Text>Repealed - Labour Agreement visa</Text></Value>
-<Value><Code>121</Code><Text>Repealed - Employer Nomination Scheme</Text></Value>
-<Value><Code>124</Code><Text>Distinguished Talent visa</Text></Value>
-<Value><Code>132</Code><Text>Business Talent (Permanent) visa</Text></Value>
-<Value><Code>143</Code><Text>Contributory Parent visa</Text></Value>
-<Value><Code>151</Code><Text>Former Resident visa</Text></Value>
 <Value><Code>155</Code><Text>Resident Return visa</Text></Value>
+<Value><Code>156</Code><Text>One Year Resident Return (No longer Issued)</Text></Value>
 <Value><Code>157</Code><Text>Resident Return visa</Text></Value>
-<Value><Code>160</Code><Text>Repealed - Business Skills (Provisional) visa</Text></Value>
-<Value><Code>161</Code><Text>Repealed - Business Skills (Provisional) visa</Text></Value>
-<Value><Code>162</Code><Text>Repealed - Business Skills (Provisional) visa</Text></Value>
-<Value><Code>163</Code><Text>Repealed - Business Skills (Provisional) visa</Text></Value>
-<Value><Code>164</Code><Text>Repealed - Business Skills (Provisional) visa</Text></Value>
-<Value><Code>165</Code><Text>Repealed - Business Skills (Provisional) visa</Text></Value>
+<Value><Code>159</Code><Text>Provisional resident return (No longer issued)</Text></Value>
+<Value><Code>160</Code><Text>Business Skills (Provisional) visa (No longer issued)</Text></Value>
+<Value><Code>161</Code><Text>Business Skills (Provisional) visa (No longer issued)</Text></Value>
+<Value><Code>162</Code><Text>Business Skills (Provisional) visa (No longer issued)</Text></Value>
+<Value><Code>163</Code><Text>Business Skills (Provisional) visa (No longer issued)</Text></Value>
+<Value><Code>164</Code><Text>Business Skills (Provisional) visa (No longer issued)</Text></Value>
+<Value><Code>165</Code><Text>Business Skills (Provisional) visa (No longer issued)</Text></Value>
 <Value><Code>173</Code><Text>Contributory Parent (Temporary) visa</Text></Value>
-<Value><Code>175</Code><Text>Repealed - Skilled Independent visa</Text></Value>
-<Value><Code>176</Code><Text>Repealed - Skilled Sponsored visa</Text></Value>
+<Value><Code>175</Code><Text>Skilled Independent visa (No longer issued)</Text></Value>
+<Value><Code>176</Code><Text>Skilled Sponsored visa (No longer issued)</Text></Value>
 <Value><Code>186</Code><Text>Employer Nomination Scheme</Text></Value>
 <Value><Code>187</Code><Text>Regional Sponsor Migration Scheme</Text></Value>
 <Value><Code>188</Code><Text>Business Innovation and Investment (provisional) visa</Text></Value>
@@ -6999,83 +6924,157 @@
 <Value><Code>203</Code><Text>Emergency Rescue</Text></Value>
 <Value><Code>204</Code><Text>Woman at Risk</Text></Value>
 <Value><Code>205</Code><Text>Camp Clearance (No longer Issued)</Text></Value>
+<Value><Code>208</Code><Text>East Timorese in Portugal, Macau or Mozambique (No longer issued)</Text></Value>
+<Value><Code>209</Code><Text>Citizen of former Yugoslavia - displaced person (No longer issued)</Text></Value>
+<Value><Code>210</Code><Text>Minorities of former USSR (No longer issued)</Text></Value>
+<Value><Code>211</Code><Text>Burmese in Burma (No longer issued)</Text></Value>
+<Value><Code>212</Code><Text>Sudanese (No longer issued)</Text></Value>
+<Value><Code>213</Code><Text>Burmese in Thailand (No longer issued)</Text></Value>
+<Value><Code>214</Code><Text>Cambodian (No longer issued)</Text></Value>
+<Value><Code>215</Code><Text>Sri Lankan - special assistance (No longer issued)</Text></Value>
+<Value><Code>216</Code><Text>Ahmadi (No longer issued)</Text></Value>
+<Value><Code>217</Code><Text>Vietnamese (No longer issued)</Text></Value>
 <Value><Code>300</Code><Text>Prospective Marriage visa</Text></Value>
+<Value><Code>302</Code><Text>Emergency (Permanent Visa Applicant) (No longer issued)</Text></Value>
+<Value><Code>303</Code><Text>Emergency (Temporary Visa Applicant) (No longer issued)</Text></Value>
 <Value><Code>309</Code><Text>Partner (Provisional) visa</Text></Value>
+<Value><Code>310</Code><Text>Interdependency (provisional) (No longer issued)</Text></Value>
 <Value><Code>400</Code><Text>Temporary Work (Short Stay Specialist) visa</Text></Value>
-<Value><Code>401</Code><Text>Repealed - Temporary Work (long Stay Activity) visa</Text></Value>
-<Value><Code>402</Code><Text>Repealed - Training and Research visa</Text></Value>
+<Value><Code>401</Code><Text>Temporary Work (long Stay Activity) visa (No longer issued)</Text></Value>
+<Value><Code>402</Code><Text>Training and Research visa (No longer issued)</Text></Value>
 <Value><Code>403</Code><Text>Temporary Work (International Relations) visa</Text></Value>
 <Value><Code>405</Code><Text>Investor Retirement visa</Text></Value>
-<Value><Code>406</Code><Text>Repealed - Government Agreement visa</Text></Value>
+<Value><Code>406</Code><Text>Government Agreement visa (No longer issued)</Text></Value>
 <Value><Code>407</Code><Text>Training visa</Text></Value>
 <Value><Code>408</Code><Text>Temporary Activity visa</Text></Value>
-<Value><Code>410</Code><Text>Retirement visa</Text></Value>
-<Value><Code>411</Code><Text>Repealed - Exchange visa</Text></Value>
-<Value><Code>415</Code><Text>Repealed - Foreign Government Agency</Text></Value>
-<Value><Code>416</Code><Text>Repealed - Special Program visa</Text></Value>
+<Value><Code>410</Code><Text>Retirement visa (No longer issued)</Text></Value>
+<Value><Code>411</Code><Text>Exchange visa (No longer issued)</Text></Value>
+<Value><Code>412</Code><Text>Independent Executive (No longer issued)</Text></Value>
+<Value><Code>413</Code><Text>Business Executive (No longer issued)</Text></Value>
+<Value><Code>414</Code><Text>Business Specialist (No longer issued)</Text></Value>
+<Value><Code>415</Code><Text>Foreign Government Agency (No longer issued)</Text></Value>
+<Value><Code>416</Code><Text>Special Program visa (No longer issued)</Text></Value>
 <Value><Code>417</Code><Text>Working Holiday visa</Text></Value>
-<Value><Code>419</Code><Text>Repealed - Visiting Academic visa</Text></Value>
-<Value><Code>420</Code><Text>Repealed - Temporary Work (Entertainment) visa</Text></Value>
-<Value><Code>421</Code><Text>Repealed - Sport visa</Text></Value>
-<Value><Code>422</Code><Text>Repealed - Medical Practitioner visa</Text></Value>
-<Value><Code>423</Code><Text>Repealed - Media and Film Staff visa</Text></Value>
-<Value><Code>426</Code><Text>Repealed - Domestic Worker (Temporary) Diplomatic and Consular visa</Text></Value>
-<Value><Code>428</Code><Text>Repealed - Religious Worker visa</Text></Value>
+<Value><Code>418</Code><Text>Educational (No longer issued)</Text></Value>
+<Value><Code>419</Code><Text>Visiting Academic visa (No longer issued)</Text></Value>
+<Value><Code>420</Code><Text>Temporary Work (Entertainment) visa (No longer issued)</Text></Value>
+<Value><Code>421</Code><Text>Sport visa (No longer issued)</Text></Value>
+<Value><Code>422</Code><Text>Medical Practitioner visa (No longer issued)</Text></Value>
+<Value><Code>423</Code><Text>Media and Film Staff visa (No longer issued)</Text></Value>
+<Value><Code>424</Code><Text>Public lecturer (No longer issued)</Text></Value>
+<Value><Code>425</Code><Text>Family relationship (No longer issued)</Text></Value>
+<Value><Code>426</Code><Text>Domestic Worker (Temporary) Diplomatic and Consular visa (No longer issued)</Text></Value>
+<Value><Code>427</Code><Text>Domestic worker - executive (No longer issued)</Text></Value>
+<Value><Code>428</Code><Text>Religious Worker visa (No longer issued)</Text></Value>
+<Value><Code>430</Code><Text>Supported dependant (No longer issued)</Text></Value>
+<Value><Code>432</Code><Text>Expatriate (No longer issued)</Text></Value>
+<Value><Code>435</Code><Text>Sri Lankan (No longer issued)</Text></Value>
+<Value><Code>442</Code><Text>Occupational Trainee (No longer issued)</Text></Value>
+<Value><Code>443</Code><Text>Citizens of former Yugoslavia (No longer issued)</Text></Value>
 <Value><Code>444</Code><Text>Special Category visa</Text></Value>
-<Value><Code>456</Code><Text>Repealed - Business (Short Stay) visa</Text></Value>
-<Value><Code>457</Code><Text>Repealed - Temporary Work (Skilled) visa</Text></Value>
+<Value><Code>445</Code><Text>Dependent Child (No longer issued)</Text></Value>
+<Value><Code>446</Code><Text>Confirmatory (Temporary) (No longer issued)</Text></Value>
+<Value><Code>447</Code><Text>Secondary Movement Offshore Entry (Temporary) (No longer issued)</Text></Value>
+<Value><Code>448</Code><Text>Kosovar Safe Haven (No longer issued)</Text></Value>
+<Value><Code>449</Code><Text>Humanitarian Stay (Temporary) (No longer issued)</Text></Value>
+<Value><Code>450</Code><Text>Resolution of Status - Family member (Temporary) (No longer issued)</Text></Value>
+<Value><Code>451</Code><Text>Secondary Movement Relocation (Temporary) (No longer issued)</Text></Value>
+<Value><Code>456</Code><Text>Business (Short Stay) visa (No longer issued)</Text></Value>
+<Value><Code>457</Code><Text>Temporary Work (Skilled) visa (No longer issued)</Text></Value>
+<Value><Code>459</Code><Text>Sponsored Business Visitor (short stay) (repealed)</Text></Value>
 <Value><Code>461</Code><Text>New Zealand Citizen Family Relationship (temporary) visa</Text></Value>
 <Value><Code>462</Code><Text>Work and Holiday visa</Text></Value>
-<Value><Code>475</Code><Text>Repealed - Skilled Regional Sponsored visa</Text></Value>
+<Value><Code>470</Code><Text>Professional Development (No longer issued)</Text></Value>
+<Value><Code>471</Code><Text>Trade Skills Training (No longer issued)</Text></Value>
+<Value><Code>475</Code><Text>Skilled Regional Sponsored visa (No longer issued)</Text></Value>
 <Value><Code>476</Code><Text>Skilled-Recognised Graduate visa</Text></Value>
 <Value><Code>482</Code><Text>Temporary Skill Shortage visa</Text></Value>
 <Value><Code>485</Code><Text>Temporary Graduate visa</Text></Value>
-<Value><Code>487</Code><Text>Repealed - Skilled Regional Sponsored</Text></Value>
-<Value><Code>488</Code><Text>Repealed - Superyacht Crew visa</Text></Value>
+<Value><Code>487</Code><Text>Skilled Regional Sponsored (No longer issued)</Text></Value>
+<Value><Code>488</Code><Text>Superyacht Crew visa (No longer issued)</Text></Value>
 <Value><Code>489</Code><Text>Skilled Regional (Provisional) visa</Text></Value>
 <Value><Code>491</Code><Text>Skilled Work Regional (Provisional) visa</Text></Value>
 <Value><Code>494</Code><Text>Skilled Employer Sponsored Regional (Provisional) visa</Text></Value>
-<Value><Code>495</Code><Text>Repealed - Skilled Independent Regional (Provisional) visa</Text></Value>
-<Value><Code>496</Code><Text>Repealed - Skilled Designated Area Sponsored visa</Text></Value>
+<Value><Code>495</Code><Text>Skilled Independent Regional (Provisional) visa (No longer issued)</Text></Value>
+<Value><Code>496</Code><Text>Skilled Designated Area Sponsored visa (No longer issued)</Text></Value>
+<Value><Code>497</Code><Text>Graduate - Skilled (No longer issued)</Text></Value>
+<Value><Code>499</Code><Text>Olympic (Support) (No longer issued)</Text></Value>
 <Value><Code>500</Code><Text>Student visa</Text></Value>
-<Value><Code>570</Code><Text>Repealed - Independent ELICOS Sector visa</Text></Value>
-<Value><Code>571</Code><Text>Repealed - School Sector visa</Text></Value>
-<Value><Code>572</Code><Text>Repealed - Vocational Education and Training Sector visa</Text></Value>
-<Value><Code>573</Code><Text>Repealed - Higher Education Sector visa</Text></Value>
-<Value><Code>574</Code><Text>Repealed - Postgraduate Research Sector visa</Text></Value>
-<Value><Code>575</Code><Text>Repealed - Non Award Sector visa</Text></Value>
-<Value><Code>576</Code><Text>Repealed - Foreign Affairs or Defence sector visa</Text></Value>
-<Value><Code>580</Code><Text>Repealed - Student Guardian visa</Text></Value>
+<Value><Code>560</Code><Text>Student (No longer issued)</Text></Value>
+<Value><Code>562</Code><Text>Iranian Postgraduate Student (No longer issued)</Text></Value>
+<Value><Code>563</Code><Text>Iranian Postgraduate Student Dependent (No longer issued)</Text></Value>
+<Value><Code>570</Code><Text>Independent ELICOS Sector visa (No longer issued)</Text></Value>
+<Value><Code>571</Code><Text>School Sector visa (No longer issued)</Text></Value>
+<Value><Code>572</Code><Text>Vocational Education and Training Sector visa (No longer issued)</Text></Value>
+<Value><Code>573</Code><Text>Higher Education Sector visa (No longer issued)</Text></Value>
+<Value><Code>574</Code><Text>Postgraduate Research Sector visa (No longer issued)</Text></Value>
+<Value><Code>575</Code><Text>Non Award Sector visa (No longer issued)</Text></Value>
+<Value><Code>576</Code><Text>Foreign Affairs or Defence sector visa (No longer issued)</Text></Value>
+<Value><Code>580</Code><Text>Student Guardian visa (No longer issued)</Text></Value>
 <Value><Code>590</Code><Text>Student Guardian visa</Text></Value>
 <Value><Code>600</Code><Text>Visitor</Text></Value>
 <Value><Code>601</Code><Text>Electronic Travel Authority</Text></Value>
 <Value><Code>602</Code><Text>Medical Treatment visa</Text></Value>
 <Value><Code>651</Code><Text>eVisitor</Text></Value>
-<Value><Code>675</Code><Text>Repealed - Medical Treatment (Short Stay) visa</Text></Value>
-<Value><Code>676</Code><Text>Repealed - Tourist visa</Text></Value>
-<Value><Code>685</Code><Text>Repealed - Medical Treatment Long Stay visa</Text></Value>
+<Value><Code>675</Code><Text>Medical Treatment (Short Stay) visa (No longer issued)</Text></Value>
+<Value><Code>676</Code><Text>Tourist visa (No longer issued)</Text></Value>
+<Value><Code>679</Code><Text>Sponsored Family Visitor (short stay) (repealed)</Text></Value>
+<Value><Code>685</Code><Text>Medical Treatment Long Stay visa (No longer issued)</Text></Value>
+<Value><Code>686</Code><Text>Tourist - Long Stay (No longer issued)</Text></Value>
+<Value><Code>695</Code><Text>Temporary Provisional - Pending return (No longer issued)</Text></Value>
 <Value><Code>771</Code><Text>Transit visa</Text></Value>
+<Value><Code>773</Code><Text>Border (No longer issued)</Text></Value>
+<Value><Code>785</Code><Text>Temporary Protection (No longer issued)</Text></Value>
+<Value><Code>786</Code><Text>Temporary (Humanitarian Concern) (No longer issued)</Text></Value>
 <Value><Code>790</Code><Text>Safe Haven Enterprise visa</Text></Value>
+<Value><Code>800</Code><Text>Territorial Asylum (No longer issued)</Text></Value>
 <Value><Code>801</Code><Text>Partner visa</Text></Value>
 <Value><Code>802</Code><Text>Child visa</Text></Value>
 <Value><Code>804</Code><Text>Aged Parent visa</Text></Value>
+<Value><Code>805</Code><Text>Skilled (No longer issued)</Text></Value>
+<Value><Code>806</Code><Text>Family (No longer issued)</Text></Value>
 <Value><Code>808</Code><Text>Confirmatory (Residence) visa</Text></Value>
+<Value><Code>814</Code><Text>Interdependency (No longer issued)</Text></Value>
+<Value><Code>819</Code><Text>Aged Parent (No longer issued)</Text></Value>
 <Value><Code>820</Code><Text>Partner (Extended Eligibility) visa</Text></Value>
+<Value><Code>826</Code><Text>Interdependency (No longer issued)</Text></Value>
+<Value><Code>828</Code><Text>TEP Processing (No longer issued)</Text></Value>
+<Value><Code>831</Code><Text>Prospective marriage spouse (No longer issued)</Text></Value>
+<Value><Code>832</Code><Text>Close Ties (No longer issued)</Text></Value>
+<Value><Code>833</Code><Text>Certain unlawful non-citizens (No longer issued)</Text></Value>
+<Value><Code>834</Code><Text>Permanent resident of Norfolk Island (No longer issued)</Text></Value>
 <Value><Code>835</Code><Text>Remaining Relative visa</Text></Value>
 <Value><Code>836</Code><Text>Carer visa</Text></Value>
 <Value><Code>837</Code><Text>Orphan Relative</Text></Value>
 <Value><Code>838</Code><Text>Aged Dependent Relative visa</Text></Value>
-<Value><Code>845</Code><Text>Repealed - Established Business in Australia visa</Text></Value>
-<Value><Code>846</Code><Text>Repealed - State or Territory Sponsored Regional Established Business in Australia visa</Text></Value>
-<Value><Code>855</Code><Text>Repealed - Labour Agreement visa</Text></Value>
-<Value><Code>856</Code><Text>Repealed - Employer Nomination Scheme</Text></Value>
-<Value><Code>857</Code><Text>Repealed - Regional Sponsor Migration Scheme</Text></Value>
+<Value><Code>840</Code><Text>Business Owner (No longer issued)</Text></Value>
+<Value><Code>841</Code><Text>Senior Executive (No longer issued)</Text></Value>
+<Value><Code>842</Code><Text>State/Territory sponsored business owner (No longer issued)</Text></Value>
+<Value><Code>843</Code><Text>State/Territory sponsored senior executive (No longer issued)</Text></Value>
+<Value><Code>844</Code><Text>Investment-linked (No longer issued)</Text></Value>
+<Value><Code>845</Code><Text>Established Business in Australia visa (No longer issued)</Text></Value>
+<Value><Code>846</Code><Text>State or Territory Sponsored Regional Established Business in Australia visa (No longer issued)</Text></Value>
+<Value><Code>850</Code><Text>Resolution Status (Temporary) (No longer issued)</Text></Value>
+<Value><Code>851</Code><Text>Resolution of Status (No longer issued)</Text></Value>
+<Value><Code>852</Code><Text>Witness Protection (No longer issued)</Text></Value>
+<Value><Code>855</Code><Text>Labour Agreement visa (No longer issued)</Text></Value>
+<Value><Code>856</Code><Text>Employer Nomination Scheme (No longer issued)</Text></Value>
+<Value><Code>857</Code><Text>Regional Sponsor Migration Scheme (No longer issued)</Text></Value>
 <Value><Code>858</Code><Text>Distinguished Talent visa</Text></Value>
+<Value><Code>859</Code><Text>Designated Parent (No longer issued)</Text></Value>
+<Value><Code>861</Code><Text>Skilled - Onshore Independent New Zealand Citizen (No longer issued)</Text></Value>
+<Value><Code>862</Code><Text>Skilled Australian-sponsored New Zealand Citizen (No longer issued)</Text></Value>
+<Value><Code>863</Code><Text>Skilled Designated Area-sponsored New Zealand Citizen (No longer issued)</Text></Value>
 <Value><Code>864</Code><Text>Contributory Aged Parent visa</Text></Value>
 <Value><Code>866</Code><Text>Protection visa</Text></Value>
+<Value><Code>870</Code><Text>Sponsored Parent (Temporary)</Text></Value>
+<Value><Code>880</Code><Text>Skilled - Independent Overseas Student (No longer issued)</Text></Value>
+<Value><Code>881</Code><Text>Skilled - Australian-sponsored Overseas Student (No longer issued)</Text></Value>
+<Value><Code>882</Code><Text>Skilled - Designated Area-sponsored Overseas Student (No longer issued)</Text></Value>
+<Value><Code>883</Code><Text>Skilled Designated Area Sponsored (Residence) (No longer issued)</Text></Value>
 <Value><Code>884</Code><Text>Contributory Aged Parent (Temporary) visa</Text></Value>
-<Value><Code>885</Code><Text>Repealed - Skilled Independent visa</Text></Value>
-<Value><Code>886</Code><Text>Repealed - Sponsored visa</Text></Value>
+<Value><Code>885</Code><Text>Skilled Independent visa (No longer issued)</Text></Value>
+<Value><Code>886</Code><Text>Sponsored visa (No longer issued)</Text></Value>
 <Value><Code>887</Code><Text>Skilled Regional visa</Text></Value>
 <Value><Code>888</Code><Text>Business Innovation and Investment (permanent) visa</Text></Value>
 <Value><Code>890</Code><Text>Business Owner</Text></Value>
@@ -7083,10 +7082,18 @@
 <Value><Code>892</Code><Text>State or Territory Sponsored Business Owner visa</Text></Value>
 <Value><Code>893</Code><Text>State or Territory Sponsored Investor visa</Text></Value>
 <Value><Code>942</Code><Text>Crew Travel Authority visa</Text></Value>
-<Value><Code>956</Code><Text>Repealed - Electronic Travel Authority (Business Entrant) visa</Text></Value>
-<Value><Code>976</Code><Text>Repealed - Electronic Travel Authority (Visitor) visa</Text></Value>
-<Value><Code>977</Code><Text>Repealed - Electronic Travel Authority (Business Entrant) visa</Text></Value>
+<Value><Code>944</Code><Text>APEC Travel Authority (No longer issued)</Text></Value>
+<Value><Code>956</Code><Text>Electronic Travel Authority (Business Entrant) visa (No longer issued)</Text></Value>
+<Value><Code>976</Code><Text>Electronic Travel Authority (Visitor) visa (No longer issued)</Text></Value>
+<Value><Code>977</Code><Text>Electronic Travel Authority (Business Entrant) visa (No longer issued)</Text></Value>
 <Value><Code>988</Code><Text>Maritime Crew visa</Text></Value>
+<Value><Code>995</Code><Text>Diplomatic (Temporary) (No longer issued)</Text></Value>
+<Value><Code>998</Code><Text>Declaratory (No longer issued)</Text></Value>
+
+
+
+
+
      </Values>
 	</CodeSet>
 	<CodeSet>

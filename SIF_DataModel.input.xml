@@ -4,7 +4,7 @@
 		SIF Implementation Specification (Australia) 3.6.0
 
 
-		(April 40, 2023)
+		(May 30, 2023)
 		
 		Infrastructure Version: v3
 	</BuildComment>
@@ -18,7 +18,7 @@
 
 		</h1>
 		<h2>
-			April 40, 2023
+			May 30, 2023
 		</h2>
 		<br />
 		<br />
@@ -31,7 +31,7 @@
 		<dl>
 			<dt>This version:</dt>
 			<dd>
-				<a href="http://specification.sifassociation.org/Implementation/AU/3.6.0/1/index.html">http://specification.sifassociation.org/Implementation/AU/3.6.0/1/index.html</a>
+				<a href="http://specification.sifassociation.org/Implementation/AU/3.6.0/index.html">http://specification.sifassociation.org/Implementation/AU/3.6.0/index.html</a>
 			</dd>
 			<dt>Previous version:</dt>
 			<dd>
@@ -40563,7 +40563,6 @@ For clarity, the conceptual model is broken up into use cases:</p>
 <Value><Code>511</Code><Text>O'Connor</Text></Value>
 <Value><Code>512</Code><Text>Pearce</Text></Value>
 <Value><Code>513</Code><Text>Perth</Text></Value>
-<Value><Code>514</Code><Text>Stirling</Text></Value>
 <Value><Code>515</Code><Text>Swan</Text></Value>
 <Value><Code>516</Code><Text>Tangney</Text></Value>
 <Value><Code>597</Code><Text>Migratory - Offshore - Shipping (WA)</Text></Value>
