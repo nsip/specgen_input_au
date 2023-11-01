@@ -1985,11 +1985,11 @@
 				</xsltParam>
 				<xsltParam>
 					<xsltName>sifObjectList</xsltName>
-					<xsltValue>NAPCodeFrame,NAPEventStudentLink,NAPStudentResponseSet,NAPTest,NAPTestItem,NAPTestlet,NAPTestScoreSummary</xsltValue>
+					<xsltValue>PersonalisedPlan,WellbeingAlert,WellbeingAppeal,WellbeingCharacteristic,WellbeingEvent,WellbeingPersonLink,WellbeingResponse,StudentDataTransferNote</xsltValue>
 				</xsltParam>
 				<xsltParam>
 					<xsltName>sifObjectGroupList</xsltName>
-					<xsltValue>'NAPLAN'</xsltValue>
+					<xsltValue>'Wellbeing'</xsltValue>
 				</xsltParam>
 				<xsltParam>
 					<xsltName>omitVersionInExamplesFileName</xsltName>
