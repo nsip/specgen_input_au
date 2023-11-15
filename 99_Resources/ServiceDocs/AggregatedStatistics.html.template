@@ -21,7 +21,7 @@
     </style>
   </head>
   <body>
-    <redoc spec-url='{RootURL}/JSON/AggregatedStatistics/AggregatedStatisticsOpenAPI_AU.yaml'></redoc>
+    <redoc spec-url='{RootURL}/JSON/AggregatedStatistics/3_1/AggregatedStatisticsOpenAPI_AU.yaml'></redoc>
     <script src="https://cdn.jsdelivr.net/npm/redoc@next/bundles/redoc.standalone.js"> </script>
     <!-- <script src="http://specification.sifassociation.org/ReDoc/redoc.standalone.js"> </script> -->
   </body>

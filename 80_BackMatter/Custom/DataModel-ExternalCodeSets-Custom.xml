@@ -524,8 +524,12 @@
         <Text>Saint Helena Pound</Text>
       </Value>
       <Value>
+        <Code>SLE</Code>
+        <Text>Leone (new Leone)</Text>
+      </Value>
+      <Value>
         <Code>SLL</Code>
-        <Text>Leone</Text>
+        <Text>Leone (old Leone)</Text>
       </Value>
       <Value>
         <Code>SOS</Code>

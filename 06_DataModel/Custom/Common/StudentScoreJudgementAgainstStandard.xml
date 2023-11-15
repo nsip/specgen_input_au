@@ -161,6 +161,27 @@
     <Type name="xs:normalizedString"></Type>
   </Item>
   <Item>
+    <Element>Grade</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>	
+    <Description>
+      Overall grade that the student has received.
+    </Description>
+    <Type ref="CommonTypes" name="GradeType"></Type>
+ </Item>
+ 
+ <Item>
+    <Element>TeacherJudgement</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>
+        The teacher judgement of the student's performance as captured in this object.
+      </p>
+    </Description>
+    <Type name="xs:string"></Type>
+  </Item>
+  <Item>
     <Element>SpecialCircumstanceLocalCode</Element>
     <Characteristics>O</Characteristics>
     <privacyRating>High</privacyRating>
@@ -256,6 +277,13 @@
       <CurriculumCode>AUSVELS</CurriculumCode>
       <CurriculumNodeCode>MATNUM</CurriculumNodeCode>
       <Score>10</Score>
+      <Grade>
+        <Percentage>79</Percentage>
+        <Numeric>3.0</Numeric>
+        <Letter>C</Letter>
+        <Narrative>Johnny is only achieving average performance.</Narrative>
+      </Grade>
+	  <TeacherJudgement>Johnny is having challenges with the astronomy module.</TeacherJudgement>
       <SpecialCircumstanceLocalCode>SCMP</SpecialCircumstanceLocalCode>
       <ManagedPathwayLocalCode>MPOMP</ManagedPathwayLocalCode>
       <SchoolLocalId>027789</SchoolLocalId>

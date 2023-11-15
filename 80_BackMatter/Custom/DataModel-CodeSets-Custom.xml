@@ -3251,7 +3251,7 @@
 <Value><Code>4212</Code><Text>Qatar</Text></Value>
 <Value><Code>4213</Code><Text>Saudi Arabia</Text></Value>
 <Value><Code>4214</Code><Text>Syria</Text></Value>
-<Value><Code>4215</Code><Text>Turkey</Text></Value>
+<Value><Code>4215</Code><Text>Türkiye</Text></Value>
 <Value><Code>4216</Code><Text>United Arab Emirates</Text></Value>
 <Value><Code>4217</Code><Text>Yemen</Text></Value>
 <Value><Code>5101</Code><Text>Myanmar</Text></Value>
@@ -3684,6 +3684,7 @@
 <Value><Code>145</Code><Text>Wentworth</Text></Value>
 <Value><Code>146</Code><Text>Werriwa</Text></Value>
 <Value><Code>147</Code><Text>Whitlam</Text></Value>
+<Value><Code>194</Code><Text>No usual address (NSW)</Text></Value>
 <Value><Code>197</Code><Text>Migratory - Offshore - Shipping (NSW)</Text></Value>
 <Value><Code>201</Code><Text>Aston</Text></Value>
 <Value><Code>202</Code><Text>Ballarat</Text></Value>
@@ -3711,8 +3712,8 @@
 <Value><Code>224</Code><Text>Isaacs</Text></Value>
 <Value><Code>225</Code><Text>Jagajaga</Text></Value>
 <Value><Code>226</Code><Text>Kooyong</Text></Value>
-<Value><Code>227</Code><Text>Lalor</Text></Value>
-<Value><Code>228</Code><Text>La Trobe</Text></Value>
+<Value><Code>227</Code><Text>La Trobe</Text></Value>
+<Value><Code>228</Code><Text>Lalor</Text></Value>
 <Value><Code>229</Code><Text>Macnamara</Text></Value>
 <Value><Code>230</Code><Text>Mallee</Text></Value>
 <Value><Code>231</Code><Text>Maribyrnong</Text></Value>
@@ -3724,6 +3725,7 @@
 <Value><Code>237</Code><Text>Scullin</Text></Value>
 <Value><Code>238</Code><Text>Wannon</Text></Value>
 <Value><Code>239</Code><Text>Wills</Text></Value>
+<Value><Code>294</Code><Text>No usual address (Vic.)</Text></Value>
 <Value><Code>297</Code><Text>Migratory - Offshore - Shipping (Vic.)</Text></Value>
 <Value><Code>301</Code><Text>Blair</Text></Value>
 <Value><Code>302</Code><Text>Bonner</Text></Value>
@@ -3755,6 +3757,7 @@
 <Value><Code>328</Code><Text>Ryan</Text></Value>
 <Value><Code>329</Code><Text>Wide Bay</Text></Value>
 <Value><Code>330</Code><Text>Wright</Text></Value>
+<Value><Code>394</Code><Text>No usual address (Qld)</Text></Value>
 <Value><Code>397</Code><Text>Migratory - Offshore - Shipping (Qld)</Text></Value>
 <Value><Code>401</Code><Text>Adelaide</Text></Value>
 <Value><Code>402</Code><Text>Barker</Text></Value>
@@ -3767,6 +3770,7 @@
 <Value><Code>409</Code><Text>Spence</Text></Value>
 <Value><Code>410</Code><Text>Sturt</Text></Value>
 <Value><Code>411</Code><Text>Wakefield - Deprecated</Text></Value>
+<Value><Code>494</Code><Text>No usual address (SA)</Text></Value>
 <Value><Code>497</Code><Text>Migratory - Offshore - Shipping (SA)</Text></Value>
 <Value><Code>501</Code><Text>Brand</Text></Value>
 <Value><Code>502</Code><Text>Burt</Text></Value>
@@ -3781,22 +3785,29 @@
 <Value><Code>511</Code><Text>O'Connor</Text></Value>
 <Value><Code>512</Code><Text>Pearce</Text></Value>
 <Value><Code>513</Code><Text>Perth</Text></Value>
-<Value><Code>515</Code><Text>Swan</Text></Value>
-<Value><Code>516</Code><Text>Tangney</Text></Value>
+<Value><Code>514</Code><Text>Swan</Text></Value>
+<Value><Code>515</Code><Text>Tangney</Text></Value>
+<Value><Code>594</Code><Text>No usual address (WA)</Text></Value>
 <Value><Code>597</Code><Text>Migratory - Offshore - Shipping (WA)</Text></Value>
 <Value><Code>601</Code><Text>Bass</Text></Value>
 <Value><Code>602</Code><Text>Braddon</Text></Value>
 <Value><Code>603</Code><Text>Clark</Text></Value>
 <Value><Code>604</Code><Text>Franklin</Text></Value>
 <Value><Code>605</Code><Text>Lyons</Text></Value>
+<Value><Code>694</Code><Text>No usual address (Tas.)</Text></Value>
 <Value><Code>697</Code><Text>Migratory - Offshore - Shipping (Tas.)</Text></Value>
 <Value><Code>701</Code><Text>Lingiari</Text></Value>
 <Value><Code>702</Code><Text>Solomon</Text></Value>
+<Value><Code>794</Code><Text>No usual address (NT)</Text></Value>
 <Value><Code>797</Code><Text>Migratory - Offshore - Shipping (NT)</Text></Value>
 <Value><Code>801</Code><Text>Bean</Text></Value>
 <Value><Code>802</Code><Text>Canberra</Text></Value>
 <Value><Code>803</Code><Text>Fenner</Text></Value>
+<Value><Code>894</Code><Text>No usual address (ACT)</Text></Value>
+<Value><Code>897</Code><Text>Migratory - Offshore - Shipping (ACT)</Text></Value>
 <Value><Code>899</Code><Text>Not Applicable (ACT)</Text></Value>
+<Value><Code>994</Code><Text>No usual address (OT)</Text></Value>
+<Value><Code>997</Code><Text>Migratory - Offshore - Shipping (OT)</Text></Value>
 <Value><Code>999</Code><Text>Not Applicable</Text></Value>
 </Values></CodeSet>
 	<CodeSet>
@@ -4530,1416 +4541,6 @@
 				<Text>Redacted for privacy</Text>
 			</Value>
 		 
-</Values>
-	</CodeSet>
-	<CodeSet>
-		<Intro>
-			<p>1216.0 - Australian Standard Geographical Classification (ASGC), July 2011   </p>
-			<p>Statistical Local Area (from ASGC) Latest ISSUE Released at 11:30 AM (CANBERRA TIME) 05/10/2011  Final</p>
-			<p>The ASGS has been released concurrently with the ASGC to ensure a smooth transition to the new statistical geography. The ASGS and the ASGC will both be current for 2011 however, from 1 July 2012 the ASGS will replace the ASGC.</p>
-		<p>http://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1216.0July%202011?OpenDocument</p>
-		</Intro>
-		<ID>Australian Standard Geographical Classification (ASGC)</ID>
-<Values>
-<Value><Code>155050050</Code><Text>Albury (C)</Text></Value>
-<Value><Code>130150111</Code><Text>Armidale Dumaresq (A) - City</Text></Value>
-<Value><Code>130150112</Code><Text>Armidale Dumaresq (A) Bal</Text></Value>
-<Value><Code>105350150</Code><Text>Ashfield (A)</Text></Value>
-<Value><Code>105400200</Code><Text>Auburn (C)</Text></Value>
-<Value><Code>120100250</Code><Text>Ballina (A)</Text></Value>
-<Value><Code>155200300</Code><Text>Balranald (A)</Text></Value>
-<Value><Code>105200351</Code><Text>Bankstown (C) - North-East</Text></Value>
-<Value><Code>105200353</Code><Text>Bankstown (C) - North-West</Text></Value>
-<Value><Code>105200355</Code><Text>Bankstown (C) - South</Text></Value>
-<Value><Code>140030471</Code><Text>Bathurst Regional (A) - Pt A</Text></Value>
-<Value><Code>140070473</Code><Text>Bathurst Regional (A) - Pt B</Text></Value>
-<Value><Code>145150550</Code><Text>Bega Valley (A)</Text></Value>
-<Value><Code>125050600</Code><Text>Bellingen (A)</Text></Value>
-<Value><Code>155150650</Code><Text>Berrigan (A)</Text></Value>
-<Value><Code>105530751</Code><Text>Blacktown (C) - North</Text></Value>
-<Value><Code>105530752</Code><Text>Blacktown (C) - South-East</Text></Value>
-<Value><Code>105530753</Code><Text>Blacktown (C) - South-West</Text></Value>
-<Value><Code>140150800</Code><Text>Bland (A)</Text></Value>
-<Value><Code>140070850</Code><Text>Blayney (A)</Text></Value>
-<Value><Code>105450900</Code><Text>Blue Mountains (C)</Text></Value>
-<Value><Code>135100950</Code><Text>Bogan (A)</Text></Value>
-<Value><Code>145201000</Code><Text>Bombala (A)</Text></Value>
-<Value><Code>145101050</Code><Text>Boorowa (A)</Text></Value>
-<Value><Code>105051100</Code><Text>Botany Bay (C)</Text></Value>
-<Value><Code>135151150</Code><Text>Bourke (A)</Text></Value>
-<Value><Code>135151200</Code><Text>Brewarrina (A)</Text></Value>
-<Value><Code>160101250</Code><Text>Broken Hill (C)</Text></Value>
-<Value><Code>105351300</Code><Text>Burwood (A)</Text></Value>
-<Value><Code>120101350</Code><Text>Byron (A)</Text></Value>
-<Value><Code>140071400</Code><Text>Cabonne (A)</Text></Value>
-<Value><Code>105301450</Code><Text>Camden (A)</Text></Value>
-<Value><Code>105301501</Code><Text>Campbelltown (C) - North</Text></Value>
-<Value><Code>105301504</Code><Text>Campbelltown (C) - South</Text></Value>
-<Value><Code>105351521</Code><Text>Canada Bay (A) - Concord</Text></Value>
-<Value><Code>105351524</Code><Text>Canada Bay (A) - Drummoyne</Text></Value>
-<Value><Code>105201550</Code><Text>Canterbury (C)</Text></Value>
-<Value><Code>150151600</Code><Text>Carrathool (A)</Text></Value>
-<Value><Code>160101700</Code><Text>Central Darling (A)</Text></Value>
-<Value><Code>110051720</Code><Text>Cessnock (C)</Text></Value>
-<Value><Code>125051736</Code><Text>Clarence Valley (A) - Coast</Text></Value>
-<Value><Code>125051737</Code><Text>Clarence Valley (A) - Grafton</Text></Value>
-<Value><Code>125051738</Code><Text>Clarence Valley (A) Bal</Text></Value>
-<Value><Code>135151750</Code><Text>Cobar (A)</Text></Value>
-<Value><Code>125011801</Code><Text>Coffs Harbour (C) - Pt A</Text></Value>
-<Value><Code>125051804</Code><Text>Coffs Harbour (C) - Pt B</Text></Value>
-<Value><Code>155151860</Code><Text>Conargo (A)</Text></Value>
-<Value><Code>150102000</Code><Text>Coolamon (A)</Text></Value>
-<Value><Code>145202050</Code><Text>Cooma-Monaro (A)</Text></Value>
-<Value><Code>135102150</Code><Text>Coonamble (A)</Text></Value>
-<Value><Code>150102200</Code><Text>Cootamundra (A)</Text></Value>
-<Value><Code>155102300</Code><Text>Corowa Shire (A)</Text></Value>
-<Value><Code>140152350</Code><Text>Cowra (A)</Text></Value>
-<Value><Code>155152500</Code><Text>Deniliquin (A)</Text></Value>
-<Value><Code>135012601</Code><Text>Dubbo (C) - Pt A</Text></Value>
-<Value><Code>135052604</Code><Text>Dubbo (C) - Pt B</Text></Value>
-<Value><Code>110102700</Code><Text>Dungog (A)</Text></Value>
-<Value><Code>145152750</Code><Text>Eurobodalla (A)</Text></Value>
-<Value><Code>105252851</Code><Text>Fairfield (C) - East</Text></Value>
-<Value><Code>105252854</Code><Text>Fairfield (C) - West</Text></Value>
-<Value><Code>140152900</Code><Text>Forbes (A)</Text></Value>
-<Value><Code>135052950</Code><Text>Gilgandra (A)</Text></Value>
-<Value><Code>130153010</Code><Text>Glen Innes Severn (A)</Text></Value>
-<Value><Code>110103050</Code><Text>Gloucester (A)</Text></Value>
-<Value><Code>105703101</Code><Text>Gosford (C) - East</Text></Value>
-<Value><Code>105703104</Code><Text>Gosford (C) - West</Text></Value>
-<Value><Code>145103311</Code><Text>Goulburn Mulwaree (A) - Goulburn</Text></Value>
-<Value><Code>145103314</Code><Text>Goulburn Mulwaree (A) Bal</Text></Value>
-<Value><Code>110103320</Code><Text>Great Lakes (A)</Text></Value>
-<Value><Code>155053341</Code><Text>Greater Hume Shire (A) - Pt A</Text></Value>
-<Value><Code>155103342</Code><Text>Greater Hume Shire (A) - Pt B</Text></Value>
-<Value><Code>125103380</Code><Text>Greater Taree (C)</Text></Value>
-<Value><Code>150153450</Code><Text>Griffith (C)</Text></Value>
-<Value><Code>150103500</Code><Text>Gundagai (A)</Text></Value>
-<Value><Code>130103550</Code><Text>Gunnedah (A)</Text></Value>
-<Value><Code>130153650</Code><Text>Guyra (A)</Text></Value>
-<Value><Code>130103660</Code><Text>Gwydir (A)</Text></Value>
-<Value><Code>145103700</Code><Text>Harden (A)</Text></Value>
-<Value><Code>105453800</Code><Text>Hawkesbury (C)</Text></Value>
-<Value><Code>150153850</Code><Text>Hay (A)</Text></Value>
-<Value><Code>105403950</Code><Text>Holroyd (C)</Text></Value>
-<Value><Code>105604001</Code><Text>Hornsby (A) - North</Text></Value>
-<Value><Code>105604004</Code><Text>Hornsby (A) - South</Text></Value>
-<Value><Code>105554100</Code><Text>Hunters Hill (A)</Text></Value>
-<Value><Code>105154150</Code><Text>Hurstville (C)</Text></Value>
-<Value><Code>130104201</Code><Text>Inverell (A) - Pt A</Text></Value>
-<Value><Code>130154202</Code><Text>Inverell (A) - Pt B</Text></Value>
-<Value><Code>155154250</Code><Text>Jerilderie (A)</Text></Value>
-<Value><Code>150104300</Code><Text>Junee (A)</Text></Value>
-<Value><Code>125104350</Code><Text>Kempsey (A)</Text></Value>
-<Value><Code>115054400</Code><Text>Kiama (A)</Text></Value>
-<Value><Code>105154450</Code><Text>Kogarah (C)</Text></Value>
-<Value><Code>105604500</Code><Text>Ku-ring-gai (A)</Text></Value>
-<Value><Code>120104550</Code><Text>Kyogle (A)</Text></Value>
-<Value><Code>140154600</Code><Text>Lachlan (A)</Text></Value>
-<Value><Code>110054651</Code><Text>Lake Macquarie (C) - East</Text></Value>
-<Value><Code>110054653</Code><Text>Lake Macquarie (C) - North</Text></Value>
-<Value><Code>110054655</Code><Text>Lake Macquarie (C) - West</Text></Value>
-<Value><Code>105554700</Code><Text>Lane Cove (A)</Text></Value>
-<Value><Code>150154750</Code><Text>Leeton (A)</Text></Value>
-<Value><Code>105054800</Code><Text>Leichhardt (A)</Text></Value>
-<Value><Code>120074851</Code><Text>Lismore (C) - Pt A</Text></Value>
-<Value><Code>120104854</Code><Text>Lismore (C) - Pt B</Text></Value>
-<Value><Code>140074870</Code><Text>Lithgow (C)</Text></Value>
-<Value><Code>105254901</Code><Text>Liverpool (C) - East</Text></Value>
-<Value><Code>105254904</Code><Text>Liverpool (C) - West</Text></Value>
-<Value><Code>130104920</Code><Text>Liverpool Plains (A)</Text></Value>
-<Value><Code>150104950</Code><Text>Lockhart (A)</Text></Value>
-<Value><Code>110055050</Code><Text>Maitland (C)</Text></Value>
-<Value><Code>105655150</Code><Text>Manly (A)</Text></Value>
-<Value><Code>105055200</Code><Text>Marrickville (A)</Text></Value>
-<Value><Code>135055271</Code><Text>Mid-Western Regional (A) - Pt A</Text></Value>
-<Value><Code>140075274</Code><Text>Mid-Western Regional (A) - Pt B</Text></Value>
-<Value><Code>130205300</Code><Text>Moree Plains (A)</Text></Value>
-<Value><Code>105555350</Code><Text>Mosman (A)</Text></Value>
-<Value><Code>155155500</Code><Text>Murray (A)</Text></Value>
-<Value><Code>150155550</Code><Text>Murrumbidgee (A)</Text></Value>
-<Value><Code>110105650</Code><Text>Muswellbrook (A)</Text></Value>
-<Value><Code>125055700</Code><Text>Nambucca (A)</Text></Value>
-<Value><Code>130205750</Code><Text>Narrabri (A)</Text></Value>
-<Value><Code>150105800</Code><Text>Narrandera (A)</Text></Value>
-<Value><Code>135055850</Code><Text>Narromine (A)</Text></Value>
-<Value><Code>110055903</Code><Text>Newcastle (C) - Inner City</Text></Value>
-<Value><Code>110055904</Code><Text>Newcastle (C) - Outer West</Text></Value>
-<Value><Code>110055905</Code><Text>Newcastle (C) - Throsby</Text></Value>
-<Value><Code>105555950</Code><Text>North Sydney (A)</Text></Value>
-<Value><Code>140076100</Code><Text>Oberon (A)</Text></Value>
-<Value><Code>140206150</Code><Text>Orange (C)</Text></Value>
-<Value><Code>145056181</Code><Text>Palerang (A) - Pt A</Text></Value>
-<Value><Code>145106184</Code><Text>Palerang (A) - Pt B</Text></Value>
-<Value><Code>140156200</Code><Text>Parkes (A)</Text></Value>
-<Value><Code>105406251</Code><Text>Parramatta (C) - Inner</Text></Value>
-<Value><Code>105406252</Code><Text>Parramatta (C) - North-East</Text></Value>
-<Value><Code>105406253</Code><Text>Parramatta (C) - North-West</Text></Value>
-<Value><Code>105406254</Code><Text>Parramatta (C) - South</Text></Value>
-<Value><Code>105456351</Code><Text>Penrith (C) - East</Text></Value>
-<Value><Code>105456354</Code><Text>Penrith (C) - West</Text></Value>
-<Value><Code>105656370</Code><Text>Pittwater (A)</Text></Value>
-<Value><Code>125036381</Code><Text>Port Macquarie-Hastings (A) - Pt A</Text></Value>
-<Value><Code>125106385</Code><Text>Port Macquarie-Hastings (A) - Pt B</Text></Value>
-<Value><Code>110056400</Code><Text>Port Stephens (A)</Text></Value>
-<Value><Code>145056470</Code><Text>Queanbeyan (C)</Text></Value>
-<Value><Code>105106550</Code><Text>Randwick (C)</Text></Value>
-<Value><Code>120106611</Code><Text>Richmond Valley (A) - Casino</Text></Value>
-<Value><Code>120106612</Code><Text>Richmond Valley (A) Bal</Text></Value>
-<Value><Code>105156650</Code><Text>Rockdale (C)</Text></Value>
-<Value><Code>105556700</Code><Text>Ryde (C)</Text></Value>
-<Value><Code>115056900</Code><Text>Shellharbour (C)</Text></Value>
-<Value><Code>115076951</Code><Text>Shoalhaven (C) - Pt A</Text></Value>
-<Value><Code>115106952</Code><Text>Shoalhaven (C) - Pt B</Text></Value>
-<Value><Code>110107000</Code><Text>Singleton (A)</Text></Value>
-<Value><Code>145207050</Code><Text>Snowy River (A)</Text></Value>
-<Value><Code>105357100</Code><Text>Strathfield (A)</Text></Value>
-<Value><Code>105157151</Code><Text>Sutherland Shire (A) - East</Text></Value>
-<Value><Code>105157152</Code><Text>Sutherland Shire (A) - West</Text></Value>
-<Value><Code>105057204</Code><Text>Sydney (C) - East</Text></Value>
-<Value><Code>105057201</Code><Text>Sydney (C) - Inner</Text></Value>
-<Value><Code>105057205</Code><Text>Sydney (C) - South</Text></Value>
-<Value><Code>105057206</Code><Text>Sydney (C) - West</Text></Value>
-<Value><Code>130057311</Code><Text>Tamworth Regional (A) - Pt A</Text></Value>
-<Value><Code>130107314</Code><Text>Tamworth Regional (A) - Pt B</Text></Value>
-<Value><Code>150107350</Code><Text>Temora (A)</Text></Value>
-<Value><Code>130157400</Code><Text>Tenterfield (A)</Text></Value>
-<Value><Code>105607421</Code><Text>The Hills Shire (A) - Central</Text></Value>
-<Value><Code>105607423</Code><Text>The Hills Shire (A) - North</Text></Value>
-<Value><Code>105607425</Code><Text>The Hills Shire (A) - South</Text></Value>
-<Value><Code>155107450</Code><Text>Tumbarumba (A)</Text></Value>
-<Value><Code>150107500</Code><Text>Tumut Shire (A)</Text></Value>
-<Value><Code>120107558</Code><Text>Tweed (A) - Pt B</Text></Value>
-<Value><Code>120057556</Code><Text>Tweed (A) - Tweed Coast</Text></Value>
-<Value><Code>120057554</Code><Text>Tweed (A) - Tweed-Heads</Text></Value>
-<Value><Code>110107620</Code><Text>Upper Hunter Shire (A)</Text></Value>
-<Value><Code>145107640</Code><Text>Upper Lachlan Shire (A)</Text></Value>
-<Value><Code>130157650</Code><Text>Uralla (A)</Text></Value>
-<Value><Code>155107700</Code><Text>Urana (A)</Text></Value>
-<Value><Code>150057751</Code><Text>Wagga Wagga (C) - Pt A</Text></Value>
-<Value><Code>150107754</Code><Text>Wagga Wagga (C) - Pt B</Text></Value>
-<Value><Code>155157800</Code><Text>Wakool (A)</Text></Value>
-<Value><Code>130157850</Code><Text>Walcha (A)</Text></Value>
-<Value><Code>135107900</Code><Text>Walgett (A)</Text></Value>
-<Value><Code>135107950</Code><Text>Warren (A)</Text></Value>
-<Value><Code>105658000</Code><Text>Warringah (A)</Text></Value>
-<Value><Code>135058020</Code><Text>Warrumbungle Shire (A)</Text></Value>
-<Value><Code>105108050</Code><Text>Waverley (A)</Text></Value>
-<Value><Code>140158100</Code><Text>Weddin (A)</Text></Value>
-<Value><Code>135058150</Code><Text>Wellington (A)</Text></Value>
-<Value><Code>155208200</Code><Text>Wentworth (A)</Text></Value>
-<Value><Code>105558250</Code><Text>Willoughby (C)</Text></Value>
-<Value><Code>115108350</Code><Text>Wingecarribee (A)</Text></Value>
-<Value><Code>105308400</Code><Text>Wollondilly (A)</Text></Value>
-<Value><Code>115058451</Code><Text>Wollongong (C) - Inner</Text></Value>
-<Value><Code>115058454</Code><Text>Wollongong (C) Bal</Text></Value>
-<Value><Code>105108500</Code><Text>Woollahra (A)</Text></Value>
-<Value><Code>105708551</Code><Text>Wyong (A) - North-East</Text></Value>
-<Value><Code>105708554</Code><Text>Wyong (A) - South and West</Text></Value>
-<Value><Code>145108710</Code><Text>Yass Valley (A)</Text></Value>
-<Value><Code>145108750</Code><Text>Young (A)</Text></Value>
-<Value><Code>125108859</Code><Text>Lord Howe Island</Text></Value>
-<Value><Code>185019779</Code><Text>Migratory - Offshore - Shipping (NSW)</Text></Value>
-<Value><Code>160108809</Code><Text>Unincorp. Far West</Text></Value>
-<Value><Code>245150111</Code><Text>Alpine (S) - East</Text></Value>
-<Value><Code>245150112</Code><Text>Alpine (S) - West</Text></Value>
-<Value><Code>220150260</Code><Text>Ararat (RC)</Text></Value>
-<Value><Code>220050571</Code><Text>Ballarat (C) - Central</Text></Value>
-<Value><Code>220050572</Code><Text>Ballarat (C) - Inner North</Text></Value>
-<Value><Code>220050573</Code><Text>Ballarat (C) - North</Text></Value>
-<Value><Code>220050574</Code><Text>Ballarat (C) - South</Text></Value>
-<Value><Code>205300661</Code><Text>Banyule (C) - Heidelberg</Text></Value>
-<Value><Code>205300662</Code><Text>Banyule (C) - North</Text></Value>
-<Value><Code>255200741</Code><Text>Bass Coast (S) - Phillip Is.</Text></Value>
-<Value><Code>255200744</Code><Text>Bass Coast (S) Bal</Text></Value>
-<Value><Code>255050831</Code><Text>Baw Baw (S) - Pt A</Text></Value>
-<Value><Code>255100834</Code><Text>Baw Baw (S) - Pt B East</Text></Value>
-<Value><Code>255100835</Code><Text>Baw Baw (S) - Pt B West</Text></Value>
-<Value><Code>205650911</Code><Text>Bayside (C) - Brighton</Text></Value>
-<Value><Code>205650912</Code><Text>Bayside (C) - South</Text></Value>
-<Value><Code>240151011</Code><Text>Benalla (RC) - Benalla</Text></Value>
-<Value><Code>240151014</Code><Text>Benalla (RC) Bal</Text></Value>
-<Value><Code>205451111</Code><Text>Boroondara (C) - Camberwell N.</Text></Value>
-<Value><Code>205451112</Code><Text>Boroondara (C) - Camberwell S.</Text></Value>
-<Value><Code>205451113</Code><Text>Boroondara (C) - Hawthorn</Text></Value>
-<Value><Code>205451114</Code><Text>Boroondara (C) - Kew</Text></Value>
-<Value><Code>205101181</Code><Text>Brimbank (C) - Keilor</Text></Value>
-<Value><Code>205101182</Code><Text>Brimbank (C) - Sunshine</Text></Value>
-<Value><Code>230101271</Code><Text>Buloke (S) - North</Text></Value>
-<Value><Code>230101272</Code><Text>Buloke (S) - South</Text></Value>
-<Value><Code>240101371</Code><Text>Campaspe (S) - Echuca</Text></Value>
-<Value><Code>240101374</Code><Text>Campaspe (S) - Kyabram</Text></Value>
-<Value><Code>240101375</Code><Text>Campaspe (S) - Rochester</Text></Value>
-<Value><Code>240101376</Code><Text>Campaspe (S) - South</Text></Value>
-<Value><Code>205801452</Code><Text>Cardinia (S) - North</Text></Value>
-<Value><Code>205801453</Code><Text>Cardinia (S) - Pakenham</Text></Value>
-<Value><Code>205801454</Code><Text>Cardinia (S) - South</Text></Value>
-<Value><Code>205801612</Code><Text>Casey (C) - Berwick</Text></Value>
-<Value><Code>205801613</Code><Text>Casey (C) - Cranbourne</Text></Value>
-<Value><Code>205801616</Code><Text>Casey (C) - Hallam</Text></Value>
-<Value><Code>205801618</Code><Text>Casey (C) - South</Text></Value>
-<Value><Code>235101671</Code><Text>C. Goldfields (S) - M'borough</Text></Value>
-<Value><Code>235101674</Code><Text>C. Goldfields (S) Bal</Text></Value>
-<Value><Code>210151751</Code><Text>Colac-Otway (S) - Colac</Text></Value>
-<Value><Code>210151754</Code><Text>Colac-Otway (S) - North</Text></Value>
-<Value><Code>210151755</Code><Text>Colac-Otway (S) - South</Text></Value>
-<Value><Code>215051831</Code><Text>Corangamite (S) - North</Text></Value>
-<Value><Code>215051832</Code><Text>Corangamite (S) - South</Text></Value>
-<Value><Code>205301891</Code><Text>Darebin (C) - Northcote</Text></Value>
-<Value><Code>205301892</Code><Text>Darebin (C) - Preston</Text></Value>
-<Value><Code>250052111</Code><Text>E. Gippsland (S) - Bairnsdale</Text></Value>
-<Value><Code>250052113</Code><Text>E. Gippsland (S) - Orbost</Text></Value>
-<Value><Code>250052115</Code><Text>E. Gippsland (S) - South-West</Text></Value>
-<Value><Code>250052117</Code><Text>E. Gippsland (S) Bal</Text></Value>
-<Value><Code>205852171</Code><Text>Frankston (C) - East</Text></Value>
-<Value><Code>205852174</Code><Text>Frankston (C) - West</Text></Value>
-<Value><Code>230152250</Code><Text>Gannawarra (S)</Text></Value>
-<Value><Code>205652311</Code><Text>Glen Eira (C) - Caulfield</Text></Value>
-<Value><Code>205652314</Code><Text>Glen Eira (C) - South</Text></Value>
-<Value><Code>215102411</Code><Text>Glenelg (S) - Heywood</Text></Value>
-<Value><Code>215102412</Code><Text>Glenelg (S) - North</Text></Value>
-<Value><Code>215102413</Code><Text>Glenelg (S) - Portland</Text></Value>
-<Value><Code>210152491</Code><Text>Golden Plains (S) - North-West</Text></Value>
-<Value><Code>210152492</Code><Text>Golden Plains (S) - South-East</Text></Value>
-<Value><Code>235052621</Code><Text>Gr. Bendigo (C) - Central</Text></Value>
-<Value><Code>235052622</Code><Text>Gr. Bendigo (C) - Eaglehawk</Text></Value>
-<Value><Code>235052623</Code><Text>Gr. Bendigo (C) - Inner East</Text></Value>
-<Value><Code>235052624</Code><Text>Gr. Bendigo (C) - Inner North</Text></Value>
-<Value><Code>235052625</Code><Text>Gr. Bendigo (C) - Inner West</Text></Value>
-<Value><Code>235102628</Code><Text>Gr. Bendigo (C) - Pt B</Text></Value>
-<Value><Code>235052626</Code><Text>Gr. Bendigo (C) - S'saye</Text></Value>
-<Value><Code>205752671</Code><Text>Gr. Dandenong (C) - Dandenong</Text></Value>
-<Value><Code>205752674</Code><Text>Gr. Dandenong (C) Bal</Text></Value>
-<Value><Code>210052751</Code><Text>Bellarine - Inner</Text></Value>
-<Value><Code>210052752</Code><Text>Corio - Inner</Text></Value>
-<Value><Code>210052753</Code><Text>Geelong</Text></Value>
-<Value><Code>210052754</Code><Text>Geelong West</Text></Value>
-<Value><Code>210102757</Code><Text>Greater Geelong (C) - Pt B</Text></Value>
-<Value><Code>210152758</Code><Text>Greater Geelong (C) - Pt C</Text></Value>
-<Value><Code>210052755</Code><Text>Newtown</Text></Value>
-<Value><Code>210052756</Code><Text>South Barwon - Inner</Text></Value>
-<Value><Code>240052831</Code><Text>Gr. Shepparton (C) - Pt A</Text></Value>
-<Value><Code>240102834</Code><Text>Gr. Shepparton (C) - Pt B East</Text></Value>
-<Value><Code>240102835</Code><Text>Gr. Shepparton (C) - Pt B West</Text></Value>
-<Value><Code>220102911</Code><Text>Hepburn (S) - East</Text></Value>
-<Value><Code>220102912</Code><Text>Hepburn (S) - West</Text></Value>
-<Value><Code>225102980</Code><Text>Hindmarsh (S)</Text></Value>
-<Value><Code>205103111</Code><Text>Hobsons Bay (C) - Altona</Text></Value>
-<Value><Code>205103112</Code><Text>Hobsons Bay (C) - Williamstown</Text></Value>
-<Value><Code>225053191</Code><Text>Horsham (RC) - Central</Text></Value>
-<Value><Code>225053194</Code><Text>Horsham (RC) Bal</Text></Value>
-<Value><Code>205353271</Code><Text>Hume (C) - Broadmeadows</Text></Value>
-<Value><Code>205353274</Code><Text>Hume (C) - Craigieburn</Text></Value>
-<Value><Code>205353275</Code><Text>Hume (C) - Sunbury</Text></Value>
-<Value><Code>245053351</Code><Text>Indigo (S) - Pt A</Text></Value>
-<Value><Code>245103352</Code><Text>Indigo (S) - Pt B</Text></Value>
-<Value><Code>205653431</Code><Text>Kingston (C) - North</Text></Value>
-<Value><Code>205653434</Code><Text>Kingston (C) - South</Text></Value>
-<Value><Code>205553672</Code><Text>Knox (C) - North-East</Text></Value>
-<Value><Code>205553673</Code><Text>Knox (C) - North-West</Text></Value>
-<Value><Code>205553674</Code><Text>Knox (C) - South</Text></Value>
-<Value><Code>255053811</Code><Text>Latrobe (C) - Moe</Text></Value>
-<Value><Code>255053814</Code><Text>Latrobe (C) - Morwell</Text></Value>
-<Value><Code>255053815</Code><Text>Latrobe (C) - Traralgon</Text></Value>
-<Value><Code>255053818</Code><Text>Latrobe (C) Bal</Text></Value>
-<Value><Code>235103943</Code><Text>Loddon (S) - North</Text></Value>
-<Value><Code>235103945</Code><Text>Loddon (S) - South</Text></Value>
-<Value><Code>235204131</Code><Text>Macedon Ranges (S) - Kyneton</Text></Value>
-<Value><Code>235204134</Code><Text>Macedon Ranges (S) - Romsey</Text></Value>
-<Value><Code>235204135</Code><Text>Macedon Ranges (S) Bal</Text></Value>
-<Value><Code>205504211</Code><Text>Manningham (C) - East</Text></Value>
-<Value><Code>205504214</Code><Text>Manningham (C) - West</Text></Value>
-<Value><Code>240154250</Code><Text>Mansfield (S)</Text></Value>
-<Value><Code>205104330</Code><Text>Maribyrnong (C)</Text></Value>
-<Value><Code>205554411</Code><Text>Maroondah (C) - Croydon</Text></Value>
-<Value><Code>205554412</Code><Text>Maroondah (C) - Ringwood</Text></Value>
-<Value><Code>205054601</Code><Text>Melbourne (C) - Inner</Text></Value>
-<Value><Code>205054608</Code><Text>Melbourne (C) - Remainder</Text></Value>
-<Value><Code>205054605</Code><Text>Melbourne (C) - S'bank-D'lands</Text></Value>
-<Value><Code>205204651</Code><Text>Melton (S) - East</Text></Value>
-<Value><Code>205204654</Code><Text>Melton (S) Bal</Text></Value>
-<Value><Code>230054781</Code><Text>Mildura (RC) - Pt A</Text></Value>
-<Value><Code>230104782</Code><Text>Mildura (RC) - Pt B</Text></Value>
-<Value><Code>240204851</Code><Text>Mitchell (S) - North</Text></Value>
-<Value><Code>240204854</Code><Text>Mitchell (S) - South</Text></Value>
-<Value><Code>240104901</Code><Text>Moira (S) - East</Text></Value>
-<Value><Code>240104904</Code><Text>Moira (S) - West</Text></Value>
-<Value><Code>205504971</Code><Text>Monash (C) - South-West</Text></Value>
-<Value><Code>205504974</Code><Text>Monash (C) - Waverley East</Text></Value>
-<Value><Code>205504975</Code><Text>Monash (C) - Waverley West</Text></Value>
-<Value><Code>205105063</Code><Text>Moonee Valley (C) - Essendon</Text></Value>
-<Value><Code>205105065</Code><Text>Moonee Valley (C) - West</Text></Value>
-<Value><Code>220105151</Code><Text>Moorabool (S) - Bacchus Marsh</Text></Value>
-<Value><Code>220105154</Code><Text>Moorabool (S) - Ballan</Text></Value>
-<Value><Code>220105155</Code><Text>Moorabool (S) - West</Text></Value>
-<Value><Code>205255251</Code><Text>Moreland (C) - Brunswick</Text></Value>
-<Value><Code>205255252</Code><Text>Moreland (C) - Coburg</Text></Value>
-<Value><Code>205255253</Code><Text>Moreland (C) - North</Text></Value>
-<Value><Code>205905341</Code><Text>Mornington P'sula (S) - East</Text></Value>
-<Value><Code>205905344</Code><Text>Mornington P'sula (S) - South</Text></Value>
-<Value><Code>205905345</Code><Text>Mornington P'sula (S) - West</Text></Value>
-<Value><Code>235105431</Code><Text>Mount Alexander (S) - C'maine</Text></Value>
-<Value><Code>235105434</Code><Text>Mount Alexander (S) Bal</Text></Value>
-<Value><Code>215055491</Code><Text>Moyne (S) - North-East</Text></Value>
-<Value><Code>215055493</Code><Text>Moyne (S) - North-West</Text></Value>
-<Value><Code>215055496</Code><Text>Moyne (S) - South</Text></Value>
-<Value><Code>240205621</Code><Text>Murrindindi (S) - East</Text></Value>
-<Value><Code>240205622</Code><Text>Murrindindi (S) - West</Text></Value>
-<Value><Code>205405713</Code><Text>Nillumbik (S) - South</Text></Value>
-<Value><Code>205405715</Code><Text>Nillumbik (S) - South-West</Text></Value>
-<Value><Code>205405718</Code><Text>Nillumbik (S) Bal</Text></Value>
-<Value><Code>225055811</Code><Text>N. Grampians (S) - St Arnaud</Text></Value>
-<Value><Code>225055814</Code><Text>N. Grampians (S) - Stawell</Text></Value>
-<Value><Code>205055901</Code><Text>Port Phillip (C) - St Kilda</Text></Value>
-<Value><Code>205055902</Code><Text>Port Phillip (C) - West</Text></Value>
-<Value><Code>220155991</Code><Text>Pyrenees (S) - North</Text></Value>
-<Value><Code>220155994</Code><Text>Pyrenees (S) - South</Text></Value>
-<Value><Code>210106080</Code><Text>Queenscliffe (B)</Text></Value>
-<Value><Code>255206171</Code><Text>South Gippsland (S) - Central</Text></Value>
-<Value><Code>255206174</Code><Text>South Gippsland (S) - East</Text></Value>
-<Value><Code>255206175</Code><Text>South Gippsland (S) - West</Text></Value>
-<Value><Code>215106261</Code><Text>S. Grampians (S) - Hamilton</Text></Value>
-<Value><Code>215106264</Code><Text>S. Grampians (S) - Wannon</Text></Value>
-<Value><Code>215106265</Code><Text>S. Grampians (S) Bal</Text></Value>
-<Value><Code>205656352</Code><Text>Stonnington (C) - Malvern</Text></Value>
-<Value><Code>205056351</Code><Text>Stonnington (C) - Prahran</Text></Value>
-<Value><Code>240156430</Code><Text>Strathbogie (S)</Text></Value>
-<Value><Code>210106493</Code><Text>Surf Coast (S) - East</Text></Value>
-<Value><Code>210106495</Code><Text>Surf Coast (S) - West</Text></Value>
-<Value><Code>230156611</Code><Text>Swan Hill (RC) - Central</Text></Value>
-<Value><Code>230156614</Code><Text>Swan Hill (RC) - Robinvale</Text></Value>
-<Value><Code>230156616</Code><Text>Swan Hill (RC) Bal</Text></Value>
-<Value><Code>245056671</Code><Text>Towong (S) - Pt A</Text></Value>
-<Value><Code>245156672</Code><Text>Towong (S) - Pt B</Text></Value>
-<Value><Code>245106701</Code><Text>Wangaratta (RC) - Central</Text></Value>
-<Value><Code>245106704</Code><Text>Wangaratta (RC) - North</Text></Value>
-<Value><Code>245106705</Code><Text>Wangaratta (RC) - South</Text></Value>
-<Value><Code>215016730</Code><Text>Warrnambool (C)</Text></Value>
-<Value><Code>250156811</Code><Text>Wellington (S) - Alberton</Text></Value>
-<Value><Code>250156812</Code><Text>Wellington (S) - Avon</Text></Value>
-<Value><Code>250156813</Code><Text>Wellington (S) - Maffra</Text></Value>
-<Value><Code>250156814</Code><Text>Wellington (S) - Rosedale</Text></Value>
-<Value><Code>250156815</Code><Text>Wellington (S) - Sale</Text></Value>
-<Value><Code>225056890</Code><Text>West Wimmera (S)</Text></Value>
-<Value><Code>205506981</Code><Text>Whitehorse (C) - Box Hill</Text></Value>
-<Value><Code>205506984</Code><Text>Whitehorse (C) - Nunawading E.</Text></Value>
-<Value><Code>205506985</Code><Text>Whitehorse (C) - Nunawading W.</Text></Value>
-<Value><Code>205407071</Code><Text>Whittlesea (C) - North</Text></Value>
-<Value><Code>205407075</Code><Text>Whittlesea (C) - South-East</Text></Value>
-<Value><Code>205407076</Code><Text>Whittlesea (C) - South-West</Text></Value>
-<Value><Code>245057170</Code><Text>Wodonga (RC)</Text></Value>
-<Value><Code>205207261</Code><Text>Wyndham (C) - North</Text></Value>
-<Value><Code>205207264</Code><Text>Wyndham (C) - South</Text></Value>
-<Value><Code>205207267</Code><Text>Wyndham (C) - West</Text></Value>
-<Value><Code>205057351</Code><Text>Yarra (C) - North</Text></Value>
-<Value><Code>205057352</Code><Text>Yarra (C) - Richmond</Text></Value>
-<Value><Code>205607451</Code><Text>Yarra Ranges (S) - Central</Text></Value>
-<Value><Code>205607452</Code><Text>Yarra Ranges (S) - Dandenongs</Text></Value>
-<Value><Code>205607453</Code><Text>Yarra Ranges (S) - Lilydale</Text></Value>
-<Value><Code>205607454</Code><Text>Yarra Ranges (S) - North</Text></Value>
-<Value><Code>255107458</Code><Text>Yarra Ranges (S) - Pt B</Text></Value>
-<Value><Code>205607456</Code><Text>Yarra Ranges (S) - Seville</Text></Value>
-<Value><Code>225107631</Code><Text>Yarriambiack (S) - North</Text></Value>
-<Value><Code>225107632</Code><Text>Yarriambiack (S) - South</Text></Value>
-<Value><Code>255208649</Code><Text>Bass Strait Islands</Text></Value>
-<Value><Code>245158109</Code><Text>Falls Creek Alpine Resort</Text></Value>
-<Value><Code>255208529</Code><Text>French Island</Text></Value>
-<Value><Code>215058469</Code><Text>Lady Julia Percy Island</Text></Value>
-<Value><Code>240208149</Code><Text>Lake Mountain Alpine Resort</Text></Value>
-<Value><Code>285019779</Code><Text>Migratory - Offshore - Shipping (Vic.)</Text></Value>
-<Value><Code>255108209</Code><Text>Mount Baw Baw Alpine Resort</Text></Value>
-<Value><Code>240158249</Code><Text>Mount Buller Alpine Resort</Text></Value>
-<Value><Code>245158309</Code><Text>Mount Hotham Alpine Resort</Text></Value>
-<Value><Code>240158349</Code><Text>Mount Stirling Alpine Resort</Text></Value>
-<Value><Code>350100250</Code><Text>Aurukun (S)</Text></Value>
-<Value><Code>325050300</Code><Text>Balonne (S)</Text></Value>
-<Value><Code>330150370</Code><Text>Banana (S)</Text></Value>
-<Value><Code>335050412</Code><Text>Barcaldine (R) - Aramac</Text></Value>
-<Value><Code>335050416</Code><Text>Barcaldine (R) - Barcaldine</Text></Value>
-<Value><Code>335050418</Code><Text>Barcaldine (R) - Jericho</Text></Value>
-<Value><Code>335050450</Code><Text>Barcoo (S)</Text></Value>
-<Value><Code>335050762</Code><Text>Blackall Tambo (R) - Blackall</Text></Value>
-<Value><Code>335050765</Code><Text>Blackall Tambo (R) - Tambo</Text></Value>
-<Value><Code>335050900</Code><Text>Boulia (S)</Text></Value>
-<Value><Code>305111001</Code><Text>Acacia Ridge</Text></Value>
-<Value><Code>305031004</Code><Text>Albion</Text></Value>
-<Value><Code>305031007</Code><Text>Alderley</Text></Value>
-<Value><Code>305111012</Code><Text>Algester</Text></Value>
-<Value><Code>305091015</Code><Text>Annerley</Text></Value>
-<Value><Code>305071018</Code><Text>Anstead</Text></Value>
-<Value><Code>305111023</Code><Text>Archerfield</Text></Value>
-<Value><Code>305031026</Code><Text>Ascot</Text></Value>
-<Value><Code>305031031</Code><Text>Ashgrove</Text></Value>
-<Value><Code>305071034</Code><Text>Aspley</Text></Value>
-<Value><Code>305071037</Code><Text>Bald Hills</Text></Value>
-<Value><Code>305091042</Code><Text>Balmoral</Text></Value>
-<Value><Code>305071045</Code><Text>Banyo</Text></Value>
-<Value><Code>305031048</Code><Text>Bardon</Text></Value>
-<Value><Code>305071053</Code><Text>Bellbowrie</Text></Value>
-<Value><Code>305111057</Code><Text>Belmont-Mackenzie</Text></Value>
-<Value><Code>305071064</Code><Text>Boondall</Text></Value>
-<Value><Code>305011067</Code><Text>Bowen Hills</Text></Value>
-<Value><Code>305071072</Code><Text>Bracken Ridge</Text></Value>
-<Value><Code>305071075</Code><Text>Bridgeman Downs</Text></Value>
-<Value><Code>305071078</Code><Text>Brighton</Text></Value>
-<Value><Code>305071084</Code><Text>Brookfield (incl. Brisbane Forest Park)</Text></Value>
-<Value><Code>305091086</Code><Text>Bulimba</Text></Value>
-<Value><Code>305111091</Code><Text>Burbank</Text></Value>
-<Value><Code>305111094</Code><Text>Calamvale</Text></Value>
-<Value><Code>305091097</Code><Text>Camp Hill</Text></Value>
-<Value><Code>305091102</Code><Text>Cannon Hill</Text></Value>
-<Value><Code>305091113</Code><Text>Carina</Text></Value>
-<Value><Code>305091116</Code><Text>Carina Heights</Text></Value>
-<Value><Code>305091108</Code><Text>Carindale</Text></Value>
-<Value><Code>305071121</Code><Text>Carseldine</Text></Value>
-<Value><Code>305111123</Code><Text>Chandler-Capalaba West</Text></Value>
-<Value><Code>305071127</Code><Text>Chapel Hill</Text></Value>
-<Value><Code>305031132</Code><Text>Chelmer</Text></Value>
-<Value><Code>305071135</Code><Text>Chermside</Text></Value>
-<Value><Code>305071138</Code><Text>Chermside West</Text></Value>
-<Value><Code>305011143</Code><Text>City - Inner</Text></Value>
-<Value><Code>305011146</Code><Text>City - Remainder</Text></Value>
-<Value><Code>305031151</Code><Text>Clayfield</Text></Value>
-<Value><Code>305111154</Code><Text>Coopers Plains</Text></Value>
-<Value><Code>305091157</Code><Text>Coorparoo</Text></Value>
-<Value><Code>305031162</Code><Text>Corinda</Text></Value>
-<Value><Code>305071167</Code><Text>Darra-Sumner</Text></Value>
-<Value><Code>305071173</Code><Text>Deagon</Text></Value>
-<Value><Code>305071176</Code><Text>Doolandella-Forest Lake</Text></Value>
-<Value><Code>305071184</Code><Text>Durack</Text></Value>
-<Value><Code>305011187</Code><Text>Dutton Park</Text></Value>
-<Value><Code>305091195</Code><Text>East Brisbane</Text></Value>
-<Value><Code>305111198</Code><Text>Eight Mile Plains</Text></Value>
-<Value><Code>305071203</Code><Text>Ellen Grove</Text></Value>
-<Value><Code>305031206</Code><Text>Enoggera</Text></Value>
-<Value><Code>305071211</Code><Text>Everton Park</Text></Value>
-<Value><Code>305091214</Code><Text>Fairfield</Text></Value>
-<Value><Code>305071217</Code><Text>Ferny Grove</Text></Value>
-<Value><Code>305071222</Code><Text>Fig Tree Pocket</Text></Value>
-<Value><Code>305011227</Code><Text>Fortitude Valley</Text></Value>
-<Value><Code>305071236</Code><Text>Geebung</Text></Value>
-<Value><Code>305031241</Code><Text>Graceville</Text></Value>
-<Value><Code>305031244</Code><Text>Grange</Text></Value>
-<Value><Code>305091247</Code><Text>Greenslopes</Text></Value>
-<Value><Code>305111251</Code><Text>Gumdale-Ransome</Text></Value>
-<Value><Code>305031255</Code><Text>Hamilton</Text></Value>
-<Value><Code>305091258</Code><Text>Hawthorne</Text></Value>
-<Value><Code>305111265</Code><Text>Hemmant-Lytton</Text></Value>
-<Value><Code>305031271</Code><Text>Hendra</Text></Value>
-<Value><Code>305011274</Code><Text>Herston</Text></Value>
-<Value><Code>305011277</Code><Text>Highgate Hill</Text></Value>
-<Value><Code>305091282</Code><Text>Holland Park</Text></Value>
-<Value><Code>305091285</Code><Text>Holland Park West</Text></Value>
-<Value><Code>305071288</Code><Text>Inala</Text></Value>
-<Value><Code>305031293</Code><Text>Indooroopilly</Text></Value>
-<Value><Code>305071296</Code><Text>Jamboree Heights</Text></Value>
-<Value><Code>305071301</Code><Text>Jindalee</Text></Value>
-<Value><Code>305011304</Code><Text>Kangaroo Point</Text></Value>
-<Value><Code>305071306</Code><Text>Karana Downs-Lake Manchester</Text></Value>
-<Value><Code>305031312</Code><Text>Kedron</Text></Value>
-<Value><Code>305011315</Code><Text>Kelvin Grove</Text></Value>
-<Value><Code>305071318</Code><Text>Kenmore</Text></Value>
-<Value><Code>305071323</Code><Text>Kenmore Hills</Text></Value>
-<Value><Code>305071326</Code><Text>Keperra</Text></Value>
-<Value><Code>305111331</Code><Text>Kuraby</Text></Value>
-<Value><Code>305111337</Code><Text>Lota</Text></Value>
-<Value><Code>305031345</Code><Text>Lutwyche</Text></Value>
-<Value><Code>305111356</Code><Text>MacGregor</Text></Value>
-<Value><Code>305111364</Code><Text>Manly</Text></Value>
-<Value><Code>305111367</Code><Text>Manly West</Text></Value>
-<Value><Code>305111372</Code><Text>Mansfield</Text></Value>
-<Value><Code>305071353</Code><Text>McDowall</Text></Value>
-<Value><Code>305071375</Code><Text>Middle Park</Text></Value>
-<Value><Code>305011378</Code><Text>Milton</Text></Value>
-<Value><Code>305071383</Code><Text>Mitchelton</Text></Value>
-<Value><Code>305071386</Code><Text>Moggill</Text></Value>
-<Value><Code>305091391</Code><Text>Moorooka</Text></Value>
-<Value><Code>305111394</Code><Text>Moreton Island</Text></Value>
-<Value><Code>305091397</Code><Text>Morningside</Text></Value>
-<Value><Code>305111402</Code><Text>Mount Gravatt</Text></Value>
-<Value><Code>305111405</Code><Text>Mount Gravatt East</Text></Value>
-<Value><Code>305071408</Code><Text>Mount Ommaney</Text></Value>
-<Value><Code>305111413</Code><Text>Murarrie</Text></Value>
-<Value><Code>305111416</Code><Text>Nathan</Text></Value>
-<Value><Code>305011421</Code><Text>New Farm</Text></Value>
-<Value><Code>305031424</Code><Text>Newmarket</Text></Value>
-<Value><Code>305011427</Code><Text>Newstead</Text></Value>
-<Value><Code>305091432</Code><Text>Norman Park</Text></Value>
-<Value><Code>305071435</Code><Text>Northgate</Text></Value>
-<Value><Code>305071442</Code><Text>Nudgee</Text></Value>
-<Value><Code>305031446</Code><Text>Nundah</Text></Value>
-<Value><Code>305071451</Code><Text>Oxley</Text></Value>
-<Value><Code>305011454</Code><Text>Paddington</Text></Value>
-<Value><Code>305111456</Code><Text>Pallara-Heathwood-Larapinta</Text></Value>
-<Value><Code>305111463</Code><Text>Parkinson-Drewvale</Text></Value>
-<Value><Code>305071465</Code><Text>Pinjarra Hills</Text></Value>
-<Value><Code>305071467</Code><Text>Pinkenba-Eagle Farm</Text></Value>
-<Value><Code>305071473</Code><Text>Pullenvale</Text></Value>
-<Value><Code>305011481</Code><Text>Red Hill</Text></Value>
-<Value><Code>305071484</Code><Text>Richlands</Text></Value>
-<Value><Code>305071487</Code><Text>Riverhills</Text></Value>
-<Value><Code>305111492</Code><Text>Robertson</Text></Value>
-<Value><Code>305111495</Code><Text>Rochedale</Text></Value>
-<Value><Code>305111498</Code><Text>Rocklea</Text></Value>
-<Value><Code>305111503</Code><Text>Runcorn</Text></Value>
-<Value><Code>305111511</Code><Text>Salisbury</Text></Value>
-<Value><Code>305071514</Code><Text>Sandgate</Text></Value>
-<Value><Code>305071517</Code><Text>Seventeen Mile Rocks</Text></Value>
-<Value><Code>305031522</Code><Text>Sherwood</Text></Value>
-<Value><Code>305011525</Code><Text>South Brisbane</Text></Value>
-<Value><Code>305011528</Code><Text>Spring Hill</Text></Value>
-<Value><Code>305031506</Code><Text>St Lucia</Text></Value>
-<Value><Code>305031533</Code><Text>Stafford</Text></Value>
-<Value><Code>305031536</Code><Text>Stafford Heights</Text></Value>
-<Value><Code>305111541</Code><Text>Stretton-Karawatha</Text></Value>
-<Value><Code>305111547</Code><Text>Sunnybank</Text></Value>
-<Value><Code>305111552</Code><Text>Sunnybank Hills</Text></Value>
-<Value><Code>305071556</Code><Text>Taigum-Fitzgibbon</Text></Value>
-<Value><Code>305031558</Code><Text>Taringa</Text></Value>
-<Value><Code>305091563</Code><Text>Tarragindi</Text></Value>
-<Value><Code>305071567</Code><Text>The Gap</Text></Value>
-<Value><Code>305111571</Code><Text>Tingalpa</Text></Value>
-<Value><Code>305031574</Code><Text>Toowong</Text></Value>
-<Value><Code>305071585</Code><Text>Upper Kedron</Text></Value>
-<Value><Code>305111588</Code><Text>Upper Mount Gravatt</Text></Value>
-<Value><Code>305071593</Code><Text>Virginia</Text></Value>
-<Value><Code>305071596</Code><Text>Wacol</Text></Value>
-<Value><Code>305111601</Code><Text>Wakerley</Text></Value>
-<Value><Code>305071604</Code><Text>Wavell Heights</Text></Value>
-<Value><Code>305011607</Code><Text>West End</Text></Value>
-<Value><Code>305071612</Code><Text>Westlake</Text></Value>
-<Value><Code>305111615</Code><Text>Willawong</Text></Value>
-<Value><Code>305031618</Code><Text>Wilston</Text></Value>
-<Value><Code>305031623</Code><Text>Windsor</Text></Value>
-<Value><Code>305111626</Code><Text>Wishart</Text></Value>
-<Value><Code>305011631</Code><Text>Woolloongabba</Text></Value>
-<Value><Code>305031634</Code><Text>Wooloowin</Text></Value>
-<Value><Code>305111637</Code><Text>Wynnum</Text></Value>
-<Value><Code>305111642</Code><Text>Wynnum West</Text></Value>
-<Value><Code>305091645</Code><Text>Yeerongpilly</Text></Value>
-<Value><Code>305091648</Code><Text>Yeronga</Text></Value>
-<Value><Code>305071653</Code><Text>Zillmere</Text></Value>
-<Value><Code>325051750</Code><Text>Bulloo (S)</Text></Value>
-<Value><Code>315051822</Code><Text>Bundaberg (R) - Bundaberg</Text></Value>
-<Value><Code>315051824</Code><Text>Bundaberg (R) - Burnett Pt A</Text></Value>
-<Value><Code>315101825</Code><Text>Bundaberg (R) - Burnett Pt B</Text></Value>
-<Value><Code>315101827</Code><Text>Bundaberg (R) - Isis</Text></Value>
-<Value><Code>315101828</Code><Text>Bundaberg (R) - Kolan</Text></Value>
-<Value><Code>345151900</Code><Text>Burdekin (S)</Text></Value>
-<Value><Code>355051950</Code><Text>Burke (S)</Text></Value>
-<Value><Code>350052062</Code><Text>Cairns (R) - Barron</Text></Value>
-<Value><Code>350052065</Code><Text>Cairns (R) - Central Suburbs</Text></Value>
-<Value><Code>350052066</Code><Text>Cairns (R) - City</Text></Value>
-<Value><Code>350102067</Code><Text>Cairns (R) - Douglas</Text></Value>
-<Value><Code>350052068</Code><Text>Cairns (R) - Mt Whitfield</Text></Value>
-<Value><Code>350052072</Code><Text>Cairns (R) - Northern Suburbs</Text></Value>
-<Value><Code>350102078</Code><Text>Cairns (R) - Pt B</Text></Value>
-<Value><Code>350052074</Code><Text>Cairns (R) - Trinity</Text></Value>
-<Value><Code>350052076</Code><Text>Cairns (R) - Western Suburbs</Text></Value>
-<Value><Code>355052250</Code><Text>Carpentaria (S)</Text></Value>
-<Value><Code>350102262</Code><Text>Cassowary Coast (R) - Cardwell</Text></Value>
-<Value><Code>350102264</Code><Text>Cassowary Coast (R) - Johnstone</Text></Value>
-<Value><Code>330152272</Code><Text>Central Highlands (R) - Bauhinia</Text></Value>
-<Value><Code>330152274</Code><Text>Central Highlands (R) - Duaringa</Text></Value>
-<Value><Code>330152276</Code><Text>Central Highlands (R) - Emerald</Text></Value>
-<Value><Code>330152278</Code><Text>Central Highlands (R) - Peak Downs</Text></Value>
-<Value><Code>345152312</Code><Text>Charters Towers (R) - Charters Towers</Text></Value>
-<Value><Code>345152314</Code><Text>Charters Towers (R) - Dalrymple</Text></Value>
-<Value><Code>315102330</Code><Text>Cherbourg (S)</Text></Value>
-<Value><Code>355052450</Code><Text>Cloncurry (S)</Text></Value>
-<Value><Code>350102500</Code><Text>Cook (S)</Text></Value>
-<Value><Code>350102600</Code><Text>Croydon (S)</Text></Value>
-<Value><Code>335052750</Code><Text>Diamantina (S)</Text></Value>
-<Value><Code>355052770</Code><Text>Doomadgee (S)</Text></Value>
-<Value><Code>350103100</Code><Text>Etheridge (S)</Text></Value>
-<Value><Code>355053200</Code><Text>Flinders (S)</Text></Value>
-<Value><Code>315073222</Code><Text>Fraser Coast (R) - Hervey Bay Pt A</Text></Value>
-<Value><Code>315103223</Code><Text>Fraser Coast (R) - Hervey Bay Pt B</Text></Value>
-<Value><Code>315103225</Code><Text>Fraser Coast (R) - Maryborough</Text></Value>
-<Value><Code>315103227</Code><Text>Fraser Coast (R) - Woocoo-Tiaro</Text></Value>
-<Value><Code>330103362</Code><Text>Gladstone (R) - Calliope Pt A</Text></Value>
-<Value><Code>330153364</Code><Text>Gladstone (R) - Calliope Pt B</Text></Value>
-<Value><Code>330103366</Code><Text>Gladstone (R) - Gladstone</Text></Value>
-<Value><Code>330153368</Code><Text>Gladstone (R) - Miriam Vale</Text></Value>
-<Value><Code>307153502</Code><Text>Ashmore-Benowa</Text></Value>
-<Value><Code>307103508</Code><Text>Biggera Waters-Labrador</Text></Value>
-<Value><Code>307103511</Code><Text>Bilinga-Tugun</Text></Value>
-<Value><Code>307103515</Code><Text>Broadbeach Waters</Text></Value>
-<Value><Code>307103514</Code><Text>Broadbeach-Mermaid Beach</Text></Value>
-<Value><Code>307103517</Code><Text>Bundall</Text></Value>
-<Value><Code>307103521</Code><Text>Burleigh Heads</Text></Value>
-<Value><Code>307103523</Code><Text>Burleigh Waters</Text></Value>
-<Value><Code>307153525</Code><Text>Carrara-Merrimac</Text></Value>
-<Value><Code>307103527</Code><Text>Coolangatta</Text></Value>
-<Value><Code>307153531</Code><Text>Coombabah</Text></Value>
-<Value><Code>307103533</Code><Text>Currumbin</Text></Value>
-<Value><Code>307153534</Code><Text>Currumbin Valley-Tallebudgera</Text></Value>
-<Value><Code>307153535</Code><Text>Currumbin Waters</Text></Value>
-<Value><Code>307153537</Code><Text>Elanora</Text></Value>
-<Value><Code>307203538</Code><Text>Guanaba-Springbrook</Text></Value>
-<Value><Code>307153543</Code><Text>Helensvale</Text></Value>
-<Value><Code>307153547</Code><Text>Hope Island</Text></Value>
-<Value><Code>307153552</Code><Text>Jacobs Well-Alberton</Text></Value>
-<Value><Code>307153556</Code><Text>Kingsholme-Upper Coomera</Text></Value>
-<Value><Code>307103555</Code><Text>Main Beach-South Stradbroke</Text></Value>
-<Value><Code>307103562</Code><Text>Mermaid Wtrs-Clear Is. Wtrs</Text></Value>
-<Value><Code>307103563</Code><Text>Miami</Text></Value>
-<Value><Code>307153564</Code><Text>Molendinar</Text></Value>
-<Value><Code>307153566</Code><Text>Mudgeeraba-Reedy Creek</Text></Value>
-<Value><Code>307153567</Code><Text>Nerang</Text></Value>
-<Value><Code>307153574</Code><Text>Ormeau-Yatala</Text></Value>
-<Value><Code>307153568</Code><Text>Oxenford-Maudsland</Text></Value>
-<Value><Code>307153572</Code><Text>Pacific Pines-Gaven</Text></Value>
-<Value><Code>307103573</Code><Text>Palm Beach</Text></Value>
-<Value><Code>307103576</Code><Text>Paradise Point-Runaway Bay</Text></Value>
-<Value><Code>307153578</Code><Text>Parkwood-Arundel</Text></Value>
-<Value><Code>307153581</Code><Text>Pimpama-Coomera</Text></Value>
-<Value><Code>307153582</Code><Text>Robina</Text></Value>
-<Value><Code>307103585</Code><Text>Southport</Text></Value>
-<Value><Code>307103587</Code><Text>Surfers Paradise</Text></Value>
-<Value><Code>307153592</Code><Text>Varsity Lakes</Text></Value>
-<Value><Code>307153593</Code><Text>Worongary-Tallai</Text></Value>
-<Value><Code>320053612</Code><Text>Goondiwindi (R) - Goondiwindi</Text></Value>
-<Value><Code>320053614</Code><Text>Goondiwindi (R) - Inglewood</Text></Value>
-<Value><Code>320053616</Code><Text>Goondiwindi (R) - Waggamba</Text></Value>
-<Value><Code>315103622</Code><Text>Gympie (R) - Cooloola</Text></Value>
-<Value><Code>315103624</Code><Text>Gympie (R) - Gympie</Text></Value>
-<Value><Code>315103626</Code><Text>Gympie (R) - Kilkivan</Text></Value>
-<Value><Code>345153800</Code><Text>Hinchinbrook (S)</Text></Value>
-<Value><Code>350103830</Code><Text>Hope Vale (S)</Text></Value>
-<Value><Code>305253962</Code><Text>Ipswich (C) - Central</Text></Value>
-<Value><Code>305253965</Code><Text>Ipswich (C) - East</Text></Value>
-<Value><Code>305253966</Code><Text>Ipswich (C) - North</Text></Value>
-<Value><Code>305253971</Code><Text>Ipswich (C) - South-West</Text></Value>
-<Value><Code>305253976</Code><Text>Ipswich (C) - West</Text></Value>
-<Value><Code>340103982</Code><Text>Isaac (R) - Belyando</Text></Value>
-<Value><Code>340103984</Code><Text>Isaac (R) - Broadsound</Text></Value>
-<Value><Code>340103986</Code><Text>Isaac (R) - Nebo</Text></Value>
-<Value><Code>350104420</Code><Text>Kowanyama (S)</Text></Value>
-<Value><Code>350104570</Code><Text>Lockhart River (S)</Text></Value>
-<Value><Code>312104582</Code><Text>Lockyer Valley (R) - Gatton</Text></Value>
-<Value><Code>312104584</Code><Text>Lockyer Valley (R) - Laidley</Text></Value>
-<Value><Code>305304595</Code><Text>Beenleigh</Text></Value>
-<Value><Code>305304597</Code><Text>Bethania-Waterford</Text></Value>
-<Value><Code>305304601</Code><Text>Browns Plains</Text></Value>
-<Value><Code>305304603</Code><Text>Carbrook-Cornubia</Text></Value>
-<Value><Code>305304605</Code><Text>Daisy Hill-Priestdale</Text></Value>
-<Value><Code>305304606</Code><Text>Eagleby</Text></Value>
-<Value><Code>305304607</Code><Text>Edens Landing-Holmview</Text></Value>
-<Value><Code>305304608</Code><Text>Greenbank-Boronia Heights</Text></Value>
-<Value><Code>305304611</Code><Text>Jimboomba-Logan Village</Text></Value>
-<Value><Code>305304612</Code><Text>Kingston</Text></Value>
-<Value><Code>305304615</Code><Text>Loganholme</Text></Value>
-<Value><Code>305304618</Code><Text>Loganlea</Text></Value>
-<Value><Code>305304623</Code><Text>Marsden</Text></Value>
-<Value><Code>305304626</Code><Text>Mt Warren Park</Text></Value>
-<Value><Code>305304627</Code><Text>Park Ridge-Logan Reserve</Text></Value>
-<Value><Code>305304631</Code><Text>Rochedale South</Text></Value>
-<Value><Code>305304634</Code><Text>Shailer Park</Text></Value>
-<Value><Code>305304637</Code><Text>Slacks Creek</Text></Value>
-<Value><Code>305304642</Code><Text>Springwood</Text></Value>
-<Value><Code>305304645</Code><Text>Tanah Merah</Text></Value>
-<Value><Code>305304651</Code><Text>Underwood</Text></Value>
-<Value><Code>305304654</Code><Text>Waterford West</Text></Value>
-<Value><Code>305304655</Code><Text>Wolffdene-Bahrs Scrub</Text></Value>
-<Value><Code>305304656</Code><Text>Woodridge</Text></Value>
-<Value><Code>335054712</Code><Text>Longreach (R) - Ilfracombe</Text></Value>
-<Value><Code>335054714</Code><Text>Longreach (R) - Isisford</Text></Value>
-<Value><Code>335054716</Code><Text>Longreach (R) - Longreach</Text></Value>
-<Value><Code>340054772</Code><Text>Mackay (R) - Mackay Pt A</Text></Value>
-<Value><Code>340104773</Code><Text>Mackay (R) - Mackay Pt B</Text></Value>
-<Value><Code>340104775</Code><Text>Mackay (R) - Mirani</Text></Value>
-<Value><Code>340104777</Code><Text>Mackay (R) - Sarina</Text></Value>
-<Value><Code>355054800</Code><Text>McKinlay (S)</Text></Value>
-<Value><Code>350104830</Code><Text>Mapoon (S)</Text></Value>
-<Value><Code>325054862</Code><Text>Maranoa (R) - Bendemere</Text></Value>
-<Value><Code>325054864</Code><Text>Maranoa (R) - Booringa</Text></Value>
-<Value><Code>325054865</Code><Text>Maranoa (R) - Bungil</Text></Value>
-<Value><Code>325054867</Code><Text>Maranoa (R) - Roma</Text></Value>
-<Value><Code>325054868</Code><Text>Maranoa (R) - Warroo</Text></Value>
-<Value><Code>305405013</Code><Text>Albany Creek</Text></Value>
-<Value><Code>305405016</Code><Text>Bray Park</Text></Value>
-<Value><Code>305205019</Code><Text>Bribie Island</Text></Value>
-<Value><Code>305205021</Code><Text>Burpengary-Narangba</Text></Value>
-<Value><Code>305205023</Code><Text>Caboolture Central</Text></Value>
-<Value><Code>305205025</Code><Text>Caboolture East</Text></Value>
-<Value><Code>305205027</Code><Text>Caboolture Hinterland</Text></Value>
-<Value><Code>305205028</Code><Text>Caboolture Midwest</Text></Value>
-<Value><Code>305405033</Code><Text>Central Pine West</Text></Value>
-<Value><Code>305455035</Code><Text>Clontarf</Text></Value>
-<Value><Code>305405037</Code><Text>Dakabin-Kallangur-M. Downs</Text></Value>
-<Value><Code>305205039</Code><Text>Deception Bay</Text></Value>
-<Value><Code>305405043</Code><Text>Griffin-Mango Hill</Text></Value>
-<Value><Code>305405047</Code><Text>Hills District</Text></Value>
-<Value><Code>305405051</Code><Text>Lawnton</Text></Value>
-<Value><Code>305455053</Code><Text>Margate-Woody Point</Text></Value>
-<Value><Code>305205056</Code><Text>Morayfield</Text></Value>
-<Value><Code>305405068</Code><Text>Moreton Bay (R) Bal</Text></Value>
-<Value><Code>305405058</Code><Text>Petrie</Text></Value>
-<Value><Code>305455063</Code><Text>Redcliffe-Scarborough</Text></Value>
-<Value><Code>305455065</Code><Text>Rothwell-Kippa-Ring</Text></Value>
-<Value><Code>305405067</Code><Text>Strathpine-Brendale</Text></Value>
-<Value><Code>355055250</Code><Text>Mornington (S)</Text></Value>
-<Value><Code>355055300</Code><Text>Mount Isa (C)</Text></Value>
-<Value><Code>325055600</Code><Text>Murweh (S)</Text></Value>
-<Value><Code>350105670</Code><Text>Napranum (S)</Text></Value>
-<Value><Code>315105761</Code><Text>North Burnett (R) - Biggenden</Text></Value>
-<Value><Code>315105762</Code><Text>North Burnett (R) - Eidsvold</Text></Value>
-<Value><Code>315105763</Code><Text>North Burnett (R) - Gayndah</Text></Value>
-<Value><Code>315105764</Code><Text>North Burnett (R) - Monto</Text></Value>
-<Value><Code>315105765</Code><Text>North Burnett (R) - Mundubbera</Text></Value>
-<Value><Code>315105766</Code><Text>North Burnett (R) - Perry</Text></Value>
-<Value><Code>350105781</Code><Text>Northern Peninsula Area (R) - Bamaga</Text></Value>
-<Value><Code>350105783</Code><Text>Northern Peninsula Area (R) - Injinoo</Text></Value>
-<Value><Code>350105784</Code><Text>Northern Peninsula Area (R) - New Mapoon</Text></Value>
-<Value><Code>350105786</Code><Text>Northern Peninsula Area (R) - Seisia</Text></Value>
-<Value><Code>350105788</Code><Text>Northern Peninsula Area (R) - Umagico</Text></Value>
-<Value><Code>345155790</Code><Text>Palm Island (S)</Text></Value>
-<Value><Code>325055800</Code><Text>Paroo (S)</Text></Value>
-<Value><Code>350106070</Code><Text>Pormpuraaw (S)</Text></Value>
-<Value><Code>325056150</Code><Text>Quilpie (S)</Text></Value>
-<Value><Code>305506251</Code><Text>Alexandra Hills</Text></Value>
-<Value><Code>305506254</Code><Text>Birkdale</Text></Value>
-<Value><Code>305506257</Code><Text>Capalaba</Text></Value>
-<Value><Code>305506262</Code><Text>Cleveland</Text></Value>
-<Value><Code>305506264</Code><Text>Ormiston</Text></Value>
-<Value><Code>305506283</Code><Text>Redland (C) Bal</Text></Value>
-<Value><Code>305506265</Code><Text>Redland Bay</Text></Value>
-<Value><Code>305506267</Code><Text>Sheldon-Mt Cotton</Text></Value>
-<Value><Code>305506268</Code><Text>Thorneside</Text></Value>
-<Value><Code>305506271</Code><Text>Thornlands</Text></Value>
-<Value><Code>305506273</Code><Text>Victoria Point</Text></Value>
-<Value><Code>305506276</Code><Text>Wellington Point</Text></Value>
-<Value><Code>355056300</Code><Text>Richmond (S)</Text></Value>
-<Value><Code>330056362</Code><Text>Rockhampton (R) - Fitzroy Pt A</Text></Value>
-<Value><Code>330156363</Code><Text>Rockhampton (R) - Fitzroy Pt B</Text></Value>
-<Value><Code>330056365</Code><Text>Rockhampton (R) - Livingstone Pt A</Text></Value>
-<Value><Code>330156366</Code><Text>Rockhampton (R) - Livingstone Pt B</Text></Value>
-<Value><Code>330156367</Code><Text>Rockhampton (R) - Mount Morgan</Text></Value>
-<Value><Code>330056368</Code><Text>Rockhampton (R) - Rockhampton</Text></Value>
-<Value><Code>312106512</Code><Text>Scenic Rim (R) - Beaudesert</Text></Value>
-<Value><Code>312106514</Code><Text>Scenic Rim (R) - Boonah</Text></Value>
-<Value><Code>312106516</Code><Text>Scenic Rim (R) - Tamborine-Canungra</Text></Value>
-<Value><Code>312056582</Code><Text>Somerset (R) - Esk</Text></Value>
-<Value><Code>312056584</Code><Text>Somerset (R) - Kilcoy</Text></Value>
-<Value><Code>315106632</Code><Text>South Burnett (R) - Kingaroy</Text></Value>
-<Value><Code>315106634</Code><Text>South Burnett (R) - Murgon</Text></Value>
-<Value><Code>315106636</Code><Text>South Burnett (R) - Nanango</Text></Value>
-<Value><Code>315106638</Code><Text>South Burnett (R) - Wondai</Text></Value>
-<Value><Code>320056662</Code><Text>Southern Downs (R) - Allora</Text></Value>
-<Value><Code>320056665</Code><Text>Southern Downs (R) - Killarney</Text></Value>
-<Value><Code>320056666</Code><Text>Southern Downs (R) - Stanthorpe</Text></Value>
-<Value><Code>320056667</Code><Text>Southern Downs (R) - Warwick</Text></Value>
-<Value><Code>320056668</Code><Text>Southern Downs (R) - West</Text></Value>
-<Value><Code>309056713</Code><Text>Buderim</Text></Value>
-<Value><Code>309106716</Code><Text>Caloundra Hinterland</Text></Value>
-<Value><Code>309056718</Code><Text>Caloundra North</Text></Value>
-<Value><Code>309056721</Code><Text>Caloundra South</Text></Value>
-<Value><Code>309056723</Code><Text>Coolum-Mudjimba</Text></Value>
-<Value><Code>309106725</Code><Text>Glass House Country</Text></Value>
-<Value><Code>309056728</Code><Text>Kawana</Text></Value>
-<Value><Code>309106733</Code><Text>Maroochy Hinterland</Text></Value>
-<Value><Code>309056738</Code><Text>Maroochydore</Text></Value>
-<Value><Code>309056744</Code><Text>Mooloolaba</Text></Value>
-<Value><Code>309056748</Code><Text>Nambour</Text></Value>
-<Value><Code>309106753</Code><Text>Noosa Hinterland</Text></Value>
-<Value><Code>309056755</Code><Text>Noosa-Noosaville</Text></Value>
-<Value><Code>309056761</Code><Text>Paynter-Petrie Creek</Text></Value>
-<Value><Code>309056763</Code><Text>Sunshine-Peregian</Text></Value>
-<Value><Code>309056772</Code><Text>Tewantin</Text></Value>
-<Value><Code>350106812</Code><Text>Tablelands (R) - Atherton</Text></Value>
-<Value><Code>350106814</Code><Text>Tablelands (R) - Eacham</Text></Value>
-<Value><Code>350106816</Code><Text>Tablelands (R) - Herberton</Text></Value>
-<Value><Code>350106818</Code><Text>Tablelands (R) - Mareeba</Text></Value>
-<Value><Code>320016912</Code><Text>Cambooya</Text></Value>
-<Value><Code>320056914</Code><Text>Clifton</Text></Value>
-<Value><Code>320056916</Code><Text>Crow's Nest</Text></Value>
-<Value><Code>320016921</Code><Text>Gowrie</Text></Value>
-<Value><Code>320056923</Code><Text>Greenmount</Text></Value>
-<Value><Code>320016926</Code><Text>Highfields</Text></Value>
-<Value><Code>320056928</Code><Text>Jondaryan</Text></Value>
-<Value><Code>320056931</Code><Text>Millmerran</Text></Value>
-<Value><Code>320056933</Code><Text>Pittsworth</Text></Value>
-<Value><Code>320056935</Code><Text>Rosalie</Text></Value>
-<Value><Code>320016937</Code><Text>Toowoomba Central</Text></Value>
-<Value><Code>320016941</Code><Text>Toowoomba North-East</Text></Value>
-<Value><Code>320016943</Code><Text>Toowoomba North-West</Text></Value>
-<Value><Code>320016945</Code><Text>Toowoomba South-East</Text></Value>
-<Value><Code>320016946</Code><Text>Toowoomba West</Text></Value>
-<Value><Code>320016947</Code><Text>Westbrook</Text></Value>
-<Value><Code>350106950</Code><Text>Torres (S)</Text></Value>
-<Value><Code>350106963</Code><Text>Torres Strait Island (R) - Badu</Text></Value>
-<Value><Code>350106965</Code><Text>Torres Strait Island (R) - Boigu</Text></Value>
-<Value><Code>350106968</Code><Text>Torres Strait Island (R) - Dauan</Text></Value>
-<Value><Code>350106972</Code><Text>Torres Strait Island (R) - Erub</Text></Value>
-<Value><Code>350106974</Code><Text>Torres Strait Island (R) - Hammond</Text></Value>
-<Value><Code>350106976</Code><Text>Torres Strait Island (R) - Iama</Text></Value>
-<Value><Code>350106978</Code><Text>Torres Strait Island (R) - Kubin</Text></Value>
-<Value><Code>350106982</Code><Text>Torres Strait Island (R) - Mabuiag</Text></Value>
-<Value><Code>350106984</Code><Text>Torres Strait Island (R) - Mer</Text></Value>
-<Value><Code>350106986</Code><Text>Torres Strait Island (R) - Poruma</Text></Value>
-<Value><Code>350106992</Code><Text>Torres Strait Island (R) - Saibai</Text></Value>
-<Value><Code>350106993</Code><Text>Torres Strait Island (R) - St Pauls</Text></Value>
-<Value><Code>350106995</Code><Text>Torres Strait Island (R) - Ugar</Text></Value>
-<Value><Code>350106996</Code><Text>Torres Strait Island (R) - Warraber</Text></Value>
-<Value><Code>350106998</Code><Text>Torres Strait Island (R) - Yorke</Text></Value>
-<Value><Code>345057001</Code><Text>Aitkenvale</Text></Value>
-<Value><Code>345057003</Code><Text>City</Text></Value>
-<Value><Code>345107005</Code><Text>Condon-Rasmussen-Bohle Basin</Text></Value>
-<Value><Code>345057007</Code><Text>Cranbrook</Text></Value>
-<Value><Code>345057012</Code><Text>Currajong</Text></Value>
-<Value><Code>345057014</Code><Text>Douglas</Text></Value>
-<Value><Code>345057015</Code><Text>Garbutt</Text></Value>
-<Value><Code>345057018</Code><Text>Gulliver</Text></Value>
-<Value><Code>345057023</Code><Text>Heatley</Text></Value>
-<Value><Code>345057026</Code><Text>Hermit Park</Text></Value>
-<Value><Code>345057027</Code><Text>Hyde Park-Mysterton</Text></Value>
-<Value><Code>345107028</Code><Text>Kelso</Text></Value>
-<Value><Code>345107030</Code><Text>Kirwan</Text></Value>
-<Value><Code>345057031</Code><Text>Magnetic Island</Text></Value>
-<Value><Code>345057033</Code><Text>Mt Louisa-Mt St John-Bohle</Text></Value>
-<Value><Code>345057034</Code><Text>Mundingburra</Text></Value>
-<Value><Code>345057038</Code><Text>Murray</Text></Value>
-<Value><Code>345057041</Code><Text>North Ward-Castle Hill</Text></Value>
-<Value><Code>345157043</Code><Text>Northern Beaches-Pinnacles</Text></Value>
-<Value><Code>345057044</Code><Text>Oonoonba-Idalia-Cluden</Text></Value>
-<Value><Code>345057047</Code><Text>Pallarenda-Shelley Beach</Text></Value>
-<Value><Code>345057051</Code><Text>Pimlico</Text></Value>
-<Value><Code>345057054</Code><Text>Railway Estate</Text></Value>
-<Value><Code>345057058</Code><Text>Rosslea</Text></Value>
-<Value><Code>345057062</Code><Text>Rowes Bay-Belgian Gardens</Text></Value>
-<Value><Code>345057065</Code><Text>South Townsville</Text></Value>
-<Value><Code>345057068</Code><Text>Stuart-Roseneath</Text></Value>
-<Value><Code>345057071</Code><Text>Vincent</Text></Value>
-<Value><Code>345057074</Code><Text>West End</Text></Value>
-<Value><Code>345157076</Code><Text>Woodstock-Cleveland-Ross</Text></Value>
-<Value><Code>345057078</Code><Text>Wulguru</Text></Value>
-<Value><Code>350107300</Code><Text>Weipa (T)</Text></Value>
-<Value><Code>320057312</Code><Text>Western Downs (R) - Chinchilla</Text></Value>
-<Value><Code>320057313</Code><Text>Western Downs (R) - Dalby</Text></Value>
-<Value><Code>320057315</Code><Text>Western Downs (R) - Murilla-Wandoan</Text></Value>
-<Value><Code>320057316</Code><Text>Western Downs (R) - Tara</Text></Value>
-<Value><Code>320057318</Code><Text>Western Downs (R) - Wambo</Text></Value>
-<Value><Code>340107342</Code><Text>Whitsunday (R) - Bowen</Text></Value>
-<Value><Code>340107345</Code><Text>Whitsunday (R) - Whitsunday</Text></Value>
-<Value><Code>335057400</Code><Text>Winton (S)</Text></Value>
-<Value><Code>330157550</Code><Text>Woorabinda (S)</Text></Value>
-<Value><Code>350107570</Code><Text>Wujal Wujal (S)</Text></Value>
-<Value><Code>350107600</Code><Text>Yarrabah (S)</Text></Value>
-<Value><Code>385019779</Code><Text>Migratory - Offshore - Shipping (Qld)</Text></Value>
-<Value><Code>405150070</Code><Text>Adelaide (C)</Text></Value>
-<Value><Code>405150121</Code><Text>Adelaide Hills (DC) - Central</Text></Value>
-<Value><Code>410150125</Code><Text>Adelaide Hills (DC) - North</Text></Value>
-<Value><Code>405150124</Code><Text>Adelaide Hills (DC) - Ranges</Text></Value>
-<Value><Code>410150128</Code><Text>Adelaide Hills (DC) Bal</Text></Value>
-<Value><Code>410200221</Code><Text>Alexandrina (DC) - Coastal</Text></Value>
-<Value><Code>410200224</Code><Text>Alexandrina (DC) - Strathalbyn</Text></Value>
-<Value><Code>435250250</Code><Text>Anangu Pitjantjatjara (AC)</Text></Value>
-<Value><Code>410050311</Code><Text>Barossa (DC) - Angaston</Text></Value>
-<Value><Code>410050314</Code><Text>Barossa (DC) - Barossa</Text></Value>
-<Value><Code>410050315</Code><Text>Barossa (DC) - Tanunda</Text></Value>
-<Value><Code>415050430</Code><Text>Barunga West (DC)</Text></Value>
-<Value><Code>420050521</Code><Text>Berri and Barmera (DC) - Barmera</Text></Value>
-<Value><Code>420050524</Code><Text>Berri and Barmera (DC) - Berri</Text></Value>
-<Value><Code>405150701</Code><Text>Burnside (C) - North-East</Text></Value>
-<Value><Code>405150704</Code><Text>Burnside (C) - South-West</Text></Value>
-<Value><Code>405150911</Code><Text>Campbelltown (C) - East</Text></Value>
-<Value><Code>405150914</Code><Text>Campbelltown (C) - West</Text></Value>
-<Value><Code>430101010</Code><Text>Ceduna (DC)</Text></Value>
-<Value><Code>405101061</Code><Text>Charles Sturt (C) - Coastal</Text></Value>
-<Value><Code>405101064</Code><Text>Charles Sturt (C) - Inner East</Text></Value>
-<Value><Code>405101065</Code><Text>Charles Sturt (C) - Inner West</Text></Value>
-<Value><Code>405101068</Code><Text>Charles Sturt (C) - North-East</Text></Value>
-<Value><Code>415101140</Code><Text>Clare and Gilbert Valleys (DC)</Text></Value>
-<Value><Code>430051190</Code><Text>Cleve (DC)</Text></Value>
-<Value><Code>435251330</Code><Text>Coober Pedy (DC)</Text></Value>
-<Value><Code>415051560</Code><Text>Copper Coast (DC)</Text></Value>
-<Value><Code>430051750</Code><Text>Elliston (DC)</Text></Value>
-<Value><Code>435201830</Code><Text>Flinders Ranges (DC)</Text></Value>
-<Value><Code>430051960</Code><Text>Franklin Harbour (DC)</Text></Value>
-<Value><Code>405052030</Code><Text>Gawler (T)</Text></Value>
-<Value><Code>415102110</Code><Text>Goyder (DC)</Text></Value>
-<Value><Code>425102250</Code><Text>Grant (DC)</Text></Value>
-<Value><Code>405202601</Code><Text>Holdfast Bay (C) - North</Text></Value>
-<Value><Code>405202604</Code><Text>Holdfast Bay (C) - South</Text></Value>
-<Value><Code>410102750</Code><Text>Kangaroo Island (DC)</Text></Value>
-<Value><Code>420103080</Code><Text>Karoonda East Murray (DC)</Text></Value>
-<Value><Code>430053220</Code><Text>Kimba (DC)</Text></Value>
-<Value><Code>425053360</Code><Text>Kingston (DC)</Text></Value>
-<Value><Code>410053650</Code><Text>Light (RegC)</Text></Value>
-<Value><Code>430053710</Code><Text>Lower Eyre Peninsula (DC)</Text></Value>
-<Value><Code>420053791</Code><Text>Loxton Waikerie (DC) - East</Text></Value>
-<Value><Code>420053794</Code><Text>Loxton Waikerie (DC) - West</Text></Value>
-<Value><Code>410053920</Code><Text>Mallala (DC)</Text></Value>
-<Value><Code>435254000</Code><Text>Maralinga Tjarutja (AC)</Text></Value>
-<Value><Code>405204061</Code><Text>Marion (C) - Central</Text></Value>
-<Value><Code>405204064</Code><Text>Marion (C) - North</Text></Value>
-<Value><Code>405204065</Code><Text>Marion (C) - South</Text></Value>
-<Value><Code>420054210</Code><Text>Mid Murray (DC)</Text></Value>
-<Value><Code>405204341</Code><Text>Mitcham (C) - Hills</Text></Value>
-<Value><Code>405204344</Code><Text>Mitcham (C) - North-East</Text></Value>
-<Value><Code>405204345</Code><Text>Mitcham (C) - West</Text></Value>
-<Value><Code>410154551</Code><Text>Mount Barker (DC) - Central</Text></Value>
-<Value><Code>410154554</Code><Text>Mount Barker (DC) Bal</Text></Value>
-<Value><Code>425104620</Code><Text>Mount Gambier (C)</Text></Value>
-<Value><Code>435204830</Code><Text>Mount Remarkable (DC)</Text></Value>
-<Value><Code>420105040</Code><Text>Murray Bridge (RC)</Text></Value>
-<Value><Code>425055090</Code><Text>Naracoorte and Lucindale (DC)</Text></Value>
-<Value><Code>435155120</Code><Text>Northern Areas (DC)</Text></Value>
-<Value><Code>405155291</Code><Text>Norw. P'ham St Ptrs (C) - East</Text></Value>
-<Value><Code>405155294</Code><Text>Norw. P'ham St Ptrs (C) - West</Text></Value>
-<Value><Code>405205341</Code><Text>Onkaparinga (C) - Hackham</Text></Value>
-<Value><Code>405205342</Code><Text>Onkaparinga (C) - Hills</Text></Value>
-<Value><Code>405205343</Code><Text>Onkaparinga (C) - Morphett</Text></Value>
-<Value><Code>405205344</Code><Text>Onkaparinga (C) - North Coast</Text></Value>
-<Value><Code>405205345</Code><Text>Onkaparinga (C) - Reservoir</Text></Value>
-<Value><Code>405205346</Code><Text>Onkaparinga (C) - South Coast</Text></Value>
-<Value><Code>405205347</Code><Text>Onkaparinga (C) - Woodcroft</Text></Value>
-<Value><Code>435155400</Code><Text>Orroroo/Carrieton (DC)</Text></Value>
-<Value><Code>435155540</Code><Text>Peterborough (DC)</Text></Value>
-<Value><Code>405055681</Code><Text>Playford (C) - East Central</Text></Value>
-<Value><Code>405055683</Code><Text>Playford (C) - Elizabeth</Text></Value>
-<Value><Code>405055684</Code><Text>Playford (C) - Hills</Text></Value>
-<Value><Code>405055686</Code><Text>Playford (C) - West</Text></Value>
-<Value><Code>405055688</Code><Text>Playford (C) - West Central</Text></Value>
-<Value><Code>405105895</Code><Text>Port Adel. Enfield (C) - Coast</Text></Value>
-<Value><Code>405055891</Code><Text>Port Adel. Enfield (C) - East</Text></Value>
-<Value><Code>405055894</Code><Text>Port Adel. Enfield (C) - Inner</Text></Value>
-<Value><Code>405105896</Code><Text>Port Adel. Enfield (C) - Park</Text></Value>
-<Value><Code>405105897</Code><Text>Port Adel. Enfield (C) - Port</Text></Value>
-<Value><Code>435206090</Code><Text>Port Augusta (C)</Text></Value>
-<Value><Code>430056300</Code><Text>Port Lincoln (C)</Text></Value>
-<Value><Code>435156451</Code><Text>Port Pirie C Dists (M) - City</Text></Value>
-<Value><Code>435156454</Code><Text>Port Pirie C Dists (M) Bal</Text></Value>
-<Value><Code>405156510</Code><Text>Prospect (C)</Text></Value>
-<Value><Code>420056671</Code><Text>Renmark Paringa (DC) - Paringa</Text></Value>
-<Value><Code>420056674</Code><Text>Renmark Paringa (DC) - Renmark</Text></Value>
-<Value><Code>425056860</Code><Text>Robe (DC)</Text></Value>
-<Value><Code>435256970</Code><Text>Roxby Downs (M)</Text></Value>
-<Value><Code>405057141</Code><Text>Salisbury (C) - Central</Text></Value>
-<Value><Code>405057143</Code><Text>Salisbury (C) - Inner North</Text></Value>
-<Value><Code>405057144</Code><Text>Salisbury (C) - North-East</Text></Value>
-<Value><Code>405057146</Code><Text>Salisbury (C) - South-East</Text></Value>
-<Value><Code>405057148</Code><Text>Salisbury (C) Bal</Text></Value>
-<Value><Code>420107290</Code><Text>Southern Mallee (DC)</Text></Value>
-<Value><Code>430107490</Code><Text>Streaky Bay (DC)</Text></Value>
-<Value><Code>425057630</Code><Text>Tatiara (DC)</Text></Value>
-<Value><Code>405057701</Code><Text>Tea Tree Gully (C) - Central</Text></Value>
-<Value><Code>405057704</Code><Text>Tea Tree Gully (C) - Hills</Text></Value>
-<Value><Code>405057705</Code><Text>Tea Tree Gully (C) - North</Text></Value>
-<Value><Code>405057708</Code><Text>Tea Tree Gully (C) - South</Text></Value>
-<Value><Code>420107800</Code><Text>The Coorong (DC)</Text></Value>
-<Value><Code>430057910</Code><Text>Tumby Bay (DC)</Text></Value>
-<Value><Code>405157981</Code><Text>Unley (C) - East</Text></Value>
-<Value><Code>405157984</Code><Text>Unley (C) - West</Text></Value>
-<Value><Code>410208050</Code><Text>Victor Harbor (C)</Text></Value>
-<Value><Code>415108130</Code><Text>Wakefield (DC)</Text></Value>
-<Value><Code>405158260</Code><Text>Walkerville (M)</Text></Value>
-<Value><Code>425108341</Code><Text>Wattle Range (DC) - East</Text></Value>
-<Value><Code>425108344</Code><Text>Wattle Range (DC) - West</Text></Value>
-<Value><Code>405108411</Code><Text>West Torrens (C) - East</Text></Value>
-<Value><Code>405108414</Code><Text>West Torrens (C) - West</Text></Value>
-<Value><Code>435058540</Code><Text>Whyalla (C)</Text></Value>
-<Value><Code>430058640</Code><Text>Wudinna (DC)</Text></Value>
-<Value><Code>410208750</Code><Text>Yankalilla (DC)</Text></Value>
-<Value><Code>415058831</Code><Text>Yorke Peninsula (DC) - North</Text></Value>
-<Value><Code>415058834</Code><Text>Yorke Peninsula (DC) - South</Text></Value>
-<Value><Code>485019779</Code><Text>Migratory - Offshore - Shipping (SA)</Text></Value>
-<Value><Code>435259589</Code><Text>Unincorp. Far North</Text></Value>
-<Value><Code>435209529</Code><Text>Unincorp. Flinders Ranges</Text></Value>
-<Value><Code>430059179</Code><Text>Unincorp. Lincoln</Text></Value>
-<Value><Code>420109109</Code><Text>Unincorp. Murray Mallee</Text></Value>
-<Value><Code>435159459</Code><Text>Unincorp. Pirie</Text></Value>
-<Value><Code>420059039</Code><Text>Unincorp. Riverland</Text></Value>
-<Value><Code>430109249</Code><Text>Unincorp. West Coast</Text></Value>
-<Value><Code>405108899</Code><Text>Unincorp. Western</Text></Value>
-<Value><Code>435059389</Code><Text>Unincorp. Whyalla</Text></Value>
-<Value><Code>415058969</Code><Text>Unincorp. Yorke</Text></Value>
-<Value><Code>515100081</Code><Text>Albany (C) - Central</Text></Value>
-<Value><Code>515100084</Code><Text>Albany (C) Bal</Text></Value>
-<Value><Code>505250210</Code><Text>Armadale (C)</Text></Value>
-<Value><Code>540100250</Code><Text>Ashburton (S)</Text></Value>
-<Value><Code>510150280</Code><Text>Augusta-Margaret River (S)</Text></Value>
-<Value><Code>505100350</Code><Text>Bassendean (T)</Text></Value>
-<Value><Code>505100420</Code><Text>Bayswater (C)</Text></Value>
-<Value><Code>505250490</Code><Text>Belmont (C)</Text></Value>
-<Value><Code>525100560</Code><Text>Beverley (S)</Text></Value>
-<Value><Code>510100630</Code><Text>Boddington (S)</Text></Value>
-<Value><Code>510200770</Code><Text>Boyup Brook (S)</Text></Value>
-<Value><Code>510200840</Code><Text>Bridgetown-Greenbushes (S)</Text></Value>
-<Value><Code>520050910</Code><Text>Brookton (S)</Text></Value>
-<Value><Code>545100980</Code><Text>Broome (S)</Text></Value>
-<Value><Code>515051080</Code><Text>Broomehill-Tambellup (S)</Text></Value>
-<Value><Code>525151120</Code><Text>Bruce Rock (S)</Text></Value>
-<Value><Code>510031190</Code><Text>Bunbury (C)</Text></Value>
-<Value><Code>510151260</Code><Text>Busselton (S)</Text></Value>
-<Value><Code>505051310</Code><Text>Cambridge (T)</Text></Value>
-<Value><Code>505251330</Code><Text>Canning (C)</Text></Value>
-<Value><Code>510031401</Code><Text>Capel (S) - Pt A</Text></Value>
-<Value><Code>510101404</Code><Text>Capel (S) - Pt B</Text></Value>
-<Value><Code>535151470</Code><Text>Carnamah (S)</Text></Value>
-<Value><Code>535051540</Code><Text>Carnarvon (S)</Text></Value>
-<Value><Code>535151610</Code><Text>Chapman Valley (S)</Text></Value>
-<Value><Code>525051680</Code><Text>Chittering (S)</Text></Value>
-<Value><Code>505051750</Code><Text>Claremont (T)</Text></Value>
-<Value><Code>505201820</Code><Text>Cockburn (C)</Text></Value>
-<Value><Code>510101890</Code><Text>Collie (S)</Text></Value>
-<Value><Code>530051960</Code><Text>Coolgardie (S)</Text></Value>
-<Value><Code>535152030</Code><Text>Coorow (S)</Text></Value>
-<Value><Code>520102100</Code><Text>Corrigin (S)</Text></Value>
-<Value><Code>505052170</Code><Text>Cottesloe (T)</Text></Value>
-<Value><Code>515102240</Code><Text>Cranbrook (S)</Text></Value>
-<Value><Code>520052310</Code><Text>Cuballing (S)</Text></Value>
-<Value><Code>535102380</Code><Text>Cue (S)</Text></Value>
-<Value><Code>525102450</Code><Text>Cunderdin (S)</Text></Value>
-<Value><Code>525102520</Code><Text>Dalwallinu (S)</Text></Value>
-<Value><Code>525052590</Code><Text>Dandaragan (S)</Text></Value>
-<Value><Code>510032661</Code><Text>Dardanup (S) - Pt A</Text></Value>
-<Value><Code>510102664</Code><Text>Dardanup (S) - Pt B</Text></Value>
-<Value><Code>515102730</Code><Text>Denmark (S)</Text></Value>
-<Value><Code>545102800</Code><Text>Derby-West Kimberley (S)</Text></Value>
-<Value><Code>510102870</Code><Text>Donnybrook-Balingup (S)</Text></Value>
-<Value><Code>525102940</Code><Text>Dowerin (S)</Text></Value>
-<Value><Code>520053010</Code><Text>Dumbleyung (S)</Text></Value>
-<Value><Code>530103080</Code><Text>Dundas (S)</Text></Value>
-<Value><Code>505203150</Code><Text>East Fremantle (T)</Text></Value>
-<Value><Code>540053220</Code><Text>East Pilbara (S)</Text></Value>
-<Value><Code>530103290</Code><Text>Esperance (S)</Text></Value>
-<Value><Code>535053360</Code><Text>Exmouth (S)</Text></Value>
-<Value><Code>505203431</Code><Text>Fremantle (C) - Inner</Text></Value>
-<Value><Code>505203432</Code><Text>Fremantle (C) - Remainder</Text></Value>
-<Value><Code>535033522</Code><Text>Geraldton</Text></Value>
-<Value><Code>535033524</Code><Text>Greenough - Pt A</Text></Value>
-<Value><Code>535153526</Code><Text>Greenough - Pt B</Text></Value>
-<Value><Code>525053570</Code><Text>Gingin (S)</Text></Value>
-<Value><Code>515053640</Code><Text>Gnowangerup (S)</Text></Value>
-<Value><Code>525103710</Code><Text>Goomalling (S)</Text></Value>
-<Value><Code>505253780</Code><Text>Gosnells (C)</Text></Value>
-<Value><Code>545053920</Code><Text>Halls Creek (S)</Text></Value>
-<Value><Code>510033991</Code><Text>Harvey (S) - Pt A</Text></Value>
-<Value><Code>510103994</Code><Text>Harvey (S) - Pt B</Text></Value>
-<Value><Code>535154060</Code><Text>Irwin (S)</Text></Value>
-<Value><Code>515054130</Code><Text>Jerramungup (S)</Text></Value>
-<Value><Code>505154171</Code><Text>Joondalup (C) - North</Text></Value>
-<Value><Code>505154174</Code><Text>Joondalup (C) - South</Text></Value>
-<Value><Code>505104200</Code><Text>Kalamunda (S)</Text></Value>
-<Value><Code>530014281</Code><Text>Kalgoorlie/Boulder (C) - Pt A</Text></Value>
-<Value><Code>530054284</Code><Text>Kalgoorlie/Boulder (C) - Pt B</Text></Value>
-<Value><Code>515054340</Code><Text>Katanning (S)</Text></Value>
-<Value><Code>525154410</Code><Text>Kellerberrin (S)</Text></Value>
-<Value><Code>515054480</Code><Text>Kent (S)</Text></Value>
-<Value><Code>515054550</Code><Text>Kojonup (S)</Text></Value>
-<Value><Code>520104620</Code><Text>Kondinin (S)</Text></Value>
-<Value><Code>525104690</Code><Text>Koorda (S)</Text></Value>
-<Value><Code>520104760</Code><Text>Kulin (S)</Text></Value>
-<Value><Code>505204830</Code><Text>Kwinana (T)</Text></Value>
-<Value><Code>520104900</Code><Text>Lake Grace (S)</Text></Value>
-<Value><Code>530054970</Code><Text>Laverton (S)</Text></Value>
-<Value><Code>530055040</Code><Text>Leonora (S)</Text></Value>
-<Value><Code>510015110</Code><Text>Mandurah (C)</Text></Value>
-<Value><Code>510205180</Code><Text>Manjimup (S)</Text></Value>
-<Value><Code>535105250</Code><Text>Meekatharra (S)</Text></Value>
-<Value><Code>505205320</Code><Text>Melville (C)</Text></Value>
-<Value><Code>530055390</Code><Text>Menzies (S)</Text></Value>
-<Value><Code>525155460</Code><Text>Merredin (S)</Text></Value>
-<Value><Code>535155530</Code><Text>Mingenew (S)</Text></Value>
-<Value><Code>525055600</Code><Text>Moora (S)</Text></Value>
-<Value><Code>535155670</Code><Text>Morawa (S)</Text></Value>
-<Value><Code>505055740</Code><Text>Mosman Park (T)</Text></Value>
-<Value><Code>535105810</Code><Text>Mount Magnet (S)</Text></Value>
-<Value><Code>525155880</Code><Text>Mount Marshall (S)</Text></Value>
-<Value><Code>525155950</Code><Text>Mukinbudin (S)</Text></Value>
-<Value><Code>535156020</Code><Text>Mullewa (S)</Text></Value>
-<Value><Code>505106090</Code><Text>Mundaring (S)</Text></Value>
-<Value><Code>535106160</Code><Text>Murchison (S)</Text></Value>
-<Value><Code>510016230</Code><Text>Murray (S)</Text></Value>
-<Value><Code>510206300</Code><Text>Nannup (S)</Text></Value>
-<Value><Code>525156370</Code><Text>Narembeen (S)</Text></Value>
-<Value><Code>520056450</Code><Text>Narrogin (S)</Text></Value>
-<Value><Code>520056520</Code><Text>Narrogin (T)</Text></Value>
-<Value><Code>505056580</Code><Text>Nedlands (C)</Text></Value>
-<Value><Code>530056620</Code><Text>Ngaanyatjarraku (S)</Text></Value>
-<Value><Code>525106732</Code><Text>Northam</Text></Value>
-<Value><Code>525106735</Code><Text>Northam Town</Text></Value>
-<Value><Code>535156790</Code><Text>Northampton (S)</Text></Value>
-<Value><Code>525156860</Code><Text>Nungarin (S)</Text></Value>
-<Value><Code>505056930</Code><Text>Peppermint Grove (S)</Text></Value>
-<Value><Code>535157000</Code><Text>Perenjori (S)</Text></Value>
-<Value><Code>505057081</Code><Text>Perth (C) - Inner</Text></Value>
-<Value><Code>505057082</Code><Text>Perth (C) - Remainder</Text></Value>
-<Value><Code>520057140</Code><Text>Pingelly (S)</Text></Value>
-<Value><Code>515107210</Code><Text>Plantagenet (S)</Text></Value>
-<Value><Code>540057280</Code><Text>Port Hedland (T)</Text></Value>
-<Value><Code>525107350</Code><Text>Quairading (S)</Text></Value>
-<Value><Code>530107420</Code><Text>Ravensthorpe (S)</Text></Value>
-<Value><Code>505207490</Code><Text>Rockingham (C)</Text></Value>
-<Value><Code>540107560</Code><Text>Roebourne (S)</Text></Value>
-<Value><Code>535107630</Code><Text>Sandstone (S)</Text></Value>
-<Value><Code>505257700</Code><Text>Serpentine-Jarrahdale (S)</Text></Value>
-<Value><Code>535057770</Code><Text>Shark Bay (S)</Text></Value>
-<Value><Code>505257840</Code><Text>South Perth (C)</Text></Value>
-<Value><Code>505157914</Code><Text>Stirling (C) - Central</Text></Value>
-<Value><Code>505157915</Code><Text>Stirling (C) - Coastal</Text></Value>
-<Value><Code>505157916</Code><Text>Stirling (C) - South-Eastern</Text></Value>
-<Value><Code>505057980</Code><Text>Subiaco (C)</Text></Value>
-<Value><Code>505108050</Code><Text>Swan (C)</Text></Value>
-<Value><Code>525108190</Code><Text>Tammin (S)</Text></Value>
-<Value><Code>535158260</Code><Text>Three Springs (S)</Text></Value>
-<Value><Code>525108330</Code><Text>Toodyay (S)</Text></Value>
-<Value><Code>525158400</Code><Text>Trayning (S)</Text></Value>
-<Value><Code>535058470</Code><Text>Upper Gascoyne (S)</Text></Value>
-<Value><Code>505258510</Code><Text>Victoria Park (T)</Text></Value>
-<Value><Code>525058540</Code><Text>Victoria Plains (S)</Text></Value>
-<Value><Code>505058570</Code><Text>Vincent (T)</Text></Value>
-<Value><Code>520058610</Code><Text>Wagin (S)</Text></Value>
-<Value><Code>520058680</Code><Text>Wandering (S)</Text></Value>
-<Value><Code>505158761</Code><Text>Wanneroo (C) - North-East</Text></Value>
-<Value><Code>505158764</Code><Text>Wanneroo (C) - North-West</Text></Value>
-<Value><Code>505158767</Code><Text>Wanneroo (C) - South</Text></Value>
-<Value><Code>510108820</Code><Text>Waroona (S)</Text></Value>
-<Value><Code>520058890</Code><Text>West Arthur (S)</Text></Value>
-<Value><Code>525159030</Code><Text>Westonia (S)</Text></Value>
-<Value><Code>520059100</Code><Text>Wickepin (S)</Text></Value>
-<Value><Code>520059170</Code><Text>Williams (S)</Text></Value>
-<Value><Code>535109250</Code><Text>Wiluna (S)</Text></Value>
-<Value><Code>525109310</Code><Text>Wongan-Ballidu (S)</Text></Value>
-<Value><Code>515059320</Code><Text>Woodanilling (S)</Text></Value>
-<Value><Code>525109330</Code><Text>Wyalkatchem (S)</Text></Value>
-<Value><Code>545059340</Code><Text>Wyndham-East Kimberley (S)</Text></Value>
-<Value><Code>535109350</Code><Text>Yalgoo (S)</Text></Value>
-<Value><Code>525159360</Code><Text>Yilgarn (S)</Text></Value>
-<Value><Code>525109370</Code><Text>York (S)</Text></Value>
-<Value><Code>585019779</Code><Text>Migratory - Offshore - Shipping (WA)</Text></Value>
-<Value><Code>615150210</Code><Text>Break O'Day (M)</Text></Value>
-<Value><Code>605050410</Code><Text>Brighton (M)</Text></Value>
-<Value><Code>620050611</Code><Text>Burnie (C) - Pt A</Text></Value>
-<Value><Code>620100612</Code><Text>Burnie (C) - Pt B</Text></Value>
-<Value><Code>620050811</Code><Text>Central Coast (M) - Pt A</Text></Value>
-<Value><Code>620100812</Code><Text>Central Coast (M) - Pt B</Text></Value>
-<Value><Code>610051010</Code><Text>Central Highlands (M)</Text></Value>
-<Value><Code>620101210</Code><Text>Circular Head (M)</Text></Value>
-<Value><Code>605051410</Code><Text>Clarence (C)</Text></Value>
-<Value><Code>605051511</Code><Text>Derwent Valley (M) - Pt A</Text></Value>
-<Value><Code>610051512</Code><Text>Derwent Valley (M) - Pt B</Text></Value>
-<Value><Code>620051610</Code><Text>Devonport (C)</Text></Value>
-<Value><Code>615151810</Code><Text>Dorset (M)</Text></Value>
-<Value><Code>615152010</Code><Text>Flinders (M)</Text></Value>
-<Value><Code>615052211</Code><Text>George Town (M) - Pt A</Text></Value>
-<Value><Code>615102212</Code><Text>George Town (M) - Pt B</Text></Value>
-<Value><Code>610052410</Code><Text>Glamorgan/Spring Bay (M)</Text></Value>
-<Value><Code>605052610</Code><Text>Glenorchy (C)</Text></Value>
-<Value><Code>605052811</Code><Text>Hobart (C) - Inner</Text></Value>
-<Value><Code>605052812</Code><Text>Hobart (C) - Remainder</Text></Value>
-<Value><Code>610053010</Code><Text>Huon Valley (M)</Text></Value>
-<Value><Code>620103210</Code><Text>Kentish (M)</Text></Value>
-<Value><Code>620103410</Code><Text>King Island (M)</Text></Value>
-<Value><Code>605053611</Code><Text>Kingborough (M) - Pt A</Text></Value>
-<Value><Code>610053612</Code><Text>Kingborough (M) - Pt B</Text></Value>
-<Value><Code>620053811</Code><Text>Latrobe (M) - Pt A</Text></Value>
-<Value><Code>620103812</Code><Text>Latrobe (M) - Pt B</Text></Value>
-<Value><Code>615054011</Code><Text>Launceston (C) - Inner</Text></Value>
-<Value><Code>615054012</Code><Text>Launceston (C) - Pt B</Text></Value>
-<Value><Code>615104013</Code><Text>Launceston (C) - Pt C</Text></Value>
-<Value><Code>615054211</Code><Text>Meander Valley (M) - Pt A</Text></Value>
-<Value><Code>615104212</Code><Text>Meander Valley (M) - Pt B</Text></Value>
-<Value><Code>615054611</Code><Text>Northern Midlands (M) - Pt A</Text></Value>
-<Value><Code>615104612</Code><Text>Northern Midlands (M) - Pt B</Text></Value>
-<Value><Code>605054811</Code><Text>Sorell (M) - Pt A</Text></Value>
-<Value><Code>610054812</Code><Text>Sorell (M) - Pt B</Text></Value>
-<Value><Code>610055010</Code><Text>Southern Midlands (M)</Text></Value>
-<Value><Code>610055210</Code><Text>Tasman (M)</Text></Value>
-<Value><Code>620055411</Code><Text>Waratah/Wynyard (M) - Pt A</Text></Value>
-<Value><Code>620105412</Code><Text>Waratah/Wynyard (M) - Pt B</Text></Value>
-<Value><Code>620155610</Code><Text>West Coast (M)</Text></Value>
-<Value><Code>615055811</Code><Text>West Tamar (M) - Pt A</Text></Value>
-<Value><Code>615105812</Code><Text>West Tamar (M) - Pt B</Text></Value>
-<Value><Code>685019779</Code><Text>Migratory - Offshore - Shipping (Tas.)</Text></Value>
-<Value><Code>710400201</Code><Text>Alice Springs (T) - Charles</Text></Value>
-<Value><Code>710400203</Code><Text>Alice Springs (T) - Heavitree</Text></Value>
-<Value><Code>710400205</Code><Text>Alice Springs (T) - Larapinta</Text></Value>
-<Value><Code>710400207</Code><Text>Alice Springs (T) - Ross</Text></Value>
-<Value><Code>710400208</Code><Text>Alice Springs (T) - Stuart</Text></Value>
-<Value><Code>710350422</Code><Text>Barkly (S) - Tennant Creek</Text></Value>
-<Value><Code>710350425</Code><Text>Barkly (S) Bal</Text></Value>
-<Value><Code>710050540</Code><Text>Belyuen (S)</Text></Value>
-<Value><Code>710400620</Code><Text>Central Desert (S)</Text></Value>
-<Value><Code>710050700</Code><Text>Coomalie (S)</Text></Value>
-<Value><Code>705051004</Code><Text>Alawa</Text></Value>
-<Value><Code>705051008</Code><Text>Anula</Text></Value>
-<Value><Code>705051011</Code><Text>Bayview-Woolner</Text></Value>
-<Value><Code>705051014</Code><Text>Brinkin</Text></Value>
-<Value><Code>705051018</Code><Text>City - Inner</Text></Value>
-<Value><Code>705051138</Code><Text>City - Remainder</Text></Value>
-<Value><Code>705051024</Code><Text>Coconut Grove</Text></Value>
-<Value><Code>705051028</Code><Text>Fannie Bay</Text></Value>
-<Value><Code>705051034</Code><Text>Jingili</Text></Value>
-<Value><Code>705051038</Code><Text>Karama</Text></Value>
-<Value><Code>705051044</Code><Text>Larrakeyah</Text></Value>
-<Value><Code>705051048</Code><Text>Leanyer</Text></Value>
-<Value><Code>705051052</Code><Text>Lee Point-Leanyer Swamp</Text></Value>
-<Value><Code>705051054</Code><Text>Ludmilla</Text></Value>
-<Value><Code>705051058</Code><Text>Malak</Text></Value>
-<Value><Code>705051064</Code><Text>Marrara</Text></Value>
-<Value><Code>705051068</Code><Text>Millner</Text></Value>
-<Value><Code>705051074</Code><Text>Moil</Text></Value>
-<Value><Code>705051078</Code><Text>Nakara</Text></Value>
-<Value><Code>705051084</Code><Text>Narrows</Text></Value>
-<Value><Code>705051088</Code><Text>Nightcliff</Text></Value>
-<Value><Code>705051094</Code><Text>Parap</Text></Value>
-<Value><Code>705051098</Code><Text>Rapid Creek</Text></Value>
-<Value><Code>705051104</Code><Text>Stuart Park</Text></Value>
-<Value><Code>705051108</Code><Text>The Gardens</Text></Value>
-<Value><Code>705051114</Code><Text>Tiwi</Text></Value>
-<Value><Code>705051118</Code><Text>Wagaman</Text></Value>
-<Value><Code>705051124</Code><Text>Wanguri</Text></Value>
-<Value><Code>705051128</Code><Text>Winnellie</Text></Value>
-<Value><Code>705051134</Code><Text>Wulagi</Text></Value>
-<Value><Code>710251300</Code><Text>East Arnhem (S)</Text></Value>
-<Value><Code>710302200</Code><Text>Katherine (T)</Text></Value>
-<Value><Code>705202304</Code><Text>Litchfield (M) - Pt A</Text></Value>
-<Value><Code>705202308</Code><Text>Litchfield (M) - Pt B</Text></Value>
-<Value><Code>710402330</Code><Text>MacDonnell (S)</Text></Value>
-<Value><Code>705102802</Code><Text>Bakewell</Text></Value>
-<Value><Code>705102804</Code><Text>Driver</Text></Value>
-<Value><Code>705102806</Code><Text>Durack</Text></Value>
-<Value><Code>705102808</Code><Text>Gray</Text></Value>
-<Value><Code>705102811</Code><Text>Gunn-Palmerston City</Text></Value>
-<Value><Code>705102814</Code><Text>Moulden</Text></Value>
-<Value><Code>705102824</Code><Text>Palmerston (C) Bal</Text></Value>
-<Value><Code>705102818</Code><Text>Woodroffe</Text></Value>
-<Value><Code>710303600</Code><Text>Roper Gulf (S)</Text></Value>
-<Value><Code>710104050</Code><Text>Tiwi Islands (S)</Text></Value>
-<Value><Code>710304505</Code><Text>Victoria-Daly (S) - Wadeye and OS</Text></Value>
-<Value><Code>710304508</Code><Text>Victoria-Daly (S) Bal</Text></Value>
-<Value><Code>710054560</Code><Text>Wagait (S)</Text></Value>
-<Value><Code>710154663</Code><Text>West Arnhem (S) - Jabiru</Text></Value>
-<Value><Code>710154666</Code><Text>West Arnhem (S) Bal</Text></Value>
-<Value><Code>710250419</Code><Text>Alyangula</Text></Value>
-<Value><Code>705051026</Code><Text>Darwin Waterfront</Text></Value>
-<Value><Code>705101169</Code><Text>East Arm</Text></Value>
-<Value><Code>710051509</Code><Text>Finniss-Mary</Text></Value>
-<Value><Code>785019779</Code><Text>Migratory - Offshore - Shipping (NT)</Text></Value>
-<Value><Code>710252409</Code><Text>Nhulunbuy</Text></Value>
-<Value><Code>710406059</Code><Text>Yulara</Text></Value>
-<Value><Code>805050089</Code><Text>Acton</Text></Value>
-<Value><Code>805050189</Code><Text>Ainslie</Text></Value>
-<Value><Code>805400239</Code><Text>Amaroo</Text></Value>
-<Value><Code>805100279</Code><Text>Aranda</Text></Value>
-<Value><Code>805250339</Code><Text>Banks</Text></Value>
-<Value><Code>805350369</Code><Text>Barton</Text></Value>
-<Value><Code>805100549</Code><Text>Belconnen - SSD Bal</Text></Value>
-<Value><Code>805100459</Code><Text>Belconnen Town Centre</Text></Value>
-<Value><Code>805400589</Code><Text>Bonner</Text></Value>
-<Value><Code>805250609</Code><Text>Bonython</Text></Value>
-<Value><Code>805050639</Code><Text>Braddon</Text></Value>
-<Value><Code>805100729</Code><Text>Bruce</Text></Value>
-<Value><Code>805250819</Code><Text>Calwell</Text></Value>
-<Value><Code>805050909</Code><Text>Campbell</Text></Value>
-<Value><Code>805400939</Code><Text>Casey</Text></Value>
-<Value><Code>805201089</Code><Text>Chapman</Text></Value>
-<Value><Code>805101179</Code><Text>Charnwood</Text></Value>
-<Value><Code>805151269</Code><Text>Chifley</Text></Value>
-<Value><Code>805251359</Code><Text>Chisholm</Text></Value>
-<Value><Code>805051449</Code><Text>City</Text></Value>
-<Value><Code>805251549</Code><Text>Conder</Text></Value>
-<Value><Code>805101629</Code><Text>Cook</Text></Value>
-<Value><Code>805401649</Code><Text>Crace</Text></Value>
-<Value><Code>805151719</Code><Text>Curtin</Text></Value>
-<Value><Code>805351809</Code><Text>Deakin</Text></Value>
-<Value><Code>805051889</Code><Text>Dickson</Text></Value>
-<Value><Code>805051989</Code><Text>Downer</Text></Value>
-<Value><Code>805202079</Code><Text>Duffy</Text></Value>
-<Value><Code>805102139</Code><Text>Dunlop</Text></Value>
-<Value><Code>805052169</Code><Text>Duntroon</Text></Value>
-<Value><Code>805102259</Code><Text>Evatt</Text></Value>
-<Value><Code>805252349</Code><Text>Fadden</Text></Value>
-<Value><Code>805152439</Code><Text>Farrer</Text></Value>
-<Value><Code>805202529</Code><Text>Fisher</Text></Value>
-<Value><Code>805102619</Code><Text>Florey</Text></Value>
-<Value><Code>805102709</Code><Text>Flynn</Text></Value>
-<Value><Code>805402779</Code><Text>Forde</Text></Value>
-<Value><Code>805352789</Code><Text>Forrest</Text></Value>
-<Value><Code>805402849</Code><Text>Franklin</Text></Value>
-<Value><Code>805102889</Code><Text>Fraser</Text></Value>
-<Value><Code>805352979</Code><Text>Fyshwick</Text></Value>
-<Value><Code>805153069</Code><Text>Garran</Text></Value>
-<Value><Code>805253159</Code><Text>Gilmore</Text></Value>
-<Value><Code>805103249</Code><Text>Giralang</Text></Value>
-<Value><Code>805253289</Code><Text>Gordon</Text></Value>
-<Value><Code>805253339</Code><Text>Gowrie</Text></Value>
-<Value><Code>805253379</Code><Text>Greenway</Text></Value>
-<Value><Code>805353429</Code><Text>Griffith</Text></Value>
-<Value><Code>805403519</Code><Text>Gungahlin</Text></Value>
-<Value><Code>805403529</Code><Text>Gungahlin-Hall - SSD Bal</Text></Value>
-<Value><Code>805053609</Code><Text>Hackett</Text></Value>
-<Value><Code>805403689</Code><Text>Hall</Text></Value>
-<Value><Code>805353789</Code><Text>Harman</Text></Value>
-<Value><Code>805403819</Code><Text>Harrison</Text></Value>
-<Value><Code>805103879</Code><Text>Hawker</Text></Value>
-<Value><Code>805103969</Code><Text>Higgins</Text></Value>
-<Value><Code>805204059</Code><Text>Holder</Text></Value>
-<Value><Code>805104149</Code><Text>Holt</Text></Value>
-<Value><Code>805154239</Code><Text>Hughes</Text></Value>
-<Value><Code>805354329</Code><Text>Hume</Text></Value>
-<Value><Code>805154419</Code><Text>Isaacs</Text></Value>
-<Value><Code>805254509</Code><Text>Isabella Plains</Text></Value>
-<Value><Code>805354589</Code><Text>Jerrabomberra</Text></Value>
-<Value><Code>805104779</Code><Text>Kaleen</Text></Value>
-<Value><Code>805254869</Code><Text>Kambah</Text></Value>
-<Value><Code>805354959</Code><Text>Kingston</Text></Value>
-<Value><Code>805055049</Code><Text>Kowen</Text></Value>
-<Value><Code>805105139</Code><Text>Latham</Text></Value>
-<Value><Code>805055229</Code><Text>Lyneham</Text></Value>
-<Value><Code>805155319</Code><Text>Lyons</Text></Value>
-<Value><Code>805255489</Code><Text>Macarthur</Text></Value>
-<Value><Code>805105589</Code><Text>Macgregor</Text></Value>
-<Value><Code>805105679</Code><Text>Macquarie</Text></Value>
-<Value><Code>805055769</Code><Text>Majura</Text></Value>
-<Value><Code>805155859</Code><Text>Mawson</Text></Value>
-<Value><Code>805105409</Code><Text>McKellar</Text></Value>
-<Value><Code>805105949</Code><Text>Melba</Text></Value>
-<Value><Code>885019779</Code><Text>Migratory - Offshore - Shipping (ACT)</Text></Value>
-<Value><Code>805406039</Code><Text>Mitchell</Text></Value>
-<Value><Code>805256129</Code><Text>Monash</Text></Value>
-<Value><Code>805356219</Code><Text>Narrabundah</Text></Value>
-<Value><Code>805406249</Code><Text>Ngunnawal</Text></Value>
-<Value><Code>805406279</Code><Text>Nicholls</Text></Value>
-<Value><Code>805356309</Code><Text>Oaks Estate</Text></Value>
-<Value><Code>805056389</Code><Text>O'Connor</Text></Value>
-<Value><Code>805156489</Code><Text>O'Malley</Text></Value>
-<Value><Code>805256579</Code><Text>Oxley</Text></Value>
-<Value><Code>805106669</Code><Text>Page</Text></Value>
-<Value><Code>805406719</Code><Text>Palmerston</Text></Value>
-<Value><Code>805356759</Code><Text>Parkes</Text></Value>
-<Value><Code>805156849</Code><Text>Pearce</Text></Value>
-<Value><Code>805156939</Code><Text>Phillip</Text></Value>
-<Value><Code>805357029</Code><Text>Pialligo</Text></Value>
-<Value><Code>805357119</Code><Text>Red Hill</Text></Value>
-<Value><Code>805057209</Code><Text>Reid</Text></Value>
-<Value><Code>810059009</Code><Text>Remainder of ACT</Text></Value>
-<Value><Code>805257289</Code><Text>Richardson</Text></Value>
-<Value><Code>805207389</Code><Text>Rivett</Text></Value>
-<Value><Code>805057479</Code><Text>Russell</Text></Value>
-<Value><Code>805107569</Code><Text>Scullin</Text></Value>
-<Value><Code>805107659</Code><Text>Spence</Text></Value>
-<Value><Code>805207749</Code><Text>Stirling</Text></Value>
-<Value><Code>805207839</Code><Text>Stromlo</Text></Value>
-<Value><Code>805357929</Code><Text>Symonston</Text></Value>
-<Value><Code>805258019</Code><Text>Theodore</Text></Value>
-<Value><Code>805158109</Code><Text>Torrens</Text></Value>
-<Value><Code>805258189</Code><Text>Tuggeranong - SSD Bal</Text></Value>
-<Value><Code>805058289</Code><Text>Turner</Text></Value>
-<Value><Code>805258379</Code><Text>Wanniassa</Text></Value>
-<Value><Code>805208469</Code><Text>Waramanga</Text></Value>
-<Value><Code>805058559</Code><Text>Watson</Text></Value>
-<Value><Code>805108649</Code><Text>Weetangera</Text></Value>
-<Value><Code>805208739</Code><Text>Weston</Text></Value>
-<Value><Code>805208829</Code><Text>Weston Creek-Stromlo - SSD Bal</Text></Value>
-<Value><Code>805358919</Code><Text>Yarralumla</Text></Value>
-<Value><Code>910051009</Code><Text>Jervis Bay Territory</Text></Value>
-<Value><Code>985019779</Code><Text>Migratory - Offshore - Shipping (OT)</Text></Value>
-<Value><Code>910052009</Code><Text>Territory of Christmas Island</Text></Value>
-<Value><Code>910053009</Code><Text>Territory of Cocos (Keeling) Islands</Text></Value>
 </Values>
 	</CodeSet>
 	<CodeSet>
@@ -6846,21 +5447,41 @@
 	</CodeSet>
 	<CodeSet>
 		<Intro>
-			<p>From http://www.border.gov.au/ Australian Government - Department of Immigration and Border Protection: Updated from Source Data on 28 February, 2017 - Refer to: https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing</p>
+			<p>From http://www.border.gov.au/ Australian Government - Department of Immigration and Border Protection: 
+			Updated from Source Data on 15 November, 2023 - Refer to: https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing</p>
 		</Intro>
 		<ID>Visa Sub Class</ID>
 		<Values>
-<Value><Code>459</Code><Text>Sponsored Business Visitor (short stay) (repealed)</Text></Value>
-<Value><Code>679</Code><Text>Sponsored Family Visitor (short stay) (repealed)</Text></Value>
+
+
+<Value><Code>10</Code><Text>Bridging visa A - BVA</Text></Value>
+<Value><Code>20</Code><Text>Bridging visa B - BVB</Text></Value>
+<Value><Code>30</Code><Text>Bridging visa C - BVC</Text></Value>
+<Value><Code>40</Code><Text>Bridging visa D - BVD (No longer issued)</Text></Value>
+<Value><Code>41</Code><Text>Bridging (Non-Applicant) D (No longer issued) </Text></Value>
 <Value><Code>42</Code><Text>Bridging Visa Class A (No longer issued)</Text></Value>
+<Value><Code>50</Code><Text>Bridging (General) - BE</Text></Value>
+<Value><Code>51</Code><Text>Bridging (Protection Visa Applicant) – BVE</Text></Value>
 <Value><Code>60</Code><Text>Bridging Visa F (No longer issued)</Text></Value>
 <Value><Code>70</Code><Text>Removal Pending Bridging Visa (No longer issued)</Text></Value>
+<Value><Code>100</Code><Text>Partner (Migrant) visa</Text></Value>
+<Value><Code>101</Code><Text>Child visa</Text></Value>
+<Value><Code>102</Code><Text>Adoption visa</Text></Value>
+<Value><Code>103</Code><Text>Parent visa</Text></Value>
 <Value><Code>104</Code><Text>Preferential family (No longer issued)</Text></Value>
 <Value><Code>105</Code><Text>Skilled - Australian Linked (No longer issued)</Text></Value>
 <Value><Code>106</Code><Text>Regional-linked (No longer issued)</Text></Value>
 <Value><Code>110</Code><Text>Interdependency (No longer issued)</Text></Value>
 <Value><Code>113</Code><Text>Aged Parent (No longer issued)</Text></Value>
+<Value><Code>114</Code><Text>Aged Dependent Relative visa</Text></Value>
+<Value><Code>115</Code><Text>Remaining Relative visa</Text></Value>
+<Value><Code>116</Code><Text>Carer visa</Text></Value>
+<Value><Code>117</Code><Text>Orphan Relative</Text></Value>
 <Value><Code>118</Code><Text>Designated Parent (No longer issued)</Text></Value>
+<Value><Code>119</Code><Text>Regional Sponsor Migration Scheme (No longer issued)</Text></Value>
+<Value><Code>120</Code><Text>Labour Agreement visa (No longer issued)</Text></Value>
+<Value><Code>121</Code><Text>Employer Nomination Scheme (No longer issued)</Text></Value>
+<Value><Code>124</Code><Text>Distinguished Talent visa (No longer issued)</Text></Value>
 <Value><Code>125</Code><Text>Distinguished talent and special service - independent (No longer issued)</Text></Value>
 <Value><Code>126</Code><Text>Independent (No longer issued)</Text></Value>
 <Value><Code>127</Code><Text>Business Owner (No longer issued)</Text></Value>
@@ -6868,125 +5489,31 @@
 <Value><Code>129</Code><Text>State/Territory sponsored business owner  (No longer issued)</Text></Value>
 <Value><Code>130</Code><Text>State/Territory Sponsored Senior Executive  (No longer issued)</Text></Value>
 <Value><Code>131</Code><Text>Investment-linked (No longer issued)</Text></Value>
+<Value><Code>132</Code><Text>Business Talent (Permanent) visa (No longer issued)</Text></Value>
 <Value><Code>134</Code><Text>Skill Matching (No longer issued)</Text></Value>
 <Value><Code>135</Code><Text>State/Territory nominated independent (No longer issued)</Text></Value>
 <Value><Code>136</Code><Text>Skilled - Independent (No longer issued)</Text></Value>
 <Value><Code>137</Code><Text>Skilled - State/Territory nominated independent (No longer issued)</Text></Value>
 <Value><Code>138</Code><Text>Skilled - Australian sponsored (No longer issued)</Text></Value>
 <Value><Code>139</Code><Text>Skilled Designated Area-sponsored (No longer issued)</Text></Value>
+<Value><Code>143</Code><Text>Contributory Parent visa</Text></Value>
 <Value><Code>150</Code><Text>Former citizen (No longer issued)</Text></Value>
+<Value><Code>151</Code><Text>Former Resident visa</Text></Value>
 <Value><Code>152</Code><Text>Family of NZ citizen (No longer issued)</Text></Value>
 <Value><Code>154</Code><Text>Resident Return (No longer issued)</Text></Value>
-<Value><Code>156</Code><Text>One Year Resident Return (No longer Issued)</Text></Value>
-<Value><Code>159</Code><Text>Provisional resident return (No longer issued)</Text></Value>
-<Value><Code>208</Code><Text>East Timorese in Portugal, Macau or Mozambique (No longer issued)</Text></Value>
-<Value><Code>209</Code><Text>Citizen of former Yugoslavia - displaced person (No longer issued)</Text></Value>
-<Value><Code>210</Code><Text>Minorities of former USSR (No longer issued)</Text></Value>
-<Value><Code>211</Code><Text>Burmese in Burma (No longer issued)</Text></Value>
-<Value><Code>212</Code><Text>Sudanese (No longer issued)</Text></Value>
-<Value><Code>213</Code><Text>Burmese in Thailand (No longer issued)</Text></Value>
-<Value><Code>214</Code><Text>Cambodian (No longer issued)</Text></Value>
-<Value><Code>215</Code><Text>Sri Lankan - special assistance (No longer issued)</Text></Value>
-<Value><Code>216</Code><Text>Ahmadi (No longer issued)</Text></Value>
-<Value><Code>217</Code><Text>Vietnamese (No longer issued)</Text></Value>
-<Value><Code>302</Code><Text>Emergency (Permanent Visa Applicant) (No longer issued)</Text></Value>
-<Value><Code>303</Code><Text>Emergency (Temporary Visa Applicant) (No longer issued)</Text></Value>
-<Value><Code>310</Code><Text>Interdependency (provisional) (No longer issued)</Text></Value>
-<Value><Code>412</Code><Text>Independent Executive (No longer issued)</Text></Value>
-<Value><Code>413</Code><Text>Business Executive (No longer issued)</Text></Value>
-<Value><Code>414</Code><Text>Business Specialist (No longer issued)</Text></Value>
-<Value><Code>418</Code><Text>Educational (No longer issued)</Text></Value>
-<Value><Code>424</Code><Text>Public lecturer (No longer issued)</Text></Value>
-<Value><Code>425</Code><Text>Family relationship (No longer issued)</Text></Value>
-<Value><Code>427</Code><Text>Domestic worker - executive (No longer issued)</Text></Value>
-<Value><Code>430</Code><Text>Supported dependant (No longer issued)</Text></Value>
-<Value><Code>432</Code><Text>Expatriate (No longer issued)</Text></Value>
-<Value><Code>435</Code><Text>Sri Lankan (No longer issued)</Text></Value>
-<Value><Code>442</Code><Text>Occupational Trainee (No longer issued)</Text></Value>
-<Value><Code>443</Code><Text>Citizens of former Yugoslavia (No longer issued)</Text></Value>
-<Value><Code>445</Code><Text>Dependent Child (No longer issued)</Text></Value>
-<Value><Code>446</Code><Text>Confirmatory (Temporary) (No longer issued)</Text></Value>
-<Value><Code>447</Code><Text>Secondary Movement Offshore Entry (Temporary) (No longer issued)</Text></Value>
-<Value><Code>448</Code><Text>Kosovar Safe Haven (No longer issued)</Text></Value>
-<Value><Code>449</Code><Text>Humanitarian Stay (Temporary) (No longer issued)</Text></Value>
-<Value><Code>450</Code><Text>Resolution of Status - Family member (Temporary) (No longer issued)</Text></Value>
-<Value><Code>451</Code><Text>Secondary Movement Relocation (Temporary) (No longer issued)</Text></Value>
-<Value><Code>470</Code><Text>Professional Development (No longer issued)</Text></Value>
-<Value><Code>471</Code><Text>Trade Skills Training (No longer issued)</Text></Value>
-<Value><Code>497</Code><Text>Graduate - Skilled (No longer issued)</Text></Value>
-<Value><Code>499</Code><Text>Olympic (Support) (No longer issued)</Text></Value>
-<Value><Code>560</Code><Text>Student (No longer issued)</Text></Value>
-<Value><Code>562</Code><Text>Iranian Postgraduate Student (No longer issued)</Text></Value>
-<Value><Code>563</Code><Text>Iranian Postgraduate Student Dependent (No longer issued)</Text></Value>
-<Value><Code>686</Code><Text>Tourist - Long Stay (No longer issued)</Text></Value>
-<Value><Code>695</Code><Text>Temporary Provisional - Pending return (No longer issued)</Text></Value>
-<Value><Code>773</Code><Text>Border (No longer issued)</Text></Value>
-<Value><Code>785</Code><Text>Temporary Protection (No longer issued)</Text></Value>
-<Value><Code>786</Code><Text>Temporary (Humanitarian Concern) (No longer issued)</Text></Value>
-<Value><Code>800</Code><Text>Territorial Asylum (No longer issued)</Text></Value>
-<Value><Code>805</Code><Text>Skilled (No longer issued)</Text></Value>
-<Value><Code>806</Code><Text>Family (No longer issued)</Text></Value>
-<Value><Code>814</Code><Text>Interdependency (No longer issued)</Text></Value>
-<Value><Code>819</Code><Text>Aged Parent (No longer issued)</Text></Value>
-<Value><Code>826</Code><Text>Interdependency (No longer issued)</Text></Value>
-<Value><Code>828</Code><Text>TEP Processing (No longer issued)</Text></Value>
-<Value><Code>831</Code><Text>Prospective marriage spouse (No longer issued)</Text></Value>
-<Value><Code>832</Code><Text>Close Ties (No longer issued)</Text></Value>
-<Value><Code>833</Code><Text>Certain unlawful non-citizens (No longer issued)</Text></Value>
-<Value><Code>834</Code><Text>Permanent resident of Norfolk Island (No longer issued)</Text></Value>
-<Value><Code>840</Code><Text>Business Owner (No longer issued)</Text></Value>
-<Value><Code>841</Code><Text>Senior Executive (No longer issued)</Text></Value>
-<Value><Code>842</Code><Text>State/Territory sponsored business owner (No longer issued)</Text></Value>
-<Value><Code>843</Code><Text>State/Territory sponsored senior executive (No longer issued)</Text></Value>
-<Value><Code>844</Code><Text>Investment-linked (No longer issued)</Text></Value>
-<Value><Code>850</Code><Text>Resolution Status (Temporary) (No longer issued)</Text></Value>
-<Value><Code>851</Code><Text>Resolution of Status (No longer issued)</Text></Value>
-<Value><Code>852</Code><Text>Witness Protection (No longer issued)</Text></Value>
-<Value><Code>859</Code><Text>Designated Parent (No longer issued)</Text></Value>
-<Value><Code>861</Code><Text>Skilled - Onshore Independent New Zealand Citizen (No longer issued)</Text></Value>
-<Value><Code>862</Code><Text>Skilled Australian-sponsored New Zealand Citizen (No longer issued)</Text></Value>
-<Value><Code>863</Code><Text>Skilled Designated Area-sponsored New Zealand Citizen (No longer issued)</Text></Value>
-<Value><Code>870</Code><Text>Sponsored Parent (Temporary)</Text></Value>
-<Value><Code>880</Code><Text>Skilled - Independent Overseas Student (No longer issued)</Text></Value>
-<Value><Code>881</Code><Text>Skilled - Australian-sponsored Overseas Student (No longer issued)</Text></Value>
-<Value><Code>882</Code><Text>Skilled - Designated Area-sponsored Overseas Student (No longer issued)</Text></Value>
-<Value><Code>883</Code><Text>Skilled Designated Area Sponsored (Residence) (No longer issued)</Text></Value>
-<Value><Code>944</Code><Text>APEC Travel Authority (No longer issued)</Text></Value>
-<Value><Code>995</Code><Text>Diplomatic (Temporary) (No longer issued)</Text></Value>
-<Value><Code>998</Code><Text>Declaratory (No longer issued)</Text></Value>
-<Value><Code>10</Code><Text>Bridging visa A - BVA</Text></Value>
-<Value><Code>20</Code><Text>Bridging visa B - BVB</Text></Value>
-<Value><Code>30</Code><Text>Bridging visa C - BVC</Text></Value>
-<Value><Code>40</Code><Text>Bridging visa D - BVD (No longer issued)</Text></Value>
-<Value><Code>41</Code><Text>Bridging (Non-Applicant) D (No longer issued) </Text></Value>
-<Value><Code>50</Code><Text>Bridging (General) - BE</Text></Value>
-<Value><Code>51</Code><Text>Bridging (Protection Visa Applicant) – BVE</Text></Value>
-<Value><Code>100</Code><Text>Partner (Migrant) visa</Text></Value>
-<Value><Code>101</Code><Text>Child visa</Text></Value>
-<Value><Code>102</Code><Text>Adoption visa</Text></Value>
-<Value><Code>103</Code><Text>Parent visa</Text></Value>
-<Value><Code>114</Code><Text>Aged Dependent Relative visa</Text></Value>
-<Value><Code>115</Code><Text>Remaining Relative visa</Text></Value>
-<Value><Code>116</Code><Text>Carer visa</Text></Value>
-<Value><Code>117</Code><Text>Orphan Relative</Text></Value>
-<Value><Code>119</Code><Text>Repealed - Regional Sponsor Migration Scheme</Text></Value>
-<Value><Code>120</Code><Text>Repealed - Labour Agreement visa</Text></Value>
-<Value><Code>121</Code><Text>Repealed - Employer Nomination Scheme</Text></Value>
-<Value><Code>124</Code><Text>Distinguished Talent visa</Text></Value>
-<Value><Code>132</Code><Text>Business Talent (Permanent) visa</Text></Value>
-<Value><Code>143</Code><Text>Contributory Parent visa</Text></Value>
-<Value><Code>151</Code><Text>Former Resident visa</Text></Value>
 <Value><Code>155</Code><Text>Resident Return visa</Text></Value>
+<Value><Code>156</Code><Text>One Year Resident Return (No longer Issued)</Text></Value>
 <Value><Code>157</Code><Text>Resident Return visa</Text></Value>
-<Value><Code>160</Code><Text>Repealed - Business Skills (Provisional) visa</Text></Value>
-<Value><Code>161</Code><Text>Repealed - Business Skills (Provisional) visa</Text></Value>
-<Value><Code>162</Code><Text>Repealed - Business Skills (Provisional) visa</Text></Value>
-<Value><Code>163</Code><Text>Repealed - Business Skills (Provisional) visa</Text></Value>
-<Value><Code>164</Code><Text>Repealed - Business Skills (Provisional) visa</Text></Value>
-<Value><Code>165</Code><Text>Repealed - Business Skills (Provisional) visa</Text></Value>
+<Value><Code>159</Code><Text>Provisional resident return (No longer issued)</Text></Value>
+<Value><Code>160</Code><Text>Business Skills (Provisional) visa (No longer issued)</Text></Value>
+<Value><Code>161</Code><Text>Business Skills (Provisional) visa (No longer issued)</Text></Value>
+<Value><Code>162</Code><Text>Business Skills (Provisional) visa (No longer issued)</Text></Value>
+<Value><Code>163</Code><Text>Business Skills (Provisional) visa (No longer issued)</Text></Value>
+<Value><Code>164</Code><Text>Business Skills (Provisional) visa (No longer issued)</Text></Value>
+<Value><Code>165</Code><Text>Business Skills (Provisional) visa (No longer issued)</Text></Value>
 <Value><Code>173</Code><Text>Contributory Parent (Temporary) visa</Text></Value>
-<Value><Code>175</Code><Text>Repealed - Skilled Independent visa</Text></Value>
-<Value><Code>176</Code><Text>Repealed - Skilled Sponsored visa</Text></Value>
+<Value><Code>175</Code><Text>Skilled Independent visa (No longer issued)</Text></Value>
+<Value><Code>176</Code><Text>Skilled Sponsored visa (No longer issued)</Text></Value>
 <Value><Code>186</Code><Text>Employer Nomination Scheme</Text></Value>
 <Value><Code>187</Code><Text>Regional Sponsor Migration Scheme</Text></Value>
 <Value><Code>188</Code><Text>Business Innovation and Investment (provisional) visa</Text></Value>
@@ -6999,83 +5526,157 @@
 <Value><Code>203</Code><Text>Emergency Rescue</Text></Value>
 <Value><Code>204</Code><Text>Woman at Risk</Text></Value>
 <Value><Code>205</Code><Text>Camp Clearance (No longer Issued)</Text></Value>
+<Value><Code>208</Code><Text>East Timorese in Portugal, Macau or Mozambique (No longer issued)</Text></Value>
+<Value><Code>209</Code><Text>Citizen of former Yugoslavia - displaced person (No longer issued)</Text></Value>
+<Value><Code>210</Code><Text>Minorities of former USSR (No longer issued)</Text></Value>
+<Value><Code>211</Code><Text>Burmese in Burma (No longer issued)</Text></Value>
+<Value><Code>212</Code><Text>Sudanese (No longer issued)</Text></Value>
+<Value><Code>213</Code><Text>Burmese in Thailand (No longer issued)</Text></Value>
+<Value><Code>214</Code><Text>Cambodian (No longer issued)</Text></Value>
+<Value><Code>215</Code><Text>Sri Lankan - special assistance (No longer issued)</Text></Value>
+<Value><Code>216</Code><Text>Ahmadi (No longer issued)</Text></Value>
+<Value><Code>217</Code><Text>Vietnamese (No longer issued)</Text></Value>
 <Value><Code>300</Code><Text>Prospective Marriage visa</Text></Value>
+<Value><Code>302</Code><Text>Emergency (Permanent Visa Applicant) (No longer issued)</Text></Value>
+<Value><Code>303</Code><Text>Emergency (Temporary Visa Applicant) (No longer issued)</Text></Value>
 <Value><Code>309</Code><Text>Partner (Provisional) visa</Text></Value>
+<Value><Code>310</Code><Text>Interdependency (provisional) (No longer issued)</Text></Value>
 <Value><Code>400</Code><Text>Temporary Work (Short Stay Specialist) visa</Text></Value>
-<Value><Code>401</Code><Text>Repealed - Temporary Work (long Stay Activity) visa</Text></Value>
-<Value><Code>402</Code><Text>Repealed - Training and Research visa</Text></Value>
+<Value><Code>401</Code><Text>Temporary Work (Long Stay Activity) visa (No longer issued)</Text></Value>
+<Value><Code>402</Code><Text>Training and Research visa (No longer issued)</Text></Value>
 <Value><Code>403</Code><Text>Temporary Work (International Relations) visa</Text></Value>
 <Value><Code>405</Code><Text>Investor Retirement visa</Text></Value>
-<Value><Code>406</Code><Text>Repealed - Government Agreement visa</Text></Value>
+<Value><Code>406</Code><Text>Government Agreement visa (No longer issued)</Text></Value>
 <Value><Code>407</Code><Text>Training visa</Text></Value>
 <Value><Code>408</Code><Text>Temporary Activity visa</Text></Value>
-<Value><Code>410</Code><Text>Retirement visa</Text></Value>
-<Value><Code>411</Code><Text>Repealed - Exchange visa</Text></Value>
-<Value><Code>415</Code><Text>Repealed - Foreign Government Agency</Text></Value>
-<Value><Code>416</Code><Text>Repealed - Special Program visa</Text></Value>
+<Value><Code>410</Code><Text>Retirement visa (No longer issued)</Text></Value>
+<Value><Code>411</Code><Text>Exchange visa (No longer issued)</Text></Value>
+<Value><Code>412</Code><Text>Independent Executive (No longer issued)</Text></Value>
+<Value><Code>413</Code><Text>Business Executive (No longer issued)</Text></Value>
+<Value><Code>414</Code><Text>Business Specialist (No longer issued)</Text></Value>
+<Value><Code>415</Code><Text>Foreign Government Agency (No longer issued)</Text></Value>
+<Value><Code>416</Code><Text>Special Program visa (No longer issued)</Text></Value>
 <Value><Code>417</Code><Text>Working Holiday visa</Text></Value>
-<Value><Code>419</Code><Text>Repealed - Visiting Academic visa</Text></Value>
-<Value><Code>420</Code><Text>Repealed - Temporary Work (Entertainment) visa</Text></Value>
-<Value><Code>421</Code><Text>Repealed - Sport visa</Text></Value>
-<Value><Code>422</Code><Text>Repealed - Medical Practitioner visa</Text></Value>
-<Value><Code>423</Code><Text>Repealed - Media and Film Staff visa</Text></Value>
-<Value><Code>426</Code><Text>Repealed - Domestic Worker (Temporary) Diplomatic and Consular visa</Text></Value>
-<Value><Code>428</Code><Text>Repealed - Religious Worker visa</Text></Value>
+<Value><Code>418</Code><Text>Educational (No longer issued)</Text></Value>
+<Value><Code>419</Code><Text>Visiting Academic visa (No longer issued)</Text></Value>
+<Value><Code>420</Code><Text>Temporary Work (Entertainment) visa (No longer issued)</Text></Value>
+<Value><Code>421</Code><Text>Sport visa (No longer issued)</Text></Value>
+<Value><Code>422</Code><Text>Medical Practitioner visa (No longer issued)</Text></Value>
+<Value><Code>423</Code><Text>Media and Film Staff visa (No longer issued)</Text></Value>
+<Value><Code>424</Code><Text>Public lecturer (No longer issued)</Text></Value>
+<Value><Code>425</Code><Text>Family relationship (No longer issued)</Text></Value>
+<Value><Code>426</Code><Text>Domestic Worker (Temporary) Diplomatic and Consular visa (No longer issued)</Text></Value>
+<Value><Code>427</Code><Text>Domestic worker - executive (No longer issued)</Text></Value>
+<Value><Code>428</Code><Text>Religious Worker visa (No longer issued)</Text></Value>
+<Value><Code>430</Code><Text>Supported dependant (No longer issued)</Text></Value>
+<Value><Code>432</Code><Text>Expatriate (No longer issued)</Text></Value>
+<Value><Code>435</Code><Text>Sri Lankan (No longer issued)</Text></Value>
+<Value><Code>442</Code><Text>Occupational Trainee (No longer issued)</Text></Value>
+<Value><Code>443</Code><Text>Citizens of former Yugoslavia (No longer issued)</Text></Value>
 <Value><Code>444</Code><Text>Special Category visa</Text></Value>
-<Value><Code>456</Code><Text>Repealed - Business (Short Stay) visa</Text></Value>
-<Value><Code>457</Code><Text>Repealed - Temporary Work (Skilled) visa</Text></Value>
+<Value><Code>445</Code><Text>Dependent Child</Text></Value>
+<Value><Code>446</Code><Text>Confirmatory (Temporary) (No longer issued)</Text></Value>
+<Value><Code>447</Code><Text>Secondary Movement Offshore Entry (Temporary) (No longer issued)</Text></Value>
+<Value><Code>448</Code><Text>Kosovar Safe Haven (No longer issued)</Text></Value>
+<Value><Code>449</Code><Text>Humanitarian Stay (Temporary) (No longer issued)</Text></Value>
+<Value><Code>450</Code><Text>Resolution of Status - Family member (Temporary) (No longer issued)</Text></Value>
+<Value><Code>451</Code><Text>Secondary Movement Relocation (Temporary) (No longer issued)</Text></Value>
+<Value><Code>456</Code><Text>Business (Short Stay) visa (No longer issued)</Text></Value>
+<Value><Code>457</Code><Text>Temporary Work (Skilled) visa (No longer issued)</Text></Value>
+<Value><Code>459</Code><Text>Sponsored Business Visitor (short stay) ((No longer issued)</Text></Value>
 <Value><Code>461</Code><Text>New Zealand Citizen Family Relationship (temporary) visa</Text></Value>
 <Value><Code>462</Code><Text>Work and Holiday visa</Text></Value>
-<Value><Code>475</Code><Text>Repealed - Skilled Regional Sponsored visa</Text></Value>
+<Value><Code>470</Code><Text>Professional Development (No longer issued)</Text></Value>
+<Value><Code>471</Code><Text>Trade Skills Training (No longer issued)</Text></Value>
+<Value><Code>475</Code><Text>Skilled Regional Sponsored visa (No longer issued)</Text></Value>
 <Value><Code>476</Code><Text>Skilled-Recognised Graduate visa</Text></Value>
 <Value><Code>482</Code><Text>Temporary Skill Shortage visa</Text></Value>
 <Value><Code>485</Code><Text>Temporary Graduate visa</Text></Value>
-<Value><Code>487</Code><Text>Repealed - Skilled Regional Sponsored</Text></Value>
-<Value><Code>488</Code><Text>Repealed - Superyacht Crew visa</Text></Value>
+<Value><Code>487</Code><Text>Skilled Regional Sponsored (No longer issued)</Text></Value>
+<Value><Code>488</Code><Text>Superyacht Crew visa (No longer issued)</Text></Value>
 <Value><Code>489</Code><Text>Skilled Regional (Provisional) visa</Text></Value>
 <Value><Code>491</Code><Text>Skilled Work Regional (Provisional) visa</Text></Value>
 <Value><Code>494</Code><Text>Skilled Employer Sponsored Regional (Provisional) visa</Text></Value>
-<Value><Code>495</Code><Text>Repealed - Skilled Independent Regional (Provisional) visa</Text></Value>
-<Value><Code>496</Code><Text>Repealed - Skilled Designated Area Sponsored visa</Text></Value>
+<Value><Code>495</Code><Text>Skilled Independent Regional (Provisional) visa (No longer issued)</Text></Value>
+<Value><Code>496</Code><Text>Skilled Designated Area Sponsored visa (No longer issued)</Text></Value>
+<Value><Code>497</Code><Text>Graduate - Skilled (No longer issued)</Text></Value>
+<Value><Code>499</Code><Text>Olympic (Support) (No longer issued)</Text></Value>
 <Value><Code>500</Code><Text>Student visa</Text></Value>
-<Value><Code>570</Code><Text>Repealed - Independent ELICOS Sector visa</Text></Value>
-<Value><Code>571</Code><Text>Repealed - School Sector visa</Text></Value>
-<Value><Code>572</Code><Text>Repealed - Vocational Education and Training Sector visa</Text></Value>
-<Value><Code>573</Code><Text>Repealed - Higher Education Sector visa</Text></Value>
-<Value><Code>574</Code><Text>Repealed - Postgraduate Research Sector visa</Text></Value>
-<Value><Code>575</Code><Text>Repealed - Non Award Sector visa</Text></Value>
-<Value><Code>576</Code><Text>Repealed - Foreign Affairs or Defence sector visa</Text></Value>
-<Value><Code>580</Code><Text>Repealed - Student Guardian visa</Text></Value>
+<Value><Code>560</Code><Text>Student (No longer issued)</Text></Value>
+<Value><Code>562</Code><Text>Iranian Postgraduate Student (No longer issued)</Text></Value>
+<Value><Code>563</Code><Text>Iranian Postgraduate Student Dependent (No longer issued)</Text></Value>
+<Value><Code>570</Code><Text>Independent ELICOS Sector visa (No longer issued)</Text></Value>
+<Value><Code>571</Code><Text>School Sector visa (No longer issued)</Text></Value>
+<Value><Code>572</Code><Text>Vocational Education and Training Sector visa (No longer issued)</Text></Value>
+<Value><Code>573</Code><Text>Higher Education Sector visa (No longer issued)</Text></Value>
+<Value><Code>574</Code><Text>Postgraduate Research Sector visa (No longer issued)</Text></Value>
+<Value><Code>575</Code><Text>Non Award Sector visa (No longer issued)</Text></Value>
+<Value><Code>576</Code><Text>Foreign Affairs or Defence sector visa (No longer issued)</Text></Value>
+<Value><Code>580</Code><Text>Student Guardian visa (No longer issued)</Text></Value>
 <Value><Code>590</Code><Text>Student Guardian visa</Text></Value>
 <Value><Code>600</Code><Text>Visitor</Text></Value>
 <Value><Code>601</Code><Text>Electronic Travel Authority</Text></Value>
 <Value><Code>602</Code><Text>Medical Treatment visa</Text></Value>
 <Value><Code>651</Code><Text>eVisitor</Text></Value>
-<Value><Code>675</Code><Text>Repealed - Medical Treatment (Short Stay) visa</Text></Value>
-<Value><Code>676</Code><Text>Repealed - Tourist visa</Text></Value>
-<Value><Code>685</Code><Text>Repealed - Medical Treatment Long Stay visa</Text></Value>
+<Value><Code>675</Code><Text>Medical Treatment (Short Stay) visa (No longer issued)</Text></Value>
+<Value><Code>676</Code><Text>Tourist visa (No longer issued)</Text></Value>
+<Value><Code>679</Code><Text>Sponsored Family Visitor (short stay) (No longer issued)</Text></Value>
+<Value><Code>685</Code><Text>Medical Treatment Long Stay visa (No longer issued)</Text></Value>
+<Value><Code>686</Code><Text>Tourist - Long Stay (No longer issued)</Text></Value>
+<Value><Code>695</Code><Text>Temporary Provisional - Pending return (No longer issued)</Text></Value>
 <Value><Code>771</Code><Text>Transit visa</Text></Value>
+<Value><Code>773</Code><Text>Border (No longer issued)</Text></Value>
+<Value><Code>785</Code><Text>Temporary Protection</Text></Value>
+<Value><Code>786</Code><Text>Temporary (Humanitarian Concern) (No longer issued)</Text></Value>
 <Value><Code>790</Code><Text>Safe Haven Enterprise visa</Text></Value>
+<Value><Code>800</Code><Text>Territorial Asylum (No longer issued)</Text></Value>
 <Value><Code>801</Code><Text>Partner visa</Text></Value>
 <Value><Code>802</Code><Text>Child visa</Text></Value>
 <Value><Code>804</Code><Text>Aged Parent visa</Text></Value>
+<Value><Code>805</Code><Text>Skilled (No longer issued)</Text></Value>
+<Value><Code>806</Code><Text>Family (No longer issued)</Text></Value>
 <Value><Code>808</Code><Text>Confirmatory (Residence) visa</Text></Value>
+<Value><Code>814</Code><Text>Interdependency (No longer issued)</Text></Value>
+<Value><Code>819</Code><Text>Aged Parent (No longer issued)</Text></Value>
 <Value><Code>820</Code><Text>Partner (Extended Eligibility) visa</Text></Value>
+<Value><Code>826</Code><Text>Interdependency (No longer issued)</Text></Value>
+<Value><Code>828</Code><Text>TEP Processing (No longer issued)</Text></Value>
+<Value><Code>831</Code><Text>Prospective marriage spouse (No longer issued)</Text></Value>
+<Value><Code>832</Code><Text>Close Ties (No longer issued)</Text></Value>
+<Value><Code>833</Code><Text>Certain unlawful non-citizens (No longer issued)</Text></Value>
+<Value><Code>834</Code><Text>Permanent resident of Norfolk Island (No longer issued)</Text></Value>
 <Value><Code>835</Code><Text>Remaining Relative visa</Text></Value>
 <Value><Code>836</Code><Text>Carer visa</Text></Value>
 <Value><Code>837</Code><Text>Orphan Relative</Text></Value>
 <Value><Code>838</Code><Text>Aged Dependent Relative visa</Text></Value>
-<Value><Code>845</Code><Text>Repealed - Established Business in Australia visa</Text></Value>
-<Value><Code>846</Code><Text>Repealed - State or Territory Sponsored Regional Established Business in Australia visa</Text></Value>
-<Value><Code>855</Code><Text>Repealed - Labour Agreement visa</Text></Value>
-<Value><Code>856</Code><Text>Repealed - Employer Nomination Scheme</Text></Value>
-<Value><Code>857</Code><Text>Repealed - Regional Sponsor Migration Scheme</Text></Value>
+<Value><Code>840</Code><Text>Business Owner (No longer issued)</Text></Value>
+<Value><Code>841</Code><Text>Senior Executive (No longer issued)</Text></Value>
+<Value><Code>842</Code><Text>State/Territory sponsored business owner (No longer issued)</Text></Value>
+<Value><Code>843</Code><Text>State/Territory sponsored senior executive (No longer issued)</Text></Value>
+<Value><Code>844</Code><Text>Investment-linked (No longer issued)</Text></Value>
+<Value><Code>845</Code><Text>Established Business in Australia visa (No longer issued)</Text></Value>
+<Value><Code>846</Code><Text>State or Territory Sponsored Regional Established Business in Australia visa (No longer issued)</Text></Value>
+<Value><Code>850</Code><Text>Resolution Status (Temporary) (No longer issued)</Text></Value>
+<Value><Code>851</Code><Text>Resolution of Status</Text></Value>
+<Value><Code>852</Code><Text>Witness Protection (No longer issued)</Text></Value>
+<Value><Code>855</Code><Text>Labour Agreement visa (No longer issued)</Text></Value>
+<Value><Code>856</Code><Text>Employer Nomination Scheme (No longer issued)</Text></Value>
+<Value><Code>857</Code><Text>Regional Sponsor Migration Scheme (No longer issued)</Text></Value>
 <Value><Code>858</Code><Text>Distinguished Talent visa</Text></Value>
+<Value><Code>859</Code><Text>Designated Parent (No longer issued)</Text></Value>
+<Value><Code>861</Code><Text>Skilled - Onshore Independent New Zealand Citizen (No longer issued)</Text></Value>
+<Value><Code>862</Code><Text>Skilled Australian-sponsored New Zealand Citizen (No longer issued)</Text></Value>
+<Value><Code>863</Code><Text>Skilled Designated Area-sponsored New Zealand Citizen (No longer issued)</Text></Value>
 <Value><Code>864</Code><Text>Contributory Aged Parent visa</Text></Value>
 <Value><Code>866</Code><Text>Protection visa</Text></Value>
+<Value><Code>870</Code><Text>Sponsored Parent (Temporary)</Text></Value>
+<Value><Code>880</Code><Text>Skilled - Independent Overseas Student (No longer issued)</Text></Value>
+<Value><Code>881</Code><Text>Skilled - Australian-sponsored Overseas Student (No longer issued)</Text></Value>
+<Value><Code>882</Code><Text>Skilled - Designated Area-sponsored Overseas Student (No longer issued)</Text></Value>
+<Value><Code>883</Code><Text>Skilled Designated Area Sponsored (Residence) (No longer issued)</Text></Value>
 <Value><Code>884</Code><Text>Contributory Aged Parent (Temporary) visa</Text></Value>
-<Value><Code>885</Code><Text>Repealed - Skilled Independent visa</Text></Value>
-<Value><Code>886</Code><Text>Repealed - Sponsored visa</Text></Value>
+<Value><Code>885</Code><Text>Skilled Independent visa (No longer issued)</Text></Value>
+<Value><Code>886</Code><Text>Sponsored visa (No longer issued)</Text></Value>
 <Value><Code>887</Code><Text>Skilled Regional visa</Text></Value>
 <Value><Code>888</Code><Text>Business Innovation and Investment (permanent) visa</Text></Value>
 <Value><Code>890</Code><Text>Business Owner</Text></Value>
@@ -7083,10 +5684,18 @@
 <Value><Code>892</Code><Text>State or Territory Sponsored Business Owner visa</Text></Value>
 <Value><Code>893</Code><Text>State or Territory Sponsored Investor visa</Text></Value>
 <Value><Code>942</Code><Text>Crew Travel Authority visa</Text></Value>
-<Value><Code>956</Code><Text>Repealed - Electronic Travel Authority (Business Entrant) visa</Text></Value>
-<Value><Code>976</Code><Text>Repealed - Electronic Travel Authority (Visitor) visa</Text></Value>
-<Value><Code>977</Code><Text>Repealed - Electronic Travel Authority (Business Entrant) visa</Text></Value>
+<Value><Code>944</Code><Text>APEC Travel Authority (No longer issued)</Text></Value>
+<Value><Code>956</Code><Text>Electronic Travel Authority (Business Entrant) visa (No longer issued)</Text></Value>
+<Value><Code>976</Code><Text>Electronic Travel Authority (Visitor) visa (No longer issued)</Text></Value>
+<Value><Code>977</Code><Text>Electronic Travel Authority (Business Entrant) visa (No longer issued)</Text></Value>
 <Value><Code>988</Code><Text>Maritime Crew visa</Text></Value>
+<Value><Code>995</Code><Text>Diplomatic (Temporary) (No longer issued)</Text></Value>
+<Value><Code>998</Code><Text>Declaratory (No longer issued)</Text></Value>
+
+
+
+
+
      </Values>
 	</CodeSet>
 	<CodeSet>

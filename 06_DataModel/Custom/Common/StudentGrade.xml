@@ -231,6 +231,7 @@
         <Letter>C</Letter>
         <Narrative>Johnny is only achieving average performance.</Narrative>
       </Grade>
+	  <TeacherJudgement>Johnny is having challenges with the astronomy module.</TeacherJudgement>
  	  <TermSpan>0828</TermSpan>
 	  <SchoolYear>2021</SchoolYear>
    </StudentGrade>
