@@ -353,9 +353,10 @@
     <Characteristics>O</Characteristics>
 	<privacyRating>Low</privacyRating>
     <Description>
-      <p>Statistical Local Area that the school/campus belongs to.</p>
+      <p>Statistical Local Area that the school/campus belongs to. Legacy element, uses the
+	  Australian Bureau of Statistics' Australian Standard Geographical Classification.</p>
     </Description>
-    <Type ref="CodeSets" name="AUCodeSetsAustralianStandardGeographicalClassificationASGCType"></Type>
+    <Type name="xs:token"></Type>
   </Item>
   <Item>
     <Element>SchoolCoEdStatus</Element>
