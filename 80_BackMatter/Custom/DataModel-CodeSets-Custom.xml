@@ -5448,7 +5448,8 @@
 	<CodeSet>
 		<Intro>
 			<p>From http://www.border.gov.au/ Australian Government - Department of Immigration and Border Protection: 
-			Updated from Source Data on 15 November, 2023 - Refer to: https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing</p>
+			Updated from Source Data on 15 November, 2023 - Refer to: https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing. 
+			Supplemented by https://www.deinternational.nsw.edu.au/__data/assets/pdf_file/0012/16410/Visa-Subclasses-and-Enrolment-Conditions.pdf</p>
 		</Intro>
 		<ID>Visa Sub Class</ID>
 		<Values>
@@ -5685,6 +5686,7 @@
 <Value><Code>893</Code><Text>State or Territory Sponsored Investor visa</Text></Value>
 <Value><Code>942</Code><Text>Crew Travel Authority visa</Text></Value>
 <Value><Code>944</Code><Text>APEC Travel Authority (No longer issued)</Text></Value>
+<Value><Code>945</Code><Text>Status of Forces Agreement/Defence personnel dependents</Text></Value>
 <Value><Code>956</Code><Text>Electronic Travel Authority (Business Entrant) visa (No longer issued)</Text></Value>
 <Value><Code>976</Code><Text>Electronic Travel Authority (Visitor) visa (No longer issued)</Text></Value>
 <Value><Code>977</Code><Text>Electronic Travel Authority (Business Entrant) visa (No longer issued)</Text></Value>

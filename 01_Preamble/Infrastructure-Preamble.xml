@@ -69,9 +69,10 @@ in the SIF Implementation Specification may include inaccuracies or typographica
     </p>
 	</Section>
 	<Section name="Permissions and Copyright">
-		<p>	Copyright® SIF Association (2011-2017). All Rights Reserved.</p>
-		<p>
-			This document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to the SIF Association, or its committees, except as needed for the purpose of developing SIF standards using procedures approved by the SIF Association, or as required to translate it into languages other than English. The limited permissions granted above are perpetual and will not be revoked by the SIF Association or its successors or assigns.
-		</p>
+		<p>	® Copyright Access 4 Learning Community. Some Rights Reserved.</p>
+		<p><img decoding="async" src="https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-sa.png" width="117" height="41" align="right" /></a>This license enables reusers to distribute, remix, adapt, and build upon the material in any medium or format, so long as attribution is given to the creator. The license allows for commercial use. If you remix, adapt, or build upon the material, you must license the modified material under identical terms. CC BY-SA includes the following elements:</p>
+<p><img decoding="async" src="https://mirrors.creativecommons.org/presskit/icons/by.xlarge.png" width="30" height="30" /></p>
+		<p>The SIF Implementation Specifications are available under an Attribution-ShareAlike CC BY-SA 4.0 International license (<a href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a>). 
+		Entities must give appropriate credit, provide a link to the license, and indicate if changes were made. Modifications of this license and derivatives need to be licensed under the same terms, but not other works in the compilation or collection. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original. Entities may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.</p>
 	</Section>
 </Section>
