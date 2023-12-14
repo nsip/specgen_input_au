@@ -11,7 +11,7 @@
 		
 		Infrastructure Version: <xi:include parse="text" href="90_Properties/SIF-Infrastructure-Version.txt"/>
 		
-		These schema files are licensed under the Apache 2.0 License. See https://home.a4l.org/legal/
+		These schema files are licensed under the Apache 2.0 License. See https://home.a4l.org/legal/ 
 	</BuildComment>
 	
 	<!--Title Page-->

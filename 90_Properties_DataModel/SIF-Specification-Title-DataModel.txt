@@ -1,2 +1,2 @@
-<if intl="au">SIF Implementation Specification (Australia) 3.6.1</if>
+<if intl="au">SIF Implementation Specification (Australia) 3.6.2</if>
 <if intl="nz">SIF Implementation Specification (New Zealand) 3.4.x</if>

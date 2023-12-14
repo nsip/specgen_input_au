@@ -4,9 +4,11 @@
 		SIF Implementation Specification (Australia) 3.6.1
 
 
-		(November 15, 2023)
+		(April 40, 2024)
 		
 		Infrastructure Version: v3
+		
+		These schema files are licensed under the Apache 2.0 License. See https://home.a4l.org/legal/
 	</BuildComment>
 	
 	<!--Title Page-->
@@ -18,7 +20,7 @@
 
 		</h1>
 		<h2>
-			November 15, 2023
+			April 40, 2024
 		</h2>
 		<br />
 		<br />
@@ -31,11 +33,11 @@
 		<dl>
 			<dt>This version:</dt>
 			<dd>
-				<a href="http://specification.sifassociation.org/Implementation/AU/3.6.1/index.html">http://specification.sifassociation.org/Implementation/AU/3.6.1/index.html</a>
+				<a href="http://specification.sifassociation.org/Implementation/AU/3.6.2/1/index.html">http://specification.sifassociation.org/Implementation/AU/3.6.2/1/index.html</a>
 			</dd>
 			<dt>Previous version:</dt>
 			<dd>
-				<a href="http://specification.sifassociation.org/Implementation/AU/3.6.0/">http://specification.sifassociation.org/Implementation/AU/3.6.0/</a>
+				<a href="http://specification.sifassociation.org/Implementation/AU/3.6.1/">http://specification.sifassociation.org/Implementation/AU/3.6.1/</a>
 			</dd>
 			<dt>Latest version:</dt>
 			<dd>
@@ -106,7 +108,7 @@
 		<a href="ImplementationSpecification.xls">Excel spreadsheet</a>.</p>
 		<br />
 		<br />
-		<p>Copyright ©2023 <a href="http://www.sifassociation.org">
+		<p>Copyright ©2024 <a href="http://www.sifassociation.org">
 				Systems Interoperability Framework (SIF™) Association</a>.  All Rights Reserved.
 		</p>
 	</TitlePage>
@@ -146,7 +148,7 @@
   <p>
     SIF Implementation Specification (Australia) defines a set of data objects supporting Australia's interoperability
     requirements for the education sector and combines this data model with established infrastructure protocols from the SIF Implementation Specification <a href="References.html#SIF">[SIF]</a>.
-    SIF Implementation Specification (Australia) 3.4 leverages the SIF architecture and refers to SIF Infrastructure Specifications greater than 3.0.1 [SIF 3.x]  to support its data objects, with an Australia-specific namespace and the data objects defined in this specification.
+    SIF Implementation Specification (Australia) 3 leverages the SIF architecture and refers to SIF Infrastructure Specifications greater than 3.0.1 [SIF 3.x]  to support its data objects, with an Australia-specific namespace and the data objects defined in this specification.
     Technical readers should note that the version number internal to SIF XML messages identifies the version number of the SIF Data Model.
   </p>
 </Section>
@@ -184,10 +186,20 @@ in the SIF Implementation Specification may include inaccuracies or typographica
     </p>
 	</Section>
 	<Section name="Permissions and Copyright">
-		<p>	Copyright® SIF Association (2011-2017). All Rights Reserved.</p>
-		<p>
-			This document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to the SIF Association, or its committees, except as needed for the purpose of developing SIF standards using procedures approved by the SIF Association, or as required to translate it into languages other than English. The limited permissions granted above are perpetual and will not be revoked by the SIF Association or its successors or assigns.
-		</p>
+		<p>	® Copyright Access 4 Learning Community. Some Rights Reserved.</p>
+		<Section name="Overview"> 
+		<p>On July 18th, 2017 the Access 4 Learning Community (henceforth “A4L”) Association Board of Directors elected to ensure that the contents, associated artifacts and  schemas representing the SIF specification should be open and available to all and protected under global standard licensing agreements.</p> 
+		<p>All human-readable artifacts published and created by the Access 4 Learning Community are protected under a Creative Commons license.</p> 
+		<p>All machine-readable artifacts and content is protected under an Apache 2 license.</p>  
+		<p>All published artifacts and Specifications published after July 18, 2017 are covered.</p>
+		</Section>
+		<Section name="Human-readable artifacts">
+		<p>The SIF Implementation Specifications and all human-readable related artifacts and materials are available under an <a href="https://creativecommons.org/licenses/by-sa/4.0/">Attribution-ShareAlike CC BY-SA 4.0</a> International license. Entities must give appropriate credit, provide a link to the license, and indicate if changes were made. Modifications of this license and derivatives need to be licensed under the same terms, but not other works in the compilation or collection. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original. Entities may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.</p>
+		<p><a href="https://creativecommons.org/licenses/by-sa/4.0/"><img decoding="async" src="https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-sa.png" width="117" height="41" align="right" /></a><em>This license enables reusers to distribute, remix, adapt, and build upon the material in any medium or format, so long as attribution is given to the creator. The license allows for commercial use. If you remix, adapt, or build upon the material, you must license the modified material under identical terms.</em></p>
+		</Section>
+		<Section name="Machine-readable artifacts">
+		<p>The machine-readable files associated with the Specification, including Excel presentations, XSD schemas, JSON schemas, and OpenAPI specifications, are all licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0.html">Apache 2.0</a> license.  Developers can look here for guidance on using the license: <a href="https://www.apache.org/legal/apply-license.html">Using the Apache license</a>.   The Apache 2.0 License is permissive. It allows you to use, modify, and distribute the licensed software, including creating derivative works, without requiring those derivative works to be licensed under the same terms. You can release the modified parts of the code under any license you prefer.<a href="https://www.apache.org/licenses/LICENSE-2.0.html"><img decoding="async" src="https://www.apache.org/foundation/press/kit/asf_logo_small.png" align="right" /></a></p>
+		</Section>
 	</Section>
 </Section>
 
@@ -347,11 +359,11 @@ in the SIF Implementation Specification may include inaccuracies or typographica
   <Section name="Highlighted Additions/Changes" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns="http://sifassociation.org/SpecGen">
 	
 	<p>This release contains the following significant updates and extensions to the SIF specification.</p>
-	<h3>Additions/Changes since 3.6.0 May, 2023</h3>
+	<h3>Additions/Changes since 3.6.1 November, 2023</h3>
 
 	<h4>New Inclusions</h4>
 	<ul>
-	<li>Updated Global Infrastructure model to 3.6.</li>
+	<li>None.</li>
 	</ul>
 
 	<h4>New Objects</h4>
@@ -367,10 +379,7 @@ in the SIF Implementation Specification may include inaccuracies or typographica
 
 	<h4>New Elements</h4>
 	<ul>
-		<li><code>StudentScoreJudgementAgainstStandard/Grade</code>, 
-		<code>StudentScoreJudgementAgainstStandard/TeacherJudgement</code>, requested by DET NSW,
-		to allow a broader range of evaluations for student performance against a learning standard
-		than just a numeric score.</li>
+		<li>None.</li>
 	</ul>
 	
 	
@@ -386,31 +395,17 @@ in the SIF Implementation Specification may include inaccuracies or typographica
 
 	<h4>Additions to CodeSets</h4>
 	<ul>	
-	<li><code>4217 Currency Names And Code Elements</code>: added <code>SLE</code>: Leone (new).</li>
-	<li><code>Federal Electorate</code>: added <code>194</code>: No usual address (NSW), 
-	<code>294</code>: No usual address (VIC), <code>394</code>: No usual address (QLD),
-	<code>494</code>: No usual address (SA), <code>594</code>: No usual address (WA),
-	<code>694</code>: No usual address (TAS), <code>794</code>: No usual address (NT),
-	<code>894</code>: No usual address (ACT), <code>897</code>: Migratory - Offshore - Shipping (ACT),
-	<code>994</code>: No usual address (OT), <code>997</code>: Migratory - Offshore - Shipping (OT)</li>
+	<li><code>Visa Sub Class</code>: added <code>945</code>: Status of Forces Agreement/Defence personnel dependents</li>
 	</ul>
 
 	<h4>Removals/Deprecations from CodeSets</h4>
 	<ul>	
-	<li>Removed <code>Australian Standard Geographical Classification (ASGC)</code> (obsoleted in 2012,
-	is by far the largest codeset in the specification at 1300 elements). All references to it in the
-	specification (<code>SchoolInfo/SLA</code>, <code>LEAInfo/SLA</code>) replaced with <code>xs:token</code>.</li>
+	<li>None.</li>
 	</ul>
 
 
 	<h4>Other Changes</h4>
-	<ul><li><code>Visa Sub Class</code>: tidied presentation, use consistently "(No longer isssued)"
-	for discontinued visas.</li>
-	<li><code>Visa Sub Class</code>: updated enumeration of discontinued visas.</li>
-	<li><code>Federal Electorate</code>: corrected  <code>227</code>: Lalor, <code>228</code>: La Trobe to 
-	<code>227</code>: La Trobe, <code>228</code>: Lalor, following the published Australian Bureau of Statistics specification.</li>
-	<li><code>Federal Electorate</code>: corrected  <code>515</code>: Swan, <code>516</code>: Tangney to 
-	<code>514</code>: Swan, <code>515</code>: Tangney, following the published Australian Bureau of Statistics specification.</li>
+	<ul><li>None.</li>
  	</ul>
    	
 	<h4>Corrections</h4>
@@ -42248,7 +42243,8 @@ For clarity, the conceptual model is broken up into use cases:</p>
 	<CodeSet>
 		<Intro>
 			<p>From http://www.border.gov.au/ Australian Government - Department of Immigration and Border Protection: 
-			Updated from Source Data on 15 November, 2023 - Refer to: https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing</p>
+			Updated from Source Data on 15 November, 2023 - Refer to: https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing. 
+			Supplemented by https://www.deinternational.nsw.edu.au/__data/assets/pdf_file/0012/16410/Visa-Subclasses-and-Enrolment-Conditions.pdf</p>
 		</Intro>
 		<ID>Visa Sub Class</ID>
 		<Values>
@@ -42485,6 +42481,7 @@ For clarity, the conceptual model is broken up into use cases:</p>
 <Value><Code>893</Code><Text>State or Territory Sponsored Investor visa</Text></Value>
 <Value><Code>942</Code><Text>Crew Travel Authority visa</Text></Value>
 <Value><Code>944</Code><Text>APEC Travel Authority (No longer issued)</Text></Value>
+<Value><Code>945</Code><Text>Status of Forces Agreement/Defence personnel dependents</Text></Value>
 <Value><Code>956</Code><Text>Electronic Travel Authority (Business Entrant) visa (No longer issued)</Text></Value>
 <Value><Code>976</Code><Text>Electronic Travel Authority (Visitor) visa (No longer issued)</Text></Value>
 <Value><Code>977</Code><Text>Electronic Travel Authority (Business Entrant) visa (No longer issued)</Text></Value>
