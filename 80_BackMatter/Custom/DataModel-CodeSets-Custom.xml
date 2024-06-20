@@ -3875,559 +3875,236 @@
 	</CodeSet>
 	<CodeSet>
 		<Intro>
-			<p>1266.0 Australian Standard Classification of Religious Groups, 2016	
- </p>
+			<p>1266.0 Australian Standard Classification of Religious Groups, 2024</p>
 			<p>Source Data ABS: http://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1266.02016?OpenDocument</p>
+			<p>Consistent with past releases of SIF, the standard uses only the Narrow groups (4-digit codes)
+			of the standard.</p>
 		</Intro>
 		<ID>Australian Standard Classification Of Religious Groups (ASCRG)</ID>
 		<Values>
 			<Value>
-				<Code>0001</Code>
+				<Code>000000</Code>
+				<Text>Inadequately described</Text>
+			</Value>
+			<Value>
+				<Code>000001</Code>
 				<Text>Not Stated</Text>
 			</Value>
 			<Value>
-				<Code>0002</Code>
-				<Text>Religious Belief, nfd</Text>
-			</Value>
-			<Value>
-				<Code>0003</Code>
-				<Text>Not Defined</Text>
-			</Value>
-			<Value>
-				<Code>0004</Code>
-				<Text>New Age, so described</Text>
-			</Value>
-			<Value>
-				<Code>0005</Code>
-				<Text>Theism</Text>
-			</Value>
-			<Value>
-				<Code>1011</Code>
+				<Code>1511</Code>
 				<Text>Buddhism</Text>
 			</Value>
 			<Value>
-				<Code>2000</Code>
+				<Code>151100</Code>
+				<Text>Buddhism, nfd</Text>
+			</Value>
+			<Value>
+				<Code>250000</Code>
 				<Text>Christian, nfd</Text>
 			</Value>
 			<Value>
-				<Code>2001</Code>
-				<Text>Apostolic Church, so described</Text>
+				<Code>2511</Code>
+				<Text>Anglican</Text>
 			</Value>
 			<Value>
-				<Code>2002</Code>
-				<Text>Church of God, so described</Text>
+				<Code>2512</Code>
+				<Text>Assyrian Apostolic</Text>
 			</Value>
 			<Value>
-				<Code>2003</Code>
-				<Text>Australian Christian Churches, so described</Text>
-			</Value>
-			<Value>
-				<Code>2004</Code>
-				<Text>New Church Alliance, so described</Text>
-			</Value>
-			<Value>
-				<Code>2010</Code>
-				<Text>Anglican, nfd</Text>
-			</Value>
-			<Value>
-				<Code>2012</Code>
-				<Text>Anglican Church of Australia</Text>
-			</Value>
-			<Value>
-				<Code>2013</Code>
-				<Text>Anglican Catholic Church</Text>
-			</Value>
-			<Value>
-				<Code>2031</Code>
-				<Text>Baptist</Text>
-			</Value>
-			<Value>
-				<Code>2051</Code>
-				<Text>Brethren</Text>
-			</Value>
-			<Value>
-				<Code>2071</Code>
-				<Text>Western Catholic</Text>
-			</Value>
-			<Value>
-				<Code>2072</Code>
-				<Text>Maronite Catholic</Text>
-			</Value>
-			<Value>
-				<Code>2073</Code>
-				<Text>Melkite Catholic</Text>
-			</Value>
-			<Value>
-				<Code>2074</Code>
-				<Text>Ukrainian Catholic</Text>
-			</Value>
-			<Value>
-				<Code>2075</Code>
-				<Text>Chaldean Catholic</Text>
-			</Value>
-			<Value>
-				<Code>2079</Code>
-				<Text>Catholic, nec</Text>
-			</Value>
-			<Value>
-				<Code>2110</Code>
-				<Text>Churches of Christ, nfd</Text>
-			</Value>
-			<Value>
-				<Code>2111</Code>
-				<Text>Churches of Christ (Conference)</Text>
-			</Value>
-			<Value>
-				<Code>2112</Code>
-				<Text>Church of Christ (Nondenominational)</Text>
-			</Value>
-			<Value>
-				<Code>2113</Code>
-				<Text>International Church of Christ</Text>
-			</Value>
-			<Value>
-				<Code>2131</Code>
-				<Text>Jehovah's Witnesses</Text>
-			</Value>
-			<Value>
-				<Code>2150</Code>
-				<Text>Church of Jesus Christ of Latter Day Saints, nfd</Text>
-			</Value>
-			<Value>
-				<Code>2151</Code>
-				<Text>Church of Jesus Christ of LDS (Mormons)</Text>
-			</Value>
-			<Value>
-				<Code>2152</Code>
-				<Text>Community of Christ</Text>
-			</Value>
-			<Value>
-				<Code>2171</Code>
-				<Text>Lutheran</Text>
-			</Value>
-			<Value>
-				<Code>2210</Code>
-				<Text>Oriental Orthodox, nfd</Text>
-			</Value>
-			<Value>
-				<Code>2212</Code>
-				<Text>Armenian Apostolic</Text>
-			</Value>
-			<Value>
-				<Code>2214</Code>
-				<Text>Coptic Orthodox Church</Text>
-			</Value>
-			<Value>
-				<Code>2215</Code>
-				<Text>Syrian Orthodox Church</Text>
-			</Value>
-			<Value>
-				<Code>2216</Code>
-				<Text>Ethiopian Orthodox Church</Text>
-			</Value>
-			<Value>
-				<Code>2219</Code>
-				<Text>Oriental Orthodox, nec</Text>
-			</Value>
-			<Value>
-				<Code>2220</Code>
+				<Code>251200</Code>
 				<Text>Assyrian Apostolic, nfd</Text>
 			</Value>
 			<Value>
-				<Code>2221</Code>
-				<Text>Assyrian Church of the East</Text>
+				<Code>2513</Code>
+				<Text>Baptist</Text>
 			</Value>
 			<Value>
-				<Code>2222</Code>
-				<Text>Ancient Church of the East</Text>
+				<Code>25143</Code>
+				<Text>Brethren</Text>
 			</Value>
 			<Value>
-				<Code>2229</Code>
-				<Text>Assyrian Apostolic, nec</Text>
+				<Code>2515</Code>
+				<Text>Catholic</Text>
 			</Value>
 			<Value>
-				<Code>2230</Code>
-				<Text>Eastern Orthodox, nfd</Text>
+				<Code>251500</Code>
+				<Text>Catholic, nfd</Text>
 			</Value>
 			<Value>
-				<Code>2231</Code>
-				<Text>Albanian Orthodox</Text>
+				<Code>2516</Code>
+				<Text>Churches of Christ</Text>
 			</Value>
 			<Value>
-				<Code>2232</Code>
-				<Text>Antiochian Orthodox</Text>
+				<Code>251600</Code>
+				<Text>Churches of Christ, nfd</Text>
 			</Value>
 			<Value>
-				<Code>2233</Code>
-				<Text>Greek Orthodox</Text>
+				<Code>2517</Code>
+				<Text>Eastern Orthodox</Text>
 			</Value>
 			<Value>
-				<Code>2234</Code>
-				<Text>Macedonian Orthodox</Text>
+				<Code>2518</Code>
+				<Text>Jehovah's Witnesses</Text>
 			</Value>
 			<Value>
-				<Code>2235</Code>
-				<Text>Romanian Orthodox</Text>
+				<Code>2521</Code>
+				<Text>Latter Day Saints</Text>
 			</Value>
 			<Value>
-				<Code>2236</Code>
-				<Text>Russian Orthodox</Text>
+				<Code>252100</Code>
+				<Text>Latter Day Saints, nfd</Text>
 			</Value>
 			<Value>
-				<Code>2237</Code>
-				<Text>Serbian Orthodox</Text>
+				<Code>2522</Code>
+				<Text>Lutheran</Text>
 			</Value>
 			<Value>
-				<Code>2238</Code>
-				<Text>Ukrainian Orthodox</Text>
+				<Code>2523</Code>
+				<Text>Oriental Orthodox</Text>
 			</Value>
 			<Value>
-				<Code>2239</Code>
-				<Text>Eastern Orthodox, nec</Text>
+				<Code>252300</Code>
+				<Text>Oriental Orthodox, nfd</Text>
 			</Value>
 			<Value>
-				<Code>2250</Code>
-				<Text>Presbyterian and Reformed, nfd</Text>
+				<Code>2524</Code>
+				<Text>Pentecostal</Text>
 			</Value>
 			<Value>
-				<Code>2251</Code>
-				<Text>Presbyterian</Text>
-			</Value>
-			<Value>
-				<Code>2252</Code>
-				<Text>Reformed</Text>
-			</Value>
-			<Value>
-				<Code>2253</Code>
-				<Text>Free Reformed</Text>
-			</Value>
-			<Value>
-				<Code>2271</Code>
-				<Text>Salvation Army</Text>
-			</Value>
-			<Value>
-				<Code>2311</Code>
-				<Text>Seventh-day Adventist</Text>
-			</Value>
-			<Value>
-				<Code>2331</Code>
-				<Text>Uniting Church</Text>
-			</Value>
-			<Value>
-				<Code>2400</Code>
+				<Code>252400</Code>
 				<Text>Pentecostal, nfd</Text>
 			</Value>
 			<Value>
-				<Code>2401</Code>
-				<Text>Apostolic Church (Australia)</Text>
+				<Code>2525</Code>
+				<Text>Presbyterian and Reformed</Text>
 			</Value>
 			<Value>
-				<Code>2402</Code>
-				<Text>Assemblies of God</Text>
+				<Code>252500</Code>
+				<Text>Presbyterian and Reformed, nfd</Text>
 			</Value>
 			<Value>
-				<Code>2403</Code>
-				<Text>Bethesda Churches</Text>
+				<Code>2526</Code>
+				<Text>Salvation Army</Text>
 			</Value>
 			<Value>
-				<Code>2404</Code>
-				<Text>Christian City Church</Text>
+				<Code>2527</Code>
+				<Text>Seventh-day Adventist</Text>
 			</Value>
 			<Value>
-				<Code>2405</Code>
-				<Text>Christian Life Churches International</Text>
+				<Code>2528</Code>
+				<Text>Uniting Church</Text>
 			</Value>
 			<Value>
-				<Code>2406</Code>
-				<Text>Christian Outreach Centres</Text>
+				<Code>2531</Code>
+				<Text>Other Protestant</Text>
 			</Value>
 			<Value>
-				<Code>2407</Code>
-				<Text>Christian Revival Crusade</Text>
-			</Value>
-			<Value>
-				<Code>2408</Code>
-				<Text>Faith Churches</Text>
-			</Value>
-			<Value>
-				<Code>2411</Code>
-				<Text>Foursquare Gospel Church</Text>
-			</Value>
-			<Value>
-				<Code>2412</Code>
-				<Text>Full Gospel Church</Text>
-			</Value>
-			<Value>
-				<Code>2413</Code>
-				<Text>Revival Centres</Text>
-			</Value>
-			<Value>
-				<Code>2414</Code>
-				<Text>Rhema Family Church</Text>
-			</Value>
-			<Value>
-				<Code>2415</Code>
-				<Text>United Pentecostal</Text>
-			</Value>
-			<Value>
-				<Code>2499</Code>
-				<Text>Pentecostal, nec</Text>
-			</Value>
-			<Value>
-				<Code>2800</Code>
+				<Code>253100</Code>
 				<Text>Other Protestant, nfd</Text>
 			</Value>
 			<Value>
-				<Code>2801</Code>
-				<Text>Aboriginal Evangelical Missions</Text>
+				<Code>2532</Code>
+				<Text>Other Christian</Text>
 			</Value>
 			<Value>
-				<Code>2802</Code>
-				<Text>Born Again Christian</Text>
-			</Value>
-			<Value>
-				<Code>2803</Code>
-				<Text>Christian and Missionary Alliance</Text>
-			</Value>
-			<Value>
-				<Code>2804</Code>
-				<Text>Church of the Nazarene</Text>
-			</Value>
-			<Value>
-				<Code>2805</Code>
-				<Text>Congregational</Text>
-			</Value>
-			<Value>
-				<Code>2806</Code>
-				<Text>Ethnic Evangelical Churches</Text>
-			</Value>
-			<Value>
-				<Code>2807</Code>
-				<Text>Independent Evangelical Churches</Text>
-			</Value>
-			<Value>
-				<Code>2808</Code>
-				<Text>Wesleyan Methodist Church</Text>
-			</Value>
-			<Value>
-				<Code>2899</Code>
-				<Text>Other Protestant, nec</Text>
-			</Value>
-			<Value>
-				<Code>2900</Code>
+				<Code>253200</Code>
 				<Text>Other Christian, nfd</Text>
 			</Value>
 			<Value>
-				<Code>2901</Code>
-				<Text>Apostolic Church of Queensland</Text>
-			</Value>
-			<Value>
-				<Code>2902</Code>
-				<Text>Christadelphians</Text>
-			</Value>
-			<Value>
-				<Code>2903</Code>
-				<Text>Christian Science</Text>
-			</Value>
-			<Value>
-				<Code>2904</Code>
-				<Text>Gnostic Christians</Text>
-			</Value>
-			<Value>
-				<Code>2905</Code>
-				<Text>Liberal Catholic Church</Text>
-			</Value>
-			<Value>
-				<Code>2906</Code>
-				<Text>New Apostolic Church</Text>
-			</Value>
-			<Value>
-				<Code>2907</Code>
-				<Text>New Churches (Swedenborgian)</Text>
-			</Value>
-			<Value>
-				<Code>2908</Code>
-				<Text>Ratana (Maori)</Text>
-			</Value>
-			<Value>
-				<Code>2911</Code>
-				<Text>Religious Science</Text>
-			</Value>
-			<Value>
-				<Code>2912</Code>
-				<Text>Religious Society of Friends (Quakers)</Text>
-			</Value>
-			<Value>
-				<Code>2913</Code>
-				<Text>Temple Society</Text>
-			</Value>
-			<Value>
-				<Code>2914</Code>
-				<Text>Unitarian</Text>
-			</Value>
-			<Value>
-				<Code>2915</Code>
-				<Text>Worldwide Church of God</Text>
-			</Value>
-			<Value>
-				<Code>2999</Code>
-				<Text>Other Christian, nec</Text>
-			</Value>
-			<Value>
-				<Code>3011</Code>
+				<Code>3511</Code>
 				<Text>Hinduism</Text>
 			</Value>
 			<Value>
-				<Code>4011</Code>
-				<Text>Islam</Text>
+				<Code>450000</Code>
+				<Text>Islam, nfd</Text>
 			</Value>
 			<Value>
-				<Code>5011</Code>
+				<Code>4511</Code>
+				<Text>Shia Islam</Text>
+			</Value>
+			<Value>
+				<Code>4512</Code>
+				<Text>Sunni Islam</Text>
+			</Value>
+			<Value>
+				<Code>4513</Code>
+				<Text>Other Islam</Text>
+			</Value>
+			<Value>
+				<Code>5511</Code>
 				<Text>Judaism</Text>
 			</Value>
 			<Value>
-				<Code>6011</Code>
-				<Text>Australian Aboriginal Traditional Religions</Text>
-			</Value>
-			<Value>
-				<Code>6031</Code>
-				<Text>Baha'i</Text>
-			</Value>
-			<Value>
-				<Code>6050</Code>
-				<Text>Chinese Religions, nfd</Text>
-			</Value>
-			<Value>
-				<Code>6051</Code>
-				<Text>Ancestor Veneration</Text>
-			</Value>
-			<Value>
-				<Code>6052</Code>
-				<Text>Confucianism</Text>
-			</Value>
-			<Value>
-				<Code>6053</Code>
-				<Text>Taoism</Text>
-			</Value>
-			<Value>
-				<Code>6059</Code>
-				<Text>Chinese Religions, nec</Text>
-			</Value>
-			<Value>
-				<Code>6071</Code>
-				<Text>Druse</Text>
-			</Value>
-			<Value>
-				<Code>6110</Code>
-				<Text>Japanese Religions, nfd</Text>
-			</Value>
-			<Value>
-				<Code>6111</Code>
-				<Text>Shinto</Text>
-			</Value>
-			<Value>
-				<Code>6112</Code>
-				<Text>Sukyo Mahikari</Text>
-			</Value>
-			<Value>
-				<Code>6113</Code>
-				<Text>Tenrikyo</Text>
-			</Value>
-			<Value>
-				<Code>6119</Code>
-				<Text>Japanese Religions, nec</Text>
-			</Value>
-			<Value>
-				<Code>6130</Code>
-				<Text>Nature Religions, nfd</Text>
-			</Value>
-			<Value>
-				<Code>6131</Code>
-				<Text>Animism</Text>
-			</Value>
-			<Value>
-				<Code>6132</Code>
-				<Text>Druidism</Text>
-			</Value>
-			<Value>
-				<Code>6133</Code>
-				<Text>Paganism</Text>
-			</Value>
-			<Value>
-				<Code>6134</Code>
-				<Text>Pantheism</Text>
-			</Value>
-			<Value>
-				<Code>6135</Code>
-				<Text>Wiccan/Witchcraft</Text>
-			</Value>
-			<Value>
-				<Code>6139</Code>
-				<Text>Nature Religions, nec</Text>
-			</Value>
-			<Value>
-				<Code>6151</Code>
+				<Code>6511</Code>
 				<Text>Sikhism</Text>
 			</Value>
 			<Value>
-				<Code>6171</Code>
+				<Code>8511</Code>
+				<Text>Australian Aboriginal Traditional Religions</Text>
+			</Value>
+			<Value>
+				<Code>8512</Code>
+				<Text>Baha'i</Text>
+			</Value>
+			<Value>
+				<Code>8513</Code>
+				<Text>Chinese Religions</Text>
+			</Value>
+			<Value>
+				<Code>851300</Code>
+				<Text>Chinese Religions, nfd</Text>
+			</Value>
+			<Value>
+				<Code>8514</Code>
+				<Text>Druse</Text>
+			</Value>
+			<Value>
+				<Code>8515</Code>
+				<Text>Japanese Religions</Text>
+			</Value>
+			<Value>
+				<Code>851500</Code>
+				<Text>Japanese Religions, nfd</Text>
+			</Value>
+			<Value>
+				<Code>8516</Code>
+				<Text>Nature Religions</Text>
+			</Value>
+			<Value>
+				<Code>851600</Code>
+				<Text>Nature Religions, nfd</Text>
+			</Value>
+			<Value>
+				<Code>8517</Code>
 				<Text>Spiritualism</Text>
 			</Value>
 			<Value>
-				<Code>6991</Code>
-				<Text>Caodaism</Text>
+				<Code>8518</Code>
+				<Text>Miscellaneous Religions</Text>
 			</Value>
 			<Value>
-				<Code>6992</Code>
-				<Text>Church of Scientology</Text>
+				<Code>950000</Code>
+				<Text>Secular Beliefs and Other Spiritual Beliefs and No Religious Affiliation, nfd</Text>
 			</Value>
 			<Value>
-				<Code>6993</Code>
-				<Text>Eckankar</Text>
+				<Code>9511</Code>
+				<Text>No Religion, so described</Text>
 			</Value>
 			<Value>
-				<Code>6994</Code>
-				<Text>Rastafarianism</Text>
+				<Code>9512</Code>
+				<Text>Secular Beliefs</Text>
 			</Value>
 			<Value>
-				<Code>6995</Code>
-				<Text>Satanism</Text>
+				<Code>951200</Code>
+				<Text>Secular Beliefs, nfd</Text>
 			</Value>
 			<Value>
-				<Code>6996</Code>
-				<Text>Theosophy</Text>
+				<Code>9513</Code>
+				<Text>Other Spiritual Beliefs</Text>
 			</Value>
 			<Value>
-				<Code>6997</Code>
-				<Text>Jainism</Text>
-			</Value>
-			<Value>
-				<Code>6998</Code>
-				<Text>Zoroastrianism</Text>
-			</Value>
-			<Value>
-				<Code>6999</Code>
-				<Text>Religious Groups, nec</Text>
-			</Value>
-			<Value>
-				<Code>7010</Code>
-				<Text>No Religion, nfd</Text>
-			</Value>
-			<Value>
-				<Code>7011</Code>
-				<Text>Agnosticism</Text>
-			</Value>
-			<Value>
-				<Code>7012</Code>
-				<Text>Atheism</Text>
-			</Value>
-			<Value>
-				<Code>7013</Code>
-				<Text>Humanism</Text>
-			</Value>
-			<Value>
-				<Code>7014</Code>
-				<Text>Rationalism</Text>
+				<Code>951300</Code>
+				<Text>Other Spiritual Beliefs, nfd</Text>
 			</Value>
 			 
 		</Values>
@@ -4535,12 +4212,7 @@
 			<Value>
 				<Code>3.2</Code>
 				<Text>Very Remote areas (CD ARIA Plus score > 10.53)</Text>
-			</Value>
-			<Value>
-				<Code>REDACTED</Code>
-				<Text>Redacted for privacy</Text>
-			</Value>
-		 
+			</Value>		 
 </Values>
 	</CodeSet>
 	<CodeSet>
@@ -5521,6 +5193,7 @@
 <Value><Code>189</Code><Text>Skilled Independent visa</Text></Value>
 <Value><Code>190</Code><Text>Skilled Nominated visa</Text></Value>
 <Value><Code>191</Code><Text>Permanent Residence (Skilled Regional) visa</Text></Value>
+<Value><Code>192</Code><Text>Pacific Engagement visa</Text></Value>
 <Value><Code>200</Code><Text>Refugee visas</Text></Value>
 <Value><Code>201</Code><Text>In-country Special Humanitarian</Text></Value>
 <Value><Code>202</Code><Text>Global Special Humanitarian</Text></Value>
@@ -5693,11 +5366,6 @@
 <Value><Code>988</Code><Text>Maritime Crew visa</Text></Value>
 <Value><Code>995</Code><Text>Diplomatic (Temporary) (No longer issued)</Text></Value>
 <Value><Code>998</Code><Text>Declaratory (No longer issued)</Text></Value>
-
-
-
-
-
      </Values>
 	</CodeSet>
 	<CodeSet>

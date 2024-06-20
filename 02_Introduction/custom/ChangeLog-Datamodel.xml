@@ -42,7 +42,11 @@
 
 	<h4>Additions to CodeSets</h4>
 	<ul>	
-	<li><code>Visa Sub Class</code>: added <code>945</code>: Status of Forces Agreement/Defence personnel dependents</li>
+	<li><code>Visa Sub Class</code>: added <code>945</code>: Status of Forces Agreement/Defence personnel dependents,
+	<code>192</code>: Pacific Engagement</li>
+	<li><code>Australian Standard Classification Of Religious Groups (ASCRG)</code>: updated to 2024 release.
+	Consistent with past practice, only narrow categories (4-digit codes) are used, except for supplementary codes
+	("nfd"), which are now 6-digit. </li>
 	</ul>
 
 	<h4>Removals/Deprecations from CodeSets</h4>
