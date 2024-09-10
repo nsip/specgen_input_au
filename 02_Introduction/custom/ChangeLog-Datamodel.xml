@@ -6,7 +6,7 @@
          xmlns="http://sifassociation.org/SpecGen">
 	
 	<p>This release contains the following significant updates and extensions to the SIF specification.</p>
-	<h3>Additions/Changes since 3.6.1 November, 2023</h3>
+	<h3>Additions/Changes since 3.6.2 June, 2024</h3>
 
 	<h4>New Inclusions</h4>
 	<ul>
@@ -26,27 +26,40 @@
 
 	<h4>New Elements</h4>
 	<ul>
-		<li>None.</li>
+		<li><code>StudentDataTransferNote/RequestID</code>, 
+		<code>StudentDataTransferNote/AdditionalNotes</code>,
+		<code>StudentDataTransferNote/Healthcare</code>, 		
+		<code>StudentDataTransferNote/InterestTalents</code>, 
+		<code>StudentDataTransferNote/SupportNeeds</code>, 
+		<code>StudentDataTransferNote/Consent</code>, 
+		<code>StudentDataTransferNote/LatestReportAvailable</code>, 
+		<code>StudentDataTransferNote/DisciplinaryAbsences</code>, 
+		<code>StudentDataTransferNote/IndividualBehaviourManagementPlan</code>, 
+		<code>StudentDataTransferNote/Attachments</code>, 
+		<code>DepartureSchoolType/State</code>,
+		<code>DepartureSchoolType/Sector</code>, <code>DepartureSchoolType/System</code>, 
+		<code>DepartureSchoolType/StartedAtSchoolDate</code>, <code>DepartureSchoolType/ExitDate</code>,
+		<code>PreviousSchoolType/State</code>,
+		<code>PreviousSchoolType/Sector</code>, <code>PreviousSchoolType/System</code>,
+		<code>PreviousSchoolType/ExitReason</code>: updates to Student Data Transfer Note.</li>
+		<li><code>StudentDataTransferNote/RequestID</code>
 	</ul>
 	
 	
 	<h4>New Types</h4>
 	<ul>
-	<li>None.</li>
- </ul>
+	<li><code>STDNSupportNeedsType</code>: updates to Student Data Transfer Note.</li>
+	<li><code>BinaryDataListType</code>: list of <code>BinaryDataType</code> objects, used to encode a list of attachments to the Student Data Transfer Note.</li>
+    </ul>
 	
 	<h4>New CodeSets</h4>
 	<ul>	
-	<li>None.</li>
+	<li><code>GradeProgressLevel</code>: reporting of grade as Below Level/At Level/Above Level.</li>
 	</ul>
 
 	<h4>Additions to CodeSets</h4>
 	<ul>	
-	<li><code>Visa Sub Class</code>: added <code>945</code>: Status of Forces Agreement/Defence personnel dependents,
-	<code>192</code>: Pacific Engagement</li>
-	<li><code>Australian Standard Classification Of Religious Groups (ASCRG)</code>: updated to 2024 release.
-	Consistent with past practice, only narrow categories (4-digit codes) are used, except for supplementary codes
-	("nfd"), which are now 6-digit. </li>
+	<li></li>
 	</ul>
 
 	<h4>Removals/Deprecations from CodeSets</h4>

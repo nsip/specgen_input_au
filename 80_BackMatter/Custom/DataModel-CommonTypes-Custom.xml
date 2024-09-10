@@ -4484,6 +4484,14 @@
 		<Type name="xs:token"></Type> 
 	</Item>
 	<Item>
+		<Element>ProgressLevel</Element>
+		<Characteristics>C</Characteristics>
+		<Description>
+			<p>Reporting of grade as Below Level/At Level/Above Level.</p>
+		</Description>
+		<Type ref="CodeSets" name="GradeProgressLevel"/>
+	</Item>
+	<Item>
 	   	<Element>Narrative</Element>
 		<Characteristics>O</Characteristics>
 		<Description>
@@ -11395,7 +11403,7 @@
 					<Code>1671</Code>
 				</DwellingArrangement>
 				<Religion>
-					<Code>2013</Code>
+					<Code>2517</Code>
 				</Religion>
 				<ReligiousEventList>
 					<ReligiousEvent>
@@ -14385,6 +14393,52 @@
     <Type name="xs:normalizedString"></Type>
   </Item>
   
+      <Item>
+    <Element>State</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>State where school is located.</p>
+    </Description>
+    <Type ref="CommonTypes" name="StateProvinceType"/>
+  </Item>
+
+      <Item>
+    <Element>Sector</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>School sector.</p>
+    </Description>
+     <Type ref="CodeSets" name="AUCodeSetsSchoolSectorCodeType"></Type>
+  </Item>
+  
+        <Item>
+    <Element>System</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>School system.</p>
+    </Description>
+     <Type ref="CodeSets" name="AUCodeSetsSchoolSystemType"></Type>
+  </Item>
+
+       <Item>
+    <Element>StartedAtSchoolDate</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>First date the student was enrolled at this school if known.</p>
+    </Description>
+      <Type name="xs:date"></Type>
+  </Item>
+
+       <Item>
+    <Element>ExitDate</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Last date the student was enrolled at this school.</p>
+    </Description>
+      <Type name="xs:date"></Type>
+  </Item>
+
+
  <Item>
     <Element>SchoolContactList</Element>
     <Characteristics>M</Characteristics>
@@ -14451,8 +14505,42 @@
     <Type name="xs:normalizedString"></Type>
   </Item>
   
+     <Item>
+    <Element>State</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>State where school is located.</p>
+    </Description>
+    <Type ref="CommonTypes" name="StateProvinceType"/>
+  </Item>
 
-</CommonElement>
+      <Item>
+    <Element>Sector</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>School sector.</p>
+    </Description>
+     <Type ref="CodeSets" name="AUCodeSetsSchoolSectorCodeType"></Type>
+  </Item>
+  
+        <Item>
+    <Element>System</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>School system.</p>
+    </Description>
+     <Type ref="CodeSets" name="AUCodeSetsSchoolSystemType"></Type>
+  </Item>
+
+  <Item>
+    <Element>ExitReason</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Reasons for student leaving previous school.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  </CommonElement>
 <CommonElement name="NAPLANScoreListType" type="true" dm="true">
 	<Item>
 		<Element>NAPLANScoreListType</Element>
@@ -14574,6 +14662,88 @@
     <Type ref="CommonTypes" name="SchoolYearType"></Type>
   </Item>
 
+</CommonElement>
+
+<CommonElement name="STDNSupportNeedsType" type="true" dm="true">
+	<Item>
+		<Element>STDNSupportNeedsType</Element>
+		<Description>
+			<p>Flags for support needs in the Student Data Transfer Note.</p>
+		</Description>
+	</Item>
+	
+   <Item>
+    <Element>NegotiatedCurriculumPlan</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Does the student have a negotiated curriculum plan.</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
+  </Item>
+ 	
+   <Item>
+    <Element>AdjustedEducationProgram</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Does the student have an adjusted education program.</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
+  </Item>
+	
+   <Item>
+    <Element>CareerGuidanceFileHeld</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Is a career guidance file held for the student.</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
+  </Item>
+	
+   <Item>
+    <Element>SchoolCounsellorFileHeld</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Is a school counsellor or psychologist file held for the student.</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
+  </Item>
+	
+   <Item>
+    <Element>OtherLearningSupport</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Does the student have other learning support needs.</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
+  </Item>
+	
+   <Item>
+    <Element>OtherLearningSupportText</Element>
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>What are the other learning support needs for the student.</p>
+    </Description>
+    <Type name="xs:normalizedString"/>
+  </Item>
+	
+   <Item>
+    <Element>AcceleratedProgram</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Is the student in an accelerated learning program.</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
+  </Item>
+	
+   <Item>
+    <Element>YoungCarersRole</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Is the student a carer of other family members.</p>
+    </Description>
+    <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
+  </Item>
+ 
 </CommonElement>
 
 <CommonElement name="NCCDListType" type="true" dm="true">
@@ -14713,7 +14883,7 @@
 	<Item>
 		<Element>STDNGradeType</Element>
 		<Description>
-			<p>A-E Grade received by student.</p>
+			<p>Grade received by student.</p>
 		</Description>
 	</Item>
    <Item>

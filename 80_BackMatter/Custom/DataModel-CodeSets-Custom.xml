@@ -8462,5 +8462,25 @@
 		</Values>
 	</CodeSet>							
 
+	<CodeSet>
+		<Intro>
+			<p>Reporting of grade as Below Level/At Level/Above Level</p>
+		</Intro>
+		<ID>Grade Progress Level</ID>
+		<Values>
+			<Value>
+				<Code>BelowLevel</Code>
+				<Text>Below Grade Level</Text>
+			</Value>
+			<Value>
+				<Code>AtLevel</Code>
+				<Text>At Grade Level</Text>
+			</Value>
+			<Value>
+				<Code>AboveLevel</Code>
+				<Text>Above Grade Level</Text>
+			</Value>
+		</Values>
+	</CodeSet>							
 
 </Grouping>

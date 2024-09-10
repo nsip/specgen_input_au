@@ -296,6 +296,23 @@
 			  </Description>
 			</Item>
 	</CommonElement>
+	<CommonElement name="BinaryDataListType" type="true">
+		<Item>
+			<Element>BinaryDataListType</Element>
+			<Description>
+				<p>List of base64Binary encodings of binary or text data.</p>
+			</Description>
+			<List mode="List"/>
+		</Item>
+		<Item>
+			<Element>BinaryData</Element>
+			<Characteristics>MR</Characteristics>
+			<Description>
+				<p>Single base64Binary encoding of binary or text data.</p>
+			</Description>
+			<Type ref="CommonTypes" name="BinaryDataType"/>
+		</Item>
+	</CommonElement>
 	<CommonElement type="true" name="BinaryDataType">
 				<Item>
 			  <Element>BinaryDataType</Element>

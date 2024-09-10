@@ -155,7 +155,7 @@
 		<Characteristics>O</Characteristics>
 		<privacyRating>Low</privacyRating>
 		<Description>
-			<p>Lists all "other" identifiers associated with the student.</p>
+			<p>List containing the education focus codes of the campus/school.</p>
 		</Description>
 		<Type ref="CommonTypes" name="SchoolFocusListType"/>
   </Item>
@@ -576,7 +576,7 @@
       <IndependentSchool>Y</IndependentSchool>
       <NonGovSystemicStatus>S</NonGovSystemicStatus>
       <System>0003</System>
-      <ReligiousAffiliation>2171</ReligiousAffiliation>
+      <ReligiousAffiliation>2525</ReligiousAffiliation>
         <SchoolGeographicLocation>10</SchoolGeographicLocation>
         <LocalGovernmentArea>Cardinia</LocalGovernmentArea>
         <JurisdictionLowerHouse>Unknown</JurisdictionLowerHouse>
