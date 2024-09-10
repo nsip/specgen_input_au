@@ -42,7 +42,7 @@
 		<code>PreviousSchoolType/State</code>,
 		<code>PreviousSchoolType/Sector</code>, <code>PreviousSchoolType/System</code>,
 		<code>PreviousSchoolType/ExitReason</code>: updates to Student Data Transfer Note.</li>
-		<li><code>StudentDataTransferNote/RequestID</code>
+		<li><code>StudentDataTransferNote/RequestID</code></li>
 	</ul>
 	
 	
@@ -59,7 +59,7 @@
 
 	<h4>Additions to CodeSets</h4>
 	<ul>	
-	<li></li>
+	<li>None.</li>
 	</ul>
 
 	<h4>Removals/Deprecations from CodeSets</h4>

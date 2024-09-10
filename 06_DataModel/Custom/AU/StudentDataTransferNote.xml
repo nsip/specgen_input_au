@@ -225,7 +225,7 @@
 		<Description>
 			<p>Flags for student support needs.</p>
 		</Description>
-		<Type ref="CommonTypes" name="SupportNeedsType"/>
+		<Type ref="CommonTypes" name="STDNSupportNeedsType"/>
 	</Item>
 
 	<Item>
