@@ -28,7 +28,15 @@
     <Type ref="CommonTypes" name="RefIdType"></Type>
   </Item>
   
-  <Item>
+   <Item>
+	  <Element>RequestID</Element>
+	  <Characteristics>O</Characteristics>
+	  <privacyRating>High</privacyRating>
+	  <Description><p>System-generated identifier for request.</p></Description>
+	  <Type name="xs:token"/>
+  </Item>
+
+ <Item>
 	  <Element>Name</Element>
 	  <Characteristics>M</Characteristics>
 	  <privacyRating>High</privacyRating>
@@ -172,6 +180,55 @@
 	</Item>
 
 	<Item>
+		<Element>Healthcare</Element>
+		<Characteristics>O</Characteristics>
+	    <privacyRating>High</privacyRating>
+		<Description>
+			<p>Student has healthcare needs. Follow-up discussion with departure school is requested.</p>
+		</Description>
+	  <Type name="xs:boolean"/>
+	</Item>
+	
+	<Item>
+	  <Element>InterestTalents</Element>
+	  <Characteristics>O</Characteristics>
+	  <privacyRating>High</privacyRating>
+	  <Description><p>Areas of interest or talent for the student.</p></Description>
+	  <Type name="xs:normalizedString"/>
+	</Item>
+
+	<Item>
+		<Element>DisciplinaryAbsences</Element>
+		<Characteristics>O</Characteristics>
+	    <privacyRating>High</privacyRating>
+		<Description>
+			<p>Student has had disciplinary absences, whether in or out of school,
+			in the last 12 months.</p>
+		</Description>
+	  <Type name="xs:boolean"/>
+	</Item>
+	
+		<Item>
+		<Element>IndividualBehaviourManagementPlan</Element>
+		<Characteristics>O</Characteristics>
+	    <privacyRating>High</privacyRating>
+		<Description>
+			<p>Student has an individual behaviour management plan.</p>
+		</Description>
+	  <Type name="xs:boolean"/>
+	</Item>
+	
+	<Item>
+		<Element>SupportNeeds</Element>
+		<Characteristics>O</Characteristics>
+	    <privacyRating>High</privacyRating>
+		<Description>
+			<p>Flags for student support needs.</p>
+		</Description>
+		<Type ref="CommonTypes" name="SupportNeedsType"/>
+	</Item>
+
+	<Item>
 		<Element>NationalUniqueStudentIdentifier</Element>
 		<Characteristics>O</Characteristics>
 	    <privacyRating>High</privacyRating>
@@ -186,7 +243,7 @@
 		<Characteristics>M</Characteristics>
 	    <privacyRating>High</privacyRating>
 		<Description>
-			<p>Year or academic level of student.</p>
+			<p>Year or academic level of student at departure date.</p>
 		</Description>
 		<Type ref="CommonTypes" name="YearLevelType"/>
 	</Item>
@@ -246,12 +303,54 @@
 		<Characteristics>O</Characteristics>
 	    <privacyRating>High</privacyRating>
 		<Description>
-			<p>List of A-E Grades most recently received by student.</p>
+			<p>List of grades most recently received by student.</p>
 		</Description>
 		<Type ref="CommonTypes" name="STDNGradeListType"/>		
 	</Item>
 
+	<Item>
+		<Element>LatestReportAvailable</Element>
+		<Characteristics>O</Characteristics>
+	    <privacyRating>High</privacyRating>
+		<Description>
+			<p>Is the latest student report for the student available to be sent.</p>
+		</Description>
+		 <Type name="xs:boolean"/>
+	</Item>
 
+<Item>
+		<Element>AdditionalNotes</Element>
+		<Characteristics>O</Characteristics>
+	    <privacyRating>High</privacyRating>
+		<Description>
+			<p>Any additional notes added to request.</p>
+		</Description>
+	  <Type name="xs:string"/>
+	</Item>
+
+<Item>
+		<Element>Consent</Element>
+		<Characteristics>O</Characteristics>
+	    <privacyRating>High</privacyRating>
+		<Description>
+			<p>Confirmation that appropriate consent has been obtained by the student's
+			parent or guardian to request or share information about the student;
+			for the departure school, also consent to respond to further contact from
+			the receiving school, and provide information within the constraints of
+			relevant legislation and regulations.</p>
+		</Description>
+	  <Type name="xs:boolean"/>
+	</Item>
+	
+	<Item>
+		<Element>Attachments</Element>
+		<Characteristics>O</Characteristics>
+	    <privacyRating>High</privacyRating>
+		<Description>
+			<p>One or more file attachments.</p>
+		</Description>
+		<Type ref="CommonTypes" name="BinaryDataListType"></Type>
+	</Item>
 <Item>   
     <Element>LocalCodeList</Element>
     <Characteristics>O</Characteristics>
@@ -275,11 +374,10 @@
   
  <xhtml:Example xmlns="" name="StudentDataTransferNote Example">  
 <StudentDataTransferNote RefId="D3E34B35-9D75-101A-8C3D-00AA001A1654">
+  <RequestID>SDT000001</RequestID>
   <Name Type="LGL">
     <FamilyName>Smith</FamilyName>
     <GivenName>Fred</GivenName>
-    <MiddleName>Ebenezer</MiddleName>
-	<PreferredFamilyName>Smith</PreferredFamilyName>
 	<PreferredGivenName>Freddy</PreferredGivenName>
   </Name>
   <Gender>1</Gender>
@@ -299,7 +397,12 @@
     <ACARAId>30000</ACARAId>
 	<Name>Lincoln Secondary College</Name>
 	<City>Lincoln</City>
-  <SchoolContactList>
+	<State>WA</State>
+	<Sector>NG</Sector>
+	<System>0001</System>
+    <StartedAtSchoolDate>2007-03-01</StartedAtSchoolDate>
+    <ExitDate>2009-10-01</ExitDate>
+ <SchoolContactList>
     <SchoolContact>
       <PublishInDirectory>Y</PublishInDirectory>
       <ContactInfo>
@@ -346,11 +449,16 @@
     <ACARAId>30001</ACARAId>
 	<Name>Lincoln Primary School</Name>
 	<City>Lincolnville</City>
+	<State>WA</State>
+	<Sector>Gov</Sector>
   </PreviousSchool> 
   <PreviousSchool>
     <ACARAId>30002</ACARAId>
 	<Name>Buchanan Primary School</Name>
 	<City>Lincolnville</City>
+	<State>WA</State>
+	<Sector>NG</Sector>
+	<System>0001</System>
   </PreviousSchool> 
   </PreviousSchoolList>
   <NAPLANScoreList>
@@ -406,6 +514,20 @@
  <FollowupRequest>true</FollowupRequest>
  <ChildSubjectToOrders>true</ChildSubjectToOrders>
  <Attendance>false</Attendance>
+ <Healthcare>true</Healthcare>
+ <InterestTalents>Plays the viola da gamba</InterestTalents>
+ <DisciplinaryAbsences>false</DisciplinaryAbsences>
+ <IndividualBehaviourManagementPlan>false</IndividualBehaviourManagementPlan>
+ <SupportNeeds>
+   <NegotiatedCurriculumPlan>N</NegotiatedCurriculumPlan>
+   <AdjustedEducationProgram>N</AdjustedEducationProgram>
+   <CareerGuidanceFileHeld>U</CareerGuidanceFileHeld>
+   <SchoolCounsellorFileHeld>N</SchoolCounsellorFileHeld>
+   <OtherLearningSupport>Y</OtherLearningSupport>
+   <OtherLearningSupportText>Student needs online tutoring</OtherLearningSupportText>
+   <AcceleratedProgram>N</AcceleratedProgram>
+   <YoungCarersRole>N</YoungCarersRole>
+ </SupportNeeds>
  <NationalUniqueStudentIdentifier>0001001</NationalUniqueStudentIdentifier>
  <YearLevel>
     <Code>10</Code>
@@ -417,15 +539,9 @@
 	<VisaExpiryDate>2025-12-31</VisaExpiryDate>
  </VisaStatus>
    <OtherNames>
-    <Name Type="AKA">
-      <FamilyName>Anderson</FamilyName>
-      <GivenName>Samuel</GivenName>
-      <FullName>Samuel Anderson</FullName>
-    </Name>
-    <Name Type="PRF">
+    <Name Type="PRV">
       <FamilyName>Rowinski</FamilyName>
       <GivenName>Sam</GivenName>
-      <FullName>Sam Rowinski</FullName>
     </Name>
   </OtherNames>
   <EducationalAssessmentList>
@@ -446,8 +562,7 @@
 	  <SubjectArea><Code>Australian History</Code></SubjectArea>
 	  </LearningArea>
 	  <Grade>
-	    <Letter>B</Letter>
-		<Narrative>Could do better</Narrative>
+	    <ProgressLevel>AtLevel</ProgressLevel>
 	  </Grade>
 	</StudentGrade>
     <StudentGrade>
@@ -457,11 +572,17 @@
 	  <SubjectArea><Code>World History</Code></SubjectArea>
 	  </LearningArea>
 	  <Grade>
-	    <Letter>A</Letter>
-		<Narrative>Could not do better</Narrative>
+	    <ProgressLevel>BelowLevel</ProgressLevel>
 	  </Grade>
 	</StudentGrade>
   </StudentGradeList>
+  <LatestReportAvailable>true</LatestReportAvailable>
+  <AdditionalNotes>Please follow up.</AdditionalNotes>
+  <Consent>true</Consent>
+  <Attachments>
+	<BinaryData MIMEType="text/html;charset=utf-16" FileName="1.html">0000 0000 0010 0100</BinaryData>
+	<BinaryData MIMEType="application/vnd.openxmlformats-officedocument.wordprocessingml.document;charset=utf-16" FileName="1.docx">0000 0000 0010 0100</BinaryData>
+  </Attachments>
  </StudentDataTransferNote>
       </xhtml:Example> 
    
