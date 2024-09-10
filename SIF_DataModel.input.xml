@@ -18004,7 +18004,7 @@ RATIONALE: History is essential for an informed citizenry and has always been a 
 		<Description>
 			<p>Flags for student support needs.</p>
 		</Description>
-		<Type ref="CommonTypes" name="SupportNeedsType" />
+		<Type ref="CommonTypes" name="STDNSupportNeedsType" />
 	</Item>
 
 	<Item>
@@ -25857,7 +25857,7 @@ For clarity, the conceptual model is broken up into use cases:</p>
 		<Description>
 			<p>Reporting of grade as Below Level/At Level/Above Level.</p>
 		</Description>
-		<Type ref="CodeSets" name="GradeProgressLevel" />
+		<Type ref="CodeSets" name="AUCodeSetsGradeProgressLevelType" />
 	</Item>
 	<Item>
 	   	<Element>Narrative</Element>
@@ -34264,7 +34264,7 @@ For clarity, the conceptual model is broken up into use cases:</p>
 				<Code>1671</Code>
 			</DwellingArrangement>
 			<Religion>
-				<Code>2013</Code>
+				<Code>2513</Code>
 			</Religion>
 			<ReligiousEventList>
 				<ReligiousEvent>

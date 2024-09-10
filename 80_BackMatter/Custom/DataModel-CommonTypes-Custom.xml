@@ -4489,7 +4489,7 @@
 		<Description>
 			<p>Reporting of grade as Below Level/At Level/Above Level.</p>
 		</Description>
-		<Type ref="CodeSets" name="GradeProgressLevel"/>
+		<Type ref="CodeSets" name="AUCodeSetsGradeProgressLevelType"/>
 	</Item>
 	<Item>
 	   	<Element>Narrative</Element>
@@ -12896,7 +12896,7 @@
 				<Code>1671</Code>
 			</DwellingArrangement>
 			<Religion>
-				<Code>2013</Code>
+				<Code>2513</Code>
 			</Religion>
 			<ReligiousEventList>
 				<ReligiousEvent>
