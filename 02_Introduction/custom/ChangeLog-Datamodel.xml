@@ -6,11 +6,11 @@
          xmlns="http://sifassociation.org/SpecGen">
 	
 	<p>This release contains the following significant updates and extensions to the SIF specification.</p>
-	<h3>Additions/Changes since 3.6.0 May, 2023</h3>
+	<h3>Additions/Changes since 3.6.1 November, 2023</h3>
 
 	<h4>New Inclusions</h4>
 	<ul>
-	<li>Updated Global Infrastructure model to 3.6.</li>
+	<li>None.</li>
 	</ul>
 
 	<h4>New Objects</h4>
@@ -26,10 +26,7 @@
 
 	<h4>New Elements</h4>
 	<ul>
-		<li><code>StudentScoreJudgementAgainstStandard/Grade</code>, 
-		<code>StudentScoreJudgementAgainstStandard/TeacherJudgement</code>, requested by DET NSW,
-		to allow a broader range of evaluations for student performance against a learning standard
-		than just a numeric score.</li>
+		<li>None.</li>
 	</ul>
 	
 	
@@ -45,31 +42,21 @@
 
 	<h4>Additions to CodeSets</h4>
 	<ul>	
-	<li><code>4217 Currency Names And Code Elements</code>: added <code>SLE</code>: Leone (new).</li>
-	<li><code>Federal Electorate</code>: added <code>194</code>: No usual address (NSW), 
-	<code>294</code>: No usual address (VIC), <code>394</code>: No usual address (QLD),
-	<code>494</code>: No usual address (SA), <code>594</code>: No usual address (WA),
-	<code>694</code>: No usual address (TAS), <code>794</code>: No usual address (NT),
-	<code>894</code>: No usual address (ACT), <code>897</code>: Migratory - Offshore - Shipping (ACT),
-	<code>994</code>: No usual address (OT), <code>997</code>: Migratory - Offshore - Shipping (OT)</li>
+	<li><code>Visa Sub Class</code>: added <code>945</code>: Status of Forces Agreement/Defence personnel dependents,
+	<code>192</code>: Pacific Engagement</li>
+	<li><code>Australian Standard Classification Of Religious Groups (ASCRG)</code>: updated to 2024 release.
+	Consistent with past practice, only narrow categories (4-digit codes) are used, except for supplementary codes
+	("nfd"), which are now 6-digit. </li>
 	</ul>
 
 	<h4>Removals/Deprecations from CodeSets</h4>
 	<ul>	
-	<li>Removed <code>Australian Standard Geographical Classification (ASGC)</code> (obsoleted in 2012,
-	is by far the largest codeset in the specification at 1300 elements). All references to it in the
-	specification (<code>SchoolInfo/SLA</code>, <code>LEAInfo/SLA</code>) replaced with <code>xs:token</code>.</li>
+	<li>None.</li>
 	</ul>
 
 
 	<h4>Other Changes</h4>
-	<ul><li><code>Visa Sub Class</code>: tidied presentation, use consistently "(No longer isssued)"
-	for discontinued visas.</li>
-	<li><code>Visa Sub Class</code>: updated enumeration of discontinued visas.</li>
-	<li><code>Federal Electorate</code>: corrected  <code>227</code>: Lalor, <code>228</code>: La Trobe to 
-	<code>227</code>: La Trobe, <code>228</code>: Lalor, following the published Australian Bureau of Statistics specification.</li>
-	<li><code>Federal Electorate</code>: corrected  <code>515</code>: Swan, <code>516</code>: Tangney to 
-	<code>514</code>: Swan, <code>515</code>: Tangney, following the published Australian Bureau of Statistics specification.</li>
+	<ul><li>None.</li>
  	</ul>
    	
 	<h4>Corrections</h4>
