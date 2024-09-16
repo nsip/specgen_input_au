@@ -14315,21 +14315,13 @@
 	</Item>
    <Item>
     <Element>ACARAId</Element>
-    <Characteristics>C</Characteristics>
+    <Characteristics>O</Characteristics>
     <Description>
       <p>ACARA identifier for this school.</p>
     </Description>
     <Type name="xs:normalizedString"></Type>
   </Item>
-   <Item>
-    <Element>CommonwealthId</Element>
-    <Characteristics>C</Characteristics>
-    <Description>
-      <p>AGE ID identifier for this school.</p>
-    </Description>
-    <Type name="xs:normalizedString"></Type>
-  </Item>
-
+ 
   <Item>
     <Element>Name</Element>
     <Characteristics>O</Characteristics>
@@ -14360,17 +14352,9 @@
 	</Item>
    <Item>
     <Element>ACARAId</Element>
-    <Characteristics>C</Characteristics>
+    <Characteristics>O</Characteristics>
     <Description>
       <p>ACARA identifier for this school.</p>
-    </Description>
-    <Type name="xs:normalizedString"></Type>
-  </Item>
-   <Item>
-    <Element>CommonwealthId</Element>
-    <Characteristics>C</Characteristics>
-    <Description>
-      <p>AGE ID identifier for this school.</p>
     </Description>
     <Type name="xs:normalizedString"></Type>
   </Item>
@@ -14473,21 +14457,12 @@
 	</Item>
    <Item>
     <Element>ACARAId</Element>
-    <Characteristics>C</Characteristics>
+    <Characteristics>O</Characteristics>
     <Description>
       <p>ACARA identifier for this school.</p>
     </Description>
     <Type name="xs:normalizedString"></Type>
   </Item>
-    <Item>
-    <Element>CommonwealthId</Element>
-    <Characteristics>C</Characteristics>
-    <Description>
-      <p>AGE ID identifier for this school.</p>
-    </Description>
-    <Type name="xs:normalizedString"></Type>
-  </Item>
-
   <Item>
     <Element>Name</Element>
     <Characteristics>M</Characteristics>
@@ -15122,5 +15097,57 @@
     </Values>
   </Item>
  </CommonElement>
+
+  <CommonElement name="STDNAttachmentListType" type="true" dm="true">
+     <Item> 
+     <Element>STDNAttachmentListType</Element>
+     <Characteristics>O</Characteristics>
+     <Description>
+      <p>List of descriptions of file attachments to the Student Data Transfer Note.</p>
+     </Description>
+    <List mode="List"></List>
+    </Item>
+    <Item>
+    <Element>STDNAttachment</Element>
+    <Characteristics>MR</Characteristics>
+    <Description>
+      <p>Description of a file attachment to the Student Data Transfer Note.</p>
+    </Description>
+     <Type ref="CommonTypes" name="STDNAttachmentType"/>  
+    </Item>
+  </CommonElement>
+  <CommonElement name="STDNAttachmentType" type="true" dm="true">  
+  <Item>
+    <Element>STDNAttachmentType</Element>
+    <Description>
+      <p>Description of a file attachment to the Student Data Transfer Note.</p>
+    </Description>
+  </Item>
+    <Item>
+    <Element>FileName</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>File name of the attachment.</p>
+    </Description>
+     <Type name="xs:token"/> 
+    </Item>
+    <Item>
+    <Element>Field</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Which field of the Student Data Transfer Note this attachment relates to. For the time being, left as free text.</p>
+    </Description>
+     <Type name="xs:normalizedString"/> 
+    </Item>
+ <Item>
+    <Element>Description</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Reason for including this attachment with the Student Data Transfer Note.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item></CommonElement>
+
 
 </IncludeGroup>

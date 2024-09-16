@@ -401,8 +401,9 @@ in the SIF Implementation Specification may include inaccuracies or typographica
 	
 	<h4>New Types</h4>
 	<ul>
-	<li><code>STDNSupportNeedsType</code>: updates to Student Data Transfer Note.</li>
-	<li><code>BinaryDataListType</code>: list of <code>BinaryDataType</code> objects, used to encode a list of attachments to the Student Data Transfer Note.</li>
+	<li><code>STDNSupportNeedsType</code>, <code>STDNAttachmentListType</code>, <code>STDNAttachmentType</code>: 
+	updates to Student Data Transfer Note.</li>
+	<!--<li><code>BinaryDataListType</code>: list of <code>BinaryDataType</code> objects, used to encode a list of attachments to the Student Data Transfer Note.</li>-->
     </ul>
 	
 	<h4>New CodeSets</h4>
@@ -18122,13 +18123,13 @@ RATIONALE: History is essential for an informed citizenry and has always been a 
 	</Item>
 	
 	<Item>
-		<Element>Attachments</Element>
+		<Element>STDNAttachmentList</Element>
 		<Characteristics>O</Characteristics>
 	    <privacyRating>High</privacyRating>
 		<Description>
-			<p>One or more file attachments.</p>
+			<p>Description of file attachments.</p>
 		</Description>
-		<Type ref="CommonTypes" name="BinaryDataListType"></Type>
+		<Type ref="CommonTypes" name="STDNAttachmentListType"></Type>
 	</Item>
 <Item>   
     <Element>LocalCodeList</Element>
@@ -18358,10 +18359,18 @@ RATIONALE: History is essential for an informed citizenry and has always been a 
   <LatestReportAvailable>true</LatestReportAvailable>
   <AdditionalNotes>Please follow up.</AdditionalNotes>
   <Consent>true</Consent>
-  <Attachments>
-	<BinaryData MIMEType="text/html;charset=utf-16" FileName="1.html">0000 0000 0010 0100</BinaryData>
-	<BinaryData MIMEType="application/vnd.openxmlformats-officedocument.wordprocessingml.document;charset=utf-16" FileName="1.docx">0000 0000 0010 0100</BinaryData>
-  </Attachments>
+  <STDNAttachmentList>
+	<STDNAttachment>
+	  <FileName>ConsentQualifications.doc</FileName>
+	  <Field>Consent</Field>
+	  <Description>Qualified consent provided to sharing information, as detailed in document.</Description>
+	</STDNAttachment>
+	<STDNAttachment>
+	  <FileName>Hobbies.txt</FileName>
+	  <Field>InterestTalents</Field>
+	  <Description>Listing of hobbies the student has.</Description>
+	</STDNAttachment>
+  </STDNAttachmentList>
  </StudentDataTransferNote>
       </xhtml:Example> 
    
@@ -36491,6 +36500,58 @@ For clarity, the conceptual model is broken up into use cases:</p>
   </Item>
  </CommonElement>
 
+  <CommonElement name="STDNAttachmentListType" type="true" dm="true">
+     <Item> 
+     <Element>STDNAttachmentListType</Element>
+     <Characteristics>O</Characteristics>
+     <Description>
+      <p>List of descriptions of file attachments to the Student Data Transfer Note.</p>
+     </Description>
+    <List mode="List"></List>
+    </Item>
+    <Item>
+    <Element>STDNAttachment</Element>
+    <Characteristics>MR</Characteristics>
+    <Description>
+      <p>Description of a file attachment to the Student Data Transfer Note.</p>
+    </Description>
+     <Type ref="CommonTypes" name="STDNAttachmentType" />  
+    </Item>
+  </CommonElement>
+  <CommonElement name="STDNAttachmentType" type="true" dm="true">  
+  <Item>
+    <Element>STDNAttachmentType</Element>
+    <Description>
+      <p>Description of a file attachment to the Student Data Transfer Note.</p>
+    </Description>
+  </Item>
+    <Item>
+    <Element>FileName</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>File name of the attachment.</p>
+    </Description>
+     <Type name="xs:token" /> 
+    </Item>
+    <Item>
+    <Element>Field</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Which field of the Student Data Transfer Note this attachment relates to. For the time being, left as free text.</p>
+    </Description>
+     <Type name="xs:normalizedString" /> 
+    </Item>
+ <Item>
+    <Element>Description</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Reason for including this attachment with the Student Data Transfer Note.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item></CommonElement>
+
+
 </IncludeGroup>
 
 		<!-- Leave out these 2 packages for 3.4.8
@@ -36791,13 +36852,14 @@ For clarity, the conceptual model is broken up into use cases:</p>
 			  </Description>
 			</Item>
 	</CommonElement>
+	<!--
 	<CommonElement name="BinaryDataListType" type="true">
 		<Item>
 			<Element>BinaryDataListType</Element>
 			<Description>
 				<p>List of base64Binary encodings of binary or text data.</p>
 			</Description>
-			<List mode="List" />
+			<List mode="List"/>
 		</Item>
 		<Item>
 			<Element>BinaryData</Element>
@@ -36805,9 +36867,10 @@ For clarity, the conceptual model is broken up into use cases:</p>
 			<Description>
 				<p>Single base64Binary encoding of binary or text data.</p>
 			</Description>
-			<Type ref="CommonTypes" name="BinaryDataType" />
+			<Type ref="CommonTypes" name="BinaryDataType"/>
 		</Item>
 	</CommonElement>
+	-->
 	<CommonElement type="true" name="BinaryDataType">
 				<Item>
 			  <Element>BinaryDataType</Element>

@@ -88,13 +88,13 @@
 	</Item>
   
  	<Item>
-		<Element>CountriesOfCitizenship</Element>
+		<Element>AustralianCitizenship</Element>
 		<Characteristics>O</Characteristics>
 	    <privacyRating>High</privacyRating>
 		<Description>
-			<p>The person's countries of citizenship.</p>
+			<p>Whether the person has Australian Citizenship.</p>
 		</Description>
-		<Type ref="CommonTypes" name="CountryListType"/>
+		<Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"/>
 	</Item>
 
 	<Item>
@@ -265,7 +265,7 @@
 		<Description>
 			<p>Language Background Other Than English.</p>
 		</Description>
-     <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
+    <Type name="xs:boolean"/>
 	</Item>
 
 	<Item>
@@ -343,13 +343,13 @@
 	</Item>
 	
 	<Item>
-		<Element>Attachments</Element>
+		<Element>STDNAttachmentList</Element>
 		<Characteristics>O</Characteristics>
 	    <privacyRating>High</privacyRating>
 		<Description>
-			<p>One or more file attachments.</p>
+			<p>Description of file attachments.</p>
 		</Description>
-		<Type ref="CommonTypes" name="BinaryDataListType"></Type>
+		<Type ref="CommonTypes" name="STDNAttachmentListType"></Type>
 	</Item>
 <Item>   
     <Element>LocalCodeList</Element>
@@ -385,10 +385,7 @@
   <PlaceOfBirth>Clayton</PlaceOfBirth>
   <StateOfBirth>VIC</StateOfBirth>
   <CountryOfBirth>1101</CountryOfBirth>
- <CountriesOfCitizenship>
-    <CountryOfCitizenship>8104</CountryOfCitizenship>
-    <CountryOfCitizenship>1101</CountryOfCitizenship>
-  </CountriesOfCitizenship>
+ <AustralianCitizenship>N</AustralianCitizenship>
   <ArrivalSchool>
     <CommonwealthId>12345</CommonwealthId>
 	<Name>Buchanan Secondary College</Name>
@@ -533,7 +530,7 @@
     <Code>10</Code>
   </YearLevel>
   <IndigenousStatus>1</IndigenousStatus>
-  <LBOTE>Y</LBOTE>
+  <LBOTE>true</LBOTE>
 <VisaStatus>
     <Code>101</Code>
 	<VisaExpiryDate>2025-12-31</VisaExpiryDate>
@@ -579,10 +576,18 @@
   <LatestReportAvailable>true</LatestReportAvailable>
   <AdditionalNotes>Please follow up.</AdditionalNotes>
   <Consent>true</Consent>
-  <Attachments>
-	<BinaryData MIMEType="text/html;charset=utf-16" FileName="1.html">0000 0000 0010 0100</BinaryData>
-	<BinaryData MIMEType="application/vnd.openxmlformats-officedocument.wordprocessingml.document;charset=utf-16" FileName="1.docx">0000 0000 0010 0100</BinaryData>
-  </Attachments>
+  <STDNAttachmentList>
+	<STDNAttachment>
+	  <FileName>ConsentQualifications.doc</FileName>
+	  <Field>Consent</Field>
+	  <Description>Qualified consent provided to sharing information, as detailed in document.</Description>
+	</STDNAttachment>
+	<STDNAttachment>
+	  <FileName>Hobbies.txt</FileName>
+	  <Field>InterestTalents</Field>
+	  <Description>Listing of hobbies the student has.</Description>
+	</STDNAttachment>
+  </STDNAttachmentList>
  </StudentDataTransferNote>
       </xhtml:Example> 
    

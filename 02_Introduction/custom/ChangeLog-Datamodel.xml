@@ -23,6 +23,19 @@
 	<li>None.</li>
 	</ul>
 
+	<h4>Removed Elements</h4>
+	<ul>
+	<li><code>StudentDataTransferNote/CountriesOfCizitenship</code>, 
+	<code>PreviousSchoolType/CommonwealthId</code>,
+	<code>ArrivalSchoolType/CommonwealthId</code>,
+	<code>DepartureSchoolType/CommonwealthId</code>: updates to Student Data Transfer Note.</li>
+	</ul>
+
+	<h4>Changed Elements</h4>
+	<ul>
+	<li><code>StudentDataTransferNote/LBOTE</code>: changed from <code>AUCodeSetsYesOrNoCategoryType</code> to <code>xs:boolean</code>.</li>
+	</ul>
+
 
 	<h4>New Elements</h4>
 	<ul>
@@ -36,20 +49,21 @@
 		<code>StudentDataTransferNote/DisciplinaryAbsences</code>, 
 		<code>StudentDataTransferNote/IndividualBehaviourManagementPlan</code>, 
 		<code>StudentDataTransferNote/Attachments</code>, 
+		<code>StudentDataTransferNote/AustralianCitizenship</code>, 
 		<code>DepartureSchoolType/State</code>,
 		<code>DepartureSchoolType/Sector</code>, <code>DepartureSchoolType/System</code>, 
 		<code>DepartureSchoolType/StartedAtSchoolDate</code>, <code>DepartureSchoolType/ExitDate</code>,
 		<code>PreviousSchoolType/State</code>,
 		<code>PreviousSchoolType/Sector</code>, <code>PreviousSchoolType/System</code>,
 		<code>PreviousSchoolType/ExitReason</code>: updates to Student Data Transfer Note.</li>
-		<li><code>StudentDataTransferNote/RequestID</code></li>
 	</ul>
 	
 	
 	<h4>New Types</h4>
 	<ul>
-	<li><code>STDNSupportNeedsType</code>: updates to Student Data Transfer Note.</li>
-	<li><code>BinaryDataListType</code>: list of <code>BinaryDataType</code> objects, used to encode a list of attachments to the Student Data Transfer Note.</li>
+	<li><code>STDNSupportNeedsType</code>, <code>STDNAttachmentListType</code>, <code>STDNAttachmentType</code>: 
+	updates to Student Data Transfer Note.</li>
+	<!--<li><code>BinaryDataListType</code>: list of <code>BinaryDataType</code> objects, used to encode a list of attachments to the Student Data Transfer Note.</li>-->
     </ul>
 	
 	<h4>New CodeSets</h4>

@@ -296,6 +296,7 @@
 			  </Description>
 			</Item>
 	</CommonElement>
+	<!--
 	<CommonElement name="BinaryDataListType" type="true">
 		<Item>
 			<Element>BinaryDataListType</Element>
@@ -313,6 +314,7 @@
 			<Type ref="CommonTypes" name="BinaryDataType"/>
 		</Item>
 	</CommonElement>
+	-->
 	<CommonElement type="true" name="BinaryDataType">
 				<Item>
 			  <Element>BinaryDataType</Element>
