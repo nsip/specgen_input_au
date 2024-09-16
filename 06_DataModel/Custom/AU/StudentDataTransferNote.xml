@@ -94,7 +94,7 @@
 		<Description>
 			<p>Whether the person has Australian Citizenship.</p>
 		</Description>
-		<Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"/>
+		<Type name="xs:boolean"/>
 	</Item>
 
 	<Item>
@@ -385,7 +385,7 @@
   <PlaceOfBirth>Clayton</PlaceOfBirth>
   <StateOfBirth>VIC</StateOfBirth>
   <CountryOfBirth>1101</CountryOfBirth>
- <AustralianCitizenship>N</AustralianCitizenship>
+ <AustralianCitizenship>false</AustralianCitizenship>
   <ArrivalSchool>
     <CommonwealthId>12345</CommonwealthId>
 	<Name>Buchanan Secondary College</Name>

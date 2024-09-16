@@ -376,6 +376,19 @@ in the SIF Implementation Specification may include inaccuracies or typographica
 	<li>None.</li>
 	</ul>
 
+	<h4>Removed Elements</h4>
+	<ul>
+	<li><code>StudentDataTransferNote/CountriesOfCizitenship</code>, 
+	<code>PreviousSchoolType/CommonwealthId</code>,
+	<code>ArrivalSchoolType/CommonwealthId</code>,
+	<code>DepartureSchoolType/CommonwealthId</code>: updates to Student Data Transfer Note.</li>
+	</ul>
+
+	<h4>Changed Elements</h4>
+	<ul>
+	<li><code>StudentDataTransferNote/LBOTE</code>: changed from <code>AUCodeSetsYesOrNoCategoryType</code> to <code>xs:boolean</code>.</li>
+	</ul>
+
 
 	<h4>New Elements</h4>
 	<ul>
@@ -389,13 +402,13 @@ in the SIF Implementation Specification may include inaccuracies or typographica
 		<code>StudentDataTransferNote/DisciplinaryAbsences</code>, 
 		<code>StudentDataTransferNote/IndividualBehaviourManagementPlan</code>, 
 		<code>StudentDataTransferNote/Attachments</code>, 
+		<code>StudentDataTransferNote/AustralianCitizenship</code>, 
 		<code>DepartureSchoolType/State</code>,
 		<code>DepartureSchoolType/Sector</code>, <code>DepartureSchoolType/System</code>, 
 		<code>DepartureSchoolType/StartedAtSchoolDate</code>, <code>DepartureSchoolType/ExitDate</code>,
 		<code>PreviousSchoolType/State</code>,
 		<code>PreviousSchoolType/Sector</code>, <code>PreviousSchoolType/System</code>,
 		<code>PreviousSchoolType/ExitReason</code>: updates to Student Data Transfer Note.</li>
-		<li><code>StudentDataTransferNote/RequestID</code></li>
 	</ul>
 	
 	
@@ -17868,13 +17881,13 @@ RATIONALE: History is essential for an informed citizenry and has always been a 
 	</Item>
   
  	<Item>
-		<Element>CountriesOfCitizenship</Element>
+		<Element>AustralianCitizenship</Element>
 		<Characteristics>O</Characteristics>
 	    <privacyRating>High</privacyRating>
 		<Description>
-			<p>The person's countries of citizenship.</p>
+			<p>Whether the person has Australian Citizenship.</p>
 		</Description>
-		<Type ref="CommonTypes" name="CountryListType" />
+		<Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType" />
 	</Item>
 
 	<Item>
@@ -18045,7 +18058,7 @@ RATIONALE: History is essential for an informed citizenry and has always been a 
 		<Description>
 			<p>Language Background Other Than English.</p>
 		</Description>
-     <Type ref="CodeSets" name="AUCodeSetsYesOrNoCategoryType"></Type>
+    <Type name="xs:boolean" />
 	</Item>
 
 	<Item>
@@ -18165,10 +18178,7 @@ RATIONALE: History is essential for an informed citizenry and has always been a 
   <PlaceOfBirth>Clayton</PlaceOfBirth>
   <StateOfBirth>VIC</StateOfBirth>
   <CountryOfBirth>1101</CountryOfBirth>
- <CountriesOfCitizenship>
-    <CountryOfCitizenship>8104</CountryOfCitizenship>
-    <CountryOfCitizenship>1101</CountryOfCitizenship>
-  </CountriesOfCitizenship>
+ <AustralianCitizenship>N</AustralianCitizenship>
   <ArrivalSchool>
     <CommonwealthId>12345</CommonwealthId>
 	<Name>Buchanan Secondary College</Name>
@@ -18313,7 +18323,7 @@ RATIONALE: History is essential for an informed citizenry and has always been a 
     <Code>10</Code>
   </YearLevel>
   <IndigenousStatus>1</IndigenousStatus>
-  <LBOTE>Y</LBOTE>
+  <LBOTE>true</LBOTE>
 <VisaStatus>
     <Code>101</Code>
 	<VisaExpiryDate>2025-12-31</VisaExpiryDate>
@@ -35692,21 +35702,13 @@ For clarity, the conceptual model is broken up into use cases:</p>
 	</Item>
    <Item>
     <Element>ACARAId</Element>
-    <Characteristics>C</Characteristics>
+    <Characteristics>O</Characteristics>
     <Description>
       <p>ACARA identifier for this school.</p>
     </Description>
     <Type name="xs:normalizedString"></Type>
   </Item>
-   <Item>
-    <Element>CommonwealthId</Element>
-    <Characteristics>C</Characteristics>
-    <Description>
-      <p>AGE ID identifier for this school.</p>
-    </Description>
-    <Type name="xs:normalizedString"></Type>
-  </Item>
-
+ 
   <Item>
     <Element>Name</Element>
     <Characteristics>O</Characteristics>
@@ -35737,17 +35739,9 @@ For clarity, the conceptual model is broken up into use cases:</p>
 	</Item>
    <Item>
     <Element>ACARAId</Element>
-    <Characteristics>C</Characteristics>
+    <Characteristics>O</Characteristics>
     <Description>
       <p>ACARA identifier for this school.</p>
-    </Description>
-    <Type name="xs:normalizedString"></Type>
-  </Item>
-   <Item>
-    <Element>CommonwealthId</Element>
-    <Characteristics>C</Characteristics>
-    <Description>
-      <p>AGE ID identifier for this school.</p>
     </Description>
     <Type name="xs:normalizedString"></Type>
   </Item>
@@ -35850,21 +35844,12 @@ For clarity, the conceptual model is broken up into use cases:</p>
 	</Item>
    <Item>
     <Element>ACARAId</Element>
-    <Characteristics>C</Characteristics>
+    <Characteristics>O</Characteristics>
     <Description>
       <p>ACARA identifier for this school.</p>
     </Description>
     <Type name="xs:normalizedString"></Type>
   </Item>
-    <Item>
-    <Element>CommonwealthId</Element>
-    <Characteristics>C</Characteristics>
-    <Description>
-      <p>AGE ID identifier for this school.</p>
-    </Description>
-    <Type name="xs:normalizedString"></Type>
-  </Item>
-
   <Item>
     <Element>Name</Element>
     <Characteristics>M</Characteristics>
