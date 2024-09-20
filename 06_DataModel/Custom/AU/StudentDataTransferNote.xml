@@ -387,7 +387,7 @@
   <CountryOfBirth>1101</CountryOfBirth>
  <AustralianCitizenship>false</AustralianCitizenship>
   <ArrivalSchool>
-    <CommonwealthId>12345</CommonwealthId>
+    <ACARAId>12345</ACARAId>
 	<Name>Buchanan Secondary College</Name>
   </ArrivalSchool>
   <DepartureSchool>
