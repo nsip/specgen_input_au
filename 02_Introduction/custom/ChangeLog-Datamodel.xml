@@ -56,6 +56,7 @@
 		<code>PreviousSchoolType/State</code>,
 		<code>PreviousSchoolType/Sector</code>, <code>PreviousSchoolType/System</code>,
 		<code>PreviousSchoolType/ExitReason</code>: updates to Student Data Transfer Note.</li>
+		<li><code>GradeType/ProgressLevel</code>: reporting of grade as Below Level/At Level/Above Level.</li> 
 	</ul>
 	
 	
