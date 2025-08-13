@@ -3240,7 +3240,7 @@
 <Value><Code>4108</Code><Text>Spanish North Africa</Text></Value>
 <Value><Code>4111</Code><Text>South Sudan</Text></Value>
 <Value><Code>4201</Code><Text>Bahrain</Text></Value>
-<Value><Code>4202</Code><Text>Gaza Strip and West Bank</Text></Value>
+<Value><Code>4202</Code><Text>Occupied Palestinian Territories</Text></Value>
 <Value><Code>4203</Code><Text>Iran</Text></Value>
 <Value><Code>4204</Code><Text>Iraq</Text></Value>
 <Value><Code>4205</Code><Text>Israel</Text></Value>
@@ -3633,7 +3633,7 @@
 	</CodeSet>
 	<CodeSet>
 		<Intro>
-			<p>Federal Electorates from the Australian Electoral Commission; https://www.aec.gov.au/profiles/index.htm, loaded using 2021 electorates from the coding description of Commonwealth Electoral Divisions, ABS https://www.abs.gov.au/ausstats/abs@.nsf/Lookup/by%20Subject/1270.0.55.003~July%202017~Main%20Features~Commonwealth%20Electoral%20Divisions%20(CEDs)~6</p>
+			<p>Federal Electorates from the Australian Electoral Commission; https://www.aec.gov.au/profiles/index.htm, loaded using 2025 electorates from the coding description of Commonwealth Electoral Divisions, ABS https://www.abs.gov.au/ausstats/abs@.nsf/Lookup/by%20Subject/1270.0.55.003~July%202017~Main%20Features~Commonwealth%20Electoral%20Divisions%20(CEDs)~6</p>
 			<p>Note: as of SIF 3.4.5, the codeset is not stable, and reflects only current electorates; they are renumbered by state as electorates are added and withdrawn.</p>
 		</Intro>
 		<ID>Federal Electorate</ID>
@@ -3668,7 +3668,6 @@
 <Value><Code>129</Code><Text>Mitchell</Text></Value>
 <Value><Code>130</Code><Text>New England</Text></Value>
 <Value><Code>131</Code><Text>Newcastle</Text></Value>
-<Value><Code>132</Code><Text>North Sydney</Text></Value>
 <Value><Code>133</Code><Text>Page</Text></Value>
 <Value><Code>134</Code><Text>Parkes</Text></Value>
 <Value><Code>135</Code><Text>Parramatta</Text></Value>
@@ -3705,7 +3704,6 @@
 <Value><Code>217</Code><Text>Goldstein</Text></Value>
 <Value><Code>218</Code><Text>Gorton</Text></Value>
 <Value><Code>219</Code><Text>Hawke</Text></Value>
-<Value><Code>220</Code><Text>Higgins</Text></Value>
 <Value><Code>221</Code><Text>Holt</Text></Value>
 <Value><Code>222</Code><Text>Hotham</Text></Value>
 <Value><Code>223</Code><Text>Indi</Text></Value>
@@ -3773,20 +3771,21 @@
 <Value><Code>494</Code><Text>No usual address (SA)</Text></Value>
 <Value><Code>497</Code><Text>Migratory - Offshore - Shipping (SA)</Text></Value>
 <Value><Code>501</Code><Text>Brand</Text></Value>
-<Value><Code>502</Code><Text>Burt</Text></Value>
-<Value><Code>503</Code><Text>Canning</Text></Value>
-<Value><Code>504</Code><Text>Cowan</Text></Value>
-<Value><Code>505</Code><Text>Curtin</Text></Value>
-<Value><Code>506</Code><Text>Durack</Text></Value>
-<Value><Code>507</Code><Text>Forrest</Text></Value>
-<Value><Code>508</Code><Text>Fremantle</Text></Value>
-<Value><Code>509</Code><Text>Hasluck</Text></Value>
-<Value><Code>510</Code><Text>Moore</Text></Value>
-<Value><Code>511</Code><Text>O'Connor</Text></Value>
-<Value><Code>512</Code><Text>Pearce</Text></Value>
-<Value><Code>513</Code><Text>Perth</Text></Value>
-<Value><Code>514</Code><Text>Swan</Text></Value>
-<Value><Code>515</Code><Text>Tangney</Text></Value>
+<Value><Code>502</Code><Text>Bullwinkel</Text></Value>
+<Value><Code>503</Code><Text>Burt</Text></Value>
+<Value><Code>504</Code><Text>Canning</Text></Value>
+<Value><Code>505</Code><Text>Cowan</Text></Value>
+<Value><Code>506</Code><Text>Curtin</Text></Value>
+<Value><Code>507</Code><Text>Durack</Text></Value>
+<Value><Code>508</Code><Text>Forrest</Text></Value>
+<Value><Code>509</Code><Text>Fremantle</Text></Value>
+<Value><Code>510</Code><Text>Hasluck</Text></Value>
+<Value><Code>511</Code><Text>Moore</Text></Value>
+<Value><Code>512</Code><Text>O'Connor</Text></Value>
+<Value><Code>513</Code><Text>Pearce</Text></Value>
+<Value><Code>514</Code><Text>Perth</Text></Value>
+<Value><Code>515</Code><Text>Swan</Text></Value>
+<Value><Code>516</Code><Text>Tangney</Text></Value>
 <Value><Code>594</Code><Text>No usual address (WA)</Text></Value>
 <Value><Code>597</Code><Text>Migratory - Offshore - Shipping (WA)</Text></Value>
 <Value><Code>601</Code><Text>Bass</Text></Value>
@@ -4111,7 +4110,7 @@
 	</CodeSet>
 	<CodeSet>
 		<Intro>
-			<p>This Code Set is union between the Australian Statistical Geography Standard (ASGS):  http://www.abs.gov.au/ausstats/abs@.nsf/PrimaryMainFeatures/1270.0.55.001?OpenDocument and ARIA Remoteness</p>
+			<p>This Code Set is union between the Australian Statistical Geography Standard (ASGS): https://www.abs.gov.au/statistics/statistical-geography/australian-statistical-geography-standard-asgs and ARIA Remoteness</p>
 			<p>In previous versions the ARIA definition of Remoteness has been used for this validation. For the publication of ACARA's  Australian Schools List (ASL)  the ASGS validation is also supported.</p>
 		</Intro>
 		<ID>School Location</ID>
@@ -4938,6 +4937,576 @@
 <Value><Code>9400</Code><Text>Oceanic Pidgins and Creoles, nfd</Text></Value>
 <Value><Code>9500</Code><Text>Papua New Guinea Languages,  nfd</Text></Value>
 <Value><Code>9700</Code><Text>Sign Languages, nfd</Text></Value>
+
+
+
+<Value><Code>00000000</Code><Text>Inadequately Described</Text></Value>
+<Value><Code>00000002</Code><Text>Not Stated</Text></Value>
+<Value><Code>11110000</Code><Text>Pama-Nyungan Languages, nfd</Text></Value>
+<Value><Code>11111100</Code><Text>Thura-Yura Languages, nfd</Text></Value>
+<Value><Code>11111200</Code><Text>South West Languages, Western Desert, nfd</Text></Value>
+<Value><Code>11111300</Code><Text>South West Languages, Coastal and Inland Ngayarta, nfd</Text></Value>
+<Value><Code>11111400</Code><Text>South West Languages, Marngu, nfd</Text></Value>
+<Value><Code>11111500</Code><Text>South West Languages, Northern Desert Fringe, nfd</Text></Value>
+<Value><Code>11111600</Code><Text>Other South West Languages, nfd</Text></Value>
+<Value><Code>11111700</Code><Text>Wadjari Languages, nfd</Text></Value>
+<Value><Code>11111800</Code><Text>Arandic Languages, nfd</Text></Value>
+<Value><Code>11112100</Code><Text>Yolngu Languages, nfd</Text></Value>
+<Value><Code>11112200</Code><Text>Tangic Languages, nfd</Text></Value>
+<Value><Code>11112300</Code><Text>Bandjalangic Languages, nfd</Text></Value>
+<Value><Code>11112400</Code><Text>Paman Languages, nfd</Text></Value>
+<Value><Code>11112500</Code><Text>Yalandyic Languages, nfd</Text></Value>
+<Value><Code>11112600</Code><Text>Yidinyic Languages, nfd</Text></Value>
+<Value><Code>11112700</Code><Text>Dyirbalic Languages, nfd</Text></Value>
+<Value><Code>11112800</Code><Text>Maric Languages, nfd</Text></Value>
+<Value><Code>11113100</Code><Text>Waka-Kabic Languages, nfd</Text></Value>
+<Value><Code>11113200</Code><Text>Karnic  Languages, nfd</Text></Value>
+<Value><Code>11113300</Code><Text>Durubulic Languages, nfd</Text></Value>
+<Value><Code>11113400</Code><Text>Gumbaynggaric Languages, nfd</Text></Value>
+<Value><Code>11113500</Code><Text>Wiradhuric Languages, nfd</Text></Value>
+<Value><Code>11113600</Code><Text>Yuin-Kuric Languages, nfd</Text></Value>
+<Value><Code>11113700</Code><Text>Kulinic Languages, nfd</Text></Value>
+<Value><Code>11119900</Code><Text>Other Pama Nyungan Languages, nfd</Text></Value>
+<Value><Code>11121100</Code><Text>Nyulnyulan Languages, nfd</Text></Value>
+<Value><Code>11131100</Code><Text>Bunabic Languages, nfd</Text></Value>
+<Value><Code>11141100</Code><Text>Worrorran Languages, nfd</Text></Value>
+<Value><Code>11151100</Code><Text>Djeragan Languages, nfd</Text></Value>
+<Value><Code>11161100</Code><Text>Mirndi Languages, nfd</Text></Value>
+<Value><Code>11170000</Code><Text>Daly Languages, nfd</Text></Value>
+<Value><Code>11171100</Code><Text>Bringen-Wagaydy Languages, nfd</Text></Value>
+<Value><Code>11171200</Code><Text>Murrinh-Patha Languages, nfd</Text></Value>
+<Value><Code>11179900</Code><Text>Other Daly Languages, nfd</Text></Value>
+<Value><Code>11180000</Code><Text>Gunwinyguan Languages, nfd</Text></Value>
+<Value><Code>11181100</Code><Text>Bininj Kunwok Languages, nfd</Text></Value>
+<Value><Code>11181200</Code><Text>Enindhilyagwa Languages, nfd</Text></Value>
+<Value><Code>11189900</Code><Text>Other Gunwinyguan Languages, nfd</Text></Value>
+<Value><Code>11211100</Code><Text>Iwaidjan Languages, nfd</Text></Value>
+<Value><Code>11221100</Code><Text>Maningrida Languages, nfd</Text></Value>
+<Value><Code>11230000</Code><Text>Yanyi Languages, nfd</Text></Value>
+<Value><Code>11231100</Code><Text>Garawan Languages, nfd</Text></Value>
+<Value><Code>11811100</Code><Text>New and Contact Languages, nfd</Text></Value>
+<Value><Code>11999900</Code><Text>Other Aboriginal and Torres Strait Islander Languages, nfd</Text></Value>
+<Value><Code>12110000</Code><Text>Creoles, nfd</Text></Value>
+<Value><Code>12111100</Code><Text>French based Creoles, nfd</Text></Value>
+<Value><Code>12111200</Code><Text>English based Creoles, nfd</Text></Value>
+<Value><Code>12119900</Code><Text>Other Creoles, nfd</Text></Value>
+<Value><Code>12121100</Code><Text>Pidgin Languages, nfd</Text></Value>
+<Value><Code>13110000</Code><Text>Celtic Languages, nfd</Text></Value>
+<Value><Code>13111100</Code><Text>Insular Languages, nfd</Text></Value>
+<Value><Code>13120000</Code><Text>Germanic Languages, nfd</Text></Value>
+<Value><Code>13121100</Code><Text>West Germanic Languages, nfd</Text></Value>
+<Value><Code>13121200</Code><Text>North Germanic Languages, nfd</Text></Value>
+<Value><Code>13130000</Code><Text>Italic Languages, nfd</Text></Value>
+<Value><Code>13131100</Code><Text>Romance Languages, nfd</Text></Value>
+<Value><Code>13139900</Code><Text>Other Italic Languages, nfd</Text></Value>
+<Value><Code>13141100</Code><Text>Greek Languages, nfd</Text></Value>
+<Value><Code>13150000</Code><Text>Balto-Slavic Languages, nfd</Text></Value>
+<Value><Code>13151100</Code><Text>Baltic Languages, nfd</Text></Value>
+<Value><Code>13151200</Code><Text>Slavic Languages, nfd</Text></Value>
+<Value><Code>13159900</Code><Text>Other Balto-Slavic Languages, nfd</Text></Value>
+<Value><Code>13160000</Code><Text>Indo-Iranian Languages, nfd</Text></Value>
+<Value><Code>13161100</Code><Text>Iranian Languages, nfd</Text></Value>
+<Value><Code>13161200</Code><Text>Indo-Aryan Languages, nfd</Text></Value>
+<Value><Code>13169900</Code><Text>Other Indo-Iranian Languages, nfd</Text></Value>
+<Value><Code>13999900</Code><Text>Other Indo-European Languages, nfd</Text></Value>
+<Value><Code>14110000</Code><Text>Uralic Languages, nfd</Text></Value>
+<Value><Code>14111100</Code><Text>Finnic Languages, nfd</Text></Value>
+<Value><Code>14999900</Code><Text>Other Uralic Languages, nfd</Text></Value>
+<Value><Code>15110000</Code><Text>Semitic Languages, nfd</Text></Value>
+<Value><Code>15111100</Code><Text>Central Semitic Languages, nfd</Text></Value>
+<Value><Code>15111200</Code><Text>South Semitic Languages, nfd</Text></Value>
+<Value><Code>15120000</Code><Text>Cushitic Languages, nfd</Text></Value>
+<Value><Code>15121100</Code><Text>East Cushitic Languages, nfd</Text></Value>
+<Value><Code>15129900</Code><Text>Other Cushitic Languages, nfd</Text></Value>
+<Value><Code>15999900</Code><Text>Other Afro-Asiatic Languages, nfd</Text></Value>
+<Value><Code>16111100</Code><Text>Southern Turkic Languages, nfd</Text></Value>
+<Value><Code>16121100</Code><Text>Eastern Turkic Languages, nfd</Text></Value>
+<Value><Code>16999900</Code><Text>Other Turkic Languages, nfd</Text></Value>
+<Value><Code>17110000</Code><Text>Atlantic Congo Languages, nfd</Text></Value>
+<Value><Code>17111100</Code><Text>Volta Congo Languages, nfd</Text></Value>
+<Value><Code>17119900</Code><Text>Other Atlantic Congo Languages, nfd</Text></Value>
+<Value><Code>17120000</Code><Text>Mande Languages, nfd</Text></Value>
+<Value><Code>17121100</Code><Text>Western Mande Languages, nfd</Text></Value>
+<Value><Code>17121200</Code><Text>Eastern Mande Languages, nfd</Text></Value>
+<Value><Code>17999900</Code><Text>Other Niger Congo Languages, nfd</Text></Value>
+<Value><Code>18111100</Code><Text>Satellite Core Languages, nfd</Text></Value>
+<Value><Code>18999900</Code><Text>Other Nilo-Saharan Languages, nfd</Text></Value>
+<Value><Code>21111100</Code><Text>Southern Dravidian Languages, nfd</Text></Value>
+<Value><Code>21999900</Code><Text>Other Dravidian Languages, nfd</Text></Value>
+<Value><Code>22111100</Code><Text>Language isolates, nfd</Text></Value>
+<Value><Code>23111100</Code><Text>Chinese Languages, nfd</Text></Value>
+<Value><Code>23120000</Code><Text>Tibeto-Burman Languages, nfd</Text></Value>
+<Value><Code>23121100</Code><Text>Kuki Chin Languages, nfd</Text></Value>
+<Value><Code>23121200</Code><Text>Karenic Languages, nfd</Text></Value>
+<Value><Code>23121300</Code><Text>Western Tibeto-Burman Languages, nfd</Text></Value>
+<Value><Code>23129900</Code><Text>Other Tibeto-Burman Languages, nfd</Text></Value>
+<Value><Code>24111100</Code><Text>Hmong-Mien Languages, nfd</Text></Value>
+<Value><Code>25111100</Code><Text>Austro-Asiatic Languages, nfd</Text></Value>
+<Value><Code>26111100</Code><Text>Kra-Dai Languages, nfd</Text></Value>
+<Value><Code>27110000</Code><Text>Malayo-Polynesian Languages, nfd</Text></Value>
+<Value><Code>27111100</Code><Text>Greater Central Philippine Languages, nfd</Text></Value>
+<Value><Code>27111200</Code><Text>Northern Luzon Languages, nfd</Text></Value>
+<Value><Code>27111300</Code><Text>Malayo-Chamic Languages, nfd</Text></Value>
+<Value><Code>27111400</Code><Text>Central-Eastern Malayo-Polynesian Languages, nfd</Text></Value>
+<Value><Code>27119900</Code><Text>Other Malayo-Polynesian Languages, nfd</Text></Value>
+<Value><Code>27999900</Code><Text>Other Austronesian Languages, nfd</Text></Value>
+<Value><Code>91711100</Code><Text>Sign Languages, nfd</Text></Value>
+<Value><Code>91981100</Code><Text>Invented Languages, nfd</Text></Value>
+<Value><Code>91991100</Code><Text>Non verbal, so described, nfd</Text></Value>
+<Value><Code>11111111</Code><Text>Adnyamathanha</Text></Value>
+<Value><Code>11111112</Code><Text>Barngarla</Text></Value>
+<Value><Code>11111113</Code><Text>Kaurna</Text></Value>
+<Value><Code>11111114</Code><Text>Narungga</Text></Value>
+<Value><Code>11111115</Code><Text>Nukunu</Text></Value>
+<Value><Code>11111211</Code><Text>Antikarinya</Text></Value>
+<Value><Code>11111212</Code><Text>Kokatha</Text></Value>
+<Value><Code>11111213</Code><Text>Kukatja</Text></Value>
+<Value><Code>11111214</Code><Text>Luritja</Text></Value>
+<Value><Code>11111215</Code><Text>Manyjilyjarra</Text></Value>
+<Value><Code>11111216</Code><Text>Martu Wangka</Text></Value>
+<Value><Code>11111217</Code><Text>Ngaanyatjarra</Text></Value>
+<Value><Code>11111218</Code><Text>Pintupi</Text></Value>
+<Value><Code>11111221</Code><Text>Pitjantjatjara</Text></Value>
+<Value><Code>11111222</Code><Text>Tjupan</Text></Value>
+<Value><Code>11111223</Code><Text>Wangkajunga</Text></Value>
+<Value><Code>11111224</Code><Text>Wangkatha</Text></Value>
+<Value><Code>11111225</Code><Text>Warnman</Text></Value>
+<Value><Code>11111226</Code><Text>Yankunytjatjara</Text></Value>
+<Value><Code>11111227</Code><Text>Yulparija</Text></Value>
+<Value><Code>11111299</Code><Text>South West Languages, Western Desert, nec</Text></Value>
+<Value><Code>11111311</Code><Text>Banyjima</Text></Value>
+<Value><Code>11111312</Code><Text>Kariyarra</Text></Value>
+<Value><Code>11111313</Code><Text>Ngarla</Text></Value>
+<Value><Code>11111314</Code><Text>Ngarluma</Text></Value>
+<Value><Code>11111315</Code><Text>Nyamal</Text></Value>
+<Value><Code>11111316</Code><Text>Palyku</Text></Value>
+<Value><Code>11111317</Code><Text>Yindjibarndi</Text></Value>
+<Value><Code>11111318</Code><Text>Yinhawangka</Text></Value>
+<Value><Code>11111411</Code><Text>Mangala</Text></Value>
+<Value><Code>11111412</Code><Text>Karajarri</Text></Value>
+<Value><Code>11111413</Code><Text>Nyangumarta</Text></Value>
+<Value><Code>11111511</Code><Text>Gurindji</Text></Value>
+<Value><Code>11111512</Code><Text>Jaru</Text></Value>
+<Value><Code>11111513</Code><Text>Mudburra</Text></Value>
+<Value><Code>11111514</Code><Text>Ngarinyman</Text></Value>
+<Value><Code>11111515</Code><Text>Walmajarri</Text></Value>
+<Value><Code>11111516</Code><Text>Warlmanpa</Text></Value>
+<Value><Code>11111517</Code><Text>Warlpiri</Text></Value>
+<Value><Code>11111599</Code><Text>South West Languages, Northern Desert Fringe, nec</Text></Value>
+<Value><Code>11111611</Code><Text>Mirniny</Text></Value>
+<Value><Code>11111612</Code><Text>Noongar</Text></Value>
+<Value><Code>11111613</Code><Text>Thalandji</Text></Value>
+<Value><Code>11111699</Code><Text>"Other South West Languages, nec</Text></Value>
+<Value><Code>"</Text></Value>
+<Value><Code>11111711</Code><Text>Badimaya</Text></Value>
+<Value><Code>11111712</Code><Text>Wajarri</Text></Value>
+<Value><Code>11111811</Code><Text>Alyawarr</Text></Value>
+<Value><Code>11111812</Code><Text>Anmatyerr</Text></Value>
+<Value><Code>11111813</Code><Text>Arrernte</Text></Value>
+<Value><Code>11111814</Code><Text>Kaytetye</Text></Value>
+<Value><Code>11111815</Code><Text>Western Arrarnta</Text></Value>
+<Value><Code>11112111</Code><Text>Dhay'yi</Text></Value>
+<Value><Code>11112112</Code><Text>Dhuwal</Text></Value>
+<Value><Code>11112113</Code><Text>Dhuwaya</Text></Value>
+<Value><Code>11112114</Code><Text>Djambarrpuyngu</Text></Value>
+<Value><Code>11112115</Code><Text>Djinang</Text></Value>
+<Value><Code>11112116</Code><Text>Djinba</Text></Value>
+<Value><Code>11112117</Code><Text>Golpa</Text></Value>
+<Value><Code>11112118</Code><Text>Gumatj</Text></Value>
+<Value><Code>11112121</Code><Text>Gupapuyngu</Text></Value>
+<Value><Code>11112122</Code><Text>Ritharrngu</Text></Value>
+<Value><Code>11112123</Code><Text>Yan-nhangu </Text></Value>
+<Value><Code>11112124</Code><Text>"Yolngu Matha</Text></Value>
+<Value><Code>"</Text></Value>
+<Value><Code>11112199</Code><Text>"Yolngu Languages, nec</Text></Value>
+<Value><Code>"</Text></Value>
+<Value><Code>11112211</Code><Text>Kayardild</Text></Value>
+<Value><Code>11112212</Code><Text>Lardil</Text></Value>
+<Value><Code>11112213</Code><Text>Ganggalidda</Text></Value>
+<Value><Code>11112311</Code><Text>Bandjalung</Text></Value>
+<Value><Code>11112312</Code><Text>Yugambeh</Text></Value>
+<Value><Code>11112411</Code><Text>Koko-Bera</Text></Value>
+<Value><Code>11112412</Code><Text>Kugu Nganhcara </Text></Value>
+<Value><Code>11112413</Code><Text>Kuuk Thayorre</Text></Value>
+<Value><Code>11112414</Code><Text>Kuuku-Ya'u</Text></Value>
+<Value><Code>11112415</Code><Text>Morrobalama</Text></Value>
+<Value><Code>11112416</Code><Text>Wik Mungkan</Text></Value>
+<Value><Code>11112417</Code><Text>Wik Ngathan</Text></Value>
+<Value><Code>11112418</Code><Text>Yir Yoront</Text></Value>
+<Value><Code>11112499</Code><Text>Paman Languages, nec</Text></Value>
+<Value><Code>11112511</Code><Text>Guugu Yimidhirr</Text></Value>
+<Value><Code>11112512</Code><Text>Kuku Yalanji</Text></Value>
+<Value><Code>11112611</Code><Text>Djabugay</Text></Value>
+<Value><Code>11112612</Code><Text>Yidiny</Text></Value>
+<Value><Code>11112711</Code><Text>Dyirbal</Text></Value>
+<Value><Code>11112712</Code><Text>Warrgamay</Text></Value>
+<Value><Code>11112811</Code><Text>Biri</Text></Value>
+<Value><Code>11112812</Code><Text>Gudjal</Text></Value>
+<Value><Code>11112813</Code><Text>Gunggari</Text></Value>
+<Value><Code>11112814</Code><Text>Mandandanji</Text></Value>
+<Value><Code>11112815</Code><Text>Yirendali</Text></Value>
+<Value><Code>11112899</Code><Text>Maric Languages, nec</Text></Value>
+<Value><Code>11113111</Code><Text>Butchulla</Text></Value>
+<Value><Code>11113112</Code><Text>Kabi Kabi</Text></Value>
+<Value><Code>11113113</Code><Text>Wakka Wakka</Text></Value>
+<Value><Code>11113199</Code><Text>Waka-Kabic Languages, nec</Text></Value>
+<Value><Code>11113211</Code><Text>Arabana</Text></Value>
+<Value><Code>11113212</Code><Text>Bidjara</Text></Value>
+<Value><Code>11113213</Code><Text>Dieri</Text></Value>
+<Value><Code>11113214</Code><Text>Karuwali</Text></Value>
+<Value><Code>11113215</Code><Text>Kullilli</Text></Value>
+<Value><Code>11113216</Code><Text>Wangkangurru</Text></Value>
+<Value><Code>11113299</Code><Text>Karnic Languages, nec</Text></Value>
+<Value><Code>11113311</Code><Text>Jandai</Text></Value>
+<Value><Code>11113312</Code><Text>Yuggera</Text></Value>
+<Value><Code>11113399</Code><Text>Durubulic Languages, nec</Text></Value>
+<Value><Code>11113411</Code><Text>Gumbaynggir</Text></Value>
+<Value><Code>11113412</Code><Text>Yaygirr</Text></Value>
+<Value><Code>11113511</Code><Text>Bigambul</Text></Value>
+<Value><Code>11113512</Code><Text>Gamilaraay</Text></Value>
+<Value><Code>11113513</Code><Text>Ngiyampaa</Text></Value>
+<Value><Code>11113514</Code><Text>Wiradjuri</Text></Value>
+<Value><Code>11113611</Code><Text>Anaiwan</Text></Value>
+<Value><Code>11113612</Code><Text>Awabakal</Text></Value>
+<Value><Code>11113613</Code><Text>Darkinyung</Text></Value>
+<Value><Code>11113614</Code><Text>Dhanggatti</Text></Value>
+<Value><Code>11113615</Code><Text>Dharawal</Text></Value>
+<Value><Code>11113616</Code><Text>Dharug</Text></Value>
+<Value><Code>11113617</Code><Text>Dhurga</Text></Value>
+<Value><Code>11113618</Code><Text>Gathang (Birrbay/Worimi)</Text></Value>
+<Value><Code>11113621</Code><Text>Gundungurra/Gandangara</Text></Value>
+<Value><Code>11113622</Code><Text>Ngunawal</Text></Value>
+<Value><Code>11113699</Code><Text>Yuin-Kuric Languages, nec</Text></Value>
+<Value><Code>11113711</Code><Text>Djab Wurrung</Text></Value>
+<Value><Code>11113712</Code><Text>Keerray-Woorroong</Text></Value>
+<Value><Code>11113713</Code><Text>Wemba Wemba</Text></Value>
+<Value><Code>11113714</Code><Text>Wergaia</Text></Value>
+<Value><Code>11113715</Code><Text>Woiwurrung</Text></Value>
+<Value><Code>11113799</Code><Text>"Kulinic Languages, nec</Text></Value>
+<Value><Code>"</Text></Value>
+<Value><Code>11119911</Code><Text>Kalaw Lagaw Ya</Text></Value>
+<Value><Code>11119912</Code><Text>Kalkatungu/Kalkadoon</Text></Value>
+<Value><Code>11119913</Code><Text>Kurnai</Text></Value>
+<Value><Code>11119914</Code><Text>Mununjali</Text></Value>
+<Value><Code>11119915</Code><Text>Muruwari</Text></Value>
+<Value><Code>11119916</Code><Text>Ngarrindjeri</Text></Value>
+<Value><Code>11119917</Code><Text>Paakantyi</Text></Value>
+<Value><Code>11119918</Code><Text>Warumungu</Text></Value>
+<Value><Code>11119921</Code><Text>Yanyuwa</Text></Value>
+<Value><Code>11119922</Code><Text>Yorta Yorta</Text></Value>
+<Value><Code>11119999</Code><Text>"Other Pama Nyungan Languages, nec</Text></Value>
+<Value><Code>"</Text></Value>
+<Value><Code>11121111</Code><Text>Bardi</Text></Value>
+<Value><Code>11121112</Code><Text>Jugun</Text></Value>
+<Value><Code>11121113</Code><Text>Nyikina</Text></Value>
+<Value><Code>11121114</Code><Text>Yawuru</Text></Value>
+<Value><Code>11121199</Code><Text>Nyulnyulan Languages, nec</Text></Value>
+<Value><Code>11131111</Code><Text>Bunuba</Text></Value>
+<Value><Code>11131112</Code><Text>Gooniyandi</Text></Value>
+<Value><Code>11141111</Code><Text>Ngarinyin</Text></Value>
+<Value><Code>11141112</Code><Text>Worrorra</Text></Value>
+<Value><Code>11141113</Code><Text>Wunambal</Text></Value>
+<Value><Code>11151111</Code><Text>Gija</Text></Value>
+<Value><Code>11151112</Code><Text>Miriwoong</Text></Value>
+<Value><Code>11161111</Code><Text>Jaminjung</Text></Value>
+<Value><Code>11161112</Code><Text>Jingulu</Text></Value>
+<Value><Code>11161113</Code><Text>Ngaliwurru</Text></Value>
+<Value><Code>11161114</Code><Text>Nungali</Text></Value>
+<Value><Code>11161115</Code><Text>Wambayan</Text></Value>
+<Value><Code>11171111</Code><Text>Mari Ngarr</Text></Value>
+<Value><Code>11171112</Code><Text>Marramaninyshi</Text></Value>
+<Value><Code>11171113</Code><Text>Marrithiyel</Text></Value>
+<Value><Code>11171211</Code><Text>Murrinh Patha</Text></Value>
+<Value><Code>11171212</Code><Text>Ngan'gi</Text></Value>
+<Value><Code>11179911</Code><Text>Malak Malak</Text></Value>
+<Value><Code>11179999</Code><Text>Other Daly Languages, nec</Text></Value>
+<Value><Code>11181111</Code><Text>Gundjeihmi</Text></Value>
+<Value><Code>11181112</Code><Text>Kune</Text></Value>
+<Value><Code>11181113</Code><Text>Kuninjku</Text></Value>
+<Value><Code>11181114</Code><Text>Kunwinjku</Text></Value>
+<Value><Code>11181115</Code><Text>Mayali</Text></Value>
+<Value><Code>11181211</Code><Text>Anindilyakwa</Text></Value>
+<Value><Code>11181212</Code><Text>Ngandi</Text></Value>
+<Value><Code>11181213</Code><Text>Wubuy</Text></Value>
+<Value><Code>11189911</Code><Text>Dalabon</Text></Value>
+<Value><Code>11189912</Code><Text>Jawoyn</Text></Value>
+<Value><Code>11189913</Code><Text>Kunbarlang</Text></Value>
+<Value><Code>11189914</Code><Text>Ngalakgan</Text></Value>
+<Value><Code>11189915</Code><Text>Rembarrnga</Text></Value>
+<Value><Code>11189999</Code><Text>Other Gunwinyguan Languages, nec</Text></Value>
+<Value><Code>11211111</Code><Text>Amurdak</Text></Value>
+<Value><Code>11211112</Code><Text>Iwaidja</Text></Value>
+<Value><Code>11211113</Code><Text>Maung</Text></Value>
+<Value><Code>11221111</Code><Text>Burarra</Text></Value>
+<Value><Code>11221112</Code><Text>Gurr-goni</Text></Value>
+<Value><Code>11221113</Code><Text>Nakkara</Text></Value>
+<Value><Code>11221114</Code><Text>Ndjébbana (Gunavidji)</Text></Value>
+<Value><Code>11231111</Code><Text>Garrwa</Text></Value>
+<Value><Code>11231112</Code><Text>Waanyi</Text></Value>
+<Value><Code>11811111</Code><Text>Cape York Creole</Text></Value>
+<Value><Code>11811112</Code><Text>Gurindji Kriol</Text></Value>
+<Value><Code>11811113</Code><Text>Kriol</Text></Value>
+<Value><Code>11811114</Code><Text>Lockhart River Creole</Text></Value>
+<Value><Code>11811115</Code><Text>Ngukurr Kriol</Text></Value>
+<Value><Code>11811116</Code><Text>Yumplatok</Text></Value>
+<Value><Code>11811117</Code><Text>Yarrie Lingo</Text></Value>
+<Value><Code>11811198</Code><Text>Aboriginal English, so described</Text></Value>
+<Value><Code>11811199</Code><Text>New and Contact Languages, nec</Text></Value>
+<Value><Code>11999911</Code><Text>Alawa</Text></Value>
+<Value><Code>11999912</Code><Text>Larrakia</Text></Value>
+<Value><Code>11999913</Code><Text>Mangarrayi</Text></Value>
+<Value><Code>11999914</Code><Text>Marra</Text></Value>
+<Value><Code>11999915</Code><Text>Meriam Mir</Text></Value>
+<Value><Code>11999916</Code><Text>palawa kani</Text></Value>
+<Value><Code>11999917</Code><Text>Tiwi</Text></Value>
+<Value><Code>11999918</Code><Text>Wagiman</Text></Value>
+<Value><Code>11999921</Code><Text>Wardaman</Text></Value>
+<Value><Code>11999999</Code><Text>Other Aboriginal and Torres Strait Islander Languages, nec</Text></Value>
+<Value><Code>12111111</Code><Text>Morisyen</Text></Value>
+<Value><Code>12111112</Code><Text>Seychelles Creole</Text></Value>
+<Value><Code>12111198</Code><Text>French creole, so described</Text></Value>
+<Value><Code>12111211</Code><Text>Krio</Text></Value>
+<Value><Code>12111212</Code><Text>Bislama</Text></Value>
+<Value><Code>12111213</Code><Text>Norf'k-Pitcairn</Text></Value>
+<Value><Code>12111214</Code><Text>Pijin</Text></Value>
+<Value><Code>12111215</Code><Text>Tok Pisin (Neomelanesian)</Text></Value>
+<Value><Code>12119997</Code><Text>Portuguese creole, so described</Text></Value>
+<Value><Code>12119998</Code><Text>Spanish creole, so described</Text></Value>
+<Value><Code>12119999</Code><Text>Other Creoles, nec</Text></Value>
+<Value><Code>12121111</Code><Text>Liberian (Liberian English)</Text></Value>
+<Value><Code>12121198</Code><Text>Pidgin, so described</Text></Value>
+<Value><Code>12121199</Code><Text>Pidgins, nec</Text></Value>
+<Value><Code>13111111</Code><Text>Gaelic (Scotland)</Text></Value>
+<Value><Code>13111112</Code><Text>Irish</Text></Value>
+<Value><Code>13111113</Code><Text>Welsh</Text></Value>
+<Value><Code>13111199</Code><Text>Insular Languages, nec</Text></Value>
+<Value><Code>13121111</Code><Text>Afrikaans</Text></Value>
+<Value><Code>13121112</Code><Text>Dutch</Text></Value>
+<Value><Code>13121113</Code><Text>English</Text></Value>
+<Value><Code>13121114</Code><Text>Frisian</Text></Value>
+<Value><Code>13121115</Code><Text>German</Text></Value>
+<Value><Code>13121116</Code><Text>Luxembourgish</Text></Value>
+<Value><Code>13121117</Code><Text>Yiddish</Text></Value>
+<Value><Code>13121199</Code><Text>West Germanic Languages, nec</Text></Value>
+<Value><Code>13121211</Code><Text>Danish</Text></Value>
+<Value><Code>13121212</Code><Text>Icelandic</Text></Value>
+<Value><Code>13121213</Code><Text>Norwegian</Text></Value>
+<Value><Code>13121214</Code><Text>Swedish</Text></Value>
+<Value><Code>13121299</Code><Text>North Germanic Languages, nec</Text></Value>
+<Value><Code>13131111</Code><Text>Aromanian</Text></Value>
+<Value><Code>13131112</Code><Text>Catalan</Text></Value>
+<Value><Code>13131113</Code><Text>French</Text></Value>
+<Value><Code>13131114</Code><Text>Italian</Text></Value>
+<Value><Code>13131115</Code><Text>Portuguese</Text></Value>
+<Value><Code>13131116</Code><Text>Romanian</Text></Value>
+<Value><Code>13131117</Code><Text>Spanish</Text></Value>
+<Value><Code>13139911</Code><Text>Latin</Text></Value>
+<Value><Code>13139999</Code><Text>Other Italic Languages, nec</Text></Value>
+<Value><Code>13141111</Code><Text>Greek</Text></Value>
+<Value><Code>13141199</Code><Text>Greek Languages, nec</Text></Value>
+<Value><Code>13151111</Code><Text>Latvian</Text></Value>
+<Value><Code>13151112</Code><Text>Lithuanian</Text></Value>
+<Value><Code>13151211</Code><Text>Belorussian</Text></Value>
+<Value><Code>13151212</Code><Text>Bosnian</Text></Value>
+<Value><Code>13151213</Code><Text>Bulgarian</Text></Value>
+<Value><Code>13151214</Code><Text>Croatian</Text></Value>
+<Value><Code>13151215</Code><Text>Czech</Text></Value>
+<Value><Code>13151216</Code><Text>Macedonian</Text></Value>
+<Value><Code>13151217</Code><Text>Polish</Text></Value>
+<Value><Code>13151218</Code><Text>Russian</Text></Value>
+<Value><Code>13151221</Code><Text>Serbian</Text></Value>
+<Value><Code>13151222</Code><Text>Slovak</Text></Value>
+<Value><Code>13151223</Code><Text>Slovene</Text></Value>
+<Value><Code>13151224</Code><Text>Ukrainian</Text></Value>
+<Value><Code>13159997</Code><Text>Czechoslovakian, so described</Text></Value>
+<Value><Code>13159998</Code><Text>Serbo-Croatian/Yugoslavian, so described</Text></Value>
+<Value><Code>13159999</Code><Text>Other Balto-Slavic Languages, nec</Text></Value>
+<Value><Code>13161111</Code><Text>Balochi</Text></Value>
+<Value><Code>13161112</Code><Text>Dari</Text></Value>
+<Value><Code>13161113</Code><Text>Hazaragi</Text></Value>
+<Value><Code>13161114</Code><Text>Northern Kurdish (Kurmanji)</Text></Value>
+<Value><Code>13161115</Code><Text>Pashto</Text></Value>
+<Value><Code>13161116</Code><Text>Persian (excluding Dari)</Text></Value>
+<Value><Code>13161211</Code><Text>Assamese</Text></Value>
+<Value><Code>13161212</Code><Text>Bengali</Text></Value>
+<Value><Code>13161213</Code><Text>Dhivehi</Text></Value>
+<Value><Code>13161214</Code><Text>Fiji Hindi</Text></Value>
+<Value><Code>13161215</Code><Text>Gujarati</Text></Value>
+<Value><Code>13161216</Code><Text>Haryanvi</Text></Value>
+<Value><Code>13161217</Code><Text>Hindi</Text></Value>
+<Value><Code>13161218</Code><Text>Kashmiri</Text></Value>
+<Value><Code>13161221</Code><Text>Konkani</Text></Value>
+<Value><Code>13161222</Code><Text>Marathi</Text></Value>
+<Value><Code>13161223</Code><Text>Nepali</Text></Value>
+<Value><Code>13161224</Code><Text>Oriya</Text></Value>
+<Value><Code>13161225</Code><Text>Punjabi</Text></Value>
+<Value><Code>13161226</Code><Text>Rohingya</Text></Value>
+<Value><Code>13161227</Code><Text>Romany</Text></Value>
+<Value><Code>13161228</Code><Text>Sindhi</Text></Value>
+<Value><Code>13161231</Code><Text>Sinhalese</Text></Value>
+<Value><Code>13161232</Code><Text>Urdu</Text></Value>
+<Value><Code>13169999</Code><Text>Other Indo-Iranian Languages, nec</Text></Value>
+<Value><Code>13999911</Code><Text>Albanian</Text></Value>
+<Value><Code>13999912</Code><Text>Armenian</Text></Value>
+<Value><Code>13999998</Code><Text>Swiss, so described</Text></Value>
+<Value><Code>13999999</Code><Text>Other Indo-European Languages, nec</Text></Value>
+<Value><Code>14111111</Code><Text>Estonian</Text></Value>
+<Value><Code>14111112</Code><Text>Finnish</Text></Value>
+<Value><Code>14999911</Code><Text>Hungarian</Text></Value>
+<Value><Code>14999999</Code><Text>Other Uralic Languages, nec</Text></Value>
+<Value><Code>15111111</Code><Text>Arabic</Text></Value>
+<Value><Code>15111112</Code><Text>Assyrian Neo-Aramaic</Text></Value>
+<Value><Code>15111113</Code><Text>Chaldean Neo-Aramaic</Text></Value>
+<Value><Code>15111114</Code><Text>Hebrew</Text></Value>
+<Value><Code>15111115</Code><Text>Maltese</Text></Value>
+<Value><Code>15111116</Code><Text>Mandaean (Mandaic)</Text></Value>
+<Value><Code>15111117</Code><Text>Syriac</Text></Value>
+<Value><Code>15111199</Code><Text>Central Semitic Languages, nec</Text></Value>
+<Value><Code>15111211</Code><Text>Amharic</Text></Value>
+<Value><Code>15111212</Code><Text>Harari</Text></Value>
+<Value><Code>15111213</Code><Text>Tigre</Text></Value>
+<Value><Code>15111214</Code><Text>Tigrinya</Text></Value>
+<Value><Code>15111299</Code><Text>South Semitic Languages, nec</Text></Value>
+<Value><Code>15121111</Code><Text>Oromo</Text></Value>
+<Value><Code>15121112</Code><Text>Somali</Text></Value>
+<Value><Code>15129999</Code><Text>Other Cushitic Languages, nec</Text></Value>
+<Value><Code>15999911</Code><Text>Hausa</Text></Value>
+<Value><Code>15999999</Code><Text>Other Afro-Asiatic Languages, nec</Text></Value>
+<Value><Code>16111111</Code><Text>Azeri</Text></Value>
+<Value><Code>16111112</Code><Text>Turkish</Text></Value>
+<Value><Code>16111113</Code><Text>Turkmen</Text></Value>
+<Value><Code>16121111</Code><Text>Uyghur</Text></Value>
+<Value><Code>16121112</Code><Text>Uzbek</Text></Value>
+<Value><Code>16999911</Code><Text>Tatar</Text></Value>
+<Value><Code>16999999</Code><Text>Other Turkic Languages, nec</Text></Value>
+<Value><Code>17111111</Code><Text>Akan</Text></Value>
+<Value><Code>17111112</Code><Text>Bassa</Text></Value>
+<Value><Code>17111113</Code><Text>Bemba</Text></Value>
+<Value><Code>17111114</Code><Text>Edo</Text></Value>
+<Value><Code>17111115</Code><Text>Ewe</Text></Value>
+<Value><Code>17111116</Code><Text>Ga</Text></Value>
+<Value><Code>17111117</Code><Text>Igbo</Text></Value>
+<Value><Code>17111118</Code><Text>Kikuyu</Text></Value>
+<Value><Code>17111121</Code><Text>Kinyarwanda (Rwanda)</Text></Value>
+<Value><Code>17111122</Code><Text>Kirundi (Rundi)</Text></Value>
+<Value><Code>17111123</Code><Text>Krahn</Text></Value>
+<Value><Code>17111124</Code><Text>Lingala</Text></Value>
+<Value><Code>17111125</Code><Text>Luganda</Text></Value>
+<Value><Code>17111126</Code><Text>Ndebele</Text></Value>
+<Value><Code>17111127</Code><Text>Nyanja (Chichewa)</Text></Value>
+<Value><Code>17111128</Code><Text>Shona</Text></Value>
+<Value><Code>17111131</Code><Text>Swahili</Text></Value>
+<Value><Code>17111132</Code><Text>Tswana</Text></Value>
+<Value><Code>17111133</Code><Text>Xhosa</Text></Value>
+<Value><Code>17111134</Code><Text>Yoruba</Text></Value>
+<Value><Code>17111135</Code><Text>Zulu</Text></Value>
+<Value><Code>17119911</Code><Text>Fulfulde</Text></Value>
+<Value><Code>17119912</Code><Text>Kissi</Text></Value>
+<Value><Code>17119999</Code><Text>Other Atlantic Congo Languages, nec</Text></Value>
+<Value><Code>17121112</Code><Text>Kpelle</Text></Value>
+<Value><Code>17121113</Code><Text>Loma (Lorma)</Text></Value>
+<Value><Code>17121114</Code><Text>Mandinka</Text></Value>
+<Value><Code>17121115</Code><Text>Mende</Text></Value>
+<Value><Code>17121199</Code><Text>Western Mande Languages, nec</Text></Value>
+<Value><Code>17121111</Code><Text>Dan (Gio-Dan)</Text></Value>
+<Value><Code>17121112</Code><Text>Maan</Text></Value>
+<Value><Code>17121199</Code><Text>Eastern Mande Languages, nec</Text></Value>
+<Value><Code>17999911</Code><Text>Moro (Nuba Moro)</Text></Value>
+<Value><Code>17999999</Code><Text>Other Niger Congo Languages, nec</Text></Value>
+<Value><Code>18111111</Code><Text>Acholi</Text></Value>
+<Value><Code>18111112</Code><Text>Anuak</Text></Value>
+<Value><Code>18111113</Code><Text>Bari</Text></Value>
+<Value><Code>18111114</Code><Text>Dinka</Text></Value>
+<Value><Code>18111115</Code><Text>Luo</Text></Value>
+<Value><Code>18111116</Code><Text>Madi</Text></Value>
+<Value><Code>18111117</Code><Text>Nuer</Text></Value>
+<Value><Code>18111118</Code><Text>Shilluk</Text></Value>
+<Value><Code>18999999</Code><Text>Other Nilo-Saharan Languages, nec</Text></Value>
+<Value><Code>21111111</Code><Text>Kannada</Text></Value>
+<Value><Code>21111112</Code><Text>Malayalam</Text></Value>
+<Value><Code>21111113</Code><Text>Tamil</Text></Value>
+<Value><Code>21111114</Code><Text>Tulu</Text></Value>
+<Value><Code>21999911</Code><Text>Telugu</Text></Value>
+<Value><Code>21999999</Code><Text>Other Dravidian Languages, nec</Text></Value>
+<Value><Code>22111111</Code><Text>Basque</Text></Value>
+<Value><Code>22111112</Code><Text>Georgian</Text></Value>
+<Value><Code>22111113</Code><Text>Japanese</Text></Value>
+<Value><Code>22111114</Code><Text>Korean</Text></Value>
+<Value><Code>22111115</Code><Text>Mongolian</Text></Value>
+<Value><Code>23111111</Code><Text>Hakka</Text></Value>
+<Value><Code>23111112</Code><Text>Mandarin</Text></Value>
+<Value><Code>23111113</Code><Text>Min Nan (Teochew)</Text></Value>
+<Value><Code>23111114</Code><Text>Wu (Shanghainese)</Text></Value>
+<Value><Code>23111115</Code><Text>Yue (Cantonese)</Text></Value>
+<Value><Code>23111199</Code><Text>Chinese Languages, nec</Text></Value>
+<Value><Code>23121111</Code><Text>Falam Chin</Text></Value>
+<Value><Code>23121112</Code><Text>Hakha Chin</Text></Value>
+<Value><Code>23121113</Code><Text>Kachin</Text></Value>
+<Value><Code>23121114</Code><Text>Matu Chin</Text></Value>
+<Value><Code>23121115</Code><Text>Mizo</Text></Value>
+<Value><Code>23121116</Code><Text>Siyin Chin</Text></Value>
+<Value><Code>23121117</Code><Text>Tedim Chin</Text></Value>
+<Value><Code>23121118</Code><Text>Zophei</Text></Value>
+<Value><Code>23121121</Code><Text>Zotung Chin</Text></Value>
+<Value><Code>23121211</Code><Text>Karenni</Text></Value>
+<Value><Code>23121212</Code><Text>Pwo Karen</Text></Value>
+<Value><Code>23121213</Code><Text>S'gaw Karen</Text></Value>
+<Value><Code>23121311</Code><Text>Dzongkha</Text></Value>
+<Value><Code>23121312</Code><Text>Central Tibetan</Text></Value>
+<Value><Code>23129911</Code><Text>Burmese</Text></Value>
+<Value><Code>23129999</Code><Text>Other Tibeto-Burman Languages, nec</Text></Value>
+<Value><Code>24111111</Code><Text>Hmong</Text></Value>
+<Value><Code>24111199</Code><Text>Hmong-Mien Languages, nec</Text></Value>
+<Value><Code>25111111</Code><Text>Khmer</Text></Value>
+<Value><Code>25111112</Code><Text>Mon</Text></Value>
+<Value><Code>25111113</Code><Text>Vietnamese</Text></Value>
+<Value><Code>25111199</Code><Text>Austro-Asiatic Languages, nec</Text></Value>
+<Value><Code>26111111</Code><Text>Lao</Text></Value>
+<Value><Code>26111112</Code><Text>Thai</Text></Value>
+<Value><Code>26119999</Code><Text>Other Kra-Dai Languages, nec</Text></Value>
+<Value><Code>27111111</Code><Text>Bikol</Text></Value>
+<Value><Code>27111112</Code><Text>Bisaya</Text></Value>
+<Value><Code>27111113</Code><Text>Cebuano</Text></Value>
+<Value><Code>27111114</Code><Text>Filipino</Text></Value>
+<Value><Code>27111115</Code><Text>Tagalog</Text></Value>
+<Value><Code>27111211</Code><Text>Ilocano</Text></Value>
+<Value><Code>27111212</Code><Text>Ilonggo (Hiligaynon)</Text></Value>
+<Value><Code>27111311</Code><Text>Acehnese</Text></Value>
+<Value><Code>27111312</Code><Text>Iban</Text></Value>
+<Value><Code>27111313</Code><Text>Indonesian</Text></Value>
+<Value><Code>27111314</Code><Text>Malay</Text></Value>
+<Value><Code>27111411</Code><Text>Fijian</Text></Value>
+<Value><Code>27111412</Code><Text>Kiribati</Text></Value>
+<Value><Code>27111413</Code><Text>Cook Islands Maori</Text></Value>
+<Value><Code>27111414</Code><Text>Māori (New Zealand)</Text></Value>
+<Value><Code>27111415</Code><Text>Meto</Text></Value>
+<Value><Code>27111416</Code><Text>Motu (Hiri Motu)</Text></Value>
+<Value><Code>27111417</Code><Text>Nauruan</Text></Value>
+<Value><Code>27111418</Code><Text>Niue</Text></Value>
+<Value><Code>27111421</Code><Text>Rotuman</Text></Value>
+<Value><Code>27111422</Code><Text>Samoan</Text></Value>
+<Value><Code>27111423</Code><Text>Tetun</Text></Value>
+<Value><Code>27111424</Code><Text>Tokelauan</Text></Value>
+<Value><Code>27111425</Code><Text>Tongan</Text></Value>
+<Value><Code>27111426</Code><Text>Tuvaluan</Text></Value>
+<Value><Code>27119911</Code><Text>Balinese</Text></Value>
+<Value><Code>27119912</Code><Text>Javanese</Text></Value>
+<Value><Code>27119913</Code><Text>Pampangan</Text></Value>
+<Value><Code>27119999</Code><Text>Other Malayo-Polynesian Languages, nec</Text></Value>
+<Value><Code>27999999</Code><Text>Other Austronesian Languages, nec</Text></Value>
+<Value><Code>91111111</Code><Text>American Languages</Text></Value>
+<Value><Code>91111198</Code><Text>Cypriot, so described</Text></Value>
+<Value><Code>91111199</Code><Text>Other Languages, nec</Text></Value>
+<Value><Code>91711111</Code><Text>Auslan</Text></Value>
+<Value><Code>91711112</Code><Text>Key Word Sign Australia</Text></Value>
+<Value><Code>91711199</Code><Text>Sign Languages, nec</Text></Value>
+<Value><Code>91981111</Code><Text>Invented Languages</Text></Value>
+<Value><Code>91991111</Code><Text>Non verbal, so described</Text></Value>
+
+
+
+
+
 </Values>
 </CodeSet>
 	<CodeSet>

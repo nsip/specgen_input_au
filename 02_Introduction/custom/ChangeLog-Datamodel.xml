@@ -6,7 +6,7 @@
          xmlns="http://sifassociation.org/SpecGen">
 	
 	<p>This release contains the following significant updates and extensions to the SIF specification.</p>
-	<h3>Additions/Changes since 3.6.2 June, 2024</h3>
+	<h3>Additions/Changes since 3.6.3 December, 2024</h3>
 
 	<h4>New Inclusions</h4>
 	<ul>
@@ -25,61 +25,42 @@
 
 	<h4>Removed Elements</h4>
 	<ul>
-	<li><code>StudentDataTransferNote/CountriesOfCizitenship</code>, 
-	<code>PreviousSchoolType/CommonwealthId</code>,
-	<code>ArrivalSchoolType/CommonwealthId</code>,
-	<code>DepartureSchoolType/CommonwealthId</code>: updates to Student Data Transfer Note.</li>
+	<li>None.</li>
 	</ul>
 
 	<h4>Changed Elements</h4>
 	<ul>
-	<li><code>StudentDataTransferNote/LBOTE</code>: changed from <code>AUCodeSetsYesOrNoCategoryType</code> to <code>xs:boolean</code>.</li>
+	<li>None.</li>
 	</ul>
 
 
 	<h4>New Elements</h4>
 	<ul>
-		<li><code>StudentDataTransferNote/RequestID</code>, 
-		<code>StudentDataTransferNote/AdditionalNotes</code>,
-		<code>StudentDataTransferNote/Healthcare</code>, 		
-		<code>StudentDataTransferNote/InterestTalents</code>, 
-		<code>StudentDataTransferNote/SupportNeeds</code>, 
-		<code>StudentDataTransferNote/Consent</code>, 
-		<code>StudentDataTransferNote/LatestReportAvailable</code>, 
-		<code>StudentDataTransferNote/DisciplinaryAbsences</code>, 
-		<code>StudentDataTransferNote/IndividualBehaviourManagementPlan</code>, 
-		<code>StudentDataTransferNote/Attachments</code>, 
-		<code>StudentDataTransferNote/AustralianCitizenship</code>, 
-		<code>DepartureSchoolType/State</code>,
-		<code>DepartureSchoolType/Sector</code>, <code>DepartureSchoolType/System</code>, 
-		<code>DepartureSchoolType/StartedAtSchoolDate</code>, <code>DepartureSchoolType/ExitDate</code>,
-		<code>PreviousSchoolType/State</code>,
-		<code>PreviousSchoolType/Sector</code>, <code>PreviousSchoolType/System</code>,
-		<code>PreviousSchoolType/ExitReason</code>: updates to Student Data Transfer Note.</li>
-		<li><code>GradeType/ProgressLevel</code>: reporting of grade as Below Level/At Level/Above Level.</li> 
+	<li>None.</li>
 	</ul>
 	
 	
 	<h4>New Types</h4>
 	<ul>
-	<li><code>STDNSupportNeedsType</code>, <code>STDNAttachmentListType</code>, <code>STDNAttachmentType</code>: 
-	updates to Student Data Transfer Note.</li>
-	<!--<li><code>BinaryDataListType</code>: list of <code>BinaryDataType</code> objects, used to encode a list of attachments to the Student Data Transfer Note.</li>-->
+	<li>None.</li>
     </ul>
 	
 	<h4>New CodeSets</h4>
 	<ul>	
-	<li><code>GradeProgressLevel</code>: reporting of grade as Below Level/At Level/Above Level.</li>
+	<li>None.</li>
 	</ul>
 
 	<h4>Additions to CodeSets</h4>
 	<ul>	
-	<li>None.</li>
+	<li><code>4217 Currency Names And Code Elements</code>: Add <code>ZWG</code> Zimbabwe Gold, <code>XCG</code> Caribbean Guilder, <code>XAD</code> Arab Accounting Dinar.</li>
+	<li><code>Federal Electorate</code>: Add <code>Bullwinkel</code>.</li>
+	<li><code>Australian Standard Classification Of Languages (ASCL)</code>: Added 2025 8-digit codes; the 2016 4-digit codes are retained for legacy.</li>
 	</ul>
 
 	<h4>Removals/Deprecations from CodeSets</h4>
 	<ul>	
-	<li>None.</li>
+	<li><code>4217 Currency Names And Code Elements</code>: Remove <code>CUC</code> Cuban Peso Convertible, <code>ZWL</code> Zimbabwe Dollar, <code>ANG</code> Netherlands Antillean Guilder.</li>
+	<li><code>Federal Electorate</code>: Remove <code>Higgins</code>, <code>North Sydney</code>.</li>
 	</ul>
 
 
@@ -89,8 +70,7 @@
    	
 	<h4>Corrections</h4>
 	<ul>
-		<li>None.</li>
-
+	<li>None.</li>
    </ul>
    
 </Section>

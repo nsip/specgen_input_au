@@ -4,7 +4,7 @@
 		SIF Implementation Specification (Australia) 3.6.3
 
 
-		(November 40, 2024)
+		(December 12, 2024)
 		
 		Infrastructure Version: v3
 		
@@ -20,7 +20,7 @@
 
 		</h1>
 		<h2>
-			November 40, 2024
+			December 12, 2024
 		</h2>
 		<br />
 		<br />
@@ -33,7 +33,7 @@
 		<dl>
 			<dt>This version:</dt>
 			<dd>
-				<a href="http://specification.sifassociation.org/Implementation/AU/3.6.3/1/index.html">http://specification.sifassociation.org/Implementation/AU/3.6.3/1/index.html</a>
+				<a href="http://specification.sifassociation.org/Implementation/AU/3.6.3/index.html">http://specification.sifassociation.org/Implementation/AU/3.6.3/index.html</a>
 			</dd>
 			<dt>Previous version:</dt>
 			<dd>
@@ -409,6 +409,7 @@ in the SIF Implementation Specification may include inaccuracies or typographica
 		<code>PreviousSchoolType/State</code>,
 		<code>PreviousSchoolType/Sector</code>, <code>PreviousSchoolType/System</code>,
 		<code>PreviousSchoolType/ExitReason</code>: updates to Student Data Transfer Note.</li>
+		<li><code>GradeType/ProgressLevel</code>: reporting of grade as Below Level/At Level/Above Level.</li> 
 	</ul>
 	
 	
