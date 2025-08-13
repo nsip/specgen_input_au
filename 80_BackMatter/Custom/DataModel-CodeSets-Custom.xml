@@ -5096,8 +5096,7 @@
 <Value><Code>11111611</Code><Text>Mirniny</Text></Value>
 <Value><Code>11111612</Code><Text>Noongar</Text></Value>
 <Value><Code>11111613</Code><Text>Thalandji</Text></Value>
-<Value><Code>11111699</Code><Text>"Other South West Languages, nec</Text></Value>
-<Value><Code>"</Text></Value>
+<Value><Code>11111699</Code><Text>Other South West Languages, nec</Text></Value>
 <Value><Code>11111711</Code><Text>Badimaya</Text></Value>
 <Value><Code>11111712</Code><Text>Wajarri</Text></Value>
 <Value><Code>11111811</Code><Text>Alyawarr</Text></Value>
@@ -5116,10 +5115,8 @@
 <Value><Code>11112121</Code><Text>Gupapuyngu</Text></Value>
 <Value><Code>11112122</Code><Text>Ritharrngu</Text></Value>
 <Value><Code>11112123</Code><Text>Yan-nhangu </Text></Value>
-<Value><Code>11112124</Code><Text>"Yolngu Matha</Text></Value>
-<Value><Code>"</Text></Value>
-<Value><Code>11112199</Code><Text>"Yolngu Languages, nec</Text></Value>
-<Value><Code>"</Text></Value>
+<Value><Code>11112124</Code><Text>Yolngu Matha</Text></Value>
+<Value><Code>11112199</Code><Text>Yolngu Languages, nec</Text></Value>
 <Value><Code>11112211</Code><Text>Kayardild</Text></Value>
 <Value><Code>11112212</Code><Text>Lardil</Text></Value>
 <Value><Code>11112213</Code><Text>Ganggalidda</Text></Value>
@@ -5182,8 +5179,7 @@
 <Value><Code>11113713</Code><Text>Wemba Wemba</Text></Value>
 <Value><Code>11113714</Code><Text>Wergaia</Text></Value>
 <Value><Code>11113715</Code><Text>Woiwurrung</Text></Value>
-<Value><Code>11113799</Code><Text>"Kulinic Languages, nec</Text></Value>
-<Value><Code>"</Text></Value>
+<Value><Code>11113799</Code><Text>Kulinic Languages, nec</Text></Value>
 <Value><Code>11119911</Code><Text>Kalaw Lagaw Ya</Text></Value>
 <Value><Code>11119912</Code><Text>Kalkatungu/Kalkadoon</Text></Value>
 <Value><Code>11119913</Code><Text>Kurnai</Text></Value>
@@ -5194,8 +5190,7 @@
 <Value><Code>11119918</Code><Text>Warumungu</Text></Value>
 <Value><Code>11119921</Code><Text>Yanyuwa</Text></Value>
 <Value><Code>11119922</Code><Text>Yorta Yorta</Text></Value>
-<Value><Code>11119999</Code><Text>"Other Pama Nyungan Languages, nec</Text></Value>
-<Value><Code>"</Text></Value>
+<Value><Code>11119999</Code><Text>Other Pama Nyungan Languages, nec</Text></Value>
 <Value><Code>11121111</Code><Text>Bardi</Text></Value>
 <Value><Code>11121112</Code><Text>Jugun</Text></Value>
 <Value><Code>11121113</Code><Text>Nyikina</Text></Value>
