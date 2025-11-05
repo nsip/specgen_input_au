@@ -36,7 +36,7 @@
 
 	<h4>New Elements</h4>
 	<ul>
-	<li>None.</li>
+	<li><code>SchoolInfo</code>: Add <code>ACECQAServiceId</code>, <code>ACECQAProviderId</code>, <code>EarlyChildhoodProviderName</code>, <code>EarlyChildhoodProviderType</code>.</li>
 	</ul>
 	
 	
@@ -47,7 +47,7 @@
 	
 	<h4>New CodeSets</h4>
 	<ul>	
-	<li>None.</li>
+	<li><code>Early Childhood Provider Type</code>: types of early childhood provider management, taken from ACECQA.</li>
 	</ul>
 
 	<h4>Additions to CodeSets</h4>
@@ -55,6 +55,7 @@
 	<li><code>4217 Currency Names And Code Elements</code>: Add <code>ZWG</code> Zimbabwe Gold, <code>XCG</code> Caribbean Guilder, <code>XAD</code> Arab Accounting Dinar.</li>
 	<li><code>Federal Electorate</code>: Add <code>Bullwinkel</code>.</li>
 	<li><code>Australian Standard Classification Of Languages (ASCL)</code>: Added 2025 8-digit codes; the 2016 4-digit codes are retained for legacy.</li>
+	<li><code>School Focus Code</code>: Added codes for Early Childhood: <code>10: Family Day Care</code>, <code>11: Long Day Care</code>, <code>12: Early Childhood Centre: Outside School Hours</code>, <code>19: Early Childhood Centre: Other</code>.</li>
 	</ul>
 
 	<h4>Removals/Deprecations from CodeSets</h4>

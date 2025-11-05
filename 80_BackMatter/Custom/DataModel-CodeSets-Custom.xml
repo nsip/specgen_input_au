@@ -2975,6 +2975,22 @@
 				<Text>Vocational</Text>
 			</Value>
 			<Value>
+				<Code>10</Code>
+				<Text>Family Day Care</Text>
+			</Value>
+			<Value>
+				<Code>11</Code>
+				<Text>Long Day Care</Text>
+			</Value>
+			<Value>
+				<Code>12</Code>
+				<Text>Early Childhood Centre: Outside School Hours</Text>
+			</Value>
+			<Value>
+				<Code>19</Code>
+				<Text>Early Childhood Centre: Other</Text>
+			</Value>
+			<Value>
 				<Code>98</Code>
 				<Text>Other</Text>
 			</Value>
@@ -2982,7 +2998,6 @@
 				<Code>99</Code>
 				<Text>Not Provided</Text>
 			</Value>
-			 
 		</Values>
 	</CodeSet>
 	<CodeSet>
@@ -5359,7 +5374,7 @@
 <Value><Code>15111199</Code><Text>Central Semitic Languages, nec</Text></Value>
 <Value><Code>15111211</Code><Text>Amharic</Text></Value>
 <Value><Code>15111212</Code><Text>Harari</Text></Value>
-<Value><Code>15111213</Code><Text>Tigre</Text></Value>
+<Value><Code>15111213</Code><Text>Tigré</Text></Value>
 <Value><Code>15111214</Code><Text>Tigrinya</Text></Value>
 <Value><Code>15111299</Code><Text>South Semitic Languages, nec</Text></Value>
 <Value><Code>15121111</Code><Text>Oromo</Text></Value>
@@ -5398,14 +5413,14 @@
 <Value><Code>17119911</Code><Text>Fulfulde</Text></Value>
 <Value><Code>17119912</Code><Text>Kissi</Text></Value>
 <Value><Code>17119999</Code><Text>Other Atlantic Congo Languages, nec</Text></Value>
-<Value><Code>17121112</Code><Text>Kpelle</Text></Value>
-<Value><Code>17121113</Code><Text>Loma (Lorma)</Text></Value>
-<Value><Code>17121114</Code><Text>Mandinka</Text></Value>
-<Value><Code>17121115</Code><Text>Mende</Text></Value>
+<Value><Code>17121111</Code><Text>Kpelle</Text></Value>
+<Value><Code>17121112</Code><Text>Loma (Lorma)</Text></Value>
+<Value><Code>17121113</Code><Text>Mandinka</Text></Value>
+<Value><Code>17121114</Code><Text>Mende</Text></Value>
 <Value><Code>17121199</Code><Text>Western Mande Languages, nec</Text></Value>
-<Value><Code>17121111</Code><Text>Dan (Gio-Dan)</Text></Value>
-<Value><Code>17121112</Code><Text>Maan</Text></Value>
-<Value><Code>17121199</Code><Text>Eastern Mande Languages, nec</Text></Value>
+<Value><Code>17121211</Code><Text>Dan (Gio-Dan)</Text></Value>
+<Value><Code>17121212</Code><Text>Maan</Text></Value>
+<Value><Code>17121299</Code><Text>Eastern Mande Languages, nec</Text></Value>
 <Value><Code>17999911</Code><Text>Moro (Nuba Moro)</Text></Value>
 <Value><Code>17999999</Code><Text>Other Niger Congo Languages, nec</Text></Value>
 <Value><Code>18111111</Code><Text>Acholi</Text></Value>
@@ -9047,4 +9062,45 @@
 		</Values>
 	</CodeSet>							
 
+	<CodeSet>
+		<Intro>
+			<p>Type of provider management responsible for a childcare service, taken from ACECQA</p>
+		</Intro>
+		<ID>Early Childhood Provider Type</ID>
+		<Values>
+			<Value>
+				<Code>CatholicSchool</Code>
+				<Text>Catholic school acting as childcare service</Text>
+			</Value>
+			<Value>
+				<Code>IndependentSchool</Code>
+				<Text>Independent school acting as childcare service</Text>
+			</Value>
+			<Value>
+				<Code>GovernmentSchool</Code>
+				<Text>State or territory government school acting as childcare service</Text>
+			</Value>
+			<Value>
+				<Code>GovernmentChildcare</Code>
+				<Text>State or territory and Local government managed childcare service</Text>
+			</Value>
+			<Value>
+				<Code>PrivateForProfit</Code>
+				<Text>Private for-profit childcare service</Text>
+			</Value>
+			<Value>
+				<Code>CommunityManaged</Code>
+				<Text>Private not-for-profit community managed childcare service</Text>
+			</Value>
+			<Value>
+				<Code>PrivateNotForProfit</Code>
+				<Text>Private not-for-profit childcare service, other than community managed</Text>
+			</Value>
+			<Value>
+				<Code>Other</Code>
+				<Text>Other type of childcare management</Text>
+			</Value>
+		</Values>
+	</CodeSet>				
+	
 </Grouping>
