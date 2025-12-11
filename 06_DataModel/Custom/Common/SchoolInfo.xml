@@ -68,7 +68,34 @@
     </Description>
     <Type name="xs:normalizedString"></Type>
   </Item>
-  
+   <Item>
+    <Element>ACECQAServiceId</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>ACECQA Service identifier for this school/centre, acting as a childcare service.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+   <Item>
+    <Element>ACECQAProviderId</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>ACECQA identifier for the provider responsible for this childcare service.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+   <Item>
+    <Element>EarlyChildhoodProviderName</Element>
+    <Characteristics>O</Characteristics>
+	<privacyRating>Low</privacyRating>
+    <Description>
+      <p>Name of the provider responsible for this childcare service.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+
  	<Item>
 		<Element>OtherIdList</Element>
 		<Characteristics>O</Characteristics>
@@ -159,7 +186,15 @@
 		</Description>
 		<Type ref="CommonTypes" name="SchoolFocusListType"/>
   </Item>
-  
+    <Item>
+		<Element>EarlyChildhoodProviderType</Element>
+		<Characteristics>O</Characteristics>
+		<privacyRating>Low</privacyRating>
+		<Description>
+			<p>Type of provider responsible for this childcare service.</p>
+		</Description>
+    <Type ref='CodeSets' name='AUCodeSetsEarlyChildhoodProviderTypeType'/>
+  </Item>
   
   <Item>
     <Element>SchoolURL</Element>
@@ -588,4 +623,105 @@
         </SchoolGroupList>
       </SchoolInfo>
   </xhtml:Example>
-</DataObject>
+  <xhtml:Example xmlns="" name="SchoolInfo">
+    <SchoolInfo RefId="D3E34B35-9D75-101A-8C3D-00AA001A1652">
+      <LocalId>01011234</LocalId>
+      <ACECQAServiceId>012345</ACECQAServiceId>
+      <ACECQAProviderId>012347</ACECQAProviderId>
+      <EarlyChildhoodProviderName>Rabbiton City Council</EarlyChildhoodProviderName>
+      <SchoolName>Lincoln Day Care</SchoolName>
+      <SchoolType>EarlyCh</SchoolType>
+      <SchoolFocusList>
+        <SchoolFocus>11</SchoolFocus>
+      </SchoolFocusList>
+	  <EarlyChildhoodProviderType>GovernmentChildcare</EarlyChildhoodProviderType>
+      <SchoolURL>http://www.lincolndaycare.vic.gov.au</SchoolURL>
+      <PrincipalInfo>
+        <ContactName Type="LGL">
+            <Title>Mr</Title>
+            <FamilyName>Mason</FamilyName>
+            <GivenName>Francis</GivenName>
+            <MiddleName>Frank</MiddleName>
+            <Suffix>Jr.</Suffix>
+            <FullName>Mr Frank Mason Jr.</FullName>
+        </ContactName>
+        <ContactTitle>Senior School Principal</ContactTitle>
+      </PrincipalInfo>
+      <SchoolContactList>
+        <SchoolContact>
+          <PublishInDirectory>Y</PublishInDirectory>
+          <ContactInfo>
+            <Name Type="LGL">
+              <Title>Mr</Title>
+              <FamilyName>Miller</FamilyName>
+              <GivenName>James</GivenName>
+              <MiddleName>Mark</MiddleName>
+              <Suffix>Jr.</Suffix>
+                <FullName>Mr James Mark Miller Jr.</FullName>
+              </Name>
+            <PositionTitle>Business Manager</PositionTitle>
+            <Role>School Information Contact Point</Role>
+            <Address Type="0123" Role="012B">
+              <Street>
+                <Line1>23 Nicholson Street</Line1>
+                </Street>
+                  <City>Carnegie</City>
+                  <StateProvince>VIC</StateProvince>
+                  <Country>1101</Country>
+                  <PostalCode>3004</PostalCode>
+                  <GridLocation>
+                    <Latitude>23.9876</Latitude>
+                    <Longitude>-98.8765</Longitude>
+                  </GridLocation>
+                </Address>
+            <EmailList>
+              <Email Type="01">jmiller@lsc.vic.edu.au</Email>
+              <Email Type="02">jmiller@yahoo.com.au</Email>
+            </EmailList>
+            <PhoneNumberList>
+              <PhoneNumber Type="0096">
+                <Number>03 9637-2000</Number>
+                <Extension>72345</Extension>
+                <ListedStatus>Y</ListedStatus>
+              </PhoneNumber>
+            </PhoneNumberList>
+          </ContactInfo>
+        </SchoolContact>
+      </SchoolContactList>
+	  <AddressList>
+	             <Address Type="0123" Role="012B">
+              <Street>
+                <Line1>23 Nicholson Street</Line1>
+                </Street>
+                  <City>Carnegie</City>
+                  <StateProvince>VIC</StateProvince>
+                  <Country>1101</Country>
+                  <PostalCode>3004</PostalCode>
+                  <GridLocation>
+                    <Latitude>23.9876</Latitude>
+                    <Longitude>-98.8765</Longitude>
+                  </GridLocation>
+                </Address>
+	  </AddressList>
+      <PhoneNumberList>
+        <PhoneNumber Type="0096">
+          <Number>03 9637-2000</Number>
+        </PhoneNumber>
+      </PhoneNumberList>
+      <YearLevels>
+        <YearLevel>
+          <Code>CC</Code>
+        </YearLevel>
+      </YearLevels>
+      <ARIA>1.0</ARIA>
+      <OperationalStatus>O</OperationalStatus>
+      <FederalElectorate>216</FederalElectorate>
+      <SchoolSector>NG</SchoolSector>
+        <SchoolGeographicLocation>10</SchoolGeographicLocation>
+        <LocalGovernmentArea>Cardinia</LocalGovernmentArea>
+        <JurisdictionLowerHouse>Unknown</JurisdictionLowerHouse>
+        <SLA>205801452</SLA>
+        <SchoolCoEdStatus>C</SchoolCoEdStatus>
+      </SchoolInfo>
+  </xhtml:Example>
+  </DataObject>
