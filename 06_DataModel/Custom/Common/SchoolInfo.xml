@@ -623,7 +623,7 @@
         </SchoolGroupList>
       </SchoolInfo>
   </xhtml:Example>
-  <xhtml:Example xmlns="" name="SchoolInfo">
+  <xhtml:Example xmlns="" name="SchoolInfoEarlyChildhood">
     <SchoolInfo RefId="D3E34B35-9D75-101A-8C3D-00AA001A1652">
       <LocalId>01011234</LocalId>
       <ACECQAServiceId>012345</ACECQAServiceId>
